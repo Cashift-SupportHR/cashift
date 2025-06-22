@@ -9,9 +9,9 @@ part of 'add_electronic_wallet.dart';
 AddElectronicWalletParams _$AddElectronicWalletParamsFromJson(
         Map<String, dynamic> json) =>
     AddElectronicWalletParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       phone: json['phone'] as String?,
-      providerId: json['providerId'] as int?,
+      providerId: (json['providerId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddElectronicWalletParamsToJson(

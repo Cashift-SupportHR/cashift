@@ -8,15 +8,15 @@ part of 'job_requirements.dart';
 
 JobRequirements _$JobRequirementsFromJson(Map<String, dynamic> json) =>
     JobRequirements(
-      projectId: json['projectId'] as int?,
-      ageFrom: json['ageFrom'] as int?,
-      ageTo: json['ageTo'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      ageFrom: (json['ageFrom'] as num?)?.toInt(),
+      ageTo: (json['ageTo'] as num?)?.toInt(),
       gender: json['gender'] as String?,
-      lengthFrom: json['lengthFrom'] as int?,
-      lengthTo: json['lengthTo'] as int?,
-      wieghtFrom: json['wieghtFrom'] as int?,
-      wieghtTo: json['wieghtTo'] as int?,
-      hoursCount: json['hoursCount'] as int?,
+      lengthFrom: (json['lengthFrom'] as num?)?.toInt(),
+      lengthTo: (json['lengthTo'] as num?)?.toInt(),
+      wieghtFrom: (json['wieghtFrom'] as num?)?.toInt(),
+      wieghtTo: (json['wieghtTo'] as num?)?.toInt(),
+      hoursCount: (json['hoursCount'] as num?)?.toInt(),
       specialization: json['specialization'] as String?,
     );
 

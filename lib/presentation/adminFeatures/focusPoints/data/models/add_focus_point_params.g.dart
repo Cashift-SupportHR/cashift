@@ -8,21 +8,23 @@ part of 'add_focus_point_params.dart';
 
 AddFocusPointParams _$AddFocusPointParamsFromJson(Map<String, dynamic> json) =>
     AddFocusPointParams(
-      id: json['id'] as int?,
-      projectId: json['projectId'] as int?,
-      focusPointsTypeId: json['focusPointsTypeId'] as int?,
-      focusPointsPriorityId: json['focusPointsPriorityId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      focusPointsTypeId: (json['focusPointsTypeId'] as num?)?.toInt(),
+      focusPointsPriorityId: (json['focusPointsPriorityId'] as num?)?.toInt(),
       focusPointName: json['focusPointName'] as String?,
-      freeLanceType: json['freeLanceType'] as int?,
+      freeLanceType: (json['freeLanceType'] as num?)?.toInt(),
       focusPointId: json['focusPointId'] as String?,
       latitude: json['latitude'] as String?,
       longtude: json['longtude'] as String?,
       radius: json['radius'] as String?,
-      focusPointsAreaId: json['focusPointsAreaId'] as int?,
-      focusPointsTransactionId: json['focusPointsTransactionId'] as int?,
-      listShift:
-          (json['listShift'] as List<dynamic>?)?.map((e) => e as int).toList(),
-      coverageBreak: json['coverageBreak'] as int?,
+      focusPointsAreaId: (json['focusPointsAreaId'] as num?)?.toInt(),
+      focusPointsTransactionId:
+          (json['focusPointsTransactionId'] as num?)?.toInt(),
+      listShift: (json['listShift'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
+      coverageBreak: (json['coverageBreak'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddFocusPointParamsToJson(

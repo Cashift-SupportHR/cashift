@@ -9,8 +9,8 @@ part of 'confirm_activity_params.dart';
 ConfirmActivityParams _$ConfirmActivityParamsFromJson(
         Map<String, dynamic> json) =>
     ConfirmActivityParams(
-      id: json['id'] as int?,
-      statusId: json['statusId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      statusId: (json['statusId'] as num?)?.toInt(),
       description: json['description'] as String?,
       latitude: (json['latitude'] as num?)?.toDouble(),
       longitude: (json['longtude'] as num?)?.toDouble(),

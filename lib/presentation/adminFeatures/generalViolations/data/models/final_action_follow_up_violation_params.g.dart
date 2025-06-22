@@ -9,7 +9,7 @@ part of 'final_action_follow_up_violation_params.dart';
 FinalActionFollowUpViolationParams _$FinalActionFollowUpViolationParamsFromJson(
         Map<String, dynamic> json) =>
     FinalActionFollowUpViolationParams(
-      contractViolationId: json['contractViolationId'] as int?,
+      contractViolationId: (json['contractViolationId'] as num?)?.toInt(),
       actionDescription: json['actionDescription'] as String?,
     );
 

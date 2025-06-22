@@ -9,8 +9,8 @@ part of 'employee_data_dto.dart';
 EmployeeChashifterDataDto _$EmployeeChashifterDataDtoFromJson(
         Map<String, dynamic> json) =>
     EmployeeChashifterDataDto(
-      id: json['id'] as int?,
-      freelanceId: json['freelanceId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      freelanceId: (json['freelanceId'] as num?)?.toInt(),
       idNumber: json['idNumber'] as String?,
       name: json['name'] as String?,
       logo: json['logo'] as String?,

@@ -8,7 +8,7 @@ part of 'period_pricing_dto.dart';
 
 PeriodPricingDto _$PeriodPricingDtoFromJson(Map<String, dynamic> json) =>
     PeriodPricingDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       timeName: json['timeName'] as String?,
       price: json['price'] as String?,

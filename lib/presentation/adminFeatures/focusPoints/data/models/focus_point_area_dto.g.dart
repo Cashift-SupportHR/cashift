@@ -8,7 +8,7 @@ part of 'focus_point_area_dto.dart';
 
 FocusPointAreaDto _$FocusPointAreaDtoFromJson(Map<String, dynamic> json) =>
     FocusPointAreaDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

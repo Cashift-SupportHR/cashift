@@ -8,17 +8,17 @@ part of 'work_hazard_dto.dart';
 
 WorkHazardDto _$WorkHazardDtoFromJson(Map<String, dynamic> json) =>
     WorkHazardDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       hazardPriorityLevelName: json['hazardPriorityLevelName'] as String?,
-      hazardPriorityLevelId: json['hazardPriorityLevelId'] as int?,
+      hazardPriorityLevelId: (json['hazardPriorityLevelId'] as num?)?.toInt(),
       hazardTypeName: json['hazardTypeName'] as String?,
-      hazardTypeId: json['hazardTypeId'] as int?,
+      hazardTypeId: (json['hazardTypeId'] as num?)?.toInt(),
       hazardStatusName: json['hazardSatusName'] as String?,
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
       description: json['description'] as String?,
       submissionDate: json['submissionDate'] as String?,

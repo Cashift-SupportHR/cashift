@@ -8,9 +8,9 @@ part of 'focus_points_types_dto.dart';
 
 FocusPointsTypesDto _$FocusPointsTypesDtoFromJson(Map<String, dynamic> json) =>
     FocusPointsTypesDto(
-      order: json['order'] as int?,
+      order: (json['order'] as num?)?.toInt(),
       focusPointTypeName: json['focusPointTypeName'] as String?,
-      focusPointTypeCount: json['focusPointTypeCount'] as int?,
+      focusPointTypeCount: (json['focusPointTypeCount'] as num?)?.toInt(),
       imageFocusPointsType: json['imageFocusPointsType'] as String?,
       freelanceApply: (json['freelanceApply'] as List<dynamic>?)
           ?.map((e) => FreelanceApply.fromJson(e as Map<String, dynamic>))
@@ -29,7 +29,7 @@ Map<String, dynamic> _$FocusPointsTypesDtoToJson(
 
 FreelanceApply _$FreelanceApplyFromJson(Map<String, dynamic> json) =>
     FreelanceApply(
-      totalHourse: json['totalHourse'] as int?,
+      totalHourse: (json['totalHourse'] as num?)?.toInt(),
       deviceNumber: json['deviceNumber'] as String?,
       statusColor: json['statusColor'] as String?,
       statusName: json['statusName'] as String?,

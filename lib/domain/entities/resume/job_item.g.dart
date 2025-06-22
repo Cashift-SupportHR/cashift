@@ -7,7 +7,7 @@ part of 'job_item.dart';
 // **************************************************************************
 
 JobItem _$JobItemFromJson(Map<String, dynamic> json) => JobItem(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       jobName: json['jobName'] as String?,
       imagePath: json['imagePath'] as String?,
     );

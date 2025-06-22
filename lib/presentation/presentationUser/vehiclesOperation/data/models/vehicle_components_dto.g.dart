@@ -9,7 +9,7 @@ part of 'vehicle_components_dto.dart';
 VehicleComponentsDto _$VehicleComponentsDtoFromJson(
         Map<String, dynamic> json) =>
     VehicleComponentsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
     );

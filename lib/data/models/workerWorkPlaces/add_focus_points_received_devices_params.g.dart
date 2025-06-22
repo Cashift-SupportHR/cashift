@@ -10,10 +10,10 @@ AddFocusPointsReceivedDevicesParams
     _$AddFocusPointsReceivedDevicesParamsFromJson(Map<String, dynamic> json) =>
         AddFocusPointsReceivedDevicesParams(
           freeLanceApplyFocusPointsId:
-              json['freeLanceApplyFocusPointsId'] as int?,
+              (json['freeLanceApplyFocusPointsId'] as num?)?.toInt(),
           focusPointsDeviceSettingId:
-              json['focusPointsDeviceSettingId'] as int?,
-          haveComment: json['haveComment'] as int?,
+              (json['focusPointsDeviceSettingId'] as num?)?.toInt(),
+          haveComment: (json['haveComment'] as num?)?.toInt(),
           description: json['description'] as String?,
           attachmentFile: json['attachmentFile'] as String?,
           descriptionAttachment: json['descriptionAttachment'] as String?,

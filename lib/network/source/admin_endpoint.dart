@@ -78,7 +78,7 @@ import '../../presentation/presentationUser/vehiclesOperation/data/models/receiv
 part 'admin_endpoint.g.dart';
 
 @Injectable()
-@RestApi(baseUrl: kBASE_URL)
+@RestApi()
 abstract class AdminEndpoint {
   @factoryMethod
   factory AdminEndpoint(Dio dio) = _AdminEndpoint;

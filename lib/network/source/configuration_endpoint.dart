@@ -9,7 +9,7 @@ import '../../presentation/adminFeatures/shared/data/models/index.dart';
 part 'configuration_endpoint.g.dart';
 
 @Injectable()
-@RestApi(baseUrl: kBASE_URL)
+@RestApi()
 abstract class ConfigurationEndpoint {
   @factoryMethod
   factory ConfigurationEndpoint(Dio dio) = _ConfigurationEndpoint;

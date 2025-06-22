@@ -8,9 +8,9 @@ part of 'review_shiftsprams.dart';
 
 ReviewShiftsprams _$ReviewShiftspramsFromJson(Map<String, dynamic> json) =>
     ReviewShiftsprams(
-      statusId: json['statusId'] as int?,
-      pageNumber: json['pageNumber'] as int?,
-      pageSize: json['pageSize'] as int?,
+      statusId: (json['statusId'] as num?)?.toInt(),
+      pageNumber: (json['pageNumber'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
       searchString: json['searchString'] as String?,
     );
 

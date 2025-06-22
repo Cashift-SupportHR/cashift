@@ -8,7 +8,7 @@ part of 'punishment_name_dto.dart';
 
 PunishmentNameDto _$PunishmentNameDtoFromJson(Map<String, dynamic> json) =>
     PunishmentNameDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

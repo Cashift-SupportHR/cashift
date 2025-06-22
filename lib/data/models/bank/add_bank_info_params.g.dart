@@ -8,7 +8,7 @@ part of 'add_bank_info_params.dart';
 
 AddBankInfoParams _$AddBankInfoParamsFromJson(Map<String, dynamic> json) =>
     AddBankInfoParams(
-      bankId: json['bankId'] as int,
+      bankId: (json['bankId'] as num).toInt(),
       iban: json['iban'] as String,
     );
 

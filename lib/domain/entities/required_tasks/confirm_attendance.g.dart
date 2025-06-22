@@ -8,10 +8,10 @@ part of 'confirm_attendance.dart';
 
 ConfirmAttendance _$ConfirmAttendanceFromJson(Map<String, dynamic> json) =>
     ConfirmAttendance(
-      applayId: json['applayId'] as int?,
+      applayId: (json['applayId'] as num?)?.toInt(),
       iconLogo: json['iconLogo'] as String?,
-      isCurrent: json['isCurrent'] as int?,
-      statusId: json['statusId'] as int?,
+      isCurrent: (json['isCurrent'] as num?)?.toInt(),
+      statusId: (json['statusId'] as num?)?.toInt(),
       status: json['status'] as String?,
       opportunitiesStrartTime: json['opportunitiesStrartTime'] as String?,
       opportunitiesEndTime: json['opportunitiesEndTime'] as String?,
@@ -21,7 +21,7 @@ ConfirmAttendance _$ConfirmAttendanceFromJson(Map<String, dynamic> json) =>
       endShiftDate: json['endShiftDate'] as String?,
       jobName: json['jobName'] as String?,
       salary: (json['salary'] as num?)?.toDouble(),
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
       address: json['address'] as String?,
       description: json['description'] as String?,

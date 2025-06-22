@@ -7,7 +7,7 @@ part of 'level_item.dart';
 // **************************************************************************
 
 LevelItem _$LevelItemFromJson(Map<String, dynamic> json) => LevelItem(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       levelName: json['levelName'] as String?,
     );
 

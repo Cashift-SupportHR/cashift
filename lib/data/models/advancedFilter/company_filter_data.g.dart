@@ -8,7 +8,7 @@ part of 'company_filter_data.dart';
 
 CompanyFilterData _$CompanyFilterDataFromJson(Map<String, dynamic> json) =>
     CompanyFilterData(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       logo: json['logo'] as String?,
     );

@@ -36,13 +36,13 @@ Map<String, dynamic> _$RequestAttendanceDepartureDetailsDtoToJson(
 TrackFaceRecognitionDetailsListDto _$TrackFaceRecognitionDetailsListDtoFromJson(
         Map<String, dynamic> json) =>
     TrackFaceRecognitionDetailsListDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       trackFaceRecognitionRequestId:
-          json['trackFaceRecognitionRequestId'] as int?,
+          (json['trackFaceRecognitionRequestId'] as num?)?.toInt(),
       faceRecognitionPath: json['faceRecognitionPath'] as String?,
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
       addedDate: json['addedDate'] as String?,
       status: json['status'] as String?,

@@ -8,7 +8,7 @@ part of 'applicant_role_dto.dart';
 
 ApplicantRoleDto _$ApplicantRoleDtoFromJson(Map<String, dynamic> json) =>
     ApplicantRoleDto(
-      roleIndex: json['roleIndex'] as int?,
+      roleIndex: (json['roleIndex'] as num?)?.toInt(),
       roleKey: json['roleKey'] as String?,
       roleName: json['roleName'] as String?,
     );

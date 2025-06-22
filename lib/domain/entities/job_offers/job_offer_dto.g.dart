@@ -8,9 +8,9 @@ part of 'job_offer_dto.dart';
 
 JobOfferDto _$JobOfferDtoFromJson(Map<String, dynamic> json) => JobOfferDto(
       isAllowToTrack: json['isAllowToTrack'] as bool?,
-      id: json['id'] as int?,
-      actualNumber: json['actualNumber'] as int?,
-      requirmentCount: json['requiredCount'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      actualNumber: (json['actualNumber'] as num?)?.toInt(),
+      requirmentCount: (json['requiredCount'] as num?)?.toInt(),
       isFingerPrint: json['isFingerPrint'] as String?,
       endShiftDate: json['endShiftDate'] as String?,
       pathLogo: json['pathLogo'] as String?,
@@ -19,14 +19,14 @@ JobOfferDto _$JobOfferDtoFromJson(Map<String, dynamic> json) => JobOfferDto(
           ?.map((e) => ObjPayment.fromJson(e as Map<String, dynamic>))
           .toList(),
       description: json['description'] as String?,
-      jobId: json['jobId'] as int?,
-      flagType: json['flagType'] as int?,
+      jobId: (json['jobId'] as num?)?.toInt(),
+      flagType: (json['flagType'] as num?)?.toInt(),
       opportunitiesStrartTime: json['opportunitiesStrartTime'] as String?,
       opportunitiesEndTime: json['opportunitiesEndTime'] as String?,
       latitude: (json['latitude'] as num?)?.toDouble(),
       longtude: (json['longtude'] as num?)?.toDouble(),
       jobName: json['jobName'] as String?,
-      salary: json['salary'] as int?,
+      salary: (json['salary'] as num?)?.toInt(),
       hourSalary: (json['hourSalary'] as num?)?.toDouble(),
       projectName: json['projectName'] as String?,
       workingDate: json['workingDate'] as String?,
@@ -35,7 +35,7 @@ JobOfferDto _$JobOfferDtoFromJson(Map<String, dynamic> json) => JobOfferDto(
           ? null
           : JobRequirements.fromJson(
               json['jobRequirements'] as Map<String, dynamic>),
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       projectlogo: json['projectLogo'] as String?,
       joblogo: json['jobLogo'] as String?,
       qualificationName: json['qualificationName'] as String?,
@@ -90,7 +90,7 @@ Map<String, dynamic> _$JobOfferDtoToJson(JobOfferDto instance) =>
 JobRequirements _$JobRequirementsFromJson(Map<String, dynamic> json) =>
     JobRequirements(
       gender: json['gender'] as String?,
-      hoursCount: json['hoursCount'] as int?,
+      hoursCount: (json['hoursCount'] as num?)?.toInt(),
       specialization: json['specialization'] as String?,
     );
 

@@ -8,7 +8,7 @@ part of 'worker_work_place_dto.dart';
 
 WorkerWorkPlaceDto _$WorkerWorkPlaceDtoFromJson(Map<String, dynamic> json) =>
     WorkerWorkPlaceDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       typeFreeLance: json['typeFreeLance'] as String?,
       deviceName: json['deviceName'] as String?,
       focusPointTypeName: json['focusPointTypeName'] as String?,
@@ -29,7 +29,7 @@ WorkerWorkPlaceDto _$WorkerWorkPlaceDtoFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList(),
       isBreak: json['isBreak'] as bool?,
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
       isStart: json['isStart'] as bool?,
       startShiftDateTime: json['startShiftDateTime'] as String?,
       endShiftDateTime: json['endShiftDateTime'] as String?,

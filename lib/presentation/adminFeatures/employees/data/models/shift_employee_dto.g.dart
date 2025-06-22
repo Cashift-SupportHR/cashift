@@ -8,7 +8,7 @@ part of 'shift_employee_dto.dart';
 
 ShiftEmployeeDto _$ShiftEmployeeDtoFromJson(Map<String, dynamic> json) =>
     ShiftEmployeeDto(
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
     );
 

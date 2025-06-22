@@ -9,8 +9,8 @@ part of 'add_edit_job_contaion_prams.dart';
 AddEditJobContaionPrams _$AddEditJobContaionPramsFromJson(
         Map<String, dynamic> json) =>
     AddEditJobContaionPrams(
-      id: json['id'] as int?,
-      jobId: json['jobId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
       descriptionEn: json['descriptionEn'] as String?,
       descriptionAr: json['descriptionAr'] as String?,
     );

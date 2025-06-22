@@ -10,7 +10,7 @@ VehicleImageParams _$VehicleImageParamsFromJson(Map<String, dynamic> json) =>
     VehicleImageParams(
       images: const ListMultipartFileJsonConverter()
           .fromJson(json['Images'] as List),
-      vehicleId: json['VehicleId'] as int,
+      vehicleId: (json['VehicleId'] as num).toInt(),
     );
 
 Map<String, dynamic> _$VehicleImageParamsToJson(VehicleImageParams instance) =>

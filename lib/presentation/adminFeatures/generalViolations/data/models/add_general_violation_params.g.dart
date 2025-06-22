@@ -9,12 +9,12 @@ part of 'add_general_violation_params.dart';
 AddGeneralViolationParams _$AddGeneralViolationParamsFromJson(
         Map<String, dynamic> json) =>
     AddGeneralViolationParams(
-      id: json['id'] as int?,
-      projectId: json['projectId'] as int?,
-      companyId: json['companyId'] as int?,
-      shiftId: json['shiftId'] as int?,
-      scheduleViolationId: json['scheduleViolationId'] as int?,
-      scheduleEmployeeWorkId: json['scheduleEmployeeWorkId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
+      scheduleViolationId: (json['scheduleViolationId'] as num?)?.toInt(),
+      scheduleEmployeeWorkId: (json['scheduleEmployeeWorkId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddGeneralViolationParamsToJson(

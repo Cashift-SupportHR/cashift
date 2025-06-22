@@ -9,7 +9,7 @@ part of 'applicants_details_dto.dart';
 ApplicantsDetailsDto _$ApplicantsDetailsDtoFromJson(
         Map<String, dynamic> json) =>
     ApplicantsDetailsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       employeeName: json['employeeName'] as String?,
       totalDeductions: json['totalDeductions'] as num?,
       qualification: json['qualification'] as String?,
@@ -17,7 +17,7 @@ ApplicantsDetailsDto _$ApplicantsDetailsDtoFromJson(
       idNumber: json['idNumber'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       statusName: json['statusName'] as String?,
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
       amountViolation: json['amountViolation'] as num?,
       totalDeductMoneyClearanceCertificate:
           json['totalDeductMoneyClearanceCertificate'] as num?,

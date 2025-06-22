@@ -9,11 +9,11 @@ part of 'location_project_params.dart';
 LocationProjectParams _$LocationProjectParamsFromJson(
         Map<String, dynamic> json) =>
     LocationProjectParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       description: json['description'] as String?,
       latitude: json['latitude'] as String?,
       longtude: json['longtude'] as String?,
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$LocationProjectParamsToJson(

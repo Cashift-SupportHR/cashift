@@ -9,9 +9,9 @@ part of 'bail_term_and_condition_dto.dart';
 BailTermAndConditionDto _$BailTermAndConditionDtoFromJson(
         Map<String, dynamic> json) =>
     BailTermAndConditionDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       conditionName: json['conditionName'] as String?,
-      statusId: json['statusId'] as int?,
+      statusId: (json['statusId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BailTermAndConditionDtoToJson(

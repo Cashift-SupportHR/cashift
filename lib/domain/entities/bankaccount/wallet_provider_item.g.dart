@@ -8,7 +8,7 @@ part of 'wallet_provider_item.dart';
 
 WalletProviderItem _$WalletProviderItemFromJson(Map<String, dynamic> json) =>
     WalletProviderItem(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       providerName: json['providerName'] as String?,
       providerLogo: json['providerLogo'] as String?,
       providerCode: json['providerCode'] as String?,

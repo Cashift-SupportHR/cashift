@@ -11,15 +11,17 @@ AddNewUserParams _$AddNewUserParamsFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       roleId: json['roleId'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       listProjects: (json['listProjects'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
-      listShifts:
-          (json['listShifts'] as List<dynamic>?)?.map((e) => e as int).toList(),
-      listBrand:
-          (json['listBrand'] as List<dynamic>?)?.map((e) => e as int).toList(),
-      level: json['level'] as int?,
+      listShifts: (json['listShifts'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
+      listBrand: (json['listBrand'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
+      level: (json['level'] as num?)?.toInt(),
       listArea: (json['listArea'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),

@@ -8,10 +8,10 @@ part of 'shifts_by_project_dto.dart';
 
 ShiftsByProjectDto _$ShiftsByProjectDtoFromJson(Map<String, dynamic> json) =>
     ShiftsByProjectDto(
-      id: json['id'] as int?,
-      companyId: json['companyId'] as int?,
-      jobId: json['jobId'] as int?,
-      projectId: json['projectId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
       shiftName: json['shiftName'] as String?,
     );

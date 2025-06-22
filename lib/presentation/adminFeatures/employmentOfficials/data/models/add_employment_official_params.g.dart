@@ -9,8 +9,8 @@ part of 'add_employment_official_params.dart';
 AddEmploymentOfficialParams _$AddEmploymentOfficialParamsFromJson(
         Map<String, dynamic> json) =>
     AddEmploymentOfficialParams(
-      id: json['id'] as int?,
-      cityId: json['cityId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      cityId: (json['cityId'] as num?)?.toInt(),
       name: json['name'] as String?,
       phone: json['phone'] as String?,
       address: json['address'] as String?,

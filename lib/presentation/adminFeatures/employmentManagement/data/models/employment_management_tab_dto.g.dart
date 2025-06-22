@@ -9,9 +9,9 @@ part of 'employment_management_tab_dto.dart';
 EmploymentManagementTabDto _$EmploymentManagementTabDtoFromJson(
         Map<String, dynamic> json) =>
     EmploymentManagementTabDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
-      totalFreelance: json['totalFreelance'] as int?,
+      totalFreelance: (json['totalFreelance'] as num?)?.toInt(),
       successApprovedLevel: (json['successApprovedLevel'] as List<dynamic>?)
           ?.map((e) => SuccessApprovedLevel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -29,9 +29,9 @@ Map<String, dynamic> _$EmploymentManagementTabDtoToJson(
 SuccessApprovedLevel _$SuccessApprovedLevelFromJson(
         Map<String, dynamic> json) =>
     SuccessApprovedLevel(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
-      totalFreelance: json['totalFreelance'] as int?,
+      totalFreelance: (json['totalFreelance'] as num?)?.toInt(),
       isDefault: json['isDefault'] as bool?,
     );
 

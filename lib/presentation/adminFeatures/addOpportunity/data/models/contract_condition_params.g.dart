@@ -9,8 +9,8 @@ part of 'contract_condition_params.dart';
 ContractConditionParams _$ContractConditionParamsFromJson(
         Map<String, dynamic> json) =>
     ContractConditionParams(
-      projectId: json['projectId'] as int?,
-      jobId: json['jobId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ContractConditionParamsToJson(

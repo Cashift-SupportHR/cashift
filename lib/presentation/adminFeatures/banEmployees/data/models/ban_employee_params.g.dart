@@ -8,9 +8,9 @@ part of 'ban_employee_params.dart';
 
 BanEmployeeParams _$BanEmployeeParamsFromJson(Map<String, dynamic> json) =>
     BanEmployeeParams(
-      type: json['type'] as int?,
+      type: (json['type'] as num?)?.toInt(),
       search: json['search'] as String?,
-      pageNumber: json['pageNumber'] as int?,
+      pageNumber: (json['pageNumber'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BanEmployeeParamsToJson(BanEmployeeParams instance) =>

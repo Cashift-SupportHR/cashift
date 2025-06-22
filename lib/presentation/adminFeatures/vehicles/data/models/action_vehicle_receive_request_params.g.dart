@@ -9,10 +9,10 @@ part of 'action_vehicle_receive_request_params.dart';
 ActionVehicleReceiveRequestParams _$ActionVehicleReceiveRequestParamsFromJson(
         Map<String, dynamic> json) =>
     ActionVehicleReceiveRequestParams(
-      vehicleHandoverId: json['vehicleHandoverId'] as int?,
-      scheduleEmployeeId: json['scheduleEmployeeId'] as int?,
-      handoverId: json['handoverId'] as int?,
-      issueDescriptionStatus: json['issueDescriptionStatus'] as int?,
+      vehicleHandoverId: (json['vehicleHandoverId'] as num?)?.toInt(),
+      scheduleEmployeeId: (json['scheduleEmployeeId'] as num?)?.toInt(),
+      handoverId: (json['handoverId'] as num?)?.toInt(),
+      issueDescriptionStatus: (json['issueDescriptionStatus'] as num?)?.toInt(),
       action: json['action'] as String?,
       type: json['type'] as String?,
     );

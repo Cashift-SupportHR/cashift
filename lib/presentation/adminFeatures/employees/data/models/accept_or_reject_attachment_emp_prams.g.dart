@@ -10,9 +10,9 @@ AcceptOrRejectAttachmentEmpPrams _$AcceptOrRejectAttachmentEmpPramsFromJson(
         Map<String, dynamic> json) =>
     AcceptOrRejectAttachmentEmpPrams(
       rejectReason: json['rejectReason'] as String?,
-      freelancerId: json['freelancerId'] as int?,
-      attachmentId: json['attachmentId'] as int?,
-      statusCode: json['statusCode'] as int?,
+      freelancerId: (json['freelancerId'] as num?)?.toInt(),
+      attachmentId: (json['attachmentId'] as num?)?.toInt(),
+      statusCode: (json['statusCode'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AcceptOrRejectAttachmentEmpPramsToJson(

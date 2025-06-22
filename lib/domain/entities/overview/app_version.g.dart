@@ -7,9 +7,9 @@ part of 'app_version.dart';
 // **************************************************************************
 
 AppVersion _$AppVersionFromJson(Map<String, dynamic> json) => AppVersion(
-      androidVersoin: json['androidVersoin'] as int?,
+      androidVersoin: (json['androidVersoin'] as num?)?.toInt(),
       androidForceUpdate: json['androidForceUpdate'] as bool?,
-      iosVersoin: json['iosVersoin'] as int?,
+      iosVersoin: (json['iosVersoin'] as num?)?.toInt(),
       iosForceUpdate: json['iosForceUpdate'] as bool?,
     );
 

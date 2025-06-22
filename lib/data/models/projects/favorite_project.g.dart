@@ -8,8 +8,8 @@ part of 'favorite_project.dart';
 
 FavoriteProject _$FavoriteProjectFromJson(Map<String, dynamic> json) =>
     FavoriteProject(
-      id: json['id'] as int,
-      projectId: json['projectId'] as int,
+      id: (json['id'] as num).toInt(),
+      projectId: (json['projectId'] as num).toInt(),
       projectName: json['projectName'] as String,
     );
 

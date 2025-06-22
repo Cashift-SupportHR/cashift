@@ -70,7 +70,7 @@ RoleDto _$RoleDtoFromJson(Map<String, dynamic> json) => RoleDto(
       id: json['id'] as String?,
       name: json['name'] as String?,
       description: json['description'] as String?,
-      level: json['level'] as int?,
+      level: (json['level'] as num?)?.toInt(),
       isProject: json['isProject'] as bool?,
       isCompany: json['isCompany'] as bool?,
       isShift: json['isShift'] as bool?,

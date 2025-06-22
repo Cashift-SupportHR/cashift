@@ -8,7 +8,7 @@ part of 'applied_data_dto.dart';
 
 AppliedDataDto _$AppliedDataDtoFromJson(Map<String, dynamic> json) =>
     AppliedDataDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       employeeName: json['employeeName'] as String?,
       freelanceIcon: json['freelanceIcon'] as String?,
       qualification: json['qualification'] as String?,
@@ -16,7 +16,7 @@ AppliedDataDto _$AppliedDataDtoFromJson(Map<String, dynamic> json) =>
       idNumber: json['idNumber'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       statusName: json['statusName'] as String?,
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
       deservedAmount: (json['deservedAmount'] as num?)?.toDouble(),
       listAllowEditOpp: (json['listAllowEditOpp'] as List<dynamic>?)
           ?.map((e) => ListAllowEditOppDto.fromJson(e as Map<String, dynamic>))
@@ -40,7 +40,7 @@ Map<String, dynamic> _$AppliedDataDtoToJson(AppliedDataDto instance) =>
 
 ListAllowEditOppDto _$ListAllowEditOppDtoFromJson(Map<String, dynamic> json) =>
     ListAllowEditOppDto(
-      statusCode: json['statusCode'] as int?,
+      statusCode: (json['statusCode'] as num?)?.toInt(),
       description: json['description'] as String?,
     );
 

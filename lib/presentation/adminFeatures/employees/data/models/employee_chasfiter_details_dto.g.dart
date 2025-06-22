@@ -9,15 +9,15 @@ part of 'employee_chasfiter_details_dto.dart';
 EmployeeChasfiterDetailsDto _$EmployeeChasfiterDetailsDtoFromJson(
         Map<String, dynamic> json) =>
     EmployeeChasfiterDetailsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       email: json['email'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       idNumber: json['idNumber'] as String?,
       dateOfBirth: json['dateOfBirth'] as String?,
       gender: json['gender'] as String?,
-      age: json['age'] as int?,
-      cityId: json['cityId'] as int?,
+      age: (json['age'] as num?)?.toInt(),
+      cityId: (json['cityId'] as num?)?.toInt(),
       cityName: json['cityName'] as String?,
       computerLevel: json['computerLevel'] as String?,
       englishLevel: json['englishLevel'] as String?,

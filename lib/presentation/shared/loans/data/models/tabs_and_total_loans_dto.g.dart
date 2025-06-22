@@ -39,7 +39,7 @@ Map<String, dynamic> _$TotalLoanDtoToJson(TotalLoanDto instance) =>
 
 TabLoansDto _$TabLoansDtoFromJson(Map<String, dynamic> json) => TabLoansDto(
       name: json['name'] as String?,
-      value: json['id'] as int?,
+      value: (json['id'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$TabLoansDtoToJson(TabLoansDto instance) =>

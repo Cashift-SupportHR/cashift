@@ -8,7 +8,7 @@ part of 'end_shift_params.dart';
 
 EndShiftParams _$EndShiftParamsFromJson(Map<String, dynamic> json) =>
     EndShiftParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       endTimeLatitude: json['endTimeLatitude'] as String?,
       endTimeLongtude: json['endTimeLongtude'] as String?,
       projectId: json['projectId'] as String?,

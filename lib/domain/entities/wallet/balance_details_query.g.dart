@@ -8,10 +8,10 @@ part of 'balance_details_query.dart';
 
 BalanceDetailsQuery _$BalanceDetailsQueryFromJson(Map<String, dynamic> json) =>
     BalanceDetailsQuery(
-      statusId: json['statusId'] as int?,
-      companyId: json['companyId'] as int?,
-      headId: json['headId'] as int?,
-      type: json['type'] as int?,
+      statusId: (json['statusId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      headId: (json['headId'] as num?)?.toInt(),
+      type: (json['type'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BalanceDetailsQueryToJson(

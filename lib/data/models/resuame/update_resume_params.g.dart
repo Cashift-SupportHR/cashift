@@ -8,27 +8,28 @@ part of 'update_resume_params.dart';
 
 UpdateResumeParams _$UpdateResumeParamsFromJson(Map<String, dynamic> json) =>
     UpdateResumeParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
-      cityId: json['cityId'] as int?,
+      cityId: (json['cityId'] as num?)?.toInt(),
       otherCity: json['otherCity'] as String?,
       idNumber: json['idNumber'] as String?,
       birthDate: json['birthDate'] as String?,
-      englishLevel: json['englishLevel'] as int?,
-      computerLevel: json['computerLevel'] as int?,
+      englishLevel: (json['englishLevel'] as num?)?.toInt(),
+      computerLevel: (json['computerLevel'] as num?)?.toInt(),
       email: json['email'] as String?,
       gender: json['gender'] as bool?,
-      currentSituation: json['currentSituation'] as int?,
-      qualificationData: json['qualificationData'] as int?,
+      currentSituation: (json['currentSituation'] as num?)?.toInt(),
+      qualificationData: (json['qualificationData'] as num?)?.toInt(),
       qualificationName: json['qualificationName'] as String?,
-      listOfJob:
-          (json['listOfJob'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      listOfJob: (json['listOfJob'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       isHijri: json['isHijri'] as bool?,
-      length: json['length'] as int?,
-      weight: json['wieght'] as int?,
-      districtId: json['districtId'] as int?,
-      favourateHours: json['favourateHours'] as int?,
-      timeWorkId: json['timeWorkId'] as int?,
+      length: (json['length'] as num?)?.toInt(),
+      weight: (json['wieght'] as num?)?.toInt(),
+      districtId: (json['districtId'] as num?)?.toInt(),
+      favourateHours: (json['favourateHours'] as num?)?.toInt(),
+      timeWorkId: (json['timeWorkId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$UpdateResumeParamsToJson(UpdateResumeParams instance) =>

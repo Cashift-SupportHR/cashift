@@ -9,11 +9,11 @@ part of 'violation_employee_dto.dart';
 ViolationEmployeeDto _$ViolationEmployeeDtoFromJson(
         Map<String, dynamic> json) =>
     ViolationEmployeeDto(
-      id: json['id'] as int?,
-      employeeId: json['employeeId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      employeeId: (json['employeeId'] as num?)?.toInt(),
       name: json['name'] as String?,
       phone: json['phone'] as String?,
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
     );
 

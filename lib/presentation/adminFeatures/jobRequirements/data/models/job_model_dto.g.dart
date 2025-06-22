@@ -7,7 +7,7 @@ part of 'job_model_dto.dart';
 // **************************************************************************
 
 JobModelDto _$JobModelDtoFromJson(Map<String, dynamic> json) => JobModelDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       jobName: json['jobName'] as String?,
       icon: json['icon'] as String?,
     );

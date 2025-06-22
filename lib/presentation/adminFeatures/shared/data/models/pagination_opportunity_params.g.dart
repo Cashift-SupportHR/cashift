@@ -9,13 +9,13 @@ part of 'pagination_opportunity_params.dart';
 PaginationOpportunityParams _$PaginationOpportunityParamsFromJson(
         Map<String, dynamic> json) =>
     PaginationOpportunityParams(
-      projectId: json['projectId'] as int?,
-      page: json['page'] as int?,
-      jobId: json['jobId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      page: (json['page'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
       startDate: json['startDate'] as String?,
       endDate: json['endDate'] as String?,
-      pageSize: json['pageSize'] as int?,
-      type: json['type'] as int?,
+      pageSize: (json['pageSize'] as num?)?.toInt(),
+      type: (json['type'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$PaginationOpportunityParamsToJson(

@@ -9,8 +9,8 @@ part of 'add_home_location_params.dart';
 AddHomeLocationParams _$AddHomeLocationParamsFromJson(
         Map<String, dynamic> json) =>
     AddHomeLocationParams(
-      districtid: json['districtid'] as int?,
-      cityId: json['cityId'] as int?,
+      districtid: (json['districtid'] as num?)?.toInt(),
+      cityId: (json['cityId'] as num?)?.toInt(),
       lat: (json['lat'] as num?)?.toDouble(),
       lng: (json['lng'] as num?)?.toDouble(),
       districtName: json['districtName'] as String?,

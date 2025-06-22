@@ -7,7 +7,7 @@ part of 'job_terms.dart';
 // **************************************************************************
 
 JobTerms _$JobTermsFromJson(Map<String, dynamic> json) => JobTerms(
-      statusId: json['statusId'] as int?,
+      statusId: (json['statusId'] as num?)?.toInt(),
       companyLogo: json['companyLogo'] as String?,
       supLogo: json['supLogo'] as String?,
       mainLabel: json['mainLabel'] as String?,

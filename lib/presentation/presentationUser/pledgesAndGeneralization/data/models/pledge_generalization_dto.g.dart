@@ -9,7 +9,7 @@ part of 'pledge_generalization_dto.dart';
 PledgeGeneralizationDto _$PledgeGeneralizationDtoFromJson(
         Map<String, dynamic> json) =>
     PledgeGeneralizationDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       logo: json['logo'] as String?,
       title: json['title'] as String?,
       subTitle: json['subTitle'] as String?,

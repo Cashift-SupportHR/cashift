@@ -7,7 +7,7 @@ part of 'uniform_dto.dart';
 // **************************************************************************
 
 UniformDto _$UniformDtoFromJson(Map<String, dynamic> json) => UniformDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       jobUniformDetails: (json['jobUniformDetails'] as List<dynamic>?)
           ?.map((e) => JobUniformDetail.fromJson(e as Map<String, dynamic>))
@@ -23,7 +23,7 @@ Map<String, dynamic> _$UniformDtoToJson(UniformDto instance) =>
 
 JobUniformDetail _$JobUniformDetailFromJson(Map<String, dynamic> json) =>
     JobUniformDetail(
-      jobUniformId: json['jobUniformId'] as int?,
+      jobUniformId: (json['jobUniformId'] as num?)?.toInt(),
       uniFormImage: json['uniFormImage'] as String?,
       description: json['description'] as String?,
     );

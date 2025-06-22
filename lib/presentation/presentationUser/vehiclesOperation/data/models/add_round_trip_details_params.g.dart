@@ -9,9 +9,9 @@ part of 'add_round_trip_details_params.dart';
 AddRoundTripDetailsParams _$AddRoundTripDetailsParamsFromJson(
         Map<String, dynamic> json) =>
     AddRoundTripDetailsParams(
-      vehicleZoneId: json['vehicleZoneId'] as int?,
-      roundTypeId: json['roundTypeId'] as int?,
-      roundTripId: json['roundTripId'] as int?,
+      vehicleZoneId: (json['vehicleZoneId'] as num?)?.toInt(),
+      roundTypeId: (json['roundTypeId'] as num?)?.toInt(),
+      roundTripId: (json['roundTripId'] as num?)?.toInt(),
       notes: json['notes'] as String?,
     );
 

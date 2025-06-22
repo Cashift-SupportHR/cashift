@@ -9,11 +9,11 @@ part of 'withdraw_by_phone_wallet_params.dart';
 WithdrawByPhoneWalletParams _$WithdrawByPhoneWalletParamsFromJson(
         Map<String, dynamic> json) =>
     WithdrawByPhoneWalletParams(
-      providerId: json['providerId'] as int?,
-      projectId: json['projectId'] as int?,
+      providerId: (json['providerId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
       bankCode: json['bankCode'] as String?,
-      type: json['type'] as int?,
-      transferId: json['transferId'] as int?,
+      type: (json['type'] as num?)?.toInt(),
+      transferId: (json['transferId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$WithdrawByPhoneWalletParamsToJson(

@@ -8,7 +8,7 @@ part of 'job_filter_data.dart';
 
 JobFilterData _$JobFilterDataFromJson(Map<String, dynamic> json) =>
     JobFilterData(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       logo: json['logo'] as String?,
     );

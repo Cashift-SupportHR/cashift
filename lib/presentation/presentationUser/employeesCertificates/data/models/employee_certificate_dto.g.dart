@@ -9,7 +9,7 @@ part of 'employee_certificate_dto.dart';
 EmployeeCertificateDto _$EmployeeCertificateDtoFromJson(
         Map<String, dynamic> json) =>
     EmployeeCertificateDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       titleHead: json['titleHead'] as String?,
       logoHead: json['logoHead'] as String?,
       name: json['name'] as String?,

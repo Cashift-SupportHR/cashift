@@ -9,18 +9,18 @@ part of 'opportunity_details_data_dto.dart';
 OpportunityDetailsDataDto _$OpportunityDetailsDataDtoFromJson(
         Map<String, dynamic> json) =>
     OpportunityDetailsDataDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
       companyLogo: json['companyLogo'] as String?,
-      totalCount: json['totalCount'] as int?,
+      totalCount: (json['totalCount'] as num?)?.toInt(),
       completeFreeLanceInfoByCompanyAprovelLevelName:
           json['completeFreeLanceInfoByCompanyAprovelLevelName'] as String?,
       jobName: json['jobName'] as String?,
-      workingHours: json['workingHours'] as int?,
+      workingHours: (json['workingHours'] as num?)?.toInt(),
       startShiftDate: json['startShiftDate'] as String?,
       endShiftDate: json['endShiftDate'] as String?,
-      requiredCount: json['requiredCount'] as int?,
-      actualNumber: json['actualNumber'] as int?,
+      requiredCount: (json['requiredCount'] as num?)?.toInt(),
+      actualNumber: (json['actualNumber'] as num?)?.toInt(),
       salaries: (json['salaries'] as num?)?.toDouble(),
       description: json['description'] as String?,
       projectName: json['projectName'] as String?,
@@ -80,7 +80,7 @@ Map<String, dynamic> _$OpportunityDetailsDataDtoToJson(
 ActiveApplicantsCountDto _$ActiveApplicantsCountDtoFromJson(
         Map<String, dynamic> json) =>
     ActiveApplicantsCountDto(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       subtitle: json['subtitle'] as String?,
       percentage: (json['percentage'] as num?)?.toDouble(),
       title: json['title'] as String?,
@@ -98,7 +98,7 @@ Map<String, dynamic> _$ActiveApplicantsCountDtoToJson(
 WaitingApprovalApplicantsCountDto _$WaitingApprovalApplicantsCountDtoFromJson(
         Map<String, dynamic> json) =>
     WaitingApprovalApplicantsCountDto(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       subtitle: json['subtitle'] as String?,
       percentage: (json['percentage'] as num?)?.toDouble(),
       title: json['title'] as String?,
@@ -117,7 +117,7 @@ PaidOffApplicantsCountDto _$PaidOffApplicantsCountDtoFromJson(
         Map<String, dynamic> json) =>
     PaidOffApplicantsCountDto(
       subtitle: json['subtitle'] as String?,
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       percentage: (json['percentage'] as num?)?.toDouble(),
       title: json['title'] as String?,
     );
@@ -134,7 +134,7 @@ Map<String, dynamic> _$PaidOffApplicantsCountDtoToJson(
 CancelledApplicantsCountDto _$CancelledApplicantsCountDtoFromJson(
         Map<String, dynamic> json) =>
     CancelledApplicantsCountDto(
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       subtitle: json['subtitle'] as String?,
       percentage: (json['percentage'] as num?)?.toDouble(),
       title: json['title'] as String?,

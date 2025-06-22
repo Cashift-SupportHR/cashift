@@ -10,7 +10,7 @@ UploadFileRequestPrams _$UploadFileRequestPramsFromJson(
         Map<String, dynamic> json) =>
     UploadFileRequestPrams(
       NewPhoneNumber: json['NewPhoneNumber'] as String?,
-      CashifterRequestTypeId: json['CashifterRequestTypeId'] as int?,
+      CashifterRequestTypeId: (json['CashifterRequestTypeId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$UploadFileRequestPramsToJson(

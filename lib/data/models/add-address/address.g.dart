@@ -7,7 +7,7 @@ part of 'address.dart';
 // **************************************************************************
 
 Address _$AddressFromJson(Map<String, dynamic> json) => Address(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       langitude: json['langitude'] as String?,
       latitude: json['latitude'] as String?,
       details: json['details'] as String?,

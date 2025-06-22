@@ -7,13 +7,13 @@ part of 'dues_item.dart';
 // **************************************************************************
 
 DuesItem _$DuesItemFromJson(Map<String, dynamic> json) => DuesItem(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       money: (json['money'] as num?)?.toDouble(),
       statusName: json['statusName'] as String?,
       projectName: json['projectName'] as String?,
       workingDate: json['workingDate'] as String?,
-      jobId: json['jobId'] as int?,
-      statusCode: json['statusCode'] as int?,
+      jobId: (json['jobId'] as num?)?.toInt(),
+      statusCode: (json['statusCode'] as num?)?.toInt(),
       jobName: json['jobName'] as String?,
       city: json['city'] as String?,
       collectedDay: json['collectedDay'] as String?,
@@ -21,7 +21,7 @@ DuesItem _$DuesItemFromJson(Map<String, dynamic> json) => DuesItem(
       description: json['description'] as String?,
       startTime: json['startTime'] as String?,
       endTime: json['endTime'] as String?,
-      freeLanceApplyId: json['freeLanceApplyId'] as int?,
+      freeLanceApplyId: (json['freeLanceApplyId'] as num?)?.toInt(),
       amount: json['amount'] as num?,
       totalShiftHourse: json['totalShiftHourse'] as num?,
       totalShiftMinutes: json['totalShiftMinutes'] as num?,

@@ -8,7 +8,7 @@ part of 'shift_rquest_type_dto.dart';
 
 ShiftRquestTypeDto _$ShiftRquestTypeDtoFromJson(Map<String, dynamic> json) =>
     ShiftRquestTypeDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       code: json['code'] as String?,
     );

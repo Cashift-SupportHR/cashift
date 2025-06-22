@@ -8,7 +8,7 @@ part of 'tab_cashifter_dto.dart';
 
 TabCashifterDto _$TabCashifterDtoFromJson(Map<String, dynamic> json) =>
     TabCashifterDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

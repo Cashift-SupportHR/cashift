@@ -8,14 +8,14 @@ part of 'withdraw_method.dart';
 
 WithdrawMethod _$WithdrawMethodFromJson(Map<String, dynamic> json) =>
     WithdrawMethod(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       code: json['code'] as String?,
       status: json['status'] as bool?,
       logo: json['logo'] as String?,
       fullName: json['fullName'] as String?,
       description: json['description'] as String?,
-      exchangeId: json['exchangeId'] as int?,
+      exchangeId: (json['exchangeId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$WithdrawMethodToJson(WithdrawMethod instance) =>

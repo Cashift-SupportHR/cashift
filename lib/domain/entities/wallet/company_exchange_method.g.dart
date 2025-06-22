@@ -9,7 +9,7 @@ part of 'company_exchange_method.dart';
 CompanyExchangeMethod _$CompanyExchangeMethodFromJson(
         Map<String, dynamic> json) =>
     CompanyExchangeMethod(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       companyId: json['companyId'] as String?,
     )..balance = json['balance'] as num?;

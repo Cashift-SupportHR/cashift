@@ -9,7 +9,7 @@ part of 'employment_official_dto.dart';
 EmploymentOfficialDto _$EmploymentOfficialDtoFromJson(
         Map<String, dynamic> json) =>
     EmploymentOfficialDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       cityName: json['cityName'] as String?,
       name: json['name'] as String?,
       phone: json['phone'] as String?,
@@ -23,7 +23,7 @@ EmploymentOfficialDto _$EmploymentOfficialDtoFromJson(
       descriptionAr: json['descriptionAr'] as String?,
       descriptionEn: json['descriptionEn'] as String?,
       email: json['email'] as String?,
-      cityId: json['cityId'] as int?,
+      cityId: (json['cityId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$EmploymentOfficialDtoToJson(

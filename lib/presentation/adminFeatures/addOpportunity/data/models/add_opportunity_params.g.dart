@@ -9,30 +9,31 @@ part of 'add_opportunity_params.dart';
 AddOpportunityParams _$AddOpportunityParamsFromJson(
         Map<String, dynamic> json) =>
     AddOpportunityParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       description: json['description'] as String?,
-      contractConditionsId: json['contractConditionsId'] as int?,
-      jobId: json['jobId'] as int?,
+      contractConditionsId: (json['contractConditionsId'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
       workingData: json['workingData'],
-      requiredCount: json['requiredCount'] as int?,
+      requiredCount: (json['requiredCount'] as num?)?.toInt(),
       autoApprove: json['autoApprove'] as bool?,
-      shiftId: json['shiftId'] as int?,
-      reserveNumber: json['reserveNumber'] as int?,
-      startAllowMinutes: json['startAllowMinutes'] as int?,
-      endAllowMinutes: json['endAllowMinutes'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
+      reserveNumber: (json['reserveNumber'] as num?)?.toInt(),
+      startAllowMinutes: (json['startAllowMinutes'] as num?)?.toInt(),
+      endAllowMinutes: (json['endAllowMinutes'] as num?)?.toInt(),
       isAllowEditTime: json['isAllowEditTime'] as bool?,
-      calcOppId: json['calcOppId'] as int?,
+      calcOppId: (json['calcOppId'] as num?)?.toInt(),
       startShiftTime: json['startShiftTime'] as String?,
-      hoursCount: json['hoursCount'] as int?,
+      hoursCount: (json['hoursCount'] as num?)?.toInt(),
       isAllowEditPrice: json['isAllowEditPrice'] as bool?,
       salary: (json['salary'] as num?)?.toDouble(),
       isAcceptAllEmployeeByApprovalLevel:
-          json['isAcceptAllEmployeeByApprovalLevel'] as int?,
+          (json['isAcceptAllEmployeeByApprovalLevel'] as num?)?.toInt(),
       completeFreeLanceInfoByCompanyAprovelLevelId:
-          json['completeFreeLanceInfoByCompanyAprovelLevelId'] as int?,
-      attendanceTypeId: json['attendanceTypeId'] as int?,
+          (json['completeFreeLanceInfoByCompanyAprovelLevelId'] as num?)
+              ?.toInt(),
+      attendanceTypeId: (json['attendanceTypeId'] as num?)?.toInt(),
       freeLancerIds: (json['freeLancerIds'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
     );
 

@@ -8,29 +8,30 @@ part of 'focus_point_by_id_dto.dart';
 
 FocusPointByIdDto _$FocusPointByIdDtoFromJson(Map<String, dynamic> json) =>
     FocusPointByIdDto(
-      id: json['id'] as int?,
-      projectId: json['projectId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      focusPointsTypeId: json['focusPointsTypeId'] as int?,
+      focusPointsTypeId: (json['focusPointsTypeId'] as num?)?.toInt(),
       focusPointsTypeName: json['focusPointsTypeName'] as String?,
       focusPointsName: json['focusPointsName'] as String?,
-      focusPointsPriorityId: json['focusPointsPriorityId'] as int?,
+      focusPointsPriorityId: (json['focusPointsPriorityId'] as num?)?.toInt(),
       focusPointsPriorityName: json['focusPointsPriorityName'] as String?,
-      freelanceTypeId: json['freelanceTypeId'] as int?,
+      freelanceTypeId: (json['freelanceTypeId'] as num?)?.toInt(),
       freelanceTypeName: json['freelanceTypeName'] as String?,
       focusPointId: json['focusPointId'] as String?,
       latitude: json['latitude'] as String?,
       longtude: json['longtude'] as String?,
       radius: json['radius'] as String?,
-      focusPointsAreaId: json['focusPointsAreaId'] as int?,
+      focusPointsAreaId: (json['focusPointsAreaId'] as num?)?.toInt(),
       focusPointsAreaName: json['focusPointsAreaName'] as String?,
-      focusPointsTransactionId: json['focusPointsTransactionId'] as int?,
+      focusPointsTransactionId:
+          (json['focusPointsTransactionId'] as num?)?.toInt(),
       focusPointsTransactionName: json['focusPointsTransactionName'] as String?,
       listShifts: (json['listShifts'] as List<dynamic>?)
           ?.map((e) => ShiftFocusPointDto.fromJson(e as Map<String, dynamic>))
           .toList(),
     )
-      ..coverageBreakId = json['coverageBreakId'] as int?
+      ..coverageBreakId = (json['coverageBreakId'] as num?)?.toInt()
       ..coverageBreakName = json['coverageBreakName'] as String?;
 
 Map<String, dynamic> _$FocusPointByIdDtoToJson(FocusPointByIdDto instance) =>

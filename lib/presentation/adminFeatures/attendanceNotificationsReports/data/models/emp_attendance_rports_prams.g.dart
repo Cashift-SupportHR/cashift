@@ -9,8 +9,8 @@ part of 'emp_attendance_rports_prams.dart';
 EmpAttendanceRportsPrams _$EmpAttendanceRportsPramsFromJson(
         Map<String, dynamic> json) =>
     EmpAttendanceRportsPrams(
-      projectId: json['projectId'] as int?,
-      shiftId: json['shiftId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       startShiftDate: json['startShiftDate'] as String?,
       endShiftDate: json['endShiftDate'] as String?,
     );

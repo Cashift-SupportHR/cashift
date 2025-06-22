@@ -8,14 +8,14 @@ part of 'admin_wallet_prams.dart';
 
 AdminWalletPrams _$AdminWalletPramsFromJson(Map<String, dynamic> json) =>
     AdminWalletPrams(
-      filterId: json['filterId'] as int?,
+      filterId: (json['filterId'] as num?)?.toInt(),
       dateFilter: json['dateFilter'] as String?,
       nameFilter: json['nameFilter'] as String?,
-      tabId: json['tabId'] as int?,
+      tabId: (json['tabId'] as num?)?.toInt(),
       startDate: json['startDate'] as String?,
       endDate: json['endDate'] as String?,
-      pageNumber: json['pageNumber'] as int?,
-      pageSize: json['pageSize'] as int?,
+      pageNumber: (json['pageNumber'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AdminWalletPramsToJson(AdminWalletPrams instance) =>

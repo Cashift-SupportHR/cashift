@@ -10,7 +10,7 @@ TypeOfCommerce _$TypeOfCommerceFromJson(Map<String, dynamic> json) =>
     TypeOfCommerce(
       descrition: json['descrition'] as String?,
       name: json['name'] as String?,
-      type: json['type'] as int?,
+      type: (json['type'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$TypeOfCommerceToJson(TypeOfCommerce instance) =>

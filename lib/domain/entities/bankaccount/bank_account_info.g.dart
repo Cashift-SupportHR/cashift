@@ -8,8 +8,8 @@ part of 'bank_account_info.dart';
 
 BankAccountInfo _$BankAccountInfoFromJson(Map<String, dynamic> json) =>
     BankAccountInfo(
-      id: json['id'] as int,
-      bankId: json['bankId'] as int,
+      id: (json['id'] as num).toInt(),
+      bankId: (json['bankId'] as num).toInt(),
       bankName: json['bankName'] as String,
       iban: json['iban'] as String,
     );

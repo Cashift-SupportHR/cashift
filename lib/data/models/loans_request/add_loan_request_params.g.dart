@@ -10,10 +10,10 @@ AddLoanRequestParams _$AddLoanRequestParamsFromJson(
         Map<String, dynamic> json) =>
     AddLoanRequestParams(
       idNumber: json['idNumber'] as String?,
-      loanType: json['loanType'] as int?,
+      loanType: (json['loanType'] as num?)?.toInt(),
       crmValue: json['crmValue'] as String?,
-      loansAmount: json['loansAmount'] as int?,
-      monthNumber: json['monthNumber'] as int?,
+      loansAmount: (json['loansAmount'] as num?)?.toInt(),
+      monthNumber: (json['monthNumber'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddLoanRequestParamsToJson(

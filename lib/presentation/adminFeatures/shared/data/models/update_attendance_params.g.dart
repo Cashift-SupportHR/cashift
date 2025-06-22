@@ -10,9 +10,9 @@ UpdateAttendanceParams _$UpdateAttendanceParamsFromJson(
         Map<String, dynamic> json) =>
     UpdateAttendanceParams(
       attendaceStatus: json['attendaceStatus'] as String?,
-      id: json['id'] as int?,
-      oppId: json['oppId'] as int?,
-      statusId: json['statusId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      oppId: (json['oppId'] as num?)?.toInt(),
+      statusId: (json['statusId'] as num?)?.toInt(),
       startTime: json['startTime'] as String?,
       endTime: json['endTime'] as String?,
     );

@@ -10,9 +10,9 @@ JobEvaluationsEmployeeDto _$JobEvaluationsEmployeeDtoFromJson(
         Map<String, dynamic> json) =>
     JobEvaluationsEmployeeDto(
       nameAr: json['nameAr'] as String?,
-      evalkey: json['evalkey'] as int?,
-      val: json['val'] as int?,
-      evaluationCount: json['evaluationCount'] as int?,
+      evalkey: (json['evalkey'] as num?)?.toInt(),
+      val: (json['val'] as num?)?.toInt(),
+      evaluationCount: (json['evaluationCount'] as num?)?.toInt(),
       evaluationName: json['evaluationName'] as String?,
       totalWorkHours: json['totalWorkHours'] as String?,
       percentage: (json['percentage'] as num?)?.toDouble(),

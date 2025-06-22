@@ -8,7 +8,7 @@ part of 'project_filtter_dto.dart';
 
 ProjectFiltterDto _$ProjectFiltterDtoFromJson(Map<String, dynamic> json) =>
     ProjectFiltterDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

@@ -9,10 +9,10 @@ part of 'approve_reject_violation_params.dart';
 ApproveRejectViolationParams _$ApproveRejectViolationParamsFromJson(
         Map<String, dynamic> json) =>
     ApproveRejectViolationParams(
-      id: json['id'] as int?,
-      typeViolation: json['typeViolation'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      typeViolation: (json['typeViolation'] as num?)?.toInt(),
       description: json['description'] as String?,
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ApproveRejectViolationParamsToJson(

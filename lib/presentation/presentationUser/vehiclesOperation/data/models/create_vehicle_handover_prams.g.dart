@@ -9,10 +9,10 @@ part of 'create_vehicle_handover_prams.dart';
 CreateVehicleHandoverPrams _$CreateVehicleHandoverPramsFromJson(
         Map<String, dynamic> json) =>
     CreateVehicleHandoverPrams(
-      vehicleId: json['vehicleId'] as int?,
-      companyId: json['companyId'] as int?,
-      projectId: json['projectId'] as int?,
-      shiftId: json['shiftId'] as int?,
+      vehicleId: (json['vehicleId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$CreateVehicleHandoverPramsToJson(

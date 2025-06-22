@@ -8,7 +8,7 @@ part of 'applied_offer_dto.dart';
 
 AppliedOfferDto _$AppliedOfferDtoFromJson(Map<String, dynamic> json) =>
     AppliedOfferDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       isAllowToTrack: json['isAllowToTrack'] as bool?,
       pathLogo: json['pathLogo'] as String?,
       deductionsDto: (json['deductions'] as List<dynamic>?)
@@ -16,8 +16,8 @@ AppliedOfferDto _$AppliedOfferDtoFromJson(Map<String, dynamic> json) =>
           .toList(),
       totalDeductions: json['totalDeductions'] as num?,
       deservedAmount: json['deservedAmount'] as num?,
-      isCurrent: json['isCurrent'] as int?,
-      statusId: json['statusId'] as int?,
+      isCurrent: (json['isCurrent'] as num?)?.toInt(),
+      statusId: (json['statusId'] as num?)?.toInt(),
       status: json['status'] as String?,
       radius: json['radius'] as String?,
       opportunitiesStrartTime: json['opportunitiesStrartTime'] as String?,
@@ -28,9 +28,9 @@ AppliedOfferDto _$AppliedOfferDtoFromJson(Map<String, dynamic> json) =>
       endWorkingDate: json['endWorkingDate'] as String?,
       latitude: (json['latitude'] as num?)?.toDouble(),
       longtude: (json['longtude'] as num?)?.toDouble(),
-      jobId: json['jobId'] as int?,
+      jobId: (json['jobId'] as num?)?.toInt(),
       jobName: json['jobName'] as String?,
-      salary: json['salary'] as int?,
+      salary: (json['salary'] as num?)?.toInt(),
       projectId: json['projectId'] as String?,
       projectName: json['projectName'] as String?,
       address: json['address'] as String?,
@@ -39,8 +39,8 @@ AppliedOfferDto _$AppliedOfferDtoFromJson(Map<String, dynamic> json) =>
       specializtion: json['specializtion'] as String?,
       gender: json['gender'] as String?,
       qualificationName: json['qualificationName'] as String?,
-      requiredCount: json['requiredCount'] as int?,
-      actualNumber: json['actualNumber'] as int?,
+      requiredCount: (json['requiredCount'] as num?)?.toInt(),
+      actualNumber: (json['actualNumber'] as num?)?.toInt(),
       addressCompany: json['addressCompany'] as String?,
       latitudeCompany: (json['latitudeCompany'] as num?)?.toDouble(),
       longtudeCompany: (json['longtudeCompany'] as num?)?.toDouble(),

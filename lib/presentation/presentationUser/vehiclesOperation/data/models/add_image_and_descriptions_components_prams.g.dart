@@ -13,9 +13,9 @@ AddImageAndDescriptionsComponentsPrams
           IssueDescription: json['IssueDescription'] as String?,
           ComponentStatus: json['ComponentStatus'] as bool?,
           custodyStatus: json['CustodyStatus'] as bool?,
-          VehicleComponentId: json['VehicleComponentId'] as int?,
-          VehicleHandoverId: json['VehicleHandoverId'] as int?,
-          VehicleCustodyId: json['VehicleCustodyId'] as int?,
+          VehicleComponentId: (json['VehicleComponentId'] as num?)?.toInt(),
+          VehicleHandoverId: (json['VehicleHandoverId'] as num?)?.toInt(),
+          VehicleCustodyId: (json['VehicleCustodyId'] as num?)?.toInt(),
         );
 
 Map<String, dynamic> _$AddImageAndDescriptionsComponentsPramsToJson(

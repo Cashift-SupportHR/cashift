@@ -9,7 +9,7 @@ part of 'project_fiter_opportunity_dto.dart';
 ProjectFiterOpportunityDto _$ProjectFiterOpportunityDtoFromJson(
         Map<String, dynamic> json) =>
     ProjectFiterOpportunityDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

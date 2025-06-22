@@ -23,23 +23,29 @@ class ClientCreator {
   Dio create() {
     final dio2 = Dio();
 
-    // Provide a dio instance
-    // dio2.options.connectTimeout = 60000 * 2;
-    dio2.options.connectTimeout = Duration(seconds: 60);
-    // Chucker api
-    if (Config.isDebuggable == true || Config.isTestVersion == true) {
-      dio2.interceptors.add(
-        ChuckerDioInterceptor(),
-      );
+    // Set timeouts
+    dio2.options.connectTimeout = Duration(seconds: 60); // Connection timeout
+    dio2.options.receiveTimeout = Duration(seconds: 60); // Receive timeout
+    dio2.options.sendTimeout = Duration(seconds: 60);    // Send timeout
+
+    // Set base URL
+    dio2.options.baseUrl =kBASE_URL;  // Replace with your base URL
+
+    // Add ChuckerDioInterceptor for debug/test environments
+    if (Config.isDebuggable || Config.isTestVersion) {
+      dio2.interceptors.add(ChuckerDioInterceptor());
     }
 
-    dio2.interceptors.add(LogInterceptor(responseBody: true));
+    // Add LogInterceptor for logging requests/responses in debug/test environments
+    dio2.interceptors.add(LogInterceptor(responseBody: Config.isDebuggable || Config.isTestVersion));
+
+    // Add custom interceptor if provided
     if (interceptor != null) {
       dio2.interceptors.add(interceptor!);
     }
-    print('dio2.interceptors ${dio2.interceptors}');
     return dio2;
   }
+
 }
 
 class HeaderInterceptor extends Interceptor {

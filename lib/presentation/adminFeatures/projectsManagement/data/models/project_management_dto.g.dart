@@ -9,9 +9,9 @@ part of 'project_management_dto.dart';
 ProjectManagementDto _$ProjectManagementDtoFromJson(
         Map<String, dynamic> json) =>
     ProjectManagementDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       projectCode: json['projectCode'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       nameEn: json['nameEn'] as String?,
       nameAr: json['nameAr'] as String?,
       cityName: json['cityName'] as String?,

@@ -7,8 +7,8 @@ part of 'cashier.dart';
 // **************************************************************************
 
 Cashier _$CashierFromJson(Map<String, dynamic> json) => Cashier(
-      id: json['id'] as int?,
-      companyId: json['companyId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
       name: json['name'] as String?,
       address: json['address'] as String?,

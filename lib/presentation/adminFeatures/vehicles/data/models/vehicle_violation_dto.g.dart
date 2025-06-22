@@ -20,16 +20,17 @@ ContractViolationDto _$ContractViolationDtoFromJson(
           ?.map((e) =>
               ContractViolationAttachment.fromJson(e as Map<String, dynamic>))
           .toList(),
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       details: json['details'] as String?,
       lat: (json['lat'] as num?)?.toDouble(),
       lng: (json['lng'] as num?)?.toDouble(),
-      projectId: json['projectId'] as int?,
-      companyId: json['companyId'] as int?,
-      shiftId: json['shiftId'] as int?,
-      contractViolationTypeId: json['contractViolationTypeId'] as int?,
-      scheduleEmployeeWorkId: json['scheduleEmployeeWorkId'] as int?,
-      freeLanceId: json['freeLanceId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
+      contractViolationTypeId:
+          (json['contractViolationTypeId'] as num?)?.toInt(),
+      scheduleEmployeeWorkId: (json['scheduleEmployeeWorkId'] as num?)?.toInt(),
+      freeLanceId: (json['freeLanceId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
       streetName: json['streetName'] as String?,
     );

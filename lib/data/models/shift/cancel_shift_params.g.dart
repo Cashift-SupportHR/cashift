@@ -8,7 +8,7 @@ part of 'cancel_shift_params.dart';
 
 CancelShiftParams _$CancelShiftParamsFromJson(Map<String, dynamic> json) =>
     CancelShiftParams(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       description: json['description'] as String,
     );
 

@@ -8,7 +8,7 @@ part of 'gas_station_trip_dto.dart';
 
 GasStationTripDto _$GasStationTripDtoFromJson(Map<String, dynamic> json) =>
     GasStationTripDto(
-      fillingStationId: json['fillingStationId'] as int?,
+      fillingStationId: (json['fillingStationId'] as num?)?.toInt(),
       fillingStationNameAr: json['fillingStationNameAr'] as String?,
       fillingStationNameEn: json['fillingStationNameEn'] as String?,
       latitude: (json['latitude'] as num?)?.toDouble(),

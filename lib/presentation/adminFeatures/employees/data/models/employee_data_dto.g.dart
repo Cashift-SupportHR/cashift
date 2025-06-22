@@ -11,7 +11,7 @@ EmployeeDataDto _$EmployeeDataDtoFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
       image: json['image'] as String?,
       mobile: json['mobile'] as String?,
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$EmployeeDataDtoToJson(EmployeeDataDto instance) =>

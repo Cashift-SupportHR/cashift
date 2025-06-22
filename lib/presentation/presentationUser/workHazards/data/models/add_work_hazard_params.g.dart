@@ -8,14 +8,14 @@ part of 'add_work_hazard_params.dart';
 
 AddWorkHazardParams _$AddWorkHazardParamsFromJson(Map<String, dynamic> json) =>
     AddWorkHazardParams(
-      id: json['id'] as int?,
-      hazardPriorityLevelId: json['hazardPriorityLevelId'] as int?,
-      hazardTypeId: json['hazardTypeId'] as int?,
-      hazardSatusId: json['hazardSatusId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      hazardPriorityLevelId: (json['hazardPriorityLevelId'] as num?)?.toInt(),
+      hazardTypeId: (json['hazardTypeId'] as num?)?.toInt(),
+      hazardSatusId: (json['hazardSatusId'] as num?)?.toInt(),
       hazardStatusName: json['hazardStatusName'] as String?,
-      projectId: json['projectId'] as int?,
-      companyId: json['companyId'] as int?,
-      shiftId: json['shiftId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       description: json['description'] as String?,
     );
 

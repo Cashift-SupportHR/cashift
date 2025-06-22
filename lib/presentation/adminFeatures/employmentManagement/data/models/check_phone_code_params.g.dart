@@ -9,7 +9,7 @@ part of 'check_phone_code_params.dart';
 CheckPhoneCodeParams _$CheckPhoneCodeParamsFromJson(
         Map<String, dynamic> json) =>
     CheckPhoneCodeParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       code: json['code'] as String?,
     );
 

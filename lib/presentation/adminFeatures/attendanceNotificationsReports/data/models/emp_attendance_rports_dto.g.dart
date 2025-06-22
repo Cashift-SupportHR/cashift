@@ -14,8 +14,9 @@ EmpAttendanceRportsDto _$EmpAttendanceRportsDtoFromJson(
           ?.map((e) =>
               ScheduleEmpAttendanceListDto.fromJson(e as Map<String, dynamic>))
           .toList(),
-      totalScheduleEmpAttendance: json['totalScheduleEmpAttendance'] as int?,
-      totalContractualNumber: json['totalContractualNumber'] as int?,
+      totalScheduleEmpAttendance:
+          (json['totalScheduleEmpAttendance'] as num?)?.toInt(),
+      totalContractualNumber: (json['totalContractualNumber'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$EmpAttendanceRportsDtoToJson(
@@ -29,18 +30,18 @@ Map<String, dynamic> _$EmpAttendanceRportsDtoToJson(
 ScheduleEmpAttendanceListDto _$ScheduleEmpAttendanceListDtoFromJson(
         Map<String, dynamic> json) =>
     ScheduleEmpAttendanceListDto(
-      id: json['id'] as int?,
-      shiftId: json['shiftId'] as int?,
-      projectId: json['projectId'] as int?,
-      freelancerId: json['freelancerId'] as int?,
-      lastAttendanceId: json['lastAttendanceId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      freelancerId: (json['freelancerId'] as num?)?.toInt(),
+      lastAttendanceId: (json['lastAttendanceId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
       projectName: json['projectName'] as String?,
       freelancerName: json['freelancerName'] as String?,
       empStartShiftDate: json['empStartShiftDate'] as String?,
       empEndShiftDate: json['empEndShiftDate'] as String?,
-      workHoursNumber: json['workHoursNumber'] as int?,
-      employeeStatusId: json['employeeStatusId'] as int?,
+      workHoursNumber: (json['workHoursNumber'] as num?)?.toInt(),
+      employeeStatusId: (json['employeeStatusId'] as num?)?.toInt(),
       employeeStatusName: json['employeeStatusName'] as String?,
       attendanceStatus: json['attendanceStatus'] as String?,
     );

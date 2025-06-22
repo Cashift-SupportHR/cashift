@@ -9,8 +9,8 @@ part of 'add_attendance_notifications_prams.dart';
 AddAttendanceNotificationsPrams _$AddAttendanceNotificationsPramsFromJson(
         Map<String, dynamic> json) =>
     AddAttendanceNotificationsPrams(
-      id: json['id'] as int?,
-      attendanceNotifiTypeId: json['attendanceNotifiTypeId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      attendanceNotifiTypeId: (json['attendanceNotifiTypeId'] as num?)?.toInt(),
       discription: json['discription'] as String?,
       attNotifiFrom: json['attNotifiFrom'] as String?,
       attNotifiTo: json['attNotifiTo'] as String?,

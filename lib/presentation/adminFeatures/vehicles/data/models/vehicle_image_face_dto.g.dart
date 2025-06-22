@@ -8,7 +8,7 @@ part of 'vehicle_image_face_dto.dart';
 
 VehicleImageFaceDto _$VehicleImageFaceDtoFromJson(Map<String, dynamic> json) =>
     VehicleImageFaceDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       imageFace: json['imageFace'] as String?,
     );

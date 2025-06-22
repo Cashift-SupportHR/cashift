@@ -22,7 +22,7 @@ Map<String, dynamic> _$CalcOpportunityDtoToJson(CalcOpportunityDto instance) =>
 
 ListCalcOppDto _$ListCalcOppDtoFromJson(Map<String, dynamic> json) =>
     ListCalcOppDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       calcOppName: json['calcOppName'] as String?,
       description: json['description'] as String?,
     );

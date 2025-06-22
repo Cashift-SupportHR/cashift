@@ -9,7 +9,7 @@ part of 'point_attendance_type_dto.dart';
 PointAttendanceTypeDto _$PointAttendanceTypeDtoFromJson(
         Map<String, dynamic> json) =>
     PointAttendanceTypeDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

@@ -47,7 +47,7 @@ LocationsProject _$LocationsProjectFromJson(Map<String, dynamic> json) =>
       longitude: json['longitude'] as String?,
       name: json['name'] as String?,
       locationProjectCode: json['locationProjectCode'] as String?,
-      countOfEmployee: json['countOfEmployee'] as int?,
+      countOfEmployee: (json['countOfEmployee'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$LocationsProjectToJson(LocationsProject instance) =>

@@ -8,16 +8,16 @@ part of 'current_round_trip_dto.dart';
 
 CurrentRoundTripDto _$CurrentRoundTripDtoFromJson(Map<String, dynamic> json) =>
     CurrentRoundTripDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       stationLongtude: (json['stationLongtude'] as num?)?.toDouble(),
       stationLatitue: (json['stationLatitue'] as num?)?.toDouble(),
       pubupMessage: json['pubupMessage'] as String?,
       isRequiredPubup: json['isRequiredPubup'] as bool?,
       roundTypeCode: json['roundTypeCode'] as String?,
-      vehiclesZoneId: json['vehiclesZoneId'] as int?,
+      vehiclesZoneId: (json['vehiclesZoneId'] as num?)?.toInt(),
       vehiclesZoneName: json['vehiclesZoneName'] as String?,
-      numberOfViolations: json['numberOfViolations'] as int?,
-      roundTypeId: json['roundTypeId'] as int?,
+      numberOfViolations: (json['numberOfViolations'] as num?)?.toInt(),
+      roundTypeId: (json['roundTypeId'] as num?)?.toInt(),
       roundTypeName: json['roundTypeName'] as String?,
       isAllowToTrackTime: json['isAllowToTrackTime'] as bool?,
       startRound: json['startRound'] as String?,

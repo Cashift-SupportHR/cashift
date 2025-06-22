@@ -8,12 +8,12 @@ part of 'bail_request_dto.dart';
 
 BailRequestDto _$BailRequestDtoFromJson(Map<String, dynamic> json) =>
     BailRequestDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       freelanceName: json['freelanceName'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       descriptionRequest: json['descriptionRequest'] as String?,
-      totalMoney: json['totalMoney'] as int?,
-      totalInstallment: json['totalInstallment'] as int?,
+      totalMoney: (json['totalMoney'] as num?)?.toInt(),
+      totalInstallment: (json['totalInstallment'] as num?)?.toInt(),
       statusName: json['statusName'] as String?,
       descriptionReject: json['descriptionReject'] as String?,
     );

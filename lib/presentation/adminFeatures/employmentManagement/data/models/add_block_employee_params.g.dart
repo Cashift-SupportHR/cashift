@@ -9,7 +9,7 @@ part of 'add_block_employee_params.dart';
 AddBlockEmployeeParams _$AddBlockEmployeeParamsFromJson(
         Map<String, dynamic> json) =>
     AddBlockEmployeeParams(
-      freeLancerId: json['freeLancerId'] as int?,
+      freeLancerId: (json['freeLancerId'] as num?)?.toInt(),
       banReason: json['banReason'] as String?,
     );
 

@@ -9,13 +9,14 @@ part of 'add_vehicle_violation_params.dart';
 AddVehicleViolationParams _$AddVehicleViolationParamsFromJson(
         Map<String, dynamic> json) =>
     AddVehicleViolationParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       details: json['details'] as String?,
       companyName: json['companyName'] as String?,
       streetName: json['streetName'] as String?,
       lat: (json['lat'] as num?)?.toDouble(),
       lng: (json['lng'] as num?)?.toDouble(),
-      contractViolationTypeId: json['contractViolationTypeId'] as int?,
+      contractViolationTypeId:
+          (json['contractViolationTypeId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddVehicleViolationParamsToJson(

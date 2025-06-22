@@ -37,7 +37,7 @@ Map<String, dynamic> _$TermandConditionToJson(TermandCondition instance) =>
     };
 
 LoansMonth _$LoansMonthFromJson(Map<String, dynamic> json) => LoansMonth(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       nameMonth: json['nameMonth'] as String?,
       isGuarantor: json['isGuarantor'] as bool?,
     );

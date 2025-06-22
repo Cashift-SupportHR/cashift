@@ -13,10 +13,10 @@ CompletOpportunityDto _$CompletOpportunityDtoFromJson(
           ?.map((e) =>
               CompletedOpportunityData.fromJson(e as Map<String, dynamic>))
           .toList(),
-      pageNumber: json['pageNumber'] as int?,
-      pageSize: json['pageSize'] as int?,
-      totalRecords: json['totalRecords'] as int?,
-      totalPages: json['totalPages'] as int?,
+      pageNumber: (json['pageNumber'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
+      totalRecords: (json['totalRecords'] as num?)?.toInt(),
+      totalPages: (json['totalPages'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$CompletOpportunityDtoToJson(
@@ -32,16 +32,16 @@ Map<String, dynamic> _$CompletOpportunityDtoToJson(
 CompletedOpportunityData _$CompletedOpportunityDataFromJson(
         Map<String, dynamic> json) =>
     CompletedOpportunityData(
-      id: json['id'] as int?,
-      shiftId: json['shiftId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       typeOpportunty: json['typeOpportunty'] as String?,
       typeOfOpportunty: json['typeOfOpportunty'] as String?,
-      freelanceId: json['freelanceId'] as int?,
+      freelanceId: (json['freelanceId'] as num?)?.toInt(),
       freelanceName: json['freelanceName'] as String?,
       idNumber: json['idNumber'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       status: json['status'] as String?,
-      statusId: json['statusId'] as int?,
+      statusId: (json['statusId'] as num?)?.toInt(),
       workingDate: json['workingDate'] as String?,
       startShiftDate: json['startShiftDate'] as String?,
       endShiftDate: json['endShiftDate'] as String?,
@@ -56,12 +56,12 @@ CompletedOpportunityData _$CompletedOpportunityDataFromJson(
       description: json['description'] as String?,
       endAllowMinutes: json['endAllowMinutes'] as String?,
       startShiftTime: json['startShiftTime'] as String?,
-      oppId: json['oppId'] as int?,
+      oppId: (json['oppId'] as num?)?.toInt(),
       isAllowUpdateStatus: json['isAllowUpdateStatus'] as bool?,
-      deservedAmount: json['deservedAmount'] as int?,
+      deservedAmount: (json['deservedAmount'] as num?)?.toInt(),
       totalDeductMoneyClearanceCertificate:
-          json['totalDeductMoneyClearanceCertificate'] as int?,
-      ammountViolations: json['ammountViolations'] as int?,
+          (json['totalDeductMoneyClearanceCertificate'] as num?)?.toInt(),
+      ammountViolations: (json['ammountViolations'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$CompletedOpportunityDataToJson(

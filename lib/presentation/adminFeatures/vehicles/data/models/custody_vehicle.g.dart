@@ -8,7 +8,7 @@ part of 'custody_vehicle.dart';
 
 CustodyVehicle _$CustodyVehicleFromJson(Map<String, dynamic> json) =>
     CustodyVehicle(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       imagePath: json['imagePath'] as String?,
     );

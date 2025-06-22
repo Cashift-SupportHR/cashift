@@ -7,7 +7,7 @@ part of 'project.dart';
 // **************************************************************************
 
 ProjectDto _$ProjectDtoFromJson(Map<String, dynamic> json) => ProjectDto(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       projectName: json['projectName'] as String?,
       address: json['address'] as String?,
       logo: json['logo'] as String?,

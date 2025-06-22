@@ -12,7 +12,7 @@ FeatureAppDto _$FeatureAppDtoFromJson(Map<String, dynamic> json) =>
           ? null
           : FaceRecognitionConfig.fromJson(
               json['faceRecognitionConfig'] as Map<String, dynamic>),
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       code: json['code'] as String,
       status: json['status'] as bool,

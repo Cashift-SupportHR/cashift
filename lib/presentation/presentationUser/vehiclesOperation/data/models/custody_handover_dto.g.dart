@@ -8,10 +8,10 @@ part of 'custody_handover_dto.dart';
 
 CustodyHandoverDto _$CustodyHandoverDtoFromJson(Map<String, dynamic> json) =>
     CustodyHandoverDto(
-      id: json['id'] as int?,
-      vehicleCustodyId: json['vehicleCustodyId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      vehicleCustodyId: (json['vehicleCustodyId'] as num?)?.toInt(),
       vehicleCustodyName: json['vehicleCustodyName'] as String?,
-      custodyHandoverId: json['custodyHandoverId'] as int?,
+      custodyHandoverId: (json['custodyHandoverId'] as num?)?.toInt(),
       custodyStatus: json['custodyStatus'] as bool?,
       custodyStatusName: json['custodyStatusName'] as String?,
       image: json['image'] as String?,

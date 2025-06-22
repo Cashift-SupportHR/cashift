@@ -9,8 +9,8 @@ part of 'confirm_receive_vehicle_params.dart';
 ConfirmReceiveVehicleParams _$ConfirmReceiveVehicleParamsFromJson(
         Map<String, dynamic> json) =>
     ConfirmReceiveVehicleParams(
-      vehicleHandoverId: json['vehicleHandoverId'] as int?,
-      handoverStatus: json['handoverStatus'] as int?,
+      vehicleHandoverId: (json['vehicleHandoverId'] as num?)?.toInt(),
+      handoverStatus: (json['handoverStatus'] as num?)?.toInt(),
       description: json['description'] as String?,
     );
 

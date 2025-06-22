@@ -8,35 +8,28 @@ part of 'add_job_uniform_params.dart';
 
 AddJobUniformParams _$AddJobUniformParamsFromJson(Map<String, dynamic> json) =>
     AddJobUniformParams(
-      id: json['Id'] as int?,
-      companyId: json['companyId'] as int?,
-      jobId: json['JobId'] as int?,
+      id: (json['Id'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      jobId: (json['JobId'] as num?)?.toInt(),
       description: json['Description'] as String?,
-      jobUniformCategoryId: json['JobUniformCategoryId'] as int?,
+      jobUniformCategoryId: (json['JobUniformCategoryId'] as num?)?.toInt(),
       file: _$JsonConverterFromJson<String, File>(
           json['File'], const FileJsonConverter().fromJson),
     );
 
-Map<String, dynamic> _$AddJobUniformParamsToJson(AddJobUniformParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('Id', instance.id);
-  val['JobId'] = instance.jobId;
-  val['companyId'] = instance.companyId;
-  writeNotNull('Description', instance.description);
-  val['JobUniformCategoryId'] = instance.jobUniformCategoryId;
-  writeNotNull(
-      'File',
-      _$JsonConverterToJson<String, File>(
-          instance.file, const FileJsonConverter().toJson));
-  return val;
-}
+Map<String, dynamic> _$AddJobUniformParamsToJson(
+        AddJobUniformParams instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'Id': value,
+      'JobId': instance.jobId,
+      'companyId': instance.companyId,
+      if (instance.description case final value?) 'Description': value,
+      'JobUniformCategoryId': instance.jobUniformCategoryId,
+      if (_$JsonConverterToJson<String, File>(
+              instance.file, const FileJsonConverter().toJson)
+          case final value?)
+        'File': value,
+    };
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

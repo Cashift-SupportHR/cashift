@@ -9,11 +9,11 @@ part of 'save_order_status_params.dart';
 SaveOrderStatusParams _$SaveOrderStatusParamsFromJson(
         Map<String, dynamic> json) =>
     SaveOrderStatusParams(
-      id: json['id'] as int?,
-      isAccept: json['isAccept'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      isAccept: (json['isAccept'] as num?)?.toInt(),
       description: json['description'] as String?,
       descriptionConnect: json['descriptionConnect'] as String?,
-      freeLanceId: json['freeLanceId'] as int?,
+      freeLanceId: (json['freeLanceId'] as num?)?.toInt(),
       isAllow: json['isAllow'] as bool?,
       listProject: (json['listProject'] as List<dynamic>?)
           ?.map((e) => ListProject.fromJson(e as Map<String, dynamic>))
@@ -21,9 +21,10 @@ SaveOrderStatusParams _$SaveOrderStatusParamsFromJson(
       listShift: (json['listShift'] as List<dynamic>?)
           ?.map((e) => ListShift.fromJson(e as Map<String, dynamic>))
           .toList(),
-      isAcceptedForAllProject: json['isAcceptedForAllProject'] as int?,
-      isAcceptedForAllShift: json['isAcceptedForAllShift'] as int?,
-      successAprovedLevel: json['successAprovedLevel'] as int?,
+      isAcceptedForAllProject:
+          (json['isAcceptedForAllProject'] as num?)?.toInt(),
+      isAcceptedForAllShift: (json['isAcceptedForAllShift'] as num?)?.toInt(),
+      successAprovedLevel: (json['successAprovedLevel'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$SaveOrderStatusParamsToJson(
@@ -43,7 +44,7 @@ Map<String, dynamic> _$SaveOrderStatusParamsToJson(
     };
 
 ListProject _$ListProjectFromJson(Map<String, dynamic> json) => ListProject(
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ListProjectToJson(ListProject instance) =>
@@ -52,7 +53,7 @@ Map<String, dynamic> _$ListProjectToJson(ListProject instance) =>
     };
 
 ListShift _$ListShiftFromJson(Map<String, dynamic> json) => ListShift(
-      shiftHeadId: json['shiftHeadId'] as int?,
+      shiftHeadId: (json['shiftHeadId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ListShiftToJson(ListShift instance) => <String, dynamic>{

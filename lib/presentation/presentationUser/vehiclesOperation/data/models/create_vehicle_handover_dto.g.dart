@@ -9,12 +9,12 @@ part of 'create_vehicle_handover_dto.dart';
 CreateVehicleHandoverDto _$CreateVehicleHandoverDtoFromJson(
         Map<String, dynamic> json) =>
     CreateVehicleHandoverDto(
-      vehicleId: json['vehicleId'] as int?,
-      freelancerInfoId: json['freelancerInfoId'] as int?,
-      companyId: json['companyId'] as int?,
-      projectId: json['projectId'] as int?,
-      shiftId: json['shiftId'] as int?,
-      id: json['id'] as int?,
+      vehicleId: (json['vehicleId'] as num?)?.toInt(),
+      freelancerInfoId: (json['freelancerInfoId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
+      id: (json['id'] as num?)?.toInt(),
       isComplete: json['isComplete'] as bool?,
     );
 

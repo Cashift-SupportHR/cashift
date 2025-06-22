@@ -9,7 +9,7 @@ part of 'edit_vehicle_zone_lat_lng_params.dart';
 EditVehicleZoneLatLngParams _$EditVehicleZoneLatLngParamsFromJson(
         Map<String, dynamic> json) =>
     EditVehicleZoneLatLngParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       latlngs: (json['latlngs'] as List<dynamic>?)
           ?.map((e) => VehicleZoneLatLng.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -8,7 +8,7 @@ part of 'working_period_dto.dart';
 
 WorkingPeriodDto _$WorkingPeriodDtoFromJson(Map<String, dynamic> json) =>
     WorkingPeriodDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       startTime: json['startTime'] as String?,
     );

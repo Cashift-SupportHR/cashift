@@ -8,7 +8,7 @@ part of 'order_status_dto.dart';
 
 OrderStatusDto _$OrderStatusDtoFromJson(Map<String, dynamic> json) =>
     OrderStatusDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       isShowFreeLanceAcceptedType: json['isShowFreeLanceAcceptedType'] as bool?,
       isShowProjects: json['isShowProjects'] as bool?,

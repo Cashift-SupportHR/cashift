@@ -9,17 +9,17 @@ part of 'contract_conditions_dto.dart';
 ContractConditionsDto _$ContractConditionsDtoFromJson(
         Map<String, dynamic> json) =>
     ContractConditionsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       conditionNumber: json['conditionNumber'] as String?,
-      maxHours: json['maxHours'] as int?,
+      maxHours: (json['maxHours'] as num?)?.toInt(),
       isAddLastHours: json['isAddLastHours'] as bool?,
-      lastHours: json['lastHours'] as int?,
+      lastHours: (json['lastHours'] as num?)?.toInt(),
       isAllowEditTime: json['isAllowEditTime'] as bool?,
-      startAllowMinutes: json['startAllowMinutes'] as int?,
-      endAllowMinutes: json['endAllowMinutes'] as int?,
-      companyId: json['companyId'] as int?,
-      projectId: json['projectId'] as int?,
-      jobId: json['jobId'] as int?,
+      startAllowMinutes: (json['startAllowMinutes'] as num?)?.toInt(),
+      endAllowMinutes: (json['endAllowMinutes'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
       allowEditDateOpp: json['allowEditDateOpp'] as bool?,
     );
 

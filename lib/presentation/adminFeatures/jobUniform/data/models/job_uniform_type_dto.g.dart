@@ -8,7 +8,7 @@ part of 'job_uniform_type_dto.dart';
 
 JobUniformTypeDto _$JobUniformTypeDtoFromJson(Map<String, dynamic> json) =>
     JobUniformTypeDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

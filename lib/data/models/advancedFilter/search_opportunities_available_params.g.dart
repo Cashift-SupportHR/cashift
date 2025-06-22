@@ -9,13 +9,13 @@ part of 'search_opportunities_available_params.dart';
 SearchOpportunitiesAvailableParams _$SearchOpportunitiesAvailableParamsFromJson(
         Map<String, dynamic> json) =>
     SearchOpportunitiesAvailableParams(
-      cityId: json['cityId'] as int?,
-      projectId: json['projectId'] as int?,
-      jobId: json['jobId'] as int?,
-      companyId: json['companyId'] as int?,
+      cityId: (json['cityId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
       fromDate: json['fromDate'] as String?,
-      fromSalary: json['fromSalary'] as int?,
-      toSalary: json['toSalary'] as int?,
+      fromSalary: (json['fromSalary'] as num?)?.toInt(),
+      toSalary: (json['toSalary'] as num?)?.toInt(),
       toDate: json['toDate'] as String?,
     );
 

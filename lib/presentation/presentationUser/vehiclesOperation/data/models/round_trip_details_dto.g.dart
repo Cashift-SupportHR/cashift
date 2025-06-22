@@ -8,7 +8,7 @@ part of 'round_trip_details_dto.dart';
 
 RoundTripDetailsDto _$RoundTripDetailsDtoFromJson(Map<String, dynamic> json) =>
     RoundTripDetailsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       notes: json['notes'] as String?,
       typeName: json['typeName'] as String?,
       startRound: json['startRound'] as String?,

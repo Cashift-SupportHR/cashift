@@ -9,9 +9,9 @@ part of 'add_edit_gas_station_prams.dart';
 AddEditGasStationPrams _$AddEditGasStationPramsFromJson(
         Map<String, dynamic> json) =>
     AddEditGasStationPrams(
-      id: json['id'] as int?,
-      companyId: json['companyId'] as int?,
-      projectId: json['projectId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
       stationNameEn: json['stationNameEn'] as String?,
       stationNameAr: json['stationNameAr'] as String?,
       latitude: json['latitude'] as num?,

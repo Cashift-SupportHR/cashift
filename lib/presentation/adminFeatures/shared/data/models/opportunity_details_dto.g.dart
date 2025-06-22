@@ -9,15 +9,15 @@ part of 'opportunity_details_dto.dart';
 OpportunityDetailsDto _$OpportunityDetailsDtoFromJson(
         Map<String, dynamic> json) =>
     OpportunityDetailsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
       companyLogo: json['companyLogo'] as String?,
       jobName: json['jobName'] as String?,
-      workingHours: json['workingHours'] as int?,
+      workingHours: (json['workingHours'] as num?)?.toInt(),
       startShiftDate: json['startShiftDate'] as String?,
       endShiftDate: json['endShiftDate'] as String?,
-      requiredCount: json['requiredCount'] as int?,
-      actualNumber: json['actualNumber'] as int?,
+      requiredCount: (json['requiredCount'] as num?)?.toInt(),
+      actualNumber: (json['actualNumber'] as num?)?.toInt(),
       salaries: (json['salaries'] as num?)?.toDouble(),
       description: json['description'] as String?,
       projectName: json['projectName'] as String?,
@@ -56,14 +56,14 @@ Map<String, dynamic> _$OpportunityDetailsDtoToJson(
 
 MenuEmployeesDto _$MenuEmployeesDtoFromJson(Map<String, dynamic> json) =>
     MenuEmployeesDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       employeeName: json['employeeName'] as String?,
       qualification: json['qualification'] as String?,
       cityName: json['cityName'] as String?,
       idNumber: json['idNumber'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       statusName: json['statusName'] as String?,
-      status: json['status'] as int?,
+      status: (json['status'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$MenuEmployeesDtoToJson(MenuEmployeesDto instance) =>

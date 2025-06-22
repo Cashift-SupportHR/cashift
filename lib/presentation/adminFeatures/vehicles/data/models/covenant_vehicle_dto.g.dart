@@ -8,12 +8,12 @@ part of 'covenant_vehicle_dto.dart';
 
 CovenantVehicleDto _$CovenantVehicleDtoFromJson(Map<String, dynamic> json) =>
     CovenantVehicleDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
       custodyImage: json['custodyImage'] as String?,
       custodyImagePath: json['custodyImagePath'] as String?,
-      vehicleId: json['vehicleId'] as int?,
+      vehicleId: (json['vehicleId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$CovenantVehicleDtoToJson(CovenantVehicleDto instance) =>

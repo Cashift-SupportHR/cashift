@@ -8,7 +8,7 @@ part of 'add_components_prams.dart';
 
 AddComponentsPrams _$AddComponentsPramsFromJson(Map<String, dynamic> json) =>
     AddComponentsPrams(
-      vehicleHandoverId: json['vehicleHandoverId'] as int?,
+      vehicleHandoverId: (json['vehicleHandoverId'] as num?)?.toInt(),
       vehicleComponentsStatuses:
           (json['vehicleComponentsStatuses'] as List<dynamic>?)
               ?.map((e) =>
@@ -25,7 +25,7 @@ Map<String, dynamic> _$AddComponentsPramsToJson(AddComponentsPrams instance) =>
 VehicleComponentsStatuse _$VehicleComponentsStatuseFromJson(
         Map<String, dynamic> json) =>
     VehicleComponentsStatuse(
-      vehicleComponentId: json['vehicleComponentId'] as int?,
+      vehicleComponentId: (json['vehicleComponentId'] as num?)?.toInt(),
       componentStatus: json['componentStatus'] as bool?,
     );
 

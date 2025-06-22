@@ -9,7 +9,7 @@ part of 'employee_opportunity_type_dto.dart';
 EmployeeOpportunityTypeDto _$EmployeeOpportunityTypeDtoFromJson(
         Map<String, dynamic> json) =>
     EmployeeOpportunityTypeDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
       code: json['code'] as String?,

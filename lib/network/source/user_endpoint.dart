@@ -71,7 +71,7 @@ import '../../presentation/shared/models/common_list_item_dto.dart';
 part 'user_endpoint.g.dart';
 
 @Injectable()
-@RestApi(baseUrl: kBASE_URL)
+@RestApi()
 abstract class UserEndpoint {
   @factoryMethod
   factory UserEndpoint(Dio dio) = _UserEndpoint;

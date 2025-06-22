@@ -8,10 +8,10 @@ part of 'emp_attandance_prams.dart';
 
 EmpAttandancePrams _$EmpAttandancePramsFromJson(Map<String, dynamic> json) =>
     EmpAttandancePrams(
-      scheduleEmployeeWorkId: json['scheduleEmployeeWorkId'] as int?,
-      year: json['year'] as int?,
-      month: json['month'] as int?,
-      typeRequest: json['typeRequest'] as int?,
+      scheduleEmployeeWorkId: (json['scheduleEmployeeWorkId'] as num?)?.toInt(),
+      year: (json['year'] as num?)?.toInt(),
+      month: (json['month'] as num?)?.toInt(),
+      typeRequest: (json['typeRequest'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$EmpAttandancePramsToJson(EmpAttandancePrams instance) =>

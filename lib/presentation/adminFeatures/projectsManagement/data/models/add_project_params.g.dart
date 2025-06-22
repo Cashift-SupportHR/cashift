@@ -8,10 +8,10 @@ part of 'add_project_params.dart';
 
 AddProjectParams _$AddProjectParamsFromJson(Map<String, dynamic> json) =>
     AddProjectParams(
-      id: json['id'] as int?,
-      brandId: json['brandId'] as int?,
-      companyId: json['CompanyId'] as int?,
-      cityId: json['cityId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      brandId: (json['brandId'] as num?)?.toInt(),
+      companyId: (json['CompanyId'] as num?)?.toInt(),
+      cityId: (json['cityId'] as num?)?.toInt(),
       brandName: json['brandName'] as String?,
       cityName: json['cityName'] as String?,
       nameEn: json['nameEn'] as String?,
@@ -20,7 +20,7 @@ AddProjectParams _$AddProjectParamsFromJson(Map<String, dynamic> json) =>
       addressAr: json['addressAr'] as String?,
       latitude: json['latitude'] as String?,
       longtude: json['longtude'] as String?,
-      attendanceTypeId: json['attendanceTypeId'] as int?,
+      attendanceTypeId: (json['attendanceTypeId'] as num?)?.toInt(),
       otherProject: (json['otherProject'] as List<dynamic>?)
           ?.map(
               (e) => LocationProjectParams.fromJson(e as Map<String, dynamic>))

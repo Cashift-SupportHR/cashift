@@ -8,17 +8,17 @@ part of 'emp_attendance_dto.dart';
 
 EmpAttendanceDto _$EmpAttendanceDtoFromJson(Map<String, dynamic> json) =>
     EmpAttendanceDto(
-      scheduleEmpWorkId: json['scheduleEmpWorkId'] as int?,
+      scheduleEmpWorkId: (json['scheduleEmpWorkId'] as num?)?.toInt(),
       scheduleEmpWorkName: json['scheduleEmpWorkName'] as String?,
       scheduleEmpWorkPhoneNumber: json['scheduleEmpWorkPhoneNumber'] as String?,
       scheduleEmpWorkProfileIamge:
           json['scheduleEmpWorkProfileIamge'] as String?,
       status: json['status'] as String?,
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
-      paymentPeriodTypeId: json['paymentPeriodTypeId'] as int?,
+      paymentPeriodTypeId: (json['paymentPeriodTypeId'] as num?)?.toInt(),
       paymentPeriodTypeName: json['paymentPeriodTypeName'] as String?,
       transactionsList: (json['transactionsList'] as List<dynamic>?)
           ?.map((e) => TransactionsListDto.fromJson(e as Map<String, dynamic>))

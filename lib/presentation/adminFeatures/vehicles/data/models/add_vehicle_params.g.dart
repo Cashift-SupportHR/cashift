@@ -8,8 +8,8 @@ part of 'add_vehicle_params.dart';
 
 AddVehicleParams _$AddVehicleParamsFromJson(Map<String, dynamic> json) =>
     AddVehicleParams(
-      id: json['id'] as int?,
-      vehicleCode: json['VehicleCode'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      vehicleCode: (json['VehicleCode'] as num?)?.toInt(),
       model: json['Model'] as String?,
       yearOfManufacture: json['YearOfManufacture'] as String?,
       plateNumber: json['PlateNumber'] as String?,
@@ -22,7 +22,7 @@ AddVehicleParams _$AddVehicleParamsFromJson(Map<String, dynamic> json) =>
       vehicleBrandId: json['VehicleBrandId'] as String?,
       companyId: json['CompanyId'] as String?,
       projectId: json['ProjectId'] as String?,
-      vehicleColorId: json['VehicleColorId'] as int?,
+      vehicleColorId: (json['VehicleColorId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddVehicleParamsToJson(AddVehicleParams instance) =>

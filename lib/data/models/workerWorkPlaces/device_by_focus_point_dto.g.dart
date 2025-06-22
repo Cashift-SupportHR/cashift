@@ -9,8 +9,8 @@ part of 'device_by_focus_point_dto.dart';
 DeviceByFocusPointDto _$DeviceByFocusPointDtoFromJson(
         Map<String, dynamic> json) =>
     DeviceByFocusPointDto(
-      countDevice: json['countDevice'] as int?,
-      countCar: json['countCar'] as int?,
+      countDevice: (json['countDevice'] as num?)?.toInt(),
+      countCar: (json['countCar'] as num?)?.toInt(),
       listDevices: (json['listDevices'] as List<dynamic>?)
           ?.map((e) => ListDevice.fromJson(e as Map<String, dynamic>))
           .toList(),

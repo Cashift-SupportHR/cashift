@@ -9,11 +9,11 @@ part of 'track_attendance_departure_dto.dart';
 TrackAttendanceDepartureDto _$TrackAttendanceDepartureDtoFromJson(
         Map<String, dynamic> json) =>
     TrackAttendanceDepartureDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       startDate: json['startDate'] as String?,
       endDate: json['endDate'] as String?,
       status: json['status'] as String?,
-      freelancerId: json['freelancerId'] as int?,
+      freelancerId: (json['freelancerId'] as num?)?.toInt(),
       freelancerName: json['freelancerName'] as String?,
       freelancerPhone: json['freelancerPhone'] as String?,
     );

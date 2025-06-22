@@ -9,10 +9,10 @@ part of 'employee_data_params.dart';
 EmployeeDataParams _$EmployeeDataParamsFromJson(Map<String, dynamic> json) =>
     EmployeeDataParams(
       search: json['search'] as String?,
-      type: json['type'] as int?,
-      pageNumber: json['pageNumber'] as int?,
-      pageSize: json['pageSize'] as int?,
-      successApprovedLevel: json['successApprovedLevel'] as int?,
+      type: (json['type'] as num?)?.toInt(),
+      pageNumber: (json['pageNumber'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
+      successApprovedLevel: (json['successApprovedLevel'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$EmployeeDataParamsToJson(EmployeeDataParams instance) =>

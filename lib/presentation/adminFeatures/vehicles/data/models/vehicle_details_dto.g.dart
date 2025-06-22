@@ -11,28 +11,28 @@ VehicleDetailsDto _$VehicleDetailsDtoFromJson(Map<String, dynamic> json) =>
       vehicleListOfImages: (json['vehicleListOfImages'] as List<dynamic>?)
           ?.map((e) => VehicleListOfImage.fromJson(e as Map<String, dynamic>))
           .toList(),
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       custodies: (json['custodies'] as List<dynamic>?)
           ?.map((e) => CustodyVehicle.fromJson(e as Map<String, dynamic>))
           .toList(),
       vehicleCode: json['vehicleCode'] as String?,
       model: json['model'] as String?,
-      yearOfManufacture: json['yearOfManufacture'] as int?,
+      yearOfManufacture: (json['yearOfManufacture'] as num?)?.toInt(),
       vehicleColorName: json['vehicleColorName'] as String?,
-      vehicleColorId: json['vehicleColorId'] as int?,
+      vehicleColorId: (json['vehicleColorId'] as num?)?.toInt(),
       plateNumber: json['plateNumber'] as String?,
       licenseNumber: json['licenseNumber'] as String?,
       licenseExpiryDate: json['licenseExpiryDate'] as String?,
       specifications: json['specifications'] as String?,
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       vehicleImage: json['vehicleImage'] as String?,
       licenseImage: json['licenseImage'] as String?,
       vehicleBrandName: json['vehicleBrandName'] as String?,
-      vehicleBrandId: json['vehicleBrandId'] as int?,
+      vehicleBrandId: (json['vehicleBrandId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$VehicleDetailsDtoToJson(VehicleDetailsDto instance) =>
@@ -62,9 +62,9 @@ Map<String, dynamic> _$VehicleDetailsDtoToJson(VehicleDetailsDto instance) =>
 
 VehicleListOfImage _$VehicleListOfImageFromJson(Map<String, dynamic> json) =>
     VehicleListOfImage(
-      faceId: json['faceId'] as int?,
+      faceId: (json['faceId'] as num?)?.toInt(),
       faceName: json['faceName'] as String?,
-      imageId: json['imageId'] as int?,
+      imageId: (json['imageId'] as num?)?.toInt(),
       imageUrl: json['imageUrl'] as String?,
     );
 

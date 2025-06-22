@@ -9,7 +9,7 @@ part of 'coverage_break_focus_point_dto.dart';
 CoverageBreakFocusPointDto _$CoverageBreakFocusPointDtoFromJson(
         Map<String, dynamic> json) =>
     CoverageBreakFocusPointDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

@@ -11,9 +11,10 @@ AttendanceNotifiActionDto _$AttendanceNotifiActionDtoFromJson(
     AttendanceNotifiActionDto(
       attendanceNotifiActionName: json['attendanceNotifiActionName'] as String?,
       attendanceNotifiTypeName: json['attendanceNotifiTypeName'] as String?,
-      id: json['id'] as int?,
-      attendanceNotifiActionId: json['attendanceNotifiActionId'] as int?,
-      attendanceNotifiTypeId: json['attendanceNotifiTypeId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      attendanceNotifiActionId:
+          (json['attendanceNotifiActionId'] as num?)?.toInt(),
+      attendanceNotifiTypeId: (json['attendanceNotifiTypeId'] as num?)?.toInt(),
       discription: json['discription'] as String?,
       attNotifiFrom: json['attNotifiFrom'] as String?,
       attNotifiTo: json['attNotifiTo'] as String?,

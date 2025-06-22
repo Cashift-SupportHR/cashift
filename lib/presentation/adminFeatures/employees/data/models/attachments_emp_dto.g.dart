@@ -8,7 +8,7 @@ part of 'attachments_emp_dto.dart';
 
 AttachmentsEmpDto _$AttachmentsEmpDtoFromJson(Map<String, dynamic> json) =>
     AttachmentsEmpDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       allowEdit: json['allowEdit'] as bool?,
       rejectReason: json['rejectReason'] as String?,
       requirementName: json['requirementName'] as String?,

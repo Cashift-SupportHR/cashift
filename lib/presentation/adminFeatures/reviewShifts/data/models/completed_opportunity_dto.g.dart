@@ -9,15 +9,15 @@ part of 'completed_opportunity_dto.dart';
 CompletedOpportunityDto _$CompletedOpportunityDtoFromJson(
         Map<String, dynamic> json) =>
     CompletedOpportunityDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       typeOpportunty: json['typeOpportunty'] as String?,
       isAllowUpdateStatus: json['isAllowUpdateStatus'] as bool?,
-      typeOfOpportunty: json['typeOfOpportunty'] as int?,
+      typeOfOpportunty: (json['typeOfOpportunty'] as num?)?.toInt(),
       freelanceName: json['freelanceName'] as String?,
       idNumber: json['idNumber'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       status: json['status'] as String?,
-      statusId: json['statusId'] as int?,
+      statusId: (json['statusId'] as num?)?.toInt(),
       workingDate: json['workingDate'] as String?,
       startShiftDate: json['startShiftDate'] as String?,
       endShiftDate: json['endShiftDate'] as String?,
@@ -30,9 +30,9 @@ CompletedOpportunityDto _$CompletedOpportunityDtoFromJson(
       address: json['address'] as String?,
       cityName: json['cityName'] as String?,
       description: json['description'] as String?,
-      endAllowMinutes: json['endAllowMinutes'] as int?,
+      endAllowMinutes: (json['endAllowMinutes'] as num?)?.toInt(),
       startShiftTime: json['startShiftTime'] as String?,
-      oppId: json['oppId'] as int?,
+      oppId: (json['oppId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$CompletedOpportunityDtoToJson(

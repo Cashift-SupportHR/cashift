@@ -8,15 +8,15 @@ part of 'insurances_dto.dart';
 
 InsurancesDto _$InsurancesDtoFromJson(Map<String, dynamic> json) =>
     InsurancesDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       insuranceImagePath: json['insuranceImagePath'] as String?,
       vehicleInsuranceTypeName: json['vehicleInsuranceTypeName'] as String?,
       insuranceNumber: json['insuranceNumber'] as String?,
       insuranceProvider: json['insuranceProvider'] as String?,
       insuranceExpiryDate: json['insuranceExpiryDate'] as String?,
       insuranceImage: json['insuranceImage'] as String?,
-      vehicleId: json['vehicleId'] as int?,
-      vehicleInsuranceTypeId: json['vehicleInsuranceTypeId'] as int?,
+      vehicleId: (json['vehicleId'] as num?)?.toInt(),
+      vehicleInsuranceTypeId: (json['vehicleInsuranceTypeId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$InsurancesDtoToJson(InsurancesDto instance) =>

@@ -7,7 +7,7 @@ part of 'present_type.dart';
 // **************************************************************************
 
 PresentType _$PresentTypeFromJson(Map<String, dynamic> json) => PresentType(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       icon: json['icon'] as String?,
       isActive: json['isActive'] as bool?,

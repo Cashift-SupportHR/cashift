@@ -9,12 +9,12 @@ part of 'installment_with_cashift_dto.dart';
 InstallmentWithCashiftDto _$InstallmentWithCashiftDtoFromJson(
         Map<String, dynamic> json) =>
     InstallmentWithCashiftDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       installmentCount: json['installmentCount'] as String?,
-      certificateCost: json['certificateCost'] as int?,
+      certificateCost: (json['certificateCost'] as num?)?.toInt(),
       textPercentageInstallment: json['textPercentageInstallment'] as String?,
-      paymentFees: json['paymentFees'] as int?,
-      cashiftFees: json['cashiftFees'] as int?,
+      paymentFees: (json['paymentFees'] as num?)?.toInt(),
+      cashiftFees: (json['cashiftFees'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$InstallmentWithCashiftDtoToJson(

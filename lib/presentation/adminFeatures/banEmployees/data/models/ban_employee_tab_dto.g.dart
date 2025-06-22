@@ -9,7 +9,7 @@ part of 'ban_employee_tab_dto.dart';
 BanEmployeeTabDto _$BanEmployeeTabDtoFromJson(Map<String, dynamic> json) =>
     BanEmployeeTabDto(
       name: json['name'] as String?,
-      total: json['total'] as int?,
+      total: (json['total'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BanEmployeeTabDtoToJson(BanEmployeeTabDto instance) =>

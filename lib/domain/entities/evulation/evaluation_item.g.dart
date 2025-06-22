@@ -8,9 +8,9 @@ part of 'evaluation_item.dart';
 
 EvaluationItem _$EvaluationItemFromJson(Map<String, dynamic> json) =>
     EvaluationItem(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       title: json['title'] as String,
-      value: json['value'] as int,
+      value: (json['value'] as num).toInt(),
     );
 
 Map<String, dynamic> _$EvaluationItemToJson(EvaluationItem instance) =>

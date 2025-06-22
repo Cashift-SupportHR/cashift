@@ -9,7 +9,7 @@ part of 'follow_up_violation_dto.dart';
 FollowUpViolationDto _$FollowUpViolationDtoFromJson(
         Map<String, dynamic> json) =>
     FollowUpViolationDto(
-      violationId: json['violationId'] as int?,
+      violationId: (json['violationId'] as num?)?.toInt(),
       violationType: json['violationType'] as String?,
       companyName: json['companyName'] as String?,
       dateOfViolationApplying: json['dateOfViolationApplying'] as String?,

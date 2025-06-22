@@ -10,8 +10,8 @@ RequestTrackAttendanceDepartureParams
     _$RequestTrackAttendanceDepartureParamsFromJson(
             Map<String, dynamic> json) =>
         RequestTrackAttendanceDepartureParams(
-          id: json['id'] as int?,
-          freelancerId: json['freelancerId'] as int?,
+          id: (json['id'] as num?)?.toInt(),
+          freelancerId: (json['freelancerId'] as num?)?.toInt(),
           startDate: json['startDate'] as String?,
           endDate: json['endDate'] as String?,
         );

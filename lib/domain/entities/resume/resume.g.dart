@@ -7,18 +7,18 @@ part of 'resume.dart';
 // **************************************************************************
 
 Resume _$ResumeFromJson(Map<String, dynamic> json) => Resume(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       phoneNumber: json['phoneNumber'] as String?,
       whatsAppNumber: json['whatsAppNumber'] as String?,
-      cityId: json['cityId'] as int?,
+      cityId: (json['cityId'] as num?)?.toInt(),
       birthDateHijri: json['birthDateHijri'] as String?,
       idNumber: json['idNumber'] as String?,
       birthDateString: json['birthDateString'] as String?,
-      qualificationId: json['qualificationData'] as int?,
-      length: json['length'] as int?,
-      wieght: json['wieght'] as int?,
-      englishLevel: json['englishLevelId'] as int?,
-      computerLevel: json['computerLevelId'] as int?,
+      qualificationId: (json['qualificationData'] as num?)?.toInt(),
+      length: (json['length'] as num?)?.toInt(),
+      wieght: (json['wieght'] as num?)?.toInt(),
+      englishLevel: (json['englishLevelId'] as num?)?.toInt(),
+      computerLevel: (json['computerLevelId'] as num?)?.toInt(),
       idBank: json['idBank'] as String?,
       gender: json['gender'] as bool?,
       name: json['nameAr'] as String?,
@@ -26,13 +26,13 @@ Resume _$ResumeFromJson(Map<String, dynamic> json) => Resume(
       jobs: (json['listOfJob'] as List<dynamic>?)
           ?.map((e) => JobItem.fromJson(e as Map<String, dynamic>))
           .toList(),
-      currentSituation: json['currentSituation'] as int?,
+      currentSituation: (json['currentSituation'] as num?)?.toInt(),
       qualificationName: json['qualificationName'] as String?,
       isHijri: json['isHijri'] as bool?,
       haveInterView: json['haveInterView'] as bool?,
-      districtId: json['districtId'] as int?,
-      favourateHours: json['favourateHours'] as int?,
-      timeWorkId: json['timeWorkId'] as int?,
+      districtId: (json['districtId'] as num?)?.toInt(),
+      favourateHours: (json['favourateHours'] as num?)?.toInt(),
+      timeWorkId: (json['timeWorkId'] as num?)?.toInt(),
     )
       ..cityName = json['cityName'] as String?
       ..qualificationDataName = json['qualificationDataName'] as String?

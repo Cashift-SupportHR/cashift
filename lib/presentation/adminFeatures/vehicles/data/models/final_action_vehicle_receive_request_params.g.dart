@@ -11,7 +11,7 @@ FinalActionVehicleReceiveRequestParams
             Map<String, dynamic> json) =>
         FinalActionVehicleReceiveRequestParams(
           vehicleComponentHandOverId:
-              json['vehicleComponentHandOverId'] as int?,
+              (json['vehicleComponentHandOverId'] as num?)?.toInt(),
           handOverType: json['handOverType'] as String?,
           actionTakenDescription: json['actionTakenDescription'] as String?,
         );

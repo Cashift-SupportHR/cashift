@@ -6,21 +6,32 @@ part of 'init_floor_database.dart';
 // FloorGenerator
 // **************************************************************************
 
+abstract class $InitFloorDatabaseBuilderContract {
+  /// Adds migrations to the builder.
+  $InitFloorDatabaseBuilderContract addMigrations(List<Migration> migrations);
+
+  /// Adds a database [Callback] to the builder.
+  $InitFloorDatabaseBuilderContract addCallback(Callback callback);
+
+  /// Creates the database and initializes it.
+  Future<InitFloorDatabase> build();
+}
+
 // ignore: avoid_classes_with_only_static_members
 class $FloorInitFloorDatabase {
   /// Creates a database builder for a persistent database.
   /// Once a database is built, you should keep a reference to it and re-use it.
-  static _$InitFloorDatabaseBuilder databaseBuilder(String name) =>
+  static $InitFloorDatabaseBuilderContract databaseBuilder(String name) =>
       _$InitFloorDatabaseBuilder(name);
 
   /// Creates a database builder for an in memory database.
   /// Information stored in an in memory database disappears when the process is killed.
   /// Once a database is built, you should keep a reference to it and re-use it.
-  static _$InitFloorDatabaseBuilder inMemoryDatabaseBuilder() =>
+  static $InitFloorDatabaseBuilderContract inMemoryDatabaseBuilder() =>
       _$InitFloorDatabaseBuilder(null);
 }
 
-class _$InitFloorDatabaseBuilder {
+class _$InitFloorDatabaseBuilder implements $InitFloorDatabaseBuilderContract {
   _$InitFloorDatabaseBuilder(this.name);
 
   final String? name;
@@ -29,19 +40,19 @@ class _$InitFloorDatabaseBuilder {
 
   Callback? _callback;
 
-  /// Adds migrations to the builder.
-  _$InitFloorDatabaseBuilder addMigrations(List<Migration> migrations) {
+  @override
+  $InitFloorDatabaseBuilderContract addMigrations(List<Migration> migrations) {
     _migrations.addAll(migrations);
     return this;
   }
 
-  /// Adds a database [Callback] to the builder.
-  _$InitFloorDatabaseBuilder addCallback(Callback callback) {
+  @override
+  $InitFloorDatabaseBuilderContract addCallback(Callback callback) {
     _callback = callback;
     return this;
   }
 
-  /// Creates the database and initializes it.
+  @override
   Future<InitFloorDatabase> build() async {
     final path = name != null
         ? await sqfliteDatabaseFactory.getDatabasePath(name!)

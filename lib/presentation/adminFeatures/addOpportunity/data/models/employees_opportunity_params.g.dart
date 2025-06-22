@@ -9,11 +9,11 @@ part of 'employees_opportunity_params.dart';
 EmployeesOpportunityParams _$EmployeesOpportunityParamsFromJson(
         Map<String, dynamic> json) =>
     EmployeesOpportunityParams(
-      approvelLevelId: json['approvelLevelId'] as int?,
-      actionType: json['actionType'] as int?,
-      oppId: json['oppId'] as int?,
-      isAllEmployees: json['iaAllEmployees'] as int?,
-      companyId: json['companyId'] as int?,
+      approvelLevelId: (json['approvelLevelId'] as num?)?.toInt(),
+      actionType: (json['actionType'] as num?)?.toInt(),
+      oppId: (json['oppId'] as num?)?.toInt(),
+      isAllEmployees: (json['iaAllEmployees'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
       title: json['title'] as String?,
     );
 

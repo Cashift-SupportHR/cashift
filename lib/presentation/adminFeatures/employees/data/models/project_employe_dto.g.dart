@@ -8,7 +8,7 @@ part of 'project_employe_dto.dart';
 
 ProjectEmployeDto _$ProjectEmployeDtoFromJson(Map<String, dynamic> json) =>
     ProjectEmployeDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

@@ -10,7 +10,7 @@ AutoAttendanceDto _$AutoAttendanceDtoFromJson(Map<String, dynamic> json) =>
     AutoAttendanceDto(
       latitude: json['latitude'] as String?,
       longtude: json['longtude'] as String?,
-      typeAttendance: json['typeAttendance'] as int?,
+      typeAttendance: (json['typeAttendance'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AutoAttendanceDtoToJson(AutoAttendanceDto instance) =>

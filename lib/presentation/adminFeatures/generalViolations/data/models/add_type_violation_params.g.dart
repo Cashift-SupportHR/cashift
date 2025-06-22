@@ -9,13 +9,14 @@ part of 'add_type_violation_params.dart';
 AddTypeViolationParams _$AddTypeViolationParamsFromJson(
         Map<String, dynamic> json) =>
     AddTypeViolationParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       nameEn: json['nameEn'] as String?,
       nameAr: json['nameAr'] as String?,
       violationAmount: (json['violationAmount'] as num?)?.toDouble(),
-      projectId: json['projectId'] as int?,
-      companyId: json['companyId'] as int?,
-      scheduleViolationsTypeId: json['scheduleViolationsTypeId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      scheduleViolationsTypeId:
+          (json['scheduleViolationsTypeId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddTypeViolationParamsToJson(

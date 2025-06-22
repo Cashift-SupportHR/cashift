@@ -9,7 +9,7 @@ part of 'arrival_departure_type_dto.dart';
 ArrivalDepartureTypeDto _$ArrivalDepartureTypeDtoFromJson(
         Map<String, dynamic> json) =>
     ArrivalDepartureTypeDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       code: json['code'] as String?,
       description: json['description'] as String?,

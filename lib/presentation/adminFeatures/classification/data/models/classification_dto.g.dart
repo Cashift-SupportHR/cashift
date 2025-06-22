@@ -8,10 +8,10 @@ part of 'classification_dto.dart';
 
 ClassificationDto _$ClassificationDtoFromJson(Map<String, dynamic> json) =>
     ClassificationDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
       nameAr: json['nameAr'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       nameEn: json['nameEn'] as String?,
       description: json['description'] as String?,
       code: json['code'] as String?,

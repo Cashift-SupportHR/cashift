@@ -8,7 +8,7 @@ part of 'job_offer_slider_dto.dart';
 
 JobOfferSliderDto _$JobOfferSliderDtoFromJson(Map<String, dynamic> json) =>
     JobOfferSliderDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       jobName: json['jobName'] as String?,
       description: json['description'] as String?,
       mainLogo: json['mainLogo'] as String?,

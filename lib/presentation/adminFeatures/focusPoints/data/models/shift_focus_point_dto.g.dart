@@ -8,9 +8,9 @@ part of 'shift_focus_point_dto.dart';
 
 ShiftFocusPointDto _$ShiftFocusPointDtoFromJson(Map<String, dynamic> json) =>
     ShiftFocusPointDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
-    )..shiftId = json['shiftId'] as int?;
+    )..shiftId = (json['shiftId'] as num?)?.toInt();
 
 Map<String, dynamic> _$ShiftFocusPointDtoToJson(ShiftFocusPointDto instance) =>
     <String, dynamic>{

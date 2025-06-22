@@ -8,7 +8,7 @@ part of 'free_lance_info.dart';
 
 FreeLanceInfo _$FreeLanceInfoFromJson(Map<String, dynamic> json) =>
     FreeLanceInfo(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       isAssign: json['isAssign'] as bool?,

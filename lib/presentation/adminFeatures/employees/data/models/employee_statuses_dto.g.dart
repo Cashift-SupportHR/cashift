@@ -10,7 +10,7 @@ EmployeeStatusesDto _$EmployeeStatusesDtoFromJson(Map<String, dynamic> json) =>
     EmployeeStatusesDto(
       code: json['code'] as String?,
       name: json['name'] as String?,
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$EmployeeStatusesDtoToJson(

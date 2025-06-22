@@ -8,9 +8,9 @@ part of 'termand_condition_dto.dart';
 
 TermandConditionDto _$TermandConditionDtoFromJson(Map<String, dynamic> json) =>
     TermandConditionDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       conditionEn: json['conditionEn'] as String?,
       conditionAr: json['conditionAr'] as String?,
     );

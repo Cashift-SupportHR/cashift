@@ -7,7 +7,7 @@ part of 'city_dto.dart';
 // **************************************************************************
 
 CityDto _$CityDtoFromJson(Map<String, dynamic> json) => CityDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       cityName: json['cityName'] as String?,
     );
 

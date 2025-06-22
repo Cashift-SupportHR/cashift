@@ -8,8 +8,8 @@ part of 'user_request_dto.dart';
 
 UserRequestDto _$UserRequestDtoFromJson(Map<String, dynamic> json) =>
     UserRequestDto(
-      id: json['id'] as int?,
-      cashifterRequestTypeId: json['cashifterRequestTypeId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      cashifterRequestTypeId: (json['cashifterRequestTypeId'] as num?)?.toInt(),
       cashifterRequestTypeName: json['cashifterRequestTypeName'] as String?,
       oldPhoneNumber: json['oldPhoneNumber'] as String?,
       newPhoneNumber: json['newPhoneNumber'] as String?,
@@ -17,14 +17,15 @@ UserRequestDto _$UserRequestDtoFromJson(Map<String, dynamic> json) =>
       attachmentDocumentType: json['attachmentDocumentType'] as String?,
       description: json['description'] as String?,
       rejectReason: json['rejectReason'] as String?,
-      cashifterRequestStatusId: json['cashifterRequestStatusId'] as int?,
+      cashifterRequestStatusId:
+          (json['cashifterRequestStatusId'] as num?)?.toInt(),
       cashifterRequestStatusName: json['cashifterRequestStatusName'] as String?,
       shiftAdminUserId: json['shiftAdminUserId'] as String?,
       hrAdminUserId: json['hrAdminUserId'] as String?,
-      companyId: json['companyId'] as int?,
-      projectId: json['projectId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
       cashiftName: json['cashiftName'] as String?,
       imagePath: json['imagePath'] as String?,

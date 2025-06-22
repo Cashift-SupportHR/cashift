@@ -9,7 +9,7 @@ part of 'type_clearance_certificatet.dart';
 TypeClearanceCertificate _$TypeClearanceCertificateFromJson(
         Map<String, dynamic> json) =>
     TypeClearanceCertificate(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       text: json['text'] as String?,
     );
 

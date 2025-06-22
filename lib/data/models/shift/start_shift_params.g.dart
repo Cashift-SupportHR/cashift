@@ -8,7 +8,7 @@ part of 'start_shift_params.dart';
 
 StartShiftParams _$StartShiftParamsFromJson(Map<String, dynamic> json) =>
     StartShiftParams(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       startTimeLatitude: json['startTimeLatitude'] as String?,
       startTimeLongtude: json['startTimeLongtude'] as String?,
       projectId: json['projectId'] as String?,

@@ -9,10 +9,10 @@ part of 'vehicle_component_handover_dto.dart';
 VehicleComponentHandoverDto _$VehicleComponentHandoverDtoFromJson(
         Map<String, dynamic> json) =>
     VehicleComponentHandoverDto(
-      id: json['id'] as int?,
-      vehicleComponentId: json['vehicleComponentId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      vehicleComponentId: (json['vehicleComponentId'] as num?)?.toInt(),
       vehicleComponentName: json['vehicleComponentName'] as String?,
-      vehicleHandoverId: json['vehicleHandoverId'] as int?,
+      vehicleHandoverId: (json['vehicleHandoverId'] as num?)?.toInt(),
       componentStatus: json['componentStatus'] as bool?,
       componentStatusName: json['componentStatusName'] as String?,
       image: json['image'] as String?,

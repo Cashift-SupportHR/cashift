@@ -8,20 +8,20 @@ part of 'general_violation_dto.dart';
 
 GeneralViolationDto _$GeneralViolationDtoFromJson(Map<String, dynamic> json) =>
     GeneralViolationDto(
-      employeeId: json['employeeId'] as int?,
+      employeeId: (json['employeeId'] as num?)?.toInt(),
       employeeName: json['employeeName'] as String?,
       phone: json['phone'] as String?,
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       violationAmount: json['violationAmount'] as num?,
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
-      shiftId: json['shiftId'] as int?,
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
-      scheduleViolationId: json['scheduleViolationId'] as int?,
+      scheduleViolationId: (json['scheduleViolationId'] as num?)?.toInt(),
       scheduleViolationName: json['scheduleViolationName'] as String?,
-      scheduleEmployeeWorkId: json['scheduleEmployeeWorkId'] as int?,
+      scheduleEmployeeWorkId: (json['scheduleEmployeeWorkId'] as num?)?.toInt(),
       images: (json['scheduleViolationTransactionattachs'] as List<dynamic>?)
           ?.map((e) => WorkHazardImageDto.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -8,15 +8,16 @@ part of 'violation_type_dto.dart';
 
 ViolationTypeDto _$ViolationTypeDtoFromJson(Map<String, dynamic> json) =>
     ViolationTypeDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       nameEn: json['nameEn'] as String?,
       nameAr: json['nameAr'] as String?,
       violationAmount: json['violationAmount'] as num?,
-      projectId: json['projectId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
-      companyId: json['companyId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
-      scheduleViolationsTypeId: json['scheduleViolationsTypeId'] as int?,
+      scheduleViolationsTypeId:
+          (json['scheduleViolationsTypeId'] as num?)?.toInt(),
       scheduleViolationsTypeName: json['scheduleViolationsTypeName'] as String?,
     );
 

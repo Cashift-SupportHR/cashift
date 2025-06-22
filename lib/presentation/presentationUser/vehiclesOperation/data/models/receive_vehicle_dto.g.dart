@@ -8,14 +8,14 @@ part of 'receive_vehicle_dto.dart';
 
 ReceiveVehicleDto _$ReceiveVehicleDtoFromJson(Map<String, dynamic> json) =>
     ReceiveVehicleDto(
-      id: json['id'] as int?,
-      vehicleId: json['vehicleId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      vehicleId: (json['vehicleId'] as num?)?.toInt(),
       vehicleBrand: json['vehicleBrand'] as String?,
       vehicleModel: json['vehicleModel'] as String?,
       vehiclePlateNumber: json['vehiclePlateNumber'] as String?,
       vehicleHandoverDate: json['vehicleHandoverDate'] as String?,
       vehicleHandoverTime: json['vehicleHandoverTime'] as String?,
-      freelancerInfoId: json['freelancerInfoId'] as int?,
+      freelancerInfoId: (json['freelancerInfoId'] as num?)?.toInt(),
       freelancerName: json['freelancerName'] as String?,
       vehicleImage: json['vehicleImage'] as String?,
       isComplete: json['isComplete'] as bool?,

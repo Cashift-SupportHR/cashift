@@ -8,7 +8,7 @@ part of 'admin_wallet_dto.dart';
 
 AdminWalletDto _$AdminWalletDtoFromJson(Map<String, dynamic> json) =>
     AdminWalletDto(
-      design: json['design'] as int?,
+      design: (json['design'] as num?)?.toInt(),
       deposit: (json['deposit'] as List<dynamic>?)
           ?.map(
               (e) => DepositAdminWalletDto.fromJson(e as Map<String, dynamic>))
@@ -29,7 +29,7 @@ Map<String, dynamic> _$AdminWalletDtoToJson(AdminWalletDto instance) =>
 DepositAdminWalletDto _$DepositAdminWalletDtoFromJson(
         Map<String, dynamic> json) =>
     DepositAdminWalletDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
       companyLogo: json['companyLogo'] as String?,
       date: json['date'] as String?,

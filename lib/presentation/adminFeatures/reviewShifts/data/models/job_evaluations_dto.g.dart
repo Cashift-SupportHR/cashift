@@ -8,9 +8,9 @@ part of 'job_evaluations_dto.dart';
 
 JobEvaluationsDto _$JobEvaluationsDtoFromJson(Map<String, dynamic> json) =>
     JobEvaluationsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       title: json['title'] as String?,
-      value: json['value'] as int?,
+      value: (json['value'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$JobEvaluationsDtoToJson(JobEvaluationsDto instance) =>

@@ -9,8 +9,8 @@ part of 'user_request_terms_params.dart';
 UserRequestTermsParams _$UserRequestTermsParamsFromJson(
         Map<String, dynamic> json) =>
     UserRequestTermsParams(
-      requestTypeCode: json['requestTypeCode'] as int?,
-      requestStatusCode: json['requestStatusCode'] as int?,
+      requestTypeCode: (json['requestTypeCode'] as num?)?.toInt(),
+      requestStatusCode: (json['requestStatusCode'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$UserRequestTermsParamsToJson(

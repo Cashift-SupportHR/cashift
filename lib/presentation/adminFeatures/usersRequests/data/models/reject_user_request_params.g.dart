@@ -9,9 +9,9 @@ part of 'reject_user_request_params.dart';
 RejectUserRequestParams _$RejectUserRequestParamsFromJson(
         Map<String, dynamic> json) =>
     RejectUserRequestParams(
-      statusId: json['statusId'] as int?,
+      statusId: (json['statusId'] as num?)?.toInt(),
       reason: json['reason'] as String?,
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$RejectUserRequestParamsToJson(

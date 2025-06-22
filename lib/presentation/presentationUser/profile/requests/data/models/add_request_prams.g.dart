@@ -8,7 +8,7 @@ part of 'add_request_prams.dart';
 
 AddRequestPrams _$AddRequestPramsFromJson(Map<String, dynamic> json) =>
     AddRequestPrams(
-      cashifterRequestTypeId: json['cashifterRequestTypeId'] as int?,
+      cashifterRequestTypeId: (json['cashifterRequestTypeId'] as num?)?.toInt(),
       newPhoneNumber: json['newPhoneNumber'] as String?,
     );
 

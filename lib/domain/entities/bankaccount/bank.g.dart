@@ -7,7 +7,7 @@ part of 'bank.dart';
 // **************************************************************************
 
 Bank _$BankFromJson(Map<String, dynamic> json) => Bank(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       bankName: json['bankName'] as String,
       bankLogo: json['bankLogo'] as String?,
       isContractBank: json['isContractBank'] as bool?,

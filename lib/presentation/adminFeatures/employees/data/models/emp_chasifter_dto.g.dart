@@ -8,29 +8,30 @@ part of 'emp_chasifter_dto.dart';
 
 EmpChasifterDto _$EmpChasifterDtoFromJson(Map<String, dynamic> json) =>
     EmpChasifterDto(
-      id: json['id'] as int?,
-      projectId: json['projectId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
       licenseExpiryDate: json['licenseExpiryDate'] as String?,
       employeeStatusName: json['employeeStatusName'] as String?,
       employeeStatusCode: json['employeeStatusCode'] as String?,
       weight: json['weight'] as num?,
-      freelancerInfoId: json['freelancerInfoId'] as int?,
+      freelancerInfoId: (json['freelancerInfoId'] as num?)?.toInt(),
       height: json['height'] as num?,
       bodyMass: json['bodyMass'] as num?,
-      companyId: json['companyId'] as int?,
-      shiftId: json['shiftId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
-      weekDays:
-          (json['weekDays'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      weekDays: (json['weekDays'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       weekDaysName: (json['weekDaysName'] as List<dynamic>?)
           ?.map((e) => WeekDaysNameDto.fromJson(e as Map<String, dynamic>))
           .toList(),
       opportunityValue: json['opportunityValue'] as num?,
       weekDaysString: json['weekDaysString'] as String?,
-      paymentPeriodTypeId: json['paymentPeriodTypeId'] as int?,
-      fromDay: json['fromDay'] as int?,
-      toDay: json['toDay'] as int?,
-      employeeStatusId: json['employeeStatusId'] as int?,
+      paymentPeriodTypeId: (json['paymentPeriodTypeId'] as num?)?.toInt(),
+      fromDay: (json['fromDay'] as num?)?.toInt(),
+      toDay: (json['toDay'] as num?)?.toInt(),
+      employeeStatusId: (json['employeeStatusId'] as num?)?.toInt(),
       name: json['name'] as String?,
       phone: json['phone'] as String?,
       projectName: json['projectName'] as String?,
@@ -75,7 +76,7 @@ Map<String, dynamic> _$EmpChasifterDtoToJson(EmpChasifterDto instance) =>
 
 WeekDaysNameDto _$WeekDaysNameDtoFromJson(Map<String, dynamic> json) =>
     WeekDaysNameDto(
-      dayValue: json['dayValue'] as int?,
+      dayValue: (json['dayValue'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

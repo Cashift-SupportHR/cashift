@@ -24,7 +24,7 @@ Map<String, dynamic> _$WorkingDocumentDtoToJson(WorkingDocumentDto instance) =>
 
 BenefitDocument _$BenefitDocumentFromJson(Map<String, dynamic> json) =>
     BenefitDocument(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 
@@ -36,7 +36,7 @@ Map<String, dynamic> _$BenefitDocumentToJson(BenefitDocument instance) =>
 
 PaymentDocument _$PaymentDocumentFromJson(Map<String, dynamic> json) =>
     PaymentDocument(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
       icon: json['icon'] as String?,

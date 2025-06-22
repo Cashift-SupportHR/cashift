@@ -9,10 +9,10 @@ part of 'balance_by_exchange_params.dart';
 BalanceByExchangeParams _$BalanceByExchangeParamsFromJson(
         Map<String, dynamic> json) =>
     BalanceByExchangeParams(
-      companyId: json['companyId'] as int?,
-      exchangeId: json['exchangeId'] as int?,
-      type: json['type'] as int?,
-      headId: json['headId'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
+      exchangeId: (json['exchangeId'] as num?)?.toInt(),
+      type: (json['type'] as num?)?.toInt(),
+      headId: (json['headId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BalanceByExchangeParamsToJson(

@@ -9,19 +9,20 @@ part of 'vehicle_receive_request_dto.dart';
 VehicleReceiveRequestDto _$VehicleReceiveRequestDtoFromJson(
         Map<String, dynamic> json) =>
     VehicleReceiveRequestDto(
-      vehicleComponentHandoverId: json['vehicleComponentHandoverId'] as int?,
-      vehicleCompnentId: json['vehicleCompnentId'] as int?,
+      vehicleComponentHandoverId:
+          (json['vehicleComponentHandoverId'] as num?)?.toInt(),
+      vehicleCompnentId: (json['vehicleCompnentId'] as num?)?.toInt(),
       vehicleName: json['vehicleName'] as String?,
       vehicleHandoverDate: json['vehicleHandoverDate'] as String?,
       vehicleModel: json['vehicleModel'] as String?,
       freelancerName: json['freelancerName'] as String?,
-      freeLancerId: json['freeLancerId'] as int?,
-      projectId: json['projectId'] as int?,
-      companyId: json['companyId'] as int?,
+      freeLancerId: (json['freeLancerId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
       vehicleHandoverTime: json['vehicleHandoverTime'] as String?,
       vehiclePlateNumber: json['vehiclePlateNumber'] as String?,
-      vehicleHandoverId: json['vehicleHandoverId'] as int?,
-      status: json['status'] as int?,
+      vehicleHandoverId: (json['vehicleHandoverId'] as num?)?.toInt(),
+      status: (json['status'] as num?)?.toInt(),
       statusName: json['statusName'] as String?,
       issueDescription: json['issueDescription'] as String?,
       attachmentPath: json['attachmentPath'] as String?,

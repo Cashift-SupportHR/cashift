@@ -8,8 +8,8 @@ part of 'fetch_emp_map_prams.dart';
 
 FetchEmpMapPrams _$FetchEmpMapPramsFromJson(Map<String, dynamic> json) =>
     FetchEmpMapPrams(
-      cityId: json['cityId'] as int?,
-      jobId: json['jobId'] as int?,
+      cityId: (json['cityId'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$FetchEmpMapPramsToJson(FetchEmpMapPrams instance) =>

@@ -8,7 +8,7 @@ part of 'opportunity_tabs_dto.dart';
 
 OpportunityTabsDto _$OpportunityTabsDtoFromJson(Map<String, dynamic> json) =>
     OpportunityTabsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

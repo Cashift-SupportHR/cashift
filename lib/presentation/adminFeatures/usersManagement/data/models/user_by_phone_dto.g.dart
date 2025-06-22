@@ -8,7 +8,7 @@ part of 'user_by_phone_dto.dart';
 
 UserByPhoneDto _$UserByPhoneDtoFromJson(Map<String, dynamic> json) =>
     UserByPhoneDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       email: json['email'] as String?,
       phoneNumber: json['phoneNumber'] as String?,

@@ -9,11 +9,11 @@ part of 'change_phone_number_params.dart';
 ChangePhoneNumberParams _$ChangePhoneNumberParamsFromJson(
         Map<String, dynamic> json) =>
     ChangePhoneNumberParams(
-      freeLanceInfoId: json['FreeLanceInfoId'] as int?,
+      freeLanceInfoId: (json['FreeLanceInfoId'] as num?)?.toInt(),
       newPhoneNumber: json['NewPhoneNumber'] as String?,
       attachmentFile: _$JsonConverterFromJson<String, File>(
           json['AttachmentFile'], const FileJsonConverter().fromJson),
-      notificationType: json['NotificationType'] as int?,
+      notificationType: (json['NotificationType'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ChangePhoneNumberParamsToJson(

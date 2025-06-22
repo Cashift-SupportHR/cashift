@@ -7,7 +7,7 @@ part of 'job_dto.dart';
 // **************************************************************************
 
 JobDto _$JobDtoFromJson(Map<String, dynamic> json) => JobDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       jobName: json['jobName'] as String?,
     );
 

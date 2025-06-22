@@ -11,8 +11,8 @@ AttendanceQuery _$AttendanceQueryFromJson(Map<String, dynamic> json) =>
       latitude: (json['latitude'] as num?)?.toDouble(),
       longitude: (json['longtude'] as num?)?.toDouble(),
       projectId: json['projectId'] as String?,
-      id: json['id'] as int?,
-      presentId: json['presentId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      presentId: (json['presentId'] as num?)?.toInt(),
       isMock: json['isMock'] as bool?,
     );
 

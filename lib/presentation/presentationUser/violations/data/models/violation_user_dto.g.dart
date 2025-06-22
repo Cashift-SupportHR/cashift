@@ -8,7 +8,7 @@ part of 'violation_user_dto.dart';
 
 ViolationUserDto _$ViolationUserDtoFromJson(Map<String, dynamic> json) =>
     ViolationUserDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       fromDate: json['fromDate'] as String?,
       toDate: json['toDate'] as String?,
       status: json['status'] as String?,

@@ -9,17 +9,17 @@ part of 'add_period_pricing_params.dart';
 AddPeriodPricingParams _$AddPeriodPricingParamsFromJson(
         Map<String, dynamic> json) =>
     AddPeriodPricingParams(
-      id: json['id'] as int?,
-      companyId: json['companyId'] as int?,
-      seasonseId: json['seasonseId'] as int?,
-      projectId: json['projectId'] as int?,
-      shiftId: json['shiftId'] as int?,
-      fromDay: json['fromDay'] as int?,
-      toDay: json['toDay'] as int?,
-      salary: json['salary'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      seasonseId: (json['seasonseId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
+      fromDay: (json['fromDay'] as num?)?.toInt(),
+      toDay: (json['toDay'] as num?)?.toInt(),
+      salary: (json['salary'] as num?)?.toInt(),
       setAsDefault: json['setAsDefault'] as bool?,
       isAllowEditPrice: json['isAllowEditPrice'] as bool?,
-      jobId: json['jobId'] as int?,
+      jobId: (json['jobId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddPeriodPricingParamsToJson(

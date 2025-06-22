@@ -9,12 +9,12 @@ part of 'apply_details.dart';
 ApplyDetails _$ApplyDetailsFromJson(Map<String, dynamic> json) => ApplyDetails(
       json['companyName'] as String?,
       json['jobName'] as String?,
-      json['money'] as int?,
+      (json['money'] as num?)?.toInt(),
       json['startShiftDate'] as String?,
       json['loanType'] as String?,
       json['createdDate'] as String?,
       json['installment'] as num?,
-      json['numberInstall'] as int?,
+      (json['numberInstall'] as num?)?.toInt(),
       json['endShiftDate'] as String?,
       json['totalLoanAmount'] as num?,
     );

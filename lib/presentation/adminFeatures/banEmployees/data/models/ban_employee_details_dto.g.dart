@@ -9,7 +9,7 @@ part of 'ban_employee_details_dto.dart';
 BanEmployeeDetailsDto _$BanEmployeeDetailsDtoFromJson(
         Map<String, dynamic> json) =>
     BanEmployeeDetailsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       logo: json['logo'] as String?,
       email: json['email'] as String?,
@@ -27,7 +27,7 @@ BanEmployeeDetailsDto _$BanEmployeeDetailsDtoFromJson(
           ?.map(
               (e) => StatisticsBanEmployee.fromJson(e as Map<String, dynamic>))
           .toList(),
-      numPreviousOpportunities: json['numOpportunities'] as int?,
+      numPreviousOpportunities: (json['numOpportunities'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BanEmployeeDetailsDtoToJson(
@@ -56,7 +56,7 @@ StatisticsBanEmployee _$StatisticsBanEmployeeFromJson(
     StatisticsBanEmployee(
       name: json['name'] as String?,
       percentage: (json['percentage'] as num?)?.toDouble(),
-      count: json['count'] as int?,
+      count: (json['count'] as num?)?.toInt(),
       label: json['label'] as String?,
     );
 

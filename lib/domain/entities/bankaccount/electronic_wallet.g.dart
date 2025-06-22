@@ -8,8 +8,8 @@ part of 'electronic_wallet.dart';
 
 ElectronicWallet _$ElectronicWalletFromJson(Map<String, dynamic> json) =>
     ElectronicWallet(
-      id: json['id'] as int?,
-      providerId: json['providerId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      providerId: (json['providerId'] as num?)?.toInt(),
       providerName: json['providerName'] as String?,
       providerImage: json['providerImage'] as String?,
       phone: json['phone'] as String?,

@@ -23,8 +23,8 @@ UserManagementDto _$UserManagementDtoFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               ShiftByListProjectIdDto.fromJson(e as Map<String, dynamic>))
           .toList(),
-      companyId: json['companyId'] as int?,
-      level: json['level'] as int?,
+      companyId: (json['companyId'] as num?)?.toInt(),
+      level: (json['level'] as num?)?.toInt(),
       role: json['role'] == null
           ? null
           : UserManagementRoleDto.fromJson(

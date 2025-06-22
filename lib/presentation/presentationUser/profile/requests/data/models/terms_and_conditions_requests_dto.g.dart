@@ -9,7 +9,7 @@ part of 'terms_and_conditions_requests_dto.dart';
 TermsAndConditionsRequestsDto _$TermsAndConditionsRequestsDtoFromJson(
         Map<String, dynamic> json) =>
     TermsAndConditionsRequestsDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
     );
 

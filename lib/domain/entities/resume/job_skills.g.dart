@@ -7,7 +7,7 @@ part of 'job_skills.dart';
 // **************************************************************************
 
 JobSkills _$JobSkillsFromJson(Map<String, dynamic> json) => JobSkills(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       imagePath: json['imagePath'] as String?,
     );

@@ -9,12 +9,12 @@ part of 'add_cashifter_loan_params.dart';
 AddCashifterLoanParams _$AddCashifterLoanParamsFromJson(
         Map<String, dynamic> json) =>
     AddCashifterLoanParams(
-      id: json['id'] as int?,
-      companyId: json['companyId'] as int?,
-      freelenceId: json['freelenceId'] as int?,
-      loanTypeId: json['loanTypeId'] as int?,
-      loanValue: json['loanValue'] as int?,
-      deductPercentage: json['deductPercentage'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
+      freelenceId: (json['freelenceId'] as num?)?.toInt(),
+      loanTypeId: (json['loanTypeId'] as num?)?.toInt(),
+      loanValue: (json['loanValue'] as num?)?.toInt(),
+      deductPercentage: (json['deductPercentage'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AddCashifterLoanParamsToJson(

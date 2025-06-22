@@ -8,7 +8,7 @@ part of 'reset_phone_data_dto.dart';
 
 ResetPhoneDataDto _$ResetPhoneDataDtoFromJson(Map<String, dynamic> json) =>
     ResetPhoneDataDto(
-      freeLanceId: json['freeLanceId'] as int?,
+      freeLanceId: (json['freeLanceId'] as num?)?.toInt(),
       pageHeaderLabel: json['pageHeaderLabel'] as String?,
       subHeaderLabel: json['subHeaderLabel'] as String?,
       inputPhoneNumberLabel: json['inputPhoneNumberLabel'] as String?,

@@ -8,7 +8,7 @@ part of 'add_custodies_prams.dart';
 
 AddCustodiesPrams _$AddCustodiesPramsFromJson(Map<String, dynamic> json) =>
     AddCustodiesPrams(
-      vehicleHandoverId: json['vehicleHandoverId'] as int?,
+      vehicleHandoverId: (json['vehicleHandoverId'] as num?)?.toInt(),
       vehicleCustodiesStatuses:
           (json['vehicleCustodiesStatuses'] as List<dynamic>?)
               ?.map((e) =>
@@ -25,7 +25,7 @@ Map<String, dynamic> _$AddCustodiesPramsToJson(AddCustodiesPrams instance) =>
 VehicleCustodiesStatuse _$VehicleCustodiesStatuseFromJson(
         Map<String, dynamic> json) =>
     VehicleCustodiesStatuse(
-      vehicleCustodyId: json['vehicleCustodyId'] as int?,
+      vehicleCustodyId: (json['vehicleCustodyId'] as num?)?.toInt(),
       custodyStatus: json['custodyStatus'] as bool?,
     );
 

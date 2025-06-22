@@ -9,10 +9,10 @@ part of 'add_insurance_prams.dart';
 AddInsurancePrams _$AddInsurancePramsFromJson(Map<String, dynamic> json) =>
     AddInsurancePrams(
       insuranceNumber: json['InsuranceNumber'] as String?,
-      id: json['Id'] as int?,
+      id: (json['Id'] as num?)?.toInt(),
       insuranceProvider: json['InsuranceProvider'] as String?,
       insuranceExpiryDate: json['InsuranceExpiryDate'] as String?,
-      vehicleId: json['VehicleId'] as int?,
+      vehicleId: (json['VehicleId'] as num?)?.toInt(),
       vehicleInsuranceTypeId: json['VehicleInsuranceTypeId'] as String?,
       insuranceImage: _$JsonConverterFromJson<String, File>(
           json['InsuranceImage'], const FileJsonConverter().fromJson),

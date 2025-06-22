@@ -7,7 +7,7 @@ part of 'loan_data_dto.dart';
 // **************************************************************************
 
 LoanDataDto _$LoanDataDtoFromJson(Map<String, dynamic> json) => LoanDataDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       freelanceName: json['freelanceName'] as String?,
       freelanceIcon: json['freelanceIcon'] as String?,
       mobile: json['mobile'] as String?,

@@ -8,8 +8,8 @@ part of 'filter_shift_params.dart';
 
 FilterShiftParams _$FilterShiftParamsFromJson(Map<String, dynamic> json) =>
     FilterShiftParams(
-      projectId: json['ProjectId'] as int?,
-      jobId: json['JobId'] as int?,
+      projectId: (json['ProjectId'] as num?)?.toInt(),
+      jobId: (json['JobId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$FilterShiftParamsToJson(FilterShiftParams instance) =>

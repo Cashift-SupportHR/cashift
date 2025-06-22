@@ -8,7 +8,7 @@ part of 'shift_by_project_id_dto.dart';
 
 ShiftByProjectIdDto _$ShiftByProjectIdDtoFromJson(Map<String, dynamic> json) =>
     ShiftByProjectIdDto(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       shiftName: json['shiftName'] as String?,
       isActive: json['isActive'] as bool?,
     );

@@ -9,8 +9,8 @@ part of 'free_lance_info_params.dart';
 FreeLanceInfoParams _$FreeLanceInfoParamsFromJson(Map<String, dynamic> json) =>
     FreeLanceInfoParams(
       isWeb: json['isWeb'] as bool?,
-      oppId: json['oppId'] as int?,
-      freeLanceId: json['freeLanceId'] as int?,
+      oppId: (json['oppId'] as num?)?.toInt(),
+      freeLanceId: (json['freeLanceId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$FreeLanceInfoParamsToJson(

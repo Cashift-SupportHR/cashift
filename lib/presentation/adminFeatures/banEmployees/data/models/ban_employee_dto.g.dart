@@ -8,17 +8,19 @@ part of 'ban_employee_dto.dart';
 
 BanEmployeeDto _$BanEmployeeDtoFromJson(Map<String, dynamic> json) =>
     BanEmployeeDto(
-      id: json['id'] as int?,
-      freelanceId: json['freelanceId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      freelanceId: (json['freelanceId'] as num?)?.toInt(),
       freelanceName: json['freelanceName'] as String?,
-      projectId: json['projectId'] as int?,
-      companyId: json['companyId'] as int?,
+      projectId: (json['projectId'] as num?)?.toInt(),
+      companyId: (json['companyId'] as num?)?.toInt(),
       projectName: json['projectName'] as String?,
       description: json['description'] as String?,
-      evaluationPerCompany: json['evaluationPerCompany'] as int?,
-      totalEvaluationPerCompany: json['totalEvaluationPerCompany'] as int?,
-      evaluationPerProject: json['evaluationPerProject'] as int?,
-      totalEvaluationPerProject: json['totalEvaluationPerProject'] as int?,
+      evaluationPerCompany: (json['evaluationPerCompany'] as num?)?.toInt(),
+      totalEvaluationPerCompany:
+          (json['totalEvaluationPerCompany'] as num?)?.toInt(),
+      evaluationPerProject: (json['evaluationPerProject'] as num?)?.toInt(),
+      totalEvaluationPerProject:
+          (json['totalEvaluationPerProject'] as num?)?.toInt(),
     )
       ..freelanceLogo = json['freelanceLogo'] as String?
       ..freelanceNotes = json['freelanceNotes'] as String?;

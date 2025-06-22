@@ -9,10 +9,10 @@ part of 'schedule_price_opportunity_params.dart';
 SchedulePriceOpportunityParams _$SchedulePriceOpportunityParamsFromJson(
         Map<String, dynamic> json) =>
     SchedulePriceOpportunityParams(
-      comapnyId: json['comapnyId'] as int?,
-      projectId: json['projectId'] as int?,
-      jobId: json['jobId'] as int?,
-      shiftId: json['shiftId'] as int?,
+      comapnyId: (json['comapnyId'] as num?)?.toInt(),
+      projectId: (json['projectId'] as num?)?.toInt(),
+      jobId: (json['jobId'] as num?)?.toInt(),
+      shiftId: (json['shiftId'] as num?)?.toInt(),
       workDate: json['workDate'] as String?,
     );
 
