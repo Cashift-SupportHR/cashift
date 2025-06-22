@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:device_preview_plus/device_preview_plus.dart' as device_preview;
+import 'package:firebase_config/firebase_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -41,16 +42,9 @@ class MyHttpOverrides extends HttpOverrides {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyB0FzJl_ocB874gjwpIQVuO9urkaeR6IM8",
-      databaseURL: "https://shiftapp-1.firebaseio.com",
-      projectId: "doubleshift-f48be",
-      storageBucket: "doubleshift-f48be.appspot.com",
-      messagingSenderId: "289253454262",
-      appId: "1:289253454262:ios:28abc5cf04d30436a81117",
-    ),
-  );
+
+
+  FirebaseBootstrapper.initFirebase(languageCode: '');
   FirebaseNotifications.firebaseInitNotifications();
   ChuckerFlutter.showOnRelease = true;
   AppLoggers.setupLogger();

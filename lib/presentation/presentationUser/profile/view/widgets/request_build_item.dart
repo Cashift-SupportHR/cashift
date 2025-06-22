@@ -31,7 +31,7 @@ class RequestItemBuilder
   @override
   Widget buildWidget(BuildContext context, InitializedToggleData state) {
     print("AdminTogglePage state");
-    print(bloc.image);
+
     print("AdminTogglePage state");
     return buildProfileItem(strings.requests,
         icon: kLoadSvgInCircle("requests"), onTap: () async {

@@ -526,6 +526,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.9.3+4"
+  firebase_config:
+    dependency: "direct main"
+    description:
+      path: "modules/firebase_config"
+      relative: true
+    source: path
+    version: "0.0.1"
   firebase_core:
     dependency: "direct main"
     description:
