@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:chucker_flutter/chucker_flutter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -12,6 +11,8 @@ import 'package:shiftapp/data/repositories/local/local_repository.dart';
 import 'package:shiftapp/data/repositories/logger/logger_repository.dart';
 import 'package:shiftapp/data/repositories/user/user_repository.dart';
 import 'package:shiftapp/domain/entities/shared/device.dart';
+import 'package:smooth_chucker/smooth_chucker.dart';
+import '../../../network/interceptor/logging_interceptor.dart';
 import 'api_exception.dart';
 import 'remote_constants.dart';
 
@@ -31,17 +32,16 @@ class ClientCreator {
     // Set base URL
     dio2.options.baseUrl =kBASE_URL;  // Replace with your base URL
 
-    // Add ChuckerDioInterceptor for debug/test environments
-    if (Config.isDebuggable || Config.isTestVersion) {
-      dio2.interceptors.add(ChuckerDioInterceptor());
-    }
 
-    // Add LogInterceptor for logging requests/responses in debug/test environments
-    dio2.interceptors.add(LogInterceptor(responseBody: Config.isDebuggable || Config.isTestVersion));
 
     // Add custom interceptor if provided
     if (interceptor != null) {
       dio2.interceptors.add(interceptor!);
+    }
+    dio2.interceptors.add(LoggingInterceptor());
+    // Add ChuckerDioInterceptor for debug/test environments
+    if (Config.isDebuggable || Config.isTestVersion) {
+      dio2.interceptors.add(SmoothChuckerDioInterceptor());
     }
     return dio2;
   }
@@ -82,14 +82,13 @@ class HeaderInterceptor extends Interceptor {
     options.headers['platform'] = Config.platformName;
     options.headers['AppVersion'] = Config.AppVersion;
     options.headers[requestTypeKey] = true;
-    print('Header  Params ${options.headers}');
+
     super.onRequest(options, handler);
   }
 
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) {
-    print(
-        'DIO ERROR onError ${err.response != null} =>error message is  ${err.error}');
+
     if (err.response != null) {
       //print('DIO ERROR onError known ${(err.response!.statusCode==401 && isRequiredAuth==true) || err.response!.statusCode == 500}');
 
@@ -109,22 +108,12 @@ class HeaderInterceptor extends Interceptor {
         throw UnAuthorizedException();
       } else {
         Map<String, dynamic> data = json.decode(err.response.toString());
-        print('DIO ERROR Response ${data}');
-
         final message = data.containsKey('message') ? data['message'] : "Error";
         final status = data.containsKey('status') ? data['status'] : "Error";
         String code = data.containsKey('code') ? data['code'] : "E";
         throw ApiException(message, code);
       }
     } else {
-      print('DIO ERROR Unknown${err.error} => ${err.message}');
-
-      /*  final params = LoggerParams(
-          tagName: err.requestOptions.path, description: "HeaderInterceptor get error ${err.response?.statusCode}" ,
-          object: err.requestOptions.data.toString(), error: err.error.toString());
-
-        loggerRepository.sendLog(params);*/
-
       super.onError(err, handler);
     }
   }
@@ -136,9 +125,8 @@ class HeaderInterceptor extends Interceptor {
     final message = data.containsKey('message') ? data['message'] : "Error";
     final status = data.containsKey('status') ? data['status'] : "Error";
     String code = data.containsKey('code') ? response.data['code'] : "E";
-    debugPrint('onResponse  => ${code != 'Ok'}');
+
     if (status != 'success') {
-      print('IS ERROR ${message}');
       throw ApiException(message, code);
     }
   }

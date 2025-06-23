@@ -10,7 +10,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
-import 'package:chucker_flutter/chucker_flutter.dart';
 import 'package:shiftapp/data/datasources/remote/base_client.dart';
 import 'package:shiftapp/data/repositories/local/local_repository.dart';
 import 'package:shiftapp/domain/entities/shared/notification_types.dart';
@@ -22,6 +21,7 @@ import 'package:shiftapp/presentation/shared/check_face_recognation/cubit/check_
 import 'package:shiftapp/presentation/shared/components/adminToggle/cubit/admin_toggle_cubit.dart';
 import 'package:shiftapp/presentation/shared/components/restart_app_widget.dart';
 import 'package:sizer/sizer.dart';
+import 'package:smooth_chucker/smooth_chucker.dart';
 import 'core/services/firebase_notification.dart';
 import 'core/services/material_app_config.dart';
 import 'core/services/routes.dart';
@@ -46,7 +46,9 @@ void main() async {
 
   FirebaseBootstrapper.initFirebase(languageCode: '');
   FirebaseNotifications.firebaseInitNotifications();
-  ChuckerFlutter.showOnRelease = true;
+  SmoothChucker.showOnRelease = true;
+  SmoothChucker.setNotificationsEnabled(true);
+
   AppLoggers.setupLogger();
   await configureDependencies();
   // Get the available cameras
@@ -95,6 +97,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      SmoothChucker.initialize(Overlay.of(context));
+    });
     final localRepo = getIt.get<LocalRepository>();
     try {
       FirebaseNotifications.initFcm(context, localRepo.getLocal());
@@ -111,7 +116,7 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, Orientation orientation,
              deviceType) {
           return GetMaterialApp(
-            navigatorObservers: [ChuckerFlutter.navigatorObserver],
+            navigatorObservers: [SmoothChucker.navigatorObserver],
             theme: MaterialAppConfig().theme,
             navigatorKey: navigatorKey,
             locale: Locale(localRepo.getLocal()),

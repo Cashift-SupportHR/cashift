@@ -35,4 +35,9 @@ class _RestartWidgetState extends State<RestartWidget> {
       child: widget.child,
     );
   }
+  @override
+  void initState() {
+    super.initState();
+
+  }
 }
