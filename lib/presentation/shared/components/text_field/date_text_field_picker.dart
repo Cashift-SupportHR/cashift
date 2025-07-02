@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
-import 'package:shiftapp/utils/app_icons.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 import 'build_text_field_item.dart';
 

@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
 import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../domain/entities/shared/date_formatter.dart';
 import '../../../shared/components/base_stateless_widget.dart';

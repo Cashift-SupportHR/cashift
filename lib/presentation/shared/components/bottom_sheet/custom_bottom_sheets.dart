@@ -1,7 +1,7 @@
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
 
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../presentationUser/attendance/facerecognation/index.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../decorations/decorations.dart';

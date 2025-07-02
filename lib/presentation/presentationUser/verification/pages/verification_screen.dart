@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 class VerificationScreen extends BaseWidget {
   final Function(String otp) onComplete;

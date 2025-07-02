@@ -8,11 +8,11 @@ import 'package:get/get_utils/src/platform/platform.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shiftapp/config.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:store_redirect/store_redirect.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../domain/entities/shared/date_formatter.dart';
-import '../presentation/shared/components/datepicker/package_info.dart';
+import '../../domain/entities/shared/date_formatter.dart';
+import '../../presentation/shared/components/datepicker/package_info.dart';
 
 class AppUtils {
   static Future<String> launchAppLink() async {

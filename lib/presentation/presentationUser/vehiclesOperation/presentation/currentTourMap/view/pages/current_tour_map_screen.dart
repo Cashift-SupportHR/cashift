@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/generated/assets.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
@@ -14,7 +14,7 @@ import 'package:shiftapp/presentation/shared/components/index.dart';
 import 'package:shiftapp/presentation/shared/components/text_field/text_field_search.dart';
 
 import '../../../../../../../main_index.dart';
-import '../../../../../../../utils/app_icons.dart';
+import '../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../adminFeatures/areapolygones/data/models/add_vehicle_zone_params.dart';
 import '../../../../../attendance/shiftAttendance/widgets/timer_counter.dart';
 import '../../../../../salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';

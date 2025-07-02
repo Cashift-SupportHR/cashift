@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 
 import '../../../../../domain/entities/shift/applied_offer.dart';
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

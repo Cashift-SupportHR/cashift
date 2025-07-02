@@ -6,8 +6,8 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/texts/underline_text.dart';
-import 'package:shiftapp/utils/app_icons.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 import '../../../../presentationUser/resources/colors.dart';
 import '../../../../presentationUser/workHazards/presentation/addWorkHazard/widgets/upload_files_list.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

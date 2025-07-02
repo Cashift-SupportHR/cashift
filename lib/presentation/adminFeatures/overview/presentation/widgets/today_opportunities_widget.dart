@@ -12,7 +12,7 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
 import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
 import 'package:shiftapp/presentation/shared/components/shapes/rounded_shape.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 class TodayOpportunityWidget extends BaseStatelessWidget {
   final void Function() onItemTap;

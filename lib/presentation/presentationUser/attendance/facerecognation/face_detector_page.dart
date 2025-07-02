@@ -8,9 +8,9 @@ import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
 
 import '../../../../data/models/attendance/attendance_config_dto.dart';
-import '../../../../extensions/extensions.dart';
+import '../../../../core/extensions/extensions.dart';
 import '../../../../generated/assets.dart';
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../shared/components/app_cupertino_button.dart';
 import '../../../shared/components/image_builder.dart';
 import '../../../shared/components/outlint_button.dart';

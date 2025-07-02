@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:get/get.dart';
 import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/data/models/attendance/attendance_config_dto.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/view/widgets/profile_item_widget.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';

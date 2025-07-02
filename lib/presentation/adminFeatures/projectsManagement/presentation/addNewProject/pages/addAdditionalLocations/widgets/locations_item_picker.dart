@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../../../../core/services/routes.dart';
 import '../../../../../../../presentationUser/map_picker/widgets/map_picker_item.dart';

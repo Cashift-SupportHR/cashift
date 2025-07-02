@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/adminFeatures/employmentManagement/presentation/resetMobileNumber/widgets/select_places_send_code_list.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
@@ -9,7 +9,7 @@ import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/snckBar/snack_bar_manager.dart';
 
-import '../../../../../../utils/app_utils.dart';
+import '../../../../../../core/utils/app_utils.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/validation.dart';
 import '../../../../../shared/components/app_cupertino_button.dart';

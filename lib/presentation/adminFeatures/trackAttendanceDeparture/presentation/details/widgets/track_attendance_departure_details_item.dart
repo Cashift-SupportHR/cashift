@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../../core/services/routes.dart';
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/texts/icon_double_text.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shiftapp/extensions/extensions.dart';
-import '../../../../../utils/app_icons.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../adminFeatures/available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../../shared/components/options_menu_button.dart';
 import '../../../resources/colors.dart';

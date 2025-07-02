@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
 import '../../../../presentationUser/common/common_state.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

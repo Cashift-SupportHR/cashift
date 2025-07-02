@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../resources/colors.dart';

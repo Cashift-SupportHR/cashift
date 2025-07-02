@@ -10,7 +10,7 @@ import 'package:shiftapp/data/datasources/remote/api_exception.dart';
 import 'package:shiftapp/data/datasources/remote/resume_not_complete_exception.dart';
 import 'package:shiftapp/data/datasources/remote/unauthorized_exception.dart';
 import 'package:shiftapp/data/exceptions/app_base_exception.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/job_offers_widget_helper.dart';
 import 'package:shiftapp/presentation/presentationUser/locationservice/locationservice.dart';
 import '../../adminFeatures/di/injector.dart';

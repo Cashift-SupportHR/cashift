@@ -12,7 +12,7 @@ import '../../../../../config.dart';
 import '../../../../../core/services/permission_detector.dart';
 import '../../../../../data/models/attendance/attendance_config_dto.dart';
 import '../../../../../domain/entities/attendancerecoginatin/attendance_model.dart';
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../shared/components/app_cupertino_button.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/dialogs_manager.dart';

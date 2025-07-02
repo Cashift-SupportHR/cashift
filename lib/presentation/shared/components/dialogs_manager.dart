@@ -23,8 +23,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/resources.dart'
 import 'package:shiftapp/presentation/presentationUser/resume/pages/resume_pages.dart';
 import 'package:shiftapp/presentation/shared/components/restart_app_widget.dart';
 import 'package:shiftapp/presentation/shared/components/success_animation_widget.dart';
-import 'package:shiftapp/utils/app_icons.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 import '../authorization/login/pages/login_page.dart';
 import 'decorations/decorations.dart';

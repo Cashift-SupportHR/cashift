@@ -9,7 +9,7 @@ import '/presentation/presentationUser/resources/constants.dart';
 import '/presentation/shared/components/base_stateless_widget.dart';
 import '/presentation/shared/components/image_builder.dart';
 import '/presentation/shared/components/outlint_button.dart';
-import '/utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 
 import '../../data/models/completed_opportunity_dto.dart';
 

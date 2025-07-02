@@ -9,7 +9,7 @@ import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 import 'package:shiftapp/presentation/shared/components/texts/icon_double_text.dart';
 
 import '../../../../../../core/services/routes.dart';
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/divider/divider_vertical.dart';

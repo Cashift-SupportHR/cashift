@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../domain/entities/attendancerecoginatin/attendance_model.dart';
 import '../../../../domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';

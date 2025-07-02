@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 
 import '../../../../data/models/workerWorkPlaces/add_focus_points_received_devices_params.dart';
-  import '../../../../utils/app_icons.dart';
+  import '../../../../core/utils/app_icons.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/buttons/row_buttons.dart';
 import '../../../shared/components/checkbox/warning_check_box_widget.dart';

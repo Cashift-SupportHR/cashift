@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shiftapp/config.dart';
 import 'package:shiftapp/domain/entities/job_offers/job_offer_dto.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 class JobOfferWidgetHelper {
   static void openMap(BuildContext context, JobOfferDto jobOffer) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
-import 'package:shiftapp/utils/app_images.dart';
+import 'package:shiftapp/core/utils/app_images.dart';
 
 import '../../../../core/services/routes.dart';
 import '../../../../data/repositories/local/local_repository.dart';

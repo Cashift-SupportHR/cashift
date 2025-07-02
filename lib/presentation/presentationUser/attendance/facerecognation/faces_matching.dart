@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter_face_api/flutter_face_api.dart';
 import 'package:livelyness_detection/index.dart';
 import 'package:livelyness_detection/livelyness_detection.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
 import '../../../../core/services/permission_detector.dart';
 import '../../../../data/models/attendance/attendance_config_dto.dart';

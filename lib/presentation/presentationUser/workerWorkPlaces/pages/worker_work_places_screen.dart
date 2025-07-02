@@ -1,7 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/domain/entities/workerWorkPlaces/index.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 import 'package:vibration/vibration.dart';
 
 import '../../../../domain/entities/shared/date_formatter.dart';

@@ -1,8 +1,8 @@
  import 'package:get/get.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/pages/qrcode_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../../../core/services/routes.dart';
 import '../../../../../../shared/components/index.dart';

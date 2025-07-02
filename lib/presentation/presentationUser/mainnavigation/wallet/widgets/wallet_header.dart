@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shiftapp/domain/entities/wallet/withdraw_method.dart';
 import '../../../../../main_index.dart';
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../../shared/components/image_builder.dart';
 import '../../../../shared/components/underline_widget.dart';

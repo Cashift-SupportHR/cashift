@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/config.dart';
 import 'package:shiftapp/data/models/attendance/attendance_shift_dto.dart';
 import 'package:shiftapp/domain/entities/attendance/attendance_query.dart';
- import 'package:shiftapp/extensions/extensions.dart';
+ import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/pages/qrcode_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/bloc/attendance_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/pages/attendance_screen.dart';

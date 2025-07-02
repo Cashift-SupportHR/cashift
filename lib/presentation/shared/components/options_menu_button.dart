@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../utils/app_icons.dart';
+import '../../../core/utils/app_icons.dart';
 import '../../presentationUser/resources/colors.dart';
 import 'base_stateless_widget.dart';
 import 'image_builder.dart';

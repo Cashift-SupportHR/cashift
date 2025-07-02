@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/adminFeatures/available_opportunities/presentation/widgets/text_field_project.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
@@ -7,7 +7,7 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../data/repositories/advancedFilter/select_model.dart';
 import '../../../../../domain/entities/advancedFilter/offers_filter_data.dart';
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../presentationUser/advancedFilter/widgets/select_widget.dart';
  import '../../../../presentationUser/advancedFilter/widgets/text_field_date_picker_filter.dart';
  import '../../../../shared/components/app_cupertino_button.dart';

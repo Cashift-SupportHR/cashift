@@ -1,4 +1,4 @@
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../../../shared/components/index.dart';
 import '../../../../domain/entities/RequestsUser.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';

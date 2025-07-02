@@ -1,1 +1,1 @@
-export 'package:shiftapp/extensions/extensions.dart';
+export 'package:shiftapp/core/extensions/extensions.dart';

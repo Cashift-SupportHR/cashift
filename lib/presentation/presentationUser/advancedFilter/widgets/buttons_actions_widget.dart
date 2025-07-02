@@ -1,6 +1,6 @@
  import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../shared/components/index.dart';
 import '../../resources/colors.dart';
 

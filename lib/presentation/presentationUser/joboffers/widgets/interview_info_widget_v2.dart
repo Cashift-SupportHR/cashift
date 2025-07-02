@@ -5,12 +5,12 @@ import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dar
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../core/services/routes.dart';
 import '../../../../domain/entities/jobs/interview_info.dart';
 import '../../../../domain/entities/jobs/job_terms.dart';
-import '../../../../utils/app_utils.dart';
+import '../../../../core/utils/app_utils.dart';
 import '../../../shared/components/buttons/app_outline_button_icon.dart';
 import '../../../shared/components/dialogs_manager.dart';
 import '../../../shared/home/pages/home_screen.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/validate.dart';
+import '../../../../core/utils/validate.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
 import '../../../shared/components/app_cupertino_button.dart';

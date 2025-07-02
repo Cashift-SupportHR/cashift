@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/adminFeatures/shared/data/models/free_lance_info.dart';
 import 'package:shiftapp/presentation/adminFeatures/shared/data/models/free_lance_info_params.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
@@ -10,7 +10,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
 import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
 
-import '../../../../../../utils/app_utils.dart';
+import '../../../../../../core/utils/app_utils.dart';
 import '../../../../../presentationUser/resources/validation.dart';
 
 class AddEmployeeForOpportunityWidget extends BaseStatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/validate.dart';
+import '../../../../core/utils/validate.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
 import '../base_stateless_widget.dart';

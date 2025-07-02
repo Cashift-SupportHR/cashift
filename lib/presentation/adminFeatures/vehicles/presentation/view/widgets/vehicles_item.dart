@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/adminFeatures/vehicles/data/models/vehicle
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
- import 'package:shiftapp/utils/app_icons.dart';
+ import 'package:shiftapp/core/utils/app_icons.dart';
 import '../../../../../../core/services/routes.dart';
  import '../../../../../../domain/entities/shared/date_formatter.dart';
 import '../../../../../shared/components/bottom_sheet/bottom_sheet_options.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
 import '../../../../domain/entities/resume/district_item.dart';
 import '../../../shared/components/base_stateless_widget.dart';

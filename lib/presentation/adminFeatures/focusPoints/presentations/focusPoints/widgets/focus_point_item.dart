@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../../core/services/routes.dart';
 import '../../../../../../domain/entities/shared/date_formatter.dart';
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../../../presentationUser/workerWorkPlaces/widgets/point_name_and_status.dart';

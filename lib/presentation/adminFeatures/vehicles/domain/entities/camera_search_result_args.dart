@@ -1,6 +1,6 @@
 
 import '../../../../../l10n/app_localizations.dart';
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../shared/components/texts/list_row_texts_icons_v2.dart';
 import '../../data/models/vehicle_video_params.dart';
 import 'index.dart';

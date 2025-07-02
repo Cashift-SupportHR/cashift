@@ -1,4 +1,4 @@
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import '../../../../../../adminFeatures/maintenanceAndBreakdowns/domain/entities/maintenance.dart';
 import '../../../../../../adminFeatures/maintenanceAndBreakdowns/presentation/view/pages/maintenance_breakdowns_screen.dart';
 import '../../../../../../shared/components/index.dart';

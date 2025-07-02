@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
 import 'package:shiftapp/presentation/shared/models/common_list_item.dart';
 
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../presentationUser/common/stream_data_state.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';

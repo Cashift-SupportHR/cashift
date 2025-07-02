@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../domain/entities/bail_requests/employee_services_status.dart';
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../shared/components/icons/icon_text.dart';
 
 class TitleIconServices extends StatelessWidget {

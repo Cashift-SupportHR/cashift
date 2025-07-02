@@ -5,7 +5,7 @@ import 'package:shiftapp/domain/entities/wallet/balance_transaction_status.dart'
 import 'package:shiftapp/domain/entities/wallet/wallet_balance_item.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../../shared/components/image_builder.dart';
 import '../../../resources/colors.dart';

@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../utils/app_icons.dart';
-import '../../../../utils/app_utils.dart';
+import '../../../../core/utils/app_icons.dart';
+import '../../../../core/utils/app_utils.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
 import '../image_builder.dart';

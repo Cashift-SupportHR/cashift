@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/checkbox/multiple_choice_checkbox.dart';

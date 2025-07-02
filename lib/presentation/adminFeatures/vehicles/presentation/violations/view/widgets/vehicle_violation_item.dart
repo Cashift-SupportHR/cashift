@@ -2,7 +2,7 @@ import 'package:shiftapp/presentation/adminFeatures/available_opportunities/pres
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../../../core/services/routes.dart';
 import '../../../../../../presentationUser/vehiclesOperation/domain/entities/vehicle_violation_args.dart';

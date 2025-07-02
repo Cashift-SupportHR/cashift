@@ -22,7 +22,7 @@ import 'package:shiftapp/data/repositories/profile/profile_repository.dart';
 import 'package:shiftapp/data/repositories/user/user_repository.dart';
 
 import 'package:shiftapp/domain/entities/account/remote_file.dart';
- import 'package:shiftapp/extensions/extensions.dart';
+ import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:collection/collection.dart';
 

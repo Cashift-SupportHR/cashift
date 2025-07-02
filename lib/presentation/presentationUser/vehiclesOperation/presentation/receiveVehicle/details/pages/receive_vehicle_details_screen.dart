@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/index.dart';
 
 import '../../../../../../../core/services/routes.dart';
-import '../../../../../../../utils/app_icons.dart';
+import '../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../shared/components/map/points_map_screen.dart';
 import '../../../../data/models/download_vehicle_violation_picture_params.dart';
 import '../../../../domain/entities/custody_handover.dart';

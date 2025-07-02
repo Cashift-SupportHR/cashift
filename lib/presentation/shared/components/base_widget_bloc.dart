@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shiftapp/core/services/permission_detector.dart';
 import 'package:shiftapp/domain/params/dashboard_required_action_respond_params.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/adminFeatures/di/injector.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';

@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 
 import '../../../../domain/entities/shared/date_formatter.dart';
 import '../../../../domain/entities/workerWorkPlaces/worker_work_place.dart';
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/stepper/custom_stepper.dart';
 import '../../../shared/components/stepper/stepper_model.dart';

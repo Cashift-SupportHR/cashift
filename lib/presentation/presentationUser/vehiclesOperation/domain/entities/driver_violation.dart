@@ -1,6 +1,6 @@
 import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
 
-import '../../../../../utils/app_utils.dart';
+import '../../../../../core/utils/app_utils.dart';
 import '../../data/models/download_vehicle_violation_picture_params.dart';
 import '../../data/models/driver_violation_dto.dart';
 

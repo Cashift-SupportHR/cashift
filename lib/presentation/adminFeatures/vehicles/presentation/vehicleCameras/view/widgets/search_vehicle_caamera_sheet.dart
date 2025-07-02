@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
 import '../../../../../../../domain/entities/shared/date_formatter.dart';
 import '../../../../../../presentationUser/attendance/facerecognation/index.dart';

@@ -9,7 +9,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dar
 
 import '../../../../data/models/attendance/attendance_config_dto.dart';
 import '../../../../generated/assets.dart';
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../presentationUser/attendance/facerecognation/faces_matching.dart';
 import '../../../presentationUser/resources/constants.dart';
 import '../../../shared/components/app_cupertino_button.dart';

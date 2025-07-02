@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../image_builder.dart';
 import '../stepper.dart';

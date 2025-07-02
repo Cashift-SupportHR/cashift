@@ -9,7 +9,7 @@ import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dar
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../widgets/fingerprint_actions_list.dart';
 import '../widgets/timer_counter.dart';

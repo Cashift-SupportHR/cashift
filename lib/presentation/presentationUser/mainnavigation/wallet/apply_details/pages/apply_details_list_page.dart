@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
  import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/domain/entities/wallet/index.dart';
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/image_builder.dart';
 import '../../../../resources/colors.dart';

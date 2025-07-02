@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 import '../../../../domain/entities/advancedFilter/ProjectFiltter.dart';
  import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/bottom_sheet/list_picker_widget.dart';

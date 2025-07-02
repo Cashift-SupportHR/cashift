@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../utils/app_images.dart';
+import '../../../../core/utils/app_images.dart';
 import '../../components/base_stateless_widget.dart';
 import 'landing_model.dart';
 

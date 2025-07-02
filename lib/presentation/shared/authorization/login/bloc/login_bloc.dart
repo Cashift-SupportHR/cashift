@@ -11,7 +11,7 @@ import 'package:shiftapp/data/exceptions/nobiometric_saved_exception.dart';
 import 'package:shiftapp/data/repositories/user/user_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:meta/meta.dart';
- import 'package:shiftapp/utils/secure_storage.dart';
+ import 'package:shiftapp/core/utils/secure_storage.dart';
 
 @Injectable()
 class LoginBloc extends BaseCubit  {

@@ -3,7 +3,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
 import '../../../../data/models/salary-definition-request/index.dart';
 import '../../common/common_state.dart';

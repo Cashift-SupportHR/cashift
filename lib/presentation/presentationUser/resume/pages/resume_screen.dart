@@ -16,10 +16,10 @@ import 'package:shiftapp/presentation/shared/components/base_widget.dart';
 import 'package:shiftapp/presentation/shared/components/dropdown_filed.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
 import 'package:shiftapp/presentation/shared/components/stepper.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 import 'package:shiftapp/data/models/resuame/index.dart';
 
- import '../../../../utils/app_icons.dart';
+ import '../../../../core/utils/app_icons.dart';
 import '../../../shared/components/datepicker/hijri_calendar.dart';
 import '../../../shared/components/datepicker/hijri_picker.dart';
 import '../../../shared/components/image_builder.dart';

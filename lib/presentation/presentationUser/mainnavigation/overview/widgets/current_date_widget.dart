@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 
-import '../../../../../utils/app_utils.dart';
+import '../../../../../core/utils/app_utils.dart';
 import '../../../../shared/components/adminToggle/screen/admin_toggle_builder.dart';
 import '../../../../shared/components/adminToggle/screen/admin_toggle_widget.dart';
 

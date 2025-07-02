@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentat
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/workingPeriodsProject/working_periods_project_page.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../core/services/routes.dart';
 import '../../../../presentationUser/common/common_state.dart';

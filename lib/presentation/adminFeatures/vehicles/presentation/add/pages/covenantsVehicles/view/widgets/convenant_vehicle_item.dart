@@ -1,6 +1,6 @@
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../../../../../../utils/app_icons.dart';
+import '../../../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../../shared/components/index.dart';
 import '../../../../../../domain/entities/covenant_vehicle.dart';

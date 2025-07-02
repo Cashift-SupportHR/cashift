@@ -1,4 +1,4 @@
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
 import '../../../../../../../domain/constants/codes_constants.dart';
 

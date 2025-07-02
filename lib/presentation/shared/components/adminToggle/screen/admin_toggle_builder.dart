@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:livelyness_detection/livelyness_detection.dart';
 import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/data/models/attendance/attendance_config_dto.dart';
- import 'package:shiftapp/extensions/extensions.dart';
+ import 'package:shiftapp/core/extensions/extensions.dart';
  import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/adminToggle/screen/admin_toggle_widget.dart';
 

@@ -1,4 +1,4 @@
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../../../core/services/routes.dart';
 import '../../../../../../../domain/entities/shared/date_formatter.dart';

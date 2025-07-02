@@ -2,7 +2,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/vehicleTracking/widgets/show_image_violation_build.dart';
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../shared/components/index.dart';
 import '../../../../../shared/components/text_field/date_time_text_field_picker.dart';
 import '../../../../../presentationUser/common/common_state.dart';

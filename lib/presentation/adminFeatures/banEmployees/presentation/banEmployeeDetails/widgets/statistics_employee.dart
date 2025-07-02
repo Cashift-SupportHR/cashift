@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';

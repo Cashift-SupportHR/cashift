@@ -5,8 +5,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import '../../../../../core/services/routes.dart';
 import '../../../../../data/models/wallet/name_by_id_number.dart';
 import '../../../../../domain/validators/idnumber_validation.dart';
-import '../../../../../utils/app_icons.dart';
-import '../../../../../utils/app_utils.dart';
+import '../../../../../core/utils/app_icons.dart';
+import '../../../../../core/utils/app_utils.dart';
 import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/decorations/decorations.dart';

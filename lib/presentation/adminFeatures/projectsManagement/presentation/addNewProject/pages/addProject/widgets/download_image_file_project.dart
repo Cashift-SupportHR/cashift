@@ -4,9 +4,9 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
-import '../../../../../../../../utils/app_icons.dart';
+import '../../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/buttons/icon_text_button.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';

@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dar
 import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
 import 'package:shiftapp/presentation/shared/components/datepicker/date_picker.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 import '../../../shared/components/datepicker/hijri_calendar.dart';
 

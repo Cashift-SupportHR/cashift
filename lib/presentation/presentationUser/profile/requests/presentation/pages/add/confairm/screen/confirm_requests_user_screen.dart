@@ -2,7 +2,7 @@
  import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../../../../../../../../core/services/routes.dart';
-import '../../../../../../../../../utils/app_utils.dart';
+import '../../../../../../../../../core/utils/app_utils.dart';
 import '../../../../../../../../shared/components/index.dart';
 import '../../../../../../../common/common_state.dart';
 import '../../../../../../../resources/colors.dart';

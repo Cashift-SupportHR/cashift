@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts.dart';
 
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/divider/custom_divider.dart';

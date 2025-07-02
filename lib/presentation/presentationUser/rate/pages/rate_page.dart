@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/rate/bloc/evaluation_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/rate/pages/evaluation_screen.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/utils/responsive.dart';
+import 'package:shiftapp/core/utils/responsive.dart';
 
 import '../../../../core/services/routes.dart';
 

@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../data/models/popup_employment_management_dto.dart';
 

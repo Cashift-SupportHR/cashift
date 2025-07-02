@@ -14,7 +14,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../main_index.dart';
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../adminFeatures/di/injector.dart';
 import '../../../../shared/check_face_recognation/page/check_face_recognatin_page.dart';
 

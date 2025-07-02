@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/adminFeatures/usersManagement/presentation
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../../../utils/app_icons.dart';
+import '../../../../../../core/utils/app_icons.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../shared/components/index.dart';
 import '../../../../../shared/models/common_list_item.dart';

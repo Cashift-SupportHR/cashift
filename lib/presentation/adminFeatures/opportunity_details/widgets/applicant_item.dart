@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/adminFeatures/opportunity_details/widgets/
 import 'package:shiftapp/presentation/adminFeatures/opportunity_details/widgets/popup_menu_employee_item_builderV2.dart';
 
 import '../../../../data/models/wallet/opportunity_details.dart';
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
 import '../../../shared/components/base/user_info_widget_with_icon.dart';

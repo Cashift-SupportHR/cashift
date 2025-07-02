@@ -11,7 +11,7 @@ import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
 import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../core/services/routes.dart';
 import '../../../../../domain/entities/shared/date_formatter.dart';

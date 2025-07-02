@@ -11,7 +11,7 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
 import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
 
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
  import '../../../shared/components/curancy_widget.dart';
 import '../../../shared/components/decorations/decorations.dart';
 import '../../mainnavigation/overview/widgets/current_shift_widget.dart';

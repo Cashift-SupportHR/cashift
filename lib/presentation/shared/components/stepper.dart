@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:linear_step_indicator/src/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import 'image_builder.dart';
 

@@ -13,7 +13,7 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
 import 'package:shiftapp/presentation/shared/components/shapes/rounded_shape.dart';
 import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../core/services/routes.dart';
 import '../addopportunityemployee/pages/add_employee_for_opportunity_page.dart';

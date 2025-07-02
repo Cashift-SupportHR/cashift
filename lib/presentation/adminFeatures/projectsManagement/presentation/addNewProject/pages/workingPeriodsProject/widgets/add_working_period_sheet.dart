@@ -3,7 +3,7 @@ import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/workingPeriodsProject/widgets/period_order_picker.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../../../../../../utils/app_utils.dart';
+import '../../../../../../../../core/utils/app_utils.dart';
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/buttons/row_buttons.dart';

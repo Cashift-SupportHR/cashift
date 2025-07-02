@@ -4,9 +4,9 @@ import 'package:dio/dio.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
-import '../../../../../../../../utils/app_icons.dart';
+import '../../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../shared/components/index.dart';
 import '../../../../../domain/entities/vehicle_image_face.dart';

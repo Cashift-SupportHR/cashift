@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 
 import '../../../../../../../../core/services/routes.dart';
-import '../../../../../../../../utils/app_icons.dart';
+import '../../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../../presentationUser/appliedoffers/pages/qrcode_screen.dart';
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';

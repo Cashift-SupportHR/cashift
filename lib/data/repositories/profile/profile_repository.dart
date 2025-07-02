@@ -8,7 +8,7 @@ import 'package:shiftapp/data/models/auth/change_password_params.dart';
 import 'package:shiftapp/data/repositories/user/user_repository.dart';
 import 'package:shiftapp/domain/entities/account/index.dart';
 import 'package:shiftapp/domain/entities/account/remote_file.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
 import '../../models/api_response.dart';
 import 'dart:convert';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../../domain/entities/workerWorkPlaces/focus_point_info.dart';
 import '../../../../../presentationUser/resources/colors.dart';

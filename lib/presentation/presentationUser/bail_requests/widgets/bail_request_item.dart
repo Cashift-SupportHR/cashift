@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/bail_requests/widgets/tit
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../domain/entities/bail_requests/bail_request.dart';
 import '../../../../domain/entities/bail_requests/bail_term_and_condition.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
 
-import '../../../../../../../../utils/app_icons.dart';
+import '../../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';

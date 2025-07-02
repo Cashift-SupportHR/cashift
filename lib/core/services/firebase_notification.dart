@@ -12,7 +12,7 @@ import 'package:shiftapp/core/services/routes.dart';
 
 import '../../data/models/notification_offers/notification_offer_params.dart';
 import '../../domain/entities/shared/notification_types.dart';
-import '../../utils/notification.dart';
+import '../utils/notification.dart';
 
 /// Create a [AndroidNotificationChannel] for heads up notifications
 AndroidNotificationChannel? channel;

@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../shared/components/circular_percent_widget.dart';
 import '../../../../shared/components/decorations/decorations.dart';

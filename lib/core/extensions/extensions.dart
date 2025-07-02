@@ -4,13 +4,13 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../../data/datasources/remote/api_exception.dart';
-import '../../../data/datasources/remote/resume_not_complete_exception.dart';
-import '../../../data/datasources/remote/unauthorized_exception.dart';
-import '../../../data/exceptions/app_exception.dart';
-import '../../../data/exceptions/empty_list_exception.dart';
-import '../../../domain/entities/api_code.dart';
-import '../l10n/app_localizations.dart';
+import '../../../../data/datasources/remote/api_exception.dart';
+import '../../../../data/datasources/remote/resume_not_complete_exception.dart';
+import '../../../../data/datasources/remote/unauthorized_exception.dart';
+import '../../../../data/exceptions/app_exception.dart';
+import '../../../../data/exceptions/empty_list_exception.dart';
+import '../../../../domain/entities/api_code.dart';
+import '../../l10n/app_localizations.dart';
 extension AppResource on BuildContext {
 
   AppLocalizations getStrings() {

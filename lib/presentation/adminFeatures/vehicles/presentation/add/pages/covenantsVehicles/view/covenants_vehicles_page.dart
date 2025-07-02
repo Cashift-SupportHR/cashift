@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../../../../../utils/app_icons.dart';
+import '../../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';

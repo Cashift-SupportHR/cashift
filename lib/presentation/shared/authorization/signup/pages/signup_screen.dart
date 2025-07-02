@@ -13,7 +13,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import 'package:shiftapp/presentation/shared/components/base_widget.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 class SignupScreen extends BaseWidget {
   final Function(RegisterParams) performLogin;

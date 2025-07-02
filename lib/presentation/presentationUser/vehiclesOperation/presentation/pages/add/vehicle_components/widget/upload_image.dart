@@ -2,11 +2,11 @@
 import 'dart:io';
 
 import 'package:dotted_border/dotted_border.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 
-import '../../../../../../../../utils/app_icons.dart';
-import '../../../../../../../../utils/app_utils.dart';
+import '../../../../../../../../core/utils/app_icons.dart';
+import '../../../../../../../../core/utils/app_utils.dart';
 import '../../../../../../../shared/components/index.dart';
 import '../../../../../../resources/colors.dart';
 import '../../../../../../resources/constants.dart';

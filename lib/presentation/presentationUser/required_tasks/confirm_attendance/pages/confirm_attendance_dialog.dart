@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../domain/entities/shared/date_formatter.dart';
 import '../../../../../domain/entities/required_tasks/confirm_attendance.dart';
-import '../../../../../utils/app_icons.dart';
+import '../../../../../core/utils/app_icons.dart';
 import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/decorations/decorations.dart';

@@ -18,7 +18,7 @@ import 'package:shiftapp/presentation/shared/components/material_text_field.dart
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/widgets/disclosureText.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/widgets/item_field_screen.dart';
 
-import '../../../../../utils/app_utils.dart';
+import '../../../../../core/utils/app_utils.dart';
 import '../../../../shared/components/list_picker_item_widget.dart';
 
 class AddPhoneWalletScreen extends BaseStatelessWidget{

@@ -2,7 +2,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/domain/entities/appliedOffers/opportunities_status.dart';
 import 'package:shiftapp/domain/entities/shift/applied_offer_dto.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
 import '../../../data/models/attendance/attendance_config_dto.dart';
 import 'deductions_dto.dart';

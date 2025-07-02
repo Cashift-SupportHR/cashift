@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/r
 import 'package:shiftapp/presentation/shared/components/buttons/row_small_button.dart';
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts.dart';
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../domain/entities/bail_requests/employee_services_status.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

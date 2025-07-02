@@ -3,9 +3,9 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
-import '../../../../../../utils/app_utils.dart';
+import '../../../../../../core/utils/app_utils.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../../../presentationUser/verification/pages/verification_screen.dart';

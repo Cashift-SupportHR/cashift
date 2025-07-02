@@ -1,7 +1,7 @@
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../../../../../../main_index.dart';
-import '../../../../../../../utils/app_icons.dart';
+import '../../../../../../../core/utils/app_icons.dart';
 import '../../../../../../presentationUser/resources/constants.dart';
 import '../../../../../../shared/components/index.dart';
 import '../../../../domain/entities/vehicle_violation.dart';

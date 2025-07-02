@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/core/services/routes.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../data/models/add-address/address.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

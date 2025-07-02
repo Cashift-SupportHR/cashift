@@ -1,6 +1,6 @@
 import '../../../../domain/entities/shared/date_formatter.dart';
-import '../../../../utils/app_icons.dart';
-import '../../../../utils/app_utils.dart';
+import '../../../../core/utils/app_icons.dart';
+import '../../../../core/utils/app_utils.dart';
 import '../../../presentationUser/attendance/facerecognation/index.dart';
 import '../base_stateless_widget.dart';
 import 'build_text_field_item.dart';

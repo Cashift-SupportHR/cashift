@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
 import '../../../../core/services/routes.dart';
 import '../../../../domain/entities/shared/date_formatter.dart';
 import '../../../../domain/entities/workerWorkPlaces/worker_work_place.dart';
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../adminFeatures/focusPoints/presentations/trackingFocusPoints/widgets/point_image.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/decorations/decorations.dart';

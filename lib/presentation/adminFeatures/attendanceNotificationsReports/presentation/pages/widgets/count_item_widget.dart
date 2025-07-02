@@ -1,4 +1,4 @@
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';

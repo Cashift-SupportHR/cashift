@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/appliedoffers/widgets/shi
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
 import 'package:shiftapp/presentation/shared/components/page_slider_widget.dart';
 import '../../../../../core/services/routes.dart';

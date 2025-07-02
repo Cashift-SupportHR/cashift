@@ -10,7 +10,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
 import 'package:shiftapp/presentation/shared/components/slide_animation.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../data/models/emp_attandance_prams.dart';
 import '../../../../domain/entities/Emp_attandance.dart';

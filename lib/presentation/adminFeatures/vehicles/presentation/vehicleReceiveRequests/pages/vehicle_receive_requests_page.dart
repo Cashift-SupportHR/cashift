@@ -1,5 +1,5 @@
 import 'package:shiftapp/domain/constants/codes_constants.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/vehiclesOperation/domain/entities/receive_vehicle_details.dart';

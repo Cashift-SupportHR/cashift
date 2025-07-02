@@ -1,5 +1,5 @@
 import 'package:collection/collection.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../main_index.dart';
 import '../../../../shared/components/dropdown_filed.dart';

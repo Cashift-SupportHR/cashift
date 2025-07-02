@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/app_icons.dart';
+import '../../../../core/utils/app_icons.dart';
 import '../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../shared/components/app_cupertino_button.dart';
 import '../../../shared/components/base_stateless_widget.dart';

@@ -3,7 +3,7 @@ import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import '../../../shared/components/app_cupertino_button.dart';

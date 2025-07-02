@@ -10,8 +10,8 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
 
 import '../../../../domain/entities/shift/applied_offer.dart';
-import '../../../../utils/app_icons.dart';
-import '../../../../utils/app_images.dart';
+import '../../../../core/utils/app_icons.dart';
+import '../../../../core/utils/app_images.dart';
 import '../../../shared/components/app_cupertino_button.dart';
 import '../../../shared/components/decorations/decorations.dart';
 import '../../../shared/components/map/map_widget.dart';

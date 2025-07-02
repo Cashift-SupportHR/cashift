@@ -1,7 +1,7 @@
 import 'package:shiftapp/core/services/routes.dart';
-import 'package:shiftapp/extensions/extensions.dart';
+import 'package:shiftapp/core/extensions/extensions.dart';
 
-import '../../../../../../../../../utils/app_utils.dart';
+import '../../../../../../../../../core/utils/app_utils.dart';
 import '../../../../../../../../shared/components/index.dart';
 import '../../../../../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../../../../resources/colors.dart';

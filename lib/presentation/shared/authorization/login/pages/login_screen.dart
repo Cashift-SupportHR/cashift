@@ -7,7 +7,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/validation.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 import '../../../components/app_cupertino_button.dart';
 import '../../../components/base_widget.dart';
 import '../../../components/material_text.dart';

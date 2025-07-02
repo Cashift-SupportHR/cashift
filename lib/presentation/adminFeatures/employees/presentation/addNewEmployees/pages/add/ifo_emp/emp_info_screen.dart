@@ -1,6 +1,6 @@
 import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';

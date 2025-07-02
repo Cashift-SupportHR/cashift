@@ -11,9 +11,9 @@ import 'package:shiftapp/presentation/shared/components/checkbox/check_box_terms
 import 'package:shiftapp/presentation/shared/components/checkbox/custom_check_box.dart';
 import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/utils/app_icons.dart';
+import 'package:shiftapp/core/utils/app_icons.dart';
 
-import '../../../../../../../../../utils/app_utils.dart';
+import '../../../../../../../../../core/utils/app_utils.dart';
 import '../../../../../../../../shared/components/buttons/row_small_button.dart';
 import '../../../../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../../../../shared/components/files/custom_p_d_f_view.dart';

@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
 import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
-import 'package:shiftapp/utils/app_utils.dart';
+import 'package:shiftapp/core/utils/app_utils.dart';
 
 class InterviewInfoWidget extends BaseStatelessWidget {
   InterviewInfoWidget({Key? key, required this.model , this.matchHeight }) : super(key: key);
