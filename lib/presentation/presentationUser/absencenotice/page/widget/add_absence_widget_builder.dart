@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/date_picker_textfield_widget.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/date_picker_textfield_widget.dart';
 import '../../../../../common/data/models/absence_notation/add_absence_notice_params.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 
-import '../../../../shared/components/material_text_field.dart';
+import '../../../../../common/components/material_text_field.dart';
 import '../../bloc/absencenotice_cubit.dart';
 
 class AddAbsenceWidgetBuilder

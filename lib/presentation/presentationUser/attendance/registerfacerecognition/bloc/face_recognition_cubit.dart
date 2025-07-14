@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/files/files_manager.dart';
+import 'package:shiftapp/common/components/files/files_manager.dart';
 
 import '../../../../../common/data/datasources/local/constants.dart';
 import '../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../../../utils/app_utils.dart';
-import '../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../../../shared/components/files/custom_p_d_f_view.dart';
+import '../../../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../../../common/components/files/custom_p_d_f_view.dart';
 import '../../../../../domain/entities/index.dart';
 import '../../../../../data/models/index.dart';
 

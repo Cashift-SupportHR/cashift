@@ -11,8 +11,8 @@ import 'package:shiftapp/presentation/presentationUser/appliedoffers/pages/qrcod
  import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/locationservice/locationservice.dart';
 import 'package:shiftapp/presentation/presentationUser/rate/pages/rate_page.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 import '../../../../common/domain/entities/attendancerecoginatin/register_attendance_request_cashift.dart';
 import '../cancelOpprtunity/cancel_opportunity_apologizing_page.dart';
 import '../../../../core/services/routes.dart';

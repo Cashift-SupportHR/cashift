@@ -4,16 +4,16 @@ import 'package:geolocator/geolocator.dart';
 import 'package:livelyness_detection/index.dart';
 import 'package:livelyness_detection/livelyness_detection.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateful_widget.dart';
 
 import '../../../../common/data/models/attendance/attendance_config_dto.dart';
 import '../../../../extensions/extensions.dart';
 import '../../../../generated/assets.dart';
 import '../../../../utils/app_icons.dart';
-import '../../../shared/components/app_cupertino_button.dart';
-import '../../../shared/components/image_builder.dart';
-import '../../../shared/components/outlint_button.dart';
+import '../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../common/components/image_builder.dart';
+import '../../../../common/components/outlint_button.dart';
 import '../../resources/constants.dart';
 
 class FaceDetectorPage extends StatefulWidget {

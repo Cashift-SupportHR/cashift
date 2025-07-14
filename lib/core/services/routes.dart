@@ -105,7 +105,7 @@ import '../../presentation/presentationUser/vehiclesOperation/presentation/recei
 import '../../presentation/presentationUser/vehiclesOperation/presentation/startTour/pages/start_tour_page.dart';
 import '../../presentation/adminFeatures/vehicles/presentation/vehicleTracking/pages/vehicles_tracking_page.dart';
  import '../../presentation/shared/check_face_recognation/page/check_face_recognatin_page.dart';
-import '../../presentation/shared/components/files/file_view_from_path_pdf.dart';
+import '../../common/components/files/file_view_from_path_pdf.dart';
 import '../../presentation/adminFeatures/employees/presentation/addNewEmployees/pages/add/emp_file/widget/file_view_pdf.dart';
 import '../../presentation/adminFeatures/employees/presentation/addNewEmployees/pages/add/main_add_emp_page.dart';
 import '../../presentation/adminFeatures/employees/presentation/addNewEmployees/pages/view/home_add_employees_page.dart';

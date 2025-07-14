@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/map_project_gates/employee_gates/employee_gates_screen.dart';
- import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+ import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
   import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../data/models/employe_point_dto.dart';

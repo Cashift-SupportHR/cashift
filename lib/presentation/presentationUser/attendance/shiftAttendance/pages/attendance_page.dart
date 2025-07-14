@@ -10,8 +10,8 @@ import 'package:shiftapp/presentation/presentationUser/appliedoffers/pages/qrcod
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/bloc/attendance_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/pages/attendance_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 import 'package:animation_wrappers/animation_wrappers.dart';
 
 import 'package:just_audio/just_audio.dart';

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/pages/salary_definition_requests_page.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
 
 import '../../../../../core/services/routes.dart';
 import '../../../../../common/domain/entities/bail_requests/employee_services_status.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/tabview/tab_bar_view_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/tabview/tab_bar_view_widget.dart';
 import '../../newrequest/pages/salary_definition_request_page.dart';
 
 class SalaryDefinitionRequestsTabsPage extends BaseStatelessWidget {

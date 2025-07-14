@@ -5,7 +5,7 @@ import '../../../../presentationUser/advancedFilter/widgets/select_item_widget.d
 import '../../../../presentationUser/advancedFilter/widgets/select_widget.dart';
 import '../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
-import '../../../../shared/components/index.dart';
+import '../../../../../common/components/index.dart';
 import '../../domain/entities/index.dart';
 import '../bloc/job_requirements_cubit.dart';
 import 'job_requirements_screen.dart';

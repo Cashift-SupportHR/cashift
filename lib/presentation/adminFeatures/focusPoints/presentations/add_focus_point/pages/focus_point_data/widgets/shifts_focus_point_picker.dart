@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
 import '../../../../../../../../utils/app_icons.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../../../shared/components/dropdown_filed.dart';
-import '../../../../../../../shared/components/text_field/bottom_sheet_text_field_rectangle.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../../../common/components/dropdown/dropdown_filed.dart';
+import '../../../../../../../../common/components/text_field/bottom_sheet_text_field_rectangle.dart';
 import '../../../../../domain/entities/index.dart';
 import '../../../../../data/models/index.dart';
 

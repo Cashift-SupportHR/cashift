@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/common/domain/entities/wallet/wallet_balance_item.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 
 import '../../../../../../common/domain/entities/wallet/balance_transaction_status.dart';
 import '../../../../../../common/domain/entities/wallet/cancel_transaction_params.dart';

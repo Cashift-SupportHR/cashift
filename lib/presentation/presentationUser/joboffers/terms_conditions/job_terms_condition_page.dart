@@ -6,7 +6,7 @@ import 'package:shiftapp/common/domain/entities/jobs/job_terms.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/bloc/job_offers_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/terms_conditions/job_terms_condition_screen.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../../../common/domain/entities/job_offers/index.dart';
 import '../../../../common/domain/entities/jobs/index.dart';

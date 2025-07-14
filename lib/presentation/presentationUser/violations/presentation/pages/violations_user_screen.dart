@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 
 import '../../../../../common/domain/entities/bail_requests/employee_services_status.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../data/models/approve_reject_violation_params.dart';
 import '../../data/models/violation_user_dto.dart';
 import '../../domain/entities/violations_data.dart';

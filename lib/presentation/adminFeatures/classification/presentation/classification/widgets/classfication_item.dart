@@ -3,10 +3,10 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/image_builder.dart';
-import '../../../../../shared/components/options_menu_button.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/image_builder.dart';
+import '../../../../../../common/components/options_menu_button.dart';
 import '../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../domain/entities/classification.dart';
 import '../../addClassification/pages/add_classification_page.dart';

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../../../common/components/buttons/app_outline_button_icon.dart';
 import 'add_working_periods_project_builder.dart';
 

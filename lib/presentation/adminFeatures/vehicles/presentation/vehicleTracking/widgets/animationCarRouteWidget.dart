@@ -8,8 +8,8 @@ import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/decorations/decorations.dart';
+import '../../../../../../common/components/buttons/app_cupertino_button.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../domain/entities/vehicleTraking.dart';
 

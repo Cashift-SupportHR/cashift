@@ -1,7 +1,7 @@
 
-import '../components/dropdown_filed.dart';
-import '../components/index.dart';
-import '../components/tabview/dynamic_tab_bar_view.dart';
+import '../../../common/components/dropdown/dropdown_filed.dart';
+import '../../../common/components/index.dart';
+import '../../../common/components/tabview/dynamic_tab_bar_view.dart';
 import 'common_list_item_dto.dart';
 
 class CommonListItem{

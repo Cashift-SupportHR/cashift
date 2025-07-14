@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../common/data/models/wallet/balance_by_exchange_params.dart';
 import '../../../../../../common/data/models/wallet/withdraw_data.dart';
-import '../../../../../shared/components/app_cupertino_button.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
-import '../../../../../shared/components/helper_widgets.dart';
-import '../../../../../shared/components/underline_widget.dart';
+import '../../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
+import '../../../../../../common/components/helper_widgets.dart';
+import '../../../../../../common/components/underline_widget.dart';
 import '../../../../common/common_state.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';

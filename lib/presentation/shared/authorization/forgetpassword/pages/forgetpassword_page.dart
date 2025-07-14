@@ -3,8 +3,8 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/verification/pages/Verification_page.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../signup/pages/signup_screen.dart';
 import '../bloc/forgetpassword_bloc.dart';

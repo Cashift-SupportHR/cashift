@@ -7,8 +7,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/presentationUser/workHazards/presentation/addWorkHazard/widgets/upload_files_list.dart';
 
 import '../../../../../../../../../utils/app_utils.dart';
-import '../../../../../../../../shared/components/index.dart';
-import '../../../../../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../../../../../common/components/index.dart';
+import '../../../../../../../../../common/components/text_field/build_text_field_item.dart';
 import '../../../../../../../resources/validation.dart';
 
 class AddFileRequestsUserScreen extends BaseStatelessWidget {

@@ -6,11 +6,11 @@ import 'package:shiftapp/presentation/adminFeatures/attendanceNotificationsRepor
  import '../../../../../../presentationUser/common/stream_data_state.dart';
 import '../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../shared/components/error_handler_widget.dart';
-import '../../../../../../shared/components/helper_widgets.dart';
-import '../../../../../../shared/components/text_field/text_field_search.dart';
-import '../../../../../../shared/components/underline_widget.dart';
+import '../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../common/components/error_handler_widget.dart';
+import '../../../../../../../common/components/helper_widgets.dart';
+import '../../../../../../../common/components/text_field/text_field_search.dart';
+import '../../../../../../../common/components/underline_widget.dart';
 import '../../../../data/models/emp_attendance_rports_prams.dart';
 import '../../../../domain/entities/EmpAttendanceRportsDto.dart';
 import '../../widgets/attendance_notifications_reports_item.dart';

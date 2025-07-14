@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
 import '../../../presentation/presentationUser/resources/colors.dart';
 import '../../../presentation/presentationUser/resources/constants.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../bloc/files_preview_cubit.dart';
 import 'files_preview_screen.dart';

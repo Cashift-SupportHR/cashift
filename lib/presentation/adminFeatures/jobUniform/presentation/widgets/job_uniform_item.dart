@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../presentationUser/resources/colors.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../data/models/add_job_uniform_params.dart';
 import '../../data/models/uniform_dto.dart';
 

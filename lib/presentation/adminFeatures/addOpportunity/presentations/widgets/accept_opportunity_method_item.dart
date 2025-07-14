@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../domain/entities/employee_opportunity_type.dart';
 
 class AcceptOpportunityMethodItem extends StatelessWidget {

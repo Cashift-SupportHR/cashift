@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import 'package:shiftapp/common/components/checkbox/custom_check_box.dart';
 
 import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
-import '../../../../../shared/components/texts/underline_text.dart';
+import '../../../../../../common/components/texts/underline_text.dart';
 import '../../../data/models/employees_opportunity_params.dart';
 import '../../../domain/entities/employee_opportunity.dart';
 import '../bloc/employees_opportunities_cubit.dart';

@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../resources/constants.dart';
 
 class CustomRangeSlider extends BaseStatelessWidget {

@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 
-import '../../../../shared/components/base_widget.dart';
+import '../../../../../common/components/base/base_widget.dart';
 
 class CashierPageArgs{
   final int projectId ;

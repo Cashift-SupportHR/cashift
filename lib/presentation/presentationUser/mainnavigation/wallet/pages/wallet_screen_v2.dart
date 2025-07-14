@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
 import '../../../../../common/domain/entities/wallet/withdraw_method.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../resources/colors.dart';
 import '../balances/pages/balances_list_page.dart';
 import '../bloc/initialize_wallet_state.dart';
 import '../widgets/wallet_header.dart';
 import '../withdraw/pages/withdraw_page.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateful_widget.dart';
 
 class WalletScreenV2 extends StatefulWidget{
   final InitializeWalletState state;

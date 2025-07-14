@@ -4,17 +4,17 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/loading_widget.dart';
 
 import '../../../../common/data/models/salary-definition-request/index.dart';
 import '../../../../utils/app_icons.dart';
 import '../../resources/colors.dart';
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../common/components/buttons/icon_text_button.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/files/custom_p_d_f_view.dart';
-import '../../../shared/components/files/files_manager.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/files/custom_p_d_f_view.dart';
+import '../../../../common/components/files/files_manager.dart';
 
 class FilesPreviewScreen extends BaseStatelessWidget {
   final List<String> data;

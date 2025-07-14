@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
 
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/image_builder.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/image_builder.dart';
 
 class UniformSlidesScreen extends BaseStatelessWidget {
   final int initialIndex;

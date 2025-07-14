@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/employeeMap/presentation/pages/filter/filter_employee_map_page.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 
 import '../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../presentationUser/common/common_state.dart';
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 import '../../data/models/fetch_emp_map_prams.dart';
 import '../../domain/entities/EmpMap.dart';
 import '../bloc/search_employee_map_cubit.dart';

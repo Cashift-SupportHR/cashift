@@ -8,14 +8,14 @@ import 'package:shiftapp/presentation/adminFeatures/shared/data/models/value_ite
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../../presentationUser/resume/widgets/selectable__widgets.dart';
-import '../../../../../shared/components/dialogs_manager.dart';
-import '../../../../../shared/components/material_text_field.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../common/components/dialogs_manager.dart';
+import '../../../../../../common/components/material_text_field.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
 import '../../../domain/entities/status_types.dart';
 
 class ShiftPaymentRequestBody extends BaseStatelessWidget {

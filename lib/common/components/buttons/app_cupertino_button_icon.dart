@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 class AppCupertinoButtonIcon extends StatelessWidget {
   final Function()? onPressed;
   final String ? text;

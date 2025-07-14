@@ -1,15 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/adminFeatures/available_opportunities/presentation/opportunities/pages/available_opportunities_page.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
-import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
 
 import '../../../../../core/services/routes.dart';
 import '../../../../presentationUser/common/common_state.dart';
 import '../../../../presentationUser/resources/colors.dart';
 import '../../../../presentationUser/resources/constants.dart';
-import '../../../../shared/components/material_text.dart';
-import '../../../../shared/components/options_menu_button.dart';
+import '../../../../../common/components/index.dart';
 import '../../../addOpportunity/presentations/pages/add_new_opportunity_page.dart';
 import '../../../available_opportunities/presentation/widgets/available_opportunity_item.dart';
 import '../../../shared/domain/entities/opportunities/opportunity.dart';

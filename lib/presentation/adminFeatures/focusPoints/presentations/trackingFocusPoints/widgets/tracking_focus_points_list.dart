@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/trackingFocusPoints/widgets/tracking_focus_point_item.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../data/models/focus_points_types_dto.dart';
 
 class TrackingFocusPointsList extends BaseStatelessWidget {

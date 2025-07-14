@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateful_widget.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/search_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/search_widget.dart';
 import '../../data/models/complet_opportunity_dto.dart';
 import '../../data/models/completed_opportunity_dto.dart';
 import '../shiftPaymentRequest/pages/shift_payment_request_builder.dart';

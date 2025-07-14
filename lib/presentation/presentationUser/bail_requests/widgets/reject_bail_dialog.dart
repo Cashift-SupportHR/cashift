@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../../../utils/app_icons.dart';
-import '../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../shared/components/app_cupertino_button.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/image_builder.dart';
-import '../../../shared/components/outlint_button.dart';
+import '../../../../common/components/text_field/build_text_field_item.dart';
+import '../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/image_builder.dart';
+import '../../../../common/components/outlint_button.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';
 

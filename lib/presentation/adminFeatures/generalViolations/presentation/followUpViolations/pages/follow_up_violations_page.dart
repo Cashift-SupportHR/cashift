@@ -1,8 +1,8 @@
 import 'package:shiftapp/extensions/extensions.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../../common/domain/constants/codes_constants.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/text_field/text_field_search.dart';
+import '../../../../../../common/components/text_field/text_field_search.dart';
 import '../../../../../shared/models/common_list_item.dart';
 import '../../../data/models/final_action_follow_up_violation_params.dart';
 import '../../../domain/entities/follow_up_violation.dart';

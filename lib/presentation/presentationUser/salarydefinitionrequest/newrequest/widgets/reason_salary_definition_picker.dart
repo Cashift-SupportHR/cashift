@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/domain/entities/salary-definition-request/reason_salary_definition_request.dart';
 
- import '../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+ import '../../../../../common/components/text_field/build_text_field_item.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../common/components/bottom_sheet/list_picker_widget.dart';
-import '../../../../shared/components/dropdown_filed.dart';
+import '../../../../../common/components/dropdown/dropdown_filed.dart';
 
 class ReasonSalaryDefinitionRequestPicker extends BaseStatelessWidget {
   final List<ReasonSalaryDefinitionRequest> reasons;

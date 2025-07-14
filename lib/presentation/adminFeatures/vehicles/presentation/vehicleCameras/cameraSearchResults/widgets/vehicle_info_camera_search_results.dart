@@ -1,5 +1,5 @@
 
-import '../../../../../../shared/components/index.dart';
+import '../../../../../../../common/components/index.dart';
 import '../../../../domain/entities/index.dart';
 import '../../../../data/models/index.dart';
 

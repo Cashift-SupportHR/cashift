@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/present
 
 import '../../../../../../../common/data/models/api_response.dart';
 import '../../../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
-import '../../../../../../shared/components/index.dart';
+import '../../../../../../../common/components/index.dart';
 import '../../../../../common/common_state.dart';
 import '../../../../../common/stream_data_state.dart';
 import '../../../../data/models/download_vehicle_violation_picture_params.dart';

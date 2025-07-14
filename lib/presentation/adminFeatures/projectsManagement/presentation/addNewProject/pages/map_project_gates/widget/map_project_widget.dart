@@ -1,7 +1,7 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/map_project_gates/employee_gates/employee_gates_page.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../data/models/index.dart';

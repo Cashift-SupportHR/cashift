@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../core/services/routes.dart';
 import '../../../presentationUser/resources/constants.dart';
-import '../../../shared/components/circular_percent_widget.dart';
-import '../../../shared/components/decorations/decorations.dart';
+import '../../../../common/components/circular_percent_widget.dart';
+import '../../../../common/components/decorations/decorations.dart';
 
-import '../../../shared/components/underline_widget.dart';
+import '../../../../common/components/underline_widget.dart';
 import '../../shared/domain/entities/opportunities/OpportunityDetailsData.dart';
 import '../applied_details/pages/Applicants/applied_page.dart';
 

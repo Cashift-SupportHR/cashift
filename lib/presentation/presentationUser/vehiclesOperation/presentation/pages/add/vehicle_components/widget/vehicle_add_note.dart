@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/add/vehicle_components/widget/upload_image.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 
-import '../../../../../../../shared/components/app_cupertino_button.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/text_field/build_text_field_item.dart';
 import '../../../../../../common/common_state.dart';
 import '../../../../../../resources/colors.dart';
 import '../../../../../data/models/add_image_and_descriptions_components_prams.dart';

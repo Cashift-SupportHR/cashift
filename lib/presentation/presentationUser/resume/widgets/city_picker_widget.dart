@@ -3,8 +3,8 @@ import 'package:shiftapp/common/domain/entities/resume/city_item.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 class CityPickerWidget extends BaseStatelessWidget {
   final List<CityItem> cities;

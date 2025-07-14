@@ -1,9 +1,9 @@
 import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/presentation/adminFeatures/terms_and_conditions/presentation/shared/pages/terms_and_conditions_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 
-import '../../../../../../shared/components/text_field/text_field_search.dart';
+import '../../../../../../../common/components/text_field/text_field_search.dart';
 import '../../../../../salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
 import '../../../../domain/entities/AttendanceNotifiAction.dart';
 import '../../add/screen/add_attendance_and_departure_notifications_page.dart';

@@ -9,7 +9,7 @@ import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_compon
 import 'package:shiftapp/presentation/presentationUser/resume/widgets/base_resume_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/widgets/city_picker_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/widgets/date_picker.dart';
- import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+ import 'package:shiftapp/common/components/helper_widgets.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 
 import '../../../shared/authorization/signup/pages/signup_screen.dart';

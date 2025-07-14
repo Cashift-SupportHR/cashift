@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/radio/custom_radio_list.dart';
+import 'package:shiftapp/common/components/radio/custom_radio_list.dart';
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../../../common/components/buttons/app_icon_button.dart';
-import '../../../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../../../common/components/decorations/decorations.dart';
 import '../../../../../data/models/index.dart';
 import '../../../../../domain/entities/index.dart';
 

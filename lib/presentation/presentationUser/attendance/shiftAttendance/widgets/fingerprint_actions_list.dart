@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/data/models/attendance/present_type.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
- import '../../../../shared/components/base_stateless_widget.dart';
+ import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../resources/colors.dart';
 
 class FingerprintActionsList extends BaseStatelessWidget {

@@ -7,7 +7,7 @@ import '../../../../../common/domain/entities/account/registered_face.dart';
 import '../../../../../common/domain/entities/account/user.dart';
 import '../../../../adminFeatures/di/injector.dart';
 import '../../../../../common/components/adminToggle/cubit/admin_toggle_cubit.dart';
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
  import '../../../common/common_state.dart';
 import '../../facerecognation/faces_matching.dart';
 import '../bloc/face_recognition_cubit.dart';

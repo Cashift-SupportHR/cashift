@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
-import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/texts/row_rich_texts.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../common/components/checkbox/multiple_choice_checkbox.dart';
 import '../../../../../common/components/checkbox/single_choice_checkbox.dart';
-import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/image_builder.dart';
+import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/image_builder.dart';
 import '../../domain/entities/pledge_generalization.dart';
 import '../../domain/entities/pledge_generalization_constants.dart';
 

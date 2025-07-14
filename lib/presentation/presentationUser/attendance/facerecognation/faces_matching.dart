@@ -8,7 +8,7 @@ import 'package:shiftapp/extensions/extensions.dart';
 
 import '../../../../common/data/models/attendance/attendance_config_dto.dart';
 import '../../../../core/services/permission_detector.dart';
-import '../../../shared/components/dialogs_manager.dart';
+import '../../../../common/components/dialogs_manager.dart';
 import 'face_matching_result.dart';
 
 class FaceMatchingUtils {

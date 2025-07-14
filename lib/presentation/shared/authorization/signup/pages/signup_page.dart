@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/splash/splash_page.dart';
 import 'package:shiftapp/presentation/presentationUser/verification/pages/Verification_page.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import '../../login/bloc/login_bloc.dart';
 import 'signup_screen.dart';
 import 'package:shiftapp/main_index.dart';

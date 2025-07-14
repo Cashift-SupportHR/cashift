@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/adminFeatures/shared/domain/entities/oppor
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 
 class WorkDates extends BaseStatelessWidget {
   final Opportunity opportunity;

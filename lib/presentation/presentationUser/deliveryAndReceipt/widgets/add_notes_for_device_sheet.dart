@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
-import 'package:shiftapp/presentation/shared/components/texts/underline_text.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/texts/underline_text.dart';
 
 import '../../../../common/data/models/workerWorkPlaces/index.dart';
 import '../../../../utils/app_icons.dart';
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../common/components/buttons/row_buttons.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/image_builder.dart';
-import '../../../shared/components/material_text_field.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/image_builder.dart';
+import '../../../../common/components/material_text_field.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';
 import '../../salarydefinitionrequest/requests/widgets/warning_widget.dart';

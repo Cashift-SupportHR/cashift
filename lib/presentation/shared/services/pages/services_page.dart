@@ -5,8 +5,8 @@ import 'package:shiftapp/common/components/adminToggle/screen/admin_toggle_build
 
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
-import '../../components/base_widget_bloc.dart';
-import '../../components/decorations/decorations.dart';
+import '../../../../common/components/base/base_widget_bloc.dart';
+import '../../../../common/components/decorations/decorations.dart';
 import '../bloc/services_cubit.dart';
 import 'services_screen.dart';
 

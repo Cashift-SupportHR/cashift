@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/main_index.dart';
 
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import '../../../../../../common/domain/entities/bankaccount/with_draw_params.dart';
 import '../../../../../../common/domain/entities/wallet/wallet_balance_item.dart';
 import '../../../../../../common/domain/entities/wallet/withdraw_method.dart';

@@ -10,11 +10,11 @@ import 'package:local_auth_darwin/local_auth_darwin.dart';
 import 'package:local_auth_android/local_auth_android.dart';
 import 'package:local_auth/local_auth.dart';
 
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 
-import '../../../components/app_widgets.dart';
-import '../../../components/base_stateful_widget.dart';
-import '../../../components/base_widget_bloc.dart';
+import '../../../../../common/components/base/app_widgets.dart';
+import '../../../../../common/components/base/base_stateful_widget.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 import '../bloc/login_bloc.dart';
 import 'login_screen.dart';
 import 'package:shiftapp/main_index.dart';

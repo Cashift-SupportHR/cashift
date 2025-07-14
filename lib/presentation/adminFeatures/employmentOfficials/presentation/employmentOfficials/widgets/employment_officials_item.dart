@@ -4,10 +4,10 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../core/services/routes.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/options_menu_button.dart';
-import '../../../../../shared/components/texts/list_row_texts_icons.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/options_menu_button.dart';
+import '../../../../../../common/components/texts/list_row_texts_icons.dart';
 import '../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../domain/entities/employment_official.dart';
 import '../../../domain/entities/employment_officials_status.dart';

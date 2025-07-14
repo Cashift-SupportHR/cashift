@@ -2,15 +2,15 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/services/routes.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../common/components/bottom_sheet/list_picker_widget.dart';
-import '../../../../shared/components/dropdown_filed.dart';
+import '../../../../../common/components/dropdown/dropdown_filed.dart';
 import '../../data/models/employees_opportunity_params.dart';
 import '../../domain/entities/MethodSelectEmployee.dart';
 import '../../domain/entities/employee_opportunity_type.dart';
 import '../employees_opportunities/pages/employees_opportunities_page.dart';
 import 'accept_opportunity_method_item.dart';
-import '../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../common/components/text_field/build_text_field_item.dart';
 
 class MethodSelectingEmployeesPicker extends BaseStatelessWidget {
   final int? opportunityId;

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/bail_requests/widgets/title_icon_services.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
+import 'package:shiftapp/common/components/texts/row_rich_texts.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../common/domain/entities/bail_requests/index.dart';
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import 'bail_terms_and_conditions.dart';
 
 class BailRequestItem extends BaseStatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../common/domain/entities/loans_request/loan_request.dart';
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../common/common_state.dart';
 import '../bloc/loan_requests_cubit.dart';
 import 'loan_requests_screen.dart';

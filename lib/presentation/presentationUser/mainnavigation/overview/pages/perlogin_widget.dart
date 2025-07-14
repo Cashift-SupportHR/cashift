@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import '../../../../../main_index.dart';
  import '../bloc/overview_state.dart';
 import '../widgets/current_date_widget.dart';

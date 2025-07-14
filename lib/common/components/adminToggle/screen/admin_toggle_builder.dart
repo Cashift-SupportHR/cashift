@@ -11,9 +11,9 @@ import 'package:shiftapp/common/components/adminToggle/screen/admin_toggle_widge
 
  import '../../../../presentation/presentationUser/attendance/facerecognation/faces_matching.dart';
 import '../../../../presentation/presentationUser/attendance/facerecognation/index.dart';
-import '../../../../presentation/shared/components/base_widget_bloc.dart';
-import '../../../../presentation/shared/components/dialogs_manager.dart';
-import '../../../../presentation/shared/components/progress/progress_dialog.dart';
+import '../../base/base_widget_bloc.dart';
+import '../../dialogs_manager.dart';
+import '../../progress/progress_dialog.dart';
 import '../cubit/admin_toggle_cubit.dart';
 
 class AdminToggleBuilder

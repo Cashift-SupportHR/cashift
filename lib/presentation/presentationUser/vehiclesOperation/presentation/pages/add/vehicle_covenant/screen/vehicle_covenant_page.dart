@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/add/vehicle_covenant/screen/vehicle_covenant_screen.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 import '../../../../../../../../common/components/bottom_sheet/custom_bottom_sheets.dart';
-import '../../../../../../../shared/components/dialogs_manager.dart';
+import '../../../../../../../../common/components/dialogs_manager.dart';
 import '../../../../../data/models/add_custodies_prams.dart';
 import '../../../../../data/models/confirm_receive_vehicle_params.dart';
 import '../../../../../domain/entities/vehicleComponents.dart';

@@ -7,7 +7,7 @@ import 'package:shiftapp/extensions/extensions.dart';
 
 import '../../../../common/data/models/salary-definition-request/index.dart';
 import '../../common/common_state.dart';
-import '../../../shared/components/files/files_manager.dart';
+import '../../../../common/components/files/files_manager.dart';
 
 @Injectable()
 class FilesPreviewCubit extends BaseCubit {

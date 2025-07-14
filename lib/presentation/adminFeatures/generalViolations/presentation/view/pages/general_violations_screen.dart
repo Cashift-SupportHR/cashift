@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../domain/entities/general_violation.dart';
 import '../widgets/general_violations_item.dart';
 

@@ -6,14 +6,14 @@ import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
-import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/material_text.dart';
+import 'package:shiftapp/common/components/outlint_button.dart';
 
 import '../../../../utils/app_icons.dart';
- import '../../../shared/components/curancy_widget.dart';
-import '../../../shared/components/decorations/decorations.dart';
+ import '../../../../common/components/curancy_widget.dart';
+import '../../../../common/components/decorations/decorations.dart';
 import '../../mainnavigation/overview/widgets/current_shift_widget.dart';
 
 class ShiftItemWidget extends BaseStatelessWidget {

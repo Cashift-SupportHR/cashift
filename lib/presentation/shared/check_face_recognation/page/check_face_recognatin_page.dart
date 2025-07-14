@@ -6,12 +6,12 @@ import 'package:shiftapp/common/data/models/attendance/attendance_config_dto.dar
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/view/widgets/profile_item_widget.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../../../../../core/services/permission_detector.dart';
 import '../../../presentationUser/attendance/facerecognation/faces_matching.dart';
-import '../../components/dialogs_manager.dart';
+import '../../../../common/components/dialogs_manager.dart';
 import '../cubit/check_face_recognation_cubit.dart';
 import '../cubit/face_detection_intialize_state.dart';
 import '../widgets/face_detector_widget.dart';

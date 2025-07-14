@@ -2,7 +2,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../../../../../../adminFeatures/vehicles/domain/entities/vehicle_image_face.dart';
 import '../../../../../../../adminFeatures/vehicles/presentation/add/pages/additionalVehicleSpecifications/additional_vehicle_specifications_screen.dart';

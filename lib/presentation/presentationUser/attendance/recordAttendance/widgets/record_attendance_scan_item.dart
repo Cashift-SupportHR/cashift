@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../resources/colors.dart';
 
 ///  Created by harbey on 8/15/2023.

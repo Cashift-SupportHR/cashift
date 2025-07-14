@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../domain/entities/EmpChasifterData.dart';
 import '../widgets/employees_item.dart';
 

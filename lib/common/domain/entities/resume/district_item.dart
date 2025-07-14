@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../../../presentation/shared/components/index.dart';
+import '../../../components/index.dart';
 
 
 part 'district_item.g.dart'; 

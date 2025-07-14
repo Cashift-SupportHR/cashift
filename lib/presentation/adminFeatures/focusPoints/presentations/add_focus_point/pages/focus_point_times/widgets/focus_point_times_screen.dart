@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/common/components/buttons/row_buttons.dart';
 
 import '../../../../../../../presentationUser/common/common_state.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../domain/entities/index.dart';
 import '../../../../../data/models/index.dart';
 import 'focus_point_time_item.dart';

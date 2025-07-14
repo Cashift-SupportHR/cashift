@@ -1,11 +1,11 @@
 import 'package:shiftapp/generated/assets.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 
 import '../../../../../../../core/services/routes.dart';
 import '../../../../../../../utils/app_icons.dart';
-import '../../../../../../shared/components/map/points_map_screen.dart';
+import '../../../../../../../common/components/map/points_map_screen.dart';
 import '../../../../data/models/download_vehicle_violation_picture_params.dart';
 import '../../../../domain/entities/custody_handover.dart';
 import '../../../../domain/entities/driver_violation.dart';

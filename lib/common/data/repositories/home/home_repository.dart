@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:shiftapp/common/data/datasources/remote/api/home/home_api_provider.dart';
 import 'package:shiftapp/common/domain/entities/shared/AppVersionApdate.dart';
 
-import '../../../../presentation/shared/components/index.dart';
+import '../../../components/index.dart';
 import '../../../domain/entities/attendance/index.dart';
 import '../../datasources/local/init_floor_database.dart';
 import '../../models/api_response.dart';

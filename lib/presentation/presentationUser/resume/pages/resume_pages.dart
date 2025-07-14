@@ -7,10 +7,10 @@ import 'package:shiftapp/presentation/presentationUser/profile/view/bloc/profile
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_component_data.dart';
 
-import 'package:shiftapp/presentation/shared/components/base_widget.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
-import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
+import 'package:shiftapp/common/components/base/base_widget.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/loading_widget.dart';
 
 import '../../../../core/services/routes.dart';
  import 'resume_screen.dart';

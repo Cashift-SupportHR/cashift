@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/shared/data/models/free_lance_info_params.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../opportunities/bloc/available _opportunities_cubit.dart';

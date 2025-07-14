@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../common/data/repositories/local/local_repository.dart';
 import '../../../../adminFeatures/di/injector.dart';
-import '../../../../shared/components/restart_app_widget.dart';
+import '../../../../../common/components/restart_app_widget.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 

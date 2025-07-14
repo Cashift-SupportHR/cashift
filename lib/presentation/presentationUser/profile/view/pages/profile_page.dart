@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/view/pages/profile_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/view/bloc/profile_ui_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 
 import '../../../../../main_index.dart';
 import '../bloc/profile_cubit.dart';

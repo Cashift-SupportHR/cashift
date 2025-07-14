@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/data/models/service/index.dart';
-import '../../components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../widgets/services_item.dart';
 
 class ServicesScreen extends BaseStatelessWidget {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/common/domain/entities/bankaccount/electronic_wallet.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 
 class PhoneWalletItemWidget extends BaseStatelessWidget {
   final ElectronicWallet wallet;

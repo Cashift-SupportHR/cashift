@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../common/common_state.dart';
 import '../../domain/entities/pledge_generalization.dart';
 import '../bloc/pledges_and_generalization_cubit.dart';

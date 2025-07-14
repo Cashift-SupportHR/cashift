@@ -3,11 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/common/domain/entities/wallet/balance_transaction_status.dart';
 import 'package:shiftapp/common/domain/entities/wallet/wallet_balance_item.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../../utils/app_icons.dart';
-import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/image_builder.dart';
+import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/image_builder.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 import 'show_buton_sheet_tapBar_widget.dart';

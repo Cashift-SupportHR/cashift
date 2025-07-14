@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../../presentationUser/resources/colors.dart';

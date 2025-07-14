@@ -1,6 +1,6 @@
 import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../addOpportunity/presentations/pages/add_new_opportunity_page.dart';
 import '../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../shared/domain/entities/opportunities/opportunity.dart';
@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
-import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
-import 'package:shiftapp/presentation/shared/components/shapes/rounded_shape.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/material_text.dart';
+import 'package:shiftapp/common/components/outlint_button.dart';
+import 'package:shiftapp/common/components/shapes/rounded_shape.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 
 class TodayOpportunityWidget extends BaseStatelessWidget {

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/common/data/models/auth/rest_password_params.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 
-import '../../../components/password_field_widget.dart';
+import '../../../../../common/components/password_field_widget.dart';
 import '../../login/pages/login_page.dart';
 import '../bloc/forgetpassword_bloc.dart';
 import 'package:shiftapp/main_index.dart';

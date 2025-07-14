@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 
 
 
-import '../../../shared/components/base_widget.dart';
+import '../../../../common/components/base/base_widget.dart';
 
 class ActivityLogItemWidget extends BaseWidget {
   final NotificationItem notificationItem;

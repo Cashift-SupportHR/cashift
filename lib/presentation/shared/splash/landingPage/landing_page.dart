@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/decorations/decorations.dart';
 import 'package:shiftapp/utils/app_images.dart';
 
 import '../../../../common/data/repositories/local/local_repository.dart';
@@ -9,7 +9,7 @@ import '../../../adminFeatures/di/injector.dart';
 import '../../../presentationUser/profile/view/widgets/dropdown_language.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
-import '../../components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../home/pages/home_screen.dart';
 import '../widgets/custom_smooth_page_indicator.dart';
 import '../widgets/landing_model.dart';

@@ -1,8 +1,8 @@
 import '../../../../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../../../adminFeatures/focusPoints/domain/entities/shifts_by_project.dart';
 import '../../../../../../../adminFeatures/vehicles/domain/entities/vehicle_details.dart';
-import '../../../../../../../shared/components/index.dart';
-import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../../../../common/components/index.dart';
+import '../../../../../../../../common/components/text_field/build_text_field_item.dart';
 import '../../../../../../common/stream_data_state.dart';
 import '../../../../../../resources/colors.dart';
 import '../../../../../../resources/constants.dart';

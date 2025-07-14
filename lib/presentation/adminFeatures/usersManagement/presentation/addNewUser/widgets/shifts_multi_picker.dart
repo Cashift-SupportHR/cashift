@@ -3,9 +3,9 @@ import 'package:shiftapp/common/components/checkbox/multiple_choice_checkbox.dar
 
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../common/components/base/stream_state_widget_v2.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/dropdown_filed.dart';
-import '../../../../../shared/components/text_field/bottom_sheet_text_field_rectangle.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/dropdown/dropdown_filed.dart';
+import '../../../../../../common/components/text_field/bottom_sheet_text_field_rectangle.dart';
 import '../../../../focusPoints/domain/entities/shifts_by_project.dart';
 import '../../../domain/entities/shift_by_list_project_id.dart';
 

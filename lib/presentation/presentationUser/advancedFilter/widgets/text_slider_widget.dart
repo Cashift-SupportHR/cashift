@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../../shared/components/curancy_widget.dart';
+import '../../../../common/components/curancy_widget.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';
 

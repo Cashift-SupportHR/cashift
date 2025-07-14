@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import '../../../../common/common_state.dart';
 import '../bloc/qrcode_bloc.dart';
 import 'qrcode_screen.dart';

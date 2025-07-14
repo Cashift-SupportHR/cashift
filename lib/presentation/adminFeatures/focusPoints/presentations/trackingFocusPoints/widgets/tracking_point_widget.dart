@@ -4,15 +4,15 @@ import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/trackingFocusPoints/widgets/tracking_employees_list_empty.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
 import '../../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../presentationUser/workerWorkPlaces/widgets/focus_point_freelance_name_and_type.dart';
 import '../../../../../presentationUser/workerWorkPlaces/widgets/point_name_and_status.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/icons/icon_text.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/icons/icon_text.dart';
 import '../../../data/models/focus_points_types_dto.dart';
 
 class TrackingPointWidget extends BaseStatelessWidget {

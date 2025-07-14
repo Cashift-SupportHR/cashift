@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/common/data/models/activity_log/index.dart';
 
 import '../../../../../common/domain/entities/required_tasks/confirm_attendance.dart';
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 import 'confirm_attendance_dialog.dart';
 
 class ConfirmAttendanceBuilder

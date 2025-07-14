@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import '../../../../shared/components/app_widgets.dart';
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/app_widgets.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 import '../bloc/add_address_cubit.dart';
 import 'add_address_page.dart';
 import 'addresses_screen.dart';

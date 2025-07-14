@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/trackingFocusPoints/pages/tracking_focus_points_sub_tabs_builder.dart';
-import 'package:shiftapp/presentation/shared/components/tabview/tab_bar_view_widget_border.dart';
+import 'package:shiftapp/common/components/tabview/tab_bar_view_widget_border.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../domain/entities/shift_by_project_id.dart';
 
 class TrackingFocusPointsMainTabs extends BaseStatelessWidget {

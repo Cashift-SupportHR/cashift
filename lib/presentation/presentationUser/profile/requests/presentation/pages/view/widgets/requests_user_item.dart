@@ -1,6 +1,6 @@
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../../../../shared/components/index.dart';
+import '../../../../../../../../common/components/index.dart';
 import '../../../../domain/entities/RequestsUser.dart';
 
 class RequestsUserItem extends BaseStatelessWidget {

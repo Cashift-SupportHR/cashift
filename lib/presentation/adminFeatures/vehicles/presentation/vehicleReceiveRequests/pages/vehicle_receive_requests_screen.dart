@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../../../common/domain/constants/codes_constants.dart';
 import '../../../../../presentationUser/vehiclesOperation/domain/entities/receive_vehicle_details.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../domain/entities/vehicle_receive_request.dart';
 import '../widgets/vehicle_receive_request_waiting_accept_item.dart';
 import '../widgets/vehicle_receive_request_waiting_review_item.dart';

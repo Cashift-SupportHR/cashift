@@ -1,7 +1,7 @@
  import 'package:share_plus/share_plus.dart';
 
 
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../attendance/facerecognation/index.dart';
 import '../../../../common/common_state.dart';
 import '../../../data/models/index.dart';

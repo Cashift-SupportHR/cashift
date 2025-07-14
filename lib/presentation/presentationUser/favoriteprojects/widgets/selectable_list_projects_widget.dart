@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/domain/entities/projects/project.dart';
 import 'package:shiftapp/presentation/presentationUser/favoriteprojects/widgets/project_item_widget.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_stateful_widget.dart';
 
 import '../../resources/constants.dart';
 

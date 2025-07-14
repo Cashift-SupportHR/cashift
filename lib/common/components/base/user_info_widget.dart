@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../presentation/presentationUser/resources/colors.dart';
 import '../../../presentation/presentationUser/resources/constants.dart';
-import '../../../presentation/shared/components/image_builder.dart';
+import '../image_builder.dart';
 
 ///  Created by harbey on 7/17/2023.
 class UserInfoWidget extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
-import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
+import 'package:shiftapp/common/components/index.dart';
+import 'package:shiftapp/common/components/underline_widget.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 

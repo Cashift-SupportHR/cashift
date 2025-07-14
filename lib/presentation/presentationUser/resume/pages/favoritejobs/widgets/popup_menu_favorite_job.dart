@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 
 import '../../../../../../common/domain/entities/resume/job_item.dart';
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../adminFeatures/available_opportunities/presentation/widgets/build_popup_menu_button.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/image_builder.dart';
-import '../../../../../shared/components/options_menu_button.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/image_builder.dart';
+import '../../../../../../common/components/options_menu_button.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';
 import 'favorite_job_skells_builder.dart';

@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../../adminFeatures/employees/domain/entities/tab_cashifter.dart';
 import '../../../../../common/components/base/stream_state_widget_v2.dart';
-import '../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
+import '../../../../../common/components/tabview/dynamic_tab_bar_view.dart';
 import '../../../common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../../../adminFeatures/employees/domain/entities/AttachmentsEmp.dart';
 import '../../../../adminFeatures/employees/presentation/addNewEmployees/bloc/add_new_employees_bloc.dart';

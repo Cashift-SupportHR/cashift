@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../domain/entities/index.dart';
 import '../bloc/general_violation_details_cubit.dart';
 import 'general_violation_details_screen.dart';

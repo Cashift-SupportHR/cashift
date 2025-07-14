@@ -5,12 +5,12 @@ import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/present
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/add/vehicle_components/screen/vehicle_components_page.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/add/vehicle_covenant/screen/vehicle_covenant_page.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/add/vehicle_info/screen/vehicle_info_page.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 import '../../../../../../core/services/routes.dart';
 import '../../../../common/common_state.dart';
-import '../../../../../shared/components/stepper/custom_linear_step_indicator.dart';
+import '../../../../../../common/components/stepper/custom_linear_step_indicator.dart';
 import '../../../data/models/index.dart';
 import '../../../domain/entities/custody_handover.dart';
 import '../../../domain/entities/index.dart';

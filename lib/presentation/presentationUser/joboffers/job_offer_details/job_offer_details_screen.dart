@@ -5,13 +5,13 @@ import 'package:shiftapp/presentation/presentationUser/joboffers/job_offer_detai
 import 'package:shiftapp/presentation/presentationUser/joboffers/job_offer_details/job_information_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/tabview/tabbar_widget.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_stateful_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/tabview/tabbar_widget.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../shared/components/curancy_widget.dart';
+import '../../../../common/components/curancy_widget.dart';
 
 class JobOfferDetailsScreenV2 extends StatefulWidget {
   final Function onClickApply;

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../core/services/routes.dart';
 import '../../../../../../common/components/base/user_info_widget.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../common/components/buttons/icon_text_button.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/image_builder.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/image_builder.dart';
 import '../../../data/models/index.dart';
 
 ///  Created by harbey on 7/16/2023.

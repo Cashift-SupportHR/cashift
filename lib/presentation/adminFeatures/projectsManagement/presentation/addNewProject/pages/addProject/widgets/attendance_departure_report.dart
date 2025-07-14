@@ -5,9 +5,9 @@ import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/r
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../../../shared/components/radio/radio_grid_list.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../../../common/components/radio/radio_grid_list.dart';
 
 ///  Created by harbey on 7/24/2023.
 class AttendanceDepartureReport extends BaseStatelessWidget {

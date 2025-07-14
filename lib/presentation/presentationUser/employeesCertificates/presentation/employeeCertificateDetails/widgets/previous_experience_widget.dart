@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';
 

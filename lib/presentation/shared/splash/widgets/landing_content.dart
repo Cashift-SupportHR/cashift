@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
 import '../../../../utils/app_images.dart';
-import '../../components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import 'landing_model.dart';
 
 

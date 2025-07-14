@@ -1,14 +1,14 @@
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
 
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../../../shared/components/snckBar/snack_bar_manager.dart';
-import '../../../../../../../shared/components/stepper/easy_step.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../../../common/components/snckBar/snack_bar_manager.dart';
+import '../../../../../../../../common/components/stepper/easy_step.dart';
 import '../../../../../domain/entities/index.dart';
 import '../../../../../data/models/index.dart';
 import 'expansion_time_item.dart';

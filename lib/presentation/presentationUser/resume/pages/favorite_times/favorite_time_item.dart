@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../common/domain/entities/resume/favorite_time.dart';
-import '../../../../shared/components/image_builder.dart';
+import '../../../../../common/components/image_builder.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 

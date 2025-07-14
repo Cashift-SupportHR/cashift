@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../resources/colors.dart';
-import '../../../../shared/components/underline_widget.dart';
+import '../../../../../common/components/underline_widget.dart';
 
 class BackgroundContainer extends StatelessWidget {
   final String title;

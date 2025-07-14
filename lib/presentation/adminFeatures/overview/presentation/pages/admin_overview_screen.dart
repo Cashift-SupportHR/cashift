@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/overview/presentation/bloc/admin_overview_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import '../widgets/admin_app_notification_list_widget.dart';
 import '../widgets/slider_opportunities_list.dart';
 

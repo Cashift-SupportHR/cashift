@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:shiftapp/config.dart';
 
 import '../../../../../common/domain/entities/account/registered_face.dart';
-import '../../../../shared/components/app_cupertino_button.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/outlint_button.dart';
+import '../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/outlint_button.dart';
 import '../../../common/common_state.dart';
 import '../../facerecognation/faces_matching.dart';
 import '../../facerecognation/index.dart';

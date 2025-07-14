@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/adminFeatures/usersManagement/presentation
 import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../domain/entities/user_management.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../bloc/users_management_cubit.dart';
 
 

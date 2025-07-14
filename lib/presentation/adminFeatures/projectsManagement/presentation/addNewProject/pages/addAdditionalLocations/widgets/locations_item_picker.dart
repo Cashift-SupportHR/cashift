@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../../../core/services/routes.dart';
 import '../../../../../../../presentationUser/map_picker/widgets/map_picker_item.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../../../common/components/buttons/app_icon_button.dart';
-import '../../../../../../../shared/components/map/map_picker.dart';
-import '../../../../../../../shared/components/options_menu_button.dart';
+import '../../../../../../../../common/components/map/map_picker.dart';
+import '../../../../../../../../common/components/options_menu_button.dart';
 import '../../../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../../../data/models/index.dart';
 

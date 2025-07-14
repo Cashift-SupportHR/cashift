@@ -1,6 +1,6 @@
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_times/base_focus_point_times_page.dart';
 
-import '../../../../shared/components/stepper/easy_step.dart';
+import '../../../../../common/components/stepper/easy_step.dart';
 import '../../domain/entities/focus_point.dart';
 
 class EditFocusPointTimesPage extends BaseFocusPointTimesPage {

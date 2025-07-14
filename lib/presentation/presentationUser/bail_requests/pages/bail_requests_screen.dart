@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 import 'package:shiftapp/common/data/models/bail_requests/index.dart';
 import 'package:shiftapp/common/domain/entities/bail_requests/index.dart';
 

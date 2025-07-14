@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../domain/entities/employee_data.dart';
 import '../bloc/employment_management_cubit.dart';
 import '../widgets/employee_data_sheet.dart';

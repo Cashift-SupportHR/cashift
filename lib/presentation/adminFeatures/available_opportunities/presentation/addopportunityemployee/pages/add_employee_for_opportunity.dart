@@ -5,10 +5,10 @@ import 'package:shiftapp/presentation/adminFeatures/shared/data/models/free_lanc
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
-import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/material_text_field.dart';
+import 'package:shiftapp/common/components/underline_widget.dart';
 
 import '../../../../../../utils/app_utils.dart';
 import '../../../../../presentationUser/resources/validation.dart';

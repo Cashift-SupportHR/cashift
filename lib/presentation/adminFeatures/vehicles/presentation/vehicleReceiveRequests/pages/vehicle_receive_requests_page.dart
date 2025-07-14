@@ -1,9 +1,9 @@
 import 'package:shiftapp/common/domain/constants/codes_constants.dart';
 import 'package:shiftapp/extensions/extensions.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/vehiclesOperation/domain/entities/receive_vehicle_details.dart';
-import '../../../../../shared/components/text_field/text_field_search.dart';
+import '../../../../../../common/components/text_field/text_field_search.dart';
 import '../../../../../shared/models/common_list_item.dart';
 import '../../../data/models/final_action_vehicle_receive_request_params.dart';
 import '../../../domain/entities/vehicle_receive_request.dart';

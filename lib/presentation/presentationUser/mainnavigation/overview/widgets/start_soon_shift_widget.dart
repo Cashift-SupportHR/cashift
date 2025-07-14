@@ -6,8 +6,8 @@ import 'package:shiftapp/presentation/presentationUser/appliedoffers/widgets/can
 
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/shapes/rounded_shape.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/shapes/rounded_shape.dart';
 
 import 'app_requirement_notification_widget.dart';
 import 'timer_widget.dart';

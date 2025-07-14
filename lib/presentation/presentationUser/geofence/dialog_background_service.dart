@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../shared/components/base_stateless_widget.dart';
+import '../../../common/components/base/base_stateless_widget.dart';
 import '../../../common/components/buttons/row_buttons.dart';
 import '../resources/constants.dart';
 

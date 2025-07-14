@@ -2,9 +2,9 @@ import 'package:collection/collection.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../main_index.dart';
-import '../../../../shared/components/dropdown_filed.dart';
-import '../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
-import '../../../../shared/components/texts/list_row_texts_icons_v2.dart';
+import '../../../../../common/components/dropdown/dropdown_filed.dart';
+import '../../../../../common/components/tabview/dynamic_tab_bar_view.dart';
+import '../../../../../common/components/texts/list_row_texts_icons_v2.dart';
 import '../../data/models/vehicle_camera_dto.dart';
 import '../../data/models/vehicle_video_params.dart';
 

@@ -4,7 +4,7 @@ import 'package:shiftapp/common/data/models/activity_log/index.dart';
 
 import 'package:shiftapp/presentation/presentationUser/activity_log/pages/activitylog_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../appliedoffers/cancelOpprtunity/cancel_opportunity_apologizing_page.dart';
 import '../bloc/activity_log_cubit.dart';

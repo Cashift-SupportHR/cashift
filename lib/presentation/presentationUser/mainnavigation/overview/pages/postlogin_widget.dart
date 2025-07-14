@@ -6,12 +6,12 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/joboffers/jobs_list/jobs_list_page.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/horizontal_days_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/horizontal_days_widgets.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 
 import '../../../../../main_index.dart';
-import '../../../../shared/components/options_menu_button.dart';
+import '../../../../../common/components/options_menu_button.dart';
 import '../../../advancedFilter/widgets/text_field_search_job.dart';
 import '../bloc/overview_bloc.dart';
 import '../bloc/overview_state.dart';

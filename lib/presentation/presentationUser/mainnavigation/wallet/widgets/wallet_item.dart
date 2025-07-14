@@ -3,9 +3,9 @@ import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/common/domain/entities/collect_cash/job_cash.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_widget.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 
 class WalletItemWidget extends BaseWidget {
   final JobCash jobCash;

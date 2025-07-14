@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/required_tasks/pages/required_tasks_dialog.dart';
 
 import '../../../../common/data/models/user_overview/index.dart';
-import '../../../shared/components/base_widget_bloc.dart';
+import '../../../../common/components/base/base_widget_bloc.dart';
 import '../bloc/required_tasks_cubit.dart';
 
 class RequiredTasksDialogBuilder extends BaseBlocWidget<UnInitState, RequiredTasksCubit> {

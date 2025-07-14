@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common/domain/entities/notificationOffers/index.dart';
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 
 class NotificationOffersScreen extends BaseStatelessWidget {
   final List<NotificationOffer> notificationOffers;

@@ -5,19 +5,19 @@ import 'package:shiftapp/presentation/adminFeatures/opportunity_details/pages/op
 import 'package:shiftapp/presentation/adminFeatures/shared/domain/entities/opportunities/opportunity.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
-import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/texts/list_row_texts_icons.dart';
+import 'package:shiftapp/common/components/underline_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../core/services/routes.dart';
 import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../common/components/base/user_info_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/options_menu_button.dart';
+import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/options_menu_button.dart';
 import '../../../addOpportunity/presentations/pages/add_new_opportunity_page.dart';
 import '../addopportunityemployee/pages/add_employee_for_opportunity_page.dart';
 import 'build_popup_menu.dart';

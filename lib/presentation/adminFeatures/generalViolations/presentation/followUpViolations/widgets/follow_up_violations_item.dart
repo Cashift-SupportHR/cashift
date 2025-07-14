@@ -1,7 +1,7 @@
 import 'package:shiftapp/common/domain/constants/codes_constants.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../core/services/routes.dart';

@@ -8,12 +8,12 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/validation.dart';
 import 'package:shiftapp/utils/app_utils.dart';
-import '../../../components/app_cupertino_button.dart';
-import '../../../components/base_widget.dart';
-import '../../../components/material_text.dart';
-import '../../../components/material_text_field.dart';
-import '../../../components/outlint_button.dart';
-import '../../../components/password_field_widget.dart';
+import '../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../common/components/base/base_widget.dart';
+import '../../../../../common/components/material_text.dart';
+import '../../../../../common/components/material_text_field.dart';
+import '../../../../../common/components/outlint_button.dart';
+import '../../../../../common/components/password_field_widget.dart';
 import 'package:shiftapp/main_index.dart';
 
 class LoginScreen extends BaseWidget {

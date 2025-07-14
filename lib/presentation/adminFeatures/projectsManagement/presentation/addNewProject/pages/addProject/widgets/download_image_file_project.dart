@@ -3,12 +3,12 @@ import 'dart:io';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../../../common/components/buttons/icon_text_button.dart';
 
 ///  Created by harbey on 7/27/2023.

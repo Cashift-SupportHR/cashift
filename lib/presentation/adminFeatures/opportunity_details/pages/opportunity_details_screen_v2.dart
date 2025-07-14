@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/opportunity_details/widgets/job_details.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:shiftapp/common/components/buttons/row_buttons.dart';
-import 'package:shiftapp/presentation/shared/components/tabview/tab_bar_view_widget_line.dart';
+import 'package:shiftapp/common/components/tabview/tab_bar_view_widget_line.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../presentationUser/appliedoffers/details/applied_offer_details_screen_v2.dart';

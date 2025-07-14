@@ -3,7 +3,7 @@ import 'package:shiftapp/common/data/models/bank/add_bank_info_params.dart';
 import 'package:shiftapp/common/domain/entities/bankaccount/bank_account_info.dart';
 import 'package:shiftapp/common/domain/entities/bankaccount/bank_page_data.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/bankaccont/pages/bank_account_info_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/bankaccont/pages/bank_account_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/bankaccont/bloc/bank_account_cubit.dart';

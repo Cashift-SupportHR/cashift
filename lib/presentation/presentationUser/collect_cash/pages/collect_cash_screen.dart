@@ -6,8 +6,8 @@ import 'package:shiftapp/common/domain/entities/collect_cash/dues_item.dart';
 import 'package:shiftapp/presentation/presentationUser/collect_cash/bloc/collect_cash_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/collect_cash/pages/collect_cash_item.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
-import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/loading_widget.dart';
 
 class CollectCashScreen extends StatelessWidget{
   final bool active ;

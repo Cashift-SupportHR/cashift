@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../data/models/ban_employee_status_params.dart';
 import '../../../domain/entities/ban_employee.dart';
 import '../../../domain/entities/ban_employee_constants.dart';

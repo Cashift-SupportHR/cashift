@@ -1,5 +1,5 @@
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
  import '../../../../domain/entities/EmpAttendanceRportsDto.dart';
 import '../../cubit/attendance_notifications_reports_cubit.dart';
 import 'attendance_notifications_reports_screen.dart';

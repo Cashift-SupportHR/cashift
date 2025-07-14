@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/periodPricing/widget/period_pricing_item.dart';
 
-import '../../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../data/models/index.dart';
 import '../../../../domain/entities/index.dart';
 

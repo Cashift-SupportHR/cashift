@@ -6,11 +6,11 @@ import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../core/services/routes.dart';
 import '../../../../../adminFeatures/available_opportunities/presentation/widgets/build_popup_menu_button.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/icons/icon_text.dart';
-import '../../../../../shared/components/options_menu_button.dart';
-import '../../../../../shared/components/texts/icon_double_text.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/icons/icon_text.dart';
+import '../../../../../../common/components/options_menu_button.dart';
+import '../../../../../../common/components/texts/icon_double_text.dart';
 import '../../../domain/entities/index.dart';
 
 class GeneralViolationItem extends BaseStatelessWidget {

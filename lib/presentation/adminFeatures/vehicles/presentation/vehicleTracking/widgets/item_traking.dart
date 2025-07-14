@@ -1,7 +1,7 @@
 import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/vehicleTracking/widgets/violation_widget.dart';
 
 import '../../../../../../utils/app_icons.dart';
-import '../../../../../shared/components/index.dart';
+import '../../../../../../common/components/index.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../domain/entities/vehicleTraking.dart';

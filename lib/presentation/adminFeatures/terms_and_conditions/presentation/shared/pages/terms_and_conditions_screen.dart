@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/presentation/adminFeatures/terms_and_conditions/presentation/shared/widgets/term_and_condition_item.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../domain/entities/TermandCondition.dart';
 
 class TermsAndConditionsScreen extends BaseStatelessWidget {

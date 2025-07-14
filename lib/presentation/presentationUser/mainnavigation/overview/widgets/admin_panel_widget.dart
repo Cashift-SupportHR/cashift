@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 class AdminPanelWidget extends BaseStatelessWidget{
   @override

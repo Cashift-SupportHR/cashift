@@ -5,9 +5,9 @@ import '../../../../../../core/services/routes.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
 import '../../../../../../common/components/base/stream_state_widget_v2.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 
-import '../../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
+import '../../../../../../common/components/tabview/dynamic_tab_bar_view.dart';
  import '../../../domain/entities/EmpChasifterData.dart';
 import '../../../domain/entities/tab_cashifter.dart';
  import '../bloc/employees_cubit.dart';

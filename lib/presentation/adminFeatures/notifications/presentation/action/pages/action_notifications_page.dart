@@ -1,4 +1,4 @@
- import 'package:shiftapp/presentation/shared/components/index.dart';
+ import 'package:shiftapp/common/components/index.dart';
 
 import '../../../../../../common/domain/constants/codes_constants.dart';
 import '../../../../../presentationUser/common/common_state.dart';

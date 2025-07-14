@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/text_field/build_text_field_item.dart';
+import 'package:shiftapp/common/components/text_field/build_text_field_item.dart';
 import 'package:shiftapp/presentation/adminFeatures/employmentManagement/presentation/employmentManagement/widgets/working_periods_multi_picker.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/texts/underline_text.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/texts/underline_text.dart';
 
 import '../../../../../../utils/app_icons.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../common/components/checkbox/multiple_choice_checkbox.dart';
-import '../../../../../shared/components/radio/radio_grid_list.dart';
+import '../../../../../../common/components/radio/radio_grid_list.dart';
 import '../../../../usersManagement/presentation/addNewUser/widgets/projects_multi_picker.dart';
 import '../../../data/models/save_order_status_params.dart';
 import '../../../domain/entities/employee_data.dart';

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/current_remaining_time.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
-import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
+import 'package:shiftapp/common/components/outlint_button.dart';
 
 import '../../../../core/services/routes.dart';
 import '../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../common/domain/entities/workerWorkPlaces/index.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../adminFeatures/focusPoints/presentations/trackingFocusPoints/widgets/point_image.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/texts/icon_double_text.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/texts/icon_double_text.dart';
 import '../../deliveryAndReceipt/pages/delivery_and_receipt_page.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';

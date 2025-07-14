@@ -1,4 +1,4 @@
-import '../../../../shared/components/stepper/easy_step.dart';
+import '../../../../../common/components/stepper/easy_step.dart';
 import '../widgets/base_focus_point_data_page.dart';
 
 class EditFocusPointDataPage extends BaseFocusPointDataPage {

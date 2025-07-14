@@ -4,8 +4,8 @@ import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendanc
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/attendance_log_item_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 
 class AttendanceLogWidget extends BaseStatelessWidget {
   final List<AttendanceLog> attandanceLog;

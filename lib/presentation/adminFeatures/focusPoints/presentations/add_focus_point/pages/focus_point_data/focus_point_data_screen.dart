@@ -4,12 +4,12 @@ import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/ad
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_data/widgets/shifts_focus_point_picker.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_data/widgets/coverage_break_focus_point_picker.dart';
 import 'package:shiftapp/common/components/buttons/row_buttons.dart';
-import 'package:shiftapp/presentation/shared/components/snckBar/snack_bar_manager.dart';
+import 'package:shiftapp/common/components/snckBar/snack_bar_manager.dart';
 
 import '../../../../../../presentationUser/common/common_state.dart';
-import '../../../../../../shared/components/app_cupertino_button.dart';
-import '../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../common/components/text_field/build_text_field_item.dart';
 import '../../../../domain/entities/index.dart';
 import '../../../../data/models/index.dart';
 import 'widgets/current_location.dart';

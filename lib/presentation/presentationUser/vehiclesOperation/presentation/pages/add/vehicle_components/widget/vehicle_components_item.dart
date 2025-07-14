@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/add/vehicle_components/widget/vehicle_add_note.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../../../shared/components/radio/radio_grid_list.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../../../common/components/radio/radio_grid_list.dart';
 import '../../../../../../common/common_state.dart';
 import '../../../../../data/models/add_image_and_descriptions_components_prams.dart';
 import '../../../../../domain/entities/vehicleComponents.dart';

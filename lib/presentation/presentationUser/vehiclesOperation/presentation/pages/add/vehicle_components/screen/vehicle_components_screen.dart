@@ -1,5 +1,5 @@
 import 'dart:io';
-import '../../../../../../../shared/components/index.dart';
+import '../../../../../../../../common/components/index.dart';
 import '../../../../../../common/common_state.dart';
 import '../../../../../data/models/index.dart';
 import '../../../../../domain/entities/vehicleComponents.dart';

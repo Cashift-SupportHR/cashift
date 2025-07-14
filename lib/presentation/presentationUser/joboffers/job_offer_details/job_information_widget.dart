@@ -7,11 +7,11 @@ import 'package:shiftapp/common/domain/entities/jobs/job_details.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import 'package:shiftapp/presentation/shared/components/map/map_widget.dart';
-import 'package:shiftapp/presentation/shared/components/row_info_builder.dart';
+import 'package:shiftapp/common/components/map/map_widget.dart';
+import 'package:shiftapp/common/components/row_info_builder.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../shared/components/base_widget.dart';
+import '../../../../common/components/base/base_widget.dart';
 import '../../appliedoffers/details/widgets/tasksAndDuties.dart';
 import '../widgets/uniform_list_job.dart';
 

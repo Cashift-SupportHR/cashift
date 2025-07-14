@@ -8,7 +8,7 @@ import 'package:shiftapp/utils/app_utils.dart';
 
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
-import '../../../../../../../shared/components/index.dart';
+import '../../../../../../../../common/components/index.dart';
 import '../../../../../domain/entities/index.dart';
 
 class VehicleImageItem extends BaseStatelessWidget {

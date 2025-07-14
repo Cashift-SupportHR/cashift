@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/trackingFocusPoints/pages/tracking_focus_points_main_tabs.dart';
-import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
+import 'package:shiftapp/common/components/loading_widget.dart';
 import '../../../../../../common/domain/entities/workerWorkPlaces/focus_point_info.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/error_handler_widget.dart';
+import '../../../../../../common/components/error_handler_widget.dart';
 import '../../../../../shared/models/common_list_item.dart';
 import '../../../domain/entities/focus_point_project.dart';
 import '../../../domain/entities/project_info_focus_point.dart';

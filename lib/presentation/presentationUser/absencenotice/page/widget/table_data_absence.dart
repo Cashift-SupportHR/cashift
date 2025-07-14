@@ -6,12 +6,12 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/common/data/models/absence_notation/index.dart';
 
 import '../../../../../common/data/exceptions/empty_list_exception.dart';
- import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/error_handler_widget.dart';
+ import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/error_handler_widget.dart';
 import '../../../resources/constants.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 
-import '../../../../shared/components/underline_widget.dart';
+import '../../../../../common/components/underline_widget.dart';
 import 'list_day_absence.dart';
 
 

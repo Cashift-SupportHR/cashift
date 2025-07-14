@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/trackAttendanceDeparture/presentation/details/widgets/track_attendance_departure_details_item.dart';
 import 'package:shiftapp/presentation/adminFeatures/trackAttendanceDeparture/presentation/details/widgets/track_user_item.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/texts/underline_text.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/texts/underline_text.dart';
 import '../../../domain/entities/RequestAttendanceDepartureDetails.dart';
 import '../../../domain/entities/index.dart';
 

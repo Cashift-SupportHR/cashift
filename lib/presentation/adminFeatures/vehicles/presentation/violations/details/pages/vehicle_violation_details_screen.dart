@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import '../../../../../../../main_index.dart';
 import '../../../../../../../utils/app_icons.dart';
 import '../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../shared/components/index.dart';
+import '../../../../../../../common/components/index.dart';
 import '../../../../data/models/index.dart';
 import '../../../../domain/entities/index.dart';
 

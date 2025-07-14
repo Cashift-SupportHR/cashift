@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
  import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../../../common/domain/entities/appliedOffers/index.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/helper_widgets.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/helper_widgets.dart';
 import '../../resources/colors.dart';
 import 'bloc/cancel_opportunity_apologizing_bloc.dart';
 import 'opportunity_apologizing_widget.dart';

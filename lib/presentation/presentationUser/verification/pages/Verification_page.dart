@@ -6,9 +6,9 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/verification/bloc/verification_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/verification/pages/verification_screen.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateful_widget.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 
 class VerificationPageModel {
   final String phone;

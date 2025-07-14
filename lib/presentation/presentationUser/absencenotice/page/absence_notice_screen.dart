@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/absencenotice/page/widget
 import 'package:shiftapp/common/data/models/absence_notation/index.dart';
 
 import '../../../../common/data/models/attendance/index.dart';
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 
 class AbsenceNoticeScreen extends BaseStatelessWidget {
   final List<AbsenceDateParams> absenceDateParams;

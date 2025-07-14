@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/error_handler_widget.dart';
-import '../../../shared/components/helper_widgets.dart';
-import '../../../shared/components/texts/row_rich_texts.dart';
-import '../../../shared/components/underline_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/error_handler_widget.dart';
+import '../../../../common/components/helper_widgets.dart';
+import '../../../../common/components/texts/row_rich_texts.dart';
+import '../../../../common/components/underline_widget.dart';
 import '../../available_opportunities/presentation/addopportunityemployee/pages/add_employee_for_opportunity_page.dart';
 import '../../shared/domain/entities/opportunities/menu_employees_status.dart';
 import '../../shared/domain/entities/opportunities/opportunity_details.dart';

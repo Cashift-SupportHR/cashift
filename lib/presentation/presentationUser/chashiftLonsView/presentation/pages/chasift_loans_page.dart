@@ -1,11 +1,11 @@
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/common/components/base/stream_state_widget_v2.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/stepper/easy_step.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/stepper/easy_step.dart';
 import 'package:shiftapp/presentation/shared/loans/presentation/view/pages/loans_screen.dart';
 import 'package:shiftapp/presentation/shared/loans/presentation/view/widgets/total_loan_widget.dart';
 
-import '../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
+import '../../../../../common/components/tabview/dynamic_tab_bar_view.dart';
 import '../../../../shared/loans/domain/entities/loan_data.dart';
 import '../../../../shared/loans/presentation/view/bloc/chashift_loans_cubit.dart';
 

@@ -1,5 +1,5 @@
 import '../../../../../main_index.dart';
-import '../../../../shared/components/texts/list_row_texts_icons_v2.dart';
+import '../../../../../common/components/texts/list_row_texts_icons_v2.dart';
 import '../../data/models/index.dart';
 import '../../data/models/receive_vehicle_details_dto.dart';
 import 'custody_handover.dart';

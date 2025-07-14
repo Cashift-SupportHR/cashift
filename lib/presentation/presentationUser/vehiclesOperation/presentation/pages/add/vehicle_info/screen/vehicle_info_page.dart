@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/add/vehicle_info/screen/vehicle_info_screen.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 import '../../../../../../../adminFeatures/vehicles/domain/entities/vehicle_details.dart';

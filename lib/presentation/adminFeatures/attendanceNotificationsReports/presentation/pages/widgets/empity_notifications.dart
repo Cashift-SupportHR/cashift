@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../../utils/app_images.dart';
  import '../../../data/models/emp_attendance_rports_prams.dart';
 import '../screen/search/filter_attendance_notifications_reports_page.dart';

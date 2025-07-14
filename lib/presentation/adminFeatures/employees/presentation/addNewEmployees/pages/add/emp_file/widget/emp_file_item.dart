@@ -4,20 +4,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:shiftapp/common/components/buttons/app_cupertino_button_icon.dart';
 import 'package:shiftapp/common/components/buttons/row_buttons.dart';
 import 'package:shiftapp/common/components/checkbox/check_box_terms_and_conditions.dart';
 import 'package:shiftapp/common/components/checkbox/custom_check_box.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../../../../utils/app_utils.dart';
 import '../../../../../../../../../common/components/buttons/row_small_button.dart';
-import '../../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../../../../shared/components/files/custom_p_d_f_view.dart';
-import '../../../../../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../../../../common/components/files/custom_p_d_f_view.dart';
+import '../../../../../../../../../common/components/text_field/build_text_field_item.dart';
 import '../../../../../../data/models/index.dart';
 import '../../../../../../domain/entities/index.dart';
 

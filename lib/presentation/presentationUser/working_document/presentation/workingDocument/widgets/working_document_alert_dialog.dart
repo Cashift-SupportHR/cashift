@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../core/services/routes.dart';
 import '../../../../../../common/domain/entities/job_offers/check_working_document.dart';
-import '../../../../../shared/components/app_cupertino_button.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/image_builder.dart';
+import '../../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/image_builder.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';
 import '../pages/working_document_page.dart';

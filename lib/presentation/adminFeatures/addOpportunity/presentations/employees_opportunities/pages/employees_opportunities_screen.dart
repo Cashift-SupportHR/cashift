@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
 
 import '../../../../../../common/data/exceptions/empty_list_exception.dart';
 import '../../../../../presentationUser/common/common_state.dart';

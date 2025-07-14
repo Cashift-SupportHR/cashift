@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shiftapp/presentation/adminFeatures/admin_wallet/presentation/pages/admin_wallet_page.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
 import '../../../../core/services/routes.dart';
 import '../../../../main.dart';
 import '../../../adminFeatures/available_opportunities/presentation/opportunities/pages/available_opportunities_page.dart';
@@ -32,14 +32,14 @@ import '../../../presentationUser/vehiclesOperation/presentation/currentTourMap/
 import '../../../presentationUser/vehiclesOperation/presentation/pages/view/screen/receive_vehicles_page.dart';
 import '../../../adminFeatures/vehicles/presentation/vehicleTracking/pages/vehicles_tracking_page.dart';
 import '../../../../common/components/camera_streaming/hls_player_widget.dart';
-import '../../components/offline_place_holder/offline_place_holder_widget.dart';
+import '../../../../common/components/offline_place_holder/offline_place_holder_widget.dart';
 import '/generated/assets.dart';
 import '/presentation/presentationUser/common/common_state.dart';
 import '/presentation/presentationUser/profile/index.dart';
-import '/presentation/shared/components/base_stateful_widget.dart';
-import '/presentation/shared/components/consumer_builder.dart';
-import '/presentation/shared/components/dialogs_manager.dart';
-import '/presentation/shared/components/loading_widget.dart';
+import '../../../../common/components/base/base_stateful_widget.dart';
+import '../../../../common/components/consumer_builder.dart';
+import '../../../../common/components/dialogs_manager.dart';
+import '../../../../common/components/loading_widget.dart';
 import '/presentation/shared/home/bloc/home_bloc.dart';
 import '/presentation/shared/home/widgets/bottom_navigation_widget.dart';
 import '/presentation/shared/services/pages/services_page.dart';
@@ -150,7 +150,7 @@ class _MyHomeScreenState extends BaseState<MyHomeScreen> {
   void initState() {
     homeBloc = GetIt.instance.get<HomeBloc>();
     if (mounted) {
-      if (Config.isTestVersion == false) homeBloc.fetchAppVersion();
+      // if (Config.isTestVersion == false) homeBloc.fetchAppVersion();
       // homeBloc.fetchAppVersion();
       print('checkUserRolePrivilege initState');
       homeBloc.checkUserRolePrivilege();

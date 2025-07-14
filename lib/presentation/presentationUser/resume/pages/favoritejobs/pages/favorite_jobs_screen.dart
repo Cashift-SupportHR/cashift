@@ -7,7 +7,7 @@ import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_bloc.d
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_component_data.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/widgets/base_resume_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/widgets/selectable__widgets.dart';
-import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
+import 'package:shiftapp/common/components/loading_widget.dart';
 
 
 class FavoriteJobsScreen extends BaseResumeWidget<DataState<FavoriteJobsInfo>> {

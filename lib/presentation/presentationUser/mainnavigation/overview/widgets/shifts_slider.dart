@@ -3,12 +3,12 @@ import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/widgets/shift_item_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:shiftapp/extensions/extensions.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
-import 'package:shiftapp/presentation/shared/components/page_slider_widget.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/page_slider_widget.dart';
 import '../../../../../core/services/routes.dart';
-import '../../../../shared/components/loading_widget.dart';
+import '../../../../../common/components/loading_widget.dart';
 
 class ShiftSlider extends BaseStatelessWidget {
   final Stream<List<AppliedOffer>?> stream;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../resources/constants.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 
-import '../../../../shared/components/image_builder.dart';
+import '../../../../../common/components/image_builder.dart';
 
 
 class DataUserWidget extends BaseStatelessWidget {

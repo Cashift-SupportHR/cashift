@@ -4,7 +4,7 @@ import 'package:shiftapp/common/domain/entities/bankaccount/electronic_wallet.da
 import 'package:shiftapp/common/domain/entities/bankaccount/phone_wallet_required_data.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/add_phone_wallet/bloc/phone_wallet_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/add_phone_wallet/page/add_phone_wallet_screen.dart';
 

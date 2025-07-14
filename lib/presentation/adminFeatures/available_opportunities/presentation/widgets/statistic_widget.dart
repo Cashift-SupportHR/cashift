@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../shared/components/circular_percent_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/circular_percent_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../shared/domain/entities/opportunities/PercentageOpportunty.dart';
 
 class StatisticWidget extends BaseStatelessWidget {

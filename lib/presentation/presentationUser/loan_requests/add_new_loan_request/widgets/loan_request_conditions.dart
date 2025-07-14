@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../../common/domain/entities/loans_request/loan_num_month_condition.dart';
 import '../../../../../utils/app_icons.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/image_builder.dart';
-import '../../../../shared/components/underline_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/image_builder.dart';
+import '../../../../../common/components/underline_widget.dart';
 import '../../../common/common_state.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';

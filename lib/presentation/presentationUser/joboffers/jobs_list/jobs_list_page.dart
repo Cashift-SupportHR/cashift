@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/common/domain/entities/job_offers/job_offer_dto.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/jobs_list/jobs_list_screen.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/slide_animation.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/slide_animation.dart';
 
 import '../job_offer_details/job_offer_details_page.dart';
 

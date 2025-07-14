@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/decorations/decorations.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/decorations/decorations.dart';
 import '../../common/common_state.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';

@@ -1,5 +1,5 @@
 import '../../../../../utils/app_icons.dart';
-import '../../../../shared/components/index.dart';
+import '../../../../../common/components/index.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 import 'decoration_container.dart';

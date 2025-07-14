@@ -1,6 +1,6 @@
 import 'package:shiftapp/presentation/adminFeatures/terms_and_conditions/presentation/shared/pages/terms_and_conditions_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../../../core/services/routes.dart';
 import '../../../../domain/entities/AttendanceNotifiType.dart';
 import '../cubit/add_attendance_and_departure_notifications_cubit.dart';

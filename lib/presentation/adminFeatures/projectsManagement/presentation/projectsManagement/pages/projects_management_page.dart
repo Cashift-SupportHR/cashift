@@ -6,7 +6,7 @@ import '../../../../../presentationUser/advancedFilter/widgets/text_field_search
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
 import '../../../domain/entities/project_management.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../addNewProject/main_add_new_project_page.dart';
 import '../bloc/projects_management_cubit.dart';
 

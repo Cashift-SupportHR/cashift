@@ -1,4 +1,4 @@
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 
 import '../../data/models/violation_by_project_id_dto.dart';
 

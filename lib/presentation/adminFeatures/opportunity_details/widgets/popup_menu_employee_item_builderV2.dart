@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/components/base_widget_bloc.dart';
+import '../../../../common/components/base/base_widget_bloc.dart';
 import '../../shared/domain/entities/opportunities/AppliedData.dart';
 import '../../shared/domain/entities/opportunities/menu_employees_status.dart';
 import '../../shared/domain/entities/opportunities/opportunity_details.dart';

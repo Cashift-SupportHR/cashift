@@ -1,6 +1,6 @@
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
-import 'package:shiftapp/presentation/shared/components/text_field/build_text_field_item.dart';
+import 'package:shiftapp/common/components/index.dart';
+import 'package:shiftapp/common/components/text_field/build_text_field_item.dart';
 
 
 class FinalActionVehicleReceiveRequestsBottomSheet extends BaseStatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../presentationUser/resources/colors.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
 
 class PointImage extends StatelessWidget {
   final String image;

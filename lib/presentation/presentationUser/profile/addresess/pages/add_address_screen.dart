@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../../../common/data/models/add-address/address.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../common/common_state.dart';
 import '../../../locationservice/locationservice.dart';
 import '../../../map_picker/bloc/map_picker_state.dart' show MapPickerState;

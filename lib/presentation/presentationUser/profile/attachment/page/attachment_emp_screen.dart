@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/attachment/widget/attachment_emp_item.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../adminFeatures/employees/data/models/requirement_attachment_prams.dart';
 import '../../../../adminFeatures/employees/domain/entities/AttachmentsEmp.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../../../../../common/domain/entities/wallet/apply_details.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import 'list_opportunity_details.dart';
 
 class ApplyDetailsListScreen extends BaseStatelessWidget {

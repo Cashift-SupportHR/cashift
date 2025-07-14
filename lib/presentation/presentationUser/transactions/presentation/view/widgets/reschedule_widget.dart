@@ -1,6 +1,6 @@
-import 'package:shiftapp/presentation/shared/components/index.dart';
-import '../../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../../shared/components/text_field/date_time_text_field_picker.dart';
+import 'package:shiftapp/common/components/index.dart';
+import '../../../../../../common/components/text_field/build_text_field_item.dart';
+import '../../../../../../common/components/text_field/date_time_text_field_picker.dart';
 import '../../../data/models/reschedule_transactions_prams.dart';
 import '../../../data/models/update_transactions_prams.dart';
 import '../../../domain/entities/transaction_data.dart';

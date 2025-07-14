@@ -1,7 +1,7 @@
 import 'package:shiftapp/presentation/adminFeatures/terms_and_conditions/presentation/shared/pages/terms_and_conditions_screen.dart';
 import 'package:shiftapp/presentation/adminFeatures/terms_and_conditions/presentation/termsAndConditions/add/pages/add_condition_builder.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 
 import '../../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';

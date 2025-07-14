@@ -4,8 +4,8 @@ import 'package:shiftapp/presentation/adminFeatures/projectsManagement/domain/en
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/texts/underline_text.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/texts/underline_text.dart';
 
 class PricesPreviousStream extends BaseStatelessWidget {
   StreamStateInitial<List<LastPrice>?> pricesPreviousStream;

@@ -2,7 +2,7 @@ import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/index.dart';
+import '../../../../../../common/components/index.dart';
 
 class CountItemWidget extends BaseStatelessWidget {
   final int  emp ;

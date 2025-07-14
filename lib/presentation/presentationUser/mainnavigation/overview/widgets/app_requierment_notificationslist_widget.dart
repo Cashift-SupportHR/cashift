@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:location/location.dart';
  import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
- import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+ import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
  import 'package:shiftapp/common/data/models/activity_log/index.dart';
 
 import '../../../../../common/domain/entities/required_tasks/in_app_required_task.dart';

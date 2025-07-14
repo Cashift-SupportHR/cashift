@@ -2,13 +2,13 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
 import 'package:shiftapp/common/components/base/user_info_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
 import '../../../../../common/domain/entities/user_overview/job_offer_slider.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../common/common_state.dart';
 import '../../../resources/colors.dart';
 

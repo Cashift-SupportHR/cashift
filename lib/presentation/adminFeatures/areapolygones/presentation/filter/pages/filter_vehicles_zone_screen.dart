@@ -8,12 +8,12 @@ import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/generated/assets.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
-import 'package:shiftapp/presentation/shared/components/text_field/text_field_search.dart';
+import 'package:shiftapp/common/components/index.dart';
+import 'package:shiftapp/common/components/text_field/text_field_search.dart';
 
 import '../../../../../../utils/app_icons.dart';
-import '../../../../../shared/components/picker/projects_picker_stream.dart';
-import '../../../../../shared/components/picker/shifts_picker_stream.dart';
+import '../../../../../../common/components/picker/projects_picker_stream.dart';
+import '../../../../../../common/components/picker/shifts_picker_stream.dart';
 import '../../../../usersManagement/presentation/addNewUser/widgets/company_picker.dart';
 import '../../../data/models/add_vehicle_zone_params.dart';
 import '../../../data/models/filter_vehicle_zone_params.dart';

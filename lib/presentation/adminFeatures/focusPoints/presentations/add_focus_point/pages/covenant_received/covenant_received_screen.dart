@@ -4,8 +4,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/common/components/buttons/row_buttons.dart';
 
 import '../../../../../../presentationUser/common/common_state.dart';
-import '../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../shared/components/dialogs_manager.dart';
+import '../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../common/components/dialogs_manager.dart';
 import '../../../../domain/entities/index.dart';
 import '../../../../data/models/index.dart';
 import 'custody_initialize_state.dart';

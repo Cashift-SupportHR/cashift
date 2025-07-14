@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/texts/list_row_texts.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/texts/list_row_texts.dart';
 
 import '../../../presentationUser/resources/constants.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/texts/list_row_texts_icons_v2.dart';
-import '../../../shared/components/texts/list_row_texts_v2.dart';
-import '../../../shared/components/texts/row_rich_texts.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/texts/list_row_texts_icons_v2.dart';
+import '../../../../common/components/texts/list_row_texts_v2.dart';
+import '../../../../common/components/texts/row_rich_texts.dart';
 import '../../shared/domain/entities/opportunities/OpportunityDetailsData.dart';
 
 class OpportunityConditionsWidget extends BaseStatelessWidget {

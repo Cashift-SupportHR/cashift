@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/text_field/build_text_field_item.dart';
+import 'package:shiftapp/common/components/text_field/build_text_field_item.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 
 
 class InstallmentPostponementScreen extends BaseStatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/receiveVehicle/details/pages/receive_vehicle_details_screen.dart';
 import '../../../../../../../core/services/routes.dart';
-import '../../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../../common/common_state.dart';
 import '../../../../data/models/download_vehicle_violation_picture_params.dart';
 import '../../../../domain/entities/receive_vehicle_details.dart';

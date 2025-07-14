@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/working_document/presentation/workingDocument/pages/working_document_screen.dart';
 
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../common/common_state.dart';
 import '../../../domain/entities/working_document.dart';
 import '../bloc/working_document_cubit.dart';

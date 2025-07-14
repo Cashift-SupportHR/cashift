@@ -5,7 +5,7 @@ import '../../../../../common/domain/entities/shift/applied_offer.dart';
 import '../../../../../utils/app_icons.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../applied_offer_details_screen_v2.dart';
 import 'decoration_container.dart';
 

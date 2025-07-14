@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../data/exceptions/empty_list_exception.dart';
 import '../../../presentation/presentationUser/common/common_state.dart';
-import '../../../presentation/shared/components/error_handler_widget.dart';
-import '../../../presentation/shared/components/loading_widget.dart';
+import '../error_handler_widget.dart';
+import '../loading_widget.dart';
 
 ///  Created by harbey on 9/19/2023.
 class StreamStateWidgetV2<T> extends BaseStatelessWidget {

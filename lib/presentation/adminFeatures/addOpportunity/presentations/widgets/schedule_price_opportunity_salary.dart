@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
 import '../../../../presentationUser/common/common_state.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../data/models/schedule_price_opportunity.dart';
-import '../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../common/components/text_field/build_text_field_item.dart';
 
 class SchedulePriceOpportunitySalary extends BaseStatelessWidget {
   final Function(bool)? onAllowEditPrice;

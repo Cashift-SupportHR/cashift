@@ -4,11 +4,11 @@ import 'package:get_it/get_it.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/bloc/job_offers_cubit.dart';
 
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
-import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/loading_widget.dart';
 import 'package:shiftapp/common/domain/entities/job_offers/job_offer_dto.dart';
 import 'package:shiftapp/main_index.dart';
-import '../../../shared/components/base_widget.dart';
+import '../../../../common/components/base/base_widget.dart';
 import 'jobs_map_screen.dart';
 
 class JobsMapPage extends BaseWidget {

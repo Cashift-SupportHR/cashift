@@ -4,13 +4,13 @@ import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/r
 import '../../../utils/app_icons.dart';
 import '../../../presentation/presentationUser/attendance/facerecognation/index.dart';
 import '../../../presentation/presentationUser/resources/colors.dart';
-import '../../../presentation/shared/components/decorations/decorations.dart';
-import '../../../presentation/shared/components/helper_widgets.dart';
-import '../../../presentation/shared/components/image_builder.dart';
+import '../decorations/decorations.dart';
+import '../helper_widgets.dart';
+import '../image_builder.dart';
 import '../../../presentation/presentationUser/resources/constants.dart';
 
-import '../../../presentation/shared/components/index.dart';
-import '../../../presentation/shared/components/text_field/build_text_field_item.dart';
+import '../index.dart';
+import '../text_field/build_text_field_item.dart';
 
 showBaseBottomSheet(BuildContext context, {required Widget child, bool isScrollControlled = true}) {
   showAppModalBottomSheet(

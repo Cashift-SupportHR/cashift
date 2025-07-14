@@ -1,12 +1,12 @@
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/adminFeatures/notifications/data/models/action_notifications_prams.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../../../common/domain/constants/codes_constants.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/text_field/text_field_search.dart';
+import '../../../../../../common/components/text_field/text_field_search.dart';
 import '../../../../../shared/models/common_list_item.dart';
 
 import '../../../domain/entities/vehicle_notifications.dart';

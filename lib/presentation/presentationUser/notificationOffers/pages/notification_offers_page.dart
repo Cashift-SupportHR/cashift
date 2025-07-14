@@ -4,7 +4,7 @@ import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import '../../../../common/data/models/notification_offers/index.dart';
 import '../../../../common/domain/entities/job_offers/index.dart';
-import '../../../shared/components/base_widget_bloc.dart';
+import '../../../../common/components/base/base_widget_bloc.dart';
 import '../../joboffers/jobs_list/jobs_list_screen.dart';
 import '../bloc/notification_offers_cubit.dart';
 

@@ -4,12 +4,12 @@ import 'package:shiftapp/presentation/adminFeatures/overview/presentation/bloc/a
 import 'package:shiftapp/presentation/adminFeatures/overview/presentation/pages/admin_overview_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/toolbar/home_toolbar_widget.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/toolbar/home_toolbar_widget.dart';
 import 'package:shiftapp/presentation/shared/home/pages/home_screen.dart';
 
 import '../../../../../core/services/routes.dart';
-import '../../../../shared/components/draggable_button/draggable_button.dart';
+import '../../../../../common/components/draggable_button/draggable_button.dart';
 import '../../domain/entities/view_filter.dart';
 import '../../../addOpportunity/presentations/pages/add_new_opportunity_page.dart';
 import '../widgets/admin_app_notification_list_widget.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../utils/app_icons.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/dropdown_filed.dart';
-import '../../../../../shared/components/text_field/bottom_sheet_text_field_rectangle.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/dropdown/dropdown_filed.dart';
+import '../../../../../../common/components/text_field/bottom_sheet_text_field_rectangle.dart';
 import '../../../domain/entities/order_status.dart';
 
 class EmployeeOrderStatusPicker extends BaseStatelessWidget {

@@ -3,7 +3,7 @@ import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 import '../../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
-import '../../../../../shared/components/files/files_manager.dart';
+import '../../../../../../common/components/files/files_manager.dart';
 import '../../../data/repositories/employees_certificates_repository.dart';
 
 @Injectable()

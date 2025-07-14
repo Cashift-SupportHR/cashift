@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_flutter_platform_interface/src/types/location.dart';
 import 'package:shiftapp/common/domain/entities/jobs/job_details.dart';
-import 'package:shiftapp/presentation/shared/components/row_info_builder.dart';
+import 'package:shiftapp/common/components/row_info_builder.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/jobs_slider_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import 'package:shiftapp/presentation/shared/components/map/map_widget.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/map/map_widget.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../shared/components/base_widget.dart';
+import '../../../../common/components/base/base_widget.dart';
 
 class CompanyInformationWidget extends BaseWidget {
   final JobDetail jobDetail;

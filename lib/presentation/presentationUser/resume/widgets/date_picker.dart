@@ -4,13 +4,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
-import 'package:shiftapp/presentation/shared/components/datepicker/date_picker.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_stateful_widget.dart';
+import 'package:shiftapp/common/components/datepicker/date_picker.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 
-import '../../../shared/components/datepicker/hijri_calendar.dart';
+import '../../../../common/components/datepicker/hijri_calendar.dart';
 
 class DatePicker extends StatefulWidget {
   final Function(String date , bool isHijri) onSelectdate;

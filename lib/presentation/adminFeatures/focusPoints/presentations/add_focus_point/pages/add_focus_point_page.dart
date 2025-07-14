@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
-import '../../../../../shared/components/stepper/custom_linear_step_indicator.dart';
+import '../../../../../../common/components/stepper/custom_linear_step_indicator.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import 'covenant_received/covenant_received_page.dart';
 import 'focus_point_data/add_focus_point_data_page.dart';

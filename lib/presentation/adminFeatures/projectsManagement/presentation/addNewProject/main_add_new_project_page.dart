@@ -4,13 +4,13 @@ import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentat
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/addProject/add_new_project_page.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/periodPricing/period_pricing_page.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/workingPeriodsProject/working_periods_project_page.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../core/services/routes.dart';
 import '../../../../presentationUser/common/common_state.dart';
-import '../../../../shared/components/stepper/custom_linear_step_indicator.dart';
+import '../../../../../common/components/stepper/custom_linear_step_indicator.dart';
 import 'pages/projectSuccessfullyPage/pages/project_successfully_page.dart';
 
 class MainAddNewProjectPage extends BaseStatelessWidget {

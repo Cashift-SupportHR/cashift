@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/punishments/presentation/punishments/pages/punishments_screen.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../domain/entities/punishment.dart';
 import '../bloc/punishments_cubit.dart';
 

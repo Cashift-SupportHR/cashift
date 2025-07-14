@@ -6,7 +6,7 @@ import 'package:shiftapp/common/domain/entities/salary-definition-request/index.
 import 'package:shiftapp/common/data/models/salary-definition-request/index.dart';
 
  import '../../../../../common/data/repositories/salary-definition-request/salary_definition_repository.dart';
-import '../../../../shared/components/files/files_manager.dart';
+import '../../../../../common/components/files/files_manager.dart';
 
 @Injectable()
 class SalaryDefinitionRequestCubit extends BaseCubit {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../../domain/entities/TermsAndConditionsRequests.dart';
 import '../bloc/term_and_condation_request_cubit.dart';
 import 'term_and_condation_request_screen.dart';

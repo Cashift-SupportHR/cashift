@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/employeesCertificates/data/models/index.dart';
 import 'package:shiftapp/presentation/presentationUser/employeesCertificates/data/repositories/employees_certificates_repository.dart';
 
-import '../../../../../shared/components/files/files_manager.dart';
+import '../../../../../../common/components/files/files_manager.dart';
 
 @Injectable()
 class EmployeesCertificatesCubit extends BaseCubit {

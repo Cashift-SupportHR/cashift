@@ -1,7 +1,7 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../../../common/domain/entities/resume/index.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/map/map_constants.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/map/map_constants.dart';
 import '../../../common/common_state.dart';
 import '../../../common/stream_data_state.dart';
 import '../../../locationservice/locationservice.dart';

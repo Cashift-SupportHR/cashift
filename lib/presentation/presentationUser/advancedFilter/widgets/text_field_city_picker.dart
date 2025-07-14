@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/material_text_field.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../common/domain/entities/resume/index.dart';
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../common/components/bottom_sheet/list_picker_widget.dart';
-import '../../../shared/components/dropdown_filed.dart';
+import '../../../../common/components/dropdown/dropdown_filed.dart';
 import '../../common/common_state.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';

@@ -4,9 +4,9 @@ import '../../../../../../../../common/domain/entities/shared/date_formatter.dar
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/image_builder.dart';
-import '../../../../../../../shared/components/material_text_field.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/image_builder.dart';
+import '../../../../../../../../common/components/material_text_field.dart';
 
 ///  Created by harbey on 5/16/2023.
 class TextFieldTime extends BaseStatelessWidget {

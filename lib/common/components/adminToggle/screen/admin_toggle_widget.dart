@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 
  import '../../../domain/entities/account/user.dart';
 import '../../../../main_index.dart';
-import '../../../../presentation/shared/components/base_stateless_widget.dart';
+import '../../base/base_stateless_widget.dart';
 
 class AdminToggleWidget extends BaseStatelessWidget {
   final Function() onAction;

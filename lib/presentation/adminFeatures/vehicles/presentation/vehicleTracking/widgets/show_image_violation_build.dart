@@ -7,7 +7,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/data/models/vehicle_event_picture_prams.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/files_preview/pages/files_preview_screen.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../domain/entities/vehicleTraking.dart';
 import '../bloc/vehicles_tracking_cubit.dart';
 

@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/attendance/overtimeAttend
 import 'package:shiftapp/presentation/presentationUser/attendance/overtimeAttendance/page/overtime_attendance_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/shared_widgets.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 class OvertimeAttendancePage extends BaseBlocWidget<
     Initialized<AttendanceShiftDto>, OvertimeAttendanceCubit> {

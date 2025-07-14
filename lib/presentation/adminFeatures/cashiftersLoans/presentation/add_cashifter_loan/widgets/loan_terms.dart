@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
 import '../../../../../shared/models/common_list_item_dto.dart';
 
 class LoanTermsList extends StatelessWidget {

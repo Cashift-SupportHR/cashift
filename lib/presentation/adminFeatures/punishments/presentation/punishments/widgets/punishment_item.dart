@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
-import 'package:shiftapp/presentation/shared/components/texts/list_row_texts.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/texts/list_row_texts.dart';
 
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/divider/custom_divider.dart';
-import '../../../../../shared/components/options_menu_button.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/divider/custom_divider.dart';
+import '../../../../../../common/components/options_menu_button.dart';
 import '../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../domain/entities/punishment.dart';
 import '../../../domain/entities/punishments_status.dart';

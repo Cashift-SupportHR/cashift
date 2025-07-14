@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../common/data/repositories/advancedFilter/select_model.dart';
-import '../../../shared/components/dropdown_filed.dart';
-import '../../../shared/components/image_builder.dart';
+import '../../../../common/components/dropdown/dropdown_filed.dart';
+import '../../../../common/components/image_builder.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';
 

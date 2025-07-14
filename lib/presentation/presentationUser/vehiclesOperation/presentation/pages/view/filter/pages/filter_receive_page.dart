@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/pages/view/filter/pages/filter_receive_screen.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../../../../../../adminFeatures/usersManagement/domain/entities/company.dart';
 import '../../../../../../common/common_state.dart';

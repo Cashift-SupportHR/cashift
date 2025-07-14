@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/decorations/decorations.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../core/services/routes.dart';
@@ -13,7 +13,7 @@ import '../../../../common/domain/entities/jobs/index.dart';
 
 import '../../../../utils/app_utils.dart';
 import '../../../../common/components/buttons/app_outline_button_icon.dart';
-import '../../../shared/components/dialogs_manager.dart';
+import '../../../../common/components/dialogs_manager.dart';
 import '../../../shared/home/pages/home_screen.dart';
 import '../../appliedoffers/details/applied_offer_details_screen_v2.dart';
 import '../../resources/colors.dart';

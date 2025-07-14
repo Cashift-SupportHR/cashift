@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
-import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/texts/list_row_texts_icons.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../core/services/routes.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/image_builder.dart';
-import '../../../../../shared/components/options_menu_button.dart';
-import '../../../../../shared/components/texts/read_more_text.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/image_builder.dart';
+import '../../../../../../common/components/options_menu_button.dart';
+import '../../../../../../common/components/texts/read_more_text.dart';
 import '../../../domain/entities/user_management.dart';
 import '../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../addNewUser/pages/add_new_user_page.dart';

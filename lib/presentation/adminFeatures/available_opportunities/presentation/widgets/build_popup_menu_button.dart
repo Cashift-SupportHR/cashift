@@ -3,12 +3,12 @@ import 'package:shiftapp/presentation/adminFeatures/addOpportunity/presentations
 import 'package:shiftapp/presentation/adminFeatures/available_opportunities/presentation/widgets/cancel_opportunity_widget_builder.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/underline_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../shared/domain/entities/opportunities/opportunity.dart';
 import '../addopportunityemployee/pages/add_employee_for_opportunity_page.dart';
 

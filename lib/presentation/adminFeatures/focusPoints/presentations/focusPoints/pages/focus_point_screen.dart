@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/dialogs_manager.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/dialogs_manager.dart';
 import '../../../domain/entities/focus_point.dart';
 import '../widgets/focus_point_item.dart';
 

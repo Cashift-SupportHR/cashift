@@ -5,9 +5,9 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/app_cupertino_button.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/helper_widgets.dart';
+import '../../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/helper_widgets.dart';
 
 class DatePickerAttendance extends BaseStatelessWidget {
   final Function(String, String)? onChanged;

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 
 import '../../../../../common/domain/entities/shared/date_formatter.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 import '../../../resources/constants.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/helper_widgets.dart';
-import '../../../../shared/components/underline_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/helper_widgets.dart';
+import '../../../../../common/components/underline_widget.dart';
 import 'add_absence_widget_builder.dart';
 
 class AttendanceInfoCardWidget extends BaseStatelessWidget {

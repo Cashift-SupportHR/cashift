@@ -3,9 +3,9 @@ import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../common/data/models/add-address/address.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/image_builder.dart';
-import '../../../../shared/components/outlint_button.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/image_builder.dart';
+import '../../../../../common/components/outlint_button.dart';
 import '../../../resources/constants.dart';
 
 class AddressItemWidget extends BaseStatelessWidget {

@@ -4,11 +4,11 @@ import 'package:shiftapp/presentation/presentationUser/joboffers/jobs_list/jobs_
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/jobs_slider_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
 
 import '../../../../../main_index.dart';
-import '../../../../shared/components/loading_widget.dart';
+import '../../../../../common/components/loading_widget.dart';
 
 
 class OpportunitySlider extends BaseStatelessWidget {

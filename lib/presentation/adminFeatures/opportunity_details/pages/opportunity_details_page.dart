@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/opportunity_details/bloc/opportunity_details_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 
 import '../../addOpportunity/presentations/pages/add_new_opportunity_page.dart';
 import '../../shared/domain/entities/opportunities/OpportunityDetailsData.dart';

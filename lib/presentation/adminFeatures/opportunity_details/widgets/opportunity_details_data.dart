@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
-import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
+import 'package:shiftapp/common/components/texts/row_rich_texts.dart';
+import 'package:shiftapp/common/components/underline_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../common/domain/entities/shared/date_formatter.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/circular_percent_widget.dart';
-import '../../../shared/components/curancy_widget.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/texts/icon_double_text.dart';
-import '../../../shared/components/texts/list_row_texts_icons_v2.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/circular_percent_widget.dart';
+import '../../../../common/components/curancy_widget.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/texts/icon_double_text.dart';
+import '../../../../common/components/texts/list_row_texts_icons_v2.dart';
 import '../../shared/domain/entities/opportunities/OpportunityDetailsData.dart';
 import '../applied_details/pages/Applicants/applied_page.dart';
 import 'applied_opportunity_details_widget.dart';

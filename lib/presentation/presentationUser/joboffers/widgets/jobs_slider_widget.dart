@@ -3,7 +3,7 @@ import 'package:shiftapp/common/domain/entities/job_offers/job_offer_dto.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/job_offer_item_widget.dart';
 
 
-import '../../../shared/components/base_widget.dart';
+import '../../../../common/components/base/base_widget.dart';
 
 class JobsSliderWidget extends BaseWidget{
   final List<JobOfferDto> offers ;

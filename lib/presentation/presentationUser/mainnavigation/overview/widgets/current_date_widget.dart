@@ -4,7 +4,7 @@ import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/generated/assets.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../../utils/app_utils.dart';
 import '../../../../../common/components/adminToggle/screen/admin_toggle_builder.dart';

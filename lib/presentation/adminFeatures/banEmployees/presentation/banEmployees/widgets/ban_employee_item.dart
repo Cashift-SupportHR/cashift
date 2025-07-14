@@ -4,11 +4,11 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import '../../../../../../core/services/routes.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
 import '../../../../../../common/components/base/user_info_widget.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/options_menu_button.dart';
-import '../../../../../shared/components/texts/list_row_texts.dart';
-import '../../../../../shared/components/texts/text_value_ratting.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/options_menu_button.dart';
+import '../../../../../../common/components/texts/list_row_texts.dart';
+import '../../../../../../common/components/texts/text_value_ratting.dart';
 import '../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../domain/entities/ban_employee.dart';
 import '../../../domain/entities/ban_employee_constants.dart';

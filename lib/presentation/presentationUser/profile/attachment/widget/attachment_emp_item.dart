@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../../../utils/app_utils.dart';
 import '../../../../adminFeatures/employees/data/models/requirement_attachment_prams.dart';
 import '../../../../adminFeatures/employees/domain/entities/AttachmentsEmp.dart';
-import '../../../../shared/components/app_cupertino_button.dart';
-import '../../../../shared/components/decorations/decorations.dart';
+import '../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../common/components/decorations/decorations.dart';
 
 class AttachmentEmployeeItem extends BaseStatelessWidget {
   File? images;

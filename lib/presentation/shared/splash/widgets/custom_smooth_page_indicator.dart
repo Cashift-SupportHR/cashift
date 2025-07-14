@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 
 
 class CustomSmoothPageIndicator extends BaseStatelessWidget {

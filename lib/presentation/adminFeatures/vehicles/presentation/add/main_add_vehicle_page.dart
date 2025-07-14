@@ -4,11 +4,11 @@ import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pa
 import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/basicVehicleInformation/basic_vehicle_info_page.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/covenantsVehicles/view/covenants_vehicles_page.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/plateLicenseInformation/plate_license_info_page.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../presentationUser/common/common_state.dart';
-import '../../../../shared/components/stepper/custom_linear_step_indicator.dart';
+import '../../../../../common/components/stepper/custom_linear_step_indicator.dart';
 import '../../data/models/add_vehicle_params.dart';
 import '../../domain/entities/index.dart';
 

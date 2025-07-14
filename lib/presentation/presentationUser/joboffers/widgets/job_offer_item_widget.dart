@@ -5,16 +5,16 @@ import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/job_offers_widget_helper.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/curancy_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
-import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
-import 'package:shiftapp/presentation/shared/components/shapes/rounded_shape.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/curancy_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/material_text.dart';
+import 'package:shiftapp/common/components/outlint_button.dart';
+import 'package:shiftapp/common/components/shapes/rounded_shape.dart';
 
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/base_widget.dart';
-import '../../../shared/components/page_slider_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/base/base_widget.dart';
+import '../../../../common/components/page_slider_widget.dart';
 import '../../mainnavigation/overview/widgets/slider_widget.dart';
 
 class JobOfferItemWidget extends BaseStatelessWidget {

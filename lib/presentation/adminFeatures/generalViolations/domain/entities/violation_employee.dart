@@ -1,5 +1,5 @@
 
-import '../../../../shared/components/index.dart';
+import '../../../../../common/components/index.dart';
 import '../../data/models/violation_employee_dto.dart';
 
 class ViolationEmployee {

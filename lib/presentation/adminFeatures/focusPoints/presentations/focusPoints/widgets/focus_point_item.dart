@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
 import '../../../../../../core/services/routes.dart';
 import '../../../../../../common/domain/entities/shared/date_formatter.dart';
@@ -7,12 +7,12 @@ import '../../../../../../utils/app_icons.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../../../presentationUser/workerWorkPlaces/widgets/point_name_and_status.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/divider/divider_vertical.dart';
-import '../../../../../shared/components/icons/icon_text.dart';
-import '../../../../../shared/components/options_menu_button.dart';
-import '../../../../../shared/components/texts/icon_double_text.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/divider/divider_vertical.dart';
+import '../../../../../../common/components/icons/icon_text.dart';
+import '../../../../../../common/components/options_menu_button.dart';
+import '../../../../../../common/components/texts/icon_double_text.dart';
 import '../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../domain/entities/focus_point.dart';
 import '../../edit/edit_covenant_received_page.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/common/domain/entities/job_offers/job_offer_dto.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/job_offer_item_widget.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../core/services/routes.dart';
 import '../job_offer_details/job_offer_details_page.dart';

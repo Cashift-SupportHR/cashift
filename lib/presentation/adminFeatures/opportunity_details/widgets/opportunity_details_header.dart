@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/image_builder.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/image_builder.dart';
 import '../../shared/domain/entities/opportunities/OpportunityDetailsData.dart';
 
 class OpportunityDetailsHeader extends StatelessWidget {

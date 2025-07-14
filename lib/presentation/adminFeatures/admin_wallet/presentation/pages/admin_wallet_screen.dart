@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/adminFeatures/admin_wallet/presentation/wi
 
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 
 import '../../data/models/admin_wallet_prams.dart';
 import '../../domain/entities/admin_wallet.dart';

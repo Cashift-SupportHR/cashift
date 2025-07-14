@@ -6,9 +6,9 @@ import 'package:vibration/vibration.dart';
 
 import '../../../../common/data/models/workerWorkPlaces/index.dart';
  import '../../../../common/domain/entities/shared/date_formatter.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/icons/icon_text.dart';
-import '../../../shared/components/texts/underline_text.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/icons/icon_text.dart';
+import '../../../../common/components/texts/underline_text.dart';
 import '../../common/common_state.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';

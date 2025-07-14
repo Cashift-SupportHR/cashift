@@ -5,9 +5,9 @@ import 'package:shiftapp/presentation/adminFeatures/di/injector.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/geofence/dialog_background_service.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
-import 'package:shiftapp/presentation/shared/components/user_notifier_widget.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/user_notifier_widget.dart';
 
 import '../../../../main_index.dart';
 import '../../../../common/components/adminToggle/cubit/admin_toggle_cubit.dart';

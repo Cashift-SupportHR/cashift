@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../data/models/edit_vehicle_zone_lat_lng_params.dart';
 import '../../../domain/entities/vehicle_zone.dart';
 import '../widgets/vehicle_zone_item.dart';

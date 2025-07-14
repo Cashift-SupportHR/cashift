@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../../common/data/models/workerWorkPlaces/index.dart';
 import '../../../../core/services/routes.dart';
-import '../../../shared/components/base_widget_bloc.dart';
+import '../../../../common/components/base/base_widget_bloc.dart';
 import '../../appliedoffers/pages/qrcode_screen.dart';
 import '../../common/common_state.dart';
 import '../bloc/worker_work_places_cubit.dart';

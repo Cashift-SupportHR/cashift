@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/common/domain/entities/bankaccount/electronic_wallet.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/slide_animation.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/slide_animation.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/add_phone_wallet/bloc/phone_wallet_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/add_phone_wallet/page/add_phone_wallet_page.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/phone_wallets/pages/phone_wallets_screen.dart';

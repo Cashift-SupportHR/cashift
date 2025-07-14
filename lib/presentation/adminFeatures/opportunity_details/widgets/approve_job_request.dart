@@ -4,12 +4,12 @@ import '../../../../utils/validate.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
 import '../../../presentationUser/resume/widgets/selectable__widgets.dart';
-import '../../../shared/components/app_cupertino_button.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/material_text_field.dart';
-import '../../../shared/components/outlint_button.dart';
-import '../../../shared/components/texts/row_rich_texts.dart';
-import '../../../shared/components/underline_widget.dart';
+import '../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/material_text_field.dart';
+import '../../../../common/components/outlint_button.dart';
+import '../../../../common/components/texts/row_rich_texts.dart';
+import '../../../../common/components/underline_widget.dart';
 import '../../shared/data/models/approve_job_request_params.dart';
 import '../../shared/domain/entities/opportunities/opportunity_details.dart';
 

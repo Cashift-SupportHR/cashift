@@ -10,8 +10,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/currentTourMap/tour_history/pages/tour_history_page.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/presentation/startTour/pages/start_tour_page.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
-import 'package:shiftapp/presentation/shared/components/text_field/text_field_search.dart';
+import 'package:shiftapp/common/components/index.dart';
+import 'package:shiftapp/common/components/text_field/text_field_search.dart';
 
 import '../../../../../../../main_index.dart';
 import '../../../../../../../utils/app_icons.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../data/models/fetch_emp_map_prams.dart';
 import '../../bloc/filter_emp_map_state.dart';
 import '../../bloc/filter_employee_map_cubit.dart';

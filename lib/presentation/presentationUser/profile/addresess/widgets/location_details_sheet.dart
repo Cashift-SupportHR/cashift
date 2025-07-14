@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import '../../../../shared/components/app_cupertino_button.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/material_text_field.dart';
+import '../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/material_text_field.dart';
 import '../../../common/common_state.dart';
 import '../../../map_picker/widgets/map_picker_item.dart';
 import '../../../resources/colors.dart';

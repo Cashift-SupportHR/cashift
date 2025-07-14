@@ -3,8 +3,8 @@ import 'package:shiftapp/common/domain/entities/jobs/job_details.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/bloc/job_offers_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/job_offer_details/job_offer_details_screen.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 
 import '../../../../core/services/routes.dart';
 import '../../../../common/domain/entities/job_offers/index.dart';

@@ -6,8 +6,8 @@ import 'package:shiftapp/presentation/shared/check_face_recognation/page/check_f
 import '../../../../common/data/models/service/service_model.dart';
 import '../../../../core/services/routes.dart';
 import '../../../presentationUser/resources/colors.dart';
-import '../../components/base_stateless_widget.dart';
-import '../../components/underline_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/underline_widget.dart';
 
 class ServicesItem extends BaseStatelessWidget {
   final List<ServiceModel> services;

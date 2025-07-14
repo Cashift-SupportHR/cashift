@@ -3,8 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:shiftapp/generated/assets.dart';
   import 'package:shiftapp/presentation/presentationUser/profile/view/widgets/profile_item_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../core/services/routes.dart';
 

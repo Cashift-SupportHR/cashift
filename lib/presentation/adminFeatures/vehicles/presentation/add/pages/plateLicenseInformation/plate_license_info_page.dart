@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/plateLicenseInformation/plate_license_info_screen.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/models/common_list_item.dart';
 
 import '../../../../../../presentationUser/common/common_state.dart';

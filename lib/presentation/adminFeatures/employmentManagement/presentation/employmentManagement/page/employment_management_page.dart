@@ -3,9 +3,9 @@ import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
 import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
-import '../../../../../shared/components/tabview/tab_bar_view_widget.dart';
-import '../../../../../shared/components/tabview/tab_bar_view_widget_line.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
+import '../../../../../../common/components/tabview/tab_bar_view_widget.dart';
+import '../../../../../../common/components/tabview/tab_bar_view_widget_line.dart';
 import '../../../domain/entities/employee_data.dart';
 import '../bloc/employment_management_cubit.dart';
 import 'employment_management_screen.dart';

@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/common/domain/entities/bankaccount/bank_account_info.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/material_text_field.dart';
 // for the utf8.encode method
 class BankAccountInfoScreen extends BaseStatelessWidget {
 

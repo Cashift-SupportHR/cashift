@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/app_cupertino_button.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
 import '../../../domain/entities/notification_type_code.dart';
 
 ///  Created by harbey on 12/3/2023.

@@ -4,9 +4,9 @@ import 'package:shiftapp/common/data/exceptions/empty_list_exception.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/error_handler_widget.dart';
-import '../../../../../shared/components/pagination/custom_footer_builder.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/error_handler_widget.dart';
+import '../../../../../../common/components/pagination/custom_footer_builder.dart';
 import '../../../data/models/add_block_employee_params.dart';
 import '../../../domain/entities/employee_data.dart';
 import '../../../domain/entities/popup_employment_management.dart';

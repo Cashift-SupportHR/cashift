@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/tabview/tab_bar_view_widget.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/tabview/tab_bar_view_widget.dart';
 import '../../domain/entities/pledge_generalization_constants.dart';
 import 'pledges_and_generalization_page.dart';
 

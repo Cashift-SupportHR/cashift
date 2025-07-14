@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../../../../utils/app_icons.dart';
 import '../../../../presentationUser/resources/constants.dart';
-import '../../../../shared/components/index.dart';
+import '../../../../../common/components/index.dart';
 import '../../../../shared/models/common_list_item.dart';
 
 class UserRequestTermsBottomSheet extends BaseStatelessWidget {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
 
 import '../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../common/domain/entities/workerWorkPlaces/index.dart';
 import '../../../../utils/app_icons.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/stepper/custom_stepper.dart';
-import '../../../shared/components/stepper/stepper_model.dart';
-import '../../../shared/components/texts/underline_text.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/stepper/custom_stepper.dart';
+import '../../../../common/components/stepper/stepper_model.dart';
+import '../../../../common/components/texts/underline_text.dart';
 import '../../common/common_state.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';

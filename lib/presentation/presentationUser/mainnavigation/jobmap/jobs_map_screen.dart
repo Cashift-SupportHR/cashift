@@ -13,12 +13,12 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:flutter/foundation.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 import 'package:sizer/sizer.dart';
 import 'dart:ui' as ui;
 
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import 'Place.dart';
 
 class MapScreen extends StatelessWidget {

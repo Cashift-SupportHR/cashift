@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/components/base/user_info_widget.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
 
 import '../../../utils/app_icons.dart';
 import '../../../presentation/presentationUser/resources/colors.dart';

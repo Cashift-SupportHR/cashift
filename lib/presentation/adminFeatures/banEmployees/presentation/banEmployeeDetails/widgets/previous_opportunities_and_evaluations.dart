@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/texts/text_value_ratting.dart';
+import 'package:shiftapp/common/components/texts/text_value_ratting.dart';
 
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/texts/text_value.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/texts/text_value.dart';
 import '../../../domain/entities/job_evaluations_employee.dart';
 
 ///  Created by harbey on 8/5/2023.

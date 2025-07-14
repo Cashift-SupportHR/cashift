@@ -3,7 +3,7 @@
 
 import '../../../../../../../../../core/services/routes.dart';
 import '../../../../../../../../../utils/app_utils.dart';
-import '../../../../../../../../shared/components/index.dart';
+import '../../../../../../../../../common/components/index.dart';
 import '../../../../../../../common/common_state.dart';
 import '../../../../../../../resources/colors.dart';
 import '../../../../../../../resources/constants.dart';

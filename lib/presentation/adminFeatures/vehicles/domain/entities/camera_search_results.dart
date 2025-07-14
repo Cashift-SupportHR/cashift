@@ -2,7 +2,7 @@ import '../../../../../config.dart';
 import '../../../../../common/data/datasources/remote/remote_constants.dart';
 import '../../../../../main_index.dart';
 import '../../../../../utils/app_icons.dart';
-import '../../../../shared/components/texts/list_row_texts_icons_v2.dart';
+import '../../../../../common/components/texts/list_row_texts_icons_v2.dart';
 import '../../data/models/camera_search_results_dto.dart';
 
 class CameraSearchResults {

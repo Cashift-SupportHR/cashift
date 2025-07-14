@@ -2,16 +2,16 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
 
 import '../../../../../common/domain/entities/account/registered_face.dart';
 import '../../../../../common/domain/entities/account/remote_file.dart';
 import '../../../../../common/domain/entities/account/user.dart';
 import '../../../../../utils/app_icons.dart';
-import '../../../../shared/components/app_cupertino_button.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/texts/list_row_texts_icons.dart';
+import '../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/texts/list_row_texts_icons.dart';
 import '../../facerecognation/faces_matching.dart';
 import '../../../salarydefinitionrequest/requests/widgets/warning_widget.dart';
 import '../widgets/select_face_recognition.dart';

@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/favoriteprojects/bloc/fav
 import 'package:shiftapp/presentation/presentationUser/favoriteprojects/pages/favorite_project_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 class FavoriteProjectsPage

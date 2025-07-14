@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/main_index.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
-import '../../../../../shared/components/underline_widget.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
+import '../../../../../../common/components/underline_widget.dart';
 import '../../../../../shared/models/common_list_item.dart';
 import '../../../data/models/action_follow_up_up_maintenance_prams.dart';
 

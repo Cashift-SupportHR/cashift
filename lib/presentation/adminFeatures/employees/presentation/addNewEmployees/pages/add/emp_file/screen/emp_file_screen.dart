@@ -1,7 +1,7 @@
 import 'dart:io';
 
  import 'package:flutter/material.dart';
- import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+ import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../../../common/components/buttons/row_buttons.dart';

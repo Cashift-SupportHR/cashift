@@ -12,7 +12,7 @@ import 'package:uuid/uuid.dart';
 import '../../../../../presentationUser/locationservice/locationservice.dart';
 import '../../../../../presentationUser/map_picker/widgets/map_picker_item.dart';
 import '../../../../../presentationUser/map_picker/widgets/map_prediction.dart';
-import '../../../../../shared/components/index.dart';
+import '../../../../../../common/components/index.dart';
 
 
 @Injectable()

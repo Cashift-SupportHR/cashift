@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/trackAttendanceDeparture/presentation/details/pages/track_attendance_departure_details_screen.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../domain/entities/RequestAttendanceDepartureDetails.dart';
 import '../../../domain/entities/track_attendance_departure.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 
-import '../../../../../../../../shared/components/index.dart';
+import '../../../../../../../../../common/components/index.dart';
 import '../../../../../../data/models/index.dart';
 import '../../../../../../domain/entities/index.dart';
 

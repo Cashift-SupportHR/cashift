@@ -5,15 +5,15 @@ import 'package:shiftapp/presentation/presentationUser/appliedoffers/details/wid
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/common/components/base/user_info_widget.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import '../../../../common/domain/entities/appliedOffers/index.dart';
 import '../../../../common/domain/entities/shift/index_shift.dart';
 import '../../../../utils/app_icons.dart';
-import '../../../shared/components/app_cupertino_button.dart';
-import '../../../shared/components/decorations/decorations.dart';
-import '../../../shared/components/map/map_widget.dart';
-import '../../../shared/components/outlint_button.dart';
+import '../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../common/components/decorations/decorations.dart';
+import '../../../../common/components/map/map_widget.dart';
+import '../../../../common/components/outlint_button.dart';
 import '../../appliedoffers/details/widgets/decoration_container.dart';
 import 'widgets/job_details_applied_offer_details.dart';
 

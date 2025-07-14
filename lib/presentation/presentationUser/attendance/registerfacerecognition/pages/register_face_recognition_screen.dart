@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:shiftapp/generated/assets.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../shared/components/app_cupertino_button.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../common/common_state.dart';
 import '../../facerecognation/faces_matching.dart';
 import '../../../resources/colors.dart';

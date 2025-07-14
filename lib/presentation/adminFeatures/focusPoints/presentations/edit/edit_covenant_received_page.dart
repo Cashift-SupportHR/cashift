@@ -1,4 +1,4 @@
-import '../../../../shared/components/stepper/easy_step.dart';
+import '../../../../../common/components/stepper/easy_step.dart';
 import '../add_focus_point/pages/covenant_received/base_covenant_received_page.dart';
 
 class EditCovenantReceivedPage extends BaseCovenantReceivedPage {

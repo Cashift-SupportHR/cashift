@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/components/buttons/row_small_button.dart';
 
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/material_text_field.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/material_text_field.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 import '../../../salarydefinitionrequest/requests/widgets/warning_widget.dart';

@@ -1,4 +1,4 @@
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../common/domain/entities/resume/index.dart';
 import '../../../common/stream_data_state.dart';
 import '../../../resources/colors.dart';

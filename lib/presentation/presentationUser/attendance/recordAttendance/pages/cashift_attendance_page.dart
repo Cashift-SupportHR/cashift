@@ -7,18 +7,18 @@ import 'package:shiftapp/common/domain/entities/attendancerecoginatin/register_a
 import 'package:shiftapp/common/domain/entities/attendancerecoginatin/register_attendance_request_shift.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
-import 'package:shiftapp/presentation/shared/components/stepper/easy_step.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/stepper/easy_step.dart';
 
 import '../../../../../common/data/models/attendance/attendance_config_dto.dart';
 import '../../../../../common/domain/entities/attendancerecoginatin/attendance_model.dart';
 import '../../../../../common/domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';
 import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../common/domain/entities/shift/applied_offer.dart';
-import '../../../../shared/components/error_handler_widget.dart';
-import '../../../../shared/components/map/current_location_realtime_map.dart';
+import '../../../../../common/components/error_handler_widget.dart';
+import '../../../../../common/components/map/current_location_realtime_map.dart';
 import '../../../locationservice/locationservice.dart';
 import '../../registerfacerecognition/attendance_params.dart';
 import '../../../resources/colors.dart';

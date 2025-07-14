@@ -1,5 +1,5 @@
 
-import '../../../../shared/components/dropdown_filed.dart';
+import '../../../../../common/components/dropdown/dropdown_filed.dart';
 import '../../data/models/shifts_by_project_dto.dart';
 
 class ShiftsByProject {

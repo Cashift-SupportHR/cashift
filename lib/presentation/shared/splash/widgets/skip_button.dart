@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 
 import '../../../../core/services/routes.dart';
 import '../../../presentationUser/resources/colors.dart';
-import '../../components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../home/pages/home_screen.dart';
 
 class SkipButton extends BaseStatelessWidget {

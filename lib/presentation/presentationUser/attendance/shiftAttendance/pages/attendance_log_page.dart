@@ -6,8 +6,8 @@ import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendanc
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/attendance_log_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/month_picker_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/slide_animation.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/slide_animation.dart';
 
 enum AttendanceRequestType {
   attend,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../common/components/base/user_info_widget.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';
 import '../../../domain/entities/employees_certificates.dart';

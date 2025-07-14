@@ -3,8 +3,8 @@ import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/details/applied_offer_details_screen_v2.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/widgets/shift_base_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/slide_animation.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/slide_animation.dart';
 
 class CurrentShiftPage extends ShiftBaseWidget<Initialized<AppliedOffer>> {
    bool registered = false;

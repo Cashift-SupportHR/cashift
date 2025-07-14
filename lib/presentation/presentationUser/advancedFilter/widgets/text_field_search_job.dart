@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/material_text_field.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';
 import '../pages/advanced_filter_sheet_page.dart';

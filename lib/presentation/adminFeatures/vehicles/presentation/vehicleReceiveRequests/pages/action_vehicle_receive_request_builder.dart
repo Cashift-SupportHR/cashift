@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/main_index.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/vehiclesOperation/domain/entities/receive_vehicle_details.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
-import '../../../../../shared/components/tabview/tab_bar_view_widget.dart';
-import '../../../../../shared/components/text_field/text_field_search.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
+import '../../../../../../common/components/tabview/tab_bar_view_widget.dart';
+import '../../../../../../common/components/text_field/text_field_search.dart';
 import '../../../data/models/action_vehicle_receive_request_params.dart';
 import '../../../domain/entities/vehicle_receive_request.dart';
 import '../bloc/action_vehicle_receive_request_cubit.dart';

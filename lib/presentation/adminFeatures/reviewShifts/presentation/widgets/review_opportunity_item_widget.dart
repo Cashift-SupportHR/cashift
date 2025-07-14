@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/decorations/decorations.dart';
+import 'package:shiftapp/common/components/index.dart';
 import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../data/models/complet_opportunity_dto.dart';
 import '/presentation/adminFeatures/available_opportunities/presentation/widgets/work_dates.dart';
 import '/presentation/presentationUser/resources/colors.dart';
 import '/presentation/presentationUser/resources/constants.dart';
-import '/presentation/shared/components/base_stateless_widget.dart';
-import '/presentation/shared/components/image_builder.dart';
-import '/presentation/shared/components/outlint_button.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/image_builder.dart';
+import '../../../../../common/components/outlint_button.dart';
 import '/utils/app_icons.dart';
 
 import '../../data/models/completed_opportunity_dto.dart';

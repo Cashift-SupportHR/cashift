@@ -7,9 +7,9 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/ui_constanst.dart';
 
-import 'package:shiftapp/presentation/shared/components/material_text.dart';
+import 'package:shiftapp/common/components/material_text.dart';
 
-import '../../../shared/components/base_widget.dart';
+import '../../../../common/components/base/base_widget.dart';
 
 class CollectCashItemWidget extends BaseWidget {
   final DuesItem jobCash;

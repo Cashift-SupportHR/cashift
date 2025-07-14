@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../domain/entities/focus_point.dart';
 import '../bloc/focus_point_cubit.dart';
 import 'focus_point_screen.dart';

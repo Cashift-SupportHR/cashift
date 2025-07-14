@@ -4,7 +4,7 @@ import '../../../../../presentationUser/advancedFilter/widgets/text_field_search
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
 import '../../../../../../common/components/base/stream_state_widget_v2.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../domain/entities/track_attendance_departure.dart';
 import '../bloc/track_attendance_departure_cubit.dart';
 import 'track_attendance_departure_screen.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/components/base/stream_state_widget_v2.dart';
-import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
+import 'package:shiftapp/common/components/error_handler_widget.dart';
 
 import '../../../../../common/data/exceptions/empty_list_exception.dart';
 import '../../../../presentationUser/common/common_state.dart';

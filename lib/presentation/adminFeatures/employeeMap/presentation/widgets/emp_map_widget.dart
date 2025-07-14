@@ -2,7 +2,7 @@
 import 'package:flutter/services.dart';
 
  import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:shiftapp/presentation/shared/components/index.dart';
+import 'package:shiftapp/common/components/index.dart';
 
 // ignore: unused_import
 import '../../domain/entities/EmpMap.dart';

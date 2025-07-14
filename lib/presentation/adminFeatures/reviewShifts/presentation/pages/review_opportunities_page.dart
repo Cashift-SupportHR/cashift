@@ -2,14 +2,14 @@ import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/facerecognation/index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import '../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
-import '../../../../shared/components/pagination/pagination_widget.dart';
-import '../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
+import '../../../../../common/components/pagination/pagination_widget.dart';
+import '../../../../../common/components/tabview/dynamic_tab_bar_view.dart';
 import '../../data/models/complet_opportunity_dto.dart';
 import '../../data/models/review_shiftsprams.dart';
 import '../bloc/review_opportunities_cubit.dart';
 import 'review_opportunities_list_screen.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/text_field/text_field_search.dart';
+import 'package:shiftapp/common/components/base/base_widget_bloc.dart';
+import 'package:shiftapp/common/components/text_field/text_field_search.dart';
 
 class ReviewOpportunitiesTabsPage extends BaseBlocWidget<
     Initialized<List<CompletedOpportunityData>>, ReviewOpportunitiesCubit> {

@@ -1,5 +1,5 @@
 import '../../../../../../presentationUser/common/common_state.dart';
-import '../../../../../../shared/components/index.dart';
+import '../../../../../../../common/components/index.dart';
 import '../../../../data/models/index.dart';
 import '../../../../domain/entities/index.dart';
 import '../bloc/vehicle_violation_details_cubit.dart';

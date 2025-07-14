@@ -5,11 +5,11 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import '../../../../../common/data/models/add-address/address_home_dialog_dto.dart';
 import '../../../../../common/domain/entities/required_tasks/in_app_required_task.dart';
 import '../../../../../common/domain/entities/resume/city_item.dart';
-import '../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../../common/data/models/add-address/add_home_location_params.dart';
 import '../../../../../common/components/buttons/row_buttons.dart';
-import '../../../../shared/components/dialogs_manager.dart';
-import '../../../../shared/components/image_builder.dart';
+import '../../../../../common/components/dialogs_manager.dart';
+import '../../../../../common/components/image_builder.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 import '../bloc/add_home_address_cubit.dart';

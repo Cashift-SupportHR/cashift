@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../../../core/services/routes.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
-import '../../../../../shared/components/text_field/text_field_search.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
+import '../../../../../../common/components/text_field/text_field_search.dart';
 import '../../../../salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
 import '../../../data/models/index.dart';
 import '../../../domain/entities/index.dart';

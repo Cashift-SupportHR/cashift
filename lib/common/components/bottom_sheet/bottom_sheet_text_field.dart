@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/common/components/bottom_sheet/list_picker_widget.dart';
-import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
+import 'package:shiftapp/common/components/material_text_field.dart';
 
-import '../../../presentation/shared/components/base_stateless_widget.dart';
+import '../base/base_stateless_widget.dart';
 import '../checkbox/multiple_choice_checkbox.dart';
-import '../../../presentation/shared/components/dropdown_filed.dart';
+import '../dropdown/dropdown_filed.dart';
 
 class BottomSheetTextField extends BaseStatelessWidget {
   final String? title;

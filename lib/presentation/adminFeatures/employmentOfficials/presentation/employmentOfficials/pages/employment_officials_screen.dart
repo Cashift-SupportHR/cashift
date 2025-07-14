@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/dialogs_manager.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/dialogs_manager.dart';
 import '../../../domain/entities/employment_official.dart';
 import '../widgets/employment_officials_item.dart';
 

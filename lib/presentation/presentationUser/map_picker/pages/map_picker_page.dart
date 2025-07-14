@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../../../shared/components/base_widget_bloc.dart';
+import '../../../../common/components/base/base_widget_bloc.dart';
 import '../../common/common_state.dart';
 import '../bloc/map_picker_cubit.dart';
 import '../bloc/map_picker_state.dart';

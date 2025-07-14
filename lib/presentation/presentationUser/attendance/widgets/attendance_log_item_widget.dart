@@ -3,7 +3,7 @@ import 'package:shiftapp/common/domain/entities/attendance/Attendance_log.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/pages/attendance_log_page.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 class AttendanceLogItemWidget extends BaseStatelessWidget {
   final AttendanceLog attendanceLog;

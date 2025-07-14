@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/trackingFocusPoints/pages/tracking_focus_points_sub_tabs.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../domain/entities/focus_points_types.dart';
 import '../bloc/tracking_focus_points_cubit.dart';
 

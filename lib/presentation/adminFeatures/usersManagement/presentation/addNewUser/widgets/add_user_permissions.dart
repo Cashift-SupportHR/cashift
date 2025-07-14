@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/index.dart';
+import '../../../../../../common/components/index.dart';
 import '../../../../../shared/models/common_list_item.dart';
 import '../../../../focusPoints/domain/entities/shifts_by_project.dart';
 import '../../../../focusPoints/presentations/add_focus_point/pages/focus_point_data/widgets/projects_picker.dart';

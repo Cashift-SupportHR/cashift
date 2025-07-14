@@ -8,8 +8,8 @@ import 'package:location/location.dart';
 import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/locationservice/location_service_disabled_exception.dart';
 import 'package:shiftapp/presentation/presentationUser/locationservice/permission_denied_exception.dart';
-import 'package:shiftapp/presentation/shared/components/app_button.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/buttons/app_button.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 
 
 class LocationService {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
 
 import '../../../../shared/domain/entities/opportunities/opportunity.dart';
 import '../../widgets/available_opportunity_itemv2.dart';

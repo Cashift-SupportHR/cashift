@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../../shared/models/common_list_item.dart';
 import '../bloc/tracking_focus_points_cubit.dart';
 import 'tracking_focus_points_screen.dart';

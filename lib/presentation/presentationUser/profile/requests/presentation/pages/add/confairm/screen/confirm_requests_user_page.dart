@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/profile/requests/data/models/confirm_reques_prams.dart';
 
 import '../../../../../../../../../core/services/routes.dart';
-import '../../../../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../../domain/entities/AddRequestConst.dart';
 import '../bloc/confirm_user_cubit.dart';
 import 'confirm_requests_user_screen.dart';

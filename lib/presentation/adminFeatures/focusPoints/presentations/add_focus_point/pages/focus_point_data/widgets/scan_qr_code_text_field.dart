@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
 
 import '../../../../../../../../core/services/routes.dart';
 import '../../../../../../../../utils/app_icons.dart';
@@ -7,10 +7,10 @@ import '../../../../../../../presentationUser/appliedoffers/pages/qrcode_screen.
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../../../shared/components/image_builder.dart';
-import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../../../common/components/image_builder.dart';
+import '../../../../../../../../common/components/text_field/build_text_field_item.dart';
 
 ///  Created by harbey on 5/15/2023.
 class ScanQrCodeTextField extends BaseStatelessWidget {

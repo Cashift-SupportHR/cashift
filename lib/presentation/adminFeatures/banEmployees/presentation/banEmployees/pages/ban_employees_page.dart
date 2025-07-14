@@ -3,11 +3,11 @@ import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
 import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base_widget_bloc.dart';
-import '../../../../../shared/components/error_handler_widget.dart';
-import '../../../../../shared/components/loading_widget.dart';
-import '../../../../../shared/components/pagination/custom_footer_builder.dart';
-import '../../../../../shared/components/tabview/tab_bar_view_widget_line.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
+import '../../../../../../common/components/error_handler_widget.dart';
+import '../../../../../../common/components/loading_widget.dart';
+import '../../../../../../common/components/pagination/custom_footer_builder.dart';
+import '../../../../../../common/components/tabview/tab_bar_view_widget_line.dart';
 import '../../../domain/entities/ban_employee.dart';
 import '../bloc/ban_employees_cubit.dart';
 import 'ban_employees_screen.dart';

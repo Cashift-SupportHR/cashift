@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/pages/uniform_slides_screen.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
 import '../../resources/constants.dart';
 
 class UniformJobList extends BaseStatelessWidget {

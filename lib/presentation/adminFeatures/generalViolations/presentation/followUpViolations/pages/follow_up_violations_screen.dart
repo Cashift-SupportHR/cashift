@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../domain/entities/follow_up_violation.dart';
 import '../widgets/follow_up_violations_item.dart';
 

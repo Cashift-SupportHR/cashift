@@ -4,7 +4,7 @@ import '../../../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../../../core/services/routes.dart';
 import '../../../../../../adminFeatures/available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../../../../adminFeatures/vehicles/data/models/vehicle_traking_details_prams.dart';
-import '../../../../../../shared/components/index.dart';
+import '../../../../../../../common/components/index.dart';
 import '../../../../../resources/colors.dart';
 import '../../../../../resources/constants.dart';
 import '../../../../data/models/mainReceiveVehicleArgument.dart';

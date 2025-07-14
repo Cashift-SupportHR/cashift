@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/common/components/buttons/row_buttons.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../../utils/app_icons.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/index.dart';
 import '../../../data/models/popup_employment_management_dto.dart';
 
 class ResetMobileNumberDialog extends BaseStatelessWidget {

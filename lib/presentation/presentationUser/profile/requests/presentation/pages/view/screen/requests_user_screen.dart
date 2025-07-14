@@ -1,6 +1,6 @@
  import 'package:shiftapp/presentation/presentationUser/profile/requests/presentation/pages/view/widgets/requests_user_item.dart';
 
-import '../../../../../../../shared/components/index.dart';
+import '../../../../../../../../common/components/index.dart';
 import '../../../../domain/entities/RequestsUser.dart';
 
 class RequestsUserScreen extends BaseStatelessWidget {

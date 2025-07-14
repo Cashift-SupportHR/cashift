@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/requests/presentation/pages/add/term_and_condation_request/screen/term_and_condation_request_page.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
 
-import '../../../../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../../data/models/upload_file_request_prams.dart';
 import '../../../../../domain/entities/AddRequestConst.dart';
 import '../bloc/add_file_requests_cubit.dart';

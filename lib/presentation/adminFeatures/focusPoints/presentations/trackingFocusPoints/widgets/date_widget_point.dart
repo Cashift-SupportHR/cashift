@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../common/domain/entities/workerWorkPlaces/focus_point_info.dart';
 import '../../../../../presentationUser/resources/colors.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
 
 class DatesWidgetPoint extends BaseStatelessWidget {
   final FocusPointInfo focusPointInfo;

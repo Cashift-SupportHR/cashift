@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/main_index.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
-import '../../../../../shared/components/tabview/tab_bar_view_widget.dart';
+import '../../../../../../common/components/tabview/tab_bar_view_widget.dart';
 import '../../../domain/entities/users_management_constants.dart';
 import '../../addNewUser/pages/add_new_user_page.dart';
 import 'users_management_page.dart';

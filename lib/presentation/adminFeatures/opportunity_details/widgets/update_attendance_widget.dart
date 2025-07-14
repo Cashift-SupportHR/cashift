@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../../utils/validate.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
-import '../../../shared/components/app_cupertino_button.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/date_time/select_time_widget.dart';
-import '../../../shared/components/drop_down_custom2.dart';
-import '../../../shared/components/underline_widget.dart';
+import '../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/date_time/select_time_widget.dart';
+import '../../../../common/components/drop_down_custom2.dart';
+import '../../../../common/components/underline_widget.dart';
 import '../../shared/data/models/update_attendance_params.dart';
 import '../../shared/domain/entities/opportunities/attendance_status.dart';
 

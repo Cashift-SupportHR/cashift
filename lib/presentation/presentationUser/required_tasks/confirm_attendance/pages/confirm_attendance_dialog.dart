@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
 import 'package:shiftapp/common/components/buttons/row_buttons.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
 
 import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../common/domain/entities/required_tasks/confirm_attendance.dart';
 import '../../../../../utils/app_icons.dart';
-import '../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/texts/list_row_texts_icons.dart';
+import '../../../../../common/components/text_field/build_text_field_item.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/texts/list_row_texts_icons.dart';
 
 class ConfirmAttendanceDialog extends BaseStatelessWidget {
   final ConfirmAttendance data;

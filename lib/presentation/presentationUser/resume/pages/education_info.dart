@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_compon
 import 'package:shiftapp/presentation/presentationUser/resume/pages/resume_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/widgets/base_resume_widget.dart';
 import 'package:shiftapp/common/components/bottom_sheet/list_picker_widget.dart';
-import 'package:shiftapp/presentation/shared/components/dropdown_filed.dart';
+import 'package:shiftapp/common/components/dropdown/dropdown_filed.dart';
 
 class EducationInfoScreen extends BaseResumeWidget<EducationInfo> {
   int? qualificationId;

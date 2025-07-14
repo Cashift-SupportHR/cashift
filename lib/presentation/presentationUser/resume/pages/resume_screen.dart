@@ -11,18 +11,18 @@ import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_compon
 import 'package:shiftapp/presentation/presentationUser/resume/pages/PersonalInfo.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/pages/education_info.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/pages/favoritejobs/pages/favorite_jobs_screen.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/base_widget.dart';
-import 'package:shiftapp/presentation/shared/components/dropdown_filed.dart';
-import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
-import 'package:shiftapp/presentation/shared/components/stepper.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/base/base_widget.dart';
+import 'package:shiftapp/common/components/dropdown/dropdown_filed.dart';
+import 'package:shiftapp/common/components/material_text_field.dart';
+import 'package:shiftapp/common/components/stepper.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 import 'package:shiftapp/common/data/models/resuame/index.dart';
 
  import '../../../../utils/app_icons.dart';
-import '../../../shared/components/datepicker/hijri_calendar.dart';
-import '../../../shared/components/datepicker/hijri_picker.dart';
-import '../../../shared/components/image_builder.dart';
+import '../../../../common/components/datepicker/hijri_calendar.dart';
+import '../../../../common/components/datepicker/hijri_picker.dart';
+import '../../../../common/components/image_builder.dart';
 import 'favorite_times/favorite_times_screen.dart';
 
 class ResumeScreen extends BaseWidget {

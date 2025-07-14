@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/components/divider/divider_vertical.dart';
+import '../../../../common/components/divider/divider_vertical.dart';
 import '../../resources/constants.dart';
 
 class FocusPointFreelanceNameAndType extends StatelessWidget {

@@ -4,10 +4,10 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import '../../../../../../core/services/routes.dart';
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../presentationUser/resources/constants.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../shared/components/image_builder.dart';
-import '../../../../../shared/components/texts/icon_double_text.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../../common/components/decorations/decorations.dart';
+import '../../../../../../common/components/image_builder.dart';
+import '../../../../../../common/components/texts/icon_double_text.dart';
 import '../../../domain/entities/index.dart';
 
 class GeneralViolationScreen extends BaseStatelessWidget {

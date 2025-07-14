@@ -3,11 +3,11 @@ import 'package:shiftapp/common/data/models/workerWorkPlaces/index.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
- import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/decorations/decorations.dart';
+ import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/decorations/decorations.dart';
 import '../../common/common_state.dart';
 
 class DeliveryAndReceiptItem extends BaseStatelessWidget {

@@ -8,13 +8,13 @@ import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/base/app_widgets.dart';
+import 'package:shiftapp/common/components/outlint_button.dart';
 import '../../../../core/services/permission_detector.dart';
-import '../../../shared/components/dialogs_manager.dart';
-import '../../../shared/components/error_handler_widget.dart';
-import '../../../shared/components/helper_widgets.dart';
+import '../../../../common/components/dialogs_manager.dart';
+import '../../../../common/components/error_handler_widget.dart';
+import '../../../../common/components/helper_widgets.dart';
 import 'camera_view.dart';
 
 class QrCode {

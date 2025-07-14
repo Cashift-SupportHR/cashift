@@ -7,12 +7,12 @@ import 'package:shiftapp/presentation/adminFeatures/opportunity_details/pages/op
 import 'package:shiftapp/presentation/adminFeatures/shared/domain/entities/opportunities/opportunity.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
-import 'package:shiftapp/presentation/shared/components/shapes/rounded_shape.dart';
-import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
+import 'package:shiftapp/common/components/base/base_stateless_widget.dart';
+import 'package:shiftapp/common/components/helper_widgets.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/outlint_button.dart';
+import 'package:shiftapp/common/components/shapes/rounded_shape.dart';
+import 'package:shiftapp/common/components/underline_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../core/services/routes.dart';

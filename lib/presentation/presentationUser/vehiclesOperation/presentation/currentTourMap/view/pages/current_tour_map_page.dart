@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
+import 'package:shiftapp/common/components/dialogs_manager.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../../../../../../main_index.dart';
 import '../../../../../common/common_state.dart';
-import '../../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../domain/entities/index.dart';
 import '../bloc/current_tour_map_cubit.dart';
 import '../bloc/current_tour_map_state.dart';

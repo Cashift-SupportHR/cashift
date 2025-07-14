@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 
 import '../../../../common/domain/entities/resume/index.dart';
-import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
  import '../../common/common_state.dart';
 import '../widgets/buttons_actions_widget.dart';
 import '../widgets/custom_range_slider.dart';

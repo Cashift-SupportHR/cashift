@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
+import 'package:shiftapp/common/components/image_builder.dart';
+import 'package:shiftapp/common/components/material_text_field.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
-import '../../../shared/components/app_cupertino_button.dart';
-import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/helper_widgets.dart';
-import '../../../shared/components/radio/radio_grid_list.dart';
+import '../../../../common/components/buttons/app_cupertino_button.dart';
+import '../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../common/components/helper_widgets.dart';
+import '../../../../common/components/radio/radio_grid_list.dart';
 import '../../resources/colors.dart';
 import '../../resources/constants.dart';
 

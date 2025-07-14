@@ -2,7 +2,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 
 import '../../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../../presentationUser/resources/colors.dart';
-import '../../../../../../../../shared/components/index.dart';
+import '../../../../../../../../../common/components/index.dart';
 import '../../../../../../domain/entities/covenant_vehicle.dart';
 import '../../add/add_covenant_vehicle_builder.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/working_document/presentation/terms_conditions_certificate_payment/pages/terms_conditions_certificate_payment_screen.dart';
 
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../../common/common_state.dart';
 import '../../../domain/entities/term_condition_certificate_payment.dart';
 import '../bloc/terms_conditions_certificate_payment_cubit.dart';

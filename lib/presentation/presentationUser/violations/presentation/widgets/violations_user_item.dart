@@ -4,14 +4,14 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
 import 'package:shiftapp/common/components/buttons/row_small_button.dart';
-import 'package:shiftapp/presentation/shared/components/texts/list_row_texts.dart';
-import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
+import 'package:shiftapp/common/components/texts/list_row_texts.dart';
+import 'package:shiftapp/common/components/texts/list_row_texts_icons.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../common/domain/entities/bail_requests/employee_services_status.dart';
-import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/decorations/decorations.dart';
-import '../../../../shared/components/divider/custom_divider.dart';
+import '../../../../../common/components/base/base_stateless_widget.dart';
+import '../../../../../common/components/decorations/decorations.dart';
+import '../../../../../common/components/divider/custom_divider.dart';
 import '../../../bail_requests/widgets/title_icon_services.dart';
 import '../../data/models/violation_user_dto.dart';
 

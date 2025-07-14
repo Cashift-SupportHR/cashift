@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
 
-import '../../../../../shared/components/base_widget_bloc.dart';
+import '../../../../../../common/components/base/base_widget_bloc.dart';
 import '../../../domain/entities/classification.dart';
 import '../bloc/classification_cubit.dart';
 import 'classification_screen.dart';

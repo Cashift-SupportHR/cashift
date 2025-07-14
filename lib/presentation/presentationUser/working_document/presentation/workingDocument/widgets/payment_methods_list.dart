@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/working_document/presentation/workingDocument/widgets/payment_method_item.dart';
-import 'package:shiftapp/presentation/shared/components/texts/underline_text.dart';
+import 'package:shiftapp/common/components/texts/underline_text.dart';
 
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../common/components/bottom_sheet/custom_bottom_sheets.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';

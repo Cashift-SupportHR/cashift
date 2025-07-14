@@ -1,7 +1,7 @@
 
 import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/index.dart';
+import '../../../../../../common/components/index.dart';
 import '../../../../addOpportunity/domain/entities/opportunity_applicant.dart';
 import '../../../../shared/domain/entities/opportunities/OpportunityDetailsData.dart';
 import '../../bloc/applied_details_cubit.dart';

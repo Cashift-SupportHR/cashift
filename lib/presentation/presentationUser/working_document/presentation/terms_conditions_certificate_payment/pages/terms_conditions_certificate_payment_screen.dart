@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
+import 'package:shiftapp/common/components/buttons/app_cupertino_button.dart';
+import 'package:shiftapp/common/components/icons/icon_text.dart';
 
 import '../../../../../../utils/app_icons.dart';
-import '../../../../../shared/components/app_widgets.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../common/components/base/app_widgets.dart';
+import '../../../../../../common/components/base/base_stateless_widget.dart';
 import '../../../../../../common/components/checkbox/warning_check_box_widget.dart';
 import '../../../../common/common_state.dart';
 import '../../../../resources/constants.dart';
