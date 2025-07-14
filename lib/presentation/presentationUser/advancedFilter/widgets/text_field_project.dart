@@ -5,7 +5,7 @@ import 'package:shiftapp/utils/app_icons.dart';
 import '../../../../common/domain/entities/advancedFilter/index.dart';
 import '../../../../common/domain/entities/resume/index.dart';
  import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/bottom_sheet/list_picker_widget.dart';
+import '../../../../common/components/bottom_sheet/list_picker_widget.dart';
 import '../../../shared/components/dropdown_filed.dart';
 import '../../common/common_state.dart';
 import '../../resources/colors.dart';

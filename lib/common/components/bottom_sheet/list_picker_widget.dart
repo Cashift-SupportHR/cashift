@@ -3,11 +3,11 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../base_stateless_widget.dart';
+import '../../../presentation/shared/components/base_stateless_widget.dart';
 import '../checkbox/custom_check_box.dart';
 import '../checkbox/multiple_choice_checkbox.dart';
-import '../dropdown_filed.dart';
-import '../helper_widgets.dart';
+import '../../../presentation/shared/components/dropdown_filed.dart';
+import '../../../presentation/shared/components/helper_widgets.dart';
 
 class ListPickerWidget extends BaseStatelessWidget {
   static showPicker({

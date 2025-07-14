@@ -9,11 +9,11 @@ import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../core/services/routes.dart';
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base/user_info_widget_with_icon.dart';
+import '../../../../../../common/components/base/user_info_widget_with_icon.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/dialogs/block_employee_dialog.dart';
-import '../../../../../shared/components/checkbox/check_box_terms_and_conditions.dart';
-import '../../../../../shared/components/checkbox/warning_check_box_widget.dart';
+import '../../../../../../common/components/checkbox/check_box_terms_and_conditions.dart';
+import '../../../../../../common/components/checkbox/warning_check_box_widget.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/dialogs_manager.dart';
 import '../../../../../shared/components/options_menu_button.dart';

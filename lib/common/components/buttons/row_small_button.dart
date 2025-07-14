@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../presentationUser/resources/colors.dart';
-import '../../../presentationUser/resources/constants.dart';
-import '../app_cupertino_button.dart';
-import '../base_stateless_widget.dart';
-import '../outlint_button.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/presentationUser/resources/constants.dart';
+import '../../../presentation/shared/components/app_cupertino_button.dart';
+import '../../../presentation/shared/components/base_stateless_widget.dart';
+import '../../../presentation/shared/components/outlint_button.dart';
 
 class RowSmallButton extends BaseStatelessWidget {
   final String? textCancel;

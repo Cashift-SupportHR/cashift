@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/bottom_sheet/list_picker_widget.dart';
+import '../../../../../../../../common/components/bottom_sheet/list_picker_widget.dart';
 import '../../../../../../../shared/components/dropdown_filed.dart';
 import '../../../../../domain/entities/index.dart';
 import '../../../../../data/models/index.dart';

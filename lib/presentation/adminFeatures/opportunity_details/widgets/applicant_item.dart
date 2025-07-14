@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/adminFeatures/opportunity_details/widgets/
 import '../../../../utils/app_icons.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
-import '../../../shared/components/base/user_info_widget_with_icon.dart';
+import '../../../../common/components/base/user_info_widget_with_icon.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/dialogs/block_employee_dialog.dart';
 import '../../../shared/components/decorations/decorations.dart';

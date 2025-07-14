@@ -7,8 +7,8 @@ import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 
   import '../../../../utils/app_icons.dart';
 import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/buttons/row_buttons.dart';
-import '../../../shared/components/checkbox/warning_check_box_widget.dart';
+import '../../../../common/components/buttons/row_buttons.dart';
+import '../../../../common/components/checkbox/warning_check_box_widget.dart';
 import '../../../shared/components/divider/divider_vertical.dart';
 import '../../../shared/components/texts/underline_text.dart';
 import '../../resources/colors.dart';

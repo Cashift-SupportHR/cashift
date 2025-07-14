@@ -11,7 +11,7 @@ import '../../../../common/data/models/salary-definition-request/index.dart';
 import '../../../../utils/app_icons.dart';
 import '../../resources/colors.dart';
 import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/buttons/icon_text_button.dart';
+import '../../../../common/components/buttons/icon_text_button.dart';
 import '../../../shared/components/decorations/decorations.dart';
 import '../../../shared/components/files/custom_p_d_f_view.dart';
 import '../../../shared/components/files/files_manager.dart';

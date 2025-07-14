@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../shared/components/app_widgets.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/checkbox/warning_check_box_widget.dart';
+import '../../../../../../common/components/checkbox/warning_check_box_widget.dart';
 import '../../../../common/common_state.dart';
 import '../../../../resources/constants.dart';
 import '../../../domain/entities/term_condition_certificate_payment.dart';

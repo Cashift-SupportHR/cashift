@@ -4,7 +4,7 @@ import 'dart:io';
  import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 
 import '../../../../../../../../presentationUser/resources/colors.dart';
-import '../../../../../../../../shared/components/buttons/row_buttons.dart';
+import '../../../../../../../../../common/components/buttons/row_buttons.dart';
 import '../../../../../../data/models/index.dart';
 import '../../../../../../domain/entities/index.dart';
  import '../widget/emp_file_item.dart';

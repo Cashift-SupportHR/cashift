@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:chewie/chewie.dart';
 import 'package:video_player/video_player.dart';
-import '../../../presentationUser/common/stream_data_state.dart';
+import '../../../presentation/presentationUser/common/stream_data_state.dart';
 
 class HLSPlayerWidget extends StatefulWidget {
   final String url;

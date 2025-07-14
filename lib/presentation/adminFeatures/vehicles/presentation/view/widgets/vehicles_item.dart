@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/shared/components/index.dart';
  import 'package:shiftapp/utils/app_icons.dart';
 import '../../../../../../core/services/routes.dart';
  import '../../../../../../common/domain/entities/shared/date_formatter.dart';
-import '../../../../../shared/components/bottom_sheet/bottom_sheet_options.dart';
+import '../../../../../../common/components/bottom_sheet/bottom_sheet_options.dart';
 import '../../../domain/entities/vehicle.dart';
 
 class VehiclesItem extends BaseStatelessWidget {

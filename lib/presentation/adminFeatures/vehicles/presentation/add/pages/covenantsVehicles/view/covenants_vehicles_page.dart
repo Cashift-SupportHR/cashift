@@ -6,7 +6,7 @@ import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
-import '../../../../../../../shared/components/buttons/app_outline_button_icon.dart';
+import '../../../../../../../../common/components/buttons/app_outline_button_icon.dart';
 import '../../../../../domain/entities/covenant_vehicle.dart';
 import '../../../bloc/covenants_vehicles_cubit.dart';
 import '../add/add_covenant_vehicle_builder.dart';

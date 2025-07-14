@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/working_document/presenta
 import 'package:shiftapp/presentation/shared/components/texts/underline_text.dart';
 
 import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/bottom_sheet/custom_bottom_sheets.dart';
+import '../../../../../../common/components/bottom_sheet/custom_bottom_sheets.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';
 import '../../../data/models/working_document_dto.dart';

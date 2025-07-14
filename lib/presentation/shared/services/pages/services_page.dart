@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/adminToggle/screen/admin_toggle_builder.dart';
+import 'package:shiftapp/common/components/adminToggle/screen/admin_toggle_builder.dart';
 
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';

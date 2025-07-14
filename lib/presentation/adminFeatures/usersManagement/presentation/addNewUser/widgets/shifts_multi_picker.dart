@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/checkbox/multiple_choice_checkbox.dart';
+import 'package:shiftapp/common/components/checkbox/multiple_choice_checkbox.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
-import '../../../../../shared/components/base/stream_state_widget_v2.dart';
+import '../../../../../../common/components/base/stream_state_widget_v2.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/dropdown_filed.dart';
 import '../../../../../shared/components/text_field/bottom_sheet_text_field_rectangle.dart';

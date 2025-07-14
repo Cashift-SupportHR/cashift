@@ -3,7 +3,7 @@ import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
 import '../../../../presentationUser/common/common_state.dart';
-import '../../../../shared/components/base/stream_state_widget_v2.dart';
+import '../../../../../common/components/base/stream_state_widget_v2.dart';
 import '../../../../shared/components/pagination/custom_footer_builder.dart';
 import '../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
 import '../../data/models/admin_wallet_prams.dart';

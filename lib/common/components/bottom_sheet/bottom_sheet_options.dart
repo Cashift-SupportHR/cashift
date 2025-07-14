@@ -1,8 +1,8 @@
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../utils/app_icons.dart';
-import '../../../presentationUser/resources/colors.dart';
-import '../index.dart';
+import '../../../utils/app_icons.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/shared/components/index.dart';
 
 
 class BottomSheetOptionsMenu extends StatelessWidget {

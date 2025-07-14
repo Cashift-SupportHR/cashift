@@ -11,7 +11,7 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../../../../core/services/permission_detector.dart';
 import '../../../../presentationUser/attendance/facerecognation/faces_matching.dart';
-import '../../../../shared/components/adminToggle/cubit/admin_toggle_cubit.dart';
+import '../../../../../common/components/adminToggle/cubit/admin_toggle_cubit.dart';
 import '../../../../shared/components/dialogs_manager.dart';
 
 class RequestItemBuilder

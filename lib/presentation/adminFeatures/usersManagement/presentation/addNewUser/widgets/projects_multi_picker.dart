@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/checkbox/multiple_choice_checkbox.dart';
+import 'package:shiftapp/common/components/checkbox/multiple_choice_checkbox.dart';
 import 'package:shiftapp/presentation/shared/models/common_list_item.dart';
 
 import '../../../../../shared/components/base_stateless_widget.dart';

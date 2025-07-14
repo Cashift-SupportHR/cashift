@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
  import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../presentationUser/map_picker/widgets/map_picker_item.dart';
-import '../../../../../../shared/components/buttons/row_buttons.dart';
+import '../../../../../../../common/components/buttons/row_buttons.dart';
 import '../../../../../../shared/components/map/map_picker.dart';
 import '../../../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../data/models/index.dart';

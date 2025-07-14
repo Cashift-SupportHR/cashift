@@ -10,7 +10,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/presentationUser/resources/validation.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/bottom_sheet/bottom_sheet_text_field.dart';
+import 'package:shiftapp/common/components/bottom_sheet/bottom_sheet_text_field.dart';
 import 'package:shiftapp/presentation/shared/components/dropdown_filed.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';

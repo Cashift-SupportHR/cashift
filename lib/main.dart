@@ -19,7 +19,7 @@ import 'package:shiftapp/presentation/presentationUser/activity_log/pages/activi
 import 'package:shiftapp/presentation/presentationUser/profile/view/bloc/profile_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/check_face_recognation/cubit/check_face_recognation_cubit.dart';
-import 'package:shiftapp/presentation/shared/components/adminToggle/cubit/admin_toggle_cubit.dart';
+import 'package:shiftapp/common/components/adminToggle/cubit/admin_toggle_cubit.dart';
 import 'package:shiftapp/presentation/shared/components/restart_app_widget.dart';
 import 'package:sizer/sizer.dart';
 import 'core/services/firebase_notification.dart';

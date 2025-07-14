@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
-import 'package:shiftapp/presentation/shared/components/base/user_info_widget.dart';
+import 'package:shiftapp/common/components/base/user_info_widget.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../common/domain/entities/user_overview/job_offer_slider.dart';

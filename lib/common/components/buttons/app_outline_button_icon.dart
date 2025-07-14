@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
-import '../../../presentationUser/resources/colors.dart';
-import '../../../presentationUser/resources/constants.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/presentationUser/resources/constants.dart';
 
 ///  Created by harbey on 6/20/2023.
 class AppOutlineButtonIcon extends StatelessWidget {

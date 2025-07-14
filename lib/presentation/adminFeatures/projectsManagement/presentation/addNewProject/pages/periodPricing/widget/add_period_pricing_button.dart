@@ -4,7 +4,7 @@ import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/buttons/app_outline_button_icon.dart';
+import '../../../../../../../../common/components/buttons/app_outline_button_icon.dart';
 import '../../../../../../../shared/components/helper_widgets.dart';
 import 'add_period_pricing_builder.dart';
 

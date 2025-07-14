@@ -4,7 +4,7 @@ import '../../../../../../core/services/routes.dart';
  import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
-import '../../../../../shared/components/base/stream_state_widget_v2.dart';
+import '../../../../../../common/components/base/stream_state_widget_v2.dart';
 import '../../../../../shared/components/base_widget_bloc.dart';
 
 import '../../../../../shared/components/tabview/dynamic_tab_bar_view.dart';

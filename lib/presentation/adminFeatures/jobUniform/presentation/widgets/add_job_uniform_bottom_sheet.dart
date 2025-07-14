@@ -11,7 +11,7 @@ import 'package:shiftapp/utils/app_utils.dart';
 import '../../../../presentationUser/resources/colors.dart';
 import '../../../../presentationUser/workHazards/presentation/addWorkHazard/widgets/upload_files_list.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/buttons/row_buttons.dart';
+import '../../../../../common/components/buttons/row_buttons.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../data/models/add_job_uniform_params.dart';

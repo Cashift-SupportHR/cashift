@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/base/user_info_widget.dart';
+import 'package:shiftapp/common/components/base/user_info_widget.dart';
 import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 
-import '../../../../utils/app_icons.dart';
-import '../../../presentationUser/resources/colors.dart';
-import '../../../presentationUser/resources/constants.dart';
+import '../../../utils/app_icons.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/presentationUser/resources/constants.dart';
 
 ///  Created by harbey on 7/31/2023.
 class UserInfoWidgetWithIcon extends StatelessWidget {

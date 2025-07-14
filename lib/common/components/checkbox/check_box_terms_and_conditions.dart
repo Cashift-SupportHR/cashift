@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
 
-import '../../../presentationUser/resources/colors.dart';
-import '../base_stateless_widget.dart';
-import '../decorations/decorations.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/shared/components/base_stateless_widget.dart';
+import '../../../presentation/shared/components/decorations/decorations.dart';
 import 'custom_check_box.dart';
 
 class CheckBoxTermsAndConditions extends BaseStatelessWidget {

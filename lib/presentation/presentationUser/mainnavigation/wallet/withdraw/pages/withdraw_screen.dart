@@ -19,7 +19,7 @@ import '../../../../../../common/domain/entities/wallet/withdraw_to_another_acco
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../../utils/app_utils.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/bottom_sheet/bottom_sheet_text_field.dart';
+import '../../../../../../common/components/bottom_sheet/bottom_sheet_text_field.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/error_handler_widget.dart';
 import '../../../../../shared/components/image_builder.dart';

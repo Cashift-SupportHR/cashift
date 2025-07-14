@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../../../common/domain/entities/bail_requests/index.dart';
 import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/buttons/row_small_button.dart';
+import '../../../../common/components/buttons/row_small_button.dart';
 import '../../resources/constants.dart';
 
 class BailTermsAndConditions extends BaseStatelessWidget {

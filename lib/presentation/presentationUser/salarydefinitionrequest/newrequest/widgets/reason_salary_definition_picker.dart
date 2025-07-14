@@ -3,7 +3,7 @@ import 'package:shiftapp/common/domain/entities/salary-definition-request/reason
 
  import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/bottom_sheet/list_picker_widget.dart';
+import '../../../../../common/components/bottom_sheet/list_picker_widget.dart';
 import '../../../../shared/components/dropdown_filed.dart';
 
 class ReasonSalaryDefinitionRequestPicker extends BaseStatelessWidget {

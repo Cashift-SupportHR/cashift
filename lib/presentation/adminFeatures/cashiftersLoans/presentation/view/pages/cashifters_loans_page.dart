@@ -1,6 +1,6 @@
 import 'package:shiftapp/presentation/adminFeatures/terms_and_conditions/presentation/termsAndConditions/add/pages/add_condition_builder.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/base/stream_state_widget_v2.dart';
+import 'package:shiftapp/common/components/base/stream_state_widget_v2.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/components/stepper/easy_step.dart';
 import 'package:shiftapp/presentation/shared/loans/presentation/view/pages/loans_screen.dart';

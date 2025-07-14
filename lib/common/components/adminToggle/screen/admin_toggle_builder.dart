@@ -7,13 +7,13 @@ import 'package:shiftapp/core/services/routes.dart';
 import 'package:shiftapp/common/data/models/attendance/attendance_config_dto.dart';
  import 'package:shiftapp/extensions/extensions.dart';
  import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/presentation/shared/components/adminToggle/screen/admin_toggle_widget.dart';
+import 'package:shiftapp/common/components/adminToggle/screen/admin_toggle_widget.dart';
 
- import '../../../../presentationUser/attendance/facerecognation/faces_matching.dart';
-import '../../../../presentationUser/attendance/facerecognation/index.dart';
-import '../../base_widget_bloc.dart';
-import '../../dialogs_manager.dart';
-import '../../progress/progress_dialog.dart';
+ import '../../../../presentation/presentationUser/attendance/facerecognation/faces_matching.dart';
+import '../../../../presentation/presentationUser/attendance/facerecognation/index.dart';
+import '../../../../presentation/shared/components/base_widget_bloc.dart';
+import '../../../../presentation/shared/components/dialogs_manager.dart';
+import '../../../../presentation/shared/components/progress/progress_dialog.dart';
 import '../cubit/admin_toggle_cubit.dart';
 
 class AdminToggleBuilder

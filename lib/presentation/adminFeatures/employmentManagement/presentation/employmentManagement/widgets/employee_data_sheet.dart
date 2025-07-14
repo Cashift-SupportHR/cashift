@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/shared/components/texts/underline_text.dar
 
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/checkbox/multiple_choice_checkbox.dart';
+import '../../../../../../common/components/checkbox/multiple_choice_checkbox.dart';
 import '../../../../../shared/components/radio/radio_grid_list.dart';
 import '../../../../usersManagement/presentation/addNewUser/widgets/projects_multi_picker.dart';
 import '../../../data/models/save_order_status_params.dart';

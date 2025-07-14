@@ -7,7 +7,7 @@ import '../../../../../common/domain/entities/required_tasks/in_app_required_tas
 import '../../../../../common/domain/entities/resume/city_item.dart';
 import '../../../../shared/components/base_widget_bloc.dart';
 import '../../../../../common/data/models/add-address/add_home_location_params.dart';
-import '../../../../shared/components/buttons/row_buttons.dart';
+import '../../../../../common/components/buttons/row_buttons.dart';
 import '../../../../shared/components/dialogs_manager.dart';
 import '../../../../shared/components/image_builder.dart';
 import '../../../resources/colors.dart';

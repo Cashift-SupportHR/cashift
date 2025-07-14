@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import '../../../../../../core/services/routes.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
-import '../../../../../shared/components/base/user_info_widget.dart';
+import '../../../../../../common/components/base/user_info_widget.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/options_menu_button.dart';

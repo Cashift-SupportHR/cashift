@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../../shared/components/base/user_info_widget_with_icon.dart';
-import '../../../../../shared/components/checkbox/custom_check_box.dart';
+import '../../../../../../common/components/base/user_info_widget_with_icon.dart';
+import '../../../../../../common/components/checkbox/custom_check_box.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../domain/entities/employee_opportunity.dart';
 

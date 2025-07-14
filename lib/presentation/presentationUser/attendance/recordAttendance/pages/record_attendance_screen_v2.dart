@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:shiftapp/main_index.dart';
 
-import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart';
+import 'package:shiftapp/common/components/buttons/row_buttons.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../../../../config.dart';

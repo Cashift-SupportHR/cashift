@@ -7,7 +7,7 @@ import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 
 import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../shared/components/app_widgets.dart';
-import '../../../../../shared/components/base/stream_state_widget_v2.dart';
+import '../../../../../../common/components/base/stream_state_widget_v2.dart';
 import '../../../../../shared/components/draggable_button/draggable_button.dart';
 import '../../../../../shared/components/pagination/custom_footer_builder.dart';
 import '../../../../../shared/components/tabview/tab_bar_view_widget.dart';

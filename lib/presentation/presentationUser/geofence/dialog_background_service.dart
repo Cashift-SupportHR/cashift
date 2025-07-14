@@ -3,7 +3,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../shared/components/base_stateless_widget.dart';
-import '../../shared/components/buttons/row_buttons.dart';
+import '../../../common/components/buttons/row_buttons.dart';
 import '../resources/constants.dart';
 
 ///  Created by harbey on 11/1/2023.

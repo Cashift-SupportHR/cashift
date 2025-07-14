@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/present
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../../../shared/components/bottom_sheet/custom_bottom_sheets.dart';
+import '../../../../../../../../common/components/bottom_sheet/custom_bottom_sheets.dart';
 import '../../../../../../../shared/components/dialogs_manager.dart';
 import '../../../../../data/models/add_custodies_prams.dart';
 import '../../../../../data/models/confirm_receive_vehicle_params.dart';

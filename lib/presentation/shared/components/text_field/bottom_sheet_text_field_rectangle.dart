@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'build_text_field_item.dart';
-import '../bottom_sheet/list_picker_widget.dart';
-import '../checkbox/multiple_choice_checkbox.dart';
+import '../../../../common/components/bottom_sheet/list_picker_widget.dart';
+import '../../../../common/components/checkbox/multiple_choice_checkbox.dart';
 import '../dropdown_filed.dart';
 
 ///  Created by harbey on 6/5/2023.

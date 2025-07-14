@@ -3,7 +3,7 @@ import 'package:location/location.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_data/widgets/focus_point_transaction_types_picker.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_data/widgets/shifts_focus_point_picker.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_data/widgets/coverage_break_focus_point_picker.dart';
-import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart';
+import 'package:shiftapp/common/components/buttons/row_buttons.dart';
 import 'package:shiftapp/presentation/shared/components/snckBar/snack_bar_manager.dart';
 
 import '../../../../../../presentationUser/common/common_state.dart';

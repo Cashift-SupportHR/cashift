@@ -5,9 +5,9 @@ import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../core/services/routes.dart';
-import '../../../../../shared/components/base/user_info_widget.dart';
+import '../../../../../../common/components/base/user_info_widget.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/buttons/icon_text_button.dart';
+import '../../../../../../common/components/buttons/icon_text_button.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/image_builder.dart';
 import '../../../data/models/index.dart';

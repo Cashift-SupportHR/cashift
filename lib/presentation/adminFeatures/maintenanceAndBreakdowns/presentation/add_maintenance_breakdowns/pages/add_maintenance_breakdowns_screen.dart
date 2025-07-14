@@ -6,7 +6,7 @@ import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../../../presentationUser/workHazards/presentation/addWorkHazard/widgets/upload_files_list.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/buttons/row_buttons.dart';
+import '../../../../../../common/components/buttons/row_buttons.dart';
 import '../../../../../shared/components/dropdown_filed.dart';
 import '../../../../../shared/components/text_field/bottom_sheet_text_field_rectangle.dart';
 import '../../../../../shared/components/text_field/build_text_field_item.dart';

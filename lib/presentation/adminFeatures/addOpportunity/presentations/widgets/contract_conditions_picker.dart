@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/base/stream_state_widget_v2.dart';
+import 'package:shiftapp/common/components/base/stream_state_widget_v2.dart';
 import 'package:shiftapp/presentation/shared/components/text_field/bottom_sheet_text_field_rectangle.dart';
 
 import '../../../../presentationUser/common/common_state.dart';

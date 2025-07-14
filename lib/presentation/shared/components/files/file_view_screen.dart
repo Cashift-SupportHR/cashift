@@ -7,7 +7,7 @@ import '../../../../common/data/models/salary-definition-request/index.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../base_stateless_widget.dart';
-import '../buttons/icon_text_button.dart';
+import '../../../../common/components/buttons/icon_text_button.dart';
 import '../decorations/decorations.dart';
 import 'custom_p_d_f_view.dart';
 import 'files_manager.dart';

@@ -3,8 +3,8 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
-import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart';
-import 'package:shiftapp/presentation/shared/components/checkbox/warning_check_box_widget.dart';
+import 'package:shiftapp/common/components/buttons/row_buttons.dart';
+import 'package:shiftapp/common/components/checkbox/warning_check_box_widget.dart';
 import 'package:shiftapp/presentation/shared/components/icons/icon_text.dart';
 import 'package:shiftapp/presentation/shared/components/texts/icon_double_text.dart';
 

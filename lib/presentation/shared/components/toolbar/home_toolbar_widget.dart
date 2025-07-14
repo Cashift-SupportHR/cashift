@@ -10,8 +10,8 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import '../../../../common/data/repositories/user/user_repository.dart';
 import '../../../../utils/app_utils.dart';
 import '../../../adminFeatures/di/injector.dart';
-import '../adminToggle/screen/admin_toggle_builder.dart';
-import '../adminToggle/screen/admin_toggle_widget.dart';
+import '../../../../common/components/adminToggle/screen/admin_toggle_builder.dart';
+import '../../../../common/components/adminToggle/screen/admin_toggle_widget.dart';
 
 class HomeToolbarWidget extends BaseStatelessWidget {
   final Function? onToggleAdmin;

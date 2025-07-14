@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/shared/components/buttons/row_small_button.dart';
+import 'package:shiftapp/common/components/buttons/row_small_button.dart';
 
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/material_text_field.dart';

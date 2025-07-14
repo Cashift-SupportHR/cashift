@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/present
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
-import '../../../../../../shared/components/base/stream_state_widget_v2.dart';
+import '../../../../../../../common/components/base/stream_state_widget_v2.dart';
 import '../../../../../../shared/components/pagination/custom_footer_builder.dart';
 import '../../../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
 import '../../../../../advancedFilter/widgets/text_field_search_job.dart';

@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/shared/components/texts/underline_text.dar
 import '../../../../common/data/models/workerWorkPlaces/index.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/buttons/row_buttons.dart';
+import '../../../../common/components/buttons/row_buttons.dart';
 import '../../../shared/components/decorations/decorations.dart';
 import '../../../shared/components/image_builder.dart';
 import '../../../shared/components/material_text_field.dart';

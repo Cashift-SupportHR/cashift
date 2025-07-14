@@ -4,7 +4,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/details/widgets/uniform_slides.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/base/user_info_widget.dart';
+import 'package:shiftapp/common/components/base/user_info_widget.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import '../../../../common/domain/entities/appliedOffers/index.dart';

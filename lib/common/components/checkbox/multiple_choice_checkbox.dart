@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../presentationUser/resources/colors.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
 
 
 ///  Created by harbey on 6/20/2023.

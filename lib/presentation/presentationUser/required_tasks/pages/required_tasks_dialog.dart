@@ -7,8 +7,8 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../../common/data/models/user_overview/disclosure_required_task_dto.dart';
 import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/checkbox/multiple_choice_checkbox.dart';
-import '../../../shared/components/checkbox/single_choice_checkbox.dart';
+import '../../../../common/components/checkbox/multiple_choice_checkbox.dart';
+import '../../../../common/components/checkbox/single_choice_checkbox.dart';
 
 ///  Created by harbey on 6/20/2023.
 class RequiredTasksDialog extends BaseStatelessWidget {

@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/checkbox/custom_check_box.dart';
+import 'package:shiftapp/common/components/checkbox/custom_check_box.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
 import '../../../../common/domain/entities/appliedOffers/index.dart';

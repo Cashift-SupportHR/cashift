@@ -31,7 +31,7 @@ import '../../../presentationUser/transactions/presentation/view/pages/transacti
 import '../../../presentationUser/vehiclesOperation/presentation/currentTourMap/view/bloc/current_tour_map_state.dart';
 import '../../../presentationUser/vehiclesOperation/presentation/pages/view/screen/receive_vehicles_page.dart';
 import '../../../adminFeatures/vehicles/presentation/vehicleTracking/pages/vehicles_tracking_page.dart';
-import '../../components/camera_streaming/hls_player_widget.dart';
+import '../../../../common/components/camera_streaming/hls_player_widget.dart';
 import '../../components/offline_place_holder/offline_place_holder_widget.dart';
 import '/generated/assets.dart';
 import '/presentation/presentationUser/common/common_state.dart';

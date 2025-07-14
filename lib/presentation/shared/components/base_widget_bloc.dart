@@ -10,7 +10,7 @@ import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/adminFeatures/di/injector.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart';
+import 'package:shiftapp/common/components/buttons/row_buttons.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import '../../../common/data/models/user_overview/index.dart';
 import '../../../common/domain/entities/required_tasks/confirm_attendance.dart';

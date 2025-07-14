@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../presentationUser/resources/colors.dart';
-import '../../../presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
 
 class WarningCheckBoxWidget extends StatelessWidget {
   final bool? value;

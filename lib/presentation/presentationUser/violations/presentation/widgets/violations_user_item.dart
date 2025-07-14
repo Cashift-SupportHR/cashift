@@ -3,7 +3,7 @@ import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
-import 'package:shiftapp/presentation/shared/components/buttons/row_small_button.dart';
+import 'package:shiftapp/common/components/buttons/row_small_button.dart';
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts.dart';
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
 import 'package:shiftapp/utils/app_icons.dart';

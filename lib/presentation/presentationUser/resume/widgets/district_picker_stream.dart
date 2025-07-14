@@ -4,7 +4,7 @@ import 'package:shiftapp/extensions/extensions.dart';
 
 import '../../../../common/domain/entities/resume/index.dart';
 import '../../../shared/components/base_stateless_widget.dart';
-import '../../../shared/components/bottom_sheet/bottom_sheet_text_field.dart';
+import '../../../../common/components/bottom_sheet/bottom_sheet_text_field.dart';
 import '../../../shared/components/dropdown_filed.dart';
 import '../../../shared/components/error_handler_widget.dart';
 import '../../common/common_state.dart';

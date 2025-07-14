@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import '../../../../../../../../utils/app_utils.dart';
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/buttons/row_buttons.dart';
+import '../../../../../../../../common/components/buttons/row_buttons.dart';
 import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../../data/models/index.dart';
 import '../../../../../domain/entities/index.dart';

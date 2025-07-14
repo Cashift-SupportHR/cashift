@@ -7,8 +7,8 @@ import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dar
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../shared/components/base_stateless_widget.dart';
-import '../../../../shared/components/checkbox/multiple_choice_checkbox.dart';
-import '../../../../shared/components/checkbox/single_choice_checkbox.dart';
+import '../../../../../common/components/checkbox/multiple_choice_checkbox.dart';
+import '../../../../../common/components/checkbox/single_choice_checkbox.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../../shared/components/image_builder.dart';
 import '../../domain/entities/pledge_generalization.dart';

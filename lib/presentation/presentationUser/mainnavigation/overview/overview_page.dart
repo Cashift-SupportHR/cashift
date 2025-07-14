@@ -10,7 +10,7 @@ import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 import 'package:shiftapp/presentation/shared/components/user_notifier_widget.dart';
 
 import '../../../../main_index.dart';
-import '../../../shared/components/adminToggle/cubit/admin_toggle_cubit.dart';
+import '../../../../common/components/adminToggle/cubit/admin_toggle_cubit.dart';
 import '../../appliedoffers/widgets/cancel_shift_widget.dart';
 import '../../joboffers/job_offer_details/job_offer_details_page.dart';
 import 'bloc/overview_bloc.dart';

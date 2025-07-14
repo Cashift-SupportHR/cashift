@@ -1,7 +1,7 @@
-import '../../../../utils/app_icons.dart';
-import '../../../presentationUser/resources/colors.dart';
-import '../../../presentationUser/resources/constants.dart';
-import '../index.dart';
+import '../../../utils/app_icons.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/presentationUser/resources/constants.dart';
+import '../../../presentation/shared/components/index.dart';
 
 class DetailsButtons extends BaseStatelessWidget {
   final String? title;

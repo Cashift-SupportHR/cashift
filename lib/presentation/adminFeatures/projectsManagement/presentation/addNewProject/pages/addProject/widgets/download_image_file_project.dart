@@ -9,7 +9,7 @@ import 'package:shiftapp/utils/app_utils.dart';
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/resources/constants.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../../../shared/components/buttons/icon_text_button.dart';
+import '../../../../../../../../common/components/buttons/icon_text_button.dart';
 
 ///  Created by harbey on 7/27/2023.
 class DownloadImageFileProject extends BaseStatelessWidget {

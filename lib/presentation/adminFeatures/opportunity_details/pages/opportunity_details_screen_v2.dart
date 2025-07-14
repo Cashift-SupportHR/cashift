@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/adminFeatures/opportunity_details/widgets/
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
-import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart';
+import 'package:shiftapp/common/components/buttons/row_buttons.dart';
 import 'package:shiftapp/presentation/shared/components/tabview/tab_bar_view_widget_line.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 

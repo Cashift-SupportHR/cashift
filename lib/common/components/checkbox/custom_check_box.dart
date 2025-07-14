@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../presentationUser/resources/colors.dart';
-import '../../../presentationUser/resources/constants.dart';
+import '../../../presentation/presentationUser/resources/colors.dart';
+import '../../../presentation/presentationUser/resources/constants.dart';
 
 ///  Created by harbey on 9/8/2023.
 class CustomCheckBox extends StatelessWidget {

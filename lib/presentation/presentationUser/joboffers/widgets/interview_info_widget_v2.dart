@@ -12,7 +12,7 @@ import '../../../../common/domain/entities/job_offers/index.dart';
 import '../../../../common/domain/entities/jobs/index.dart';
 
 import '../../../../utils/app_utils.dart';
-import '../../../shared/components/buttons/app_outline_button_icon.dart';
+import '../../../../common/components/buttons/app_outline_button_icon.dart';
 import '../../../shared/components/dialogs_manager.dart';
 import '../../../shared/home/pages/home_screen.dart';
 import '../../appliedoffers/details/applied_offer_details_screen_v2.dart';
