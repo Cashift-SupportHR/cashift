@@ -1,11 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/repositories/profile/profile_repository.dart';
-import 'package:shiftapp/data/repositories/resume/resume_repository.dart';
-import 'package:shiftapp/data/repositories/user/user_repository.dart';
+import 'package:shiftapp/common/data/repositories/profile/profile_repository.dart';
+import 'package:shiftapp/common/data/repositories/resume/resume_repository.dart';
+import 'package:shiftapp/common/data/repositories/user/user_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../data/repositories/local/local_repository.dart';
+import '../../../../common/data/repositories/local/local_repository.dart';
+
 @Injectable()
 class SplashCubit extends Cubit {
   final ResumeRepository resumeRepository;

@@ -1,7 +1,7 @@
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../domain/entities/job_offers/check_working_document.dart';
-import '../../../../domain/entities/jobs/interview_info.dart';
+import '../../../../common/domain/entities/job_offers/index.dart';
+import '../../../../common/domain/entities/jobs/index.dart';
 
 class AuthorizedToJoinOpportunity extends SuccessStateListener{
   AuthorizedToJoinOpportunity();

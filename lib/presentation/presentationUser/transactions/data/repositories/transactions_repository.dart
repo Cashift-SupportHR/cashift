@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../domain/entities/transaction_data.dart';
 import '../data_sources/transactions_provider.dart';
 import '../models/add_transactions_prams.dart';

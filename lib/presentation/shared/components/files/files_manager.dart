@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../common/data/models/salary-definition-request/index.dart';
 
 class FilesManager{
 

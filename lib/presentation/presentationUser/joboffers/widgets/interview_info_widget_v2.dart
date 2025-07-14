@@ -8,8 +8,9 @@ import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../core/services/routes.dart';
-import '../../../../domain/entities/jobs/interview_info.dart';
-import '../../../../domain/entities/jobs/job_terms.dart';
+import '../../../../common/domain/entities/job_offers/index.dart';
+import '../../../../common/domain/entities/jobs/index.dart';
+
 import '../../../../utils/app_utils.dart';
 import '../../../shared/components/buttons/app_outline_button_icon.dart';
 import '../../../shared/components/dialogs_manager.dart';

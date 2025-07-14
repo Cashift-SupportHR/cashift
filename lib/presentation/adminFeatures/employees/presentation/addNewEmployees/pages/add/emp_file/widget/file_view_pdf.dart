@@ -1,7 +1,8 @@
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 
 import '../../../../../../../../shared/components/index.dart';
-import '../../../../../../domain/entities/AttachmentsEmp.dart';
+import '../../../../../../data/models/index.dart';
+import '../../../../../../domain/entities/index.dart';
 
 class FileViewPdfOrImage extends BaseStatelessWidget {
   @override

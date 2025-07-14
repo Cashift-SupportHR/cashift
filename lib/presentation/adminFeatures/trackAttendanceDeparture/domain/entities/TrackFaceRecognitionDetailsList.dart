@@ -1,4 +1,4 @@
-import '../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../data/models/request_attendance_departure_details_dto.dart';
 
 class TrackFaceRecognitionDetailsList {

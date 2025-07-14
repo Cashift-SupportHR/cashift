@@ -1,4 +1,5 @@
-import '../../data/models/create_vehicle_handover_dto.dart';
+
+import '../../data/models/index.dart';
 
 class CreateVehicleHandover {
   CreateVehicleHandover({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/widgets/shift_base_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/widgets/shift_item_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';

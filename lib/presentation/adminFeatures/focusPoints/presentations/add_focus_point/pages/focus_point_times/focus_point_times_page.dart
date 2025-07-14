@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_times/base_focus_point_times_page.dart';
 
-import '../../../../domain/entities/focus_point_times_args.dart';
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 
 class FocusPointTimesPage extends BaseFocusPointTimesPage {
   final FocusPointTimesArgs Function() idCallback;

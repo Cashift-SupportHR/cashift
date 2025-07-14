@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/wallet/withdraw_methods.dart';
-import 'package:shiftapp/domain/entities/wallet/withdraw_method.dart';
+import 'package:shiftapp/common/domain/entities/wallet/withdraw_methods.dart';
+import 'package:shiftapp/common/domain/entities/wallet/withdraw_method.dart';
 import 'package:shiftapp/generated/assets.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';

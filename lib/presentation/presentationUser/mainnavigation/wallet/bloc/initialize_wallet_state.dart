@@ -1,6 +1,6 @@
-import 'package:shiftapp/domain/entities/wallet/withdraw_method.dart';
+import 'package:shiftapp/common/domain/entities/wallet/withdraw_method.dart';
 
-import '../../../../../domain/entities/wallet/current_balance.dart';
+import '../../../../../common/domain/entities/wallet/current_balance.dart';
 import '../../../common/common_state.dart';
 
 

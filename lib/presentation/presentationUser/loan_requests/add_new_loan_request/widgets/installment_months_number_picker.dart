@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../data/models/loans_request/loan_num_month_condition_dto.dart';
-import '../../../../../domain/entities/loans_request/loan_num_month_condition.dart';
+import '../../../../../common/data/models/loans_request/loan_num_month_condition_dto.dart';
+import '../../../../../common/domain/entities/loans_request/loan_num_month_condition.dart';
 import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/bottom_sheet/list_picker_widget.dart';

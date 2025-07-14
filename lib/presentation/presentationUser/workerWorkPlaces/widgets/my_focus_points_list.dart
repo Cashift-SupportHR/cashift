@@ -2,7 +2,8 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../domain/entities/workerWorkPlaces/worker_work_place.dart';
+import '../../../../common/domain/entities/shared/date_formatter.dart';
+import '../../../../common/domain/entities/workerWorkPlaces/index.dart';
 import 'my_focus_point_item.dart';
 import 'my_focus_point_status.dart';
 

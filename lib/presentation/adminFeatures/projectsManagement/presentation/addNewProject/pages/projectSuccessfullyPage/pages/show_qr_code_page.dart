@@ -3,10 +3,11 @@ import 'package:share_plus/share_plus.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
 import '../../../../../../../presentationUser/attendance/facerecognation/index.dart';
 import '../../../../../../../shared/components/files/file_view_screen.dart';
-import '../../../../../domain/entities/project_management.dart';
+import '../../../../../data/models/index.dart';
+import '../../../../../domain/entities/index.dart';
 import '../../../bloc/project_successfully_bloc.dart';
 
 class ShowQrCodePage extends BaseBlocWidget<

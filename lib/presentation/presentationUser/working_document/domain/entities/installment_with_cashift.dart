@@ -1,4 +1,5 @@
 
+
 import '../../data/models/installment_with_cashift_dto.dart';
 
 class InstallmentWithCashift {

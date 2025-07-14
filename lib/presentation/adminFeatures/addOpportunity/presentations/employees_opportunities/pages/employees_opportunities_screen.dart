@@ -4,7 +4,7 @@ import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
 
-import '../../../../../../data/exceptions/empty_list_exception.dart';
+import '../../../../../../common/data/exceptions/empty_list_exception.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../domain/entities/employee_opportunity.dart';
 import '../widgets/employee_opportunity_item.dart';

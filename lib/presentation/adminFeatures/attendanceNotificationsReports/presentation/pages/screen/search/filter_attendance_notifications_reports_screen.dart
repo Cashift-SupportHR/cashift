@@ -1,4 +1,4 @@
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../shared/components/index.dart';

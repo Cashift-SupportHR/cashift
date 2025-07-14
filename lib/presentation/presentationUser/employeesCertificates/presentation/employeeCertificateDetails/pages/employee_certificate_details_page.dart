@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
 import '../../../../../shared/components/base_widget_bloc.dart';
 import '../../../../../shared/components/files/file_view_screen.dart';
 import '../../../../common/common_state.dart';

@@ -9,9 +9,8 @@ import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../../../shared/components/snckBar/snack_bar_manager.dart';
 import '../../../../../../../shared/components/stepper/easy_step.dart';
-import '../../../../../data/models/add_focus_attendance_time_params.dart';
-import '../../../../../domain/entities/point_attendance_type.dart';
-import '../../../../../domain/entities/shifts_by_project.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 import 'expansion_time_item.dart';
 
 class FocusPointTimeItem extends BaseStatelessWidget {

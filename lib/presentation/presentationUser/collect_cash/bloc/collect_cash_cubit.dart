@@ -1,7 +1,7 @@
 
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:shiftapp/data/repositories/collect_cash/collect_cash_repository.dart';
+import 'package:shiftapp/common/data/repositories/collect_cash/collect_cash_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 import '../../../../core/bloc/base_cubit.dart';

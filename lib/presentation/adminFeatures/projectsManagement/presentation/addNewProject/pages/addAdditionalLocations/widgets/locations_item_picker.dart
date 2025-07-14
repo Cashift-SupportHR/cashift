@@ -12,7 +12,7 @@ import '../../../../../../../shared/components/buttons/app_icon_button.dart';
 import '../../../../../../../shared/components/map/map_picker.dart';
 import '../../../../../../../shared/components/options_menu_button.dart';
 import '../../../../../../available_opportunities/presentation/widgets/build_popup_menu_button.dart';
-import '../../../../../data/models/location_project_params.dart';
+import '../../../../../data/models/index.dart';
 
 class LocationItemPicker extends StatelessWidget {
   final LocationProjectParams item;

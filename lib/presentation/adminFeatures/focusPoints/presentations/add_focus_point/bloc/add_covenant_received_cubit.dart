@@ -1,10 +1,10 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/models/workerWorkPlaces/index.dart';
-import 'package:shiftapp/domain/entities/workerWorkPlaces/index.dart';
+import 'package:shiftapp/common/data/models/workerWorkPlaces/index.dart';
+import 'package:shiftapp/common/domain/entities/workerWorkPlaces/index.dart';
 
-import '../../../../../../data/models/wallet/name_by_id_number.dart';
- import '../../../../../../data/repositories/workerWorkPlaces/worker_work_places_repository.dart';
+import '../../../../../../common/data/models/wallet/name_by_id_number.dart';
+ import '../../../../../../common/data/repositories/workerWorkPlaces/worker_work_places_repository.dart';
  import '../../../../../presentationUser/common/common_state.dart';
 import '../../../data/models/add_covenant_focus_point_params.dart';
 import '../../../data/repositories/focus_points_repository.dart';

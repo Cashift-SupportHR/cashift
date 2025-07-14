@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../domain/entities/Emp_attandance.dart';
 import '../../domain/entities/tab_cashifter.dart';
 import '../datasource/employees_provider.dart';

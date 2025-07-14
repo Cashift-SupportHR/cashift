@@ -2,7 +2,7 @@
 import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:shiftapp/data/models/auth/login_params.dart';
+import 'package:shiftapp/common/data/models/auth/login_params.dart';
 
 class SecureStorage {
   static const loginKey = 'loginKey';

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 
 import '../../../../../main_index.dart';
 import '../../data/models/track_attendance_departure_dto.dart';

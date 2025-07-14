@@ -1,8 +1,8 @@
 import 'package:shiftapp/presentation/shared/components/index.dart';
-import '../../../../../domain/entities/resume/index.dart';
+import '../../../../../common/domain/entities/resume/index.dart';
 import '../../../common/stream_data_state.dart';
 import '../../../resources/colors.dart';
-import '../../../../../data/models/add-address/add_home_location_params.dart';
+import '../../../../../common/data/models/add-address/add_home_location_params.dart';
 
 class HouseIdentificationSheet extends BaseStatelessWidget {
   final AddHomeLocationParams params;

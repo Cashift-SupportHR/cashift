@@ -1,4 +1,6 @@
+
 import '../../data/models/gas_station_trip_dto.dart';
+import '../../data/models/index.dart';
 
 class GasStationTrip {
   int? fillingStationId;

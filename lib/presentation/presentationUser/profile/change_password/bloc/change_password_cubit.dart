@@ -2,9 +2,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 
-import '../../../../../data/models/auth/change_password_params.dart';
-import '../../../../../data/repositories/profile/profile_repository.dart';
-import '../../../../../data/repositories/user/user_repository.dart';
+import '../../../../../common/data/models/auth/change_password_params.dart';
+import '../../../../../common/data/repositories/profile/profile_repository.dart';
+import '../../../../../common/data/repositories/user/user_repository.dart';
 
 @Injectable()
 class ChangePasswordCubit extends BaseCubit {

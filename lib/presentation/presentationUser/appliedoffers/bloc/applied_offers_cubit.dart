@@ -2,15 +2,15 @@ import 'dart:async';
 import 'package:injectable/injectable.dart';
 import 'package:location/location.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/repositories/joboffers/job_offers_repository.dart';
-import 'package:shiftapp/data/repositories/logger/logger_repository.dart';
-import 'package:shiftapp/data/repositories/profile/profile_repository.dart';
+import 'package:shiftapp/common/data/repositories/joboffers/job_offers_repository.dart';
+import 'package:shiftapp/common/data/repositories/logger/logger_repository.dart';
+import 'package:shiftapp/common/data/repositories/profile/profile_repository.dart';
 
-import '../../../../data/exceptions/mistake_shift_location_exception.dart';
-import '../../../../data/models/logger/index.dart';
-import '../../../../data/models/shift/index.dart';
-import '../../../../domain/entities/appliedOffers/index.dart';
-import '../../../../domain/entities/shift/applied_offer.dart';
+import '../../../../common/data/exceptions/mistake_shift_location_exception.dart';
+import '../../../../common/data/models/logger/index.dart';
+import '../../../../common/data/models/shift/index.dart';
+import '../../../../common/domain/entities/appliedOffers/index.dart';
+import '../../../../common/domain/entities/shift/index_shift.dart';
 import '../../common/common_state.dart';
 import '../pages/qrcode_screen.dart';
 

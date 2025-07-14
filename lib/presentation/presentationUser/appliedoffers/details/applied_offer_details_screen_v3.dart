@@ -7,8 +7,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/base/user_info_widget.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-
-import '../../../../domain/entities/shift/applied_offer.dart';
+import '../../../../common/domain/entities/appliedOffers/index.dart';
+import '../../../../common/domain/entities/shift/index_shift.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../shared/components/app_cupertino_button.dart';
 import '../../../shared/components/decorations/decorations.dart';

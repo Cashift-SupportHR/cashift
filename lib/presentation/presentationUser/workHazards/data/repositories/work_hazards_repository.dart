@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 
 import '../../../../shared/models/common_list_item.dart';
 import '../../domain/entities/work_hazard.dart';

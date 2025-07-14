@@ -1,6 +1,6 @@
 
-import '../../data/models/employee_certificate_dto.dart';
 
+import '../../data/models/employee_certificate_dto.dart';
 
 class EmployeeCertificate {
   int? id;

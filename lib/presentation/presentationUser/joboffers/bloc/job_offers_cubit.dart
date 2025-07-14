@@ -1,17 +1,16 @@
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/repositories/joboffers/job_offers_repository.dart';
-import 'package:shiftapp/data/repositories/user/user_repository.dart';
+import 'package:shiftapp/common/data/repositories/joboffers/job_offers_repository.dart';
+import 'package:shiftapp/common/data/repositories/user/user_repository.dart';
 
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
+import '../../../../common/data/datasources/remote/resume_not_complete_exception.dart';
+import '../../../../common/data/datasources/remote/unauthorized_exception.dart';
+import '../../../../common/data/models/advancedFilter/index.dart';
+import '../../../../common/data/models/terms/index.dart';
+import '../../../../common/domain/entities/job_offers/check_working_document.dart';
+import '../../../../common/domain/entities/jobs/index.dart';
 import '../../../../core/bloc/base_cubit.dart';
-import '../../../../data/datasources/remote/resume_not_complete_exception.dart';
-import '../../../../data/datasources/remote/unauthorized_exception.dart';
-import '../../../../data/models/terms/index.dart';
-import '../../../../domain/entities/job_offers/check_working_document.dart';
-import '../../../../domain/entities/job_offers/job_offer_dto.dart';
-import '../../../../domain/entities/jobs/index.dart';
-import '../../../../domain/entities/jobs/job_details.dart';
 import '../widgets/job_offers_widget_helper.dart';
 import 'opportunity_states.dart';
 

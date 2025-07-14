@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/data/repositories/advancedFilter/select_model.dart';
-import 'package:shiftapp/domain/entities/advancedFilter/index.dart';
+import 'package:shiftapp/common/data/repositories/advancedFilter/select_model.dart';
+import 'package:shiftapp/common/domain/entities/advancedFilter/index.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-  import 'package:shiftapp/data/models/advancedFilter/index.dart';
+  import 'package:shiftapp/common/data/models/advancedFilter/index.dart';
 
-import '../../../../domain/entities/resume/city_item.dart';
 
+import '../../../../common/domain/entities/resume/index.dart';
 import '../../../shared/components/base_stateless_widget.dart';
  import '../../common/common_state.dart';
 import '../widgets/buttons_actions_widget.dart';

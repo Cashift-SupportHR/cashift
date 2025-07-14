@@ -1,9 +1,9 @@
 
 import 'package:injectable/injectable.dart';
-  import 'package:shiftapp/data/repositories/activitylog/activity_log_repository.dart';
+  import 'package:shiftapp/common/data/repositories/activitylog/activity_log_repository.dart';
 
 import '../../../../core/bloc/base_cubit.dart';
-import '../../../../data/models/activity_log/confirm_activity_params.dart';
+import '../../../../common/data/models/activity_log/confirm_activity_params.dart';
 
 @Injectable()
 class ActivityLogCubit extends BaseCubit {

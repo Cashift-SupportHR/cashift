@@ -5,8 +5,8 @@ import 'package:shiftapp/presentation/adminFeatures/shared/data/models/free_lanc
 import 'package:shiftapp/presentation/adminFeatures/shared/data/repositories/today_opportunity_repository.dart';
 import 'package:shiftapp/presentation/adminFeatures/shared/domain/entities/opportunities/opportunity.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import '../../../../../../data/repositories/advancedFilter/advanced_filter_repository.dart';
-import '../../../../../../domain/entities/advancedFilter/offers_filter_data.dart';
+import '../../../../../../common/data/repositories/advancedFilter/advanced_filter_repository.dart';
+import '../../../../../../common/domain/entities/advancedFilter/offers_filter_data.dart';
 import '../../../../shared/data/models/pagination_opportunity_params.dart';
 import '../../../../shared/domain/entities/opportunities/OpportunityTabs.dart';
 import '../../../../shared/domain/entities/opportunities/PercentageOpportunty.dart';

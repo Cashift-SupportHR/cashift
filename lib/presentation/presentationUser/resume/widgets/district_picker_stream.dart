@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
-import '../../../../domain/entities/resume/district_item.dart';
+import '../../../../common/domain/entities/resume/index.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/bottom_sheet/bottom_sheet_text_field.dart';
 import '../../../shared/components/dropdown_filed.dart';

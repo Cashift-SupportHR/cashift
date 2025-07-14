@@ -4,8 +4,8 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
 import '../../../../../../presentationUser/common/common_state.dart';
 
-import '../../../../data/models/location_gate_project_dto.dart';
-import '../../../../domain/entities/project_management.dart';
+import '../../../../data/models/index.dart';
+import '../../../../domain/entities/index.dart';
 import '../../bloc/add_additional_locations_bloc.dart';
 import '../../bloc/map_project_gates_bloc.dart';
 import 'map_project_gates_screen.dart';

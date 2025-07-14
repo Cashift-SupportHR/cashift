@@ -1,5 +1,6 @@
-import '../../../../data/models/vehicle_video_params.dart';
-import '../../../../domain/entities/vehicle_camera.dart';
+
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 
 abstract class VehicleCamerasIntents {}
 

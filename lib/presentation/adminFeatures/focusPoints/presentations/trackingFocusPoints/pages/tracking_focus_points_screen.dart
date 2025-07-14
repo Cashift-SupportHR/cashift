@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/trackingFocusPoints/pages/tracking_focus_points_main_tabs.dart';
 import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
-import '../../../../../../domain/entities/workerWorkPlaces/focus_point_info.dart';
+import '../../../../../../common/domain/entities/workerWorkPlaces/focus_point_info.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../../domain/entities/bail_requests/bail_term_and_condition.dart';
+import '../../../../common/domain/entities/bail_requests/index.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/buttons/row_small_button.dart';
 import '../../resources/constants.dart';

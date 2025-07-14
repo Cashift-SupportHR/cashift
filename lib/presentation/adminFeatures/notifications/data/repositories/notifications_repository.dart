@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../../../shared/models/common_list_item.dart';
 import '../../domain/entities/vehicle_notifications.dart';
 import '../data_sources/notifications_provider.dart';

@@ -1,12 +1,12 @@
 import 'package:injectable/injectable.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/repositories/home/home_repository.dart';
-import 'package:shiftapp/data/repositories/profile/profile_repository.dart';
-import 'package:shiftapp/data/repositories/user/user_repository.dart';
+import 'package:shiftapp/common/data/repositories/home/home_repository.dart';
+import 'package:shiftapp/common/data/repositories/profile/profile_repository.dart';
+import 'package:shiftapp/common/data/repositories/user/user_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../domain/entities/attendance/attendance_offline_query.dart';
+import '../../../../common/domain/entities/attendance/index.dart';
 import '../../../presentationUser/vehiclesOperation/data/repositories/vehicles_operation_repository.dart';
 import '../../../presentationUser/vehiclesOperation/presentation/currentTourMap/view/bloc/current_tour_map_state.dart';
 

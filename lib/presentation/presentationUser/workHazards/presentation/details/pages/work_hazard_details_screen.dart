@@ -8,7 +8,8 @@ import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/image_builder.dart';
 import '../../../../../shared/components/texts/icon_double_text.dart';
 import '../../../../resources/constants.dart';
-import '../../../domain/entities/work_hazard.dart';
+import '../../../data/models/index.dart';
+import '../../../domain/entities/index.dart';
 
 class WorkHazardDetailsScreen extends BaseStatelessWidget {
   final WorkHazard data;

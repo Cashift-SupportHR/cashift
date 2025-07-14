@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:shiftapp/data/models/auth/confirm_otp_params.dart';
+import 'package:shiftapp/common/data/models/auth/confirm_otp_params.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/verification/bloc/verification_bloc.dart';

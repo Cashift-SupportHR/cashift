@@ -2,9 +2,10 @@ import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/data/models/absence_notation/index.dart';
-import '../../../../data/repositories/absencenotice/absencenotice.dart';
-import '../../../../data/repositories/attendance/attendance_repository.dart';
+import 'package:shiftapp/common/data/models/absence_notation/index.dart';
+import '../../../../../common/data/repositories/absencenotice/absencenotice.dart';
+import '../../../../../common/data/repositories/attendance/attendance_repository.dart';
+
 @injectable
 class AbsenceNoticeCubit extends BaseCubit {
   AbsenceNoticeRepository repository;

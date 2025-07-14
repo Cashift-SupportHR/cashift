@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/domain/entities/jobs/job_details.dart';
+import 'package:shiftapp/common/domain/entities/jobs/job_details.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/bloc/job_offers_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/job_offer_details/job_offer_details_screen.dart';
@@ -7,7 +7,8 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 
 import '../../../../core/services/routes.dart';
-import '../../../../domain/entities/job_offers/check_working_document.dart';
+import '../../../../common/domain/entities/job_offers/index.dart';
+import '../../../../common/domain/entities/jobs/index.dart';
 import '../../working_document/presentation/workingDocument/widgets/working_document_alert_dialog.dart';
 import '../bloc/opportunity_states.dart';
 

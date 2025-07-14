@@ -4,8 +4,8 @@ import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:shiftapp/presentation/shared/components/outlint_button.dart';
 
 import '../../../../core/services/routes.dart';
-import '../../../../domain/entities/shared/date_formatter.dart';
-import '../../../../domain/entities/workerWorkPlaces/worker_work_place.dart';
+import '../../../../common/domain/entities/shared/date_formatter.dart';
+import '../../../../common/domain/entities/workerWorkPlaces/index.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../adminFeatures/focusPoints/presentations/trackingFocusPoints/widgets/point_image.dart';
 import '../../../shared/components/base_stateless_widget.dart';

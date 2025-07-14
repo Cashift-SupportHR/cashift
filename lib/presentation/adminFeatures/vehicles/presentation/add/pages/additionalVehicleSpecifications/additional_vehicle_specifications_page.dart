@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../../../data/models/vehicle_image_params.dart';
-import '../../../../domain/entities/vehicle_image_face.dart';
+import '../../../../domain/entities/index.dart';
 import '../../bloc/additional_vehicle_specifications_cubit.dart';
 import 'additional_vehicle_specifications_screen.dart';
 

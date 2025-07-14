@@ -2,7 +2,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
 
-import '../../../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../../../utils/app_utils.dart';
 import '../../../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../data/models/add_attendance_notifications_prams.dart';

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';
-import '../../../data/models/working_document_dto.dart';
 import '../../../domain/entities/term_condition_certificate_payment.dart';
 
 ///  Created by harbey on 8/26/2023.

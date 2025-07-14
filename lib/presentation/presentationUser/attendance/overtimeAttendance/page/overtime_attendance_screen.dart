@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:shiftapp/data/models/attendance/attendance_shift_dto.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/data/models/attendance/attendance_shift_dto.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/overtimeAttendance/page/overtime_log_page.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/shared_widgets.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';

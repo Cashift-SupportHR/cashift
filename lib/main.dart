@@ -11,9 +11,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:chucker_flutter/chucker_flutter.dart';
-import 'package:shiftapp/data/datasources/remote/base_client.dart';
-import 'package:shiftapp/data/repositories/local/local_repository.dart';
-import 'package:shiftapp/domain/entities/shared/notification_types.dart';
+import 'package:shiftapp/common/data/datasources/remote/base_client.dart';
+import 'package:shiftapp/common/data/repositories/local/local_repository.dart';
+import 'package:shiftapp/common/domain/entities/shared/notification_types.dart';
 import 'package:shiftapp/presentation/adminFeatures/di/injector.dart';
 import 'package:shiftapp/presentation/presentationUser/activity_log/pages/activitylog_tabs_page.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/view/bloc/profile_cubit.dart';
@@ -25,10 +25,10 @@ import 'package:sizer/sizer.dart';
 import 'core/services/firebase_notification.dart';
 import 'core/services/material_app_config.dart';
 import 'core/services/routes.dart';
-import 'data/datasources/remote/logger/app_loogers.dart';
-import 'data/models/notification_offers/notification_offer_params.dart';
-import 'data/repositories/profile/profile_repository.dart';
-import 'data/repositories/user/user_repository.dart';
+import 'common/data/datasources/remote/logger/app_loogers.dart';
+import 'common/data/models/notification_offers/notification_offer_params.dart';
+import 'common/data/repositories/profile/profile_repository.dart';
+import 'common/data/repositories/user/user_repository.dart';
 import 'package:camera/camera.dart';
 
 class MyHttpOverrides extends HttpOverrides {

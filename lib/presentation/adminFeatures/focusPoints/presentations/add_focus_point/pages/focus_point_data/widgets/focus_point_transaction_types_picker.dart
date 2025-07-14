@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/dropdown_filed.dart';
 import '../../../../../../../shared/components/text_field/bottom_sheet_text_field_rectangle.dart';
-import '../../../../../domain/entities/focus_point_transaction_type.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 
 class FocusPointTransactionTypesPicker extends BaseStatelessWidget {
   final String? initialValue;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/data/models/service/sub_category.dart';
+import 'package:shiftapp/common/data/models/service/sub_category.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/check_face_recognation/page/check_face_recognatin_page.dart';
 
+import '../../../../common/data/models/service/service_model.dart';
 import '../../../../core/services/routes.dart';
-import '../../../../data/models/service/service_model.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../components/base_stateless_widget.dart';
 import '../../components/underline_widget.dart';

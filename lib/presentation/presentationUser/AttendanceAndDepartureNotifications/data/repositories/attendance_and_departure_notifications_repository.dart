@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 
 import '../datasource/attendance_and_departure_notifications_provider.dart';
 import '../models/index.dart';

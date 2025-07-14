@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';

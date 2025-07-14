@@ -2,7 +2,7 @@ import 'dart:developer' as developer;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/repositories/terms/terms_repository.dart';
+import 'package:shiftapp/common/data/repositories/terms/terms_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 part 'copy_rights_events.dart';

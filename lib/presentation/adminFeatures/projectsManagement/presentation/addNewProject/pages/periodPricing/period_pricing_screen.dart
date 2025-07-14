@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/periodPricing/widget/period_pricing_item.dart';
 
 import '../../../../../../shared/components/base_stateless_widget.dart';
-
-import '../../../../domain/entities/period_pricing.dart';
+import '../../../../data/models/index.dart';
+import '../../../../domain/entities/index.dart';
 
 ///  Created by harbey on 5/15/2023.
 class PeriodPricingScreen extends BaseStatelessWidget {

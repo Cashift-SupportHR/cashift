@@ -1,4 +1,4 @@
-import '../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../../utils/app_utils.dart';
 import '../../../presentationUser/attendance/facerecognation/index.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:shiftapp/data/models/activity_log/confirm_activity_params.dart';
- import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/data/models/activity_log/confirm_activity_params.dart';
+ import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/jobs_list/jobs_list_page.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../presentationUser/resources/constants.dart';
 import '../../../../../presentationUser/workHazards/presentation/addWorkHazard/widgets/upload_files_list.dart';

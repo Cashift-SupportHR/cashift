@@ -6,7 +6,8 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
 import '../../../../../../shared/components/buttons/row_buttons.dart';
-import '../../../../domain/entities/period_pricing.dart';
+import '../../../../data/models/index.dart';
+import '../../../../domain/entities/index.dart';
 import '../../bloc/add_period_pricing_cubit.dart';
 
 class PeriodPricingPage extends BaseBlocWidget<Initialized<List<PeriodPricing>>, PeriodPricingCubit> {

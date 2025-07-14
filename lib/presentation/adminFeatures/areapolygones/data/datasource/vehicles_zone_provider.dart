@@ -1,7 +1,7 @@
 import 'package:shiftapp/presentation/adminFeatures/vehicles/data/models/vehicles_dto.dart';
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../models/add_vehicle_zone_params.dart';
 import '../models/edit_vehicle_zone_lat_lng_params.dart';
 import '../models/filter_vehicle_zone_params.dart';

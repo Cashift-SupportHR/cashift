@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../../../domain/entities/loans_request/loan_request.dart';
+import '../../../../../common/domain/entities/loans_request/loan_request.dart';
 import '../widgets/loan_request_item.dart';
 
 class LoanRequestsScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/domain/entities/job_offers/job_offer_dto.dart';
+import 'package:shiftapp/common/domain/entities/job_offers/job_offer_dto.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/job_offer_item_widget.dart';
 
 

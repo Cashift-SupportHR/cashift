@@ -7,7 +7,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
 
-import '../../../../data/models/attendance/attendance_config_dto.dart';
+import '../../../../common/data/models/attendance/attendance_config_dto.dart';
 import '../../../../generated/assets.dart';
 import '../../../../utils/app_icons.dart';
 import '../../../presentationUser/attendance/facerecognation/faces_matching.dart';

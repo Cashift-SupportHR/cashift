@@ -10,7 +10,7 @@ import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/buttons/icon_text_button.dart';
 import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/image_builder.dart';
-import '../../../domain/entities/employees_certificates.dart';
+import '../../../data/models/index.dart';
 
 ///  Created by harbey on 7/16/2023.
 class EmployeesCertificatesItem extends StatelessWidget {

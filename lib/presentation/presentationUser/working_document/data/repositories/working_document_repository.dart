@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 import 'package:shiftapp/presentation/presentationUser/working_document/data/models/installment_with_cashift_dto.dart';
 import 'package:shiftapp/presentation/presentationUser/working_document/data/models/working_document_dto.dart';
 

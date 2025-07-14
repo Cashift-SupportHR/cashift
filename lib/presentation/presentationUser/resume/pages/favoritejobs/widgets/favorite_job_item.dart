@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../domain/entities/resume/job_item.dart';
+import '../../../../../../common/domain/entities/resume/job_item.dart';
 import '../../../../../shared/components/image_builder.dart';
 import '../../../../resources/constants.dart';
 import 'popup_menu_favorite_job.dart';

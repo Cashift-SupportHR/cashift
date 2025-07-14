@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/r
 import 'package:shiftapp/presentation/shared/components/index.dart';
 import 'package:shiftapp/presentation/shared/components/text_field/build_text_field_item.dart';
 
-import '../../../../../../domain/constants/codes_constants.dart';
+import '../../../../../../common/domain/constants/codes_constants.dart';
 
 class ActionVehicleNotificationScreen extends BaseStatelessWidget {
   final Function(String) onSave;

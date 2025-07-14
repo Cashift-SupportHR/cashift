@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../../../domain/entities/resume/job_skills.dart';
+import '../../../../../../common/domain/entities/resume/job_skills.dart';
 import '../../../../resources/constants.dart';
 import '../bloc/favorite_job_cubit.dart';
 

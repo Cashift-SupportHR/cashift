@@ -5,6 +5,8 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import '../../bloc/add_covenant_received_cubit.dart';
 import 'covenant_received_screen.dart';
 import 'custody_initialize_state.dart';
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 
 abstract class BaseCovenantReceivedPage
     extends BaseBlocWidget<CustodyInitializeState, CovenantReceivedCubit> {

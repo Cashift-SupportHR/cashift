@@ -2,7 +2,7 @@ import 'dart:io';
 
  import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../../../adminFeatures/maintenanceAndBreakdowns/domain/entities/maintenance.dart';
 import '../../../../adminFeatures/vehicles/data/models/vehicle_details_dto.dart';
   import '../../../../adminFeatures/vehicles/domain/entities/vehicle_violation.dart';
@@ -11,7 +11,7 @@ import '../../domain/entities/driver_violation.dart';
 import '../../domain/entities/gas_station_trip.dart';
 import '../../domain/entities/index.dart';
 import '../../domain/entities/receive_vehicle_details.dart';
- import '../../domain/entities/vehicle_performance.dart';
+import '../../domain/entities/vehicle_performance.dart';
 import '../datasource/vehicles_operation_provider.dart';
 import '../models/add_round_trip_fill_station_prams.dart';
 import '../models/confirm_receive_vehicle_params.dart';

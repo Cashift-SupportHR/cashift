@@ -1,6 +1,7 @@
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/domain/entities/vehicle_component_handover.dart';
 
 import '../../data/models/custody_handover_dto.dart';
+import '../../data/models/index.dart';
 import 'vehicleComponents.dart';
 
 class CustodyHandover {

@@ -1,6 +1,6 @@
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 
-import '../../data/models/work_hazard_dto.dart';
+import '../../data/models/index.dart';
 
 class WorkHazard {
   int? id;

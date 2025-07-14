@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
-import '../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
 import '../../../usersManagement/data/models/brand_dto.dart';
 import '../../../usersManagement/domain/entities/company.dart';
 import '../datasource/projects_management_provider.dart';

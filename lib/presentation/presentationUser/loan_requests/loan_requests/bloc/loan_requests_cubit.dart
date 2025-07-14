@@ -2,9 +2,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/domain/entities/loans_request/index.dart';
+import 'package:shiftapp/common/domain/entities/loans_request/index.dart';
 
-import '../../../../../data/repositories/financial_requests/loans_request_repository.dart';
+import '../../../../../common/data/repositories/financial_requests/loans_request_repository.dart';
 
 @Injectable()
 class LoanRequestsCubit extends BaseCubit {

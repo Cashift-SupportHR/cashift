@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/absencenotice/page/widget/attendance_info_card_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/absencenotice/page/widget/data_user_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/absencenotice/page/widget/table_data_absence.dart';
-import '../../../../data/models/attendance/attendance_shift_dto.dart';
-import 'package:shiftapp/data/models/absence_notation/index.dart';
+import 'package:shiftapp/common/data/models/absence_notation/index.dart';
 
- import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/data/models/attendance/index.dart';
+import '../../../shared/components/base_stateless_widget.dart';
 
 class AbsenceNoticeScreen extends BaseStatelessWidget {
   final List<AbsenceDateParams> absenceDateParams;

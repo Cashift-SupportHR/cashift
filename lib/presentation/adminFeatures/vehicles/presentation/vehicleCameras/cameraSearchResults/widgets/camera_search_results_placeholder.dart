@@ -3,6 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import '../../../../../../../utils/app_icons.dart';
 import '../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../shared/components/index.dart';
+import '../../../../domain/entities/index.dart';
 import '../../../../data/models/index.dart';
 import '../../view/widgets/search_vehicle_caamera_sheet.dart';
 

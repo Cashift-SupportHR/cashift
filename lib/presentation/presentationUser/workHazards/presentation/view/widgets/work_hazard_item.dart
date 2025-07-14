@@ -11,7 +11,8 @@ import '../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../shared/components/icons/icon_text.dart';
 import '../../../../../shared/components/options_menu_button.dart';
 import '../../../../../shared/components/texts/icon_double_text.dart';
-import '../../../domain/entities/work_hazard.dart';
+import '../../../data/models/index.dart';
+import '../../../domain/entities/index.dart';
 
 class WorkHazardItem extends BaseStatelessWidget {
   final WorkHazard item;

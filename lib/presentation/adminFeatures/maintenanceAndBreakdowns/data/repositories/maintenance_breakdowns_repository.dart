@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../../../shared/models/common_list_item.dart';
 import '../../domain/entities/maintenance.dart';
 import '../data_sources/maintenance_breakdowns_provider.dart';

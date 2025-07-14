@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../domain/entities/employees_certificates.dart';
+import '../../../data/models/index.dart';
 import '../widgets/employees_certificates_item.dart';
 class EmployeesCertificatesScreen extends StatelessWidget {
   final List<EmployeeCertificate> data;

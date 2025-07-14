@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/index.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 import '../../../../../../core/services/routes.dart';
-import '../../../../../domain/constants/codes_constants.dart';
+import '../../../../../common/domain/constants/codes_constants.dart';
 import '../../../../shared/components/bottom_sheet/custom_bottom_sheets.dart';
 import '../../../../shared/components/buttons/details_button.dart';
 import '../../../../shared/models/common_list_item.dart';

@@ -4,8 +4,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
 import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
 
-import '../../../../../domain/entities/bail_requests/employee_services_status.dart';
-import '../../../../../domain/entities/salary-definition-request/salary_definition_request.dart';
+import '../../../../../common/domain/entities/bail_requests/employee_services_status.dart';
+import '../../../../../common/domain/entities/salary-definition-request/salary_definition_request.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../bail_requests/widgets/title_icon_services.dart';
 import 'download_rounded_button.dart';

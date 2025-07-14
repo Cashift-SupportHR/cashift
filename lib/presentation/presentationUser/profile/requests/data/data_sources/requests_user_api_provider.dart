@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 
 import 'package:injectable/injectable.dart';
 
-import '../../../../../../network/source/user_endpoint.dart';
+import '../../../../../../common/network/source/user_endpoint.dart';
 import '../models/terms_and_conditions_requests_prams.dart';
 import '../models/add_request_prams.dart';
 import '../models/confirm_reques_prams.dart';

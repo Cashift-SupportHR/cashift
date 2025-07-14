@@ -5,7 +5,7 @@ import '../../../../../../presentationUser/map_picker/widgets/map_picker_item.da
 import '../../../../../../shared/components/buttons/row_buttons.dart';
 import '../../../../../../shared/components/map/map_picker.dart';
 import '../../../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../data/models/location_project_params.dart';
+import '../../../../data/models/index.dart';
 import '../../bloc/add_additional_locations_bloc.dart';
 import 'add_additional_locations_screen.dart';
 

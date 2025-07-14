@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/auth/confirm_otp_params.dart';
-import 'package:shiftapp/data/repositories/login/auth_repository.dart';
+import 'package:shiftapp/common/data/models/auth/confirm_otp_params.dart';
+import 'package:shiftapp/common/data/repositories/login/auth_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/utils/secure_storage.dart';
 import 'dart:developer' as developer;

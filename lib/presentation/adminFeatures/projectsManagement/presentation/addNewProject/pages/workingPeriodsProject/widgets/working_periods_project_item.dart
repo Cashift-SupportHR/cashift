@@ -6,7 +6,8 @@ import '../../../../../../../presentationUser/resources/constants.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/buttons/app_icon_button.dart';
 import '../../../../../../../shared/components/decorations/decorations.dart';
-import '../../../../../domain/entities/working_period.dart';
+import '../../../../../data/models/index.dart';
+import '../../../../../domain/entities/index.dart';
 
 ///  Created by harbey on 7/23/2023.
 class WorkingPeriodsProjectItem extends BaseStatelessWidget {

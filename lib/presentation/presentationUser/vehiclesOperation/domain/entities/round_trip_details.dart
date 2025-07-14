@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:livelyness_detection/index.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
 import '../../../../../main_index.dart';

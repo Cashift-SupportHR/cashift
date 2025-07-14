@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
-import '../../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../presentationUser/workerWorkPlaces/widgets/focus_point_freelance_name_and_type.dart';
 import '../../../../../presentationUser/workerWorkPlaces/widgets/point_name_and_status.dart';

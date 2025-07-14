@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/evulation/evaluation_item.dart';
-import 'package:shiftapp/domain/entities/evulation/evaluation_params.dart';
+import 'package:shiftapp/common/domain/entities/evulation/evaluation_item.dart';
+import 'package:shiftapp/common/domain/entities/evulation/evaluation_params.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/rate/bloc/evaluation_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/rate/pages/evaluation_screen.dart';

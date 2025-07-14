@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 
-import '../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../../../usersManagement/data/models/brand_dto.dart';
 import '../../../usersManagement/data/models/company_dto.dart';
 import '../models/employe_point_dto.dart';

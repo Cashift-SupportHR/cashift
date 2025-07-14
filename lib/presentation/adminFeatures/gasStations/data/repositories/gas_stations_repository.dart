@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/presentation/adminFeatures/gasStations/data/models/add_edit_gas_station_prams.dart';
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../../generalViolations/domain/entities/violation_by_project_id.dart';
 import '../../domain/entities/GasStation.dart';
 import '../data_sources/gas_stations_provider.dart';

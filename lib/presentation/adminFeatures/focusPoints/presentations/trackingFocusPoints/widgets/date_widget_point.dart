@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../../../domain/entities/workerWorkPlaces/focus_point_info.dart';
+import '../../../../../../common/domain/entities/workerWorkPlaces/focus_point_info.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/decorations/decorations.dart';

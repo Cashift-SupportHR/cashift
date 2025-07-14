@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/presentation/shared/loans/data/models/index_loan.dart';
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/user_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/user_endpoint.dart';
 
 
 @Injectable()

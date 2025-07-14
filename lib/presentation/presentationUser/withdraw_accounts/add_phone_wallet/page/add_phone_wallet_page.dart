@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/data/models/bank/add_electronic_wallet.dart';
-import 'package:shiftapp/domain/entities/bankaccount/electronic_wallet.dart';
-import 'package:shiftapp/domain/entities/bankaccount/phone_wallet_required_data.dart';
+import 'package:shiftapp/common/data/models/bank/add_electronic_wallet.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/electronic_wallet.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/phone_wallet_required_data.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';

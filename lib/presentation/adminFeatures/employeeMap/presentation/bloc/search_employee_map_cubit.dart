@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 
-import '../../../../../data/repositories/resume/resume_repository.dart';
+import '../../../../../common/data/repositories/resume/resume_repository.dart';
 import '../../../../presentationUser/common/common_state.dart';
 import '../../data/models/fetch_emp_map_prams.dart';
 import '../../data/repositories/emp_map_repository.dart';

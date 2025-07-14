@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 
-import '../../../../../domain/entities/account/registered_face.dart';
-import '../../../../../domain/entities/account/remote_file.dart';
-import '../../../../../domain/entities/account/user.dart';
+import '../../../../../common/domain/entities/account/registered_face.dart';
+import '../../../../../common/domain/entities/account/remote_file.dart';
+import '../../../../../common/domain/entities/account/user.dart';
 import '../../../../../utils/app_icons.dart';
 import '../../../../shared/components/app_cupertino_button.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

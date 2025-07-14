@@ -4,20 +4,18 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shiftapp/data/datasources/remote/api_exception.dart';
-import 'package:shiftapp/data/datasources/remote/resume_not_complete_exception.dart';
-import 'package:shiftapp/data/datasources/remote/unauthorized_exception.dart';
-import 'package:shiftapp/data/exceptions/app_base_exception.dart';
-import 'package:shiftapp/data/exceptions/empty_list_exception.dart';
+import 'package:shiftapp/common/data/datasources/remote/api_exception.dart';
+import 'package:shiftapp/common/data/datasources/remote/resume_not_complete_exception.dart';
+import 'package:shiftapp/common/data/datasources/remote/unauthorized_exception.dart';
+import 'package:shiftapp/common/data/exceptions/app_base_exception.dart';
+import 'package:shiftapp/common/data/exceptions/empty_list_exception.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
-import 'package:shiftapp/presentation/presentationUser/resume/pages/resume_pages.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../core/services/routes.dart';
-import '../../../data/exceptions/verification_face_exception.dart';
+import '../../../common/data/exceptions/verification_face_exception.dart';
 import 'base_stateless_widget.dart';
 
 // ignore: must_be_immutable

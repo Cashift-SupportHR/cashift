@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
 //
-// import '../../../../domain/resume/district_item.dart';
+// import '../../../../../domain/resume/district_item.dart';
 // import '../../common/common_state.dart';
 //
 // class DistrictPickerWidget extends StatelessWidget {

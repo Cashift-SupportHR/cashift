@@ -9,8 +9,8 @@ import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../../../shared/components/image_builder.dart';
 import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../../data/models/add_covenant_focus_point_params.dart';
-import '../../../../../domain/entities/covenant.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 import 'focus_point_covenant_types_picker.dart';
 
 ///  Created by harbey on 5/16/2023.

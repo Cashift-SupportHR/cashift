@@ -4,11 +4,11 @@ import 'package:bloc/bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/core/resources/data_state.dart';
-import 'package:shiftapp/data/models/auth/index.dart';
+import 'package:shiftapp/common/data/models/auth/index.dart';
 
-import 'package:shiftapp/data/exceptions/nobiometric_saved_exception.dart';
- import 'package:shiftapp/data/repositories/login/auth_repository.dart';
-import 'package:shiftapp/data/repositories/user/user_repository.dart';
+import 'package:shiftapp/common/data/exceptions/nobiometric_saved_exception.dart';
+ import 'package:shiftapp/common/data/repositories/login/auth_repository.dart';
+import 'package:shiftapp/common/data/repositories/user/user_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:meta/meta.dart';
  import 'package:shiftapp/utils/secure_storage.dart';

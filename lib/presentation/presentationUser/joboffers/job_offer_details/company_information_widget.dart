@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_flutter_platform_interface/src/types/location.dart';
-import 'package:shiftapp/domain/entities/jobs/job_details.dart';
+import 'package:shiftapp/common/domain/entities/jobs/job_details.dart';
 import 'package:shiftapp/presentation/shared/components/row_info_builder.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/jobs_slider_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';

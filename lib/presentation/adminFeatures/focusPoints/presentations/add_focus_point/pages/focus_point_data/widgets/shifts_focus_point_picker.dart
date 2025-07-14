@@ -9,7 +9,8 @@ import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../../../shared/components/dropdown_filed.dart';
 import '../../../../../../../shared/components/text_field/bottom_sheet_text_field_rectangle.dart';
-import '../../../../../domain/entities/shift_focus_point.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 
 ///  Created by harbey on 6/6/2023.
 class ShiftsFocusPointPicker extends BaseStatelessWidget {

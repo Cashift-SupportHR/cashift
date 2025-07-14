@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:location/location.dart';
- import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+ import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
  import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
- import 'package:shiftapp/data/models/activity_log/index.dart';
+ import 'package:shiftapp/common/data/models/activity_log/index.dart';
 
-import '../../../../../domain/entities/required_tasks/in_app_required_task.dart';
+import '../../../../../common/domain/entities/required_tasks/in_app_required_task.dart';
 import '../../../../../main_index.dart';
 import '../../../common/common_state.dart';
  import 'app_requirement_notification_widget.dart';

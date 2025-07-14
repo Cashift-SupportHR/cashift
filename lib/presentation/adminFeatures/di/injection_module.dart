@@ -1,8 +1,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:shiftapp/data/repositories/device/deviceinfo_repository.dart';
+import 'package:shiftapp/common/data/repositories/device/deviceinfo_repository.dart';
 
-import '../../../domain/entities/shared/device.dart';
+import '../../../common/domain/entities/shared/device.dart';
+
 
 @module
 abstract class InjectionModule {

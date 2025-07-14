@@ -5,9 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../domain/entities/bail_requests/bail_request.dart';
-import '../../../../domain/entities/bail_requests/bail_term_and_condition.dart';
-import '../../../../domain/entities/bail_requests/employee_services_status.dart';
+import '../../../../common/domain/entities/bail_requests/index.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import 'bail_terms_and_conditions.dart';
 

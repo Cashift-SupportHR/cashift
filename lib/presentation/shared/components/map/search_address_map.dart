@@ -6,7 +6,7 @@
 // import 'package:google_maps_webservice/places.dart';
 //
 // import '../../../../config.dart';
-// import '../../../../domain/job_offer_dto.dart';
+// import '../../../../../domain/job_offer_dto.dart';
 // import '../../../presentationUser/resources/colors.dart';
 // import '../../../presentationUser/resources/constants.dart';
 //

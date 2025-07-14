@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../../data/exceptions/verification_face_exception.dart';
+import '../../../../../common/data/exceptions/verification_face_exception.dart';
 import '../../../common/common_state.dart';
 import '../bloc/initialize_wallet_state.dart';
 import '../bloc/wallet_bloc.dart';

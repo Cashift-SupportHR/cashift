@@ -2,7 +2,7 @@ import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shiftapp/config.dart';
-import 'package:shiftapp/domain/entities/job_offers/job_offer_dto.dart';
+import 'package:shiftapp/common/domain/entities/job_offers/job_offer_dto.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 
 class JobOfferWidgetHelper {

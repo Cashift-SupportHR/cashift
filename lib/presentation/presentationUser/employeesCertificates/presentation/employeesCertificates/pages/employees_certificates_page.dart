@@ -1,12 +1,10 @@
-  import 'package:image_picker/image_picker.dart';
  import 'package:share_plus/share_plus.dart';
-import 'package:image_picker/image_picker.dart';
 
 
 import '../../../../../shared/components/base_widget_bloc.dart';
 import '../../../../attendance/facerecognation/index.dart';
 import '../../../../common/common_state.dart';
-import '../../../domain/entities/employees_certificates.dart';
+import '../../../data/models/index.dart';
 import '../bloc/employees_certificates_cubit.dart';
 import 'employees_certificates_screen.dart';
 

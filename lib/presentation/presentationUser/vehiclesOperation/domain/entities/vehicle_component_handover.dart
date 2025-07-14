@@ -1,3 +1,5 @@
+
+import '../../data/models/index.dart';
 import '../../data/models/vehicle_component_handover_dto.dart';
 import 'vehicleComponents.dart';
 

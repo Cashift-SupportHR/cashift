@@ -3,8 +3,8 @@ import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/config.dart';
-import 'package:shiftapp/data/models/attendance/attendance_shift_dto.dart';
-import 'package:shiftapp/domain/entities/attendance/attendance_query.dart';
+import 'package:shiftapp/common/data/models/attendance/attendance_shift_dto.dart';
+import 'package:shiftapp/common/domain/entities/attendance/attendance_query.dart';
  import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/pages/qrcode_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/bloc/attendance_cubit.dart';
@@ -17,8 +17,8 @@ import 'package:animation_wrappers/animation_wrappers.dart';
 import 'package:just_audio/just_audio.dart';
 
 import '../../../../../core/services/routes.dart';
-import '../../../../../domain/entities/attendancerecoginatin/register_attendance_request_shift.dart';
-import '../../../../../domain/entities/shift/applied_offer.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/register_attendance_request_shift.dart';
+import '../../../../../common/domain/entities/shift/applied_offer.dart';
 
 class AttendancePage
     extends BaseBlocWidget<Initialized<AttendanceShiftDto>, AttendanceCubit> {

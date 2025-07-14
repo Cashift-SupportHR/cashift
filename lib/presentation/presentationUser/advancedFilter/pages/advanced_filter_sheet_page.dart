@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/data/models/advancedFilter/index.dart';
+import 'package:shiftapp/common/data/models/advancedFilter/index.dart';
 
 import '../../../../core/services/routes.dart';
 

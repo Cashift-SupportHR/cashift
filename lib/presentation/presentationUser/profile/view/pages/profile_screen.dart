@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:shiftapp/data/repositories/local/local_repository.dart';
+import 'package:shiftapp/common/data/repositories/local/local_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/view/bloc/profile_ui_state.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/view/widgets/profile_item_widget.dart';

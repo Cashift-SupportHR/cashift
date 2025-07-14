@@ -3,7 +3,8 @@ import 'package:shiftapp/presentation/shared/components/text_field/bottom_sheet_
 
 import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/dropdown_filed.dart';
-import '../../../../../domain/entities/job.dart';
+import '../../../../../data/models/index.dart';
+import '../../../../../domain/entities/index.dart';
 
 class JobsPicker extends BaseStatelessWidget {
   final TextEditingController? controller;

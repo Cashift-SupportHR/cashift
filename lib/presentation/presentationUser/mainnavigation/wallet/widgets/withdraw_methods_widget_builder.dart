@@ -1,6 +1,6 @@
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:shiftapp/domain/entities/wallet/withdraw_methods.dart';
-import 'package:shiftapp/domain/entities/wallet/withdraw_method.dart';
+import 'package:shiftapp/common/domain/entities/wallet/withdraw_methods.dart';
+import 'package:shiftapp/common/domain/entities/wallet/withdraw_method.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 

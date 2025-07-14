@@ -4,6 +4,8 @@ import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentat
 
   import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../data/models/employe_point_dto.dart';
+import '../../../../../data/models/index.dart';
+import '../../../../../domain/entities/index.dart';
 import '../../../bloc/map_project_gates_bloc.dart';
 
 

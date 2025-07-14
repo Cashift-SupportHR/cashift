@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/exceptions/no_bank_account_exception.dart';
-import 'package:shiftapp/data/models/bank/add_bank_info_params.dart';
-import 'package:shiftapp/data/repositories/wallet/bank_repository.dart';
-import 'package:shiftapp/domain/entities/bankaccount/bank_account_info.dart';
-import 'package:shiftapp/domain/entities/bankaccount/bank_page_data.dart';
+import 'package:shiftapp/common/data/exceptions/no_bank_account_exception.dart';
+import 'package:shiftapp/common/data/models/bank/add_bank_info_params.dart';
+import 'package:shiftapp/common/data/repositories/wallet/bank_repository.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/bank_account_info.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/bank_page_data.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 @Injectable()

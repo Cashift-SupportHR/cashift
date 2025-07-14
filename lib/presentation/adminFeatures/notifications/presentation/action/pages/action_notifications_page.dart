@@ -1,6 +1,6 @@
  import 'package:shiftapp/presentation/shared/components/index.dart';
 
-import '../../../../../../domain/constants/codes_constants.dart';
+import '../../../../../../common/domain/constants/codes_constants.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 
  import '../../../data/models/action_notifications_prams.dart';

@@ -4,7 +4,8 @@ import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/bottom_sheet/list_picker_widget.dart';
 import '../../../../../../../shared/components/dropdown_filed.dart';
 import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../../domain/entities/coverage_break_focus_point.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 
 class CoverageBreakFocusPointPicker extends BaseStatelessWidget {
   final String? initialValue;

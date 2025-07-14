@@ -6,7 +6,7 @@ import 'package:shiftapp/core/resources/data_state.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/common/stream_data_state.dart';
 
-import '../../../../../data/exceptions/empty_list_exception.dart';
+import '../../../../../common/data/exceptions/empty_list_exception.dart';
 import '../../data/models/complet_opportunity_dto.dart';
 import '../../data/models/index.dart';
 import '../../data/models/review_shiftsprams.dart';

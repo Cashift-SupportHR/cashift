@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/models/auth/rest_password_params.dart';
-import 'package:shiftapp/data/repositories/login/auth_repository.dart';
+import 'package:shiftapp/common/data/models/auth/rest_password_params.dart';
+import 'package:shiftapp/common/data/repositories/login/auth_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 @Injectable()
 class ForgetPasswordCubit extends BaseCubit{

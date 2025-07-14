@@ -15,3 +15,5 @@ export '../models/add_vehicle_violation_params.dart';
 export '../models/final_action_vehicle_receive_request_params.dart';
 export '../models/add_vehicle_camera_params.dart';
 export '../models/vehicle_video_params.dart';
+export '../models/add_covenant_vehicle_params.dart';
+export '../models/constract_add_insurance.dart';

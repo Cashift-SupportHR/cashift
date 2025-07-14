@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/data/models/activity_log/index.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer_dto.dart';
+import 'package:shiftapp/common/data/models/activity_log/index.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer_dto.dart';
 import 'package:shiftapp/presentation/adminFeatures/di/injector.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/geofence/dialog_background_service.dart';

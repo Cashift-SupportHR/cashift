@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/presentation/adminFeatures/addOpportunity/data/models/add_opportunity_params.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/adminFeatures/focusPoints/presentations/add_focus_point/pages/focus_point_data/widgets/projects_picker.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/workingPeriodsProject/widgets/jobs_picker.dart';
 import 'package:shiftapp/presentation/adminFeatures/usersManagement/presentation/addNewUser/widgets/company_picker.dart';

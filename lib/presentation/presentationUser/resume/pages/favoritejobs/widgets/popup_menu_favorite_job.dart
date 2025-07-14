@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 
-import '../../../../../../domain/entities/resume/job_item.dart';
+import '../../../../../../common/domain/entities/resume/job_item.dart';
 import '../../../../../../utils/app_icons.dart';
 import '../../../../../adminFeatures/available_opportunities/presentation/widgets/build_popup_menu_button.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';

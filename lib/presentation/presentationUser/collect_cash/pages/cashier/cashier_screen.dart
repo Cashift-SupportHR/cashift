@@ -13,7 +13,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/components/gradiant_button.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
-import 'package:shiftapp/domain/entities/collect_cash/cashier.dart';
+import 'package:shiftapp/common/domain/entities/collect_cash/cashier.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 

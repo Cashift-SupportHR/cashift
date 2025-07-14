@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/domain/entities/activity_log/notification_item.dart';
+import 'package:shiftapp/common/domain/entities/activity_log/notification_item.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
 

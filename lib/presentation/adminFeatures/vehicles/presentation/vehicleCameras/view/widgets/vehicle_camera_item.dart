@@ -4,6 +4,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/index.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 import '../intent/vehicle_cameras_intents.dart';
 
 class VehicleCameraItem extends BaseStatelessWidget {

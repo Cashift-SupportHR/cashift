@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:shiftapp/data/models/advancedFilter/index.dart';
+import 'package:shiftapp/common/data/models/advancedFilter/index.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/domain/entities/advancedFilter/index.dart';
+import 'package:shiftapp/common/domain/entities/advancedFilter/index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import '../../../../data/datasources/remote/api_exception.dart';
-import '../../../../data/repositories/advancedFilter/advanced_filter_repository.dart';
+import '../../../../../common/data/repositories/advancedFilter/advanced_filter_repository.dart';
+import '../../../../common/data/datasources/remote/api_exception.dart';
 
 @injectable
 class AdvancedFilterCubit extends BaseCubit {

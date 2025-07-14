@@ -1,4 +1,4 @@
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../addOpportunity/presentations/pages/add_new_opportunity_page.dart';

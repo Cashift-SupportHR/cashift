@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/presentation/presentationUser/employeesCertificates/data/models/index.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
  import '../datasource/employees_certificates_provider.dart';
 
 @injectable

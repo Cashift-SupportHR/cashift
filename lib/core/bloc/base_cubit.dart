@@ -1,17 +1,15 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shiftapp/data/models/api_response.dart';
-import 'package:shiftapp/domain/params/dashboard_required_action_respond_params.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
+import 'package:shiftapp/common/domain/params/dashboard_required_action_respond_params.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../data/exceptions/verification_face_exception.dart';
-import '../../data/models/user_overview/disclosure_required_task_dto.dart';
-import '../../domain/entities/required_tasks/confirm_attendance.dart';
-import '../../domain/entities/required_tasks/in_app_required_task.dart';
-import '../../domain/entities/required_tasks/required_tasks.dart';
-import '../../domain/usecases/respond_dashboard_required_action_usecase.dart';
-import '../../domain/usecases/tasks_notifications_usecase.dart';
+import '../../common/data/exceptions/verification_face_exception.dart';
+import '../../common/data/models/user_overview/index.dart';
+import '../../common/domain/entities/required_tasks/index.dart';
+import '../../common/domain/usecases/respond_dashboard_required_action_usecase.dart';
+import '../../common/domain/usecases/tasks_notifications_usecase.dart';
 import '../../presentation/adminFeatures/di/injector.dart';
 import '../../presentation/shared/check_face_recognation/page/check_face_recognatin_page.dart';
 

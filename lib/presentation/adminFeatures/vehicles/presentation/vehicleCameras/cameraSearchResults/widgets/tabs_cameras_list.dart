@@ -1,8 +1,7 @@
 
 import '../../../../../../shared/components/index.dart';
+import '../../../../domain/entities/index.dart';
 import '../../../../data/models/index.dart';
-import '../../../../domain/entities/camera_search_result_args.dart';
-import '../../../../domain/entities/vehicle_camera.dart';
 
 class TabsCamerasList extends BaseStatelessWidget {
   final CameraSearchResultArgs args;

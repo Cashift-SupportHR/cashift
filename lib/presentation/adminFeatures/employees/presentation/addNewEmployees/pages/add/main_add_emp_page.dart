@@ -6,10 +6,11 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../shared/components/stepper/custom_linear_step_indicator.dart';
 
-import '../../../../data/models/constract_add_emp.dart';
- import 'emp_file/screen/emp_file_page.dart';
+ import '../../../../data/models/constract_add_emp.dart';
+import 'emp_file/screen/emp_file_page.dart';
 import 'ifo_emp/emp_info_page.dart';
 import 'new_emp/add_new_employees_page.dart';
+import '../../../../domain/entities/index.dart';
 
 class MainAddEmpPage extends BaseStatelessWidget {
   MainAddEmpPage({

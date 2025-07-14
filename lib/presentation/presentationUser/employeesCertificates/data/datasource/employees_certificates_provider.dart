@@ -1,8 +1,8 @@
 
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/presentation/presentationUser/employeesCertificates/data/models/index.dart';
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/user_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/user_endpoint.dart';
 
 @Injectable()
 class EmployeesCertificatesAPI {

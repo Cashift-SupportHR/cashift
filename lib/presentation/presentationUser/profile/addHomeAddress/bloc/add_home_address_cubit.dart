@@ -8,14 +8,14 @@ import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:uuid/uuid.dart';
 
-import '../../../../../data/repositories/add-address/add_address_repository.dart';
-import '../../../../../data/repositories/resume/resume_repository.dart';
-import '../../../../../domain/entities/resume/index.dart';
+import '../../../../../common/data/repositories/add-address/add_address_repository.dart';
+import '../../../../../common/data/repositories/resume/resume_repository.dart';
+import '../../../../../common/domain/entities/resume/index.dart';
 import '../../../common/stream_data_state.dart';
 import '../../../locationservice/locationservice.dart';
 import '../../../map_picker/widgets/map_picker_item.dart';
 import '../../../map_picker/widgets/map_prediction.dart';
-import '../../../../../data/models/add-address/add_home_location_params.dart';
+import '../../../../../common/data/models/add-address/add_home_location_params.dart';
 import 'add_home_address_state.dart';
 
 @Injectable()

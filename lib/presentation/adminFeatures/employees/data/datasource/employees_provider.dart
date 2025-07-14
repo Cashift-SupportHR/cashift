@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../models/accept_or_reject_attachment_emp_prams.dart';
 import '../models/emp_attandance_prams.dart';
 import '../models/emp_attendance_dto.dart';

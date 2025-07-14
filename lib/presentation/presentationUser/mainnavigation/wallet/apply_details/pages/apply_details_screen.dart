@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../../../../domain/entities/wallet/apply_details.dart';
+import '../../../../../../common/domain/entities/wallet/apply_details.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import 'list_opportunity_details.dart';
 

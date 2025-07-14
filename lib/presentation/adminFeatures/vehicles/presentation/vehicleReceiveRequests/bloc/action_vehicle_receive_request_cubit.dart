@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 
-import '../../../../../../data/exceptions/empty_list_exception.dart';
+import '../../../../../../common/data/exceptions/empty_list_exception.dart';
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../shared/models/common_list_item.dart';
 import '../../../data/models/action_vehicle_receive_request_params.dart';

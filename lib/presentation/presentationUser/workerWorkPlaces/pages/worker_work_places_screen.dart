@@ -1,11 +1,12 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/workerWorkPlaces/index.dart';
+import 'package:shiftapp/common/domain/entities/workerWorkPlaces/index.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 import 'package:vibration/vibration.dart';
 
-import '../../../../domain/entities/shared/date_formatter.dart';
- import '../../../shared/components/base_stateless_widget.dart';
+import '../../../../common/data/models/workerWorkPlaces/index.dart';
+ import '../../../../common/domain/entities/shared/date_formatter.dart';
+import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/icons/icon_text.dart';
 import '../../../shared/components/texts/underline_text.dart';
 import '../../common/common_state.dart';

@@ -10,8 +10,8 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:shiftapp/core/services/routes.dart';
 
-import '../../data/models/notification_offers/notification_offer_params.dart';
-import '../../domain/entities/shared/notification_types.dart';
+import '../../common/data/models/notification_offers/index.dart';
+import '../../common/domain/entities/shared/notification_types.dart';
 import '../../utils/notification.dart';
 
 /// Create a [AndroidNotificationChannel] for heads up notifications

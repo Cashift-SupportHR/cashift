@@ -1,9 +1,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/data/models/add-address/index.dart';
+import 'package:shiftapp/common/data/models/add-address/index.dart';
 
- import '../../../../../data/repositories/add-address/add_address_repository.dart';
+ import '../../../../../common/data/repositories/add-address/add_address_repository.dart';
 import '../../../map_picker/bloc/map_picker_state.dart';
 import '../../../map_picker/data/repositories/map_picker_repository.dart';
 import '../../../map_picker/widgets/map_picker_item.dart';

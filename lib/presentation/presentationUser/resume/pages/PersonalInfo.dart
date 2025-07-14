@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:shiftapp/domain/entities/resume/city_item.dart';
-import 'package:shiftapp/domain/entities/resume/personal_info.dart';
+import 'package:shiftapp/common/domain/entities/resume/city_item.dart';
+import 'package:shiftapp/common/domain/entities/resume/personal_info.dart';
  import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/validation.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_component_data.dart';

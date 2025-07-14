@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../domain/entities/TransactionsList.dart';
+import '../../../../domain/entities/index.dart';
 import '../../widgets/attendance_item.dart';
 
 class AttendanceEmployeesScreen extends BaseStatelessWidget {

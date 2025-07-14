@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:shiftapp/config.dart';
 
-import '../../../../../domain/entities/account/registered_face.dart';
+import '../../../../../common/domain/entities/account/registered_face.dart';
 import '../../../../shared/components/app_cupertino_button.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/outlint_button.dart';

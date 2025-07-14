@@ -1,7 +1,7 @@
 
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../../vehicles/domain/entities/vehicle.dart';
 import '../../domain/entities/vehicle_zone.dart';
 import '../datasource/vehicles_zone_provider.dart';

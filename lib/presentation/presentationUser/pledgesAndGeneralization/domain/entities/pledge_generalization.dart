@@ -1,6 +1,7 @@
 
-import '../../data/models/pledge_generalization_dto.dart';
 
+
+import '../../data/models/pledge_generalization_dto.dart';
 
 class PledgeGeneralization {
   int? id;

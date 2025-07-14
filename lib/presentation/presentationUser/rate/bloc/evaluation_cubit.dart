@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/repositories/evaluation/evaluation_repository.dart';
-import 'package:shiftapp/domain/entities/evulation/index.dart';
+import 'package:shiftapp/common/data/repositories/evaluation/evaluation_repository.dart';
+import 'package:shiftapp/common/domain/entities/evulation/index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 @Injectable()

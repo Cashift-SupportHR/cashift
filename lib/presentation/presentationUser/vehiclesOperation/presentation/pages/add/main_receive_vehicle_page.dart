@@ -11,10 +11,9 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 import '../../../../../../core/services/routes.dart';
 import '../../../../common/common_state.dart';
 import '../../../../../shared/components/stepper/custom_linear_step_indicator.dart';
-import '../../../data/models/create_vehicle_handover_prams.dart';
-import '../../../data/models/mainReceiveVehicleArgument.dart';
-import '../../../domain/entities/CreateVehicleHandover.dart';
+import '../../../data/models/index.dart';
 import '../../../domain/entities/custody_handover.dart';
+import '../../../domain/entities/index.dart';
 import '../../startTour/pages/start_tour_page.dart';
 
 class MainReceiveVehiclePage extends BaseStatelessWidget {

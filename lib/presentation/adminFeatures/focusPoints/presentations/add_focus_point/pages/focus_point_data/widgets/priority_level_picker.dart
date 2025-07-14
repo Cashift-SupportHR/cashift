@@ -4,7 +4,8 @@ import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/bottom_sheet/list_picker_widget.dart';
 import '../../../../../../../shared/components/dropdown_filed.dart';
 import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../../domain/entities/point_priority_number.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 
 class PriorityLevelPicker extends BaseStatelessWidget {
   final String? initialValue;

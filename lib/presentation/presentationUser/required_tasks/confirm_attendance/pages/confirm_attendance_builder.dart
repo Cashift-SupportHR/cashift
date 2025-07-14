@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/activity_log/bloc/activity_log_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/data/models/activity_log/index.dart';
+import 'package:shiftapp/common/data/models/activity_log/index.dart';
 
-import '../../../../../domain/entities/required_tasks/confirm_attendance.dart';
+import '../../../../../common/domain/entities/required_tasks/confirm_attendance.dart';
 import '../../../../shared/components/base_widget_bloc.dart';
 import 'confirm_attendance_dialog.dart';
 

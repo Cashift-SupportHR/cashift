@@ -4,13 +4,13 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/repositories/profile/profile_repository.dart';
-import 'package:shiftapp/domain/entities/account/remote_file.dart';
+import 'package:shiftapp/common/data/repositories/profile/profile_repository.dart';
+import 'package:shiftapp/common/domain/entities/account/remote_file.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../data/models/account/feature_app_dto.dart';
-import '../../../../../data/repositories/user/user_repository.dart';
-import '../../../../../domain/entities/account/user.dart';
+import '../../../../../common/data/models/account/feature_app_dto.dart';
+import '../../../../../common/data/repositories/user/user_repository.dart';
+import '../../../../../common/domain/entities/account/user.dart';
 import 'face_detection_intialize_state.dart';
 
 class CheckFaceRecogenationCubit extends BaseCubit {

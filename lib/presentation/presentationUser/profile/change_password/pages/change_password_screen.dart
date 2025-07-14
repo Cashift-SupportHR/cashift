@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:shiftapp/data/models/auth/change_password_params.dart';
+import 'package:shiftapp/common/data/models/auth/change_password_params.dart';
 import 'package:shiftapp/presentation/shared/components/app_button.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';

@@ -1,6 +1,6 @@
 
-import '../../../../../data/models/api_response.dart';
- import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+ import '../../../../../common/network/source/admin_endpoint.dart';
 import '../../../../shared/models/common_list_item_dto.dart';
 import '../models/add_cashifter_loan_params.dart';
 import 'package:injectable/injectable.dart';

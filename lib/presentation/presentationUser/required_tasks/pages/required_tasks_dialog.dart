@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
-import '../../../../../data/models/user_overview/disclosure_required_task_dto.dart';
+import '../../../../../common/data/models/user_overview/disclosure_required_task_dto.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/checkbox/multiple_choice_checkbox.dart';
 import '../../../shared/components/checkbox/single_choice_checkbox.dart';

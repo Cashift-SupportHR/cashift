@@ -1,4 +1,5 @@
- import '../../data/models/receive_vehicle_dto.dart';
+
+import '../../data/models/index.dart';
 import '../../data/models/receive_vehicle_data_dto.dart';
 
  class ReceiveVehicle {

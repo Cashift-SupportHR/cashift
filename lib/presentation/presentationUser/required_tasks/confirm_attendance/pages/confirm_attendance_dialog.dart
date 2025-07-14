@@ -6,8 +6,8 @@ import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dar
 import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
-import '../../../../../domain/entities/shared/date_formatter.dart';
-import '../../../../../domain/entities/required_tasks/confirm_attendance.dart';
+import '../../../../../common/domain/entities/shared/date_formatter.dart';
+import '../../../../../common/domain/entities/required_tasks/confirm_attendance.dart';
 import '../../../../../utils/app_icons.dart';
 import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/adminToggle/screen/admin_toggle_builder.dart';
 
-import '../../../../data/repositories/user/user_repository.dart';
-import '../../../adminFeatures/di/injector.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
 import '../../components/base_widget_bloc.dart';

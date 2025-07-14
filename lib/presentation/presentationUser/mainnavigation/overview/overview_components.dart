@@ -1,4 +1,4 @@
-import 'package:shiftapp/domain/entities/shift/index_shift.dart';
+import 'package:shiftapp/common/domain/entities/shift/index_shift.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 class OverviewComponents {

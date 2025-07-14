@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/adminFeatures/maintenanceAndBreakdowns/presentation/add_maintenance_breakdowns/pages/add_maintenance_breakdowns_screen.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
-import '../../../../../../../domain/constants/codes_constants.dart';
+import '../../../../../../../common/domain/constants/codes_constants.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/adminFeatures/employeeMap/presentation/widgets/emp_map_widget.dart';
 
-import '../../../../../../domain/entities/resume/city_item.dart';
+import '../../../../../../common/domain/entities/resume/city_item.dart';
 import '../../../../../presentationUser/resources/colors.dart';
 import '../../../../../shared/components/app_cupertino_button.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';

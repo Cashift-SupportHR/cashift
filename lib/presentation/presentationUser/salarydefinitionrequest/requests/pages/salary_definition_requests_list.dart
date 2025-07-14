@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../../../domain/entities/salary-definition-request/salary_definition_request.dart';
+import '../../../../../common/domain/entities/salary-definition-request/salary_definition_request.dart';
 import '../widgets/salary_definition_request_item.dart';
 
 class SalaryDefinitionRequestsList extends StatelessWidget {

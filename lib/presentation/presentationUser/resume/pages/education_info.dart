@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart'; // You have to addopportunityemployee this manually, for some reason it cannot be added automatically
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/resume/education_info.dart';
+import 'package:shiftapp/common/domain/entities/resume/education_info.dart';
 import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_component_data.dart';

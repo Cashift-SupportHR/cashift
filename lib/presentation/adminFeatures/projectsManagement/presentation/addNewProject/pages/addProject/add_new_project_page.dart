@@ -5,6 +5,7 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../bloc/add_new_project_bloc.dart';
 import 'add_new_project_screen.dart';
+import '../../../../data/models/index.dart';
 
 class AddNewProjectPage
     extends BaseBlocWidget<InitializedAddNewProject, AddNewProjectCubit> {

@@ -1,5 +1,5 @@
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import 'package:injectable/injectable.dart';
 
 import '../models/add_edit_gas_station_prams.dart';

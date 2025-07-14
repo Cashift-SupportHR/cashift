@@ -4,7 +4,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
 import '../../../../../../shared/components/files/file_view_screen.dart';
 import '../../bloc/vehicles_cubit.dart';
 

@@ -1,8 +1,8 @@
 import 'package:shiftapp/presentation/adminFeatures/usersManagement/data/models/index.dart';
 
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../../../../shared/models/common_list_item_dto.dart';
 
 import '../models/user_by_phone_dto.dart';

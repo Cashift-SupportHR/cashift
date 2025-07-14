@@ -3,12 +3,12 @@ import 'package:bloc/bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
 import 'package:shiftapp/core/resources/data_state.dart' as dataState;
-import 'package:shiftapp/data/models/resuame/update_resume_params.dart';
- import 'package:shiftapp/data/repositories/resume/resume_repository.dart';
-import 'package:shiftapp/data/repositories/user/user_repository.dart';
+import 'package:shiftapp/common/data/models/resuame/update_resume_params.dart';
+ import 'package:shiftapp/common/data/repositories/resume/resume_repository.dart';
+import 'package:shiftapp/common/data/repositories/user/user_repository.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_component_data.dart';
-import 'package:shiftapp/domain/entities/resume/index.dart';
+import 'package:shiftapp/common/domain/entities/resume/index.dart';
 
 
 part 'resume_event.dart';

@@ -1,6 +1,6 @@
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
-import '../../../../../../../domain/constants/codes_constants.dart';
+import '../../../../../../../common/domain/constants/codes_constants.dart';
 
 import '../../../../../../core/services/routes.dart';
 import '../../../../../presentationUser/common/common_state.dart';

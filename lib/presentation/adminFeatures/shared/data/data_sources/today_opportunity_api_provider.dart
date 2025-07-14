@@ -1,6 +1,6 @@
 
- import 'package:shiftapp/data/models/api_response.dart';
-import '../../../../../network/source/admin_endpoint.dart';
+ import 'package:shiftapp/common/data/models/api_response.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../../../addOpportunity/data/models/opportunity_applicant_dto.dart';
 import '../models/index.dart';
 import 'package:injectable/injectable.dart';

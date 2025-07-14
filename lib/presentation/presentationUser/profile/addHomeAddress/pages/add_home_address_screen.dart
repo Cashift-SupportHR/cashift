@@ -1,5 +1,5 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import '../../../../../domain/entities/resume/index.dart';
+import '../../../../../common/domain/entities/resume/index.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/map/map_constants.dart';
 import '../../../common/common_state.dart';
@@ -10,7 +10,7 @@ import '../../../map_picker/widgets/map_prediction.dart';
 import '../../../map_picker/widgets/map_search.dart';
 import '../../addresess/widgets/detect_my_location_button.dart';
 import '../../../resources/colors.dart';
-import '../../../../../data/models/add-address/add_home_location_params.dart';
+import '../../../../../common/data/models/add-address/add_home_location_params.dart';
 import '../bloc/add_home_address_state.dart';
 import '../widgets/house_identification_sheet.dart';
 

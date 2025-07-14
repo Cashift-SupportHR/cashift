@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shiftapp/domain/entities/wallet/withdraw_method.dart';
+import 'package:shiftapp/common/domain/entities/wallet/withdraw_method.dart';
 import '../../../../../main_index.dart';
 import '../../../../../utils/app_icons.dart';
 import '../../../../shared/components/decorations/decorations.dart';

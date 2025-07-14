@@ -5,9 +5,8 @@ import 'dart:io';
 
 import '../../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../../shared/components/buttons/row_buttons.dart';
-import '../../../../../../data/models/accept_or_reject_attachment_emp_prams.dart';
-import '../../../../../../data/models/requirement_attachment_prams.dart';
-import '../../../../../../domain/entities/AttachmentsEmp.dart';
+import '../../../../../../data/models/index.dart';
+import '../../../../../../domain/entities/index.dart';
  import '../widget/emp_file_item.dart';
 
 class EmployeeFileScreen extends BaseStatelessWidget {

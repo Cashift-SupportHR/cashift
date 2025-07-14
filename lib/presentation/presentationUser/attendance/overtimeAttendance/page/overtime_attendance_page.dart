@@ -1,6 +1,6 @@
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:shiftapp/data/models/attendance/index.dart';
-import 'package:shiftapp/domain/entities/attendance/index.dart';
+import 'package:shiftapp/common/data/models/attendance/index.dart';
+import 'package:shiftapp/common/domain/entities/attendance/index.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/overtimeAttendance/bloc/overtime_attendance_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/overtimeAttendance/page/overtime_attendance_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/shared_widgets.dart';

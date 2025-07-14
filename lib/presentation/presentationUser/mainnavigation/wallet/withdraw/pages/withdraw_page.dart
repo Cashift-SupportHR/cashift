@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/main_index.dart';
 
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import '../../../../../../domain/entities/bankaccount/with_draw_params.dart';
-import '../../../../../../domain/entities/wallet/wallet_balance_item.dart';
-import '../../../../../../domain/entities/wallet/withdraw_method.dart';
-import '../../../../../../domain/entities/wallet/withdraw_to_another_account_params.dart';
+import '../../../../../../common/domain/entities/bankaccount/with_draw_params.dart';
+import '../../../../../../common/domain/entities/wallet/wallet_balance_item.dart';
+import '../../../../../../common/domain/entities/wallet/withdraw_method.dart';
+import '../../../../../../common/domain/entities/wallet/withdraw_to_another_account_params.dart';
 import '../../../../resources/colors.dart';
 import '../../../../resources/constants.dart';
 import '../bloc/initialize_withdraw.dart';

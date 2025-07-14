@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
-import '../../../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../../presentationUser/attendance/facerecognation/index.dart';
 import '../../../../../../presentationUser/common/stream_data_state.dart';
 import '../../../../../../presentationUser/resources/constants.dart';
@@ -9,7 +9,8 @@ import '../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../shared/components/buttons/row_buttons.dart';
 import '../../../../../../shared/components/helper_widgets.dart';
 import '../../../../../../shared/components/text_field/date_time_text_fields.dart';
-import '../../../../data/models/vehicle_video_params.dart';
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 
 class SearchVehicleCameraSheet extends BaseStatelessWidget {
   final VehicleVideoParams params;

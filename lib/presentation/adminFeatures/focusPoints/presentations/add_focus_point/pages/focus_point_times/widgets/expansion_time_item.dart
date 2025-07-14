@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 
 import '../../../../../../../../utils/app_icons.dart';
 import '../../../../../../../presentationUser/common/common_state.dart';
@@ -7,8 +7,8 @@ import '../../../../../../../presentationUser/resources/colors.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/buttons/row_small_button.dart';
 import '../../../../../../../shared/components/image_builder.dart';
-import '../../../../../data/models/add_focus_attendance_time_params.dart';
-import '../../../../../domain/entities/point_attendance_type.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 import 'focus_point_time_types_picker.dart';
 import 'text_field_time.dart';
 

@@ -1,7 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../data/repositories/local/local_repository.dart';
+import '../../../../../common/data/repositories/local/local_repository.dart';
 import '../../../../adminFeatures/di/injector.dart';
 import '../../../../shared/components/restart_app_widget.dart';
 import '../../../resources/colors.dart';

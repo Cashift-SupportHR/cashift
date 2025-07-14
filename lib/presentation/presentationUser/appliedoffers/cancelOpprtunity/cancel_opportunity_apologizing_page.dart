@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
  import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../domain/entities/appliedOffers/cancel_opportunity_apologizing.dart';
+import '../../../../common/domain/entities/appliedOffers/index.dart';
 import '../../../shared/components/decorations/decorations.dart';
 import '../../../shared/components/helper_widgets.dart';
 import '../../resources/colors.dart';

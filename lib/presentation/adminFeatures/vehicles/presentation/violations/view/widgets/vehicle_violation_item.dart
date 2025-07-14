@@ -6,7 +6,8 @@ import 'package:shiftapp/utils/app_icons.dart';
 
 import '../../../../../../../core/services/routes.dart';
 import '../../../../../../presentationUser/vehiclesOperation/domain/entities/vehicle_violation_args.dart';
-import '../../../../domain/entities/vehicle_violation.dart';
+import '../../../../data/models/index.dart';
+import '../../../../domain/entities/index.dart';
 
 class VehicleViolationItem extends BaseStatelessWidget {
   final ContractViolation item;

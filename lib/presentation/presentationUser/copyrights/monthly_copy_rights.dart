@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:shiftapp/domain/entities/terms/terms_item.dart';
+import 'package:shiftapp/common/domain/entities/terms/terms_item.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/collect_cash/pages/collect_cash_item.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';

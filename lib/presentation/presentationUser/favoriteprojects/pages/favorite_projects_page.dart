@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/projects/project.dart';
+import 'package:shiftapp/common/domain/entities/projects/project.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/favoriteprojects/bloc/favorite_projects_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/favoriteprojects/pages/favorite_project_screen.dart';

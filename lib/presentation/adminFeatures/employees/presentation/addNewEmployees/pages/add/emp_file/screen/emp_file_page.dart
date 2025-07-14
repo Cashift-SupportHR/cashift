@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../../shared/components/base/stream_state_widget_v2.dart';
 import '../../../../../../../../shared/components/tabview/dynamic_tab_bar_view.dart';
-import '../../../../../../domain/entities/AttachmentsEmp.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../../../domain/entities/tab_cashifter.dart';
+import '../../../../../../data/models/index.dart';
+import '../../../../../../domain/entities/index.dart';
 import '../../../../bloc/add_new_employees_bloc.dart';
 import 'emp_file_screen.dart';
 

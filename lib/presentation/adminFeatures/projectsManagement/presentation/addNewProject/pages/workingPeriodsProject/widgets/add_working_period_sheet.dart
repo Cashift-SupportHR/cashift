@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/presentation/addNewProject/pages/workingPeriodsProject/widgets/period_order_picker.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
@@ -8,8 +8,8 @@ import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../../shared/components/buttons/row_buttons.dart';
 import '../../../../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../../data/models/add_working_period_params.dart';
-import '../../../../../domain/entities/working_period_labels.dart';
+import '../../../../../data/models/index.dart';
+import '../../../../../domain/entities/index.dart';
 import 'jobs_picker.dart';
 
 ///  Created by harbey on 7/25/2023.

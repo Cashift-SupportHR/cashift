@@ -1,4 +1,4 @@
-import '../../../../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../../../../adminFeatures/focusPoints/domain/entities/shifts_by_project.dart';
 import '../../../../../../../adminFeatures/vehicles/domain/entities/vehicle_details.dart';
 import '../../../../../../../shared/components/index.dart';

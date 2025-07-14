@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../../data/models/service/service_model.dart';
+import '../../../../common/data/models/service/index.dart';
 import '../../components/base_stateless_widget.dart';
 import '../widgets/services_item.dart';
 

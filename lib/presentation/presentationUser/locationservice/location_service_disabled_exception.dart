@@ -1,4 +1,4 @@
-import 'package:shiftapp/data/exceptions/app_base_exception.dart';
+import 'package:shiftapp/common/data/exceptions/app_base_exception.dart';
 
 class AppLocationServiceDisabledException  extends AppBaseException {
   @override

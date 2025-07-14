@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../../domain/constants/codes_constants.dart';
+import '../../../../../../common/domain/constants/codes_constants.dart';
 import '../../../../../presentationUser/vehiclesOperation/domain/entities/receive_vehicle_details.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../domain/entities/vehicle_receive_request.dart';

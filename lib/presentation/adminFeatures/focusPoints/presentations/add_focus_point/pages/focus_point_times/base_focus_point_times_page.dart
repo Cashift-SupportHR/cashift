@@ -4,6 +4,8 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../bloc/add_focus_point_times_cubit.dart';
 import 'widgets/focus_point_times_screen.dart';
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 
 
 abstract class BaseFocusPointTimesPage extends BaseBlocWidget<

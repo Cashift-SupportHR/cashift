@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 import 'package:shiftapp/presentation/adminFeatures/projectsManagement/data/models/working_period_dto.dart';
 
 import '../../domain/entities/index.dart';

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../data/models/add-address/address_home_dialog_dto.dart';
-import '../../../../../domain/entities/required_tasks/in_app_required_task.dart';
-import '../../../../../domain/entities/resume/city_item.dart';
+import '../../../../../common/data/models/add-address/address_home_dialog_dto.dart';
+import '../../../../../common/domain/entities/required_tasks/in_app_required_task.dart';
+import '../../../../../common/domain/entities/resume/city_item.dart';
 import '../../../../shared/components/base_widget_bloc.dart';
-import '../../../../../data/models/add-address/add_home_location_params.dart';
+import '../../../../../common/data/models/add-address/add_home_location_params.dart';
 import '../../../../shared/components/buttons/row_buttons.dart';
 import '../../../../shared/components/dialogs_manager.dart';
 import '../../../../shared/components/image_builder.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 
 import 'current_shift_widget.dart';

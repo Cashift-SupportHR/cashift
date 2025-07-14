@@ -2,7 +2,7 @@
 import 'package:shiftapp/presentation/adminFeatures/areapolygones/data/models/add_vehicle_zone_params.dart';
 import 'package:shiftapp/presentation/presentationUser/vehiclesOperation/domain/entities/vehicle_violation_args.dart';
 
-import '../../data/models/current_round_trip_dto.dart';
+import '../../data/models/index.dart';
 
 class CurrentRoundTrip {
   int? id;

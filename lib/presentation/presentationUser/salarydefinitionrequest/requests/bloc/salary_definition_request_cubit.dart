@@ -1,11 +1,11 @@
 import 'package:injectable/injectable.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/domain/entities/salary-definition-request/index.dart';
+import 'package:shiftapp/common/domain/entities/salary-definition-request/index.dart';
  import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/data/models/salary-definition-request/index.dart';
+import 'package:shiftapp/common/data/models/salary-definition-request/index.dart';
 
- import '../../../../../data/repositories/salary-definition-request/salary_definition_repository.dart';
+ import '../../../../../common/data/repositories/salary-definition-request/salary_definition_repository.dart';
 import '../../../../shared/components/files/files_manager.dart';
 
 @Injectable()

@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../../../../shared/models/common_list_item_dto.dart';
 import '../models/action_follow_up_violation_params.dart';
 import '../models/add_type_violation_params.dart';

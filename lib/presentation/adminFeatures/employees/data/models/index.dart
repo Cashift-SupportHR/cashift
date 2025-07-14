@@ -9,3 +9,6 @@ export 'shift_employee_dto.dart';
 export 'tab_cashifter_dto.dart';
 export '../repositories/employees_repository.dart';
 export 'attachments_emp_dto.dart';
+export 'emp_attandance_prams.dart';
+export 'requirement_attachment_prams.dart';
+export 'accept_or_reject_attachment_emp_prams.dart';

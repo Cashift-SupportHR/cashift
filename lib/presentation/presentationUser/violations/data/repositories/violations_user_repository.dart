@@ -1,7 +1,6 @@
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 
-import '../../domain/entities/violations_data.dart';
 import '../data_sources/violations_user_api.dart';
 import '../models/approve_reject_violation_params.dart';
 import '../models/violation_user_dto.dart';

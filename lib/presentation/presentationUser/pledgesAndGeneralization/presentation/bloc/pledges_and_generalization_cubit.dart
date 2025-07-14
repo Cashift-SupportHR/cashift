@@ -2,7 +2,6 @@ import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-
 import '../../data/repositories/pledges_and_generalization_repository.dart';
 import '../../domain/entities/pledge_generalization.dart';
 

@@ -1,4 +1,4 @@
-import '../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../presentationUser/attendance/facerecognation/index.dart'
     show BuildContext, SizedBox;
 import '../index.dart'

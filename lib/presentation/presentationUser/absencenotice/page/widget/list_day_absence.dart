@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../data/models/absence_notation/absencenotice.dart';
+import '../../../../../common/data/models/absence_notation/absencenotice.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 class ListDayAbsence extends StatelessWidget {

@@ -10,8 +10,8 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../../../../config.dart';
 import '../../../../../core/services/permission_detector.dart';
-import '../../../../../data/models/attendance/attendance_config_dto.dart';
-import '../../../../../domain/entities/attendancerecoginatin/attendance_model.dart';
+import '../../../../../common/data/models/attendance/attendance_config_dto.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/attendance_model.dart';
 import '../../../../../utils/app_icons.dart';
 import '../../../../shared/components/app_cupertino_button.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

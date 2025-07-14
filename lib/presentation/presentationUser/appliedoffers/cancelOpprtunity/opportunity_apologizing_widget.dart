@@ -9,7 +9,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import 'package:shiftapp/presentation/shared/components/checkbox/custom_check_box.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
-import '../../../../domain/entities/appliedOffers/cancel_opportunity_apologizing.dart';
+import '../../../../common/domain/entities/appliedOffers/index.dart';
 import '../../common/common_state.dart';
 
 class OpportunityApologizingWidget extends BaseStatelessWidget {

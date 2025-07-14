@@ -13,97 +13,107 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
-import '../../../data/datasources/remote/api/absencenotice/absencenotice_api.dart'
-    as _i420;
-import '../../../data/datasources/remote/api/activity_log/activity_log_api_provider.dart'
-    as _i882;
-import '../../../data/datasources/remote/api/add-address/add_address_api_provider.dart'
-    as _i600;
-import '../../../data/datasources/remote/api/advancedFilter/advanced_filter_api_provider.dart'
-    as _i20;
-import '../../../data/datasources/remote/api/attendance/attendance_api_provider.dart'
-    as _i823;
-import '../../../data/datasources/remote/api/auth/auth_api_provider.dart'
-    as _i235;
-import '../../../data/datasources/remote/api/bail_requests/bail_requests_api.dart'
-    as _i536;
-import '../../../data/datasources/remote/api/bank/bank_api_provider.dart'
-    as _i65;
-import '../../../data/datasources/remote/api/collect_cash/collect_cash_api_provider.dart'
-    as _i9;
-import '../../../data/datasources/remote/api/evaluation/evaluation_api_provider.dart'
-    as _i215;
-import '../../../data/datasources/remote/api/favorite_projects/favorite_projects_api.dart'
-    as _i70;
-import '../../../data/datasources/remote/api/home/home_api_provider.dart'
-    as _i581;
-import '../../../data/datasources/remote/api/job_offers/job_offers_api_provider.dart'
-    as _i767;
-import '../../../data/datasources/remote/api/loans_request/loans_request_api.dart'
-    as _i674;
-import '../../../data/datasources/remote/api/logger/logger_api_provider.dart'
-    as _i903;
-import '../../../data/datasources/remote/api/notificationOffers/notification_offers_api_provider.dart'
-    as _i342;
-import '../../../data/datasources/remote/api/profile/profile_api_provider.dart'
-    as _i444;
-import '../../../data/datasources/remote/api/resume/resume_api_provider.dart'
-    as _i40;
-import '../../../data/datasources/remote/api/salary-definition-request/salary_definition_api.dart'
-    as _i713;
-import '../../../data/datasources/remote/api/service/service_api.dart' as _i825;
-import '../../../data/datasources/remote/api/terms/terms_api_provider.dart'
-    as _i660;
-import '../../../data/datasources/remote/api/wallet/wallet_api_provider.dart'
-    as _i341;
-import '../../../data/datasources/remote/api/workerWorkPlaces/worker_work_places_api.dart'
-    as _i159;
-import '../../../data/repositories/absencenotice/absencenotice.dart' as _i52;
-import '../../../data/repositories/activitylog/activity_log_repository.dart'
-    as _i825;
-import '../../../data/repositories/add-address/add_address_repository.dart'
-    as _i431;
-import '../../../data/repositories/advancedFilter/advanced_filter_repository.dart'
-    as _i146;
-import '../../../data/repositories/attendance/attendance_repository.dart'
+import '../../../common/data/datasources/remote/api/absencenotice/absencenotice_api.dart'
+    as _i727;
+import '../../../common/data/datasources/remote/api/activity_log/activity_log_api_provider.dart'
+    as _i576;
+import '../../../common/data/datasources/remote/api/add-address/add_address_api_provider.dart'
+    as _i223;
+import '../../../common/data/datasources/remote/api/advancedFilter/advanced_filter_api_provider.dart'
+    as _i1069;
+import '../../../common/data/datasources/remote/api/attendance/attendance_api_provider.dart'
+    as _i457;
+import '../../../common/data/datasources/remote/api/auth/auth_api_provider.dart'
+    as _i495;
+import '../../../common/data/datasources/remote/api/bail_requests/bail_requests_api.dart'
+    as _i927;
+import '../../../common/data/datasources/remote/api/bank/bank_api_provider.dart'
+    as _i152;
+import '../../../common/data/datasources/remote/api/collect_cash/collect_cash_api_provider.dart'
+    as _i503;
+import '../../../common/data/datasources/remote/api/evaluation/evaluation_api_provider.dart'
+    as _i3;
+import '../../../common/data/datasources/remote/api/favorite_projects/favorite_projects_api.dart'
+    as _i855;
+import '../../../common/data/datasources/remote/api/home/home_api_provider.dart'
+    as _i557;
+import '../../../common/data/datasources/remote/api/job_offers/job_offers_api_provider.dart'
+    as _i193;
+import '../../../common/data/datasources/remote/api/loans_request/loans_request_api.dart'
+    as _i1064;
+import '../../../common/data/datasources/remote/api/logger/logger_api_provider.dart'
+    as _i456;
+import '../../../common/data/datasources/remote/api/notificationOffers/notification_offers_api_provider.dart'
+    as _i154;
+import '../../../common/data/datasources/remote/api/profile/profile_api_provider.dart'
+    as _i1037;
+import '../../../common/data/datasources/remote/api/resume/resume_api_provider.dart'
+    as _i667;
+import '../../../common/data/datasources/remote/api/salary-definition-request/salary_definition_api.dart'
+    as _i730;
+import '../../../common/data/datasources/remote/api/service/service_api.dart'
+    as _i567;
+import '../../../common/data/datasources/remote/api/terms/terms_api_provider.dart'
+    as _i895;
+import '../../../common/data/datasources/remote/api/wallet/wallet_api_provider.dart'
+    as _i399;
+import '../../../common/data/datasources/remote/api/workerWorkPlaces/worker_work_places_api.dart'
+    as _i833;
+import '../../../common/data/repositories/absencenotice/absencenotice.dart'
+    as _i1047;
+import '../../../common/data/repositories/activitylog/activity_log_repository.dart'
+    as _i932;
+import '../../../common/data/repositories/add-address/add_address_repository.dart'
+    as _i503;
+import '../../../common/data/repositories/advancedFilter/advanced_filter_repository.dart'
+    as _i863;
+import '../../../common/data/repositories/attendance/attendance_repository.dart'
+    as _i830;
+import '../../../common/data/repositories/bail_requests/bail_requests_repository.dart'
+    as _i410;
+import '../../../common/data/repositories/bank/wallet_repository.dart' as _i931;
+import '../../../common/data/repositories/collect_cash/collect_cash_repository.dart'
+    as _i194;
+import '../../../common/data/repositories/device/deviceinfo_repository.dart'
+    as _i847;
+import '../../../common/data/repositories/evaluation/evaluation_repository.dart'
+    as _i772;
+import '../../../common/data/repositories/financial_requests/loans_request_repository.dart'
+    as _i108;
+import '../../../common/data/repositories/home/home_repository.dart' as _i952;
+import '../../../common/data/repositories/joboffers/job_offers_repository.dart'
     as _i339;
-import '../../../data/repositories/bail_requests/bail_requests_repository.dart'
-    as _i454;
-import '../../../data/repositories/bank/wallet_repository.dart' as _i536;
-import '../../../data/repositories/collect_cash/collect_cash_repository.dart'
-    as _i304;
-import '../../../data/repositories/device/deviceinfo_repository.dart' as _i560;
-import '../../../data/repositories/evaluation/evaluation_repository.dart'
-    as _i209;
-import '../../../data/repositories/financial_requests/loans_request_repository.dart'
-    as _i597;
-import '../../../data/repositories/home/home_repository.dart' as _i13;
-import '../../../data/repositories/joboffers/job_offers_repository.dart'
-    as _i883;
-import '../../../data/repositories/local/local_repository.dart' as _i1033;
-import '../../../data/repositories/logger/logger_repository.dart' as _i783;
-import '../../../data/repositories/login/auth_repository.dart' as _i633;
-import '../../../data/repositories/notificationOffers/notification_offers_repository.dart'
-    as _i874;
-import '../../../data/repositories/profile/profile_repository.dart' as _i922;
-import '../../../data/repositories/projects/projects_repository.dart' as _i507;
-import '../../../data/repositories/resume/resume_repository.dart' as _i563;
-import '../../../data/repositories/salary-definition-request/salary_definition_repository.dart'
-    as _i445;
-import '../../../data/repositories/service/service_repository.dart' as _i204;
-import '../../../data/repositories/terms/terms_repository.dart' as _i883;
-import '../../../data/repositories/user/user_repository.dart' as _i1028;
-import '../../../data/repositories/wallet/bank_repository.dart' as _i565;
-import '../../../data/repositories/workerWorkPlaces/worker_work_places_repository.dart'
-    as _i1007;
-import '../../../domain/entities/shared/device.dart' as _i644;
-import '../../../domain/usecases/respond_dashboard_required_action_usecase.dart'
-    as _i250;
-import '../../../domain/usecases/respond_required_task_usecase.dart' as _i604;
-import '../../../domain/usecases/tasks_notifications_usecase.dart' as _i919;
-import '../../../network/source/admin_endpoint.dart' as _i281;
-import '../../../network/source/configuration_endpoint.dart' as _i307;
-import '../../../network/source/user_endpoint.dart' as _i1029;
+import '../../../common/data/repositories/local/local_repository.dart' as _i354;
+import '../../../common/data/repositories/logger/logger_repository.dart'
+    as _i39;
+import '../../../common/data/repositories/login/auth_repository.dart' as _i149;
+import '../../../common/data/repositories/notificationOffers/notification_offers_repository.dart'
+    as _i895;
+import '../../../common/data/repositories/profile/profile_repository.dart'
+    as _i170;
+import '../../../common/data/repositories/projects/projects_repository.dart'
+    as _i89;
+import '../../../common/data/repositories/resume/resume_repository.dart'
+    as _i139;
+import '../../../common/data/repositories/salary-definition-request/salary_definition_repository.dart'
+    as _i887;
+import '../../../common/data/repositories/service/service_repository.dart'
+    as _i1055;
+import '../../../common/data/repositories/terms/terms_repository.dart' as _i494;
+import '../../../common/data/repositories/user/user_repository.dart' as _i228;
+import '../../../common/data/repositories/wallet/bank_repository.dart' as _i536;
+import '../../../common/data/repositories/workerWorkPlaces/worker_work_places_repository.dart'
+    as _i571;
+import '../../../common/domain/entities/shared/device.dart' as _i322;
+import '../../../common/domain/usecases/respond_dashboard_required_action_usecase.dart'
+    as _i802;
+import '../../../common/domain/usecases/respond_required_task_usecase.dart'
+    as _i15;
+import '../../../common/domain/usecases/tasks_notifications_usecase.dart'
+    as _i521;
+import '../../../common/network/source/admin_endpoint.dart' as _i363;
+import '../../../common/network/source/configuration_endpoint.dart' as _i168;
+import '../../../common/network/source/user_endpoint.dart' as _i924;
 import '../../presentationUser/absencenotice/bloc/absencenotice_cubit.dart'
     as _i844;
 import '../../presentationUser/activity_log/bloc/activity_log_cubit.dart'
@@ -596,14 +606,14 @@ Future<_i174.GetIt> $initGetIt(
     environmentFilter,
   );
   final injectionModule = _$InjectionModule();
-  gh.factory<_i560.DeviceInfoRepository>(() => _i560.DeviceInfoRepository());
+  gh.factory<_i847.DeviceInfoRepository>(() => _i847.DeviceInfoRepository());
   gh.factory<_i222.DrawPolygonWithMarkersCubit>(
       () => _i222.DrawPolygonWithMarkersCubit());
   await gh.factoryAsync<_i460.SharedPreferences>(
     () => injectionModule.prefs,
     preResolve: true,
   );
-  await gh.factoryAsync<_i644.Device>(
+  await gh.factoryAsync<_i322.Device>(
     () => injectionModule.deviceInfo,
     preResolve: true,
   );
@@ -612,294 +622,83 @@ Future<_i174.GetIt> $initGetIt(
   gh.factory<_i616.CollectionDataCubit>(() => _i616.CollectionDataCubit());
   gh.factory<_i735.MapPickerRepository>(
       () => _i735.MapPickerRepository(gh<_i249.MapPickerAPI>()));
-  gh.factory<_i1033.LocalRepository>(
-      () => _i1033.LocalRepository(preferences: gh<_i460.SharedPreferences>()));
-  gh.factory<_i903.LoggerAPI>(() => _i903.LoggerAPI(gh<_i361.Dio>()));
-  gh.factory<_i281.AdminEndpoint>(() => _i281.AdminEndpoint(gh<_i361.Dio>()));
-  gh.factory<_i307.ConfigurationEndpoint>(
-      () => _i307.ConfigurationEndpoint(gh<_i361.Dio>()));
-  gh.factory<_i1029.UserEndpoint>(() => _i1029.UserEndpoint(gh<_i361.Dio>()));
+  gh.factory<_i354.LocalRepository>(
+      () => _i354.LocalRepository(preferences: gh<_i460.SharedPreferences>()));
+  gh.factory<_i456.LoggerAPI>(() => _i456.LoggerAPI(gh<_i361.Dio>()));
+  gh.factory<_i363.AdminEndpoint>(() => _i363.AdminEndpoint(gh<_i361.Dio>()));
+  gh.factory<_i168.ConfigurationEndpoint>(
+      () => _i168.ConfigurationEndpoint(gh<_i361.Dio>()));
+  gh.factory<_i924.UserEndpoint>(() => _i924.UserEndpoint(gh<_i361.Dio>()));
+  gh.factory<_i727.AbsenceNoticeAPI>(
+      () => _i727.AbsenceNoticeAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i576.ActivityLogAPI>(
+      () => _i576.ActivityLogAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i223.AddAddressAPI>(
+      () => _i223.AddAddressAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i1069.AdvancedFilterAPI>(
+      () => _i1069.AdvancedFilterAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i457.AttendanceApi>(
+      () => _i457.AttendanceApi(gh<_i924.UserEndpoint>()));
+  gh.factory<_i927.BailRequestsAPI>(
+      () => _i927.BailRequestsAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i152.BankAPI>(() => _i152.BankAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i503.CollectCashAPI>(
+      () => _i503.CollectCashAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i3.EvaluationApi>(
+      () => _i3.EvaluationApi(gh<_i924.UserEndpoint>()));
+  gh.factory<_i855.FavoriteProjectsApi>(
+      () => _i855.FavoriteProjectsApi(gh<_i924.UserEndpoint>()));
+  gh.factory<_i557.HomeAPI>(() => _i557.HomeAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i193.JobOffersAPI>(
+      () => _i193.JobOffersAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i1064.LoansRequestAPI>(
+      () => _i1064.LoansRequestAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i154.NotificationOffersAPI>(
+      () => _i154.NotificationOffersAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i1037.ProfileAPI>(
+      () => _i1037.ProfileAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i667.ResumeAPI>(() => _i667.ResumeAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i730.SalaryDefinitionAPI>(
+      () => _i730.SalaryDefinitionAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i567.ServiceAPI>(
+      () => _i567.ServiceAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i895.TermsAPI>(() => _i895.TermsAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i399.WalletAPI>(() => _i399.WalletAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i833.WorkerWorkPlacesAPI>(
+      () => _i833.WorkerWorkPlacesAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i425.AttendanceAndDepartureNotificationsAPI>(() =>
+      _i425.AttendanceAndDepartureNotificationsAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i1021.EmployeesCertificatesAPI>(
+      () => _i1021.EmployeesCertificatesAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i809.PledgesAndGeneralizationAPI>(
+      () => _i809.PledgesAndGeneralizationAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i408.TransactionsAPI>(
+      () => _i408.TransactionsAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i199.ReceiveVehiclesAPI>(
+      () => _i199.ReceiveVehiclesAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i771.ViolationsUserAPI>(
+      () => _i771.ViolationsUserAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i193.WorkHazardsAPI>(
+      () => _i193.WorkHazardsAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i350.WorkingDocumentAPI>(
+      () => _i350.WorkingDocumentAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i418.ChashiftLonsAPI>(
+      () => _i418.ChashiftLonsAPI(gh<_i924.UserEndpoint>()));
+  gh.factory<_i870.TodayOpportunityApiProvider>(
+      () => _i870.TodayOpportunityApiProvider(gh<_i363.AdminEndpoint>()));
   gh.factory<_i66.MapPickerCubit>(
       () => _i66.MapPickerCubit(gh<_i735.MapPickerRepository>()));
-  gh.factory<_i870.TodayOpportunityApiProvider>(
-      () => _i870.TodayOpportunityApiProvider(gh<_i281.AdminEndpoint>()));
-  gh.factory<_i1035.TodayOpportunityRepository>(() =>
-      _i1035.TodayOpportunityRepository(
-          gh<_i870.TodayOpportunityApiProvider>()));
-  gh.factory<_i1028.UserRepository>(
-      () => _i1028.UserRepository(gh<_i460.SharedPreferences>()));
-  gh.factory<_i235.AuthAPI>(
-      () => _i235.AuthAPI(api: gh<_i1029.UserEndpoint>()));
-  gh.factory<_i565.RequestsUserAPI>(
-      () => _i565.RequestsUserAPI(api: gh<_i1029.UserEndpoint>()));
-  gh.factory<_i420.AbsenceNoticeAPI>(
-      () => _i420.AbsenceNoticeAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i882.ActivityLogAPI>(
-      () => _i882.ActivityLogAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i600.AddAddressAPI>(
-      () => _i600.AddAddressAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i20.AdvancedFilterAPI>(
-      () => _i20.AdvancedFilterAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i823.AttendanceApi>(
-      () => _i823.AttendanceApi(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i536.BailRequestsAPI>(
-      () => _i536.BailRequestsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i65.BankAPI>(() => _i65.BankAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i9.CollectCashAPI>(
-      () => _i9.CollectCashAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i215.EvaluationApi>(
-      () => _i215.EvaluationApi(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i70.FavoriteProjectsApi>(
-      () => _i70.FavoriteProjectsApi(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i581.HomeAPI>(() => _i581.HomeAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i767.JobOffersAPI>(
-      () => _i767.JobOffersAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i674.LoansRequestAPI>(
-      () => _i674.LoansRequestAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i342.NotificationOffersAPI>(
-      () => _i342.NotificationOffersAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i444.ProfileAPI>(
-      () => _i444.ProfileAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i40.ResumeAPI>(() => _i40.ResumeAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i713.SalaryDefinitionAPI>(
-      () => _i713.SalaryDefinitionAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i825.ServiceAPI>(
-      () => _i825.ServiceAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i660.TermsAPI>(() => _i660.TermsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i341.WalletAPI>(() => _i341.WalletAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i159.WorkerWorkPlacesAPI>(
-      () => _i159.WorkerWorkPlacesAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i425.AttendanceAndDepartureNotificationsAPI>(() =>
-      _i425.AttendanceAndDepartureNotificationsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i1021.EmployeesCertificatesAPI>(
-      () => _i1021.EmployeesCertificatesAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i809.PledgesAndGeneralizationAPI>(
-      () => _i809.PledgesAndGeneralizationAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i408.TransactionsAPI>(
-      () => _i408.TransactionsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i199.ReceiveVehiclesAPI>(
-      () => _i199.ReceiveVehiclesAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i771.ViolationsUserAPI>(
-      () => _i771.ViolationsUserAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i193.WorkHazardsAPI>(
-      () => _i193.WorkHazardsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i350.WorkingDocumentAPI>(
-      () => _i350.WorkingDocumentAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i418.ChashiftLonsAPI>(
-      () => _i418.ChashiftLonsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i694.RequestsUserRepository>(
-      () => _i694.RequestsUserRepository(gh<_i565.RequestsUserAPI>()));
-  gh.factory<_i783.LoggerRepository>(
-      () => _i783.LoggerRepository(gh<_i1028.UserRepository>()));
-  gh.factory<_i35.ViolationsUserRepository>(
-      () => _i35.ViolationsUserRepository(gh<_i771.ViolationsUserAPI>()));
-  gh.factory<_i146.AdvancedFilterRepository>(
-      () => _i146.AdvancedFilterRepository(gh<_i20.AdvancedFilterAPI>()));
-  gh.factory<_i825.ActivityLogRepository>(
-      () => _i825.ActivityLogRepository(gh<_i882.ActivityLogAPI>()));
-  gh.factory<_i304.CollectCashRepository>(
-      () => _i304.CollectCashRepository(gh<_i9.CollectCashAPI>()));
-  gh.factory<_i52.AbsenceNoticeRepository>(
-      () => _i52.AbsenceNoticeRepository(gh<_i420.AbsenceNoticeAPI>()));
-  gh.factory<_i430.AddOpportunityAPI>(
-      () => _i430.AddOpportunityAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i320.AdminWalletAPI>(
-      () => _i320.AdminWalletAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i650.VehiclesZoneAPI>(
-      () => _i650.VehiclesZoneAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i615.AttendanceNotificationsReportsAPI>(() =>
-      _i615.AttendanceNotificationsReportsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i586.BanEmployeesAPI>(
-      () => _i586.BanEmployeesAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i395.CashiftersLoansAPI>(
-      () => _i395.CashiftersLoansAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i680.ClassificationAPI>(
-      () => _i680.ClassificationAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i685.EmployeeMapAPI>(
-      () => _i685.EmployeeMapAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i717.EmployeesAPI>(
-      () => _i717.EmployeesAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i1029.EmploymentManagementAPI>(
-      () => _i1029.EmploymentManagementAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i949.EmploymentOfficialsAPI>(
-      () => _i949.EmploymentOfficialsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i393.FocusPointsAPI>(
-      () => _i393.FocusPointsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i432.GasStationsAPI>(
-      () => _i432.GasStationsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i740.GeneralViolationsAPI>(
-      () => _i740.GeneralViolationsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i129.JobRequirementsAPI>(
-      () => _i129.JobRequirementsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i474.JobUniformAPI>(
-      () => _i474.JobUniformAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i618.MaintenanceBreakdownsAPI>(
-      () => _i618.MaintenanceBreakdownsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i816.NotificationsAPI>(
-      () => _i816.NotificationsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i533.ProjectsManagementAPI>(
-      () => _i533.ProjectsManagementAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i1070.PunishmentsAPI>(
-      () => _i1070.PunishmentsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i886.ReviewOpportunitiesApi>(
-      () => _i886.ReviewOpportunitiesApi(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i805.TermandConditionAPI>(
-      () => _i805.TermandConditionAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i9.TrackAttendanceDepartureAPI>(
-      () => _i9.TrackAttendanceDepartureAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i93.UsersManagementAPI>(
-      () => _i93.UsersManagementAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i164.UsersRequestsAPI>(
-      () => _i164.UsersRequestsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i474.VehiclesAPI>(
-      () => _i474.VehiclesAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i774.MaintenanceBreakdownsRepository>(() =>
-      _i774.MaintenanceBreakdownsRepository(
-          gh<_i618.MaintenanceBreakdownsAPI>()));
-  gh.factory<_i137.ReviewOpportunitiesRepository>(() =>
-      _i137.ReviewOpportunitiesRepository(gh<_i886.ReviewOpportunitiesApi>()));
-  gh.factory<_i981.CollectCashCubit>(
-      () => _i981.CollectCashCubit(gh<_i304.CollectCashRepository>()));
-  gh.factory<_i734.WorkHazardsRepository>(
-      () => _i734.WorkHazardsRepository(gh<_i42.WorkHazardsAPI>()));
-  gh.factory<_i415.GasStationsRepository>(
-      () => _i415.GasStationsRepository(gh<_i432.GasStationsAPI>()));
-  gh.factory<_i639.BanEmployeesRepository>(
-      () => _i639.BanEmployeesRepository(gh<_i586.BanEmployeesAPI>()));
-  gh.factory<_i690.PunishmentsRepository>(
-      () => _i690.PunishmentsRepository(gh<_i1070.PunishmentsAPI>()));
-  gh.factory<_i297.TransactionsRepository>(
-      () => _i297.TransactionsRepository(gh<_i408.TransactionsAPI>()));
-  gh.factory<_i815.VehiclesRepository>(
-      () => _i815.VehiclesRepository(gh<_i474.VehiclesAPI>()));
-  gh.factory<_i454.BailRequestsRepository>(
-      () => _i454.BailRequestsRepository(gh<_i536.BailRequestsAPI>()));
-  gh.factory<_i982.GasStationsCubit>(
-      () => _i982.GasStationsCubit(gh<_i415.GasStationsRepository>()));
-  gh.factory<_i633.AuthRepository>(() => _i633.AuthRepository(
-        gh<_i235.AuthAPI>(),
-        gh<_i1028.UserRepository>(),
-      ));
-  gh.factory<_i1007.WorkerWorkPlacesRepository>(
-      () => _i1007.WorkerWorkPlacesRepository(gh<_i159.WorkerWorkPlacesAPI>()));
-  gh.factory<_i1061.FocusPointsRepository>(
-      () => _i1061.FocusPointsRepository(gh<_i393.FocusPointsAPI>()));
-  gh.factory<_i7.VerificationBloc>(
-      () => _i7.VerificationBloc(gh<_i633.AuthRepository>()));
-  gh.factory<_i431.AddAddressRepository>(
-      () => _i431.AddAddressRepository(gh<_i600.AddAddressAPI>()));
-  gh.factory<_i518.ChashiftLonsRepository>(
-      () => _i518.ChashiftLonsRepository(gh<_i418.ChashiftLonsAPI>()));
-  gh.factory<_i568.GeneralViolationsRepository>(() =>
-      _i568.GeneralViolationsRepository(gh<_i1014.GeneralViolationsAPI>()));
-  gh.factory<_i547.ActionMaintenanceBreakdownsCubit>(() =>
-      _i547.ActionMaintenanceBreakdownsCubit(
-          gh<_i774.MaintenanceBreakdownsRepository>()));
-  gh.factory<_i576.AddMaintenanceBreakdownsCubit>(() =>
-      _i576.AddMaintenanceBreakdownsCubit(
-          gh<_i774.MaintenanceBreakdownsRepository>()));
-  gh.factory<_i899.MaintenanceBreakdownsCubit>(() =>
-      _i899.MaintenanceBreakdownsCubit(
-          gh<_i774.MaintenanceBreakdownsRepository>()));
-  gh.factory<_i740.EmployeeMapRepository>(
-      () => _i740.EmployeeMapRepository(gh<_i685.EmployeeMapAPI>()));
-  gh.factory<_i291.PledgesAndGeneralizationRepository>(() =>
-      _i291.PledgesAndGeneralizationRepository(
-          gh<_i809.PledgesAndGeneralizationAPI>()));
-  gh.factory<_i133.CashiftersLoansRepository>(
-      () => _i133.CashiftersLoansRepository(gh<_i395.CashiftersLoansAPI>()));
-  gh.factory<_i521.ChashiftLoansCubit>(
-      () => _i521.ChashiftLoansCubit(gh<_i518.ChashiftLonsRepository>()));
-  gh.factory<_i445.SalaryDefinitionRepository>(
-      () => _i445.SalaryDefinitionRepository(gh<_i713.SalaryDefinitionAPI>()));
-  gh.factory<_i204.ServiceRepository>(
-      () => _i204.ServiceRepository(gh<_i825.ServiceAPI>()));
-  gh.factory<_i497.JobRequirementsRepository>(
-      () => _i497.JobRequirementsRepository(gh<_i129.JobRequirementsAPI>()));
-  gh.factory<_i560.ReviewOpportunitiesCubit>(() =>
-      _i560.ReviewOpportunitiesCubit(
-          gh<_i566.ReviewOpportunitiesRepository>()));
-  gh.factory<_i702.ShiftPaymentCubitCubit>(() =>
-      _i702.ShiftPaymentCubitCubit(gh<_i137.ReviewOpportunitiesRepository>()));
-  gh.factory<_i194.AdminWalletRepository>(
-      () => _i194.AdminWalletRepository(gh<_i320.AdminWalletAPI>()));
-  gh.factory<_i145.ActivityLogCubit>(
-      () => _i145.ActivityLogCubit(gh<_i825.ActivityLogRepository>()));
-  gh.factory<_i507.ProjectsRepository>(
-      () => _i507.ProjectsRepository(gh<_i70.FavoriteProjectsApi>()));
-  gh.factory<_i201.OpportunityDetailsCubit>(() =>
-      _i201.OpportunityDetailsCubit(gh<_i1035.TodayOpportunityRepository>()));
-  gh.factory<_i424.PledgesAndGeneralizationCubit>(() =>
-      _i424.PledgesAndGeneralizationCubit(
-          gh<_i291.PledgesAndGeneralizationRepository>()));
-  gh.factory<_i927.AddFileRequestsUserCubit>(
-      () => _i927.AddFileRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
-  gh.factory<_i310.AddRequestsUserCubit>(
-      () => _i310.AddRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
-  gh.factory<_i384.ConfirmRequestsUserCubit>(
-      () => _i384.ConfirmRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
-  gh.factory<_i108.TermCondationRequestsUserCubit>(() =>
-      _i108.TermCondationRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
-  gh.factory<_i691.RequestsUserCubit>(
-      () => _i691.RequestsUserCubit(gh<_i694.RequestsUserRepository>()));
-  gh.factory<_i558.WorkHazardDetailsCubit>(
-      () => _i558.WorkHazardDetailsCubit(gh<_i734.WorkHazardsRepository>()));
-  gh.factory<_i834.WorkHazardsCubit>(
-      () => _i834.WorkHazardsCubit(gh<_i734.WorkHazardsRepository>()));
-  gh.factory<_i597.LoansRequestRepository>(
-      () => _i597.LoansRequestRepository(gh<_i674.LoansRequestAPI>()));
-  gh.factory<_i536.WalletRepository>(
-      () => _i536.WalletRepository(gh<_i341.WalletAPI>()));
-  gh.factory<_i443.UsersRequestsRepository>(
-      () => _i443.UsersRequestsRepository(gh<_i164.UsersRequestsAPI>()));
-  gh.factory<_i1072.AddTransactionsCubit>(
-      () => _i1072.AddTransactionsCubit(gh<_i297.TransactionsRepository>()));
-  gh.factory<_i319.TransactionsCubit>(
-      () => _i319.TransactionsCubit(gh<_i297.TransactionsRepository>()));
-  gh.factory<_i1005.AddOpportunityRepository>(
-      () => _i1005.AddOpportunityRepository(gh<_i430.AddOpportunityAPI>()));
-  gh.factory<_i367.TermandConditionRepository>(
-      () => _i367.TermandConditionRepository(gh<_i805.TermandConditionAPI>()));
   gh.factory<_i366.WorkingDocumentRepository>(
       () => _i366.WorkingDocumentRepository(gh<_i350.WorkingDocumentAPI>()));
-  gh.factory<_i209.EvaluationRepository>(
-      () => _i209.EvaluationRepository(gh<_i215.EvaluationApi>()));
-  gh.factory<_i760.EmployeesRepository>(
-      () => _i760.EmployeesRepository(gh<_i717.EmployeesAPI>()));
-  gh.factory<_i523.BailRequestsCubit>(
-      () => _i523.BailRequestsCubit(gh<_i454.BailRequestsRepository>()));
-  gh.factory<_i633.ActionVehicleReceiveRequestCubit>(() =>
-      _i633.ActionVehicleReceiveRequestCubit(gh<_i380.VehiclesRepository>()));
-  gh.factory<_i535.VehicleReceiveRequestsCubit>(
-      () => _i535.VehicleReceiveRequestsCubit(gh<_i380.VehiclesRepository>()));
-  gh.factory<_i703.VehicleViolationDetailsCubit>(
-      () => _i703.VehicleViolationDetailsCubit(gh<_i380.VehiclesRepository>()));
-  gh.factory<_i883.TermsRepository>(
-      () => _i883.TermsRepository(gh<_i660.TermsAPI>()));
-  gh.factory<_i710.GeneralViolationCubit>(() =>
-      _i710.GeneralViolationCubit(gh<_i1014.GeneralViolationsRepository>()));
-  gh.factory<_i949.AvailableOpportunitiesCubit>(
-      () => _i949.AvailableOpportunitiesCubit(
-            gh<_i1035.TodayOpportunityRepository>(),
-            gh<_i146.AdvancedFilterRepository>(),
-          ));
-  gh.factory<_i155.CovenantReceivedCubit>(() => _i155.CovenantReceivedCubit(
-        gh<_i1061.FocusPointsRepository>(),
-        gh<_i1007.WorkerWorkPlacesRepository>(),
-      ));
   gh.factory<_i61.ReceiveVehiclesRepository>(
       () => _i61.ReceiveVehiclesRepository(gh<_i199.ReceiveVehiclesAPI>()));
-  gh.factory<_i922.ProfileRepository>(() => _i922.ProfileRepository(
-        gh<_i444.ProfileAPI>(),
-        gh<_i1028.UserRepository>(),
-      ));
-  gh.factory<_i415.FavoriteProjectsCubit>(
-      () => _i415.FavoriteProjectsCubit(gh<_i507.ProjectsRepository>()));
+  gh.factory<_i932.ActivityLogRepository>(
+      () => _i932.ActivityLogRepository(gh<_i576.ActivityLogAPI>()));
   gh.factory<_i835.AttendanceAndDepartureNotificationsRepository>(() =>
       _i835.AttendanceAndDepartureNotificationsRepository(
           gh<_i425.AttendanceAndDepartureNotificationsAPI>()));
-  gh.factory<_i883.JobOffersRepository>(
-      () => _i883.JobOffersRepository(gh<_i767.JobOffersAPI>()));
+  gh.factory<_i952.HomeRepository>(
+      () => _i952.HomeRepository(gh<_i557.HomeAPI>()));
   gh.factory<_i841.ChangeOperatingPlaneCubit>(() =>
       _i841.ChangeOperatingPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i414.TourHistoryCubit>(
@@ -923,134 +722,96 @@ Future<_i174.GetIt> $initGetIt(
       () => _i158.ReceiveVehiclesCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i712.StartTourCubit>(
       () => _i712.StartTourCubit(gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i1020.PunishmentsCubit>(
-      () => _i1020.PunishmentsCubit(gh<_i690.PunishmentsRepository>()));
-  gh.factory<_i688.EvaluationCubit>(
-      () => _i688.EvaluationCubit(gh<_i209.EvaluationRepository>()));
   gh.factory<_i88.ReceiveVehicleDetailsCubit>(() =>
       _i88.ReceiveVehicleDetailsCubit(gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i48.VehicleReceivedImagesCubit>(
-      () => _i48.VehicleReceivedImagesCubit(
-            gh<_i61.ReceiveVehiclesRepository>(),
-            gh<_i815.VehiclesRepository>(),
-          ));
-  gh.factory<_i641.DeliveryAndReceiptCubit>(() =>
-      _i641.DeliveryAndReceiptCubit(gh<_i1007.WorkerWorkPlacesRepository>()));
-  gh.factory<_i111.WorkerWorkPlacesCubit>(() =>
-      _i111.WorkerWorkPlacesCubit(gh<_i1007.WorkerWorkPlacesRepository>()));
-  gh.factory<_i805.EmploymentManagementRepository>(() =>
-      _i805.EmploymentManagementRepository(
-          gh<_i1029.EmploymentManagementAPI>()));
-  gh.factory<_i874.NotificationOffersRepository>(() =>
-      _i874.NotificationOffersRepository(gh<_i342.NotificationOffersAPI>()));
-  gh.factory<_i579.JobUniformRepository>(
-      () => _i579.JobUniformRepository(gh<_i474.JobUniformAPI>()));
-  gh.factory<_i565.BankRepository>(
-      () => _i565.BankRepository(gh<_i65.BankAPI>()));
-  gh.factory<_i563.ResumeRepository>(() => _i563.ResumeRepository(
-        gh<_i40.ResumeAPI>(),
-        gh<_i460.SharedPreferences>(),
-      ));
-  gh.factory<_i845.AppliedOffersCubit>(() => _i845.AppliedOffersCubit(
-        gh<_i883.JobOffersRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i783.LoggerRepository>(),
-      ));
-  gh.factory<_i605.ProjectsManagementRepository>(() =>
-      _i605.ProjectsManagementRepository(gh<_i533.ProjectsManagementAPI>()));
-  gh.factory<_i250.RespondDashboardRequiredActionUseCase>(() =>
-      _i250.RespondDashboardRequiredActionUseCase(
-          gh<_i883.JobOffersRepository>()));
-  gh.factory<_i604.RespondRequiredTaskUseCase>(
-      () => _i604.RespondRequiredTaskUseCase(gh<_i883.JobOffersRepository>()));
-  gh.factory<_i919.RequiredTasksUseCase>(
-      () => _i919.RequiredTasksUseCase(gh<_i883.JobOffersRepository>()));
-  gh.factory<_i1041.TasksAndResponsibilitiesCubit>(
-      () => _i1041.TasksAndResponsibilitiesCubit(
-            gh<_i101.TermandConditionRepository>(),
-            gh<_i686.ProjectsManagementRepository>(),
-          ));
-  gh.factory<_i998.AddTermAndConditionCubit>(
-      () => _i998.AddTermAndConditionCubit(
-            gh<_i101.TermandConditionRepository>(),
-            gh<_i605.ProjectsManagementRepository>(),
-          ));
-  gh.factory<_i837.TermsAndConditionsCubit>(() => _i837.TermsAndConditionsCubit(
-        gh<_i101.TermandConditionRepository>(),
-        gh<_i605.ProjectsManagementRepository>(),
-      ));
-  gh.factory<_i927.BanEmployeeDetailsCubit>(
-      () => _i927.BanEmployeeDetailsCubit(gh<_i425.BanEmployeesRepository>()));
-  gh.factory<_i483.BanEmployeesCubit>(
-      () => _i483.BanEmployeesCubit(gh<_i425.BanEmployeesRepository>()));
+  gh.factory<_i1035.TodayOpportunityRepository>(() =>
+      _i1035.TodayOpportunityRepository(
+          gh<_i870.TodayOpportunityApiProvider>()));
+  gh.factory<_i145.ActivityLogCubit>(
+      () => _i145.ActivityLogCubit(gh<_i932.ActivityLogRepository>()));
+  gh.factory<_i228.UserRepository>(
+      () => _i228.UserRepository(gh<_i460.SharedPreferences>()));
   gh.factory<_i1070.EmployeesCertificatesItemRepository>(() =>
       _i1070.EmployeesCertificatesItemRepository(
           gh<_i1021.EmployeesCertificatesAPI>()));
-  gh.factory<_i279.OverviewBloc>(() => _i279.OverviewBloc(
-        gh<_i883.JobOffersRepository>(),
-        gh<_i1028.UserRepository>(),
-        gh<_i825.ActivityLogRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i919.RequiredTasksUseCase>(),
-        gh<_i922.ProfileRepository>(),
+  gh.factory<_i170.ProfileRepository>(() => _i170.ProfileRepository(
+        gh<_i1037.ProfileAPI>(),
+        gh<_i228.UserRepository>(),
       ));
-  gh.factory<_i1061.OverviewCubit>(() => _i1061.OverviewCubit(
-        gh<_i883.JobOffersRepository>(),
-        gh<_i1028.UserRepository>(),
-        gh<_i825.ActivityLogRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i919.RequiredTasksUseCase>(),
-        gh<_i922.ProfileRepository>(),
+  gh.factory<_i571.WorkerWorkPlacesRepository>(
+      () => _i571.WorkerWorkPlacesRepository(gh<_i833.WorkerWorkPlacesAPI>()));
+  gh.factory<_i1047.ChangePasswordCubit>(() => _i1047.ChangePasswordCubit(
+        gh<_i228.UserRepository>(),
+        gh<_i170.ProfileRepository>(),
       ));
-  gh.factory<_i968.ClassificationRepository>(
-      () => _i968.ClassificationRepository(gh<_i680.ClassificationAPI>()));
-  gh.factory<_i121.AddPunishmentCubit>(
-      () => _i121.AddPunishmentCubit(gh<_i530.PunishmentsRepository>()));
-  gh.factory<_i339.AttendanceRepository>(
-      () => _i339.AttendanceRepository(gh<_i823.AttendanceApi>()));
-  gh.factory<_i471.UsersManagementRepository>(
-      () => _i471.UsersManagementRepository(gh<_i93.UsersManagementAPI>()));
-  gh.factory<_i997.JobRequirementsCubit>(
-      () => _i997.JobRequirementsCubit(gh<_i366.JobRequirementsRepository>()));
-  gh.factory<_i300.ApplyDetailsCubit>(
-      () => _i300.ApplyDetailsCubit(gh<_i536.WalletRepository>()));
-  gh.factory<_i168.BalancesCubit>(
-      () => _i168.BalancesCubit(gh<_i536.WalletRepository>()));
-  gh.factory<_i13.HomeRepository>(
-      () => _i13.HomeRepository(gh<_i581.HomeAPI>()));
-  gh.factory<_i507.ClassificationCubit>(
-      () => _i507.ClassificationCubit(gh<_i968.ClassificationRepository>()));
-  gh.factory<_i364.ViolationsUserCubit>(
-      () => _i364.ViolationsUserCubit(gh<_i35.ViolationsUserRepository>()));
-  gh.factory<_i1066.AttendanceNotificationsReportsRepository>(() =>
-      _i1066.AttendanceNotificationsReportsRepository(
-          gh<_i615.AttendanceNotificationsReportsAPI>()));
+  gh.factory<_i830.AttendanceRepository>(
+      () => _i830.AttendanceRepository(gh<_i457.AttendanceApi>()));
+  gh.factory<_i863.AdvancedFilterRepository>(
+      () => _i863.AdvancedFilterRepository(gh<_i1069.AdvancedFilterAPI>()));
   gh.factory<_i390.AddAttendanceAndDepartureNotificationsCubit>(() =>
       _i390.AddAttendanceAndDepartureNotificationsCubit(
           gh<_i835.AttendanceAndDepartureNotificationsRepository>()));
   gh.factory<_i609.AttendanceAndDepartureNotificationsCubit>(() =>
       _i609.AttendanceAndDepartureNotificationsCubit(
           gh<_i835.AttendanceAndDepartureNotificationsRepository>()));
+  gh.factory<_i430.AddOpportunityAPI>(
+      () => _i430.AddOpportunityAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i320.AdminWalletAPI>(
+      () => _i320.AdminWalletAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i650.VehiclesZoneAPI>(
+      () => _i650.VehiclesZoneAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i615.AttendanceNotificationsReportsAPI>(() =>
+      _i615.AttendanceNotificationsReportsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i586.BanEmployeesAPI>(
+      () => _i586.BanEmployeesAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i395.CashiftersLoansAPI>(
+      () => _i395.CashiftersLoansAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i680.ClassificationAPI>(
+      () => _i680.ClassificationAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i685.EmployeeMapAPI>(
+      () => _i685.EmployeeMapAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i717.EmployeesAPI>(
+      () => _i717.EmployeesAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i1029.EmploymentManagementAPI>(
+      () => _i1029.EmploymentManagementAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i949.EmploymentOfficialsAPI>(
+      () => _i949.EmploymentOfficialsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i393.FocusPointsAPI>(
+      () => _i393.FocusPointsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i432.GasStationsAPI>(
+      () => _i432.GasStationsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i740.GeneralViolationsAPI>(
+      () => _i740.GeneralViolationsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i129.JobRequirementsAPI>(
+      () => _i129.JobRequirementsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i474.JobUniformAPI>(
+      () => _i474.JobUniformAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i618.MaintenanceBreakdownsAPI>(
+      () => _i618.MaintenanceBreakdownsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i816.NotificationsAPI>(
+      () => _i816.NotificationsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i533.ProjectsManagementAPI>(
+      () => _i533.ProjectsManagementAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i1070.PunishmentsAPI>(
+      () => _i1070.PunishmentsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i886.ReviewOpportunitiesApi>(
+      () => _i886.ReviewOpportunitiesApi(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i805.TermandConditionAPI>(
+      () => _i805.TermandConditionAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i9.TrackAttendanceDepartureAPI>(
+      () => _i9.TrackAttendanceDepartureAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i93.UsersManagementAPI>(
+      () => _i93.UsersManagementAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i164.UsersRequestsAPI>(
+      () => _i164.UsersRequestsAPI(api: gh<_i363.AdminEndpoint>()));
+  gh.factory<_i474.VehiclesAPI>(
+      () => _i474.VehiclesAPI(api: gh<_i363.AdminEndpoint>()));
   gh.factory<_i1040.VehiclesZoneRepository>(
       () => _i1040.VehiclesZoneRepository(gh<_i650.VehiclesZoneAPI>()));
-  gh.factory<_i658.AdvancedFilterCubit>(() => _i658.AdvancedFilterCubit(
-        gh<_i146.AdvancedFilterRepository>(),
-        gh<_i460.SharedPreferences>(),
-      ));
-  gh.factory<_i549.EmployeesCubit>(
-      () => _i549.EmployeesCubit(gh<_i760.EmployeesRepository>()));
-  gh.factory<_i1059.EmployeesAttendanceCubit>(
-      () => _i1059.EmployeesAttendanceCubit(gh<_i760.EmployeesRepository>()));
-  gh.factory<_i476.AddSalaryDefinitionRequestCubit>(() =>
-      _i476.AddSalaryDefinitionRequestCubit(
-          gh<_i445.SalaryDefinitionRepository>()));
-  gh.factory<_i907.SalaryDefinitionRequestCubit>(() =>
-      _i907.SalaryDefinitionRequestCubit(
-          gh<_i445.SalaryDefinitionRepository>()));
-  gh.factory<_i22.WalletCubit>(() => _i22.WalletCubit(
-        gh<_i536.WalletRepository>(),
-        gh<_i1028.UserRepository>(),
-      ));
+  gh.factory<_i1047.AbsenceNoticeRepository>(
+      () => _i1047.AbsenceNoticeRepository(gh<_i727.AbsenceNoticeAPI>()));
+  gh.factory<_i35.ViolationsUserRepository>(
+      () => _i35.ViolationsUserRepository(gh<_i771.ViolationsUserAPI>()));
   gh.factory<_i227.TrackAttendanceDepartureRepository>(() =>
       _i227.TrackAttendanceDepartureRepository(
           gh<_i9.TrackAttendanceDepartureAPI>()));
@@ -1066,14 +827,329 @@ Future<_i174.GetIt> $initGetIt(
           gh<_i366.WorkingDocumentRepository>()));
   gh.factory<_i641.WorkingDocumentCubit>(
       () => _i641.WorkingDocumentCubit(gh<_i366.WorkingDocumentRepository>()));
-  gh.factory<_i580.ServicesCubit>(() => _i580.ServicesCubit(
-        gh<_i204.ServiceRepository>(),
-        gh<_i1028.UserRepository>(),
-      ));
+  gh.factory<_i410.BailRequestsRepository>(
+      () => _i410.BailRequestsRepository(gh<_i927.BailRequestsAPI>()));
   gh.factory<_i930.EmploymentOfficialsRepository>(() =>
       _i930.EmploymentOfficialsRepository(gh<_i949.EmploymentOfficialsAPI>()));
+  gh.factory<_i503.AddAddressRepository>(
+      () => _i503.AddAddressRepository(gh<_i223.AddAddressAPI>()));
   gh.factory<_i584.NotificationsRepository>(
       () => _i584.NotificationsRepository(gh<_i816.NotificationsAPI>()));
+  gh.factory<_i645.HomeBloc>(() => _i645.HomeBloc(
+        gh<_i952.HomeRepository>(),
+        gh<_i170.ProfileRepository>(),
+        gh<_i228.UserRepository>(),
+        gh<_i61.ReceiveVehiclesRepository>(),
+      ));
+  gh.factory<_i495.AuthAPI>(() => _i495.AuthAPI(api: gh<_i924.UserEndpoint>()));
+  gh.factory<_i565.RequestsUserAPI>(
+      () => _i565.RequestsUserAPI(api: gh<_i924.UserEndpoint>()));
+  gh.factory<_i867.OvertimeAttendanceCubit>(
+      () => _i867.OvertimeAttendanceCubit(gh<_i830.AttendanceRepository>()));
+  gh.factory<_i774.MaintenanceBreakdownsRepository>(() =>
+      _i774.MaintenanceBreakdownsRepository(
+          gh<_i618.MaintenanceBreakdownsAPI>()));
+  gh.factory<_i137.ReviewOpportunitiesRepository>(() =>
+      _i137.ReviewOpportunitiesRepository(gh<_i886.ReviewOpportunitiesApi>()));
+  gh.factory<_i89.ProjectsRepository>(
+      () => _i89.ProjectsRepository(gh<_i855.FavoriteProjectsApi>()));
+  gh.factory<_i339.JobOffersRepository>(
+      () => _i339.JobOffersRepository(gh<_i193.JobOffersAPI>()));
+  gh.factory<_i890.EmploymentOfficialsCubit>(() =>
+      _i890.EmploymentOfficialsCubit(
+          gh<_i930.EmploymentOfficialsRepository>()));
+  gh.factory<_i536.BankRepository>(
+      () => _i536.BankRepository(gh<_i152.BankAPI>()));
+  gh.factory<_i734.WorkHazardsRepository>(
+      () => _i734.WorkHazardsRepository(gh<_i42.WorkHazardsAPI>()));
+  gh.factory<_i415.GasStationsRepository>(
+      () => _i415.GasStationsRepository(gh<_i432.GasStationsAPI>()));
+  gh.factory<_i639.BanEmployeesRepository>(
+      () => _i639.BanEmployeesRepository(gh<_i586.BanEmployeesAPI>()));
+  gh.factory<_i139.ResumeRepository>(() => _i139.ResumeRepository(
+        gh<_i667.ResumeAPI>(),
+        gh<_i460.SharedPreferences>(),
+      ));
+  gh.factory<_i690.PunishmentsRepository>(
+      () => _i690.PunishmentsRepository(gh<_i1070.PunishmentsAPI>()));
+  gh.factory<_i297.TransactionsRepository>(
+      () => _i297.TransactionsRepository(gh<_i408.TransactionsAPI>()));
+  gh.factory<_i815.VehiclesRepository>(
+      () => _i815.VehiclesRepository(gh<_i474.VehiclesAPI>()));
+  gh.factory<_i108.LoansRequestRepository>(
+      () => _i108.LoansRequestRepository(gh<_i1064.LoansRequestAPI>()));
+  gh.factory<_i802.RespondDashboardRequiredActionUseCase>(() =>
+      _i802.RespondDashboardRequiredActionUseCase(
+          gh<_i339.JobOffersRepository>()));
+  gh.factory<_i15.RespondRequiredTaskUseCase>(
+      () => _i15.RespondRequiredTaskUseCase(gh<_i339.JobOffersRepository>()));
+  gh.factory<_i521.RequiredTasksUseCase>(
+      () => _i521.RequiredTasksUseCase(gh<_i339.JobOffersRepository>()));
+  gh.factory<_i556.LoanRequestsCubit>(
+      () => _i556.LoanRequestsCubit(gh<_i108.LoansRequestRepository>()));
+  gh.factory<_i982.GasStationsCubit>(
+      () => _i982.GasStationsCubit(gh<_i415.GasStationsRepository>()));
+  gh.factory<_i415.FavoriteProjectsCubit>(
+      () => _i415.FavoriteProjectsCubit(gh<_i89.ProjectsRepository>()));
+  gh.factory<_i606.FaceRecognitionCubit>(
+      () => _i606.FaceRecognitionCubit(gh<_i170.ProfileRepository>()));
+  gh.factory<_i1061.FocusPointsRepository>(
+      () => _i1061.FocusPointsRepository(gh<_i393.FocusPointsAPI>()));
+  gh.factory<_i1055.ServiceRepository>(
+      () => _i1055.ServiceRepository(gh<_i567.ServiceAPI>()));
+  gh.factory<_i277.EmployeeCertificateDetailsCubit>(() =>
+      _i277.EmployeeCertificateDetailsCubit(
+          gh<_i1070.EmployeesCertificatesItemRepository>()));
+  gh.factory<_i518.EmployeesCertificatesCubit>(() =>
+      _i518.EmployeesCertificatesCubit(
+          gh<_i1070.EmployeesCertificatesItemRepository>()));
+  gh.factory<_i494.TermsRepository>(
+      () => _i494.TermsRepository(gh<_i895.TermsAPI>()));
+  gh.factory<_i772.EvaluationRepository>(
+      () => _i772.EvaluationRepository(gh<_i3.EvaluationApi>()));
+  gh.factory<_i290.InfoVehiclesCubit>(() => _i290.InfoVehiclesCubit(
+        gh<_i61.ReceiveVehiclesRepository>(),
+        gh<_i1061.FocusPointsRepository>(),
+      ));
+  gh.factory<_i518.ChashiftLonsRepository>(
+      () => _i518.ChashiftLonsRepository(gh<_i418.ChashiftLonsAPI>()));
+  gh.factory<_i568.GeneralViolationsRepository>(() =>
+      _i568.GeneralViolationsRepository(gh<_i1014.GeneralViolationsAPI>()));
+  gh.factory<_i547.ActionMaintenanceBreakdownsCubit>(() =>
+      _i547.ActionMaintenanceBreakdownsCubit(
+          gh<_i774.MaintenanceBreakdownsRepository>()));
+  gh.factory<_i576.AddMaintenanceBreakdownsCubit>(() =>
+      _i576.AddMaintenanceBreakdownsCubit(
+          gh<_i774.MaintenanceBreakdownsRepository>()));
+  gh.factory<_i899.MaintenanceBreakdownsCubit>(() =>
+      _i899.MaintenanceBreakdownsCubit(
+          gh<_i774.MaintenanceBreakdownsRepository>()));
+  gh.factory<_i740.EmployeeMapRepository>(
+      () => _i740.EmployeeMapRepository(gh<_i685.EmployeeMapAPI>()));
+  gh.factory<_i194.CollectCashRepository>(
+      () => _i194.CollectCashRepository(gh<_i503.CollectCashAPI>()));
+  gh.factory<_i94.VehiclesZoneCubit>(
+      () => _i94.VehiclesZoneCubit(gh<_i1040.VehiclesZoneRepository>()));
+  gh.factory<_i895.NotificationOffersRepository>(() =>
+      _i895.NotificationOffersRepository(gh<_i154.NotificationOffersAPI>()));
+  gh.factory<_i291.PledgesAndGeneralizationRepository>(() =>
+      _i291.PledgesAndGeneralizationRepository(
+          gh<_i809.PledgesAndGeneralizationAPI>()));
+  gh.factory<_i133.CashiftersLoansRepository>(
+      () => _i133.CashiftersLoansRepository(gh<_i395.CashiftersLoansAPI>()));
+  gh.factory<_i521.ChashiftLoansCubit>(
+      () => _i521.ChashiftLoansCubit(gh<_i518.ChashiftLonsRepository>()));
+  gh.factory<_i497.JobRequirementsRepository>(
+      () => _i497.JobRequirementsRepository(gh<_i129.JobRequirementsAPI>()));
+  gh.factory<_i560.ReviewOpportunitiesCubit>(() =>
+      _i560.ReviewOpportunitiesCubit(
+          gh<_i566.ReviewOpportunitiesRepository>()));
+  gh.factory<_i702.ShiftPaymentCubitCubit>(() =>
+      _i702.ShiftPaymentCubitCubit(gh<_i137.ReviewOpportunitiesRepository>()));
+  gh.factory<_i116.ResumeBloc>(() => _i116.ResumeBloc(
+        gh<_i139.ResumeRepository>(),
+        gh<_i228.UserRepository>(),
+      ));
+  gh.factory<_i194.AdminWalletRepository>(
+      () => _i194.AdminWalletRepository(gh<_i320.AdminWalletAPI>()));
+  gh.factory<_i844.AbsenceNoticeCubit>(() => _i844.AbsenceNoticeCubit(
+        gh<_i1047.AbsenceNoticeRepository>(),
+        gh<_i830.AttendanceRepository>(),
+      ));
+  gh.factory<_i931.WalletRepository>(
+      () => _i931.WalletRepository(gh<_i399.WalletAPI>()));
+  gh.factory<_i201.OpportunityDetailsCubit>(() =>
+      _i201.OpportunityDetailsCubit(gh<_i1035.TodayOpportunityRepository>()));
+  gh.factory<_i424.PledgesAndGeneralizationCubit>(() =>
+      _i424.PledgesAndGeneralizationCubit(
+          gh<_i291.PledgesAndGeneralizationRepository>()));
+  gh.factory<_i39.LoggerRepository>(
+      () => _i39.LoggerRepository(gh<_i228.UserRepository>()));
+  gh.factory<_i558.WorkHazardDetailsCubit>(
+      () => _i558.WorkHazardDetailsCubit(gh<_i42.WorkHazardsRepository>()));
+  gh.factory<_i834.WorkHazardsCubit>(
+      () => _i834.WorkHazardsCubit(gh<_i42.WorkHazardsRepository>()));
+  gh.factory<_i887.SalaryDefinitionRepository>(
+      () => _i887.SalaryDefinitionRepository(gh<_i730.SalaryDefinitionAPI>()));
+  gh.factory<_i55.JobOffersCubit>(() => _i55.JobOffersCubit(
+        gh<_i339.JobOffersRepository>(),
+        gh<_i228.UserRepository>(),
+      ));
+  gh.factory<_i443.UsersRequestsRepository>(
+      () => _i443.UsersRequestsRepository(gh<_i164.UsersRequestsAPI>()));
+  gh.factory<_i1072.AddTransactionsCubit>(
+      () => _i1072.AddTransactionsCubit(gh<_i297.TransactionsRepository>()));
+  gh.factory<_i319.TransactionsCubit>(
+      () => _i319.TransactionsCubit(gh<_i297.TransactionsRepository>()));
+  gh.factory<_i688.EvaluationCubit>(
+      () => _i688.EvaluationCubit(gh<_i772.EvaluationRepository>()));
+  gh.factory<_i413.CityUseCase>(
+      () => _i413.CityUseCase(gh<_i139.ResumeRepository>()));
+  gh.factory<_i14.QrCodeCubit>(
+      () => _i14.QrCodeCubit(gh<_i139.ResumeRepository>()));
+  gh.factory<_i1005.AddOpportunityRepository>(
+      () => _i1005.AddOpportunityRepository(gh<_i430.AddOpportunityAPI>()));
+  gh.factory<_i279.OverviewBloc>(() => _i279.OverviewBloc(
+        gh<_i339.JobOffersRepository>(),
+        gh<_i228.UserRepository>(),
+        gh<_i932.ActivityLogRepository>(),
+        gh<_i170.ProfileRepository>(),
+        gh<_i521.RequiredTasksUseCase>(),
+        gh<_i170.ProfileRepository>(),
+      ));
+  gh.factory<_i1061.OverviewCubit>(() => _i1061.OverviewCubit(
+        gh<_i339.JobOffersRepository>(),
+        gh<_i228.UserRepository>(),
+        gh<_i932.ActivityLogRepository>(),
+        gh<_i170.ProfileRepository>(),
+        gh<_i521.RequiredTasksUseCase>(),
+        gh<_i170.ProfileRepository>(),
+      ));
+  gh.factory<_i367.TermandConditionRepository>(
+      () => _i367.TermandConditionRepository(gh<_i805.TermandConditionAPI>()));
+  gh.factory<_i68.WithdrawCubit>(() => _i68.WithdrawCubit(
+        gh<_i931.WalletRepository>(),
+        gh<_i536.BankRepository>(),
+      ));
+  gh.factory<_i760.EmployeesRepository>(
+      () => _i760.EmployeesRepository(gh<_i717.EmployeesAPI>()));
+  gh.factory<_i633.ActionVehicleReceiveRequestCubit>(() =>
+      _i633.ActionVehicleReceiveRequestCubit(gh<_i380.VehiclesRepository>()));
+  gh.factory<_i535.VehicleReceiveRequestsCubit>(
+      () => _i535.VehicleReceiveRequestsCubit(gh<_i380.VehiclesRepository>()));
+  gh.factory<_i703.VehicleViolationDetailsCubit>(
+      () => _i703.VehicleViolationDetailsCubit(gh<_i380.VehiclesRepository>()));
+  gh.factory<_i453.AddAddressCubit>(() => _i453.AddAddressCubit(
+        gh<_i503.AddAddressRepository>(),
+        gh<_i735.MapPickerRepository>(),
+      ));
+  gh.factory<_i641.DeliveryAndReceiptCubit>(() =>
+      _i641.DeliveryAndReceiptCubit(gh<_i571.WorkerWorkPlacesRepository>()));
+  gh.factory<_i111.WorkerWorkPlacesCubit>(() =>
+      _i111.WorkerWorkPlacesCubit(gh<_i571.WorkerWorkPlacesRepository>()));
+  gh.factory<_i710.GeneralViolationCubit>(() =>
+      _i710.GeneralViolationCubit(gh<_i1014.GeneralViolationsRepository>()));
+  gh.factory<_i897.AttendanceCubit>(() => _i897.AttendanceCubit(
+      attendanceRepository: gh<_i830.AttendanceRepository>()));
+  gh.factory<_i84.TrackAttendanceDepartureDetailsCubit>(() =>
+      _i84.TrackAttendanceDepartureDetailsCubit(
+          gh<_i227.TrackAttendanceDepartureRepository>()));
+  gh.factory<_i681.TrackAttendanceDepartureCubit>(() =>
+      _i681.TrackAttendanceDepartureCubit(
+          gh<_i227.TrackAttendanceDepartureRepository>()));
+  gh.factory<_i872.ProfileCubit>(() => _i872.ProfileCubit(
+        gh<_i228.UserRepository>(),
+        gh<_i170.ProfileRepository>(),
+        gh<_i139.ResumeRepository>(),
+      ));
+  gh.factory<_i90.ActionVehicleNotificationsCubit>(() =>
+      _i90.ActionVehicleNotificationsCubit(
+          gh<_i584.NotificationsRepository>()));
+  gh.factory<_i64.VehicleNotificationsCubit>(() =>
+      _i64.VehicleNotificationsCubit(gh<_i584.NotificationsRepository>()));
+  gh.factory<_i523.BailRequestsCubit>(
+      () => _i523.BailRequestsCubit(gh<_i410.BailRequestsRepository>()));
+  gh.factory<_i754.CopyRightsBloc>(
+      () => _i754.CopyRightsBloc(gh<_i494.TermsRepository>()));
+  gh.factory<_i699.RequiredTasksCubit>(
+      () => _i699.RequiredTasksCubit(gh<_i15.RespondRequiredTaskUseCase>()));
+  gh.factory<_i465.ConfirmAttendanceCubit>(() =>
+      _i465.ConfirmAttendanceCubit(gh<_i15.RespondRequiredTaskUseCase>()));
+  gh.factory<_i1020.PunishmentsCubit>(
+      () => _i1020.PunishmentsCubit(gh<_i690.PunishmentsRepository>()));
+  gh.factory<_i48.VehicleReceivedImagesCubit>(
+      () => _i48.VehicleReceivedImagesCubit(
+            gh<_i61.ReceiveVehiclesRepository>(),
+            gh<_i815.VehiclesRepository>(),
+          ));
+  gh.factory<_i805.EmploymentManagementRepository>(() =>
+      _i805.EmploymentManagementRepository(
+          gh<_i1029.EmploymentManagementAPI>()));
+  gh.factory<_i579.JobUniformRepository>(
+      () => _i579.JobUniformRepository(gh<_i474.JobUniformAPI>()));
+  gh.factory<_i155.CovenantReceivedCubit>(() => _i155.CovenantReceivedCubit(
+        gh<_i1061.FocusPointsRepository>(),
+        gh<_i571.WorkerWorkPlacesRepository>(),
+      ));
+  gh.factory<_i658.AdvancedFilterCubit>(() => _i658.AdvancedFilterCubit(
+        gh<_i863.AdvancedFilterRepository>(),
+        gh<_i460.SharedPreferences>(),
+      ));
+  gh.factory<_i605.ProjectsManagementRepository>(() =>
+      _i605.ProjectsManagementRepository(gh<_i533.ProjectsManagementAPI>()));
+  gh.factory<_i1041.TasksAndResponsibilitiesCubit>(
+      () => _i1041.TasksAndResponsibilitiesCubit(
+            gh<_i101.TermandConditionRepository>(),
+            gh<_i686.ProjectsManagementRepository>(),
+          ));
+  gh.factory<_i998.AddTermAndConditionCubit>(
+      () => _i998.AddTermAndConditionCubit(
+            gh<_i101.TermandConditionRepository>(),
+            gh<_i605.ProjectsManagementRepository>(),
+          ));
+  gh.factory<_i837.TermsAndConditionsCubit>(() => _i837.TermsAndConditionsCubit(
+        gh<_i101.TermandConditionRepository>(),
+        gh<_i605.ProjectsManagementRepository>(),
+      ));
+  gh.factory<_i981.CollectCashCubit>(
+      () => _i981.CollectCashCubit(gh<_i194.CollectCashRepository>()));
+  gh.factory<_i611.FavoriteJobsCubit>(
+      () => _i611.FavoriteJobsCubit(gh<_i139.ResumeRepository>()));
+  gh.factory<_i927.BanEmployeeDetailsCubit>(
+      () => _i927.BanEmployeeDetailsCubit(gh<_i425.BanEmployeesRepository>()));
+  gh.factory<_i483.BanEmployeesCubit>(
+      () => _i483.BanEmployeesCubit(gh<_i425.BanEmployeesRepository>()));
+  gh.factory<_i949.AvailableOpportunitiesCubit>(
+      () => _i949.AvailableOpportunitiesCubit(
+            gh<_i1035.TodayOpportunityRepository>(),
+            gh<_i863.AdvancedFilterRepository>(),
+          ));
+  gh.factory<_i968.ClassificationRepository>(
+      () => _i968.ClassificationRepository(gh<_i680.ClassificationAPI>()));
+  gh.factory<_i121.AddPunishmentCubit>(
+      () => _i121.AddPunishmentCubit(gh<_i530.PunishmentsRepository>()));
+  gh.factory<_i471.UsersManagementRepository>(
+      () => _i471.UsersManagementRepository(gh<_i93.UsersManagementAPI>()));
+  gh.factory<_i997.JobRequirementsCubit>(
+      () => _i997.JobRequirementsCubit(gh<_i366.JobRequirementsRepository>()));
+  gh.factory<_i507.ClassificationCubit>(
+      () => _i507.ClassificationCubit(gh<_i968.ClassificationRepository>()));
+  gh.factory<_i149.AuthRepository>(() => _i149.AuthRepository(
+        gh<_i495.AuthAPI>(),
+        gh<_i228.UserRepository>(),
+      ));
+  gh.factory<_i196.AddLoanRequestCubit>(
+      () => _i196.AddLoanRequestCubit(gh<_i108.LoansRequestRepository>()));
+  gh.factory<_i364.ViolationsUserCubit>(
+      () => _i364.ViolationsUserCubit(gh<_i35.ViolationsUserRepository>()));
+  gh.factory<_i1066.AttendanceNotificationsReportsRepository>(() =>
+      _i1066.AttendanceNotificationsReportsRepository(
+          gh<_i615.AttendanceNotificationsReportsAPI>()));
+  gh.factory<_i778.CancelOpportunityApologizingCubit>(() =>
+      _i778.CancelOpportunityApologizingCubit(gh<_i339.JobOffersRepository>()));
+  gh.factory<_i325.AdminWalletCubit>(() => _i325.AdminWalletCubit(
+        gh<_i159.AdminWalletRepository>(),
+        gh<_i228.UserRepository>(),
+      ));
+  gh.factory<_i694.RequestsUserRepository>(
+      () => _i694.RequestsUserRepository(gh<_i565.RequestsUserAPI>()));
+  gh.factory<_i549.EmployeesCubit>(
+      () => _i549.EmployeesCubit(gh<_i760.EmployeesRepository>()));
+  gh.factory<_i1059.EmployeesAttendanceCubit>(
+      () => _i1059.EmployeesAttendanceCubit(gh<_i56.EmployeesRepository>()));
+  gh.factory<_i124.CashiftAttendanceCubit>(() => _i124.CashiftAttendanceCubit(
+        gh<_i170.ProfileRepository>(),
+        gh<_i339.JobOffersRepository>(),
+        gh<_i830.AttendanceRepository>(),
+      ));
+  gh.factory<_i161.PhoneWalletCubit>(
+      () => _i161.PhoneWalletCubit(gh<_i536.BankRepository>()));
+  gh.factory<_i770.BankAccountCubit>(
+      () => _i770.BankAccountCubit(gh<_i536.BankRepository>()));
+  gh.factory<_i385.LoginBloc>(() => _i385.LoginBloc(
+        gh<_i149.AuthRepository>(),
+        gh<_i228.UserRepository>(),
+      ));
   gh.factory<_i398.ActionFollowUpViolationsCubit>(() =>
       _i398.ActionFollowUpViolationsCubit(
           gh<_i1014.GeneralViolationsRepository>()));
@@ -1084,9 +1160,39 @@ Future<_i174.GetIt> $initGetIt(
   gh.factory<_i741.GeneralTypesViolationsCubit>(() =>
       _i741.GeneralTypesViolationsCubit(
           gh<_i568.GeneralViolationsRepository>()));
-  gh.factory<_i116.ResumeBloc>(() => _i116.ResumeBloc(
-        gh<_i563.ResumeRepository>(),
-        gh<_i1028.UserRepository>(),
+  gh.factory<_i744.AddEmploymentOfficialCubit>(
+      () => _i744.AddEmploymentOfficialCubit(
+            gh<_i469.EmploymentOfficialsRepository>(),
+            gh<_i139.ResumeRepository>(),
+          ));
+  gh.factory<_i476.AddSalaryDefinitionRequestCubit>(() =>
+      _i476.AddSalaryDefinitionRequestCubit(
+          gh<_i887.SalaryDefinitionRepository>()));
+  gh.factory<_i907.SalaryDefinitionRequestCubit>(() =>
+      _i907.SalaryDefinitionRequestCubit(
+          gh<_i887.SalaryDefinitionRepository>()));
+  gh.factory<_i352.AddHomeAddressCubit>(() => _i352.AddHomeAddressCubit(
+        gh<_i503.AddAddressRepository>(),
+        gh<_i139.ResumeRepository>(),
+      ));
+  gh.factory<_i580.ServicesCubit>(() => _i580.ServicesCubit(
+        gh<_i1055.ServiceRepository>(),
+        gh<_i228.UserRepository>(),
+      ));
+  gh.factory<_i50.AdminOverviewCubit>(() => _i50.AdminOverviewCubit(
+        gh<_i228.UserRepository>(),
+        gh<_i1035.TodayOpportunityRepository>(),
+        gh<_i521.RequiredTasksUseCase>(),
+      ));
+  gh.factory<_i571.SearchEmployeeMapCubit>(() => _i571.SearchEmployeeMapCubit(
+        gh<_i740.EmployeeMapRepository>(),
+        gh<_i139.ResumeRepository>(),
+      ));
+  gh.factory<_i39.SplashCubit>(() => _i39.SplashCubit(
+        gh<_i139.ResumeRepository>(),
+        gh<_i228.UserRepository>(),
+        gh<_i170.ProfileRepository>(),
+        gh<_i354.LocalRepository>(),
       ));
   gh.factory<_i1006.AdditionalLocationsCubit>(() =>
       _i1006.AdditionalLocationsCubit(
@@ -1099,20 +1205,11 @@ Future<_i174.GetIt> $initGetIt(
       _i78.MapProjectGatesCubit(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i318.ProjectSuccessfullyCubit>(() =>
       _i318.ProjectSuccessfullyCubit(gh<_i605.ProjectsManagementRepository>()));
-  gh.factory<_i699.RequiredTasksCubit>(
-      () => _i699.RequiredTasksCubit(gh<_i604.RespondRequiredTaskUseCase>()));
-  gh.factory<_i465.ConfirmAttendanceCubit>(() =>
-      _i465.ConfirmAttendanceCubit(gh<_i604.RespondRequiredTaskUseCase>()));
   gh.factory<_i329.FilterAttendanceNotificationsReportsCubit>(() =>
       _i329.FilterAttendanceNotificationsReportsCubit(
           gh<_i760.EmployeesRepository>()));
-  gh.factory<_i606.FaceRecognitionCubit>(
-      () => _i606.FaceRecognitionCubit(gh<_i922.ProfileRepository>()));
-  gh.factory<_i890.EmploymentOfficialsCubit>(() =>
-      _i890.EmploymentOfficialsCubit(
-          gh<_i930.EmploymentOfficialsRepository>()));
-  gh.factory<_i645.ForgetPasswordCubit>(
-      () => _i645.ForgetPasswordCubit(gh<_i633.AuthRepository>()));
+  gh.factory<_i745.NotificationOffersCubit>(() =>
+      _i745.NotificationOffersCubit(gh<_i895.NotificationOffersRepository>()));
   gh.factory<_i622.AddCashifterLoanCubit>(() => _i622.AddCashifterLoanCubit(
         gh<_i133.CashiftersLoansRepository>(),
         gh<_i605.ProjectsManagementRepository>(),
@@ -1146,26 +1243,18 @@ Future<_i174.GetIt> $initGetIt(
       () => _i866.AddVehicleViolationCubit(gh<_i380.VehiclesRepository>()));
   gh.factory<_i151.VehiclesCubit>(
       () => _i151.VehiclesCubit(gh<_i815.VehiclesRepository>()));
-  gh.factory<_i334.FilterEmployeeMapCubit>(() => _i334.FilterEmployeeMapCubit(
-        gh<_i605.ProjectsManagementRepository>(),
-        gh<_i563.ResumeRepository>(),
-      ));
-  gh.factory<_i385.LoginBloc>(() => _i385.LoginBloc(
-        gh<_i633.AuthRepository>(),
-        gh<_i1028.UserRepository>(),
-      ));
   gh.factory<_i910.AddJobUniformCubit>(() => _i910.AddJobUniformCubit(
         gh<_i579.JobUniformRepository>(),
         gh<_i605.ProjectsManagementRepository>(),
       ));
-  gh.factory<_i844.AbsenceNoticeCubit>(() => _i844.AbsenceNoticeCubit(
-        gh<_i52.AbsenceNoticeRepository>(),
-        gh<_i339.AttendanceRepository>(),
+  gh.factory<_i22.WalletCubit>(() => _i22.WalletCubit(
+        gh<_i931.WalletRepository>(),
+        gh<_i228.UserRepository>(),
       ));
-  gh.factory<_i68.WithdrawCubit>(() => _i68.WithdrawCubit(
-        gh<_i536.WalletRepository>(),
-        gh<_i565.BankRepository>(),
-      ));
+  gh.factory<_i300.ApplyDetailsCubit>(
+      () => _i300.ApplyDetailsCubit(gh<_i931.WalletRepository>()));
+  gh.factory<_i168.BalancesCubit>(
+      () => _i168.BalancesCubit(gh<_i931.WalletRepository>()));
   gh.factory<_i501.AddTypeViolationCubit>(() => _i501.AddTypeViolationCubit(
         gh<_i1014.GeneralViolationsRepository>(),
         gh<_i686.ProjectsManagementRepository>(),
@@ -1187,63 +1276,19 @@ Future<_i174.GetIt> $initGetIt(
       () => _i933.UsersRequestsCubit(gh<_i443.UsersRequestsRepository>()));
   gh.factory<_i227.UserRequestTermsCubit>(
       () => _i227.UserRequestTermsCubit(gh<_i443.UsersRequestsRepository>()));
-  gh.factory<_i867.OvertimeAttendanceCubit>(
-      () => _i867.OvertimeAttendanceCubit(gh<_i339.AttendanceRepository>()));
-  gh.factory<_i453.AddAddressCubit>(() => _i453.AddAddressCubit(
-        gh<_i431.AddAddressRepository>(),
-        gh<_i735.MapPickerRepository>(),
-      ));
-  gh.factory<_i277.EmployeeCertificateDetailsCubit>(() =>
-      _i277.EmployeeCertificateDetailsCubit(
-          gh<_i1070.EmployeesCertificatesItemRepository>()));
-  gh.factory<_i518.EmployeesCertificatesCubit>(() =>
-      _i518.EmployeesCertificatesCubit(
-          gh<_i1070.EmployeesCertificatesItemRepository>()));
-  gh.factory<_i50.AdminOverviewCubit>(() => _i50.AdminOverviewCubit(
-        gh<_i1028.UserRepository>(),
-        gh<_i1035.TodayOpportunityRepository>(),
-        gh<_i919.RequiredTasksUseCase>(),
+  gh.factory<_i845.AppliedOffersCubit>(() => _i845.AppliedOffersCubit(
+        gh<_i339.JobOffersRepository>(),
+        gh<_i170.ProfileRepository>(),
+        gh<_i39.LoggerRepository>(),
       ));
   gh.factory<_i655.EmployeesOpportunitiesCubit>(() =>
       _i655.EmployeesOpportunitiesCubit(gh<_i622.AddOpportunityRepository>()));
-  gh.factory<_i413.CityUseCase>(
-      () => _i413.CityUseCase(gh<_i563.ResumeRepository>()));
-  gh.factory<_i14.QrCodeCubit>(
-      () => _i14.QrCodeCubit(gh<_i563.ResumeRepository>()));
   gh.factory<_i844.AddClassificationCubit>(() => _i844.AddClassificationCubit(
         gh<_i968.ClassificationRepository>(),
         gh<_i605.ProjectsManagementRepository>(),
       ));
-  gh.factory<_i290.InfoVehiclesCubit>(() => _i290.InfoVehiclesCubit(
-        gh<_i61.ReceiveVehiclesRepository>(),
-        gh<_i1061.FocusPointsRepository>(),
-      ));
-  gh.factory<_i352.AddHomeAddressCubit>(() => _i352.AddHomeAddressCubit(
-        gh<_i431.AddAddressRepository>(),
-        gh<_i563.ResumeRepository>(),
-      ));
-  gh.factory<_i196.AddLoanRequestCubit>(
-      () => _i196.AddLoanRequestCubit(gh<_i597.LoansRequestRepository>()));
-  gh.factory<_i94.VehiclesZoneCubit>(
-      () => _i94.VehiclesZoneCubit(gh<_i1040.VehiclesZoneRepository>()));
   gh.factory<_i179.AttachmentEmployeesCubit>(
       () => _i179.AttachmentEmployeesCubit(gh<_i760.EmployeesRepository>()));
-  gh.factory<_i556.LoanRequestsCubit>(
-      () => _i556.LoanRequestsCubit(gh<_i597.LoansRequestRepository>()));
-  gh.factory<_i325.AdminWalletCubit>(() => _i325.AdminWalletCubit(
-        gh<_i159.AdminWalletRepository>(),
-        gh<_i1028.UserRepository>(),
-      ));
-  gh.factory<_i571.SearchEmployeeMapCubit>(() => _i571.SearchEmployeeMapCubit(
-        gh<_i740.EmployeeMapRepository>(),
-        gh<_i563.ResumeRepository>(),
-      ));
-  gh.factory<_i161.PhoneWalletCubit>(
-      () => _i161.PhoneWalletCubit(gh<_i565.BankRepository>()));
-  gh.factory<_i770.BankAccountCubit>(
-      () => _i770.BankAccountCubit(gh<_i565.BankRepository>()));
-  gh.factory<_i778.CancelOpportunityApologizingCubit>(() =>
-      _i778.CancelOpportunityApologizingCubit(gh<_i883.JobOffersRepository>()));
   gh.factory<_i67.AttendanceNotificationsReportsCubit>(
       () => _i67.AttendanceNotificationsReportsCubit(
             gh<_i1066.AttendanceNotificationsReportsRepository>(),
@@ -1254,41 +1299,21 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i605.ProjectsManagementRepository>(),
         gh<_i471.UsersManagementRepository>(),
       ));
-  gh.factory<_i897.AttendanceCubit>(() => _i897.AttendanceCubit(
-      attendanceRepository: gh<_i339.AttendanceRepository>()));
-  gh.factory<_i39.SplashCubit>(() => _i39.SplashCubit(
-        gh<_i563.ResumeRepository>(),
-        gh<_i1028.UserRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i1033.LocalRepository>(),
-      ));
-  gh.factory<_i645.HomeBloc>(() => _i645.HomeBloc(
-        gh<_i13.HomeRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i1028.UserRepository>(),
-        gh<_i61.ReceiveVehiclesRepository>(),
-      ));
-  gh.factory<_i872.ProfileCubit>(() => _i872.ProfileCubit(
-        gh<_i1028.UserRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i563.ResumeRepository>(),
-      ));
-  gh.factory<_i754.CopyRightsBloc>(
-      () => _i754.CopyRightsBloc(gh<_i883.TermsRepository>()));
+  gh.factory<_i927.AddFileRequestsUserCubit>(
+      () => _i927.AddFileRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
+  gh.factory<_i310.AddRequestsUserCubit>(
+      () => _i310.AddRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
+  gh.factory<_i384.ConfirmRequestsUserCubit>(
+      () => _i384.ConfirmRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
+  gh.factory<_i108.TermCondationRequestsUserCubit>(() =>
+      _i108.TermCondationRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
+  gh.factory<_i691.RequestsUserCubit>(
+      () => _i691.RequestsUserCubit(gh<_i694.RequestsUserRepository>()));
   gh.factory<_i602.UsersManagementCubit>(
       () => _i602.UsersManagementCubit(gh<_i471.UsersManagementRepository>()));
-  gh.factory<_i124.CashiftAttendanceCubit>(() => _i124.CashiftAttendanceCubit(
-        gh<_i922.ProfileRepository>(),
-        gh<_i883.JobOffersRepository>(),
-        gh<_i339.AttendanceRepository>(),
-      ));
   gh.factory<_i805.AddNewProjectCubit>(() => _i805.AddNewProjectCubit(
         gh<_i686.ProjectsManagementRepository>(),
         gh<_i1005.AddOpportunityRepository>(),
-      ));
-  gh.factory<_i1047.ChangePasswordCubit>(() => _i1047.ChangePasswordCubit(
-        gh<_i1028.UserRepository>(),
-        gh<_i922.ProfileRepository>(),
       ));
   gh.factory<_i902.AddVehiclesZoneCubit>(() => _i902.AddVehiclesZoneCubit(
         gh<_i1040.VehiclesZoneRepository>(),
@@ -1297,25 +1322,10 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i250.FocusPointsRepository>(),
         gh<_i380.VehiclesRepository>(),
       ));
-  gh.factory<_i745.NotificationOffersCubit>(() =>
-      _i745.NotificationOffersCubit(gh<_i874.NotificationOffersRepository>()));
-  gh.factory<_i611.FavoriteJobsCubit>(
-      () => _i611.FavoriteJobsCubit(gh<_i563.ResumeRepository>()));
-  gh.factory<_i84.TrackAttendanceDepartureDetailsCubit>(() =>
-      _i84.TrackAttendanceDepartureDetailsCubit(
-          gh<_i227.TrackAttendanceDepartureRepository>()));
-  gh.factory<_i681.TrackAttendanceDepartureCubit>(() =>
-      _i681.TrackAttendanceDepartureCubit(
-          gh<_i227.TrackAttendanceDepartureRepository>()));
   gh.factory<_i423.EmploymentManagementCubit>(
       () => _i423.EmploymentManagementCubit(
             gh<_i716.EmploymentManagementRepository>(),
             gh<_i1061.FocusPointsRepository>(),
-          ));
-  gh.factory<_i744.AddEmploymentOfficialCubit>(
-      () => _i744.AddEmploymentOfficialCubit(
-            gh<_i469.EmploymentOfficialsRepository>(),
-            gh<_i563.ResumeRepository>(),
           ));
   gh.factory<_i324.RequestTrackAttendanceDepartureCubit>(
       () => _i324.RequestTrackAttendanceDepartureCubit(
@@ -1327,10 +1337,6 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i533.ProjectsManagementAPI>(),
         gh<_i471.UsersManagementRepository>(),
       ));
-  gh.factory<_i55.JobOffersCubit>(() => _i55.JobOffersCubit(
-        gh<_i883.JobOffersRepository>(),
-        gh<_i1028.UserRepository>(),
-      ));
   gh.factory<_i870.CompaniesUseCase>(
       () => _i870.CompaniesUseCase(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i250.JobsUseCase>(
@@ -1339,11 +1345,10 @@ Future<_i174.GetIt> $initGetIt(
       () => _i219.ProjectsUseCase(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i188.ChangeUserPasswordCubit>(() =>
       _i188.ChangeUserPasswordCubit(gh<_i471.UsersManagementRepository>()));
-  gh.factory<_i90.ActionVehicleNotificationsCubit>(() =>
-      _i90.ActionVehicleNotificationsCubit(
-          gh<_i584.NotificationsRepository>()));
-  gh.factory<_i64.VehicleNotificationsCubit>(() =>
-      _i64.VehicleNotificationsCubit(gh<_i584.NotificationsRepository>()));
+  gh.factory<_i334.FilterEmployeeMapCubit>(() => _i334.FilterEmployeeMapCubit(
+        gh<_i605.ProjectsManagementRepository>(),
+        gh<_i139.ResumeRepository>(),
+      ));
   gh.factory<_i915.BasicVehicleInformationCubit>(
       () => _i915.BasicVehicleInformationCubit(
             gh<_i815.VehiclesRepository>(),
@@ -1363,6 +1368,8 @@ Future<_i174.GetIt> $initGetIt(
             gh<_i686.ProjectsManagementRepository>(),
             gh<_i137.UsersManagementRepository>(),
           ));
+  gh.factory<_i7.VerificationBloc>(
+      () => _i7.VerificationBloc(gh<_i149.AuthRepository>()));
   gh.factory<_i95.ProjectsManagementCubit>(() =>
       _i95.ProjectsManagementCubit(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i499.FilterReceiveVehiclesCubit>(
@@ -1371,6 +1378,8 @@ Future<_i174.GetIt> $initGetIt(
             gh<_i605.ProjectsManagementRepository>(),
             gh<_i471.UsersManagementRepository>(),
           ));
+  gh.factory<_i645.ForgetPasswordCubit>(
+      () => _i645.ForgetPasswordCubit(gh<_i149.AuthRepository>()));
   gh.factory<_i845.AddWorkHazardCubit>(() => _i845.AddWorkHazardCubit(
         gh<_i42.WorkHazardsRepository>(),
         gh<_i686.ProjectsManagementRepository>(),

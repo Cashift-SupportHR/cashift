@@ -11,7 +11,7 @@ import 'package:shiftapp/config.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:store_redirect/store_redirect.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../domain/entities/shared/date_formatter.dart';
+import '../common/domain/entities/shared/date_formatter.dart';
 import '../presentation/shared/components/datepicker/package_info.dart';
 
 class AppUtils {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/bankaccount/electronic_wallet.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/electronic_wallet.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/withdraw_accounts/phone_wallets/widgets/phone_wallet_item.dart';
 

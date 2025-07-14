@@ -8,3 +8,5 @@ export 'vehicle_image_face.dart';
 export 'vehicle_camera.dart';
 export 'vehicle_receive_request.dart';
 export 'covenant_vehicle.dart';
+export 'camera_search_results.dart';
+export 'camera_search_result_args.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/components/material_text.dart';
 
-import '../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../resources/constants.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

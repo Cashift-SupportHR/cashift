@@ -1,4 +1,5 @@
-import '../../data/models/attendance_notifi_action_dto.dart';
+
+import '../../data/models/index.dart';
 
 /// attendanceNotifiActionName : "تيست2"
 /// attendanceNotifiTypeName : "تيست"

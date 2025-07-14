@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shiftapp/core/resources/data_state.dart';
-import 'package:shiftapp/domain/entities/resume/experiences_info.dart';
+import 'package:shiftapp/common/domain/entities/resume/experiences_info.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_bloc.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/bloc/resume_component_data.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/widgets/base_resume_widget.dart';

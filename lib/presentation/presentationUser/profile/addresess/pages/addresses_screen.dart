@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../../../data/models/add-address/address.dart';
+import '../../../../../common/data/models/add-address/address.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../widgets/address_item_widget.dart';
 

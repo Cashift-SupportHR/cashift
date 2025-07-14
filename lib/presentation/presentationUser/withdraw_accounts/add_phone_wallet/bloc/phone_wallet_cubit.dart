@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/models/bank/add_electronic_wallet.dart';
-import 'package:shiftapp/data/repositories/wallet/bank_repository.dart';
-import 'package:shiftapp/domain/entities/bankaccount/electronic_wallet.dart';
-import 'package:shiftapp/domain/entities/bankaccount/phone_wallet_required_data.dart';
+import 'package:shiftapp/common/data/models/bank/add_electronic_wallet.dart';
+import 'package:shiftapp/common/data/repositories/wallet/bank_repository.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/electronic_wallet.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/phone_wallet_required_data.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 const HASH_KEY = '7c0b9378-4bae-4164-a366-cbfcf9128a23';

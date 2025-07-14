@@ -3,7 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 
-import '../../../../../domain/entities/bail_requests/employee_services_status.dart';
+import '../../../../../common/domain/entities/bail_requests/employee_services_status.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../data/models/approve_reject_violation_params.dart';
 import '../../data/models/violation_user_dto.dart';

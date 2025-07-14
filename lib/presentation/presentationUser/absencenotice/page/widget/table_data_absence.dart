@@ -3,9 +3,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
-import 'package:shiftapp/data/models/absence_notation/index.dart';
+import 'package:shiftapp/common/data/models/absence_notation/index.dart';
 
-import '../../../../../data/exceptions/empty_list_exception.dart';
+import '../../../../../common/data/exceptions/empty_list_exception.dart';
  import '../../../../shared/components/decorations/decorations.dart';
 import '../../../../shared/components/error_handler_widget.dart';
 import '../../../resources/constants.dart';

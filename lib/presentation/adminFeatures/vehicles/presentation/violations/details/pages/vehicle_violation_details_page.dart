@@ -1,6 +1,7 @@
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../shared/components/index.dart';
-import '../../../../domain/entities/vehicle_violation.dart';
+import '../../../../data/models/index.dart';
+import '../../../../domain/entities/index.dart';
 import '../bloc/vehicle_violation_details_cubit.dart';
 import 'vehicle_violation_details_screen.dart';
 

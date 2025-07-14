@@ -6,8 +6,8 @@ import 'package:livelyness_detection/index.dart';
 import 'package:livelyness_detection/livelyness_detection.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
+import '../../../../common/data/models/attendance/attendance_config_dto.dart';
 import '../../../../core/services/permission_detector.dart';
-import '../../../../data/models/attendance/attendance_config_dto.dart';
 import '../../../shared/components/dialogs_manager.dart';
 import 'face_matching_result.dart';
 

@@ -18,9 +18,8 @@ import '../../../../../../../../shared/components/buttons/row_small_button.dart'
 import '../../../../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../../../../shared/components/files/custom_p_d_f_view.dart';
 import '../../../../../../../../shared/components/text_field/build_text_field_item.dart';
-import '../../../../../../data/models/accept_or_reject_attachment_emp_prams.dart';
-import '../../../../../../data/models/requirement_attachment_prams.dart';
-import '../../../../../../domain/entities/AttachmentsEmp.dart';
+import '../../../../../../data/models/index.dart';
+import '../../../../../../domain/entities/index.dart';
 
 class EmployeeFileItem extends BaseStatelessWidget {
   File? images;

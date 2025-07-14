@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
-import 'package:shiftapp/data/exceptions/empty_list_exception.dart';
+import 'package:shiftapp/common/data/exceptions/empty_list_exception.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
 import '../../../../../presentationUser/common/common_state.dart';

@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/shared/components/texts/row_rich_texts.dar
 import 'package:shiftapp/presentation/shared/components/underline_widget.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../../shared/components/base_stateless_widget.dart';
 import '../../../shared/components/circular_percent_widget.dart';
 import '../../../shared/components/curancy_widget.dart';

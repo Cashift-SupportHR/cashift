@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 
-import '../../../../data/exceptions/empty_list_exception.dart';
+import '../../../../common/data/exceptions/empty_list_exception.dart';
 import '../../../presentationUser/common/common_state.dart';
 import '../error_handler_widget.dart';
 import '../loading_widget.dart';

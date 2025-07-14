@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 import 'package:shiftapp/presentation/adminFeatures/addOpportunity/data/models/opportunity_applicant_dto.dart';
 import 'package:shiftapp/presentation/adminFeatures/shared/data/data_sources/today_opportunity_api_provider.dart';
 import '../../../addOpportunity/domain/entities/opportunity_applicant.dart';

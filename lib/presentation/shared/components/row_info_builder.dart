@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/data/models/attendance/attendance_shift_dto.dart';
-import 'package:shiftapp/domain/entities/jobs/company_info.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/data/models/attendance/attendance_shift_dto.dart';
+import 'package:shiftapp/common/domain/entities/jobs/company_info.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';

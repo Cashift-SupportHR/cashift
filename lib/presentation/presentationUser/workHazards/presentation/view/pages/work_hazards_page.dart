@@ -4,7 +4,8 @@ import '../../../../../presentationUser/common/common_state.dart';
 import '../../../../../shared/components/base_widget_bloc.dart';
 import '../../../../../shared/components/text_field/text_field_search.dart';
 import '../../../../salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
-import '../../../domain/entities/work_hazard.dart';
+import '../../../data/models/index.dart';
+import '../../../domain/entities/index.dart';
 import '../bloc/work_hazards_cubit.dart';
 import 'work_hazards_screen.dart';
 

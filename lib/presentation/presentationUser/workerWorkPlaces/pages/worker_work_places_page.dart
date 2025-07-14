@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../../../../common/data/models/workerWorkPlaces/index.dart';
 import '../../../../core/services/routes.dart';
-import '../../../../data/models/workerWorkPlaces/start_attendance_focus_point_params.dart';
 import '../../../shared/components/base_widget_bloc.dart';
 import '../../appliedoffers/pages/qrcode_screen.dart';
 import '../../common/common_state.dart';

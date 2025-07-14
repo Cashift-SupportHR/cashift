@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/current_remaining_time.dart';
 import 'package:location/location.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/widgets/cancel_shift_widget.dart';
 
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/required_tasks/pages/required_tasks_dialog.dart';
 
-import '../../../../data/models/user_overview/disclosure_required_task_dto.dart';
+import '../../../../common/data/models/user_overview/index.dart';
 import '../../../shared/components/base_widget_bloc.dart';
 import '../bloc/required_tasks_cubit.dart';
 

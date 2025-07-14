@@ -1,4 +1,4 @@
-import '../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../data/models/follow_up_violation_dto.dart';
 
 class FollowUpViolation {

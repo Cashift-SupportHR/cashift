@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/jobs/job_details.dart';
+import 'package:shiftapp/common/domain/entities/jobs/job_details.dart';
 import 'package:shiftapp/main_index.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/job_offer_details/company_information_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/job_offer_details/job_information_widget.dart';

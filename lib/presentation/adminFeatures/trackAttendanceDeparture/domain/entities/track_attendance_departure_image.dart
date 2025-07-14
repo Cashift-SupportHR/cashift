@@ -1,4 +1,4 @@
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 
 import '../../data/models/track_attendance_departure_image_dto.dart';
 

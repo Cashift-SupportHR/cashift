@@ -1,4 +1,5 @@
-import '../../data/models/attendance_notifi_type_dto.dart';
+
+import '../../data/models/index.dart';
 
 /// id : 2
 /// name : "تيست"

@@ -1,4 +1,5 @@
-import '../../data/models/vehicle_components_dto.dart';
+
+import '../../data/models/index.dart';
 
 class VehicleComponents {
   VehicleComponents({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
-import '../../../../../domain/entities/wallet/withdraw_method.dart';
+import '../../../../../common/domain/entities/wallet/withdraw_method.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../resources/colors.dart';
 import '../balances/pages/balances_list_page.dart';

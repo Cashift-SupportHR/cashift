@@ -4,7 +4,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 import 'package:shiftapp/presentation/shared/components/index.dart';
 
 import '../../../../../../../presentationUser/resources/colors.dart';
-import '../../../../../data/models/location_gate_project_dto.dart';
+import '../../../../../data/models/index.dart';
+import '../../../../../domain/entities/index.dart';
 
 class MapPojectWidget extends StatefulWidget {
   final GoogleMapController? mapController;

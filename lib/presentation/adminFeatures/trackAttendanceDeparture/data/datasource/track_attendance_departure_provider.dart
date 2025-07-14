@@ -1,6 +1,6 @@
-import '../../../../../data/models/api_response.dart';
+import '../../../../../common/data/models/api_response.dart';
 
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../models/request_attendance_departure_details_dto.dart';
 import '../models/request_track_attendance_departure_params.dart';
 import '../models/track_attendance_departure_dto.dart';

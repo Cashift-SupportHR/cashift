@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/exceptions/empty_list_exception.dart';
+import 'package:shiftapp/common/data/exceptions/empty_list_exception.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 import '../../../../../presentationUser/common/stream_data_state.dart';

@@ -4,8 +4,8 @@ import 'dart:typed_data';
 import 'package:flutter/cupertino.dart';
 import 'package:location/location.dart';
 import 'package:shiftapp/config.dart';
-import 'package:shiftapp/data/models/shift/cancel_shift_params.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/data/models/shift/cancel_shift_params.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/bloc/applied_offers_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/appliedoffers/pages/qrcode_screen.dart';
  import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
@@ -13,7 +13,7 @@ import 'package:shiftapp/presentation/presentationUser/locationservice/locations
 import 'package:shiftapp/presentation/presentationUser/rate/pages/rate_page.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
- import '../../../../domain/entities/attendancerecoginatin/register_attendance_request_cashift.dart';
+import '../../../../common/domain/entities/attendancerecoginatin/register_attendance_request_cashift.dart';
 import '../cancelOpprtunity/cancel_opportunity_apologizing_page.dart';
 import '../../../../core/services/routes.dart';
 

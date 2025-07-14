@@ -1,7 +1,7 @@
 
 import '../../../../../../shared/components/index.dart';
-import '../../../../domain/entities/camera_search_result_args.dart';
-import '../../../../domain/entities/vehicle_camera.dart';
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 
 class VehicleInfoCameraSearchResults extends BaseStatelessWidget {
   final CameraSearchResultArgs args;

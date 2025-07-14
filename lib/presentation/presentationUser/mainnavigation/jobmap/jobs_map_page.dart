@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/presentationUser/joboffers/bloc/job_offers
 
 import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
 import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
-import 'package:shiftapp/domain/entities/job_offers/job_offer_dto.dart';
+import 'package:shiftapp/common/domain/entities/job_offers/job_offer_dto.dart';
 import 'package:shiftapp/main_index.dart';
 import '../../../shared/components/base_widget.dart';
 import 'jobs_map_screen.dart';

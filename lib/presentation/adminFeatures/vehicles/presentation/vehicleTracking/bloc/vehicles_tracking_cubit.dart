@@ -10,7 +10,7 @@ import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
 import '../../../../../presentationUser/attendance/facerecognation/index.dart';
 import '../../../../../shared/components/files/files_manager.dart';
 import '../../../data/models/vehicle_event_picture_prams.dart';

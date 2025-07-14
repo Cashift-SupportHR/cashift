@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:shiftapp/domain/entities/resume/index.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/resume/index.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/common/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
@@ -17,7 +17,7 @@ import 'package:shiftapp/presentation/shared/components/dropdown_filed.dart';
 import 'package:shiftapp/presentation/shared/components/material_text_field.dart';
 import 'package:shiftapp/presentation/shared/components/stepper.dart';
 import 'package:shiftapp/utils/app_utils.dart';
-import 'package:shiftapp/data/models/resuame/index.dart';
+import 'package:shiftapp/common/data/models/resuame/index.dart';
 
  import '../../../../utils/app_icons.dart';
 import '../../../shared/components/datepicker/hijri_calendar.dart';

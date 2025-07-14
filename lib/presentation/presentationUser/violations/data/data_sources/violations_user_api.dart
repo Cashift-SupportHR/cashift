@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/user_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/user_endpoint.dart';
 import '../models/approve_reject_violation_params.dart';
 import '../models/violations_user_data_dto.dart';
 

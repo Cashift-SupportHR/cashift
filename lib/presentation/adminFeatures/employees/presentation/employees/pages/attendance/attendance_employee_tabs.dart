@@ -5,7 +5,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 
-import '../../../../domain/entities/EmpChasifterData.dart';
+import '../../../../domain/entities/index.dart';
 import '../../widgets/employees_item.dart';
 import 'attendance_emplogee_page.dart';
 

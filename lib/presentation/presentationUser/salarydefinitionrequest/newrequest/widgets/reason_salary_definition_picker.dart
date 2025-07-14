@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/salary-definition-request/reason_salary_definition_request.dart';
+import 'package:shiftapp/common/domain/entities/salary-definition-request/reason_salary_definition_request.dart';
 
  import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../shared/components/base_stateless_widget.dart';

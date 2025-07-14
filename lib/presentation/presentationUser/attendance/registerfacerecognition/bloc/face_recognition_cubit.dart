@@ -8,11 +8,11 @@ import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/files/files_manager.dart';
 
-import '../../../../../data/datasources/local/constants.dart';
-import '../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
-import '../../../../../data/repositories/profile/profile_repository.dart';
-import '../../../../../domain/entities/account/registered_face.dart';
-import '../../../../../domain/entities/account/remote_file.dart';
+import '../../../../../common/data/datasources/local/constants.dart';
+import '../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../common/data/repositories/profile/profile_repository.dart';
+import '../../../../../common/domain/entities/account/registered_face.dart';
+import '../../../../../common/domain/entities/account/remote_file.dart';
 
 @Injectable()
 class FaceRecognitionCubit extends BaseCubit {

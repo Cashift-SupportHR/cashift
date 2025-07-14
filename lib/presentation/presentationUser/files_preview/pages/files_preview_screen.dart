@@ -7,7 +7,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 import 'package:shiftapp/presentation/shared/components/loading_widget.dart';
 
-import '../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../common/data/models/salary-definition-request/index.dart';
 import '../../../../utils/app_icons.dart';
 import '../../resources/colors.dart';
 import '../../../shared/components/base_stateless_widget.dart';

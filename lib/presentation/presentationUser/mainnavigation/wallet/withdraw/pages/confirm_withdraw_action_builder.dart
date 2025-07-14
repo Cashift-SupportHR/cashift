@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../data/models/wallet/balance_by_exchange_params.dart';
-import '../../../../../../data/models/wallet/withdraw_data.dart';
+import '../../../../../../common/data/models/wallet/balance_by_exchange_params.dart';
+import '../../../../../../common/data/models/wallet/withdraw_data.dart';
 import '../../../../../shared/components/app_cupertino_button.dart';
 import '../../../../../shared/components/base_widget_bloc.dart';
 import '../../../../../shared/components/helper_widgets.dart';

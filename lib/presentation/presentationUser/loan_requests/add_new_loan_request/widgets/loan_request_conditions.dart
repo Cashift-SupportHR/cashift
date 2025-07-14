@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../domain/entities/loans_request/loan_num_month_condition.dart';
+import '../../../../../common/domain/entities/loans_request/loan_num_month_condition.dart';
 import '../../../../../utils/app_icons.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/decorations/decorations.dart';

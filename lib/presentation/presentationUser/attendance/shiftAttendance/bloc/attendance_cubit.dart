@@ -1,9 +1,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/models/attendance/index.dart';
-import 'package:shiftapp/domain/entities/attendance/index.dart';
+import 'package:shiftapp/common/data/models/attendance/index.dart';
+import 'package:shiftapp/common/domain/entities/attendance/index.dart';
 
- import 'package:shiftapp/data/repositories/attendance/attendance_repository.dart';
+ import 'package:shiftapp/common/data/repositories/attendance/attendance_repository.dart';
 
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 @injectable

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/bail_requests/employee_services_status.dart';
+import 'package:shiftapp/common/domain/entities/bail_requests/employee_services_status.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 
  import '../../../shared/components/base_stateless_widget.dart';

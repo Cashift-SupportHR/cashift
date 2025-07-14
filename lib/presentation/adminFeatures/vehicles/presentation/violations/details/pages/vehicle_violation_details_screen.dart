@@ -4,7 +4,8 @@ import '../../../../../../../main_index.dart';
 import '../../../../../../../utils/app_icons.dart';
 import '../../../../../../presentationUser/resources/constants.dart';
 import '../../../../../../shared/components/index.dart';
-import '../../../../domain/entities/vehicle_violation.dart';
+import '../../../../data/models/index.dart';
+import '../../../../domain/entities/index.dart';
 
 class VehicleViolationDetailsScreen extends BaseStatelessWidget {
   final ContractViolation data;

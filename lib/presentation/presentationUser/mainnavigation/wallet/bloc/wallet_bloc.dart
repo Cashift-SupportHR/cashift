@@ -1,12 +1,12 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/repositories/bank/wallet_repository.dart';
-import 'package:shiftapp/domain/entities/wallet/withdraw_method.dart';
+import 'package:shiftapp/common/data/repositories/bank/wallet_repository.dart';
+import 'package:shiftapp/common/domain/entities/wallet/withdraw_method.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../data/datasources/remote/unauthorized_exception.dart';
-import '../../../../../data/exceptions/verification_face_exception.dart';
-import '../../../../../data/repositories/user/user_repository.dart';
+import '../../../../../common/data/datasources/remote/unauthorized_exception.dart';
+import '../../../../../common/data/exceptions/verification_face_exception.dart';
+import '../../../../../common/data/repositories/user/user_repository.dart';
 import '../../../../shared/check_face_recognation/page/check_face_recognatin_page.dart';
 import 'initialize_wallet_state.dart';
 

@@ -7,7 +7,7 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
 
-import '../../../../data/repositories/user/user_repository.dart';
+import '../../../../common/data/repositories/user/user_repository.dart';
 import '../../../../utils/app_utils.dart';
 import '../../../adminFeatures/di/injector.dart';
 import '../adminToggle/screen/admin_toggle_builder.dart';

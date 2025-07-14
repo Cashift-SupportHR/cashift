@@ -6,7 +6,8 @@ import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart
 import '../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../../shared/components/dialogs_manager.dart';
-import '../../../../data/models/add_covenant_focus_point_params.dart';
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 import 'custody_initialize_state.dart';
 import 'widgets/add_covenant_button.dart';
 import 'widgets/covenant_received_item.dart';

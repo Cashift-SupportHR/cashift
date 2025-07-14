@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:shiftapp/network/source/admin_endpoint.dart';
-import '../../../../../data/models/api_response.dart';
+import 'package:shiftapp/common/network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
 import '../../../employees/data/models/tab_cashifter_dto.dart';
 import '../../../projectsManagement/data/models/working_period_dto.dart';
 import '../models/index.dart';

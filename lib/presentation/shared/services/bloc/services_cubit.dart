@@ -1,10 +1,10 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/datasources/remote/unauthorized_exception.dart';
+import 'package:shiftapp/common/data/datasources/remote/unauthorized_exception.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import '../../../../data/repositories/profile/profile_repository.dart';
-import '../../../../data/repositories/service/service_repository.dart';
-import '../../../../data/repositories/user/user_repository.dart';
+
+import '../../../../common/data/repositories/service/service_repository.dart';
+import '../../../../common/data/repositories/user/user_repository.dart';
 
 @Injectable()
 class ServicesCubit extends BaseCubit {

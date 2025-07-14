@@ -1,10 +1,10 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/domain/entities/bail_requests/index.dart';
+import 'package:shiftapp/common/domain/entities/bail_requests/index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/data/models/bail_requests/index.dart';
+import 'package:shiftapp/common/data/models/bail_requests/index.dart';
 
-import '../../../../data/repositories/bail_requests/bail_requests_repository.dart';
+import '../../../../../common/data/repositories/bail_requests/bail_requests_repository.dart';
 
 @Injectable()
 class BailRequestsCubit extends BaseCubit {

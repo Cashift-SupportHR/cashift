@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../data/models/add-address/address.dart';
+import '../../../../../common/data/models/add-address/address.dart';
 import '../../../../shared/components/app_widgets.dart';
 import '../../../../shared/components/base_widget_bloc.dart';
 import '../../../common/common_state.dart';

@@ -3,7 +3,7 @@
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:get_it/get_it.dart';
 //
-// import 'package:shiftapp/domain/user.dart';
+// import 'package:shiftapp/common/domain/user.dart';
 // import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 // import 'package:shiftapp/presentation/presentationUser/profile/bloc/profile_bloc.dart';
 // import 'package:shiftapp/presentation/presentationUser/profile/pages/profile_screen.dart';

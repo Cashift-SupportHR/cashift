@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/data/models/add_covenant_vehicle_params.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/data/models/add_vehicle_params.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/data/models/vehicle_image_params.dart';
 import 'package:shiftapp/presentation/adminFeatures/vehicles/domain/entities/index.dart';
 
-import '../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
 import '../../domain/entities/vehicleTraking.dart';
 import '../models/vehicle_event_picture_prams.dart';
 import '../models/vehicle_traking_details_prams.dart';

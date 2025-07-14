@@ -1,8 +1,8 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 
-import '../../../data/repositories/work_hazards_repository.dart';
-import '../../../domain/entities/work_hazard.dart';
+import '../../../data/models/index.dart';
+import '../../../domain/entities/index.dart';
 
 @Injectable()
 class WorkHazardDetailsCubit extends BaseCubit {

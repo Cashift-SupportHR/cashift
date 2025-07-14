@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:injectable/injectable.dart';
 
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/user_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/user_endpoint.dart';
 import '../../../../shared/models/common_list_item_dto.dart';
 import '../models/index.dart';
 

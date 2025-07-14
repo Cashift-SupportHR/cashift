@@ -5,7 +5,8 @@ import 'package:shiftapp/presentation/shared/components/buttons/row_buttons.dart
 
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../data/models/add_focus_attendance_time_params.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 import 'focus_point_time_item.dart';
 
 ///  Created by harbey on 5/15/2023.

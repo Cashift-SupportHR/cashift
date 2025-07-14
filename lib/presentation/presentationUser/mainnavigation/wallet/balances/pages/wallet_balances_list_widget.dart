@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../domain/entities/wallet/wallet_balance_item.dart';
+import '../../../../../../common/domain/entities/wallet/wallet_balance_item.dart';
 import '../../../../resources/colors.dart';
 import '../../widgets/balance_item_widget.dart';
 

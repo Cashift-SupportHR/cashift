@@ -1,9 +1,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 
-import '../../../../../data/datasources/remote/unauthorized_exception.dart';
-import '../../../../../data/exceptions/verification_face_exception.dart';
-import '../../../../../data/repositories/user/user_repository.dart';
+import '../../../../../common/data/datasources/remote/unauthorized_exception.dart';
+import '../../../../../common/data/exceptions/verification_face_exception.dart';
+import '../../../../../common/data/repositories/user/user_repository.dart';
 import '../../../../presentationUser/common/common_state.dart';
 import '../../data/models/index.dart';
 import '../../domain/entities/index.dart';

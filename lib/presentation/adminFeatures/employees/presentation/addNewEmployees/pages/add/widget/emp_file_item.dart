@@ -10,8 +10,8 @@ import 'package:shiftapp/utils/app_icons.dart';
 import '../../../../../../../../utils/app_utils.dart';
 import '../../../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../../../shared/components/files/custom_p_d_f_view.dart';
-import '../../../../../data/models/requirement_attachment_prams.dart';
-import '../../../../../domain/entities/AttachmentsEmp.dart';
+import '../../../../../domain/entities/index.dart';
+import '../../../../../data/models/index.dart';
 
 class EmployeeFileItem extends BaseStatelessWidget {
   File? images;

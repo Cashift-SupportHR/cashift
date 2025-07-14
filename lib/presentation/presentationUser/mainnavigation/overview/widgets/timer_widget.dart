@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_countdown_timer/current_remaining_time.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
-import 'package:shiftapp/domain/entities/shift/applied_offer.dart';
+import 'package:shiftapp/common/domain/entities/shift/applied_offer.dart';
 
 typedef CountdownTimerWidgetBuilder = Widget Function(
     BuildContext context, CurrentRemainingTime time);

@@ -6,22 +6,22 @@ import 'package:injectable/injectable.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/datasources/local/constants.dart';
-import 'package:shiftapp/data/repositories/profile/profile_repository.dart';
-import 'package:shiftapp/domain/entities/account/remote_file.dart';
+import 'package:shiftapp/common/data/datasources/local/constants.dart';
+import 'package:shiftapp/common/data/repositories/profile/profile_repository.dart';
+import 'package:shiftapp/common/domain/entities/account/remote_file.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/domain/entities/attendance/index.dart';
+import 'package:shiftapp/common/domain/entities/attendance/index.dart';
 
-import '../../../../../data/datasources/local/init_floor_database.dart';
-import '../../../../../data/exceptions/empty_face_exception.dart';
-import '../../../../../data/models/shift/start_shift_params.dart';
-import '../../../../../data/repositories/attendance/attendance_repository.dart';
-import '../../../../../data/repositories/joboffers/job_offers_repository.dart';
-import '../../../../../domain/entities/attendancerecoginatin/attendance_model.dart';
-import '../../../../../domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';
-import '../../../../../domain/entities/attendancerecoginatin/register_attendance_request_cashift.dart';
-import '../../../../../domain/entities/attendancerecoginatin/register_attendance_request_shift.dart';
-import '../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../common/data/datasources/local/init_floor_database.dart';
+import '../../../../../common/data/exceptions/empty_face_exception.dart';
+import '../../../../../common/data/models/shift/start_shift_params.dart';
+import '../../../../../common/data/repositories/attendance/attendance_repository.dart';
+import '../../../../../common/data/repositories/joboffers/job_offers_repository.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/attendance_model.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/register_attendance_request_cashift.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/register_attendance_request_shift.dart';
+import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../registerfacerecognition/attendance_params.dart';
 
 @Injectable()

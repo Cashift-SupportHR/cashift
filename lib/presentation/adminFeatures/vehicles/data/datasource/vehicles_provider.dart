@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 
-import '../../../../../data/models/api_response.dart';
-import '../../../../../data/models/salary-definition-request/down_load_salary_definition.dart';
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/data/models/salary-definition-request/down_load_salary_definition.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
   import '../models/vehicle_event_picture_prams.dart';
 import '../models/vehicle_traking_details_prams.dart';
 import '../models/action_vehicle_receive_request_params.dart';

@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:injectable/injectable.dart';
-import 'package:shiftapp/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
 
 import '../datasource/job_uniform_provider.dart';
 import '../models/add_job_uniform_params.dart';

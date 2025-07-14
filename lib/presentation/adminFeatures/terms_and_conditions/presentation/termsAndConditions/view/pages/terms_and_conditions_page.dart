@@ -5,6 +5,7 @@ import 'package:shiftapp/presentation/shared/components/index.dart';
 
 import '../../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
+import '../../../../data/models/index.dart';
 import '../../../../domain/entities/TermandCondition.dart';
 import '../bloc/terms_and_conditions_cubit.dart';
 

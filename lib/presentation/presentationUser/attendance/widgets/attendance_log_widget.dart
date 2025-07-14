@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/attendance/Attendance_log.dart';
+import 'package:shiftapp/common/domain/entities/attendance/Attendance_log.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/pages/attendance_log_page.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/attendance_log_item_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';

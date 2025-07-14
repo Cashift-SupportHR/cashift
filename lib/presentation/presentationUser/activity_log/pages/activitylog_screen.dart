@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/data/models/activity_log/index.dart';
+import 'package:shiftapp/common/data/models/activity_log/index.dart';
 
 import 'package:shiftapp/presentation/presentationUser/activity_log/pages/activity_log_item.dart';
 

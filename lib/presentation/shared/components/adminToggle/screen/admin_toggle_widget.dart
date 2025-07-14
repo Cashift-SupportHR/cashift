@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
  import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
- import '../../../../../domain/entities/account/user.dart';
+ import '../../../../../common/domain/entities/account/user.dart';
 import '../../../../../main_index.dart';
 import '../../base_stateless_widget.dart';
 

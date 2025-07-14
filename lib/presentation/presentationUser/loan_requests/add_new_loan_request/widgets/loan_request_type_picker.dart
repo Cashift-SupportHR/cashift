@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../domain/entities/loans_request/loan_type.dart';
+import '../../../../../common/domain/entities/loans_request/loan_type.dart';
 import '../../../../shared/components/text_field/build_text_field_item.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/bottom_sheet/list_picker_widget.dart';

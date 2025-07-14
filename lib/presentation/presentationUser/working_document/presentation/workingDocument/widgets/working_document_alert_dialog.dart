@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/services/routes.dart';
-import '../../../../../../domain/entities/job_offers/check_working_document.dart';
+import '../../../../../../common/domain/entities/job_offers/check_working_document.dart';
 import '../../../../../shared/components/app_cupertino_button.dart';
 import '../../../../../shared/components/base_stateless_widget.dart';
 import '../../../../../shared/components/image_builder.dart';

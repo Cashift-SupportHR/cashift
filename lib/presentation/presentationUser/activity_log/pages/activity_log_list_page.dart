@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shiftapp/data/models/activity_log/index.dart';
+import 'package:shiftapp/common/data/models/activity_log/index.dart';
 
 import 'package:shiftapp/presentation/presentationUser/activity_log/pages/activitylog_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';

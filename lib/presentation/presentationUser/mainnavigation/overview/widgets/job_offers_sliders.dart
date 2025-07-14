@@ -6,7 +6,7 @@ import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dar
 import 'package:shiftapp/presentation/shared/components/base/user_info_widget.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
-import '../../../../../domain/entities/user_overview/job_offer_slider.dart';
+import '../../../../../common/domain/entities/user_overview/job_offer_slider.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../common/common_state.dart';

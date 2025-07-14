@@ -1,7 +1,7 @@
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../data/models/add_covenant_focus_point_params.dart';
-import '../../../../domain/entities/covenant.dart';
+import '../../../../domain/entities/index.dart';
+import '../../../../data/models/index.dart';
 
 class CustodyInitializeState extends CommonStateFBuilder {
   final List<Covenant> custodyTypes;

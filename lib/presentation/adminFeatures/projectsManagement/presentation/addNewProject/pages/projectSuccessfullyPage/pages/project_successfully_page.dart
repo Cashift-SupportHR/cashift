@@ -5,7 +5,8 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
 import '../../../../../../../presentationUser/common/common_state.dart';
 import '../../../../../../../presentationUser/resources/colors.dart';
-import '../../../../../domain/entities/project_management.dart';
+import '../../../../../data/models/index.dart';
+import '../../../../../domain/entities/index.dart';
 import '../../../bloc/project_successfully_bloc.dart';
 import 'project_successfully_screen.dart';
 

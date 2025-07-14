@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../domain/entities/required_tasks/in_app_required_task.dart';
+import '../../../../../common/domain/entities/required_tasks/in_app_required_task.dart';
 import '../../../../presentationUser/common/common_state.dart';
 import '../../../../presentationUser/mainnavigation/overview/widgets/app_requirement_notification_widget.dart';
 

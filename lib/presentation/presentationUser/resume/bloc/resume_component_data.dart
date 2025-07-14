@@ -1,9 +1,6 @@
-import 'package:shiftapp/domain/entities/resume/level_item.dart';
-import 'package:shiftapp/domain/entities/resume/city_item.dart';
-import 'package:shiftapp/domain/entities/resume/resume.dart';
 
-import '../../../../domain/entities/resume/district_item.dart';
-import '../../../../domain/entities/resume/favorite_time.dart';
+
+import '../../../../common/domain/entities/resume/index.dart';
 import '../../common/common_state.dart';
 class ResumeComponentData{
   final List<LevelItem> levels ;

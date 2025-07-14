@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import '../../../common/data/repositories/local/local_repository.dart';
 import '../../../core/services/routes.dart';
-import '../../../data/repositories/local/local_repository.dart';
 import '../../adminFeatures/di/injector.dart';
 
 class SplashScreen extends StatefulWidget {

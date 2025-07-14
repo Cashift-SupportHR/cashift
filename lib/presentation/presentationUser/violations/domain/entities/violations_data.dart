@@ -3,6 +3,7 @@ import 'package:shiftapp/presentation/presentationUser/violations/data/models/vi
 
 import '../../data/models/violations_user_data_dto.dart';
 
+
 @JsonSerializable(ignoreUnannotated: true)
 class ViolationsData {
   String? description;

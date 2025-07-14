@@ -1,10 +1,10 @@
 import 'package:geolocator_platform_interface/src/models/position.dart';
-import 'package:shiftapp/domain/entities/attendance/index.dart';
+import 'package:shiftapp/common/domain/entities/attendance/index.dart';
 
 import 'package:location/location.dart';
-import 'package:shiftapp/data/models/shift/start_shift_params.dart';
-import 'package:shiftapp/domain/entities/attendancerecoginatin/register_attendance_request_cashift.dart';
-import 'package:shiftapp/domain/entities/attendancerecoginatin/register_attendance_request_shift.dart';
+import 'package:shiftapp/common/data/models/shift/start_shift_params.dart';
+import 'package:shiftapp/common/domain/entities/attendancerecoginatin/register_attendance_request_cashift.dart';
+import 'package:shiftapp/common/domain/entities/attendancerecoginatin/register_attendance_request_shift.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
@@ -12,11 +12,11 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 import 'package:shiftapp/presentation/shared/components/stepper/easy_step.dart';
 
-import '../../../../../data/models/attendance/attendance_config_dto.dart';
-import '../../../../../domain/entities/attendancerecoginatin/attendance_model.dart';
-import '../../../../../domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';
-import '../../../../../domain/entities/shared/date_formatter.dart';
-import '../../../../../domain/entities/shift/applied_offer.dart';
+import '../../../../../common/data/models/attendance/attendance_config_dto.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/attendance_model.dart';
+import '../../../../../common/domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';
+import '../../../../../common/domain/entities/shared/date_formatter.dart';
+import '../../../../../common/domain/entities/shift/applied_offer.dart';
 import '../../../../shared/components/error_handler_widget.dart';
 import '../../../../shared/components/map/current_location_realtime_map.dart';
 import '../../../locationservice/locationservice.dart';

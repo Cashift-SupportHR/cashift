@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/decorations/decorations.dart';
 import 'package:shiftapp/presentation/shared/components/index.dart';
-import '../../../../../domain/entities/shared/date_formatter.dart';
+import '../../../../../common/domain/entities/shared/date_formatter.dart';
 import '../../data/models/complet_opportunity_dto.dart';
 import '/presentation/adminFeatures/available_opportunities/presentation/widgets/work_dates.dart';
 import '/presentation/presentationUser/resources/colors.dart';

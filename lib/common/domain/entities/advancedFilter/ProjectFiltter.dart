@@ -1,0 +1,1 @@
+import '../../../data/models/advancedFilter/index.dart';class ProjectFiltter {  ProjectFiltter({    this.id,    this.name,  });  int? id;  String? name;  factory ProjectFiltter.fromDto(ProjectFiltterDto dto) {    return ProjectFiltter(      name: dto.name,      id: dto.id,    );  }}

@@ -5,10 +5,10 @@ import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
-import '../../../../../data/datasources/remote/unauthorized_exception.dart';
-  import '../../../../../data/repositories/profile/profile_repository.dart';
-import '../../../../../data/repositories/resume/resume_repository.dart';
-import '../../../../../data/repositories/user/user_repository.dart';
+import '../../../../../common/data/datasources/remote/unauthorized_exception.dart';
+  import '../../../../../common/data/repositories/profile/profile_repository.dart';
+import '../../../../../common/data/repositories/resume/resume_repository.dart';
+import '../../../../../common/data/repositories/user/user_repository.dart';
 
 @Injectable()
 class ProfileCubit extends BaseCubit {

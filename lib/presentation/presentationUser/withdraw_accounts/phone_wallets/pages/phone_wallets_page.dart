@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shiftapp/domain/entities/bankaccount/electronic_wallet.dart';
+import 'package:shiftapp/common/domain/entities/bankaccount/electronic_wallet.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';

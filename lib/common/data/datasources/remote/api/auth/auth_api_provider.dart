@@ -1,0 +1,38 @@
+import 'package:injectable/injectable.dart';
+import 'package:shiftapp/common/data/models/api_response.dart';
+import 'package:shiftapp/common/data/models/auth/index.dart';
+
+import '../../../../../network/source/user_endpoint.dart';
+import 'package:shiftapp/common/domain/entities/account/user.dart';
+
+@Injectable()
+class AuthAPI {
+  final UserEndpoint api;
+
+  AuthAPI({required this.api});
+
+  Future<ApiResponse<User>> login(LoginParams loginParams) {
+    return api.login(loginParams);
+  }
+
+  Future<ApiResponse<User>> confirmOtp(ConfirmOtpParams loginParams) {
+    return api.confirmOtp(loginParams);
+  }
+
+  Future<ApiResponse<String>> confirmRestPasswordOtp(
+      ConfirmOtpParams loginParams) {
+    return api.confirmRestPasswordOtp(loginParams);
+  }
+
+  Future<ApiResponse<String>> register(RegisterParams loginParams) {
+    return api.register(loginParams);
+  }
+
+  Future<ApiResponse<String>> sendRestPasswordCode(String phoneNumber) {
+    return api.sendRestPasswordCode(phoneNumber);
+  }
+
+  Future<ApiResponse<bool>> restPasswordByCode(RestPasswordParams phoneNumber) {
+    return api.restPasswordByCode(phoneNumber);
+  }
+}

@@ -6,3 +6,7 @@ export 'PaymentPeriodTypes.dart';
 export 'project_employee.dart';
 export 'shift_employee.dart';
 export 'tab_cashifter.dart';
+export 'AttachmentsEmp.dart';
+export 'Emp_attandance.dart';
+export 'EmployeeChasfiterDetails.dart';
+export 'TransactionsList.dart';

@@ -1,5 +1,6 @@
 
 import '../../../../../../shared/components/index.dart';
+import '../../../../domain/entities/index.dart';
 import '../../../../data/models/index.dart';
 
 class TabsSwitchCameraSearchResults extends BaseStatelessWidget {

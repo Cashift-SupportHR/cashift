@@ -1,5 +1,6 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../../data/models/index.dart';
 import '../../data/models/vehicle_performance_dto.dart';
 
 class VehiclePerformance {

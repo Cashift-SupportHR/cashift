@@ -5,7 +5,7 @@ import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
-import '../../../../data/models/salary-definition-request/index.dart';
+import '../../../../common/data/models/salary-definition-request/index.dart';
 import '../../common/common_state.dart';
 import '../../../shared/components/files/files_manager.dart';
 

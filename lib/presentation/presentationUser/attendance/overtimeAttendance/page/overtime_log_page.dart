@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/attendance/index.dart';
+import 'package:shiftapp/common/domain/entities/attendance/index.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/overtimeAttendance/bloc/overtime_attendance_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/shiftAttendance/pages/attendance_log_page.dart';
 import 'package:shiftapp/presentation/presentationUser/attendance/widgets/attendance_log_widget.dart';

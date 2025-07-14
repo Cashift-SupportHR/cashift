@@ -1,9 +1,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/repositories/workerWorkPlaces/worker_work_places_repository.dart';
-import 'package:shiftapp/domain/entities/workerWorkPlaces/index.dart';
+import 'package:shiftapp/common/data/repositories/workerWorkPlaces/worker_work_places_repository.dart';
+import 'package:shiftapp/common/domain/entities/workerWorkPlaces/index.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/data/models/workerWorkPlaces/index.dart';
+import 'package:shiftapp/common/data/models/workerWorkPlaces/index.dart';
 
 
 @Injectable()

@@ -5,10 +5,8 @@ import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../domain/entities/attendancerecoginatin/attendance_model.dart';
-import '../../../../domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';
+import '../../../../common/domain/entities/attendancerecoginatin/register_attendance_offline_request_shift.dart';
 import '../../../../main_index.dart';
-import '../../../presentationUser/attendance/recordAttendance/pages/cashift_attendance_page.dart';
 import '../base_stateless_widget.dart';
 import '../decorations/decorations.dart';
 

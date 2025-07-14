@@ -5,6 +5,7 @@ import 'package:shiftapp/presentation/shared/components/index.dart';
 import '../../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
 import '../../../../../../presentationUser/salarydefinitionrequest/requests/widgets/title_and_add_new_request.dart';
 import '../../../../../../shared/components/text_field/text_field_search.dart';
+import '../../../../data/models/index.dart';
 import '../../../../domain/entities/TermandCondition.dart';
 import '../../add/pages/add_task_and_responsibility_builder.dart';
 import '../bloc/tasks_and_responsibilities_cubit.dart';

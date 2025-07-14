@@ -6,7 +6,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_cluster_manager_2/google_maps_cluster_manager_2.dart';
  import 'package:google_maps_flutter/google_maps_flutter.dart' hide Cluster, ClusterManager;
 import 'package:rxdart/rxdart.dart';
- import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+ import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/jobs_list/jobs_list_screen.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/job_offer_item_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';

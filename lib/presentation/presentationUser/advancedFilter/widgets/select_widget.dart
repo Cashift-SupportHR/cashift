@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../data/repositories/advancedFilter/select_model.dart';
+import '../../../../../common/data/repositories/advancedFilter/select_model.dart';
 import '../../../shared/components/dropdown_filed.dart';
 import '../../../shared/components/image_builder.dart';
 import '../../resources/colors.dart';

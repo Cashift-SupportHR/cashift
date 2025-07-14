@@ -1,6 +1,6 @@
 import 'package:shiftapp/core/resources/data_state.dart';
 
-import '../../../../data/models/account/feature_app_dto.dart';
+import '../../../../common/data/models/account/index.dart';
 import '../../../presentationUser/common/common_state.dart';
 
 class FaceDetectionInitializeState extends CommonStateFBuilder{

@@ -1,8 +1,8 @@
 
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
-import 'package:shiftapp/domain/entities/shift/index_shift.dart';
+import 'package:shiftapp/common/domain/entities/shift/index_shift.dart';
 
- import '../../../../../domain/entities/user_overview/job_offer_slider.dart';
+ import '../../../../../common/domain/entities/user_overview/job_offer_slider.dart';
 
 
 abstract class OverviewState extends Initialized {

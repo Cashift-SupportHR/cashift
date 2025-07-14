@@ -1,8 +1,8 @@
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
-import 'package:shiftapp/data/repositories/projects/projects_repository.dart';
-import 'package:shiftapp/domain/entities/projects/project.dart';
+import 'package:shiftapp/common/data/repositories/projects/projects_repository.dart';
+import 'package:shiftapp/common/domain/entities/projects/project.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 @Injectable()
 class FavoriteProjectsCubit extends BaseCubit {

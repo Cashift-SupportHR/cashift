@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 
-import '../../../../../../data/repositories/resume/resume_repository.dart';
+import '../../../../../../common/data/repositories/resume/resume_repository.dart';
 import '../../../../common/common_state.dart';
 
 

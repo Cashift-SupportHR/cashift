@@ -1,6 +1,6 @@
 
-import '../../../../../data/models/api_response.dart';
-import '../../../../../network/source/admin_endpoint.dart';
+import '../../../../../common/data/models/api_response.dart';
+import '../../../../../common/network/source/admin_endpoint.dart';
 import '../models/emp_attendance_rports_dto.dart';
 import '../models/emp_attendance_rports_prams.dart';
 import 'package:injectable/injectable.dart';

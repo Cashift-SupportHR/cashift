@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiftapp/domain/entities/shared/date_formatter.dart';
+import 'package:shiftapp/common/domain/entities/shared/date_formatter.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 import 'package:shiftapp/presentation/presentationUser/salarydefinitionrequest/requests/widgets/warning_widget.dart';
@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/shared/components/texts/list_row_texts.dar
 import 'package:shiftapp/presentation/shared/components/texts/list_row_texts_icons.dart';
 import 'package:shiftapp/utils/app_icons.dart';
 
-import '../../../../../domain/entities/bail_requests/employee_services_status.dart';
+import '../../../../../common/domain/entities/bail_requests/employee_services_status.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/decorations/decorations.dart';
 import '../../../../shared/components/divider/custom_divider.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 
-import '../../../../domain/entities/resume/job_item.dart';
+import '../../../../common/domain/entities/resume/index.dart';
 import '../../resources/constants.dart';
 import '../pages/favoritejobs/widgets/favorite_job_item.dart';
 
