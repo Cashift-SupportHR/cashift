@@ -6,6 +6,20 @@ part of 'maintenance_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+MaintenanceDataDto _$MaintenanceDataDtoFromJson(Map<String, dynamic> json) =>
+    MaintenanceDataDto(
+      faultsAndMaintenance: (json['faultsAndMaintenance'] as List<dynamic>?)
+          ?.map((e) => MaintenanceDto.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      count: (json['count'] as num?)?.toInt(),
+    );
+
+Map<String, dynamic> _$MaintenanceDataDtoToJson(MaintenanceDataDto instance) =>
+    <String, dynamic>{
+      'faultsAndMaintenance': instance.faultsAndMaintenance,
+      'count': instance.count,
+    };
+
 MaintenanceDto _$MaintenanceDtoFromJson(Map<String, dynamic> json) =>
     MaintenanceDto(
       fautMaintenanceId: (json['fautMaintenanceId'] as num?)?.toInt(),

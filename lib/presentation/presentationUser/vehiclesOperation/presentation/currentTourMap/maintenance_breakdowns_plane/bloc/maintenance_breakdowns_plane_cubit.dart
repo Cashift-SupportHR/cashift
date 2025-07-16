@@ -16,7 +16,7 @@ class MaintenanceBreakdownsPlaneCubit extends BaseCubit {
     executeBuilder(
       () => _repository.fetchRoundsMaintenance(roundTripId),
       onSuccess: (value) {
-        emit(Initialized<List<Maintenance>>(data: value));
+        emit(Initialized< MaintenanceData>(data: value));
       },
     );
   }

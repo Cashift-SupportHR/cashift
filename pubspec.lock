@@ -1372,10 +1372,12 @@ packages:
   livelyness_detection:
     dependency: "direct main"
     description:
-      path: "modules/livelyness_detection"
-      relative: true
-    source: path
-    version: "0.0.1+5"
+      path: "."
+      ref: HEAD
+      resolved-ref: "4fbca289ca198cb532bdeecd7fe24839b1228d32"
+      url: "https://github.com/Harby-SoftwareEngineer/liveness-detection.git"
+    source: git
+    version: "0.0.1+1"
   local_auth:
     dependency: "direct main"
     description:

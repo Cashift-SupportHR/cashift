@@ -4344,4 +4344,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get violations_of_factory => 'مخالفات المصانع';
+
+  @override
+  String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';
 }

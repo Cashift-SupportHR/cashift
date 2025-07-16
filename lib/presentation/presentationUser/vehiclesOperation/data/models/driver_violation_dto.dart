@@ -1,30 +1,74 @@
-import 'package:json_annotation/json_annotation.dart'; 
+import 'package:json_annotation/json_annotation.dart';
 
-part 'driver_violation_dto.g.dart'; 
+part 'driver_violation_dto.g.dart';
 
-@JsonSerializable(ignoreUnannotated: false)
+@JsonSerializable()
 class DriverViolationDto {
-  @JsonKey(name: 'eventType')
-  String? eventType;
-  @JsonKey(name: 'latitude')
-  String? latitude;
-  @JsonKey(name: 'longitude')
-  String? longitude;
-  @JsonKey(name: 'speed')
-  int? speed;
-  @JsonKey(name: 'time')
-  String? time;
-  @JsonKey(name: 'eventIndexCode')
-  String? eventIndexCode;
-  @JsonKey(name: 'mobilevehicleIndexCode')
-  int? mobilevehicleIndexCode;
-  @JsonKey(name: 'isAllowPicture')
-  bool? isAllowPicture;
+  @JsonKey(name: "vehicleEvents")
+  final List<VehicleEvents>? vehicleEvents;
+  @JsonKey(name: "count")
+  final int? count;
 
-  DriverViolationDto({this.eventType, this.latitude, this.longitude, this.speed, this.time, this.eventIndexCode, this.mobilevehicleIndexCode, this.isAllowPicture});
+  DriverViolationDto ({
+    this.vehicleEvents,
+    this.count,
+  });
 
-   factory DriverViolationDto.fromJson(Map<String, dynamic> json) => _$DriverViolationDtoFromJson(json);
+  factory DriverViolationDto.fromJson(Map<String, dynamic> json) {
+    return _$DriverViolationDtoFromJson(json);
+  }
 
-   Map<String, dynamic> toJson() => _$DriverViolationDtoToJson(this);
+  Map<String, dynamic> toJson() {
+    return _$DriverViolationDtoToJson(this);
+  }
 }
+
+@JsonSerializable()
+class VehicleEvents {
+  @JsonKey(name: "eventIndexCode")
+  final String? eventIndexCode;
+  @JsonKey(name: "eventType")
+  final String? eventType;
+  @JsonKey(name: "mobilevehicleIndexCode")
+  final int? mobilevehicleIndexCode;
+  @JsonKey(name: "latitude")
+  final String? latitude;
+  @JsonKey(name: "longitude")
+  final String? longitude;
+  @JsonKey(name: "speed")
+  final int? speed;
+  @JsonKey(name: "time")
+  final String? time;
+  @JsonKey(name: "isAllowPicture")
+  final bool? isAllowPicture;
+  @JsonKey(name: "companyId")
+  final int? companyId;
+  @JsonKey(name: "companyName")
+  final String? companyName;
+  @JsonKey(name: "address")
+  final String? address;
+
+  VehicleEvents ({
+    this.eventIndexCode,
+    this.eventType,
+    this.mobilevehicleIndexCode,
+    this.latitude,
+    this.longitude,
+    this.speed,
+    this.time,
+    this.isAllowPicture,
+    this.companyId,
+    this.companyName,
+    this.address,
+  });
+
+  factory VehicleEvents.fromJson(Map<String, dynamic> json) {
+    return _$VehicleEventsFromJson(json);
+  }
+
+  Map<String, dynamic> toJson() {
+    return _$VehicleEventsToJson(this);
+  }
+}
+
 

@@ -10,8 +10,10 @@ class AddRoundTripParams {
   int? vehiclesZoneId;
   @JsonKey(name: 'roundTyepId')
   int? roundTypeId;
+  @JsonKey(name: 'vehicleHandoverId')
+  int? vehicleHandoverId;
 
-  AddRoundTripParams({this.id, this.vehiclesZoneId, this.roundTypeId});
+  AddRoundTripParams({this.id, this.vehiclesZoneId, this.roundTypeId, this.vehicleHandoverId});
 
    factory AddRoundTripParams.fromJson(Map<String, dynamic> json) => _$AddRoundTripParamsFromJson(json);
 

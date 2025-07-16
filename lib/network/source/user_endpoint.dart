@@ -45,6 +45,7 @@ import '../../presentation/adminFeatures/employees/data/models/emp_attandance_pr
 import '../../presentation/adminFeatures/employees/data/models/emp_attendance_dto.dart';
 import '../../presentation/adminFeatures/maintenanceAndBreakdowns/data/models/maintenance_dto.dart';
 import '../../presentation/adminFeatures/vehicles/data/models/vehicle_details_dto.dart';
+import '../../presentation/adminFeatures/vehicles/data/models/vehicle_violation_data_dto.dart';
 import '../../presentation/adminFeatures/vehicles/data/models/vehicle_violation_dto.dart';
 import '../../presentation/adminFeatures/vehicles/domain/entities/vehicle_violation.dart';
 import '../../presentation/presentationUser/AttendanceAndDepartureNotifications/data/models/index.dart';
@@ -815,12 +816,12 @@ abstract class UserEndpoint {
   );
 
   @GET('/v1/ContractViolation/GetAllContractViolationByRoundTrip')
-  Future<ApiResponse<List<ContractViolationDto>>> fetchRoundViolation (
+  Future<ApiResponse<ContractViolationDataDto>> fetchRoundViolation(
     @Query('roundTripId') int roundTripId,
   );
 
   @GET('/v1/FaultsMaintenance/GetAllFaultsMaintenanceByRoundTrip')
-  Future<ApiResponse<List<MaintenanceDto>>> fetchRoundsMaintenance(
+  Future<ApiResponse<MaintenanceDataDto>> fetchRoundsMaintenance(
     @Query('roundTripId') int roundTripId,
   );
 
@@ -895,7 +896,7 @@ abstract class UserEndpoint {
   );
 
   @GET('/v1/VehicleEventsTypes/GetAllVehicleEvents')
-  Future<ApiResponse<List<DriverViolationDto>>> fetchDriverViolations(
+  Future<ApiResponse<DriverViolationDto>> fetchDriverViolations(
     @Query('vehicleHandoverId') int id,
   );
 
@@ -907,10 +908,10 @@ abstract class UserEndpoint {
   ////  transactions
   @POST('/v1/CashifterTasks/GetAllCashifterTasksByStatus')
   Future<ApiResponse<List<TransactionsDto>>> fetchTransactions(
-      @Part(name: 'Status') String? status,
-      @Part(name: 'EndDateTime') String? endDateTime,
-      @Part(name: 'StartDateTime') String? startDateTime,
-      @Part(name: 'SearchString') String? searchString,
+    @Part(name: 'Status') String? status,
+    @Part(name: 'EndDateTime') String? endDateTime,
+    @Part(name: 'StartDateTime') String? startDateTime,
+    @Part(name: 'SearchString') String? searchString,
   );
 
   @POST('/v1/CashifterTasks/AddNewCashifterTask')

@@ -8752,6 +8752,12 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'مخالفات المصانع'**
   String get violations_of_factory;
+
+  /// No description provided for @face_image_required_proceed.
+  ///
+  /// In ar, this message translates to:
+  /// **'يجب اضافة بصمة الوجه للمتابعة'**
+  String get face_image_required_proceed;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

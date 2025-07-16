@@ -4344,4 +4344,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get violations_of_factory => 'Violations of factory';
+
+  @override
+  String get face_image_required_proceed => 'Face image is required to proceed';
 }

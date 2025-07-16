@@ -771,6 +771,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expire_date":
             MessageLookupByLibrary.simpleMessage("تاريخ انتهاء الصلاحيه"),
         "expired": MessageLookupByLibrary.simpleMessage("نفذت"),
+        "face_image_required_proceed": MessageLookupByLibrary.simpleMessage(
+            "يجب اضافة بصمة الوجه للمتابعة"),
         "face_not_matched":
             MessageLookupByLibrary.simpleMessage("بصمة الوجه غير متطابقة"),
         "face_print": MessageLookupByLibrary.simpleMessage("بصمة الوجه"),

@@ -94,7 +94,7 @@ class FaceMatchingUtils {
     }
     String _capturedImagePath = "";
 
-    final _veificationSteps = config != null ? stepsList(context, config) :
+    final _veificationSteps = config != null && stepsList(context, config).isNotEmpty? stepsList(context, config) :
     [
       LivelynessStepItem(
         step: LivelynessStep.smile,

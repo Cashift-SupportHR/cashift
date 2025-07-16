@@ -28,6 +28,7 @@ import 'core/services/routes.dart';
 import 'data/datasources/remote/logger/app_loogers.dart';
 import 'data/models/notification_offers/notification_offer_params.dart';
 import 'data/repositories/profile/profile_repository.dart';
+import 'data/repositories/resume/resume_repository.dart';
 import 'data/repositories/user/user_repository.dart';
 import 'package:camera/camera.dart';
 
@@ -44,8 +45,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
 
-  await FirebaseBootstrapper.initFirebase(languageCode: '');
-  await FirebaseNotifications.firebaseInitNotifications();
+   await FirebaseBootstrapper.initFirebase(languageCode: '');
+   await FirebaseNotifications.firebaseInitNotifications();
   ChuckerFlutter.showOnRelease = true;
   AppLoggers.setupLogger();
   await configureDependencies();
@@ -75,6 +76,7 @@ void main() async {
   ));
   getIt.registerSingleton(CheckFaceRecogenationCubit(
     getIt.get<ProfileRepository>(), getIt.get<UserRepository>(),
+    getIt.get<ResumeRepository>(),
   ));
 
   HttpOverrides.global = MyHttpOverrides();

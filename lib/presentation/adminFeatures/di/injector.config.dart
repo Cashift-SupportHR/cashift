@@ -904,8 +904,13 @@ Future<_i174.GetIt> $initGetIt(
       _i841.ChangeOperatingPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i414.TourHistoryCubit>(
       () => _i414.TourHistoryCubit(gh<_i61.ReceiveVehiclesRepository>()));
+  gh.factory<_i285.FactoryViolationsPlaneCubit>(() =>
+      _i285.FactoryViolationsPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i206.GasStationsPlaneCubit>(
       () => _i206.GasStationsPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
+  gh.factory<_i190.MaintenanceBreakdownsPlaneCubit>(() =>
+      _i190.MaintenanceBreakdownsPlaneCubit(
+          gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i418.TourHistoryCubit>(
       () => _i418.TourHistoryCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i649.CurrentTourMapCubit>(
@@ -918,11 +923,6 @@ Future<_i174.GetIt> $initGetIt(
       () => _i158.ReceiveVehiclesCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i712.StartTourCubit>(
       () => _i712.StartTourCubit(gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i285.FactoryViolationsPlaneCubit>(() =>
-      _i285.FactoryViolationsPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i190.MaintenanceBreakdownsPlaneCubit>(() =>
-      _i190.MaintenanceBreakdownsPlaneCubit(
-          gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i1020.PunishmentsCubit>(
       () => _i1020.PunishmentsCubit(gh<_i690.PunishmentsRepository>()));
   gh.factory<_i688.EvaluationCubit>(

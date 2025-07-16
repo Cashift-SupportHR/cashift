@@ -16,7 +16,7 @@ class FactoryViolationsPlaneCubit extends BaseCubit {
     executeBuilder(
       () => _repository.fetchRoundViolation(roundTripId),
       onSuccess: (value) {
-        emit(Initialized<List<ContractViolation>>(data: value));
+        emit(Initialized<ContractViolationData>(data: value));
       },
     );
   }

@@ -646,6 +646,11 @@ class FailureStateListener extends CommonStateFListener {
   FailureStateListener(this.error);
 }
 
+class EmptyFaceImageListener extends CommonStateFListener {
+
+  EmptyFaceImageListener();
+}
+
 class BiometricNotEnabledState extends CommonStateFListener {}
 
 class SuccessStateListener<T> extends CommonStateFListener {

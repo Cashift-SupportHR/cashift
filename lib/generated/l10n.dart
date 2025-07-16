@@ -14012,6 +14012,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Face image is required to proceed`
+  String get face_image_required_proceed {
+    return Intl.message(
+      'Face image is required to proceed',
+      name: 'face_image_required_proceed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

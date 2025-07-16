@@ -1,6 +1,28 @@
 import 'package:json_annotation/json_annotation.dart'; 
 
-part 'maintenance_dto.g.dart'; 
+part 'maintenance_dto.g.dart';
+
+
+@JsonSerializable()
+class MaintenanceDataDto {
+  @JsonKey(name: "faultsAndMaintenance")
+  final List<MaintenanceDto>? faultsAndMaintenance;
+  @JsonKey(name: "count")
+  final int? count;
+
+  MaintenanceDataDto ({
+    this.faultsAndMaintenance,
+    this.count,
+  });
+
+  factory MaintenanceDataDto.fromJson(Map<String, dynamic> json) {
+    return _$MaintenanceDataDtoFromJson(json);
+  }
+
+  Map<String, dynamic> toJson() {
+    return _$MaintenanceDataDtoToJson(this);
+  }
+}
 
 @JsonSerializable(ignoreUnannotated: false)
 class MaintenanceDto {

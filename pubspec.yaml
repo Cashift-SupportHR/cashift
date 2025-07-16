@@ -126,7 +126,7 @@ dependencies:
 
 #  m7_livelyness_detection: ^0.0.6+4
   livelyness_detection:
-    path: ./modules/livelyness_detection
+    git: https://github.com/Harby-SoftwareEngineer/liveness-detection.git
   #  flutter_exif_rotation: ^0.5.1
   collection: ^1.19.1
   flutter_face_api: ^7.1.282

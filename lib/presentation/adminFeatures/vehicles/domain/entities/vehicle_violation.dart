@@ -1,6 +1,18 @@
 
+import '../../data/models/vehicle_violation_data_dto.dart';
 import '../../data/models/vehicle_violation_dto.dart';
+class ContractViolationData{
+  List<ContractViolation>? contractViolations;
+  int? count;
+  ContractViolationData({this.contractViolations, this.count});
+  factory ContractViolationData.fromDto(ContractViolationDataDto dto) {
+    return ContractViolationData(
+      contractViolations: dto.contractViolations?.map((e) => ContractViolation.fromDto(e)).toList(),
+      count: dto.count,
+    );
+  }
 
+}
 class ContractViolation {
   String? project;
   String? company;

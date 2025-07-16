@@ -172,23 +172,32 @@ class ReceiveVehiclesPage
     await Future.delayed(
       Duration(milliseconds: 100),
       () async {
-        if (!isCheckFace) {
-          isCheckFace = await checkFaceRecognition(context);
-        }
-        print("isCheckFace $isCheckFace");
-        if (isCheckFace == true) {
-          bloc.fetchReceiveVehiclePagination(
-              params: ReceiveVehiclePrams(
-                isComplete: tabIndex == 1 ? true : false,
-                companyId: 0,
-                shiftId: 0,
-                projectId: 0,
-                pageSize: 20,
-              ),
-              isRefresh: true);
-        } else {
-          bloc.emitVerificationFaceException();
-        }
+        bloc.fetchReceiveVehiclePagination(
+            params: ReceiveVehiclePrams(
+              isComplete: tabIndex == 1 ? true : false,
+              companyId: 0,
+              shiftId: 0,
+              projectId: 0,
+              pageSize: 20,
+            ),
+            isRefresh: true);
+        // if (!isCheckFace) {
+        //   isCheckFace = await checkFaceRecognition(context);
+        // }
+        // print("isCheckFace $isCheckFace");
+        // if (isCheckFace == true) {
+        //   bloc.fetchReceiveVehiclePagination(
+        //       params: ReceiveVehiclePrams(
+        //         isComplete: tabIndex == 1 ? true : false,
+        //         companyId: 0,
+        //         shiftId: 0,
+        //         projectId: 0,
+        //         pageSize: 20,
+        //       ),
+        //       isRefresh: true);
+        // } else {
+        //   bloc.emitVerificationFaceException();
+        // }
       },
     );
   }

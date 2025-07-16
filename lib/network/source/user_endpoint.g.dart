@@ -6468,14 +6468,14 @@ class _UserEndpoint implements UserEndpoint {
   }
 
   @override
-  Future<ApiResponse<List<ContractViolationDto>>> fetchRoundViolation(
+  Future<ApiResponse<ContractViolationDataDto>> fetchRoundViolation(
       int roundTripId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'roundTripId': roundTripId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
-        _setStreamType<ApiResponse<List<ContractViolationDto>>>(Options(
+        _setStreamType<ApiResponse<ContractViolationDataDto>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -6492,16 +6492,12 @@ class _UserEndpoint implements UserEndpoint {
               baseUrl,
             )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late ApiResponse<List<ContractViolationDto>> _value;
+    late ApiResponse<ContractViolationDataDto> _value;
     try {
-      _value = ApiResponse<List<ContractViolationDto>>.fromJson(
+      _value = ApiResponse<ContractViolationDataDto>.fromJson(
         _result.data!,
-        (json) => json is List<dynamic>
-            ? json
-                .map<ContractViolationDto>((i) =>
-                    ContractViolationDto.fromJson(i as Map<String, dynamic>))
-                .toList()
-            : List.empty(),
+        (json) =>
+            ContractViolationDataDto.fromJson(json as Map<String, dynamic>),
       );
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
@@ -6511,13 +6507,13 @@ class _UserEndpoint implements UserEndpoint {
   }
 
   @override
-  Future<ApiResponse<List<MaintenanceDto>>> fetchRoundsMaintenance(
+  Future<ApiResponse<MaintenanceDataDto>> fetchRoundsMaintenance(
       int roundTripId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'roundTripId': roundTripId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<MaintenanceDto>>>(Options(
+    final _options = _setStreamType<ApiResponse<MaintenanceDataDto>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -6534,16 +6530,11 @@ class _UserEndpoint implements UserEndpoint {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late ApiResponse<List<MaintenanceDto>> _value;
+    late ApiResponse<MaintenanceDataDto> _value;
     try {
-      _value = ApiResponse<List<MaintenanceDto>>.fromJson(
+      _value = ApiResponse<MaintenanceDataDto>.fromJson(
         _result.data!,
-        (json) => json is List<dynamic>
-            ? json
-                .map<MaintenanceDto>(
-                    (i) => MaintenanceDto.fromJson(i as Map<String, dynamic>))
-                .toList()
-            : List.empty(),
+        (json) => MaintenanceDataDto.fromJson(json as Map<String, dynamic>),
       );
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
@@ -7123,40 +7114,33 @@ class _UserEndpoint implements UserEndpoint {
   }
 
   @override
-  Future<ApiResponse<List<DriverViolationDto>>> fetchDriverViolations(
-      int id) async {
+  Future<ApiResponse<DriverViolationDto>> fetchDriverViolations(int id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'vehicleHandoverId': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<DriverViolationDto>>>(Options(
+    final _options = _setStreamType<ApiResponse<DriverViolationDto>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              '/v1/VehicleEventsTypes/GetAllVehicleEvents',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        .compose(
+          _dio.options,
+          '/v1/VehicleEventsTypes/GetAllVehicleEvents',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late ApiResponse<List<DriverViolationDto>> _value;
+    late ApiResponse<DriverViolationDto> _value;
     try {
-      _value = ApiResponse<List<DriverViolationDto>>.fromJson(
+      _value = ApiResponse<DriverViolationDto>.fromJson(
         _result.data!,
-        (json) => json is List<dynamic>
-            ? json
-                .map<DriverViolationDto>((i) =>
-                    DriverViolationDto.fromJson(i as Map<String, dynamic>))
-                .toList()
-            : List.empty(),
+        (json) => DriverViolationDto.fromJson(json as Map<String, dynamic>),
       );
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);

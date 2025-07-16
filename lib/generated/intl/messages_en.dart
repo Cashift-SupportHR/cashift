@@ -792,6 +792,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expire_date":
             MessageLookupByLibrary.simpleMessage("EXP expiration date."),
         "expired": MessageLookupByLibrary.simpleMessage("Full"),
+        "face_image_required_proceed": MessageLookupByLibrary.simpleMessage(
+            "Face image is required to proceed"),
         "face_not_matched":
             MessageLookupByLibrary.simpleMessage("Face not matched"),
         "face_print": MessageLookupByLibrary.simpleMessage("Face Print"),

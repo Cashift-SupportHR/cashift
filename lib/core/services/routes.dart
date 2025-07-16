@@ -330,8 +330,7 @@ class Routes {
       '/trackAttendanceDepartureDetailsPage';
   static const String searchEmployeeMapPage = '/searchEmployeeMapPage';
   static const String realTimeQRScanner = '/realTimeQRScanner';
-  static const String startTourPage = '/startTourPage';
-  static const String currentTourMapPage = '/currentTourMapPage';
+   static const String currentTourMapPage = '/currentTourMapPage';
   static const String addJobUniformPage = '/JobUniform';
   static const String usersRequestsPage = '/UsersRequestsPage';
   static const String requestsUserPage = '/requestsUserPage';
@@ -504,8 +503,7 @@ class Routes {
     mainReceiveAdd: (context) => MainReceiveVehiclePage(),
     addHomeAddressPage: (context) => AddHomeAddressPage(),
     searchEmployeeMapPage: (context) => SearchEmployeeMapPage(),
-    startTourPage: (context) => StartTourPage(),
-    currentTourMapPage: (context) => CurrentTourMapPage(),
+     currentTourMapPage: (context) => CurrentTourMapPage(),
     addJobUniformPage: (context) => AddJobUniformPage(),
     usersRequestsPage: (context) => UsersRequestsPage(),
     requestsUserPage: (context) => RequestsUserPage(),
