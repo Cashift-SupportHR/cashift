@@ -31,37 +31,11 @@ class PermissionDetector {
   }
 
   static Future<bool> _checkMediaPermissions(BuildContext context) async {
-    if (Platform.isAndroid) {
-      final statuses =
-          await [
-            Permission.camera,
-            Permission.storage,
-            Permission.mediaLibrary,
-          ].request();
-      print('statuses: $statuses');
 
-      final isGranted =
-          statuses[Permission.camera] == PermissionStatus.granted &&
-          statuses[Permission.storage] == PermissionStatus.granted &&
-          statuses[Permission.mediaLibrary] == PermissionStatus.granted;
-
-      final isPermanentlyDenied =
-          statuses[Permission.camera] == PermissionStatus.permanentlyDenied ||
-          statuses[Permission.storage] == PermissionStatus.permanentlyDenied ||
-          statuses[Permission.mediaLibrary] ==
-              PermissionStatus.permanentlyDenied;
-
-      if (isGranted) return true;
-      if (isPermanentlyDenied) return false;
-
-      return false; // for temporarily denied
-    } else {
       final status = await Permission.camera.request();
-
       if (status.isGranted) return true;
       if (status.isPermanentlyDenied) return false;
-
       return false; // temporarily denied or restricted
-    }
+
   }
 }

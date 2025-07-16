@@ -86,7 +86,7 @@ class CheckFaceRecognitionPage
 
   void checkAllowFaceRecognition(bool isAllowFaceRecognition) {
     print('checkAllowFaceRecognition: $isAllowFaceRecognition');
-    if (isAllowFaceRecognition) {
+    if (!isAllowFaceRecognition) {
       backAction();
     }
   }

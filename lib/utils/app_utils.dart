@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -179,12 +180,31 @@ class AppUtils {
   }
 
 
+  static Future<bool> requestMediaAccessPermission() async {
+    if (Platform.isAndroid) {
+      final androidInfo = await DeviceInfoPlugin().androidInfo;
+      final sdkInt = androidInfo.version.sdkInt;
 
+      if (sdkInt >= 33) {
+        // Android 13+ (API 33+)
+        final imagesStatus = await Permission.photos.request(); // can also request .videos or .audio
+        return imagesStatus.isGranted;
+      } else {
+        // Android 12 and below
+        final storageStatus = await Permission.storage.request();
+        return storageStatus.isGranted;
+      }
+
+    } else{
+      final status = await Permission.photos.request();
+      return status.isGranted;
+    }
+  }
  static Future<XFile?> pickPDF() async {
     // طلب إذن التخزين
-    var status = await Permission.storage.request();
+    var status = await requestMediaAccessPermission();
     XFile? file;
-    if (status.isGranted) {
+    if (status) {
       FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['pdf'],
