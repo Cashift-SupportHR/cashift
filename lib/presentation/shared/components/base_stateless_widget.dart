@@ -24,14 +24,16 @@ abstract class BaseStatelessWidget extends StatelessWidget {
   final strings = Get.context!.getStrings();
   final local = Get.locale?.languageCode ?? 'en';
   final publicContext = Get.context!;
-  T inject<T extends Object>(){
-    return  getIt.get<T>();
+
+  T inject<T extends Object>() {
+    return getIt.get<T>();
   }
+
   //static String routeName (){return '';}
 
-  final CustomProgressDialog progress =
-      DialogsManager.createProgress(Get.context!); 
-
+  final CustomProgressDialog progress = DialogsManager.createProgress(
+    Get.context!,
+  );
 
   bool isRtl() => local == 'ar';
 
@@ -99,8 +101,12 @@ abstract class BaseStatelessWidget extends StatelessWidget {
     }
   }
 
-  void showErrorDialog(String error, BuildContext context,{Function() ? onClickOk}) {
-    DialogsManager.showErrorDialog(context, error,onClickOk: onClickOk);
+  void showErrorDialog(
+    String error,
+    BuildContext context, {
+    Function()? onClickOk,
+  }) {
+    DialogsManager.showErrorDialog(context, error, onClickOk: onClickOk);
   }
 
   showSuccessMessage(String message, {Function? onDismiss}) {
@@ -111,11 +117,15 @@ abstract class BaseStatelessWidget extends StatelessWidget {
   }
 
   showSuccessMessageDialog(String message, {Function? onDismiss}) {
-    DialogsManager.showSuccessDialog(Get.context!, message: message, onClickOk: () {
-      print('onClickOkonClickOk');
-      Navigator.pop(Get.context!,);
-      if (onDismiss != null) onDismiss();
-    });
+    DialogsManager.showSuccessDialog(
+      Get.context!,
+      message: message,
+      onClickOk: () {
+        print('onClickOkonClickOk');
+        Navigator.pop(Get.context!);
+        if (onDismiss != null) onDismiss();
+      },
+    );
   }
 
   void requestShare(String url) {
@@ -133,14 +143,17 @@ abstract class BaseStatelessWidget extends StatelessWidget {
 
   void fetchLocation({required Function(LocationData location) onGetLocation}) {
     showProgress();
-    _location(Get.context!).then((value) {
-      dismissProgress();
-      onGetLocation(value);
-    }).onError((error, stackTrace) {
-      handleFetchLocationException(error);
-    }).whenComplete(() {
-      dismissProgress();
-    });
+    _location(Get.context!)
+        .then((value) {
+          dismissProgress();
+          onGetLocation(value);
+        })
+        .onError((error, stackTrace) {
+          handleFetchLocationException(error);
+        })
+        .whenComplete(() {
+          dismissProgress();
+        });
   }
 
   void handleFetchLocationException(e) {
@@ -148,6 +161,7 @@ abstract class BaseStatelessWidget extends StatelessWidget {
   }
 
   bool isShowProgress = false;
+
   showProgress() {
     if (!isShowProgress) {
       progress.show();
@@ -160,10 +174,7 @@ abstract class BaseStatelessWidget extends StatelessWidget {
     isShowProgress = false;
   }
 
-  
-
   void buildListener(BuildContext context, dynamic state) {
-
     if (state is LoadingStateListener) {
       showProgress();
     } else {
@@ -187,32 +198,46 @@ abstract class BaseStatelessWidget extends StatelessWidget {
 
   void onRequestFail(Object error) {}
 
+  void onFailDismissed(ApiException error) {
+    Navigator.pop(Get.context!);
+  }
+
   void onSuccessDataState(data) {}
+
   void onRequestSuccess(String? message) {
-    showSuccessMessage(message ?? '', onDismiss: () {
-      onSuccessDismissed();
-    });
+    showSuccessMessage(
+      message ?? '',
+      onDismiss: () {
+        onSuccessDismissed();
+      },
+    );
   }
 
   void onSuccessDismissed() {}
 
-  void handleApiError(error,
-      {required Function(String message, String code) onHandleMessage}) {
+  void handleApiError(
+    error, {
+    required Function(String message, String code) onHandleMessage,
+  }) {
     final errorApi = Get.context!.handleApiError(exception: error);
     onHandleMessage(errorApi.code, "0");
   }
 
   void handleErrorDialog(error, BuildContext context) {
     DialogsManager.showErrorDialog(
-        context, context.handleApiErrorMessage(exception: error));
+      context, context.handleApiErrorMessage(exception: error),
+      onClickOk: () {
+        onFailDismissed(context.handleApiError(exception: error));
+      },
+    );
   }
+
   Future<bool> checkFaceRecognition(BuildContext context) async {
     bool isCheckFaceRecognition = await CheckFaceRecognitionPage.start(context);
     if (!isCheckFaceRecognition) {
       return false;
-    }else{
+    } else {
       return true;
     }
   }
-
 }
