@@ -116,6 +116,8 @@ class HeaderInterceptor extends Interceptor {
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) {
     if (err.response != null) {
+      print('Error: Response statusCode: ${err.response!.statusCode}');
+      print('Error: Response Data: ${err.response!.data}');
       final statusCode = err.response!.statusCode;
       // Log only on errors: 401 if required, 403, 500
       if ((statusCode == 401 && isRequiredAuth == true) ||

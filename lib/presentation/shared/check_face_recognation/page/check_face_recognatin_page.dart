@@ -10,6 +10,7 @@ import 'package:shiftapp/presentation/shared/components/index.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../../../../../core/services/permission_detector.dart';
+import '../../../../data/datasources/remote/api_exception.dart';
 import '../../../presentationUser/attendance/facerecognation/faces_matching.dart';
 import '../../components/dialogs_manager.dart';
 import '../cubit/check_face_recognation_cubit.dart';
@@ -109,13 +110,24 @@ class CheckFaceRecognitionPage
       context,
       onClickOk: () async {
         Navigator.pop(context);
-        await Navigator.pushNamed(
-          context,
-          Routes.faceRecognitionPage,
-          arguments: bloc.userData
-        );
-        bloc.fetchRegisteredFace();
+        toFaceRecognitionPage();
       },
     );
+  }
+
+  onFailDismissed(ApiException error) {
+    Navigator.pop(context);
+    if(error.isEmptyList()){
+      toFaceRecognitionPage();
+    }
+  }
+
+  Future<void> toFaceRecognitionPage() async {
+    await Navigator.pushNamed(
+        context,
+        Routes.faceRecognitionPage,
+        arguments: bloc.userData
+    );
+    bloc.fetchRegisteredFace();
   }
 }
