@@ -1,13 +1,12 @@
+import 'dart:io';
+
 import '../config/configuration_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-Future<void> initializeFirebase({bool isLive = true}) async {
+Future<FirebaseApp> initializeFirebase({bool isLive = true}) async {
   final config = ConfigurationProvider(isLive: isLive)
       .platformConfig
       .currentConfig;
 
-  if (Firebase.apps.isEmpty) {
-    await Firebase.initializeApp(options: config.toFirebaseOptions());
-
-  }
+    return await Firebase.initializeApp(name:Platform.isIOS ? 'doubleshift':null ,options: config.toFirebaseOptions());
 }
