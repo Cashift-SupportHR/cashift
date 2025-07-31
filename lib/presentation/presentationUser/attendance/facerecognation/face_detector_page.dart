@@ -1,8 +1,9 @@
+import 'dart:io' show File;
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:livelyness_detection/index.dart';
-import 'package:livelyness_detection/livelyness_detection.dart';
+import 'package:m7_livelyness_detection/index.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateful_widget.dart';
@@ -28,7 +29,7 @@ class _M7ExpampleScreenState extends BaseState<FaceDetectorPage> {
   final bool _isLoading = false;
   bool _startWithInfo = true;
   bool _allowAfterTimeOut = false;
-  final List<LivelynessStepItem> _veificationSteps = [];
+  final List<M7LivelynessStepItem> _veificationSteps = [];
   int _timeOutDuration = 30;
 
   //* MARK: - Life Cycle Methods
@@ -112,20 +113,20 @@ class _M7ExpampleScreenState extends BaseState<FaceDetectorPage> {
     _veificationSteps.addAll(
       [
         if (attendanceConfigDto.eyeCheck == true)
-          LivelynessStepItem(
-            step: LivelynessStep.blink,
+          M7LivelynessStepItem(
+            step: M7LivelynessStep.blink,
             title: strings.blink_your_eyes,
             isCompleted: false,
           ),
         if (attendanceConfigDto.moveFace == true)
-          LivelynessStepItem(
-            step: LivelynessStep.turnLeft,
+          M7LivelynessStepItem(
+            step: M7LivelynessStep.turnLeft,
             title: strings.turn_right,
             isCompleted: false,
           ),
         if (attendanceConfigDto.smile == true)
-          LivelynessStepItem(
-            step: LivelynessStep.smile,
+          M7LivelynessStepItem(
+            step: M7LivelynessStep.smile,
             title: strings.smil,
             isCompleted: false,
           ),
@@ -133,22 +134,22 @@ class _M7ExpampleScreenState extends BaseState<FaceDetectorPage> {
     );
     if(_veificationSteps.isEmpty) {
       _veificationSteps.add(
-        LivelynessStepItem(
-          step: LivelynessStep.blink,
+        M7LivelynessStepItem(
+          step: M7LivelynessStep.blink,
           title: strings.blink_your_eyes,
           isCompleted: false,
         ),
       );
-      LivelynessStepItem(
-        step: LivelynessStep.smile,
+      M7LivelynessStepItem(
+        step: M7LivelynessStep.smile,
         title: strings.smil,
         isCompleted: false,
       );
     }
-    LivelynessDetection.instance.configure(
-      dotColor: Colors.white,
+    M7LivelynessDetection.instance.configure(
+      contourColor: Colors.white,
       thresholds: [
-        SmileDetectionThreshold(),
+        M7SmileDetectionThreshold(),
       ],
     );
     bool isDirectDetectFace = attendanceConfigDto.isDirectDetectFace ?? false;
@@ -161,9 +162,9 @@ class _M7ExpampleScreenState extends BaseState<FaceDetectorPage> {
 
   void _onStartLivelyness() async {
     setState(() => _capturedImagePath = null);
-    final response = await LivelynessDetection.instance.detectLivelyness(
+    final response = await M7LivelynessDetection.instance.detectLivelyness(
       context,
-      config: DetectionConfig(
+      config: M7DetectionConfig(
         steps: _veificationSteps,
         startWithInfoScreen: false,
         maxSecToDetect: 60,
@@ -171,10 +172,10 @@ class _M7ExpampleScreenState extends BaseState<FaceDetectorPage> {
         captureButtonColor: Colors.red,
       ),
     );
-    if (response?.imgPath == null) {
+    if (response.isNullOrEmpty()) {
       return;
     }
-    _capturedImagePath = response?.imgPath;
+    _capturedImagePath = response;
     setState(() {});
     if (isDirectDetectFace) {
       confirmAction();

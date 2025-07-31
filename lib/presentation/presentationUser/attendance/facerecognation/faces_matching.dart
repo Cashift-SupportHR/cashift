@@ -2,8 +2,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter_face_api/flutter_face_api.dart';
-import 'package:livelyness_detection/index.dart';
-import 'package:livelyness_detection/livelyness_detection.dart';
+import 'package:m7_livelyness_detection/index.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
 import '../../../../core/services/permission_detector.dart';
@@ -49,7 +48,7 @@ class FaceMatchingUtils {
   }
 
   static Future<File> startLivelyness(BuildContext context,
-      {List<LivelynessStepItem>? list}) async {
+      {List<M7LivelynessStepItem>? list}) async {
     if (Platform.isAndroid) {
       final granted =await  PermissionDetector.detectCameraAndStoragePermission(context);
        if(granted==false) return Future.error('Permission not allowed');;
@@ -57,8 +56,8 @@ class FaceMatchingUtils {
     String _capturedImagePath = "";
     final _veificationSteps = list ??
         [
-          LivelynessStepItem(
-            step: LivelynessStep.smile,
+          M7LivelynessStepItem(
+            step: M7LivelynessStep.smile,
             title: context
                 .getStrings()
                 .smil,
@@ -66,9 +65,9 @@ class FaceMatchingUtils {
           ),
         ];
 
-    final response = await LivelynessDetection.instance.detectLivelyness(
+    final response = await M7LivelynessDetection.instance.detectLivelyness(
       context,
-      config: DetectionConfig(
+      config: M7DetectionConfig(
         steps: _veificationSteps,
         startWithInfoScreen: false,
         maxSecToDetect: 20,
@@ -77,10 +76,10 @@ class FaceMatchingUtils {
       ),
     );
 
-    if (response!.imgPath.isNullOrEmpty()) {
+    if (response.isNullOrEmpty()) {
       return Future.error('error');
     }
-    _capturedImagePath = response.imgPath;
+    _capturedImagePath = response ?? '';
     print('_capturedImagePath $_capturedImagePath');
     final file = File(_capturedImagePath.toString());
     return file;
@@ -96,8 +95,8 @@ class FaceMatchingUtils {
 
     final _veificationSteps = config != null && stepsList(context, config).isNotEmpty? stepsList(context, config) :
     [
-      LivelynessStepItem(
-        step: LivelynessStep.smile,
+      M7LivelynessStepItem(
+        step: M7LivelynessStep.smile,
         title: context
             .getStrings()
             .smil,
@@ -105,9 +104,9 @@ class FaceMatchingUtils {
       ),
     ];
 
-    final response = await LivelynessDetection.instance.detectLivelyness(
+    final response = await M7LivelynessDetection.instance.detectLivelyness(
       context,
-      config: DetectionConfig(
+      config: M7DetectionConfig(
         steps: _veificationSteps,
         startWithInfoScreen: false,
         maxSecToDetect: 20,
@@ -116,10 +115,10 @@ class FaceMatchingUtils {
       ),
     );
 
-    if (response!.imgPath.isNullOrEmpty()) {
+    if (response!.isNullOrEmpty()) {
       return Future.error('error');
     }
-    _capturedImagePath = response.imgPath;
+    _capturedImagePath = response ?? '';
 
     final file = File(_capturedImagePath.toString());
     final matching = await detectFaceSimilitry(context, file, refImageBase64);
@@ -156,26 +155,26 @@ class FaceMatchingUtils {
     }
   }
 
-  static List<LivelynessStepItem> stepsList(BuildContext context,
+  static List<M7LivelynessStepItem> stepsList(BuildContext context,
       AttendanceConfigDto attendanceConfigDto) {
     final strings = context.getStrings();
     return
       [
         if (attendanceConfigDto.eyeCheck == true)
-          LivelynessStepItem(
-            step: LivelynessStep.blink,
+          M7LivelynessStepItem(
+            step: M7LivelynessStep.blink,
             title: strings.blink_your_eyes,
             isCompleted: false,
           ),
         if (attendanceConfigDto.moveFace == true)
-          LivelynessStepItem(
-            step: LivelynessStep.turnLeft,
+          M7LivelynessStepItem(
+            step: M7LivelynessStep.turnLeft,
             title: strings.turn_right,
             isCompleted: false,
           ),
         if (attendanceConfigDto.smile == true)
-          LivelynessStepItem(
-            step: LivelynessStep.smile,
+          M7LivelynessStepItem(
+            step: M7LivelynessStep.smile,
             title: strings.smil,
             isCompleted: false,
           ),
