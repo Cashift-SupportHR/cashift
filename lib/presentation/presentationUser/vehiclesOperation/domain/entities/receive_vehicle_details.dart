@@ -83,6 +83,8 @@ class ReceiveVehicleDetails {
         licenseExpiryDate: json.licenseExpiryDate,
         licenseNumber: json.licenseNumber,
         specifications: json.specifications,
+        vehicleTrueComponentsCount: json.vehicleTrueComponentsCount,
+        vehicleTrueCustodiesCount: json.vehicleTrueCustodiesCount,
       );
 
   static List<ReceiveVehicleDetails> fromDtoList(
