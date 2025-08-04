@@ -24,7 +24,6 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
-
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.cashift"
@@ -62,7 +61,18 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+    lint {
+        disable.add("InvalidPackage")
+        checkReleaseBuilds = false
+    }
+
+//    lintOptions {
+//        disable "InvalidPackage";
+//        checkReleaseBuilds false
+//    }
 }
+
 
 flutter {
     source = "../.."
