@@ -94,8 +94,7 @@ Until allowing to start your working hours </string>
            </array>
           <key>NSMotionUsageDescription</key>
               <string>Motion usage description</string>
-    <key>NSUserTrackingUsageDescription</key>
-    <string>This identifier will be used to deliver personalized ads to you.</string>
+
     <key>NSPhotoLibraryUsageDescription</key>
 	<string>The application needs to record a video for scan qr process to ensure that you are on the job site</string>
 </dict>
