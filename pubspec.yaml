@@ -180,7 +180,7 @@ dependencies:
     path: ./modules/firebase_config
   chucker_flutter: ^1.8.3
   platform_device_id_plus: ^1.0.7
-  app_links: ^6.3.2
+  app_links: ^6.4.1
 #dependency_overrides:
 #  rxdart: ^0.27.0
 #  platform_device_id_plus:
