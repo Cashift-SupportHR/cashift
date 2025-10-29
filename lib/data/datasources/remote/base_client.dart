@@ -86,7 +86,7 @@ class HeaderInterceptor extends Interceptor {
     options.headers['platform'] = Config.platformName;
     options.headers['AppVersion'] = Config.AppVersion;
     options.headers[requestTypeKey] = true;
-
+    options.baseUrl=kTestApiUrl;
     print('Header  Params ${options.data} ${options.headers}');
     // 2) forward to next interceptor
     handler.next(options);

@@ -154,6 +154,18 @@ import '../../presentationUser/loan_requests/add_new_loan_request/bloc/add_loan_
     as _i196;
 import '../../presentationUser/loan_requests/loan_requests/bloc/loan_requests_cubit.dart'
     as _i556;
+import '../../presentationUser/logistics_request/data/data_sources/logistics_request_api.dart'
+    as _i179;
+import '../../presentationUser/logistics_request/data/repositories/logistics_request_repo.dart'
+    as _i343;
+import '../../presentationUser/logistics_request/presentation/pages/license_data/cubit/license_data_cubit.dart'
+    as _i285;
+import '../../presentationUser/logistics_request/presentation/pages/location_data/cubit/location_data_cubit.dart'
+    as _i689;
+import '../../presentationUser/logistics_request/presentation/pages/select_car/cubit/vehicle_type_cubit.dart'
+    as _i145;
+import '../../presentationUser/logistics_request/presentation/pages/terms_and_conditions_logistics/cubit/terms_and_conditions_logistics_cubit.dart'
+    as _i1023;
 import '../../presentationUser/mainnavigation/overview/bloc/overview_bloc.dart'
     as _i279;
 import '../../presentationUser/mainnavigation/overview/bloc/overview_cubit.dart'
@@ -630,6 +642,8 @@ Future<_i174.GetIt> $initGetIt(
       () => _i1028.UserRepository(gh<_i460.SharedPreferences>()));
   gh.factory<_i235.AuthAPI>(
       () => _i235.AuthAPI(api: gh<_i1029.UserEndpoint>()));
+  gh.factory<_i179.LogisticsRequestAPI>(
+      () => _i179.LogisticsRequestAPI(api: gh<_i1029.UserEndpoint>()));
   gh.factory<_i565.RequestsUserAPI>(
       () => _i565.RequestsUserAPI(api: gh<_i1029.UserEndpoint>()));
   gh.factory<_i420.AbsenceNoticeAPI>(
@@ -827,6 +841,8 @@ Future<_i174.GetIt> $initGetIt(
       () => _i145.ActivityLogCubit(gh<_i825.ActivityLogRepository>()));
   gh.factory<_i507.ProjectsRepository>(
       () => _i507.ProjectsRepository(gh<_i70.FavoriteProjectsApi>()));
+  gh.factory<_i343.LogisticsRequestRepository>(
+      () => _i343.LogisticsRequestRepository(gh<_i179.LogisticsRequestAPI>()));
   gh.factory<_i201.OpportunityDetailsCubit>(() =>
       _i201.OpportunityDetailsCubit(gh<_i1035.TodayOpportunityRepository>()));
   gh.factory<_i424.PledgesAndGeneralizationCubit>(() =>
@@ -858,6 +874,13 @@ Future<_i174.GetIt> $initGetIt(
       () => _i319.TransactionsCubit(gh<_i297.TransactionsRepository>()));
   gh.factory<_i1005.AddOpportunityRepository>(
       () => _i1005.AddOpportunityRepository(gh<_i430.AddOpportunityAPI>()));
+  gh.factory<_i285.LicenseDataCubit>(
+      () => _i285.LicenseDataCubit(gh<_i343.LogisticsRequestRepository>()));
+  gh.factory<_i145.VehicleTypeCubit>(
+      () => _i145.VehicleTypeCubit(gh<_i343.LogisticsRequestRepository>()));
+  gh.factory<_i1023.TermsAndConditionsLogisticsCubit>(() =>
+      _i1023.TermsAndConditionsLogisticsCubit(
+          gh<_i343.LogisticsRequestRepository>()));
   gh.factory<_i367.TermandConditionRepository>(
       () => _i367.TermandConditionRepository(gh<_i805.TermandConditionAPI>()));
   gh.factory<_i366.WorkingDocumentRepository>(
@@ -1084,6 +1107,11 @@ Future<_i174.GetIt> $initGetIt(
   gh.factory<_i741.GeneralTypesViolationsCubit>(() =>
       _i741.GeneralTypesViolationsCubit(
           gh<_i568.GeneralViolationsRepository>()));
+  gh.factory<_i689.LocationDataCubit>(() => _i689.LocationDataCubit(
+        gh<_i343.LogisticsRequestRepository>(),
+        gh<_i605.ProjectsManagementRepository>(),
+        gh<_i563.ResumeRepository>(),
+      ));
   gh.factory<_i116.ResumeBloc>(() => _i116.ResumeBloc(
         gh<_i563.ResumeRepository>(),
         gh<_i1028.UserRepository>(),

@@ -6,6 +6,7 @@ import 'package:shiftapp/presentation/shared/components/app_cupertino_button.dar
 import 'package:shiftapp/presentation/shared/components/base/user_info_widget.dart';
 import 'package:shiftapp/presentation/shared/components/image_builder.dart';
 
+import '../../../../../core/services/routes.dart';
 import '../../../../../domain/entities/user_overview/job_offer_slider.dart';
 import '../../../../shared/components/base_stateless_widget.dart';
 import '../../../../shared/components/decorations/decorations.dart';
@@ -108,7 +109,7 @@ class SlideItem extends BaseStatelessWidget {
               Spacer(),
               SizedBox(
                   height: 40,
-                  child: footer()),
+                  child: footer(context)),
             ],
           ),
           Align(
@@ -168,7 +169,7 @@ class SlideItem extends BaseStatelessWidget {
     );
   }
 
-  Widget footer() {
+  Widget footer(context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -192,7 +193,7 @@ class SlideItem extends BaseStatelessWidget {
           child: AppCupertinoButton(
             text: jobOfferSlider.actionName ?? strings.apply_now,
             padding: EdgeInsets.symmetric(vertical: 0),
-            onPressed: () => onApplyJobNow!(jobOfferSlider.id ?? 0),
+            onPressed: () =>jobOfferSlider.code=="delivery"?Navigator.pushNamed(context, Routes.mainLogisticsRequestPage):   onApplyJobNow!(jobOfferSlider.id ?? 0),
             textStyle: kTextBold.copyWith(fontSize: 12, color: kWhite),
           ),
         ),

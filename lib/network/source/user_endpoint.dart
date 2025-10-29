@@ -50,6 +50,9 @@ import '../../presentation/adminFeatures/vehicles/data/models/vehicle_violation_
 import '../../presentation/adminFeatures/vehicles/domain/entities/vehicle_violation.dart';
 import '../../presentation/presentationUser/AttendanceAndDepartureNotifications/data/models/index.dart';
 import '../../presentation/presentationUser/employeesCertificates/data/models/index.dart';
+import '../../presentation/presentationUser/logistics_request/data/models/car_logistics_dto.dart';
+import '../../presentation/presentationUser/logistics_request/data/models/car_terms_and_conditions_dto.dart';
+import '../../presentation/presentationUser/logistics_request/data/models/index.dart';
 import '../../presentation/presentationUser/pledgesAndGeneralization/data/models/pledge_generalization_dto.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/terms_and_conditions_requests_prams.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/add_request_prams.dart';
@@ -924,4 +927,21 @@ abstract class UserEndpoint {
   Future<ApiResponse> rescheduleTransactions(
     @Body() RescheduleTransactionsPrams prams,
   );
+
+  //Logistics
+
+  @GET('/v2/JobOfferCarType/GetAllCarTypes')
+  Future<ApiResponse<List<CarLogisticsDto>>> fetchCarLogistics();
+
+  @GET('/CarTermsAndConditions/GetAllCarTerms')
+  Future<ApiResponse<List<CarTermsAndConditionsDto>>> fetchCarTermsAndConditionsDto();
+
+  @GET('/v2/JobOfferSubmission/CanSubmitNewOffer')
+  Future<ApiResponse> CanSubmitLogistics();
+
+  @POST('/v2/JobOfferSubmission/SubmitJobOffer')
+  Future<ApiResponse> addLogistic(
+      @Body() AddLogisticPrams prams,
+      );
+
 }

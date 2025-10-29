@@ -2852,6 +2852,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get terms_and_conditions_message => 'اوافق علي جميع الشروط والأحكام';
 
   @override
+  String get terms_and_conditions_accept => 'من فضلك وافق علي جميع الشروط والأحكام';
+
+  @override
   String get installment_postponement_desc => 'في حال التأكيد علي عدم الموافقه في اصدار الوثيقه سوف يتم تجميد الحساب';
 
   @override
@@ -4338,6 +4341,24 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get reload => 'إعادة تحميل';
+
+  @override
+  String get terms_and_conditions => 'الشروط والأحكام';
+
+  @override
+  String get location_data => 'بيانات الموقع';
+
+  @override
+  String get license_data => 'بيانات الرخصة';
+
+  @override
+  String get housing_location => 'موقع سكنك';
+
+  @override
+  String get select_housing_location => 'حدد موقع سكنك';
+
+  @override
+  String get housing_location_data => 'بيانات موقع السكن';
 
   @override
   String get violations_of_operation => 'مخالفات التشغيل';

@@ -9,6 +9,7 @@ class JobOfferSlider {
   String? jobName;
   String? description;
   String? mainLogo;
+  String? code;
   String? backGroundLogo;
   String? companyLogo;
   String? actionName;
@@ -19,6 +20,7 @@ class JobOfferSlider {
   JobOfferSlider({
     this.id,
     this.jobName,
+    this.code,
     this.description,
     this.mainLogo,
     this.backGroundLogo,
@@ -32,6 +34,7 @@ class JobOfferSlider {
   factory JobOfferSlider.fromDto(JobOfferSliderDto json) {
     return JobOfferSlider(
       id: json.id,
+      code: json.code,
       jobName: json.jobName,
       description: json.description,
       mainLogo: json.mainLogo,

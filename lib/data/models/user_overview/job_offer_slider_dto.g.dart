@@ -11,6 +11,7 @@ JobOfferSliderDto _$JobOfferSliderDtoFromJson(Map<String, dynamic> json) =>
       id: (json['id'] as num?)?.toInt(),
       jobName: json['jobName'] as String?,
       description: json['description'] as String?,
+          code: json['code'] as String?,
       mainLogo: json['mainLogo'] as String?,
       backGroundLogo: json['backGroundLogo'] as String?,
       companyLogo: json['companyLogo'] as String?,
@@ -30,6 +31,7 @@ Map<String, dynamic> _$JobOfferSliderDtoToJson(JobOfferSliderDto instance) =>
     <String, dynamic>{
       'id': instance.id,
       'jobName': instance.jobName,
+      'code': instance.code,
       'description': instance.description,
       'mainLogo': instance.mainLogo,
       'backGroundLogo': instance.backGroundLogo,
