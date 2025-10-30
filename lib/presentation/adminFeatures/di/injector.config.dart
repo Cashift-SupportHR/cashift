@@ -1017,14 +1017,6 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i919.RequiredTasksUseCase>(),
         gh<_i922.ProfileRepository>(),
       ));
-  gh.factory<_i1061.OverviewCubit>(() => _i1061.OverviewCubit(
-        gh<_i883.JobOffersRepository>(),
-        gh<_i1028.UserRepository>(),
-        gh<_i825.ActivityLogRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i919.RequiredTasksUseCase>(),
-        gh<_i922.ProfileRepository>(),
-      ));
   gh.factory<_i968.ClassificationRepository>(
       () => _i968.ClassificationRepository(gh<_i680.ClassificationAPI>()));
   gh.factory<_i121.AddPunishmentCubit>(
@@ -1215,6 +1207,15 @@ Future<_i174.GetIt> $initGetIt(
       () => _i933.UsersRequestsCubit(gh<_i443.UsersRequestsRepository>()));
   gh.factory<_i227.UserRequestTermsCubit>(
       () => _i227.UserRequestTermsCubit(gh<_i443.UsersRequestsRepository>()));
+  gh.factory<_i1061.OverviewCubit>(() => _i1061.OverviewCubit(
+        gh<_i883.JobOffersRepository>(),
+        gh<_i1028.UserRepository>(),
+        gh<_i343.LogisticsRequestRepository>(),
+        gh<_i825.ActivityLogRepository>(),
+        gh<_i922.ProfileRepository>(),
+        gh<_i919.RequiredTasksUseCase>(),
+        gh<_i922.ProfileRepository>(),
+      ));
   gh.factory<_i867.OvertimeAttendanceCubit>(
       () => _i867.OvertimeAttendanceCubit(gh<_i339.AttendanceRepository>()));
   gh.factory<_i453.AddAddressCubit>(() => _i453.AddAddressCubit(

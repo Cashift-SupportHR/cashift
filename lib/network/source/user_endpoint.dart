@@ -933,7 +933,7 @@ abstract class UserEndpoint {
   @GET('/v2/JobOfferCarType/GetAllCarTypes')
   Future<ApiResponse<List<CarLogisticsDto>>> fetchCarLogistics();
 
-  @GET('/CarTermsAndConditions/GetAllCarTerms')
+  @GET('/v2/CarTermsAndConditions/GetAllCarTerms')
   Future<ApiResponse<List<CarTermsAndConditionsDto>>> fetchCarTermsAndConditionsDto();
 
   @GET('/v2/JobOfferSubmission/CanSubmitNewOffer')

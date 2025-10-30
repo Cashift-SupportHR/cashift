@@ -9,9 +9,6 @@ part of 'add_logistics_prams.dart';
 AddLogisticPrams _$AddLogisticPramsFromJson(Map<String, dynamic> json) =>
     AddLogisticPrams(
       jobOfferCarTypeId: (json['jobOfferCarTypeId'] as num?)?.toInt(),
-      license: json['license'] == null
-          ? null
-          : License.fromJson(json['license'] as Map<String, dynamic>),
       location: json['location'] == null
           ? null
           : Location.fromJson(json['location'] as Map<String, dynamic>),
@@ -19,16 +16,15 @@ AddLogisticPrams _$AddLogisticPramsFromJson(Map<String, dynamic> json) =>
           ?.map((e) => (e as num).toInt())
           .toList(),
       termsAccepted: json['termsAccepted'] as bool?,
-         );
+    );
 
 Map<String, dynamic> _$AddLogisticPramsToJson(AddLogisticPrams instance) =>
     <String, dynamic>{
       'jobOfferCarTypeId': instance.jobOfferCarTypeId,
-      'license': instance.license,
       'location': instance.location,
       'preferredDistrictIds': instance.preferredDistrictIds,
       'termsAccepted': instance.termsAccepted,
-     };
+    };
 
 License _$LicenseFromJson(Map<String, dynamic> json) => License(
       licenseNumber: json['licenseNumber'] as String?,

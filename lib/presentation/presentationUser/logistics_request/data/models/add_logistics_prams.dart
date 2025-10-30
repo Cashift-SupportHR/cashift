@@ -6,8 +6,8 @@ part 'add_logistics_prams.g.dart';
 class AddLogisticPrams {
   @JsonKey(name: "jobOfferCarTypeId")
     int? jobOfferCarTypeId;
-  @JsonKey(name: "license")
-    License? license;
+  // @JsonKey(name: "license")
+  //   License? license;
   @JsonKey(name: "location")
     Location? location;
   @JsonKey(name: "preferredDistrictIds")
@@ -18,7 +18,7 @@ class AddLogisticPrams {
 
   AddLogisticPrams ({
     this.jobOfferCarTypeId,
-    this.license,
+   // this.license,
     this.location,
     this.preferredDistrictIds,
     this.termsAccepted,

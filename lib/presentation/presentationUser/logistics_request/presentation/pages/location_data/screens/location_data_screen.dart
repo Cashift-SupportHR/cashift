@@ -125,8 +125,8 @@ class LocationDataScreen extends BaseStatelessWidget {
       builder: (context, snapshot) {
         return BottomSheetTextFieldRectangle(
           isMultiChoice: true,
-          title: strings.district,
-          hintText: strings.select_district,
+          title: strings.favorite_housing_locations,
+          hintText: strings.favorite_housing_locations,
 
           controller: districtController,
 

@@ -12285,6 +12285,21 @@ class S {
     );
   }
 
+  /// `exclusively`
+  String get private {
+    return Intl.message('exclusively', name: 'private', desc: '', args: []);
+  }
+
+  /// `Select your preferred neighborhoods`
+  String get favorite_housing_locations {
+    return Intl.message(
+      'Select your preferred neighborhoods',
+      name: 'favorite_housing_locations',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Please agree to all terms and conditions`
   String get terms_and_conditions_accept {
     return Intl.message(

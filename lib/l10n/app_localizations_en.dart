@@ -4361,10 +4361,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get housing_location_data => 'Housing Location Data';
 
   @override
+  String get favorite_housing_locations => 'Select your preferred neighborhoods';
+
+  @override
   String get violations_of_operation => 'Violations of operation';
 
   @override
   String get violations_of_factory => 'Violations of factory';
+
+  @override
+  String get private => 'exclusively';
 
   @override
   String get face_image_required_proceed => 'Face image is required to proceed';

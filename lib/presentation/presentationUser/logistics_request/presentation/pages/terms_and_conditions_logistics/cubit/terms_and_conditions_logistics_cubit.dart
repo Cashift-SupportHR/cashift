@@ -21,17 +21,19 @@ class TermsAndConditionsLogisticsCubit extends BaseCubit {
     );
   }
 
+
   addLogistic(AddLogisticPrams params) async {
-    executeListener(
-      () async => await _repository.CanSubmitLogistics(),
-      onSuccess: (value) async {
-        try {
-          final data = await _repository.addLogistic(params);
-          emit((SuccessStateListener(data: data)));
-        } catch (e) {
-          emit(FailureStateListener(e));
-        }
-      },
-    );
+    executeEmitterListener(() async =>   _repository.addLogistic(params));
+    // executeListener(
+    //   () async => await _repository.CanSubmitLogistics(),
+    //   onSuccess: (value) async {
+    //     try {
+    //       final data = await _repository.addLogistic(params);
+    //       emit((SuccessStateListener(data: data)));
+    //     } catch (e) {
+    //       emit(FailureStateListener(e));
+    //     }
+    //   },
+    // );
   }
 }

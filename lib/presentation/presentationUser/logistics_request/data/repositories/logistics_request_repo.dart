@@ -14,9 +14,9 @@ class LogisticsRequestRepository {
 
   LogisticsRequestRepository(this._api);
 
-  Future<String> addLogistic(AddLogisticPrams params) async {
-    final response = await _api.addLogistic(params);
-    return response.message ?? '';
+  Future<ApiResponse> addLogistic(AddLogisticPrams params) async {
+    return await _api.addLogistic(params);
+
   }
 
   Future<ApiResponse> CanSubmitLogistics() async {

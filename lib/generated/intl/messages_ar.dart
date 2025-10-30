@@ -917,6 +917,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "failed_processing": MessageLookupByLibrary.simpleMessage(
       "عدد الغير مكتمل :",
     ),
+    "favorite_housing_locations": MessageLookupByLibrary.simpleMessage(
+      "حدد الأحياء المفضلة",
+    ),
     "favorite_jobs": MessageLookupByLibrary.simpleMessage("الفرص المفضلة"),
     "favorite_places": MessageLookupByLibrary.simpleMessage("الأماكن المفضلة"),
     "favorite_projects": MessageLookupByLibrary.simpleMessage(
@@ -1631,6 +1634,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pricing_adjustment": MessageLookupByLibrary.simpleMessage("تعديل التسعير"),
     "print_qr_code": MessageLookupByLibrary.simpleMessage("طباعه QR code"),
     "priority_level": MessageLookupByLibrary.simpleMessage("درجة الاهمية"),
+    "private": MessageLookupByLibrary.simpleMessage("حصريا"),
     "procedures": MessageLookupByLibrary.simpleMessage("الاجراءات"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "project": MessageLookupByLibrary.simpleMessage("المشروع "),

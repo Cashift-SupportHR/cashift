@@ -979,6 +979,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "failed_processing": MessageLookupByLibrary.simpleMessage(
       "Incomplete number:",
     ),
+    "favorite_housing_locations": MessageLookupByLibrary.simpleMessage(
+      "Select your preferred neighborhoods",
+    ),
     "favorite_jobs": MessageLookupByLibrary.simpleMessage("Favorite jobs"),
     "favorite_places": MessageLookupByLibrary.simpleMessage("Favorite places"),
     "favorite_projects": MessageLookupByLibrary.simpleMessage(
@@ -1750,6 +1753,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "print_qr_code": MessageLookupByLibrary.simpleMessage("Print QR code"),
     "priority_level": MessageLookupByLibrary.simpleMessage("Priority level"),
+    "private": MessageLookupByLibrary.simpleMessage("exclusively"),
     "procedures": MessageLookupByLibrary.simpleMessage("Procedures"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "project": MessageLookupByLibrary.simpleMessage("the project"),

@@ -8783,6 +8783,12 @@ abstract class AppLocalizations {
   /// **'بيانات موقع السكن'**
   String get housing_location_data;
 
+  /// No description provided for @favorite_housing_locations.
+  ///
+  /// In ar, this message translates to:
+  /// **'حدد الأحياء المفضلة'**
+  String get favorite_housing_locations;
+
   /// No description provided for @violations_of_operation.
   ///
   /// In ar, this message translates to:
@@ -8794,6 +8800,12 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'مخالفات المصانع'**
   String get violations_of_factory;
+
+  /// No description provided for @private.
+  ///
+  /// In ar, this message translates to:
+  /// **'حصريا'**
+  String get private;
 
   /// No description provided for @face_image_required_proceed.
   ///

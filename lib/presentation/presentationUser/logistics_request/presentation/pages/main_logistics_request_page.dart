@@ -1,10 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/additionalVehicleSpecifications/additional_vehicle_specifications_page.dart';
-import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/basicVehicleInformation/basic_vehicle_info_page.dart';
-import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/covenantsVehicles/view/covenants_vehicles_page.dart';
-import 'package:shiftapp/presentation/adminFeatures/vehicles/presentation/add/pages/plateLicenseInformation/plate_license_info_page.dart';
-import 'package:shiftapp/presentation/presentationUser/logistics_request/presentation/pages/select_car/screens/vehicle_type_page.dart';
+import 'package:flutter/material.dart'; import 'package:shiftapp/presentation/presentationUser/logistics_request/presentation/pages/select_car/screens/vehicle_type_page.dart';
 import 'package:shiftapp/presentation/presentationUser/logistics_request/presentation/pages/terms_and_conditions_logistics/screens/terms_and_conditions_logistics_page.dart';
 import 'package:shiftapp/presentation/shared/components/app_widgets.dart';
 import 'package:shiftapp/presentation/shared/components/base_stateless_widget.dart';
@@ -32,7 +27,7 @@ class MainLogisticsRequestPage extends BaseStatelessWidget {
 
         labels: [
           strings.vehicle_type,
-          strings.license_data,
+         // strings.license_data,
           strings.location_data,
           strings.terms_and_conditions,
         ],
@@ -45,24 +40,24 @@ class MainLogisticsRequestPage extends BaseStatelessWidget {
             },
           ),
 
-          LicenseDataPage(
-            onNext: (License license) {
-              addLogisticPrams.license = license;
-              animateToPage(2);
-            },
-            onPrevious: () {
-              animateToPage(0);
-            },
-          ),
+          // LicenseDataPage(
+          //   onNext: (License license) {
+          //     addLogisticPrams.license = license;
+          //     animateToPage(2);
+          //   },
+          //   onPrevious: () {
+          //     animateToPage(0);
+          //   },
+          // ),
 
           LocationDataPage(
             onNext: (AddLogisticPrams data) {
               addLogisticPrams.location = data.location;
               addLogisticPrams.preferredDistrictIds = data.preferredDistrictIds;
-              animateToPage(3);
+              animateToPage(2);
             },
             onPrevious: () {
-              animateToPage(1);
+              animateToPage(0);
             },
           ),
           TermsAndConditionsLogisticsPage(
@@ -71,7 +66,7 @@ class MainLogisticsRequestPage extends BaseStatelessWidget {
 
             },
             onPrevious: () {
-              animateToPage(2);
+              animateToPage(1);
             },
           ),
         ],

@@ -30,8 +30,10 @@ class JobOfferSliderDto {
   List<SliderDetails>? details;
   @JsonKey(name: 'footer')
   SliderFooter? footer;
+  @JsonKey(name: 'isOnlyBackGround')
+  bool? isOnlyBackGround;
 
-  JobOfferSliderDto({ this.id, this.code, this.jobName, this.description, this.mainLogo, this.backGroundLogo, this.companyLogo, this.actionName, this.header, this.details, this.footer});
+  JobOfferSliderDto({ this.id,this.isOnlyBackGround, this.code, this.jobName, this.description, this.mainLogo, this.backGroundLogo, this.companyLogo, this.actionName, this.header, this.details, this.footer});
 
   factory JobOfferSliderDto.fromJson(Map<String, dynamic> json) => _$JobOfferSliderDtoFromJson(json);
 
