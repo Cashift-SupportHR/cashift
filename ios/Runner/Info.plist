@@ -2,10 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>BGTaskSchedulerPermittedIdentifiers</key>
-	<array>
-		<string>dev.flutter.background.refresh</string>
-	</array>
+
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
@@ -58,7 +55,6 @@ Until allowing to start your working hours </string>
 	<array>
 		<string>fetch</string>
 		<string>location</string>
-		<string>processing</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
@@ -86,14 +82,7 @@ Until allowing to start your working hours </string>
     <true/>
     <key>UIFileSharingEnabled</key>
     <true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
-	<key>BGTaskSchedulerPermittedIdentifiers</key>
-           <array>
-               <string>dev.flutter.background.refresh</string>
-           </array>
-          <key>NSMotionUsageDescription</key>
-              <string>Motion usage description</string>
+
 
     <key>NSPhotoLibraryUsageDescription</key>
 	<string>The application needs to record a video for scan qr process to ensure that you are on the job site</string>
