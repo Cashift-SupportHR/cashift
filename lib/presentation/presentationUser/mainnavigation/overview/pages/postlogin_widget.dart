@@ -29,6 +29,7 @@ class PostLoginWidget extends BaseStatelessWidget {
   final Function(DateTime? dateTime) onChangeDate;
   final Function(OverviewEvents event) onRequestEvent;
   final Function(int) onApplyJobNow;
+  final Function( ) canSubmitLogistics;
   final Function(int) onCheckCertificateJob;
 
   StreamStateInitial<OffersViewType> offersViewTypeController = StreamStateInitial<OffersViewType>();
@@ -36,6 +37,7 @@ class PostLoginWidget extends BaseStatelessWidget {
     required this.onRefresh,
     required this.onChangeDate,
     required this.postLoginState,
+    required this.canSubmitLogistics,
     required this.onRequestEvent,
     required this.onApplyJobNow,
     required this.onCheckCertificateJob,
@@ -63,8 +65,12 @@ class PostLoginWidget extends BaseStatelessWidget {
           height: 16,
         ),
         JobOffersSlidersWidget(
+
           onApplyJobNow: (id) {
             onApplyJobNow(id);
+          },
+          canSubmitLogistics: ( ) {
+            canSubmitLogistics( );
           },
           jobOffersSliders: postLoginState.jobOffersSliders,
         ),

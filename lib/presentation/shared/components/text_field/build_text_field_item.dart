@@ -170,9 +170,13 @@ class _CustomEndIcon extends StatelessWidget {
       padding: const EdgeInsets.all(6),
       margin: const EdgeInsetsDirectional.only(start: 10, bottom: 2),
       width: 50,
-      child: InkWell(
-        onTap: onTap,
-        child: kLoadSvgInCirclePath(icon, height: size ?? 34, width: size ?? 34),
+      height: 50,
+      child: Padding(
+        padding: const EdgeInsets.all(5.0),
+        child: InkWell(
+          onTap: onTap,
+          child: kLoadSvgInCirclePath(icon, height: size ?? 25, width: size ?? 25),
+        ),
       ),
     );
   }

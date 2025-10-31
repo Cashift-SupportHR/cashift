@@ -5765,6 +5765,12 @@ abstract class AppLocalizations {
   /// **'اوافق علي جميع الشروط والأحكام'**
   String get terms_and_conditions_message;
 
+  /// No description provided for @terms_and_conditions_accept.
+  ///
+  /// In ar, this message translates to:
+  /// **'من فضلك وافق علي جميع الشروط والأحكام'**
+  String get terms_and_conditions_accept;
+
   /// No description provided for @installment_postponement_desc.
   ///
   /// In ar, this message translates to:
@@ -8741,6 +8747,48 @@ abstract class AppLocalizations {
   /// **'إعادة تحميل'**
   String get reload;
 
+  /// No description provided for @terms_and_conditions.
+  ///
+  /// In ar, this message translates to:
+  /// **'الشروط والأحكام'**
+  String get terms_and_conditions;
+
+  /// No description provided for @location_data.
+  ///
+  /// In ar, this message translates to:
+  /// **'بيانات الموقع'**
+  String get location_data;
+
+  /// No description provided for @license_data.
+  ///
+  /// In ar, this message translates to:
+  /// **'بيانات الرخصة'**
+  String get license_data;
+
+  /// No description provided for @housing_location.
+  ///
+  /// In ar, this message translates to:
+  /// **'موقع سكنك'**
+  String get housing_location;
+
+  /// No description provided for @select_housing_location.
+  ///
+  /// In ar, this message translates to:
+  /// **'حدد موقع سكنك'**
+  String get select_housing_location;
+
+  /// No description provided for @housing_location_data.
+  ///
+  /// In ar, this message translates to:
+  /// **'بيانات موقع السكن'**
+  String get housing_location_data;
+
+  /// No description provided for @favorite_housing_locations.
+  ///
+  /// In ar, this message translates to:
+  /// **'حدد الأحياء المفضلة'**
+  String get favorite_housing_locations;
+
   /// No description provided for @violations_of_operation.
   ///
   /// In ar, this message translates to:
@@ -8752,6 +8800,12 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'مخالفات المصانع'**
   String get violations_of_factory;
+
+  /// No description provided for @private.
+  ///
+  /// In ar, this message translates to:
+  /// **'حصريا'**
+  String get private;
 
   /// No description provided for @face_image_required_proceed.
   ///

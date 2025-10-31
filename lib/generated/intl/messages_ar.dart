@@ -781,6 +781,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "يحتاج التطبيق السماح بإستخدام الكاميرا وملفات الذاكرة , من فضلك اضف الاذونات من خلال الاعدادت"),
         "failed_processing":
             MessageLookupByLibrary.simpleMessage("عدد الغير مكتمل :"),
+        "favorite_housing_locations":
+            MessageLookupByLibrary.simpleMessage("حدد الأحياء المفضلة"),
         "favorite_jobs": MessageLookupByLibrary.simpleMessage("الفرص المفضلة"),
         "favorite_places":
             MessageLookupByLibrary.simpleMessage("الأماكن المفضلة"),
@@ -866,6 +868,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home_address": MessageLookupByLibrary.simpleMessage("عنوان المنزل"),
         "hour": MessageLookupByLibrary.simpleMessage("ساعة"),
         "hours": MessageLookupByLibrary.simpleMessage("ساعات "),
+        "housing_location": MessageLookupByLibrary.simpleMessage("موقع سكنك"),
+        "housing_location_data":
+            MessageLookupByLibrary.simpleMessage("بيانات موقع السكن"),
         "how_accept_job":
             MessageLookupByLibrary.simpleMessage("طريقة قبول الفرصه"),
         "i_accept": MessageLookupByLibrary.simpleMessage("أوافق على"),
@@ -983,6 +988,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("المستوي في الانجليزي"),
         "license_and_plate_information":
             MessageLookupByLibrary.simpleMessage("معلومات اللوحة والرخصة"),
+        "license_data": MessageLookupByLibrary.simpleMessage("بيانات الرخصة"),
         "license_expiry_date":
             MessageLookupByLibrary.simpleMessage("تاريخ انتهاء الرخصة"),
         "license_number": MessageLookupByLibrary.simpleMessage("رقم الرخصة"),
@@ -1011,6 +1017,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "قم بتحديد المنطقة علي الخريطة"),
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "location_accuracy": MessageLookupByLibrary.simpleMessage("دقة الموقع"),
+        "location_data": MessageLookupByLibrary.simpleMessage("بيانات الموقع"),
         "location_disclosure": MessageLookupByLibrary.simpleMessage(
             "يجمع هذا التطبيق بيانات الموقع لمساعدتك في العثور على الفرص القريبة والتحقق من موقعك عند بدء العمل، حتى عندما يكون التطبيق مغلقًا أو غير قيد الاستخدام."),
         "location_gas_stations": MessageLookupByLibrary.simpleMessage(
@@ -1364,6 +1371,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تعديل التسعير"),
         "print_qr_code": MessageLookupByLibrary.simpleMessage("طباعه QR code"),
         "priority_level": MessageLookupByLibrary.simpleMessage("درجة الاهمية"),
+        "private": MessageLookupByLibrary.simpleMessage("حصريا"),
         "procedures": MessageLookupByLibrary.simpleMessage("الاجراءات"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "project": MessageLookupByLibrary.simpleMessage("المشروع "),
@@ -1618,6 +1626,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تحديد"),
         "select_gate_type":
             MessageLookupByLibrary.simpleMessage("اختر نوع البوابة"),
+        "select_housing_location":
+            MessageLookupByLibrary.simpleMessage("حدد موقع سكنك"),
         "select_how_accept_job":
             MessageLookupByLibrary.simpleMessage("اختر طريقة قبول الفرصة"),
         "select_installment_package":
@@ -1807,6 +1817,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الدعم الفني"),
         "temporary_fingerprint":
             MessageLookupByLibrary.simpleMessage("بصمة انصراف مؤقته"),
+        "terms_and_conditions":
+            MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
+        "terms_and_conditions_accept": MessageLookupByLibrary.simpleMessage(
+            "من فضلك وافق علي جميع الشروط والأحكام"),
         "terms_and_conditions_message": MessageLookupByLibrary.simpleMessage(
             "اوافق علي جميع الشروط والأحكام"),
         "terms_conditions_job":

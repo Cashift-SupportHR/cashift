@@ -14003,11 +14003,101 @@ class S {
     );
   }
 
+  /// `Terms and Conditions`
+  String get terms_and_conditions {
+    return Intl.message(
+      'Terms and Conditions',
+      name: 'terms_and_conditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location Data`
+  String get location_data {
+    return Intl.message(
+      'Location Data',
+      name: 'location_data',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `License Data`
+  String get license_data {
+    return Intl.message(
+      'License Data',
+      name: 'license_data',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Housing Location`
+  String get housing_location {
+    return Intl.message(
+      'Housing Location',
+      name: 'housing_location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Housing Location`
+  String get select_housing_location {
+    return Intl.message(
+      'Select Housing Location',
+      name: 'select_housing_location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Housing Location Data`
+  String get housing_location_data {
+    return Intl.message(
+      'Housing Location Data',
+      name: 'housing_location_data',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Violations of operation`
   String get violations_of_operation {
     return Intl.message(
       'Violations of operation',
       name: 'violations_of_operation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `exclusively`
+  String get private {
+    return Intl.message(
+      'exclusively',
+      name: 'private',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your preferred neighborhoods`
+  String get favorite_housing_locations {
+    return Intl.message(
+      'Select your preferred neighborhoods',
+      name: 'favorite_housing_locations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please agree to all terms and conditions`
+  String get terms_and_conditions_accept {
+    return Intl.message(
+      'Please agree to all terms and conditions',
+      name: 'terms_and_conditions_accept',
       desc: '',
       args: [],
     );

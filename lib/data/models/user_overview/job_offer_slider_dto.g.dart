@@ -9,6 +9,8 @@ part of 'job_offer_slider_dto.dart';
 JobOfferSliderDto _$JobOfferSliderDtoFromJson(Map<String, dynamic> json) =>
     JobOfferSliderDto(
       id: (json['id'] as num?)?.toInt(),
+      isOnlyBackGround: json['isOnlyBackGround'] as bool?,
+      code: json['code'] as String?,
       jobName: json['jobName'] as String?,
       description: json['description'] as String?,
       mainLogo: json['mainLogo'] as String?,
@@ -30,6 +32,7 @@ Map<String, dynamic> _$JobOfferSliderDtoToJson(JobOfferSliderDto instance) =>
     <String, dynamic>{
       'id': instance.id,
       'jobName': instance.jobName,
+      'code': instance.code,
       'description': instance.description,
       'mainLogo': instance.mainLogo,
       'backGroundLogo': instance.backGroundLogo,
@@ -38,4 +41,5 @@ Map<String, dynamic> _$JobOfferSliderDtoToJson(JobOfferSliderDto instance) =>
       'header': instance.header,
       'details': instance.details,
       'footer': instance.footer,
+      'isOnlyBackGround': instance.isOnlyBackGround,
     };

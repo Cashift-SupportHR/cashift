@@ -802,6 +802,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "The application needs permission to use the camera and memory files. Please add permissions through the settings."),
         "failed_processing":
             MessageLookupByLibrary.simpleMessage("Incomplete number:"),
+        "favorite_housing_locations": MessageLookupByLibrary.simpleMessage(
+            "Select your preferred neighborhoods"),
         "favorite_jobs": MessageLookupByLibrary.simpleMessage("Favorite jobs"),
         "favorite_places":
             MessageLookupByLibrary.simpleMessage("Favorite places"),
@@ -894,6 +896,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "home_address": MessageLookupByLibrary.simpleMessage("Home address"),
         "hour": MessageLookupByLibrary.simpleMessage("hour"),
         "hours": MessageLookupByLibrary.simpleMessage("hours"),
+        "housing_location":
+            MessageLookupByLibrary.simpleMessage("Housing Location"),
+        "housing_location_data":
+            MessageLookupByLibrary.simpleMessage("Housing Location Data"),
         "how_accept_job": MessageLookupByLibrary.simpleMessage(
             "How to accept the opportunity"),
         "i_accept": MessageLookupByLibrary.simpleMessage("I accept"),
@@ -1012,6 +1018,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "level_eng": MessageLookupByLibrary.simpleMessage("Level in English"),
         "license_and_plate_information": MessageLookupByLibrary.simpleMessage(
             "License and plate information"),
+        "license_data": MessageLookupByLibrary.simpleMessage("License Data"),
         "license_expiry_date":
             MessageLookupByLibrary.simpleMessage("License expiry date"),
         "license_number":
@@ -1043,6 +1050,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "location": MessageLookupByLibrary.simpleMessage("location"),
         "location_accuracy":
             MessageLookupByLibrary.simpleMessage("Location accuracy"),
+        "location_data": MessageLookupByLibrary.simpleMessage("Location Data"),
         "location_disclosure": MessageLookupByLibrary.simpleMessage(
             "This app collects location data to help you find nearby opportunities and verify your location when starting work, even when the app is closed or not in use."),
         "location_gas_stations": MessageLookupByLibrary.simpleMessage(
@@ -1411,6 +1419,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "print_qr_code": MessageLookupByLibrary.simpleMessage("Print QR code"),
         "priority_level":
             MessageLookupByLibrary.simpleMessage("Priority level"),
+        "private": MessageLookupByLibrary.simpleMessage("exclusively"),
         "procedures": MessageLookupByLibrary.simpleMessage("Procedures"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "project": MessageLookupByLibrary.simpleMessage("the project"),
@@ -1680,6 +1689,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Select"),
         "select_gate_type":
             MessageLookupByLibrary.simpleMessage("Select gate type"),
+        "select_housing_location":
+            MessageLookupByLibrary.simpleMessage("Select Housing Location"),
         "select_how_accept_job": MessageLookupByLibrary.simpleMessage(
             "Select how to accept the job"),
         "select_installment_package":
@@ -1880,6 +1891,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Technical support"),
         "temporary_fingerprint":
             MessageLookupByLibrary.simpleMessage("Temporary fingerprint"),
+        "terms_and_conditions":
+            MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
+        "terms_and_conditions_accept": MessageLookupByLibrary.simpleMessage(
+            "Please agree to all terms and conditions"),
         "terms_and_conditions_message": MessageLookupByLibrary.simpleMessage(
             "I agree to all terms and conditions"),
         "terms_conditions_job": MessageLookupByLibrary.simpleMessage(
