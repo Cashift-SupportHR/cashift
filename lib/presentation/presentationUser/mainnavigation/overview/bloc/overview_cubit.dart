@@ -29,6 +29,7 @@ import '../../../../../data/models/user_overview/index.dart';
 import '../../../../../domain/entities/required_tasks/index.dart';
 import '../../../../../domain/usecases/tasks_notifications_usecase.dart';
 import '../../../geofence/geo_task.dart';
+import '../../../logistics_request/data/repositories/logistics_request_repo.dart';
 import 'overview_bloc.dart';
 import 'overview_state.dart';
 
@@ -42,10 +43,11 @@ class OverviewCubit extends BaseCubit {
   final ProfileRepository _profileRepository;
   final RequiredTasksUseCase _requiredTasksUseCase;
   final ProfileRepository profileRepository;
-
+  final LogisticsRequestRepository logisticsRequestRepository;
   OverviewCubit(
     this._offersRepository,
     this._userRepository,
+    this.logisticsRequestRepository,
     this._activityLogRepository,
     this._profileRepository,
     this._requiredTasksUseCase,
@@ -85,8 +87,9 @@ class OverviewCubit extends BaseCubit {
 
   _fetchCurrentShiftFromTasks(List<InAppRequiredTask> tasks) async {
     try {
-      final task =
-          tasks.firstWhereOrNull((element) => element.requiredStartShift());
+      final task = tasks.firstWhereOrNull(
+        (element) => element.requiredStartShift(),
+      );
       if (task?.toAppliedOffer() != null) {
         currentShiftState.setData(task!.toAppliedOffer()!);
       } else {
@@ -114,7 +117,8 @@ class OverviewCubit extends BaseCubit {
       jobOffers.setData(response);
       allOffers = response;
       print(
-          'fetchOpportunities ${jobOffers.stream.length} , ${response.length}');
+        'fetchOpportunities ${jobOffers.stream.length} , ${response.length}',
+      );
     } catch (e) {
       jobOffers.setError(e);
       checkErrorType(e);
@@ -163,8 +167,8 @@ class OverviewCubit extends BaseCubit {
     try {
       final response = await _offersRepository.fetchJobOffersSliders();
       jobOffersSliders.setData(
-          response.payload?.map((e) => JobOfferSlider.fromDto(e)).toList() ??
-              []);
+        response.payload?.map((e) => JobOfferSlider.fromDto(e)).toList() ?? [],
+      );
     } catch (e) {
       jobOffersSliders.setError(e);
       checkErrorType(e);
@@ -209,7 +213,7 @@ class OverviewCubit extends BaseCubit {
     try {
       final response = await _offersRepository.fetchStartSoonShift();
       return response.payload?.builder();
-//      final response = await _offersRepository.fetchAppliedOpportunities(1);
+      //      final response = await _offersRepository.fetchAppliedOpportunities(1);
       //  return response?.first.builder();
     } catch (e) {
       return null;
@@ -219,7 +223,8 @@ class OverviewCubit extends BaseCubit {
   checkErrorType(e) {
     if (e is DioError) {
       print(
-          'checkErrorType is time error ${e.type == DioExceptionType.connectionTimeout} ');
+        'checkErrorType is time error ${e.type == DioExceptionType.connectionTimeout} ',
+      );
       if (e.error is SocketException ||
           e.error is WebSocketException ||
           e.error is HandshakeException ||
@@ -235,11 +240,14 @@ class OverviewCubit extends BaseCubit {
   }
 
   List<JobOfferDto> filterJobsOffers(
-      DateTime dateTime, List<JobOfferDto> list) {
-    final filterItems = list.where((element) {
-      final sameDate = element.workingDateTime().isSameDate(dateTime);
-      return sameDate;
-    }).toList();
+    DateTime dateTime,
+    List<JobOfferDto> list,
+  ) {
+    final filterItems =
+        list.where((element) {
+          final sameDate = element.workingDateTime().isSameDate(dateTime);
+          return sameDate;
+        }).toList();
     return filterItems;
   }
 
@@ -274,8 +282,10 @@ class OverviewCubit extends BaseCubit {
   }
 
   void filterFavorites(DateTime dateTime) {
-    final favoritesFilterItems =
-        filterJobsOffers(dateTime, jobFavoritesOffersList);
+    final favoritesFilterItems = filterJobsOffers(
+      dateTime,
+      jobFavoritesOffersList,
+    );
     if (favoritesFilterItems.isNotEmpty) {
       jobFavoritesOffers.setData(favoritesFilterItems);
     } else {
@@ -298,7 +308,7 @@ class OverviewCubit extends BaseCubit {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     final isFirst =
         prefs.getBool(LocalConstants.FirstOpenDialogPermissionGeofencing) ??
-            false;
+        false;
     setFirstOpenDialogPermissionGeofencing();
     return isFirst;
   }
@@ -308,8 +318,6 @@ class OverviewCubit extends BaseCubit {
     return data.payload;
   }
 
-
-
   void loadInitialData() async {
     emit(LoadingState());
     try {
@@ -317,33 +325,40 @@ class OverviewCubit extends BaseCubit {
         final appFeatures = await _profileRepository.getAccountServices();
         final haveAdminFeatures = appFeatures.adminEnable == true;
 
-        emit(OverviewPostLoginState(
-          jobOffers,
-          vipOffers: jobVipOffers,
-          favoritesOffers: jobFavoritesOffers,
-          currentShift: currentShiftState,
-          specialOffers: specialOffers,
-          workingHours: appliedOffers,
-          haveAdminPrivilege: haveAdminFeatures,
-          inAppNotificationStream: inAppNotificationStream,
-          /*workingHours: appliedOffers*/
-          jobOffersSliders: jobOffersSliders,
-        ));
+        emit(
+          OverviewPostLoginState(
+            jobOffers,
+            vipOffers: jobVipOffers,
+            favoritesOffers: jobFavoritesOffers,
+            currentShift: currentShiftState,
+            specialOffers: specialOffers,
+            workingHours: appliedOffers,
+            haveAdminPrivilege: haveAdminFeatures,
+            inAppNotificationStream: inAppNotificationStream,
+            /*workingHours: appliedOffers*/
+            jobOffersSliders: jobOffersSliders,
+          ),
+        );
         clearData();
-        Future.wait<dynamic>(
-            [fetchAppliedOpportunities(), fetchOpportunities()]);
+        Future.wait<dynamic>([
+          fetchAppliedOpportunities(),
+          fetchOpportunities(),
+        ]);
 
         final tasks = await fetchInAppNotification();
         final startSoonShift = tasks.firstWhereOrNull(
-            (element) => element.requiredConfirmStartSoonShift());
-        final requiredTasks =
-            tasks.where((element) => element.isRequired == true);
+          (element) => element.requiredConfirmStartSoonShift(),
+        );
+        final requiredTasks = tasks.where(
+          (element) => element.isRequired == true,
+        );
         final tasksTypes = requiredTasks.map((e) => e.type.toString()).toList();
         requiredTasks.forEach((element) {
           print('requiredTasksJSON ${element.toJson()}');
         });
-        final employeeAttendanceTime = tasks
-            .firstWhereOrNull((element) => element.employeeAttendanceTime());
+        final employeeAttendanceTime = tasks.firstWhereOrNull(
+          (element) => element.employeeAttendanceTime(),
+        );
 
         if (tasksTypes.contains(RequiredTasksTypes.dtaAttendance)) {
           emit(RequiredRegisterAttendanceState());
@@ -354,8 +369,9 @@ class OverviewCubit extends BaseCubit {
         if (employeeAttendanceTime != null) {
           print('RequiredTasksTypes.employeeAttendanceTime');
           bool isFirst = await getFirstOpenDialogPermissionGeofencing();
-          TimeAutoAttendanceDto geoTask =
-              TimeAutoAttendanceDto.fromJson(employeeAttendanceTime.objects);
+          TimeAutoAttendanceDto geoTask = TimeAutoAttendanceDto.fromJson(
+            employeeAttendanceTime.objects,
+          );
           emit(EmployeeAttendanceTimeState(geoTask, isFirst));
         }
 
@@ -366,32 +382,43 @@ class OverviewCubit extends BaseCubit {
           bool isFirst = dislcouserOpened;
 
           final projectInfoJson = requiredTasks.firstWhere(
-              (element) => element.type == RequiredTasksTypes.autoAttendance);
-          GeoTask geoTask =
-              GeoTask.fromJson(projectInfoJson.objects, job: GeoJob.DTA);
+            (element) => element.type == RequiredTasksTypes.autoAttendance,
+          );
+          GeoTask geoTask = GeoTask.fromJson(
+            projectInfoJson.objects,
+            job: GeoJob.DTA,
+          );
           emit(RequiredAutoAttendanceState(geoTask, isFirst));
         }
         if (startSoonShift?.toAppliedOffer() != null) {
-          emit(StartSoonShiftListener(
-              appliedOffer: startSoonShift!.toAppliedOffer()!));
+          emit(
+            StartSoonShiftListener(
+              appliedOffer: startSoonShift!.toAppliedOffer()!,
+            ),
+          );
         }
         if (tasksTypes.contains(RequiredTasksTypes.clearanceCertificate)) {
-          final task = requiredTasks.firstWhere((element) =>
-              element.type == RequiredTasksTypes.clearanceCertificate);
+          final task = requiredTasks.firstWhere(
+            (element) =>
+                element.type == RequiredTasksTypes.clearanceCertificate,
+          );
           DisclosureRequiredTaskDto requiredTaskDto =
               DisclosureRequiredTaskDto.fromJson(task.objects);
           emit(DisclosureRequiredTaskState(disclosureTaskDto: requiredTaskDto));
         }
         if (tasksTypes.contains(RequiredTasksTypes.confirmOrApologize)) {
-          final task = requiredTasks.firstWhere((element) =>
-              element.type == RequiredTasksTypes.confirmOrApologize);
-          ConfirmAttendance confirmAttendance =
-              ConfirmAttendance.fromJson(task.objects);
+          final task = requiredTasks.firstWhere(
+            (element) => element.type == RequiredTasksTypes.confirmOrApologize,
+          );
+          ConfirmAttendance confirmAttendance = ConfirmAttendance.fromJson(
+            task.objects,
+          );
           emit(ConfirmAttendanceState(confirmAttendance: confirmAttendance));
         }
 
-        InAppRequiredTask? dynamicForm = requiredTasks
-            .firstWhereOrNull((element) => element.isDynamicForm == true);
+        InAppRequiredTask? dynamicForm = requiredTasks.firstWhereOrNull(
+          (element) => element.isDynamicForm == true,
+        );
         if (dynamicForm != null && dynamicForm.isDynamicForm == true) {
           emit(DynamicFormState(inAppRequiredTask: dynamicForm));
         }
@@ -399,12 +426,12 @@ class OverviewCubit extends BaseCubit {
         fetchSpecialOpportunities();
         fetchVipOpportunities();
         fetchFavoritesOpportunities();
-
       } else {
         await fetchJobOffersSliders();
         await fetchOpportunitiesUnAuth();
-        emit(OverviewPreLoginState(jobOffers,
-            jobOffersSliders: jobOffersSliders));
+        emit(
+          OverviewPreLoginState(jobOffers, jobOffersSliders: jobOffersSliders),
+        );
       }
     } catch (e) {
       print('ErrorState OVERVIEW ${e}');
@@ -414,11 +441,23 @@ class OverviewCubit extends BaseCubit {
 
   void confirmActivity(ConfirmActivityParams params) {
     executeEmitterListener(
-        () => _activityLogRepository.confirmActivity(params));
+      () => _activityLogRepository.confirmActivity(params),
+    );
   }
 
   void applyJobNow(int id) {
+
     executeEmitterListener(() => _offersRepository.addFreeLanceOffer(id));
+  }
+
+  Future<void> canSubmitLogistics() async {
+    try {
+    await  logisticsRequestRepository.CanSubmitLogistics() ;
+       emit(CanSubmitLogistics());
+    } catch (e) {
+      emit(FailureStateListener(e));
+    }
+
   }
 
   void requestEvent(OverviewEvents event) {

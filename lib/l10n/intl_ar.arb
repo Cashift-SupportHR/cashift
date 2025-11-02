@@ -982,6 +982,7 @@
   "face_not_matched": "بصمة الوجه غير متطابقة",
   "seen": "تم الاطلاع",
   "terms_and_conditions_message": "اوافق علي جميع الشروط والأحكام",
+  "terms_and_conditions_accept": "من فضلك وافق علي جميع الشروط والأحكام",
   "installment_postponement_desc": "في حال التأكيد علي عدم الموافقه في اصدار الوثيقه سوف يتم تجميد الحساب",
   "what_is_reason": "ماهو السبب؟",
   "type_reason": "اكتب السبب...",
@@ -1481,8 +1482,18 @@
   "delivery_date": "تاريخ الاستلام",
   "entity": "الجهة",
   "reload": "إعادة تحميل",
+  "terms_and_conditions": "الشروط والأحكام",
+  "location_data": "بيانات الموقع",
+  "license_data": "بيانات الرخصة",
+  "housing_location": "موقع سكنك",
+  "select_housing_location": "حدد موقع سكنك",
+  "housing_location_data": "بيانات موقع السكن",
+  "favorite_housing_locations": "حدد الأحياء المفضلة",
+
   "violations_of_operation": "مخالفات التشغيل",
   "violations_of_factory": "مخالفات المصانع",
   "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة",
   "cashifter_on_map": "كاشفتر علي الخريطة"
+  "private": "حصريا",
+  "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة"
 }

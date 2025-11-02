@@ -14,6 +14,7 @@ class OverviewScreenV2 extends BaseWidget {
   final Function(DateTime? dateTime) onChangeDate;
   final Function(int) onApplyJobNow;
   final Function(int) onCheckCertificateJob;
+  final Function( ) canSubmitLogistics;
 
   OverviewScreenV2(
       {Key? key,
@@ -22,6 +23,7 @@ class OverviewScreenV2 extends BaseWidget {
       required this.onRequestEvent,
       required this.onChangeDate,
       required this.onApplyJobNow,
+      required this.canSubmitLogistics,
       required this.onCheckCertificateJob
       })
       : super(key: key);
@@ -60,6 +62,7 @@ class OverviewScreenV2 extends BaseWidget {
       onRequestEvent: onRequestEvent,
       postLoginState: postLoginState,
       onApplyJobNow: onApplyJobNow,
+      canSubmitLogistics: canSubmitLogistics,
       onCheckCertificateJob: onCheckCertificateJob,
     );
   }

@@ -564,6 +564,7 @@ class InitializedUser extends Initialized {
 }
 
 class ToggledUserState extends CommonStateFListener {}
+class CanSubmitLogistics extends CommonStateFListener {}
 
 class InitializedOpportunity<T> extends CommonStateFBuilder {
   List<Company> companies;
