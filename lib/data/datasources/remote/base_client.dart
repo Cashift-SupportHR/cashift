@@ -30,7 +30,7 @@ class ClientCreator {
     dio2.options.sendTimeout = Duration(seconds: 60);    // Send timeout
 
     // Set base URL
-    dio2.options.baseUrl =kTestApiUrl;  // Replace with your base URL
+    dio2.options.baseUrl =kBASE_URL;  // Replace with your base URL
 
 
 

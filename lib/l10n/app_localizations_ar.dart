@@ -4370,11 +4370,11 @@ class AppLocalizationsAr extends AppLocalizations {
   String get violations_of_factory => 'مخالفات المصانع';
 
   @override
-  String get private => 'حصريا';
-
-  @override
   String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';
 
   @override
   String get cashifter_on_map => 'كاشفتر علي الخريطة';
+
+  @override
+  String get private => 'حصريا';
 }

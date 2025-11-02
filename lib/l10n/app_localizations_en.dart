@@ -4370,11 +4370,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get violations_of_factory => 'Violations of factory';
 
   @override
-  String get private => 'exclusively';
-
-  @override
   String get face_image_required_proceed => 'Face image is required to proceed';
 
   @override
   String get cashifter_on_map => 'Cashifter on map';
+
+  @override
+  String get private => 'exclusively';
 }

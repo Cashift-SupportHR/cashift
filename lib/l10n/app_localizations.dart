@@ -8801,12 +8801,6 @@ abstract class AppLocalizations {
   /// **'مخالفات المصانع'**
   String get violations_of_factory;
 
-  /// No description provided for @private.
-  ///
-  /// In ar, this message translates to:
-  /// **'حصريا'**
-  String get private;
-
   /// No description provided for @face_image_required_proceed.
   ///
   /// In ar, this message translates to:
@@ -8818,6 +8812,12 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'كاشفتر علي الخريطة'**
   String get cashifter_on_map;
+
+  /// No description provided for @private.
+  ///
+  /// In ar, this message translates to:
+  /// **'حصريا'**
+  String get private;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
