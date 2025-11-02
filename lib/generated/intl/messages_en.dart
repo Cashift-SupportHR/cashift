@@ -460,6 +460,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Cashifter attendance tracking",
     ),
     "cashifter_name": MessageLookupByLibrary.simpleMessage("Cashifter name"),
+    "cashifter_on_map": MessageLookupByLibrary.simpleMessage(
+      "Cashifter on map",
+    ),
     "cashifters": MessageLookupByLibrary.simpleMessage("cashifters"),
     "cashifters_requests": MessageLookupByLibrary.simpleMessage(
       "Cashifters Requests",

@@ -8758,6 +8758,12 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'يجب اضافة بصمة الوجه للمتابعة'**
   String get face_image_required_proceed;
+
+  /// No description provided for @cashifter_on_map.
+  ///
+  /// In ar, this message translates to:
+  /// **'كاشفتر علي الخريطة'**
+  String get cashifter_on_map;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

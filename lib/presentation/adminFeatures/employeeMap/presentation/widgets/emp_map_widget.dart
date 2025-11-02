@@ -108,14 +108,30 @@ class MapDataScreen extends State<SearchEmployeeMapWidget> {
           onMapCreated: (controller) async {
             mapController = controller;
             mapController!.setMapStyle(getMapStyle());
-            await controller.animateCamera(CameraUpdate.newCameraPosition(
-              CameraPosition(
-                target: markers.isNotEmpty
-                    ? markers.first.position
-                    : const LatLng(24.78878, 46.6989),
-                zoom: 8.0,
-              ),
-            ));
+            if (widget.locations
+                .any((location) => location.isFirstCameraZoom == true)) {
+              final firstZoomLocation = widget.locations
+                  .firstWhere((location) => location.isFirstCameraZoom == true);
+              if (mapController != null) {
+                await mapController!.animateCamera(
+                    CameraUpdate.newCameraPosition(
+                      CameraPosition(
+                        target: LatLng(firstZoomLocation.lat ?? 0.0,
+                            firstZoomLocation.lng ?? 0.0),
+                        zoom: 8.0,
+                      ),
+                    ));
+              }
+            } else {
+              await controller.animateCamera(CameraUpdate.newCameraPosition(
+                CameraPosition(
+                  target: markers.isNotEmpty
+                      ? markers.first.position
+                      : const LatLng(24.78878, 46.6989),
+                  zoom: 8.0,
+                ),
+              ));
+            }
           },
           markers: markers,
           initialCameraPosition: CameraPosition(

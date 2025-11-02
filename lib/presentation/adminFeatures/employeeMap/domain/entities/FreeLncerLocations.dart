@@ -10,7 +10,9 @@ class FreeLncerLocations {
       this.name, 
       this.icone, 
       this.gender, 
-      this.isActive,});
+      this.isActive,
+      this.isFirstCameraZoom = false,
+  });
 
 
   int? id;
@@ -22,6 +24,7 @@ class FreeLncerLocations {
   String? icone;
   bool? gender;
   bool? isActive;
+  bool isFirstCameraZoom;
 
   factory FreeLncerLocations.fromDto(FreeLncerLocation json) {
     return FreeLncerLocations(

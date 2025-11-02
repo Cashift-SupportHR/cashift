@@ -1237,6 +1237,7 @@ Future<_i174.GetIt> $initGetIt(
   gh.factory<_i571.SearchEmployeeMapCubit>(() => _i571.SearchEmployeeMapCubit(
         gh<_i740.EmployeeMapRepository>(),
         gh<_i563.ResumeRepository>(),
+        gh<_i1028.UserRepository>(),
       ));
   gh.factory<_i161.PhoneWalletCubit>(
       () => _i161.PhoneWalletCubit(gh<_i565.BankRepository>()));

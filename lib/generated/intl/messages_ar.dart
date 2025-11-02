@@ -430,6 +430,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "متابعة حضور الكاشفتر",
     ),
     "cashifter_name": MessageLookupByLibrary.simpleMessage("اسم الكاشفتر"),
+    "cashifter_on_map": MessageLookupByLibrary.simpleMessage(
+      "كاشفتر علي الخريطة",
+    ),
     "cashifters": MessageLookupByLibrary.simpleMessage("كاشفترز"),
     "cashifters_requests": MessageLookupByLibrary.simpleMessage(
       "طلبات الكاشفترز",

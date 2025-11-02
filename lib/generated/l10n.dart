@@ -12234,6 +12234,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Cashifter on map`
+  String get cashifter_on_map {
+    return Intl.message(
+      'Cashifter on map',
+      name: 'cashifter_on_map',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

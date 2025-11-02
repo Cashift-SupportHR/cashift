@@ -23,6 +23,7 @@ import 'package:shiftapp/presentation/shared/components/adminToggle/cubit/admin_
 import 'package:shiftapp/presentation/shared/components/restart_app_widget.dart';
 import 'package:sizer/sizer.dart';
 import 'core/services/firebase_notification.dart';
+import 'core/services/link_handler.dart';
 import 'core/services/material_app_config.dart';
 import 'core/services/routes.dart';
 import 'data/datasources/remote/logger/app_loogers.dart';
@@ -43,7 +44,7 @@ class MyHttpOverrides extends HttpOverrides {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await LinkHandler().init();
 
    await FirebaseBootstrapper.initFirebase(languageCode: '');
    await FirebaseNotifications.firebaseInitNotifications();

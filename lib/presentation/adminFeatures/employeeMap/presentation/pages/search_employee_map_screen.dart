@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shiftapp/presentation/adminFeatures/employeeMap/presentation/widgets/emp_map_widget.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/colors.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
@@ -10,7 +11,7 @@ class SearchEmployeeMapScreen extends BaseStatelessWidget {
   bool isShow = false;
  final String  city ;
   final String   job ;
-  SearchEmployeeMapScreen( {super.key, required this.data,required this.city,required this.job,});
+  SearchEmployeeMapScreen( {super.key, required this.data,required this.city,required this.job});
 
   @override
   Widget build(BuildContext context) {

@@ -1440,6 +1440,7 @@
   "violations_of_factory": "Violations of factory",
 
   "violations_of_operation": "Violations of operation",
-  "face_image_required_proceed": "Face image is required to proceed"
+  "face_image_required_proceed": "Face image is required to proceed",
+  "cashifter_on_map": "Cashifter on map"
 
 }

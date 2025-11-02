@@ -1483,5 +1483,6 @@
   "reload": "إعادة تحميل",
   "violations_of_operation": "مخالفات التشغيل",
   "violations_of_factory": "مخالفات المصانع",
-  "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة"
+  "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة",
+  "cashifter_on_map": "كاشفتر علي الخريطة"
 }
