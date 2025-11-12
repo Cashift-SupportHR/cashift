@@ -24,7 +24,7 @@ class CheckFaceRecogenationCubit extends BaseCubit {
 
   fetchRegisteredFace() async {
     try {
-      await getUserData();
+     // await getUserData();
       final faceRecognitionConfig = _userRepository.accountDataToggle();
       final image = await repository.getFaceImageBase64();
       print('image getFaceImageBase64: $image');
@@ -43,10 +43,6 @@ class CheckFaceRecogenationCubit extends BaseCubit {
 
   Future<void> getUserData() async {
     final user = _userRepository.getUser();
-    if(user!=null) {
-      final response = await _resumeRepository.fetchResume();
-      user.name = response.name;
-    }
     userData = user ?? User();
   }
 }

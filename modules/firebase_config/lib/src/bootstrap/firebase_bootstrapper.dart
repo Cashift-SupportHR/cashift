@@ -1,10 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_config/firebase_config.dart';
 
 class FirebaseBootstrapper {
-  static Future<void> initFirebase({required String languageCode}) async {
+  static Future<FirebaseApp> initFirebase({required String languageCode}) async {
     // 1. Initialize Firebase with env-specific config
-    await initializeFirebase();
+    return await initializeFirebase();
 
     // 2. Local notification setup + onMessage/onMessageOpened
     //await FcmNotificationService.initialize();

@@ -1374,8 +1374,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "4fbca289ca198cb532bdeecd7fe24839b1228d32"
-      url: "https://github.com/Harby-SoftwareEngineer/liveness-detection.git"
+      resolved-ref: "72d5cf690f2617d7a1c5a7aa300a95347cfe6585"
+      url: "https://github.com/Cashift-SupportHR/liveness_detection.git"
     source: git
     version: "0.0.1+1"
   local_auth:
