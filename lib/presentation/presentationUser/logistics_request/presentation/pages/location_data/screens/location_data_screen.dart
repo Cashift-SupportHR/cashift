@@ -131,8 +131,8 @@ class LocationDataScreen extends BaseStatelessWidget {
           controller: districtController,
 
           isScrollControlled: true,
-          setSearch: false,
-          searchHint: strings.search_project_name,
+          setSearch: true,
+          searchHint: strings.favorite_housing_locations,
           items:
               snapshot
                   .map(
