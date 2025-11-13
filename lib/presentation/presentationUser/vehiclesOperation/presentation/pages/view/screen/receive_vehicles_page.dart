@@ -171,7 +171,7 @@ class ReceiveVehiclesPage
   Future<void> checkAndFetchInitData() async {
     await Future.delayed(
       Duration(milliseconds: 100),
-      () async {
+          () async {
         if (!isCheckFace) {
           isCheckFace = await checkFaceRecognition(context);
         }

@@ -17,30 +17,53 @@ import '../../../../domain/entities/vehicle_performance.dart';
 @Injectable()
 class ReceiveVehicleDetailsCubit extends BaseCubit {
   final ReceiveVehiclesRepository repository;
-   ReceiveVehicleDetailsCubit(this.repository);
+  ReceiveVehicleDetailsCubit(this.repository);
 
   StreamDataStateInitial<VehiclePerformance?> vehiclePerformanceStream =
       StreamDataStateInitial();
-  StreamDataStateInitial<List<DriverViolation>?> driverViolations =
+
+  StreamDataStateInitial<DriverViolation?> driverViolations =
       StreamDataStateInitial();
-  StreamDataStateInitial<List<ContractViolation>?> violationsFactory =
+  StreamDataStateInitial<ContractViolationData?> violationsFactory =
       StreamDataStateInitial();
-  StreamDataStateInitial<List<Maintenance>?> maintenanceBreakdowns =
+  StreamDataStateInitial<MaintenanceData?> maintenanceBreakdowns =
       StreamDataStateInitial();
+  final StreamStateInitial<int?> countVehiclePerformance = StreamStateInitial();
+  final StreamStateInitial<int?> vehicleTrueCustodiesCountStream =
+      StreamStateInitial();
+  final StreamStateInitial<int?> vehicleTrueComponentsCountStream =
+      StreamStateInitial();
+  final StreamStateInitial<int?> vehicleViolationsStream = StreamStateInitial();
+  final StreamStateInitial<int?> contractViolationStream = StreamStateInitial();
+  final StreamStateInitial<int?> maintenanceStream = StreamStateInitial();
 
   void fetchReceiveVehicleDetails(int id) {
     executeBuilder(
       () => repository.fetchReceiveVehicleDetails(id),
       onSuccess: (data) {
+        vehicleTrueComponentsCountStream.setData(
+          data.vehicleTrueComponentsCount,
+        );
+        vehicleTrueCustodiesCountStream.setData(data.vehicleTrueCustodiesCount);
         emit(
           ReceiveVehicleDetailsState(
             details: data,
+            vehicleTrueComponentsCountStream: vehicleTrueComponentsCountStream,
+            vehicleTrueCustodiesCountStream: vehicleTrueCustodiesCountStream,
             driverViolations: driverViolations,
             maintenanceBreakdowns: maintenanceBreakdowns,
+            vehicleViolationsStream: vehicleViolationsStream,
             vehiclePerformanceStream: vehiclePerformanceStream,
             violationsFactory: violationsFactory,
+            vehiclePerformanceCountStream: countVehiclePerformance,
+            contractViolationStream: contractViolationStream,
+            maintenanceStream: maintenanceStream,
           ),
         );
+        fetchVehiclePerformance(data.id ?? 0);
+        fetchDriverViolations(data.id ?? 0);
+        fetchViolationsFactory(data.roundTripId ?? 0);
+        fetchRoundsMaintenance(data.roundTripId ?? 0);
       },
     );
   }
@@ -48,29 +71,43 @@ class ReceiveVehicleDetailsCubit extends BaseCubit {
   void fetchVehiclePerformance(int id) {
     try {
       vehiclePerformanceStream.start();
-      vehiclePerformanceStream.setFutureData(
-        () => repository.fetchVehiclePerformance(id),
-      );
+
+      vehiclePerformanceStream.setFutureData(() async {
+        VehiclePerformance data = await repository.fetchVehiclePerformance(id);
+        countVehiclePerformance.setData(data.count);
+        return data;
+      });
     } catch (e) {
       vehiclePerformanceStream.setError(e);
     }
   }
+
   void fetchViolationsFactory(int roundTripId) {
     try {
       violationsFactory.start();
-      violationsFactory.setFutureData(
-        () =>  repository.fetchRoundViolation(roundTripId),
-      );
+      violationsFactory.setFutureData(() async {
+        ContractViolationData data = await repository.fetchRoundViolation(
+          roundTripId,
+        );
+
+        contractViolationStream.setData(data.count);
+        return data;
+      });
     } catch (e) {
       violationsFactory.setError(e);
     }
   }
+
   void fetchRoundsMaintenance(int roundTripId) {
     try {
       maintenanceBreakdowns.start();
-      maintenanceBreakdowns.setFutureData(
-        () =>  repository.fetchRoundsMaintenance(roundTripId),
-      );
+      maintenanceBreakdowns.setFutureData(() async {
+        MaintenanceData data = await repository.fetchRoundsMaintenance(
+          roundTripId,
+        );
+        maintenanceStream.setData(data.count);
+        return data;
+      });
     } catch (e) {
       maintenanceBreakdowns.setError(e);
     }
@@ -79,9 +116,11 @@ class ReceiveVehicleDetailsCubit extends BaseCubit {
   void fetchDriverViolations(int id) {
     try {
       driverViolations.start();
-      driverViolations.setFutureData(
-        () => repository.fetchDriverViolations(id),
-      );
+      driverViolations.setFutureData(() async {
+        DriverViolation data = await repository.fetchDriverViolations(id);
+        vehicleViolationsStream.setData(data.count);
+        return data;
+      });
     } catch (e) {
       driverViolations.setError(e);
     }

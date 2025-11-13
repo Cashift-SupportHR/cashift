@@ -45,10 +45,14 @@ import '../../presentation/adminFeatures/employees/data/models/emp_attandance_pr
 import '../../presentation/adminFeatures/employees/data/models/emp_attendance_dto.dart';
 import '../../presentation/adminFeatures/maintenanceAndBreakdowns/data/models/maintenance_dto.dart';
 import '../../presentation/adminFeatures/vehicles/data/models/vehicle_details_dto.dart';
+import '../../presentation/adminFeatures/vehicles/data/models/vehicle_violation_data_dto.dart';
 import '../../presentation/adminFeatures/vehicles/data/models/vehicle_violation_dto.dart';
 import '../../presentation/adminFeatures/vehicles/domain/entities/vehicle_violation.dart';
 import '../../presentation/presentationUser/AttendanceAndDepartureNotifications/data/models/index.dart';
 import '../../presentation/presentationUser/employeesCertificates/data/models/index.dart';
+import '../../presentation/presentationUser/logistics_request/data/models/car_logistics_dto.dart';
+import '../../presentation/presentationUser/logistics_request/data/models/car_terms_and_conditions_dto.dart';
+import '../../presentation/presentationUser/logistics_request/data/models/index.dart';
 import '../../presentation/presentationUser/pledgesAndGeneralization/data/models/pledge_generalization_dto.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/terms_and_conditions_requests_prams.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/add_request_prams.dart';
@@ -815,12 +819,12 @@ abstract class UserEndpoint {
   );
 
   @GET('/v1/ContractViolation/GetAllContractViolationByRoundTrip')
-  Future<ApiResponse<List<ContractViolationDto>>> fetchRoundViolation (
+  Future<ApiResponse<ContractViolationDataDto>> fetchRoundViolation(
     @Query('roundTripId') int roundTripId,
   );
 
   @GET('/v1/FaultsMaintenance/GetAllFaultsMaintenanceByRoundTrip')
-  Future<ApiResponse<List<MaintenanceDto>>> fetchRoundsMaintenance(
+  Future<ApiResponse<MaintenanceDataDto>> fetchRoundsMaintenance(
     @Query('roundTripId') int roundTripId,
   );
 
@@ -895,7 +899,7 @@ abstract class UserEndpoint {
   );
 
   @GET('/v1/VehicleEventsTypes/GetAllVehicleEvents')
-  Future<ApiResponse<List<DriverViolationDto>>> fetchDriverViolations(
+  Future<ApiResponse<DriverViolationDto>> fetchDriverViolations(
     @Query('vehicleHandoverId') int id,
   );
 
@@ -907,10 +911,10 @@ abstract class UserEndpoint {
   ////  transactions
   @POST('/v1/CashifterTasks/GetAllCashifterTasksByStatus')
   Future<ApiResponse<List<TransactionsDto>>> fetchTransactions(
-      @Part(name: 'Status') String? status,
-      @Part(name: 'EndDateTime') String? endDateTime,
-      @Part(name: 'StartDateTime') String? startDateTime,
-      @Part(name: 'SearchString') String? searchString,
+    @Part(name: 'Status') String? status,
+    @Part(name: 'EndDateTime') String? endDateTime,
+    @Part(name: 'StartDateTime') String? startDateTime,
+    @Part(name: 'SearchString') String? searchString,
   );
 
   @POST('/v1/CashifterTasks/AddNewCashifterTask')
@@ -923,4 +927,21 @@ abstract class UserEndpoint {
   Future<ApiResponse> rescheduleTransactions(
     @Body() RescheduleTransactionsPrams prams,
   );
+
+  //Logistics
+
+  @GET('/v2/JobOfferCarType/GetAllCarTypes')
+  Future<ApiResponse<List<CarLogisticsDto>>> fetchCarLogistics();
+
+  @GET('/v2/CarTermsAndConditions/GetAllCarTerms')
+  Future<ApiResponse<List<CarTermsAndConditionsDto>>> fetchCarTermsAndConditionsDto();
+
+  @GET('/v2/JobOfferSubmission/CanSubmitNewOffer')
+  Future<ApiResponse> CanSubmitLogistics();
+
+  @POST('/v2/JobOfferSubmission/SubmitJobOffer')
+  Future<ApiResponse> addLogistic(
+      @Body() AddLogisticPrams prams,
+      );
+
 }

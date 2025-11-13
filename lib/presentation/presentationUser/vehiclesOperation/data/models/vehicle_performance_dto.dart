@@ -6,10 +6,12 @@ part 'vehicle_performance_dto.g.dart';
 class VehiclePerformanceDto {
   @JsonKey(name: 'maxSpeed')
   int? maxSpeed;
+  @JsonKey(name: 'count')
+  int? count;
   @JsonKey(name: 'details')
   List<VehiclePerformanceDetails>? detailsList;
 
-  VehiclePerformanceDto({this.detailsList, this.maxSpeed});
+  VehiclePerformanceDto({this.detailsList,this.count, this.maxSpeed});
 
   factory VehiclePerformanceDto.fromJson(Map<String, dynamic> json) => _$VehiclePerformanceDtoFromJson(json);
 

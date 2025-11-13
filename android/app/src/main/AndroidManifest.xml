@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+<!--    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>-->
     <queries>
         <!-- If your app opens https URLs -->
         <intent>
@@ -105,6 +105,9 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_cashift" />
+        <meta-data
+            android:name="firebase_automatic_init_enabled"
+            android:value="false" />
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
@@ -117,4 +120,6 @@
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
+
+
 </manifest>

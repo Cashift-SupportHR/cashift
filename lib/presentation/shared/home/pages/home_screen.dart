@@ -1,10 +1,8 @@
 import 'dart:convert';
 
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
+ import 'package:flutter/material.dart';
+ import 'package:get_it/get_it.dart';
 import 'package:shiftapp/presentation/adminFeatures/admin_wallet/presentation/pages/admin_wallet_page.dart';
 import 'package:shiftapp/presentation/shared/components/error_handler_widget.dart';
 import '../../../../core/services/routes.dart';
@@ -23,6 +21,7 @@ import '../../../adminFeatures/notifications/presentation/view/pages/notificatio
 import '../../../adminFeatures/overview/presentation/pages/admin_overview_page.dart';
 import '../../../adminFeatures/vehicles/presentation/vehicleTracking/widgets/show_image_violation_build.dart';
 import '../../../presentationUser/joboffers/job_offer_details/job_offer_details_page.dart';
+import '../../../presentationUser/logistics_request/presentation/pages/main_logistics_request_page.dart';
 import '../../../presentationUser/mainnavigation/jobmap/jobs_map_page.dart';
 import '../../../presentationUser/mainnavigation/overview/overview_page.dart';
 import '../../../presentationUser/mainnavigation/wallet/pages/wallet_page.dart';
@@ -57,9 +56,10 @@ class _MyHomeScreenState extends BaseState<MyHomeScreen> {
     final List<BottomNavigationWidgetModel> _widgetOptions =
         <BottomNavigationWidgetModel>[
       BottomNavigationWidgetModel(
-          widget: OverviewPage(),
+           widget: OverviewPage(),
           label: strings.home,
           iconPath: 'images/home.svg'),
+
       BottomNavigationWidgetModel(
           widget: JobsMapPage(),
           label: strings.map,

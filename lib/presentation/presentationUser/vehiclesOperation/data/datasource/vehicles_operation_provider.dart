@@ -8,6 +8,7 @@ import '../../../../../network/source/user_endpoint.dart';
 import '../../../../adminFeatures/maintenanceAndBreakdowns/data/models/maintenance_dto.dart';
 import '../../../../adminFeatures/vehicles/data/models/vehicle_details_dto.dart';
 import '../../../../adminFeatures/vehicles/data/models/vehicle_image_face_dto.dart';
+import '../../../../adminFeatures/vehicles/data/models/vehicle_violation_data_dto.dart';
 import '../../../../adminFeatures/vehicles/data/models/vehicle_violation_dto.dart';
 import '../../../../shared/models/common_list_item_dto.dart';
 import '../models/add_round_trip_fill_station_prams.dart';
@@ -172,7 +173,7 @@ class ReceiveVehiclesAPI {
     return api.fetchVehiclePerformance(id);
   }
 
-  Future<ApiResponse<List<DriverViolationDto>>> fetchDriverViolations(int id) {
+  Future<ApiResponse<DriverViolationDto>> fetchDriverViolations(int id) {
     return api.fetchDriverViolations(id);
   }
 
@@ -182,13 +183,13 @@ class ReceiveVehiclesAPI {
     return api.downloadVehicleViolationPicture(params);
   }
 
-  Future<ApiResponse<List<ContractViolationDto>>> fetchRoundViolation(
+  Future<ApiResponse<ContractViolationDataDto>> fetchRoundViolation(
     int roundTripId,
   ) {
     return api.fetchRoundViolation(roundTripId);
   }
 
-  Future<ApiResponse<List<MaintenanceDto>>> fetchRoundsMaintenance(
+  Future<ApiResponse<MaintenanceDataDto>> fetchRoundsMaintenance(
     int roundTripId,
   ) {
     return api.fetchRoundsMaintenance(roundTripId);

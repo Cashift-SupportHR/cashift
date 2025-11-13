@@ -216,7 +216,7 @@ class _ProfileImagePickerState extends State<ProfileImagePicker> {
 
     if (pickedFile != null) {
       File compressedFile = File(pickedFile!.path);
-      final bytes = file!.readAsBytesSync().lengthInBytes;
+      final bytes = compressedFile!.readAsBytesSync().lengthInBytes;
       final kb = bytes / 1024;
       final mb = kb / 1024;
       // if (mb <= 1) {
@@ -241,7 +241,7 @@ class _ProfileImagePickerState extends State<ProfileImagePicker> {
     print('IMAGE PATH ${widget.imagePath}');
     return InkWell(
       child: pickedFile == null
-          ? kBuildCircleImage(widget.imagePath, size: 50)
+          ? kBuildCircleImage(widget.imagePath, size: 50, showFullImage: false)
           : kBuildCircleImageFromFile(file!, size: 50),
       onTap: () {
         pickImage();

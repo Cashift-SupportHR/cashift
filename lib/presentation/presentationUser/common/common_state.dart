@@ -564,6 +564,7 @@ class InitializedUser extends Initialized {
 }
 
 class ToggledUserState extends CommonStateFListener {}
+class CanSubmitLogistics extends CommonStateFListener {}
 
 class InitializedOpportunity<T> extends CommonStateFBuilder {
   List<Company> companies;
@@ -644,6 +645,11 @@ class FailureStateListener extends CommonStateFListener {
   final dynamic error;
 
   FailureStateListener(this.error);
+}
+
+class EmptyFaceImageListener extends CommonStateFListener {
+
+  EmptyFaceImageListener();
 }
 
 class BiometricNotEnabledState extends CommonStateFListener {}

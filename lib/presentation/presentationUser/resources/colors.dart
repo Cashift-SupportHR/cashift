@@ -21,6 +21,7 @@ const kGreen_FB = Color(0xffF8FFFB);
 const kGreen_7A = Color(0xff69887A);
 const kGreen_A6 = Color(0xff66CAA6);
 const kGreen_A10 = Color(0x6128a197);
+const kGreen_144 = Color(0xff165144);
 const kLightGreen = Color(0xffeffff6);
 const kLightBlue_F9 = Color(0xffF5F7F9);
 

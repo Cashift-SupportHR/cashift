@@ -1372,10 +1372,12 @@ packages:
   livelyness_detection:
     dependency: "direct main"
     description:
-      path: "modules/livelyness_detection"
-      relative: true
-    source: path
-    version: "0.0.1+5"
+      path: "."
+      ref: HEAD
+      resolved-ref: "72d5cf690f2617d7a1c5a7aa300a95347cfe6585"
+      url: "https://github.com/Cashift-SupportHR/liveness_detection.git"
+    source: git
+    version: "0.0.1+1"
   local_auth:
     dependency: "direct main"
     description:

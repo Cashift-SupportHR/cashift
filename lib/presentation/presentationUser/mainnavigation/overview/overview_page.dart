@@ -29,7 +29,6 @@ class OverviewPage extends BaseBlocWidget<OverviewState, OverviewCubit> {
   @override
   void loadInitialData(BuildContext context) {
     bloc.loadInitialData();
-
   }
 
   @override
@@ -57,9 +56,14 @@ class OverviewPage extends BaseBlocWidget<OverviewState, OverviewCubit> {
     if (state is ToggledUserState) {
       Navigator.pushReplacementNamed(context, Routes.home);
     }
+    if (state is CanSubmitLogistics) {
+      Navigator.pushNamed(context, Routes.mainLogisticsRequestPage);
+    }
     if (state is DisclosureRequiredTaskState) {
-      showAlertDisclosureRequiredTask(context,
-          disclosureTaskDto: state.disclosureTaskDto);
+      showAlertDisclosureRequiredTask(
+        context,
+        disclosureTaskDto: state.disclosureTaskDto,
+      );
     }
     if (state is RequiredAutoAttendanceState) {
       return;
@@ -76,53 +80,72 @@ class OverviewPage extends BaseBlocWidget<OverviewState, OverviewCubit> {
     if (state is EmployeeAttendanceTimeState) {
       return;
       if (state.isFirst) {
-        showBackgroundServiceDialog(context, onSave: () {
-          //AutoAttendanceBackgroundService.start(state.geoTimeTask, context);
-        });
+        showBackgroundServiceDialog(
+          context,
+          onSave: () {
+            //AutoAttendanceBackgroundService.start(state.geoTimeTask, context);
+          },
+        );
       } else {
         // TimeBackgroundService.start(state.geoTimeTask, context);
       }
     }
     if (state is ConfirmAttendanceState) {
-      showConfirmAttendanceDialog(
-        context,
-        data: state.confirmAttendance,
-      );
+      showConfirmAttendanceDialog(context, data: state.confirmAttendance);
     }
   }
 
   cancelJob(int id, BuildContext context) async {
-    CancelShiftWidget.showCancelShiftDialog(context, onConfirm: (message) {
-      bloc.confirmActivity(ConfirmActivityParams(
-          description: message,
-          id: id,
-          statusId: ConfirmActivityStatus.Reject));
-    });
+    CancelShiftWidget.showCancelShiftDialog(
+      context,
+      onConfirm: (message) {
+        bloc.confirmActivity(
+          ConfirmActivityParams(
+            description: message,
+            id: id,
+            statusId: ConfirmActivityStatus.Reject,
+          ),
+        );
+      },
+    );
   }
 
   acceptJob(int id) {
-    fetchLocation(onGetLocation: ((location) {
-      bloc.confirmActivity(ConfirmActivityParams(
-          longitude: location.longitude,
-          latitude: location.latitude,
-          id: id,
-          statusId: ConfirmActivityStatus.ApproveFromHome));
-    }));
+    fetchLocation(
+      onGetLocation: ((location) {
+        bloc.confirmActivity(
+          ConfirmActivityParams(
+            longitude: location.longitude,
+            latitude: location.latitude,
+            id: id,
+            statusId: ConfirmActivityStatus.ApproveFromHome,
+          ),
+        );
+      }),
+    );
   }
 
   Future<void> showAlertShiftDialog(
-      BuildContext context, AppliedOfferDto shift) async {
+    BuildContext context,
+    AppliedOfferDto shift,
+  ) async {
     await Future.delayed(const Duration(milliseconds: 1500));
-    DialogsManager.showConfirmationAnimatedDialog(context,
-        message: strings.confirm_attendance_message +
-            '\n' +
-            shift.jobName.toString() +
-            ' ' +
-            shift.projectName.toString(), onConfirm: () {
-      acceptJob(shift.id!);
-    }, negativeTap: () {
-      cancelJob(shift.id!, context);
-    }, negativeButtonName: strings.cancel_shift_title);
+    DialogsManager.showConfirmationAnimatedDialog(
+      context,
+      message:
+          strings.confirm_attendance_message +
+          '\n' +
+          shift.jobName.toString() +
+          ' ' +
+          shift.projectName.toString(),
+      onConfirm: () {
+        acceptJob(shift.id!);
+      },
+      negativeTap: () {
+        cancelJob(shift.id!, context);
+      },
+      negativeButtonName: strings.cancel_shift_title,
+    );
   }
 
   int jobId = 0;
@@ -149,6 +172,9 @@ class OverviewPage extends BaseBlocWidget<OverviewState, OverviewCubit> {
           onApplyJobNow: (id) {
             bloc.applyJobNow(id);
           },
+          canSubmitLogistics: () {
+            bloc.canSubmitLogistics();
+          },
           onCheckCertificateJob: (id) {
             jobId = id;
             navigateToDetails(context);
@@ -167,15 +193,16 @@ class OverviewPage extends BaseBlocWidget<OverviewState, OverviewCubit> {
   @override
   Widget build(BuildContext context) {
     return UserNotifierWidget(
-        onUpdate: () {
-          loadInitialData(context);
-        },
-        child: mainFrame(body: buildConsumer(context)));
+      onUpdate: () {
+        loadInitialData(context);
+      },
+      child: mainFrame(body: buildConsumer(context)),
+    );
   }
 
-  navigateToDetails(BuildContext context) =>
-      Navigator.pushNamed(context, Routes.jobOfferDetails,
-          arguments: JobOfferDetailsPageArgs(
-            jobId,
-          ));
+  navigateToDetails(BuildContext context) => Navigator.pushNamed(
+    context,
+    Routes.jobOfferDetails,
+    arguments: JobOfferDetailsPageArgs(jobId),
+  );
 }

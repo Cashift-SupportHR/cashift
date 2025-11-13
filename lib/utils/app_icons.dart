@@ -350,4 +350,5 @@ class AppIcons {
   static const String factoryViolations = 'assets/icons/factoryViolations.svg';
   static const String factoryViolationsv2 = 'assets/icons/factoryViolationsv2.svg';
   static const String maintenancev2 = 'assets/icons/maintenancev2.svg';
+  static const String waring = 'assets/icons/waring_notof.svg';
 }

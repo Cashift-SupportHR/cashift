@@ -8,7 +8,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 class MaintenanceBreakdownsPlanPage
     extends
         BaseBlocWidget<
-          Initialized<List<Maintenance>>,
+          Initialized<MaintenanceData>,
           MaintenanceBreakdownsPlaneCubit
         > {
   @override
@@ -24,13 +24,13 @@ class MaintenanceBreakdownsPlanPage
   @override
   Widget buildWidget(
     BuildContext context,
-    Initialized<List<Maintenance>> state,
+    Initialized<MaintenanceData> state,
   ) {
     return MaintenanceBreakdownsScreen(
       code: "",
       tapId: 0,
       isPlan: true,
-      data: state.data,
+      data: state.data.data??[],
     );
   }
 }

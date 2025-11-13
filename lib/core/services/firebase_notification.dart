@@ -82,6 +82,7 @@ class FirebaseNotifications {
         onDidReceiveNotificationResponse: onSelectNotification,
         onDidReceiveBackgroundNotificationResponse: onSelectNotification,
       );
+      print('before setForegroundNotificationPresentationOptions  ${Firebase.apps.first.name}');
 
       /// Update the iOS foreground notification presentationUser options to allow
       /// heads up notifications.
@@ -136,7 +137,8 @@ class FirebaseNotifications {
     String? title,
     String? body,
     String? payload,
-  ) async {
+  ) async
+  {
     try {
       String valueMap = json.encode(payload);
 

@@ -10,6 +10,10 @@ ReceiveVehicleDetailsDto _$ReceiveVehicleDetailsDtoFromJson(
         Map<String, dynamic> json) =>
     ReceiveVehicleDetailsDto(
       roundTripId: (json['roundTripId'] as num?)?.toInt(),
+      vehicleTrueComponentsCount:
+          (json['vehicleTrueComponentsCount'] as num?)?.toInt(),
+      vehicleTrueCustodiesCount:
+          (json['vehicleTrueCustodiesCount'] as num?)?.toInt(),
       vehicleHandoverImages: (json['vehicleHandoverImages'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -60,6 +64,8 @@ Map<String, dynamic> _$ReceiveVehicleDetailsDtoToJson(
       'vehicleImage': instance.vehicleImage,
       'isComplete': instance.isComplete,
       'companyId': instance.companyId,
+      'vehicleTrueComponentsCount': instance.vehicleTrueComponentsCount,
+      'vehicleTrueCustodiesCount': instance.vehicleTrueCustodiesCount,
       'companyName': instance.companyName,
       'projectId': instance.projectId,
       'roundTripId': instance.roundTripId,

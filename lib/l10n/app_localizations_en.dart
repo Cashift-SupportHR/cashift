@@ -2852,6 +2852,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get terms_and_conditions_message => 'I agree to all terms and conditions';
 
   @override
+  String get terms_and_conditions_accept => 'Please agree to all terms and conditions';
+
+  @override
   String get installment_postponement_desc => 'In the event of confirmation of non-approval in issuing the document, the account will be frozen';
 
   @override
@@ -4340,8 +4343,35 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reload => 'Reload';
 
   @override
+  String get terms_and_conditions => 'Terms and Conditions';
+
+  @override
+  String get location_data => 'Location Data';
+
+  @override
+  String get license_data => 'License Data';
+
+  @override
+  String get housing_location => 'Housing Location';
+
+  @override
+  String get select_housing_location => 'Select Housing Location';
+
+  @override
+  String get housing_location_data => 'Housing Location Data';
+
+  @override
+  String get favorite_housing_locations => 'Select your preferred neighborhoods';
+
+  @override
   String get violations_of_operation => 'Violations of operation';
 
   @override
   String get violations_of_factory => 'Violations of factory';
+
+  @override
+  String get private => 'exclusively';
+
+  @override
+  String get face_image_required_proceed => 'Face image is required to proceed';
 }

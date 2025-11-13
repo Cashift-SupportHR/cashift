@@ -1,5 +1,18 @@
 import '../../data/models/maintenance_dto.dart';
 
+class MaintenanceData {
+  List<Maintenance>? data;
+  int? count;
+  MaintenanceData({this.data, this.count});
+  factory MaintenanceData.fromDto(MaintenanceDataDto dto) {
+    return MaintenanceData(
+      data:
+          dto.faultsAndMaintenance?.map((e) => Maintenance.fromDto(e)).toList(),
+      count: dto.count,
+    );
+  }
+}
+
 class Maintenance {
   int? fautMaintenanceId;
   String? faultMaintenanceType;

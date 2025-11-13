@@ -23,6 +23,8 @@ class ReceiveVehicleDetails {
   int? companyId;
   String? companyName;
   int? projectId;
+  int? vehicleTrueCustodiesCount;
+  int? vehicleTrueComponentsCount;
   String? projectName;
   String? licenseExpiryDate;
   String? licenseNumber;
@@ -33,6 +35,8 @@ class ReceiveVehicleDetails {
     this.vehiclesComponentsHandovers,
     this.vehiclesCustodiesHandovers,
     this.id,
+    this.vehicleTrueComponentsCount,
+    this.vehicleTrueCustodiesCount,
     this.vehicleId,
     this.roundTripId,
     this.vehicleBrand,
@@ -79,6 +83,8 @@ class ReceiveVehicleDetails {
         licenseExpiryDate: json.licenseExpiryDate,
         licenseNumber: json.licenseNumber,
         specifications: json.specifications,
+        vehicleTrueComponentsCount: json.vehicleTrueComponentsCount,
+        vehicleTrueCustodiesCount: json.vehicleTrueCustodiesCount,
       );
 
   static List<ReceiveVehicleDetails> fromDtoList(

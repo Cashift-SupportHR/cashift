@@ -90,6 +90,7 @@ import '../../presentation/adminFeatures/vehicles/presentation/view/pages/qr_cod
 import '../../presentation/adminFeatures/vehicles/presentation/violations/add/pages/add_violation_vehicle_page.dart';
 import '../../presentation/adminFeatures/vehicles/presentation/violations/details/pages/vehicle_violation_details_page.dart';
 import '../../presentation/adminFeatures/vehicles/presentation/violations/view/pages/vehicle/vehicle_violations_page.dart';
+import '../../presentation/presentationUser/logistics_request/presentation/pages/main_logistics_request_page.dart';
 import '../../presentation/presentationUser/profile/addHomeAddress/pages/add_home_address_page.dart';
 import '../../presentation/presentationUser/profile/requests/presentation/pages/add/add_file_request/screen/add_file_requests_user_page.dart';
 import '../../presentation/presentationUser/profile/requests/presentation/pages/add/add_request/screen/add_requests_user_page.dart';
@@ -330,8 +331,7 @@ class Routes {
       '/trackAttendanceDepartureDetailsPage';
   static const String searchEmployeeMapPage = '/searchEmployeeMapPage';
   static const String realTimeQRScanner = '/realTimeQRScanner';
-  static const String startTourPage = '/startTourPage';
-  static const String currentTourMapPage = '/currentTourMapPage';
+   static const String currentTourMapPage = '/currentTourMapPage';
   static const String addJobUniformPage = '/JobUniform';
   static const String usersRequestsPage = '/UsersRequestsPage';
   static const String requestsUserPage = '/requestsUserPage';
@@ -359,6 +359,7 @@ class Routes {
   static const String transactionsPage = '/transactionsPage';
   static const String maintenanceBreakdownsPlanPage = '/maintenanceBreakdownsPlanPage';
   static const String factoryViolationsPlanePage = '/factoryViolationsPlanePage';
+  static const String mainLogisticsRequestPage = '/mainLogisticsRequestPage';
 
   static final routes = <String, Widget Function(BuildContext)>{
     login: (context) => LoginPage(),
@@ -504,8 +505,7 @@ class Routes {
     mainReceiveAdd: (context) => MainReceiveVehiclePage(),
     addHomeAddressPage: (context) => AddHomeAddressPage(),
     searchEmployeeMapPage: (context) => SearchEmployeeMapPage(),
-    startTourPage: (context) => StartTourPage(),
-    currentTourMapPage: (context) => CurrentTourMapPage(),
+     currentTourMapPage: (context) => CurrentTourMapPage(),
     addJobUniformPage: (context) => AddJobUniformPage(),
     usersRequestsPage: (context) => UsersRequestsPage(),
     requestsUserPage: (context) => RequestsUserPage(),
@@ -531,5 +531,6 @@ class Routes {
     transactionsPage: (context) => TransactionsPage(), // Add this line
     maintenanceBreakdownsPlanPage: (context) => MaintenanceBreakdownsPlanPage(), // Add this line
    factoryViolationsPlanePage: (context) => FactoryViolationsPlanePage(), // Add this line
+    mainLogisticsRequestPage: (context) => MainLogisticsRequestPage(), // Add this line
    };
 }

@@ -18,9 +18,7 @@ import '../../../domain/entities/custody_handover.dart';
 import '../../startTour/pages/start_tour_page.dart';
 
 class MainReceiveVehiclePage extends BaseStatelessWidget {
-  MainReceiveVehiclePage({
-    Key? key,
-  }) : super(key: key);
+  MainReceiveVehiclePage({Key? key}) : super(key: key);
 
   final PageController pageController = PageController(initialPage: 0);
   final StreamStateInitial<int> pageStream = StreamStateInitial();
@@ -29,11 +27,16 @@ class MainReceiveVehiclePage extends BaseStatelessWidget {
   int? handoverId;
   CreateVehicleHandoverPrams? createVehicleHandoverPrams;
 
-  static push(BuildContext context,
-      {required Function() onSuccess,
-      MainReceiveVehicleArg? mainReceiveVehicleArg}) async {
-    final result = await Navigator.pushNamed(context, Routes.mainReceiveAdd,
-        arguments: mainReceiveVehicleArg);
+  static push(
+    BuildContext context, {
+    required Function() onSuccess,
+    MainReceiveVehicleArg? mainReceiveVehicleArg,
+  }) async {
+    final result = await Navigator.pushNamed(
+      context,
+      Routes.mainReceiveAdd,
+      arguments: mainReceiveVehicleArg,
+    );
     if (result is bool && result) {
       print('push: $result');
       onSuccess();
@@ -83,7 +86,10 @@ class MainReceiveVehiclePage extends BaseStatelessWidget {
               },
             ),
             VehicleReceivedImagesPage(
-              onInitialDataCallback: () => createVehicleHandoverPrams ?? CreateVehicleHandoverPrams(),
+              onInitialDataCallback:
+                  () =>
+                      createVehicleHandoverPrams ??
+                      CreateVehicleHandoverPrams(),
               onNext: (handover) {
                 createVehicleHandover = handover;
                 animateToPage(3);
@@ -97,7 +103,9 @@ class MainReceiveVehiclePage extends BaseStatelessWidget {
             mainReceiveVehicleArg: getArguments(context),
             onNext: (data, custodiesHandovers) {
               custodiesHandoversInitialData = custodiesHandovers;
-              print("custodiesHandoversInitialData $custodiesHandoversInitialData");
+              print(
+                "custodiesHandoversInitialData $custodiesHandoversInitialData",
+              );
               if (arg.isEdit == true) {
                 handoverId = arg.receiveVehicleData?.handoverId ?? 0;
                 animateToPage(1);
@@ -117,15 +125,16 @@ class MainReceiveVehiclePage extends BaseStatelessWidget {
           ),
           VehicleCovenantPage(
             isEdit: arg.isEdit,
-            onInitialDataCallback: () => arg.isEdit == true
-                ? arg.receiveVehicleData?.vehicleId ?? 0
-                : createVehicleHandoverPrams?.vehicleId ?? 0,
+            onInitialDataCallback:
+                () =>
+                    arg.isEdit == true
+                        ? arg.receiveVehicleData?.vehicleId ?? 0
+                        : createVehicleHandoverPrams?.vehicleId ?? 0,
             onInitialDataCallbackHandoverId: () => handoverId ?? 0,
-            onCustodiesHandoversInitialData: () => custodiesHandoversInitialData,
+            onCustodiesHandoversInitialData:
+                () => custodiesHandoversInitialData,
             onCancel: () {
-              arg.isEdit == true?
-              animateToPage(0):
-              animateToPage(3);
+              arg.isEdit == true ? animateToPage(0) : animateToPage(3);
             },
             onNext: () {
               if (arg.isEdit == true) {
@@ -135,7 +144,7 @@ class MainReceiveVehiclePage extends BaseStatelessWidget {
               }
             },
           ),
-        StartTourPage(),
+          StartTourPage(onInitialDataCallbackHandoverId: () => handoverId ?? 0),
         ],
         pageStream: pageStream,
         pageController: pageController,
@@ -145,7 +154,10 @@ class MainReceiveVehiclePage extends BaseStatelessWidget {
   }
 
   animateToPage(int index) {
-    pageController.animateToPage(index,
-        duration: const Duration(milliseconds: 500), curve: Curves.ease);
+    pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.ease,
+    );
   }
 }

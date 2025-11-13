@@ -9,15 +9,27 @@ import '../../../../domain/entities/vehicle_performance.dart';
 class ReceiveVehicleDetailsState extends CommonStateFBuilder {
   final ReceiveVehicleDetails details;
   final StreamDataState<VehiclePerformance?> vehiclePerformanceStream;
-  final StreamDataState<List<DriverViolation>?> driverViolations;
-  final StreamDataState<List<ContractViolation>?> violationsFactory;
-  final StreamDataState<List<Maintenance>?> maintenanceBreakdowns;
+  final StreamDataState<DriverViolation?> driverViolations;
+  final StreamDataState<ContractViolationData?> violationsFactory;
+  final StreamDataState<MaintenanceData?> maintenanceBreakdowns;
+  final StreamStateInitial<int?> vehiclePerformanceCountStream;
+  final StreamStateInitial<int?> vehicleTrueCustodiesCountStream;
+  final StreamStateInitial<int?> vehicleTrueComponentsCountStream;
+  final StreamStateInitial<int?> vehicleViolationsStream;
+  final StreamStateInitial<int?> contractViolationStream;
+  final StreamStateInitial<int?> maintenanceStream;
 
   ReceiveVehicleDetailsState({
     required this.details,
+    required this.vehicleTrueCustodiesCountStream,
+    required this.vehicleTrueComponentsCountStream,
+    required this.vehicleViolationsStream,
     required this.vehiclePerformanceStream,
+    required this.contractViolationStream,
+    required this.vehiclePerformanceCountStream,
     required this.driverViolations,
     required this.maintenanceBreakdowns,
+    required this.maintenanceStream,
     required this.violationsFactory,
   });
 }

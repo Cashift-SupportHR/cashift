@@ -13,6 +13,7 @@ VehiclePerformanceDto _$VehiclePerformanceDtoFromJson(
           ?.map((e) =>
               VehiclePerformanceDetails.fromJson(e as Map<String, dynamic>))
           .toList(),
+      count: (json['count'] as num?)?.toInt(),
       maxSpeed: (json['maxSpeed'] as num?)?.toInt(),
     );
 
@@ -20,6 +21,7 @@ Map<String, dynamic> _$VehiclePerformanceDtoToJson(
         VehiclePerformanceDto instance) =>
     <String, dynamic>{
       'maxSpeed': instance.maxSpeed,
+      'count': instance.count,
       'details': instance.detailsList,
     };
 
