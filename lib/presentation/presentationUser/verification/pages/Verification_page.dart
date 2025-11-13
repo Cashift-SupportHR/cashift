@@ -47,7 +47,8 @@ class _VerificationPageState extends BaseState<VerificationPage> {
             }
             if (state is SuccessState) {
               progress.dismiss();
-              Navigator.pop(context, true);
+              print('state.data ${state.data}');
+              Navigator.pop(context, state.successResponse);
             }
             if (state is ErrorState) {
               progress.dismiss();

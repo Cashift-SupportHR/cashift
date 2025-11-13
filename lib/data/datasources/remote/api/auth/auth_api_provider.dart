@@ -33,6 +33,6 @@ class AuthAPI {
   }
 
   Future<ApiResponse<bool>> restPasswordByCode(RestPasswordParams phoneNumber) {
-    return api.restPasswordByCode(phoneNumber);
+    return api.restPasswordByCode(phoneNumber, phoneNumber.token);
   }
 }

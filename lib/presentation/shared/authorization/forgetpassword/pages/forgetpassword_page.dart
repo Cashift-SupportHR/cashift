@@ -8,6 +8,7 @@ import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
 import '../../signup/pages/signup_screen.dart';
 import '../bloc/forgetpassword_bloc.dart';
+import '../domain/entities/rest_password_args.dart' show RestPasswordArgs;
 import 'resetpassword_page.dart';
 
 import 'package:shiftapp/main_index.dart';
@@ -32,12 +33,17 @@ class ForgetPassword extends BaseBlocWidget<UnInitState, ForgetPasswordCubit> {
 
   @override
   Future<void> onRequestSuccess(String? message) async {
-    final verified = await Navigator.pushNamed(context,  Routes.verificationPage, arguments: VerificationPageModel(phone: phone, verifyForLogin: false));
-    if (verified is bool && verified == true) {
+    final token = await Navigator.pushNamed(context,  Routes.verificationPage, arguments: VerificationPageModel(phone: phone, verifyForLogin: false));
+    print('token is $token');
+    // check if token is String and not null or empty that means verification success and return token to send it with reset password in header
+    if (token is String && token.isNotNullOrEmpty()) {
       Navigator.pushNamed(
         context,
         Routes.restPasswordPage,
-        arguments: phone,
+        arguments: RestPasswordArgs(
+          phone: phone,
+          token: token,
+        ),
       );
     }
   }

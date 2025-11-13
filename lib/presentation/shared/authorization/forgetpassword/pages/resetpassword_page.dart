@@ -12,6 +12,8 @@ import '../../login/pages/login_page.dart';
 import '../bloc/forgetpassword_bloc.dart';
 import 'package:shiftapp/main_index.dart';
 
+import '../domain/entities/rest_password_args.dart' show RestPasswordArgs;
+
 class RestPasswordPage extends BaseBlocWidget<UnInitState,ForgetPasswordCubit>{
    @override
   bool initializeByKoin() {
@@ -31,9 +33,9 @@ class RestPasswordPage extends BaseBlocWidget<UnInitState,ForgetPasswordCubit>{
     return buildForm(context);
   }
 
-  String phoneNumber(BuildContext context)=>getArguments(context);
 
   Widget buildForm(BuildContext context) {
+    RestPasswordArgs args = getArguments(context);
     String? newPassword;
 
     final _formKey = GlobalKey<FormState>();
@@ -72,7 +74,8 @@ class RestPasswordPage extends BaseBlocWidget<UnInitState,ForgetPasswordCubit>{
                 if (_formKey.currentState!.validate()) {
                   bloc.restPasswordByCode(RestPasswordParams(
                     password: newPassword,
-                    phoneNumber: phoneNumber(context)
+                    phoneNumber: args.phone,
+                    token: args.token,
                   ));
                 }
               },

@@ -10,8 +10,11 @@ class RestPasswordParams {
   final  String? code;
   @JsonKey(name: 'password')
   final  String? password;
+  // it is used only to send token in header
+  @JsonKey(name: 'token', includeFromJson: false, includeToJson: false)
+  final  String? token;
 
-  RestPasswordParams({this.phoneNumber, this.code, this.password});
+  RestPasswordParams({this.phoneNumber, this.code, this.password, this.token});
 
    factory RestPasswordParams.fromJson(Map<String, dynamic> json) => _$RestPasswordParamsFromJson(json);
 

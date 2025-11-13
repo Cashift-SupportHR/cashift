@@ -30,7 +30,8 @@ class ConfirmRestPasswordOtpEvent extends VerificationEvent{
     try{
       yield LoadingState();
      final response =  await bloc._authRepository.confirmRestPasswordOtp(confirmOtpParams);
-      yield SuccessState(response);
+     print('ConfirmRestPasswordOtpEvent response ${response.payload}');
+      yield SuccessState(response.payload.toString());
     }catch(e){
       yield ErrorState(e);
     }

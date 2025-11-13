@@ -208,10 +208,11 @@ class _UserEndpoint implements UserEndpoint {
 
   @override
   Future<ApiResponse<bool>> restPasswordByCode(
-      RestPasswordParams phoneNumber) async {
+      RestPasswordParams phoneNumber, String? token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
+    _headers.addAll({'token': token});
     final _data = <String, dynamic>{};
     _data.addAll(phoneNumber.toJson());
     final _options = _setStreamType<ApiResponse<bool>>(Options(
