@@ -1,29 +1,37 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 class LoggingInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     final curlCommand = _buildCurlCommand(options);
-    print('📤 CURL:\n$curlCommand : CurlLogger');
+    if(kDebugMode){
+      print('📤 CURL:\n$curlCommand : CurlLogger');
+    }
     handler.next(options);
   }
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
-    print('✅ RESPONSE [${response.statusCode}] => ${response.requestOptions.uri}');
-    print('📦 Body: ${response.data}');
+    if(kDebugMode){
+      print('✅ RESPONSE [${response.statusCode}] => ${response.requestOptions.uri}');
+      print('📦 Body: ${response.data}');
+    }
     handler.next(response);
   }
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
-    print('❌ ERROR [${err.response?.statusCode}] => ${err.requestOptions.uri}');
-    print('❌ ERROR Response: ${err.response?.data}');
-    print('💥 Message: ${err.message}');
-    if (err.response?.data != null) {
-      print('📦 Error Body: ${err.response?.data}');
+    if(kDebugMode){
+      print('❌ ERROR [${err.response?.statusCode}] => ${err.requestOptions.uri}');
+      print('❌ ERROR Response: ${err.response?.data}');
+      print('💥 Message: ${err.message}');
+
+      if (err.response?.data != null) {
+        print('📦 Error Body: ${err.response?.data}');
+      }
     }
     handler.next(err);
   }

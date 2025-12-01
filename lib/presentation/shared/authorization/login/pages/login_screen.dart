@@ -38,15 +38,15 @@ class LoginScreen extends BaseWidget {
   @override
   Widget buildWidget(BuildContext context) {
     if(kDebugMode){
+      phone = '559135678';
+      phoneController.text = '559135678';
+      passwordController.text = '123456';
       // phone = '559135678';
       // phoneController.text = '559135678';
       // passwordController.text = '123456';
-      // phone = '559135678';
-      // phoneController.text = '559135678';
-      // passwordController.text = '123456';
-      phone = '0582708625';
-      phoneController.text = '0582708625';
-      passwordController.text = 'Asdf@123';
+      // phone = '0582708625';
+      // phoneController.text = '0582708625';
+      // passwordController.text = 'Asdf@123';
       // phone = '506666666';
       // phoneController.text = '506666666';
       // passwordController.text = 'Asdf@123';
