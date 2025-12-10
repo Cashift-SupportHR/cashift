@@ -75,8 +75,11 @@ class HeaderInterceptor extends Interceptor {
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    options.headers[keyAuthorization] =
-    'Bearer ${userRepository.getAccessToken()}';
+    // Why? Because we send token to reset password also (v2/VerifyCode/CheckCodeByFreeLance)
+    if (!options.headers.containsKey(keyAuthorization)){
+      options.headers[keyAuthorization] =
+      'Bearer ${userRepository.getAccessToken()}';
+    }
     options.headers[keyLanguage] = Get.locale?.languageCode.toString();
     options.headers[keyApiKey] = apiKeyValue;
     options.headers[deviceIdKey] = device.id;

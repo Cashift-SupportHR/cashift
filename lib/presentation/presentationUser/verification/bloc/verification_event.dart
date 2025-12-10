@@ -29,9 +29,9 @@ class ConfirmRestPasswordOtpEvent extends VerificationEvent{
   Stream<CommonState> applyAsync({required CommonState currentState, required VerificationBloc bloc}) async*{
     try{
       yield LoadingState();
-     final response =  await bloc._authRepository.confirmRestPasswordOtp(confirmOtpParams);
-     print('ConfirmRestPasswordOtpEvent response ${response.payload}');
-      yield SuccessState(response.payload.toString());
+     final token =  await bloc._authRepository.confirmRestPasswordOtp(confirmOtpParams);
+     print('ConfirmRestPasswordOtpEvent token ${token}');
+      yield SuccessState(token);
     }catch(e){
       yield ErrorState(e);
     }

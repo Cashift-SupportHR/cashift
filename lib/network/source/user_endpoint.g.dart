@@ -212,7 +212,7 @@ class _UserEndpoint implements UserEndpoint {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    _headers.addAll({'token': token});
+    _headers.addAll({'authorization': token});
     final _data = <String, dynamic>{};
     _data.addAll(phoneNumber.toJson());
     final _options = _setStreamType<ApiResponse<bool>>(Options(

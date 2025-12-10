@@ -119,7 +119,7 @@ abstract class UserEndpoint {
   @POST('/v3/FreeLancerInfo/ResetPassword')
   Future<ApiResponse<bool>> restPasswordByCode(
     @Body() RestPasswordParams phoneNumber,
-      @Header('token') String? token,
+      @Header('authorization') String? token,
   );
 
   @POST('/v3/TransactionMobile/AddTransactionMobileLog')
