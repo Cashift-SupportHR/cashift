@@ -44,6 +44,7 @@ import 'package:shiftapp/presentation/presentationUser/joboffers/terms_condition
 import 'package:shiftapp/presentation/presentationUser/loan_requests/add_new_loan_request/pages/add_loan_request_page.dart';
 import 'package:shiftapp/presentation/presentationUser/loan_requests/loan_requests/pages/loan_requests_tabs.dart';
 import 'package:shiftapp/presentation/presentationUser/locationservice/locationservice.dart';
+import 'package:shiftapp/presentation/presentationUser/mana_delivery/presentation/pages/main_mana_deliver_page.dart';
 import 'package:shiftapp/presentation/presentationUser/profile/index.dart';
 import 'package:shiftapp/presentation/presentationUser/rate/pages/rate_page.dart';
 import 'package:shiftapp/presentation/presentationUser/resume/pages/resume_pages.dart';
@@ -360,6 +361,7 @@ class Routes {
   static const String maintenanceBreakdownsPlanPage = '/maintenanceBreakdownsPlanPage';
   static const String factoryViolationsPlanePage = '/factoryViolationsPlanePage';
   static const String mainLogisticsRequestPage = '/mainLogisticsRequestPage';
+  static const String mainManaDeliverPage = '/MainManaDeliverPage';
 
   static final routes = <String, Widget Function(BuildContext)>{
     login: (context) => LoginPage(),
@@ -532,5 +534,6 @@ class Routes {
     maintenanceBreakdownsPlanPage: (context) => MaintenanceBreakdownsPlanPage(), // Add this line
    factoryViolationsPlanePage: (context) => FactoryViolationsPlanePage(), // Add this line
     mainLogisticsRequestPage: (context) => MainLogisticsRequestPage(), // Add this line
+    mainManaDeliverPage: (context) => MainManaDeliverPage(), // Add this line
    };
 }

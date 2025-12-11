@@ -1493,5 +1493,19 @@
   "violations_of_operation": "مخالفات التشغيل",
   "violations_of_factory": "مخالفات المصانع",
   "private": "حصريا",
+  "receive_from": "استلام من",
+  "warehouse": "المستودع",
+  "customer": "العميل",
+  "deliver_to": "تسليم الي",
+  "job_path": "مسار العمل",
+  "go_to_customer": "التوجه للعميل",
+  "receive_code": "كود الاستلام",
+  "nearest_warehouse": "أقرب مستودع",
+  "basic_service_fee": "سعر الخدمة الأساسي",
+  "floor_price": "سعر الطابق",
+  "final_price": "السعر النهائي",
+  "receive_from_warehouse": "بدأ الاستلام من المستودع",
+
+  "details_order": "تفاصيل الطلب",
   "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة"
 }

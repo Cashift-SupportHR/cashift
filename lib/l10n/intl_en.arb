@@ -1448,6 +1448,19 @@
   "private": "exclusively",
   "favorite_housing_locations": "Select your preferred neighborhoods",
   "terms_and_conditions_accept": "Please agree to all terms and conditions",
-  "face_image_required_proceed": "Face image is required to proceed"
-
+  "details_order": "Details Order",
+  "face_image_required_proceed": "Face image is required to proceed",
+  "receive_from": "receipt from",
+  "warehouse": "warehouse",
+  "customer": "customer",
+  "job_path": "job path",
+  "go_to_customer": "Going to the customer",
+  "receive_code": "Receipt code",
+  "nearest_warehouse": "Nearest warehouse",
+  "basic_service_fee": "Basic service fee",
+  "floor_price": "Floor price",
+  "final_price": "Final price",
+  "deliver_to": "deliver to",
+  "i_agree_to_all_terms": "I agree to all the terms",
+  "receive_from_warehouse": "Received from the warehouse has begun"
 }

@@ -1803,7 +1803,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get view_terms_conditions => 'View terms and conditions';
 
   @override
-  String get i_agree_to_all_terms => 'اوافق علي جميع الشروط';
+  String get i_agree_to_all_terms => 'I agree to all the terms';
 
   @override
   String get after_break => 'After break';
@@ -4371,6 +4371,45 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get private => 'exclusively';
+
+  @override
+  String get receive_from => 'receipt from';
+
+  @override
+  String get warehouse => 'warehouse';
+
+  @override
+  String get customer => 'customer';
+
+  @override
+  String get deliver_to => 'deliver to';
+
+  @override
+  String get job_path => 'job path';
+
+  @override
+  String get go_to_customer => 'Going to the customer';
+
+  @override
+  String get receive_code => 'Receipt code';
+
+  @override
+  String get nearest_warehouse => 'Nearest warehouse';
+
+  @override
+  String get basic_service_fee => 'Basic service fee';
+
+  @override
+  String get floor_price => 'Floor price';
+
+  @override
+  String get final_price => 'Final price';
+
+  @override
+  String get receive_from_warehouse => 'Received from the warehouse has begun';
+
+  @override
+  String get details_order => 'Details Order';
 
   @override
   String get face_image_required_proceed => 'Face image is required to proceed';

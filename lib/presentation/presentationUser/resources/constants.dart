@@ -22,18 +22,12 @@ const kMessageTextFieldDecoration = InputDecoration(
 
 const kTextFieldNoBordersDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-  hintStyle: TextStyle(
-    color: kGrey_C3,
-    fontSize: 16.0,
-    fontFamily: 'Regular',
-  ),
+  hintStyle: TextStyle(color: kGrey_C3, fontSize: 16.0, fontFamily: 'Regular'),
   border: InputBorder.none,
 );
 
 const kMessageContainerDecoration = BoxDecoration(
-  border: Border(
-    top: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-  ),
+  border: Border(top: BorderSide(color: Colors.lightBlueAccent, width: 2.0)),
 );
 
 const kButtonTextStyle = TextStyle(
@@ -87,8 +81,11 @@ const kTextSemiBold = TextStyle(
 );
 
 final kHelperText = kTextRegular.copyWith(fontSize: 12, color: kPurplishGrey);
-const kDrawerItemStyle =
-    TextStyle(fontFamily: 'Regular', fontSize: 15, color: kPrimary);
+const kDrawerItemStyle = TextStyle(
+  fontFamily: 'Regular',
+  fontSize: 15,
+  color: kPrimary,
+);
 
 const kTextRegular = TextStyle(
   color: kFontDark,
@@ -101,15 +98,23 @@ const kTextLight = TextStyle(
   fontSize: 12.0,
   fontFamily: 'Light',
 );
-final kTextRegularPrimary =
-    kTextRegular.copyWith(color: kPrimary, fontSize: 12);
+final kTextRegularPrimary = kTextRegular.copyWith(
+  color: kPrimary,
+  fontSize: 12,
+);
 
-final kTextRegularGrey =
-    kTextRegular.copyWith(color: kGreyishBrown, fontSize: 12);
-final kTextRegularCoolGrey =
-    kTextRegular.copyWith(color: kCoolGrey, fontSize: 12);
-final kTextRegularSilver =
-    kTextRegular.copyWith(color: kSilverTwo, fontSize: 12);
+final kTextRegularGrey = kTextRegular.copyWith(
+  color: kGreyishBrown,
+  fontSize: 12,
+);
+final kTextRegularCoolGrey = kTextRegular.copyWith(
+  color: kCoolGrey,
+  fontSize: 12,
+);
+final kTextRegularSilver = kTextRegular.copyWith(
+  color: kSilverTwo,
+  fontSize: 12,
+);
 
 const kTextBold = TextStyle(
   color: kFontDark,
@@ -135,7 +140,7 @@ const kTextBodyBold = TextStyle(
 );
 
 const kTextFontIcon = TextStyle(fontFamily: 'fontIcon');
-TextStyle get fontIcon =>kTextFontIcon;
+TextStyle get fontIcon => kTextFontIcon;
 
 const kTextExtraBold = TextStyle(
   color: kFontDarkGreen,
@@ -144,113 +149,138 @@ const kTextExtraBold = TextStyle(
 );
 
 const kProfileFieldDecoration = InputDecoration(
-    fillColor: kPaleGrey2,
-    filled: true,
-    errorMaxLines: 1,
-    contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-    disabledBorder: OutlineInputBorder(
-      borderSide: BorderSide.none,
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-    ));
+  fillColor: kPaleGrey2,
+  filled: true,
+  errorMaxLines: 1,
+  contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+  disabledBorder: OutlineInputBorder(
+    borderSide: BorderSide.none,
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+  ),
+);
 const kTextFieldProfileItemDecoration = InputDecoration(
-    filled: true,
-    fillColor: Colors.white,
-    hintStyle: TextStyle(
-      color: kSteal,
-      fontSize: 13.0,
-      fontFamily: 'Bahij_Regular',
-    ),
-    contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-    border: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide: BorderSide.none,
-    ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide: BorderSide.none,
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide: BorderSide.none,
-    ));
-
+  filled: true,
+  fillColor: Colors.white,
+  hintStyle: TextStyle(
+    color: kSteal,
+    fontSize: 13.0,
+    fontFamily: 'Bahij_Regular',
+  ),
+  contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide.none,
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide.none,
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide.none,
+  ),
+);
 
 const kTextDescriptionFieldDecoration = InputDecoration(
-    filled: true,
-    fillColor: kFillColor,
-    hintStyle: TextStyle(
-      color: kSteal,
-      fontSize: 13.0,
-      fontFamily: 'Bahij_Regular',
+  filled: true,
+  fillColor: kFillColor,
+  hintStyle: TextStyle(
+    color: kSteal,
+    fontSize: 13.0,
+    fontFamily: 'Bahij_Regular',
+  ),
+  contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(
+      color: kPaleGray,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-    border: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide:
-          BorderSide(color: kPaleGray, width: 1.1, style: BorderStyle.solid),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(
+      color: kPaleGray,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide:
-          BorderSide(color: kPaleGray, width: 1.1, style: BorderStyle.solid),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(
+      color: kPaleGray,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide:
-          BorderSide(color: kPaleGray, width: 1.1, style: BorderStyle.solid),
-    ));
+  ),
+);
 
 const kTextFieldCommentDecoration = InputDecoration(
-    filled: true,
-    fillColor: Colors.white,
-    hintStyle: TextStyle(
-      color: Colors.black,
-      fontSize: 12.0,
-      fontFamily: 'Bahij_Regular',
+  filled: true,
+  fillColor: Colors.white,
+  hintStyle: TextStyle(
+    color: Colors.black,
+    fontSize: 12.0,
+    fontFamily: 'Bahij_Regular',
+  ),
+  contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(6)),
+    borderSide: BorderSide(
+      color: kBordColor,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-    border: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(6)),
-      borderSide:
-          BorderSide(color: kBordColor, width: 1.1, style: BorderStyle.solid),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(6)),
+    borderSide: BorderSide(
+      color: kWhiteOff,
+      width: 1,
+      style: BorderStyle.solid,
     ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(6)),
-      borderSide:
-          BorderSide(color: kWhiteOff, width: 1, style: BorderStyle.solid),
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(6)),
-      borderSide: BorderSide(color: kSteal, width: 1, style: BorderStyle.solid),
-    ));
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(6)),
+    borderSide: BorderSide(color: kSteal, width: 1, style: BorderStyle.solid),
+  ),
+);
 
 final kTextFieldDecoration = InputDecoration(
-    filled: false,
-    hintText: "",
+  filled: false,
+  hintText: "",
 
-    hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
-    contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-    border: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
-      borderSide: BorderSide(color: kGrey_EB),
+  hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
+  contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+  border: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(20)),
+    borderSide: BorderSide(color: kGrey_EB),
+  ),
+  enabledBorder: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(20)),
+    borderSide: BorderSide(
+      color: kGrey_EB,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    enabledBorder: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
-      borderSide:
-          BorderSide(color: kGrey_EB, width: 1.1, style: BorderStyle.solid),
+  ),
+  focusedBorder: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(20)),
+    borderSide: BorderSide(
+      color: kGrey_EB,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    focusedBorder: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
-      borderSide:
-          BorderSide(color: kGrey_EB, width: 1.1, style: BorderStyle.solid),
-    ));
+  ),
+);
 
 final kRectangleTextFieldDecoration = kTextFieldDecoration.copyWith(
-
   hintStyle: kTextRegular.copyWith(
-      color: kBattleShipGrey2.withOpacity(0.8), fontSize: 14),
+    color: kBattleShipGrey2.withOpacity(0.8),
+    fontSize: 14,
+  ),
   enabledBorder: const OutlineInputBorder(
-
     borderSide: BorderSide(color: kGrey_EB, width: 1),
   ),
   focusedBorder: const OutlineInputBorder(
@@ -265,29 +295,32 @@ final kRectangleTextFieldDecoration = kTextFieldDecoration.copyWith(
   errorMaxLines: 2,
 );
 final kTextFieldDecorationSearch = InputDecoration(
-    fillColor: kWhite,
-    filled: true,
-    hintText: "",
-    hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
-    contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-    border: OutlineInputBorder(
-      borderRadius: const BorderRadius.all(Radius.circular(50)),
-      borderSide: BorderSide(color: kGrey_56.withOpacity(0.2)),
+  fillColor: kWhite,
+  filled: true,
+  hintText: "",
+  hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
+  contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+  border: OutlineInputBorder(
+    borderRadius: const BorderRadius.all(Radius.circular(50)),
+    borderSide: BorderSide(color: kGrey_56.withOpacity(0.2)),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderRadius: const BorderRadius.all(Radius.circular(50)),
+    borderSide: BorderSide(
+      color: kGrey_56.withOpacity(0.2),
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: const BorderRadius.all(Radius.circular(50)),
-      borderSide: BorderSide(
-          color: kGrey_56.withOpacity(0.2),
-          width: 1.1,
-          style: BorderStyle.solid),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: const BorderRadius.all(Radius.circular(50)),
+    borderSide: BorderSide(
+      color: kGrey_56.withOpacity(0.2),
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: const BorderRadius.all(Radius.circular(50)),
-      borderSide: BorderSide(
-          color: kGrey_56.withOpacity(0.2),
-          width: 1.1,
-          style: BorderStyle.solid),
-    ));
+  ),
+);
 
 final kSearchDecoration = InputDecoration(
   filled: true,
@@ -315,9 +348,10 @@ final kSearchOutlinedDecoration = InputDecoration(
 );
 
 final kBoxDecoration = BoxDecoration(
-    color: kWhiteOff,
-    border: Border.all(color: kPaleGray, width: 0, style: BorderStyle.none),
-    borderRadius: BorderRadius.circular(12));
+  color: kWhiteOff,
+  border: Border.all(color: kPaleGray, width: 0, style: BorderStyle.none),
+  borderRadius: BorderRadius.circular(12),
+);
 final kFieldDecoration = BoxDecoration(
   color: Colors.white,
   boxShadow: [
@@ -326,28 +360,34 @@ final kFieldDecoration = BoxDecoration(
       spreadRadius: 2,
       blurRadius: 2,
       offset: const Offset(2, 2), // c
-    )
+    ),
   ],
   borderRadius: BorderRadius.circular(4),
 );
 
 const kRequestTextFieldDecoration = InputDecoration(
-    filled: true,
-    fillColor: Colors.white,
-    hintStyle: TextStyle(color: Colors.grey),
-    contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-    border: OutlineInputBorder(
-      borderSide:
-          BorderSide(color: kBordColor, width: 1, style: BorderStyle.solid),
+  filled: true,
+  fillColor: Colors.white,
+  hintStyle: TextStyle(color: Colors.grey),
+  contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+  border: OutlineInputBorder(
+    borderSide: BorderSide(
+      color: kBordColor,
+      width: 1,
+      style: BorderStyle.solid,
     ),
-    enabledBorder: OutlineInputBorder(
-      borderSide:
-          BorderSide(color: kBordColor, width: 1, style: BorderStyle.solid),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderSide: BorderSide(
+      color: kBordColor,
+      width: 1,
+      style: BorderStyle.solid,
     ),
-    focusedBorder: OutlineInputBorder(
-      borderSide:
-          BorderSide(color: kPrimary, width: 1, style: BorderStyle.solid),
-    ));
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: kPrimary, width: 1, style: BorderStyle.solid),
+  ),
+);
 
 const kInputDecoration = InputDecoration(
   border: InputBorder.none,
@@ -377,7 +417,7 @@ const kCountryCodeList = [
   '+973',
   '+968',
   '+965',
-  '+962'
+  '+962',
 ];
 
 kHideKeyboard() {
@@ -391,76 +431,89 @@ kunFocus(BuildContext context) {
   }
 }
 
-kCommonDecoration(
-    {String? hint,
-    Widget? icon,
-    Widget? endIcon,
-    String? helperText,
-    TextStyle? helperStyle,
-    Widget? suffix,
-    Widget? prefix,
-    TextDirection? textDirection}) {
+kCommonDecoration({
+  String? hint,
+  Widget? icon,
+  Widget? endIcon,
+  String? helperText,
+  TextStyle? helperStyle,
+  Widget? suffix,
+  Widget? prefix,
+  TextDirection? textDirection,
+}) {
   return kTextFieldDecoration.copyWith(
-      prefixIcon: icon,
-      hintText: hint,
-      hintTextDirection: textDirection,
-      suffixIcon: endIcon,
-      suffix: suffix,
-      prefix: prefix,
-      helperText: helperText,
-      helperStyle: helperStyle,
-      suffixIconConstraints: const BoxConstraints(maxHeight: 20, minWidth: 40),
-      hintStyle: kTextRegular.copyWith(fontSize: 13, color: kBlueGrey),
-      prefixIconConstraints: const BoxConstraints(maxHeight: 20, minWidth: 30));
+    prefixIcon: icon,
+    hintText: hint,
+    hintTextDirection: textDirection,
+    suffixIcon: endIcon,
+    suffix: suffix,
+    prefix: prefix,
+    helperText: helperText,
+    helperStyle: helperStyle,
+    suffixIconConstraints: const BoxConstraints(maxHeight: 20, minWidth: 40),
+    hintStyle: kTextRegular.copyWith(fontSize: 13, color: kBlueGrey),
+    prefixIconConstraints: const BoxConstraints(maxHeight: 20, minWidth: 30),
+  );
 }
 
 Widget kLoadSvgIcon(String s) {
-  return SvgPicture.asset(
-    'images/$s.svg',
-    height: 15,
-    color: kGrey_C3,
-  );
+  return SvgPicture.asset('images/$s.svg', height: 15, color: kGrey_C3);
+}
+
+Widget kSvgIcon({required String image, Color? color,double? size}) {
+  return SvgPicture.asset(image, height: 15, color: color,width: size,);
 }
 
 // by Harbey
 final kTextFieldDecorationLessRadius = InputDecoration(
-    filled: false,
-    hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
-    contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-    border: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide: BorderSide(color: kGrey_EB),
+  filled: false,
+  hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
+  contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+  border: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(color: kGrey_EB),
+  ),
+  enabledBorder: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(
+      color: kGrey_EB,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    enabledBorder: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide:
-          BorderSide(color: kGrey_EB, width: 1.1, style: BorderStyle.solid),
+  ),
+  focusedBorder: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(
+      color: kGrey_EB,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    focusedBorder: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide:
-          BorderSide(color: kGrey_EB, width: 1.1, style: BorderStyle.solid),
-    ));
+  ),
+);
 
 final kTextFieldDecorationLessRadiusForTime = InputDecoration(
-    filled: false,
-    hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
-    contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-    constraints: const BoxConstraints(
-      minHeight: 20,
-      maxHeight: 35,
+  filled: false,
+  hintStyle: kTextLabelFontDark.copyWith(fontSize: 14, color: kSilver),
+  contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+  constraints: const BoxConstraints(minHeight: 20, maxHeight: 35),
+  border: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(color: kGrey_DF),
+  ),
+  enabledBorder: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(
+      color: kGrey_DF,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    border: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide: BorderSide(color: kGrey_DF),
+  ),
+  focusedBorder: const OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(8)),
+    borderSide: BorderSide(
+      color: kGrey_DF,
+      width: 1.1,
+      style: BorderStyle.solid,
     ),
-    enabledBorder: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide:
-          BorderSide(color: kGrey_DF, width: 1.1, style: BorderStyle.solid),
-    ),
-    focusedBorder: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
-      borderSide:
-          BorderSide(color: kGrey_DF, width: 1.1, style: BorderStyle.solid),
-    ));
+  ),
+);

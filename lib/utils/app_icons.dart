@@ -351,4 +351,12 @@ class AppIcons {
   static const String factoryViolationsv2 = 'assets/icons/factoryViolationsv2.svg';
   static const String maintenancev2 = 'assets/icons/maintenancev2.svg';
   static const String waring = 'assets/icons/waring_notof.svg';
+  static const String details_order = 'assets/icons/details_order.svg';
+  static const String location_map = 'assets/icons/location_map.svg';
+  static const String line2 = 'assets/icons/line2.svg';
+  static const String receipt = 'assets/icons/receipt.svg';
+  static const String receiptAdd = 'assets/icons/receipt-add.svg';
+  static const String receiptEdit = 'assets/icons/receipt-edit.svg';
+  static const String task = 'assets/icons/task.svg';
+  static const String note = 'assets/icons/note.svg';
 }

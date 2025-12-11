@@ -19,6 +19,7 @@ import '../widgets/app_requierment_notificationslist_widget.dart';
 import '../widgets/carousel_slider_overView.dart';
 import '../widgets/current_date_widget.dart';
 import '../widgets/job_offers_sliders.dart';
+import '../widgets/mana_order_widget.dart';
 import '../widgets/opportunity_slider.dart';
 import '../widgets/shifts_slider.dart';
 import '../widgets/tab_view_shift_overView.dart';
@@ -124,6 +125,7 @@ class PostLoginWidget extends BaseStatelessWidget {
         const SizedBox(
           height: 16,
         ),
+        ManaOrderWidget(),
       ],
     );
   }

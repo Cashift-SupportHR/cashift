@@ -1,0 +1,26 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+
+import '../../../../../common/common_state.dart';
+import '../../../../data/models/index.dart';
+import '../../../../domain/entities/index.dart';
+import '../cubit/go_to_customer_mana_cubit.dart';
+import 'go_to_customer_mana_screen.dart';
+
+class GoToCustomerManaPage
+    extends BaseBlocWidget<UnInitState, GoToCustomerManaCubit> {
+  final Function() onNext;
+
+  GoToCustomerManaPage({Key? key, required this.onNext}) : super(key: key);
+
+  @override
+  Widget buildWidget(BuildContext context, UnInitState state) {
+    return GoToCustomerManaScreen(onNext: onNext);
+  }
+
+  //   @override
+  //   void onSuccessDismissed() {
+  //    Navigator.pop(context,true);
+  //   }
+}

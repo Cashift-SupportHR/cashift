@@ -8807,6 +8807,84 @@ abstract class AppLocalizations {
   /// **'حصريا'**
   String get private;
 
+  /// No description provided for @receive_from.
+  ///
+  /// In ar, this message translates to:
+  /// **'استلام من'**
+  String get receive_from;
+
+  /// No description provided for @warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'المستودع'**
+  String get warehouse;
+
+  /// No description provided for @customer.
+  ///
+  /// In ar, this message translates to:
+  /// **'العميل'**
+  String get customer;
+
+  /// No description provided for @deliver_to.
+  ///
+  /// In ar, this message translates to:
+  /// **'تسليم الي'**
+  String get deliver_to;
+
+  /// No description provided for @job_path.
+  ///
+  /// In ar, this message translates to:
+  /// **'مسار العمل'**
+  String get job_path;
+
+  /// No description provided for @go_to_customer.
+  ///
+  /// In ar, this message translates to:
+  /// **'التوجه للعميل'**
+  String get go_to_customer;
+
+  /// No description provided for @receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'كود الاستلام'**
+  String get receive_code;
+
+  /// No description provided for @nearest_warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'أقرب مستودع'**
+  String get nearest_warehouse;
+
+  /// No description provided for @basic_service_fee.
+  ///
+  /// In ar, this message translates to:
+  /// **'سعر الخدمة الأساسي'**
+  String get basic_service_fee;
+
+  /// No description provided for @floor_price.
+  ///
+  /// In ar, this message translates to:
+  /// **'سعر الطابق'**
+  String get floor_price;
+
+  /// No description provided for @final_price.
+  ///
+  /// In ar, this message translates to:
+  /// **'السعر النهائي'**
+  String get final_price;
+
+  /// No description provided for @receive_from_warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'بدأ الاستلام من المستودع'**
+  String get receive_from_warehouse;
+
+  /// No description provided for @details_order.
+  ///
+  /// In ar, this message translates to:
+  /// **'تفاصيل الطلب'**
+  String get details_order;
+
   /// No description provided for @face_image_required_proceed.
   ///
   /// In ar, this message translates to:

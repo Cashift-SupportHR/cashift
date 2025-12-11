@@ -180,6 +180,18 @@ import '../../presentationUser/mainnavigation/wallet/user_qrcode/bloc/qrcode_blo
     as _i14;
 import '../../presentationUser/mainnavigation/wallet/withdraw/bloc/withdraw_cubit.dart'
     as _i68;
+import '../../presentationUser/mana_delivery/data/data_sources/mana_deliver_api.dart'
+    as _i376;
+import '../../presentationUser/mana_delivery/data/repositories/mana_delivery_repo.dart'
+    as _i418;
+import '../../presentationUser/mana_delivery/presentation/pages/details_order_mana/cubit/details_order_mana_cubit.dart'
+    as _i155;
+import '../../presentationUser/mana_delivery/presentation/pages/go_to_customer_mana/cubit/go_to_customer_mana_cubit.dart'
+    as _i37;
+import '../../presentationUser/mana_delivery/presentation/pages/nearest_warehouse/cubit/nearest_warehouse_cubit.dart'
+    as _i570;
+import '../../presentationUser/mana_delivery/presentation/pages/resend_code/cubit/resend_code_cubit.dart'
+    as _i828;
 import '../../presentationUser/map_picker/bloc/map_picker_cubit.dart' as _i66;
 import '../../presentationUser/map_picker/data/datasource/map_picker_provider.dart'
     as _i249;
@@ -644,6 +656,8 @@ Future<_i174.GetIt> $initGetIt(
       () => _i235.AuthAPI(api: gh<_i1029.UserEndpoint>()));
   gh.factory<_i179.LogisticsRequestAPI>(
       () => _i179.LogisticsRequestAPI(api: gh<_i1029.UserEndpoint>()));
+  gh.factory<_i376.ManaDeliverAPI>(
+      () => _i376.ManaDeliverAPI(api: gh<_i1029.UserEndpoint>()));
   gh.factory<_i565.RequestsUserAPI>(
       () => _i565.RequestsUserAPI(api: gh<_i1029.UserEndpoint>()));
   gh.factory<_i420.AbsenceNoticeAPI>(
@@ -828,6 +842,8 @@ Future<_i174.GetIt> $initGetIt(
       () => _i445.SalaryDefinitionRepository(gh<_i713.SalaryDefinitionAPI>()));
   gh.factory<_i204.ServiceRepository>(
       () => _i204.ServiceRepository(gh<_i825.ServiceAPI>()));
+  gh.factory<_i418.ManaDeliverRepository>(
+      () => _i418.ManaDeliverRepository(gh<_i376.ManaDeliverAPI>()));
   gh.factory<_i497.JobRequirementsRepository>(
       () => _i497.JobRequirementsRepository(gh<_i129.JobRequirementsAPI>()));
   gh.factory<_i560.ReviewOpportunitiesCubit>(() =>
@@ -872,6 +888,14 @@ Future<_i174.GetIt> $initGetIt(
       () => _i1072.AddTransactionsCubit(gh<_i297.TransactionsRepository>()));
   gh.factory<_i319.TransactionsCubit>(
       () => _i319.TransactionsCubit(gh<_i297.TransactionsRepository>()));
+  gh.factory<_i155.DetailsOrderManaCubit>(
+      () => _i155.DetailsOrderManaCubit(gh<_i418.ManaDeliverRepository>()));
+  gh.factory<_i37.GoToCustomerManaCubit>(
+      () => _i37.GoToCustomerManaCubit(gh<_i418.ManaDeliverRepository>()));
+  gh.factory<_i570.NearestWarehouseCubit>(
+      () => _i570.NearestWarehouseCubit(gh<_i418.ManaDeliverRepository>()));
+  gh.factory<_i828.ResendCodeCubit>(
+      () => _i828.ResendCodeCubit(gh<_i418.ManaDeliverRepository>()));
   gh.factory<_i1005.AddOpportunityRepository>(
       () => _i1005.AddOpportunityRepository(gh<_i430.AddOpportunityAPI>()));
   gh.factory<_i285.LicenseDataCubit>(

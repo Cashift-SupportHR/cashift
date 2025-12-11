@@ -4373,5 +4373,44 @@ class AppLocalizationsAr extends AppLocalizations {
   String get private => 'حصريا';
 
   @override
+  String get receive_from => 'استلام من';
+
+  @override
+  String get warehouse => 'المستودع';
+
+  @override
+  String get customer => 'العميل';
+
+  @override
+  String get deliver_to => 'تسليم الي';
+
+  @override
+  String get job_path => 'مسار العمل';
+
+  @override
+  String get go_to_customer => 'التوجه للعميل';
+
+  @override
+  String get receive_code => 'كود الاستلام';
+
+  @override
+  String get nearest_warehouse => 'أقرب مستودع';
+
+  @override
+  String get basic_service_fee => 'سعر الخدمة الأساسي';
+
+  @override
+  String get floor_price => 'سعر الطابق';
+
+  @override
+  String get final_price => 'السعر النهائي';
+
+  @override
+  String get receive_from_warehouse => 'بدأ الاستلام من المستودع';
+
+  @override
+  String get details_order => 'تفاصيل الطلب';
+
+  @override
   String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';
 }
