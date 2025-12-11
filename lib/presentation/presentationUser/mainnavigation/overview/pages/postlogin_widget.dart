@@ -114,6 +114,7 @@ class PostLoginWidget extends BaseStatelessWidget {
                           name: strings.vip_offers,
                           showPlaceHolder: true,
                         )
+
                       : buildOffersSliderSection(
                           postLoginState.offers.stream,
                           name: strings.all_jobs,
