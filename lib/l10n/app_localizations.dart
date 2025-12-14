@@ -8825,6 +8825,12 @@ abstract class AppLocalizations {
   /// **'العميل'**
   String get customer;
 
+  /// No description provided for @expected_arrival_time.
+  ///
+  /// In ar, this message translates to:
+  /// **'الوقت المتوقع للوصول'**
+  String get expected_arrival_time;
+
   /// No description provided for @deliver_to.
   ///
   /// In ar, this message translates to:
@@ -8884,6 +8890,54 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'تفاصيل الطلب'**
   String get details_order;
+
+  /// No description provided for @confirm_delivery.
+  ///
+  /// In ar, this message translates to:
+  /// **'تأكيد التسليم'**
+  String get confirm_delivery;
+
+  /// No description provided for @delivery_code_to_customer.
+  ///
+  /// In ar, this message translates to:
+  /// **'كود التسليم الي العميل'**
+  String get delivery_code_to_customer;
+
+  /// No description provided for @details_delivery_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.'**
+  String get details_delivery_code;
+
+  /// No description provided for @receive_code_from_warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'كود الاستلام من المستودع'**
+  String get receive_code_from_warehouse;
+
+  /// No description provided for @number_receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'رقم الكود الاستلام'**
+  String get number_receive_code;
+
+  /// No description provided for @write_receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'اكتب كود الاستلام'**
+  String get write_receive_code;
+
+  /// No description provided for @details_receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.'**
+  String get details_receive_code;
+
+  /// No description provided for @number_of_nearest_warehouses.
+  ///
+  /// In ar, this message translates to:
+  /// **'  مستودع قريبين لك , حدد أقرب مستودع بينهم : '**
+  String get number_of_nearest_warehouses;
 
   /// No description provided for @face_image_required_proceed.
   ///

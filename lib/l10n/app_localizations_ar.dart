@@ -4382,6 +4382,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get customer => 'العميل';
 
   @override
+  String get expected_arrival_time => 'الوقت المتوقع للوصول';
+
+  @override
   String get deliver_to => 'تسليم الي';
 
   @override
@@ -4410,6 +4413,30 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get details_order => 'تفاصيل الطلب';
+
+  @override
+  String get confirm_delivery => 'تأكيد التسليم';
+
+  @override
+  String get delivery_code_to_customer => 'كود التسليم الي العميل';
+
+  @override
+  String get details_delivery_code => 'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.';
+
+  @override
+  String get receive_code_from_warehouse => 'كود الاستلام من المستودع';
+
+  @override
+  String get number_receive_code => 'رقم الكود الاستلام';
+
+  @override
+  String get write_receive_code => 'اكتب كود الاستلام';
+
+  @override
+  String get details_receive_code => 'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.';
+
+  @override
+  String get number_of_nearest_warehouses => '  مستودع قريبين لك , حدد أقرب مستودع بينهم : ';
 
   @override
   String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';

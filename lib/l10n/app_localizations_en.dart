@@ -4382,6 +4382,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get customer => 'customer';
 
   @override
+  String get expected_arrival_time => 'Expected time of arrival';
+
+  @override
   String get deliver_to => 'deliver to';
 
   @override
@@ -4410,6 +4413,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get details_order => 'Details Order';
+
+  @override
+  String get confirm_delivery => 'Confirm delivery';
+
+  @override
+  String get delivery_code_to_customer => 'Delivery code to customer';
+
+  @override
+  String get details_delivery_code => 'Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.';
+
+  @override
+  String get receive_code_from_warehouse => 'Warehouse receiving code';
+
+  @override
+  String get number_receive_code => 'Receive code number';
+
+  @override
+  String get write_receive_code => 'Write the receiving code';
+
+  @override
+  String get details_receive_code => 'Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.';
+
+  @override
+  String get number_of_nearest_warehouses => 'Warehouses near you, select the closest one among them:';
 
   @override
   String get face_image_required_proceed => 'Face image is required to proceed';

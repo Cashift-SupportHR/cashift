@@ -461,7 +461,7 @@ Widget kLoadSvgIcon(String s) {
 }
 
 Widget kSvgIcon({required String image, Color? color,double? size}) {
-  return SvgPicture.asset(image, height: 15, color: color,width: size,);
+  return SvgPicture.asset(image, height: size, color: color,width: size,);
 }
 
 // by Harbey

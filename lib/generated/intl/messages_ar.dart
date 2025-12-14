@@ -589,6 +589,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "confirm_code_ms": MessageLookupByLibrary.simpleMessage(
       "سوف يتم ارسال كود التحقق الي رقم الجوال الجديد , عليك كتابته الآن ",
     ),
+    "confirm_delivery": MessageLookupByLibrary.simpleMessage("تأكيد التسليم"),
     "confirm_iban": MessageLookupByLibrary.simpleMessage("تأكيد رقم الايبان"),
     "confirm_password": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور",
@@ -690,6 +691,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "delete_time": MessageLookupByLibrary.simpleMessage("حذف الوقت"),
     "delete_user": MessageLookupByLibrary.simpleMessage("حذف المستخدم"),
     "deliver_to": MessageLookupByLibrary.simpleMessage("تسليم الي"),
+    "delivery_code_to_customer": MessageLookupByLibrary.simpleMessage(
+      "كود التسليم الي العميل",
+    ),
     "delivery_date": MessageLookupByLibrary.simpleMessage("تاريخ الاستلام"),
     "denied_camera_permission": MessageLookupByLibrary.simpleMessage(
       "عذرًا ، يجب عليك الانتقال إلى إعدادات التطبيق والسماح بالوصول إلى الكاميرا حتى تتمكن من مسح رمز qr ضوئيًا",
@@ -701,7 +705,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "description": MessageLookupByLibrary.simpleMessage("الوصف"),
     "deserved_amount": MessageLookupByLibrary.simpleMessage("المبلغ المستحق"),
     "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
+    "details_delivery_code": MessageLookupByLibrary.simpleMessage(
+      "الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.",
+    ),
     "details_order": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
+    "details_receive_code": MessageLookupByLibrary.simpleMessage(
+      "الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.",
+    ),
     "determine_covenant_number": MessageLookupByLibrary.simpleMessage(
       "حدد رقم العهدة",
     ),
@@ -904,6 +914,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "exit_app": MessageLookupByLibrary.simpleMessage("خروج من التطبيق"),
     "expair_date_license": MessageLookupByLibrary.simpleMessage(
       "تاريخ انتهاء الرخصة",
+    ),
+    "expected_arrival_time": MessageLookupByLibrary.simpleMessage(
+      "الوقت المتوقع للوصول",
     ),
     "expire_date": MessageLookupByLibrary.simpleMessage(
       "تاريخ انتهاء الصلاحيه",
@@ -1396,7 +1409,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "number_months_loan": MessageLookupByLibrary.simpleMessage(
       "عدد أشهر السلفه",
     ),
+    "number_of_nearest_warehouses": MessageLookupByLibrary.simpleMessage(
+      "  مستودع قريبين لك , حدد أقرب مستودع بينهم : ",
+    ),
     "number_plate": MessageLookupByLibrary.simpleMessage("رقم اللوحة"),
+    "number_receive_code": MessageLookupByLibrary.simpleMessage(
+      "رقم الكود الاستلام",
+    ),
     "number_req": MessageLookupByLibrary.simpleMessage("العدد المطلوب :"),
     "number_required_for_opportunity": MessageLookupByLibrary.simpleMessage(
       "العدد المطلوب للفرصة",
@@ -1710,6 +1729,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "حالة استلام العهدة :",
     ),
     "receive_code": MessageLookupByLibrary.simpleMessage("كود الاستلام"),
+    "receive_code_from_warehouse": MessageLookupByLibrary.simpleMessage(
+      "كود الاستلام من المستودع",
+    ),
     "receive_from": MessageLookupByLibrary.simpleMessage("استلام من"),
     "receive_from_warehouse": MessageLookupByLibrary.simpleMessage(
       "بدأ الاستلام من المستودع",
@@ -2658,6 +2680,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "write_reason_apology": MessageLookupByLibrary.simpleMessage(
       "اكتب سبب اعتذارك",
+    ),
+    "write_receive_code": MessageLookupByLibrary.simpleMessage(
+      "اكتب كود الاستلام",
     ),
     "write_terms_conditions_ar": MessageLookupByLibrary.simpleMessage(
       "اكتب الشروط والاحكام باللغة العربية",

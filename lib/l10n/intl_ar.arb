@@ -1496,6 +1496,7 @@
   "receive_from": "استلام من",
   "warehouse": "المستودع",
   "customer": "العميل",
+  "expected_arrival_time": "الوقت المتوقع للوصول",
   "deliver_to": "تسليم الي",
   "job_path": "مسار العمل",
   "go_to_customer": "التوجه للعميل",
@@ -1507,5 +1508,14 @@
   "receive_from_warehouse": "بدأ الاستلام من المستودع",
 
   "details_order": "تفاصيل الطلب",
+  "confirm_delivery": "تأكيد التسليم",
+  "delivery_code_to_customer": "كود التسليم الي العميل",
+  "details_delivery_code": "الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.",
+   "receive_code_from_warehouse": "كود الاستلام من المستودع",
+  "number_receive_code": "رقم الكود الاستلام",
+  "write_receive_code": "اكتب كود الاستلام",
+  "details_receive_code": "الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.",
+
+  "number_of_nearest_warehouses": "  مستودع قريبين لك , حدد أقرب مستودع بينهم : ",
   "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة"
 }

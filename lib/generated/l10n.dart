@@ -12410,11 +12410,101 @@ class S {
     return Intl.message('deliver to', name: 'deliver_to', desc: '', args: []);
   }
 
+  /// `Confirm delivery`
+  String get confirm_delivery {
+    return Intl.message(
+      'Confirm delivery',
+      name: 'confirm_delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warehouse receiving code`
+  String get receive_code_from_warehouse {
+    return Intl.message(
+      'Warehouse receiving code',
+      name: 'receive_code_from_warehouse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expected time of arrival`
+  String get expected_arrival_time {
+    return Intl.message(
+      'Expected time of arrival',
+      name: 'expected_arrival_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery code to customer`
+  String get delivery_code_to_customer {
+    return Intl.message(
+      'Delivery code to customer',
+      name: 'delivery_code_to_customer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.`
+  String get details_delivery_code {
+    return Intl.message(
+      'Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.',
+      name: 'details_delivery_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receive code number`
+  String get number_receive_code {
+    return Intl.message(
+      'Receive code number',
+      name: 'number_receive_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write the receiving code`
+  String get write_receive_code {
+    return Intl.message(
+      'Write the receiving code',
+      name: 'write_receive_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.`
+  String get details_receive_code {
+    return Intl.message(
+      'Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.',
+      name: 'details_receive_code',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `I agree to all the terms`
   String get i_agree_to_all_terms {
     return Intl.message(
       'I agree to all the terms',
       name: 'i_agree_to_all_terms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warehouses near you, select the closest one among them:`
+  String get number_of_nearest_warehouses {
+    return Intl.message(
+      'Warehouses near you, select the closest one among them:',
+      name: 'number_of_nearest_warehouses',
       desc: '',
       args: [],
     );

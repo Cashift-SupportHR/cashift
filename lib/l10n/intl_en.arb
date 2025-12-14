@@ -1461,6 +1461,15 @@
   "floor_price": "Floor price",
   "final_price": "Final price",
   "deliver_to": "deliver to",
+  "confirm_delivery": "Confirm delivery",
+  "receive_code_from_warehouse": "Warehouse receiving code",
+  "expected_arrival_time": "Expected time of arrival",
+  "delivery_code_to_customer": "Delivery code to customer",
+  "details_delivery_code": "Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.",
+  "number_receive_code": "Receive code number",
+  "write_receive_code": "Write the receiving code",
+  "details_receive_code": "Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.",
   "i_agree_to_all_terms": "I agree to all the terms",
+  "number_of_nearest_warehouses": "Warehouses near you, select the closest one among them:",
   "receive_from_warehouse": "Received from the warehouse has begun"
 }

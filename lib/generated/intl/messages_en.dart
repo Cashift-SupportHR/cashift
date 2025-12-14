@@ -625,6 +625,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "confirm_code_ms": MessageLookupByLibrary.simpleMessage(
       "The verification code will be sent to the new mobile number, you must write it now",
     ),
+    "confirm_delivery": MessageLookupByLibrary.simpleMessage(
+      "Confirm delivery",
+    ),
     "confirm_iban": MessageLookupByLibrary.simpleMessage("Confirm IBAN Code"),
     "confirm_password": MessageLookupByLibrary.simpleMessage(
       "Confirm password",
@@ -744,6 +747,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "delete_time": MessageLookupByLibrary.simpleMessage("Delete time"),
     "delete_user": MessageLookupByLibrary.simpleMessage("Delete user"),
     "deliver_to": MessageLookupByLibrary.simpleMessage("deliver to"),
+    "delivery_code_to_customer": MessageLookupByLibrary.simpleMessage(
+      "Delivery code to customer",
+    ),
     "delivery_date": MessageLookupByLibrary.simpleMessage("Delivery Date"),
     "denied_camera_permission": MessageLookupByLibrary.simpleMessage(
       "Sorry, you have to go to the application settings and allow permission to access the camera so that you can scan qr code ",
@@ -757,7 +763,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "deserved amount :",
     ),
     "details": MessageLookupByLibrary.simpleMessage("Details"),
+    "details_delivery_code": MessageLookupByLibrary.simpleMessage(
+      "Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.",
+    ),
     "details_order": MessageLookupByLibrary.simpleMessage("Details Order"),
+    "details_receive_code": MessageLookupByLibrary.simpleMessage(
+      "Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.",
+    ),
     "determine_covenant_number": MessageLookupByLibrary.simpleMessage(
       "Determine covenant number",
     ),
@@ -968,6 +980,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "exit_app": MessageLookupByLibrary.simpleMessage("Exit from App"),
     "expair_date_license": MessageLookupByLibrary.simpleMessage(
       "License Expiration Date",
+    ),
+    "expected_arrival_time": MessageLookupByLibrary.simpleMessage(
+      "Expected time of arrival",
     ),
     "expire_date": MessageLookupByLibrary.simpleMessage("EXP expiration date."),
     "expired": MessageLookupByLibrary.simpleMessage("Full"),
@@ -1488,7 +1503,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "number_months_loan": MessageLookupByLibrary.simpleMessage(
       "Number of loan months",
     ),
+    "number_of_nearest_warehouses": MessageLookupByLibrary.simpleMessage(
+      "Warehouses near you, select the closest one among them:",
+    ),
     "number_plate": MessageLookupByLibrary.simpleMessage("Plate Number"),
+    "number_receive_code": MessageLookupByLibrary.simpleMessage(
+      "Receive code number",
+    ),
     "number_req": MessageLookupByLibrary.simpleMessage("Number required:"),
     "number_required_for_opportunity": MessageLookupByLibrary.simpleMessage(
       "Number required for the opportunity",
@@ -1839,6 +1860,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "receipt_status": MessageLookupByLibrary.simpleMessage("Receipt status : "),
     "receive_code": MessageLookupByLibrary.simpleMessage("Receipt code"),
+    "receive_code_from_warehouse": MessageLookupByLibrary.simpleMessage(
+      "Warehouse receiving code",
+    ),
     "receive_from": MessageLookupByLibrary.simpleMessage("receipt from"),
     "receive_from_warehouse": MessageLookupByLibrary.simpleMessage(
       "Received from the warehouse has begun",
@@ -2874,6 +2898,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "write_reason_apology": MessageLookupByLibrary.simpleMessage(
       "Write the reason for your apology",
+    ),
+    "write_receive_code": MessageLookupByLibrary.simpleMessage(
+      "Write the receiving code",
     ),
     "write_terms_conditions_ar": MessageLookupByLibrary.simpleMessage(
       "Write terms and conditions in Arabic",

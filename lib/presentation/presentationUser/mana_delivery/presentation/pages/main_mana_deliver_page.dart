@@ -30,10 +30,10 @@ class MainManaDeliverPage extends BaseStatelessWidget {
           strings.go_to_customer,
         ],
         pages: [
-          DetailsOrderManaPage(onNext: () {}),
+          DetailsOrderManaPage(onNext: () {animateToPage(1);}),
 
-          NearestWarehousePage(onNext: () {}),
-          ResendCodePage(onNext: () {}),
+          NearestWarehousePage(onNext: () {animateToPage(2);}),
+          ResendCodePage(onNext: () {animateToPage(3);}),
           GoToCustomerManaPage(onNext: () {}),
         ],
         pageStream: pageStream,
