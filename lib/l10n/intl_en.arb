@@ -1470,6 +1470,11 @@
   "write_receive_code": "Write the receiving code",
   "details_receive_code": "Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.",
   "i_agree_to_all_terms": "I agree to all the terms",
+  "distance": "Distance",
+  "km": "km",
+  "please_accept_terms": "Please accept all terms",
+
+  "delivery_order_for_company": "Delivery Order - Mana Company",
   "number_of_nearest_warehouses": "Warehouses near you, select the closest one among them:",
   "receive_from_warehouse": "Received from the warehouse has begun"
 }

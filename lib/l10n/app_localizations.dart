@@ -8825,6 +8825,12 @@ abstract class AppLocalizations {
   /// **'العميل'**
   String get customer;
 
+  /// No description provided for @delivery_order_for_company.
+  ///
+  /// In ar, this message translates to:
+  /// **'توصيل طلب - شركة مانا'**
+  String get delivery_order_for_company;
+
   /// No description provided for @expected_arrival_time.
   ///
   /// In ar, this message translates to:
@@ -8926,6 +8932,24 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'اكتب كود الاستلام'**
   String get write_receive_code;
+
+  /// No description provided for @distance.
+  ///
+  /// In ar, this message translates to:
+  /// **'مسافة'**
+  String get distance;
+
+  /// No description provided for @km.
+  ///
+  /// In ar, this message translates to:
+  /// **'كم'**
+  String get km;
+
+  /// No description provided for @please_accept_terms.
+  ///
+  /// In ar, this message translates to:
+  /// **'الرجاء قبول جميع الشروط'**
+  String get please_accept_terms;
 
   /// No description provided for @details_receive_code.
   ///

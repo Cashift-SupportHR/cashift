@@ -2,33 +2,38 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
 
-import '../../../../../../../domain/entities/resume/city_item.dart';
-import '../../../../../../adminFeatures/projectsManagement/domain/entities/city.dart';
-import '../../../../../common/common_state.dart';
-import '../../../../data/models/index.dart';
+import '../../../../domain/entities/delivery_orde.dart';
 import '../cubit/details_order_mana_cubit.dart';
+import '../cubit/details_order_mana_state.dart';
 import 'details_order_mana_screen.dart';
 
 class DetailsOrderManaPage
-    extends BaseBlocWidget<UnInitState, DetailsOrderManaCubit> {
+    extends BaseBlocWidget<DetailsOrderManaState, DetailsOrderManaCubit> {
   final Function( ) onNext;
 
-
-  DetailsOrderManaPage({Key? key, required this.onNext,  })
+  DeliveryOrderEntity Function( ) callDeliveryOrder;
+  DetailsOrderManaPage({Key? key, required this.onNext, required this.callDeliveryOrder,  })
     : super(key: key);
 
-  // @override
-  // void loadInitialData(BuildContext context) {
-  //   bloc.fetchCities();
-  // }
-
+  @override
+  void loadInitialData(BuildContext context) {
+    DeliveryOrderEntity data =  callDeliveryOrder( );
+    bloc.loadInitialData(data.id??0);
+  }
 
   @override
-  Widget buildWidget(BuildContext context, UnInitState state) {
+  Widget buildWidget(BuildContext context, DetailsOrderManaState state) {
     return DetailsOrderManaScreen(
-
-      onNext: onNext,
+      deliveryOrderEntity:callDeliveryOrder( ),
+      state: state,
+      onNext: (params){
+bloc.acceptTerms(params);
+      },
 
     );
+  }
+  @override
+  void onSuccessDismissed() {
+    onNext();
   }
 }

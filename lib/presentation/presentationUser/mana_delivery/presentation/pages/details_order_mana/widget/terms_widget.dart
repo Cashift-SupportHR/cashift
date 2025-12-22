@@ -4,10 +4,12 @@ import '../../../../../bail_requests/widgets/bail_terms_and_conditions.dart';
 import '../../../../../common/common_state.dart';
 import '../../../../../resources/colors.dart';
 import '../../../../../resources/constants.dart';
+import '../../../../domain/entities/index.dart';
 
 class TermsManaWidget extends BaseStatelessWidget {
-  StreamStateInitial<bool> isApprovalStream;
-  TermsManaWidget({super.key,required this.isApprovalStream});
+  StreamState<bool> isApprovalStream;
+ final List<TermsManaEntity> data;
+  TermsManaWidget({super.key,required this.isApprovalStream,required this.data});
 
 
 
@@ -31,15 +33,14 @@ class TermsManaWidget extends BaseStatelessWidget {
           SizedBox(height: 10),
           Column(
             children: List.generate(
-              20,
+              data.length,
                   (index) => Row(
                 children: [
                   Container(color: kBattleShipGrey, height: 3, width: 3),
                   SizedBox(width: 10),
                   Flexible(
                     child: Text(
-                      "يجب التأكد من مطابقة الطلب قبل الاستلام من المستودع.",
-                      style: kTextRegular.copyWith(
+                      data[index].content??"", style: kTextRegular.copyWith(
                         fontSize: 13,
                         color: kBattleShipGrey,
                       ),

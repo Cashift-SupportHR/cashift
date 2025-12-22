@@ -54,6 +54,8 @@ class PostLoginWidget extends BaseStatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        ManaOrderWidget(deliveryOrdersStream: postLoginState.deliveryOrdersStream,),
+
         inAppRequirementNotification(),
         getCurrentDateWidget(),
         getCountOfJobsWidget(postLoginState.numOfJob()),
@@ -125,7 +127,7 @@ class PostLoginWidget extends BaseStatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        ManaOrderWidget(),
+        ManaOrderWidget(deliveryOrdersStream: postLoginState.deliveryOrdersStream,),
       ],
     );
   }

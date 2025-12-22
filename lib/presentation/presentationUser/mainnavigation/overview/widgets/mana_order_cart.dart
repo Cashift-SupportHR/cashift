@@ -1,11 +1,15 @@
 import '../../../../../core/services/routes.dart' show Routes;
 import '../../../../../utils/app_icons.dart';
+import '../../../../../utils/app_utils.dart';
 import '../../../../shared/components/index.dart';
+import '../../../mana_delivery/domain/entities/index.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 
 class ManaOrderCart extends BaseStatelessWidget {
-  ManaOrderCart({super.key});
+  DeliveryOrderEntity data;
+
+  ManaOrderCart({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +26,20 @@ class ManaOrderCart extends BaseStatelessWidget {
           SizedBox(height: 10),
           ReceiptODelivery(
             title: strings.receive_from,
-            value: strings.warehouse,
-            details: "مسافة 10 كم - ساعة ",
+            value: data.receiveFrom ?? "",
+            details: "",
+            isShowMap: false,
+            onTap: () {},
           ),
           ReceiptODelivery(
             title: strings.deliver_to,
             value: strings.customer,
-            details: "مسافة 10 كم - ساعة ",
+            details: "${strings.distance} ${data.distanceKm} ${strings.km} ",
             width: 33,
+            isShowMap: true,
+            onTap: () {
+              AppUtils.openMap(data.latitude ?? 0.0, data.longitude ?? 0.0);
+            },
           ),
           SizedBox(height: 10),
           buildApplyButton(context),
@@ -41,10 +51,10 @@ class ManaOrderCart extends BaseStatelessWidget {
   Row header() {
     return Row(
       children: [
-        kBuildImage('', size: 30),
+        kSvgIcon(image: AppIcons.mana),
         SizedBox(width: 5),
         Text(
-          "توصيل طلب - شركة مانا",
+          strings.delivery_order_for_company,
           style: kTextMedium.copyWith(color: kFontDark, fontSize: 14),
         ),
         SizedBox(width: 25),
@@ -85,12 +95,14 @@ class ManaOrderCart extends BaseStatelessWidget {
     required String value,
     required String details,
     double? width,
+    required Function()? onTap,
+    required bool isShowMap,
   }) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
 
       children: [
-        kSvgIcon(image: AppIcons.locationOnOutline, size: 25),
+        kSvgIcon(image: AppIcons.locationOnOutline, size: 20),
         SizedBox(width: 5),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,18 +117,29 @@ class ManaOrderCart extends BaseStatelessWidget {
                 Text(value, style: kTextRegular.copyWith(fontSize: 14)),
               ],
             ),
-            Text(details, style: kTextRegular.copyWith(fontSize: 12)),
+            if (isShowMap == true)
+              Text(details, style: kTextRegular.copyWith(fontSize: 12)),
             SizedBox(height: 10),
           ],
         ),
         SizedBox(width: width ?? 15),
 
-        kSvgIcon(image: AppIcons.location_map),
-        SizedBox(width: 5),
-        Text(
-          strings.open_map,
-          style: kTextBold.copyWith(fontSize: 12, color: kOrange00),
-        ),
+        if (isShowMap == true)
+          InkWell(
+            onTap: () {
+              onTap!();
+            },
+            child: Row(
+              children: [
+                kSvgIcon(image: AppIcons.location_map),
+                SizedBox(width: 5),
+                Text(
+                  strings.open_map,
+                  style: kTextBold.copyWith(fontSize: 12, color: kOrange00),
+                ),
+              ],
+            ),
+          ),
       ],
     );
   }
@@ -129,7 +152,7 @@ class ManaOrderCart extends BaseStatelessWidget {
         Text(strings.apply_now, style: kButtonTextStyle),
         SizedBox(width: 10),
         Text(
-          "150  ${strings.sar}",
+          "${data.totalPrice}  ${strings.sar}",
           style: kTextBold.copyWith(fontSize: 14, color: kOrange47),
         ),
       ],
@@ -151,7 +174,7 @@ class ManaOrderCart extends BaseStatelessWidget {
               padding: const EdgeInsets.all(5),
               radius: BorderRadius.circular(10),
               onPressed: () {
-                Navigator.pushNamed(context, Routes.mainManaDeliverPage);
+                Navigator.pushNamed(context, Routes.mainManaDeliverPage, arguments: data);
 
                 // onClickApply!();
               },

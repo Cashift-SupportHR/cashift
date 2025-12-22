@@ -1,30 +1,34 @@
-
 import 'package:injectable/injectable.dart';
 
+import '../../../../../data/models/api_response.dart';
+import '../../domain/entities/index.dart';
 import '../data_sources/mana_deliver_api.dart';
+import '../models/index.dart';
 
 @injectable
 class ManaDeliverRepository {
   final ManaDeliverAPI _api;
 
   ManaDeliverRepository(this._api);
-  //
-  // Future<ApiResponse> addLogistic(AddLogisticPrams params) async {
-  //   return await _api.addLogistic(params);
-  //
-  // }
-  //
-  // Future<ApiResponse> CanSubmitLogistics() async {
-  //   return await _api.CanSubmitLogistics();
-  // }
-  //
-  // Future<List<CarTermsAndConditionsEntity>> fetchCarTermsAndConditions() async {
-  //   final response = await _api.fetchCarTermsAndConditionsDto();
-  //   return CarTermsAndConditionsEntity.fromDtoList(response.payload ?? []);
-  // }
-  //
-  // Future<List<CarLogisticsEntity>> fetchCarLogistics() async {
-  //   final response = await _api.fetchCarLogistics();
-  //   return CarLogisticsEntity.fromDtoList(response.payload ?? []);
-  // }
+
+  Future<ApiResponse> acceptTermsMana(AcceptTermsPrams params) async {
+    return await _api.acceptTermsMana(params);
+  }
+
+  Future<List<TermsManaEntity>> fetchTermsMana() async {
+    final response = await _api.fetchTermsMana();
+    return TermsManaEntity.fromDtoList(response.payload ?? []);
+  }
+
+  Future<List<DeliveryOrderEntity>> fetchDeliveryOrders(
+    DeliveryOrdersPrams params,
+  ) async {
+    final response = await _api.fetchDeliveryOrders(params);
+    return DeliveryOrderEntity.fromDtoList(response.payload ?? []);
+  }
+
+  Future<OrderManaEntity> fetchDeliveryOrdersById(int id) async {
+    final response = await _api.fetchDeliveryOrdersById(id);
+    return OrderManaEntity.fromDto(response.payload!);
+  }
 }

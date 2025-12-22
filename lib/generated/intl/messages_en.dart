@@ -751,6 +751,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Delivery code to customer",
     ),
     "delivery_date": MessageLookupByLibrary.simpleMessage("Delivery Date"),
+    "delivery_order_for_company": MessageLookupByLibrary.simpleMessage(
+      "Delivery Order - Mana Company",
+    ),
     "denied_camera_permission": MessageLookupByLibrary.simpleMessage(
       "Sorry, you have to go to the application settings and allow permission to access the camera so that you can scan qr code ",
     ),
@@ -797,6 +800,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Discount percentage",
     ),
     "discount_value": MessageLookupByLibrary.simpleMessage("discount value"),
+    "distance": MessageLookupByLibrary.simpleMessage("Distance"),
     "do_want_to_enable_it": MessageLookupByLibrary.simpleMessage(
       "Do you want to enable it?",
     ),
@@ -1232,6 +1236,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "jobs_review": MessageLookupByLibrary.simpleMessage("Jobs review"),
     "join": MessageLookupByLibrary.simpleMessage("Join"),
+    "km": MessageLookupByLibrary.simpleMessage("km"),
     "km_h": MessageLookupByLibrary.simpleMessage("km/h"),
     "landing_page_desc1": MessageLookupByLibrary.simpleMessage(
       "The first electronic platform registered with the Intellectual Property Authority that provides opportunities on a daily basis on an hourly basis and immediate payment immediately after the end of your working hours using the latest payment methods",
@@ -1646,6 +1651,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "This platform is registered with the Saudi Authority for Intellectual Property",
     ),
     "play": MessageLookupByLibrary.simpleMessage("play"),
+    "please_accept_terms": MessageLookupByLibrary.simpleMessage(
+      "Please accept all terms",
+    ),
     "please_add_all": MessageLookupByLibrary.simpleMessage(
       "Please complete the options",
     ),

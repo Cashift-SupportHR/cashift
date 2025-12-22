@@ -4382,6 +4382,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get customer => 'العميل';
 
   @override
+  String get delivery_order_for_company => 'توصيل طلب - شركة مانا';
+
+  @override
   String get expected_arrival_time => 'الوقت المتوقع للوصول';
 
   @override
@@ -4431,6 +4434,15 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get write_receive_code => 'اكتب كود الاستلام';
+
+  @override
+  String get distance => 'مسافة';
+
+  @override
+  String get km => 'كم';
+
+  @override
+  String get please_accept_terms => 'الرجاء قبول جميع الشروط';
 
   @override
   String get details_receive_code => 'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.';

@@ -6,6 +6,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 
 import '../../../../presentationUser/common/common_state.dart';
 import '../../../../shared/components/stepper/custom_linear_step_indicator.dart';
+import '../../domain/entities/delivery_orde.dart';
 import 'details_order_mana/screens/details_order_mana_page.dart';
 import 'go_to_customer_mana/screens/go_to_customer_mana_page.dart';
 import 'nearest_warehouse/screens/nearest_warehouse_page.dart';
@@ -18,6 +19,7 @@ class MainManaDeliverPage extends BaseStatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DeliveryOrderEntity deliveryOrderEntity = getArguments(context);
     return AppScaffold(
       title: strings.job_path,
       body: CustomLinearStepIndicator(
@@ -30,10 +32,23 @@ class MainManaDeliverPage extends BaseStatelessWidget {
           strings.go_to_customer,
         ],
         pages: [
-          DetailsOrderManaPage(onNext: () {animateToPage(1);}),
+          DetailsOrderManaPage(
+            onNext: () {
+              animateToPage(1);
+            },
+            callDeliveryOrder: () => callData(deliveryOrderEntity),
+          ),
 
-          NearestWarehousePage(onNext: () {animateToPage(2);}),
-          ResendCodePage(onNext: () {animateToPage(3);}),
+          NearestWarehousePage(
+            onNext: () {
+              animateToPage(2);
+            },
+          ),
+          ResendCodePage(
+            onNext: () {
+              animateToPage(3);
+            },
+          ),
           GoToCustomerManaPage(onNext: () {}),
         ],
         pageStream: pageStream,
@@ -41,6 +56,10 @@ class MainManaDeliverPage extends BaseStatelessWidget {
         onPageChanged: (index) {},
       ),
     );
+  }
+
+  callData(data) {
+    return data;
   }
 
   animateToPage(int index) {

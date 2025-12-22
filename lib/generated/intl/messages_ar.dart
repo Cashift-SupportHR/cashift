@@ -695,6 +695,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "كود التسليم الي العميل",
     ),
     "delivery_date": MessageLookupByLibrary.simpleMessage("تاريخ الاستلام"),
+    "delivery_order_for_company": MessageLookupByLibrary.simpleMessage(
+      "توصيل طلب - شركة مانا",
+    ),
     "denied_camera_permission": MessageLookupByLibrary.simpleMessage(
       "عذرًا ، يجب عليك الانتقال إلى إعدادات التطبيق والسماح بالوصول إلى الكاميرا حتى تتمكن من مسح رمز qr ضوئيًا",
     ),
@@ -737,6 +740,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "discount_percentage": MessageLookupByLibrary.simpleMessage("نسبة الخصم"),
     "discount_value": MessageLookupByLibrary.simpleMessage("قيمة الخصم"),
+    "distance": MessageLookupByLibrary.simpleMessage("مسافة"),
     "do_want_to_enable_it": MessageLookupByLibrary.simpleMessage(
       "هل تريد تمكينها؟",
     ),
@@ -1149,6 +1153,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "jobs_in_waiting": MessageLookupByLibrary.simpleMessage("فرص في انتظارك "),
     "jobs_review": MessageLookupByLibrary.simpleMessage("مراجعة الوظائف"),
     "join": MessageLookupByLibrary.simpleMessage("التحاق"),
+    "km": MessageLookupByLibrary.simpleMessage("كم"),
     "km_h": MessageLookupByLibrary.simpleMessage("كم/س"),
     "landing_page_desc1": MessageLookupByLibrary.simpleMessage(
       "اول منصة الكترونية مسجلة لدى هيئة الملكية الفكرية توفر فرص بشكل يومي بنظام الساعة والدفع فوري فور انتهاء ساعات عملك بواسطة احدث طرق الدفع ",
@@ -1538,6 +1543,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "هذه المنصه مسجله لدي الهيئة السعودية للملكية الفكرية",
     ),
     "play": MessageLookupByLibrary.simpleMessage("تشغيل"),
+    "please_accept_terms": MessageLookupByLibrary.simpleMessage(
+      "الرجاء قبول جميع الشروط",
+    ),
     "please_add_all": MessageLookupByLibrary.simpleMessage(
       "من فضلك اكمل الاخيارات",
     ),

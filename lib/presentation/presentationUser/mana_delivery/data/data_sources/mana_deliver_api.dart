@@ -13,4 +13,25 @@ class ManaDeliverAPI {
   // Future<ApiResponse> addLogistic(AddLogisticPrams prams) {
   //   return api.addLogistic(prams);
   // }
+
+
+  Future<ApiResponse<List<DeliveryOrderDto>>> fetchDeliveryOrders(   DeliveryOrdersPrams params){
+    return api.fetchDeliveryOrders(params);
+  }
+
+
+  Future<ApiResponse<OrderManaDto>> fetchDeliveryOrdersById(  int id){
+    return api.fetchDeliveryOrdersById(id);
+  }
+
+
+  Future<ApiResponse<List<TermsManaDto>>> fetchTermsMana(){
+    return api.fetchTermsMana();
+  }
+
+
+  Future<ApiResponse> acceptTermsMana(  AcceptTermsPrams params){
+    return api.acceptTermsMana(params);
+  }
+
 }

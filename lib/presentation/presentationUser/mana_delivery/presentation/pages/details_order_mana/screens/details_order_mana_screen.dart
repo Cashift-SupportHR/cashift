@@ -1,30 +1,51 @@
 import '../../../../../../../utils/app_icons.dart';
+import '../../../../../../../utils/app_utils.dart';
 import '../../../../../../shared/components/index.dart';
 import '../../../../../common/common_state.dart';
 import '../../../../../resources/colors.dart';
 import '../../../../../resources/constants.dart';
+import '../../../../data/models/accept_terms_prams.dart';
+import '../../../../domain/entities/delivery_orde.dart';
+import '../cubit/details_order_mana_state.dart';
 import '../widget/terms_widget.dart';
 
 class DetailsOrderManaScreen extends BaseStatelessWidget {
-  final Function() onNext;
+  final Function(AcceptTermsPrams prams) onNext;
+  DeliveryOrderEntity deliveryOrderEntity;
+  final DetailsOrderManaState state;
 
-  DetailsOrderManaScreen({Key? key, required this.onNext}) : super(key: key);
-  StreamStateInitial<bool> isApprovalStream = StreamStateInitial();
+  DetailsOrderManaScreen({
+    Key? key,
+    required this.state,
+    required this.onNext,
+    required this.deliveryOrderEntity,
+  }) : super(key: key);
+  StreamState<bool> isApprovalStream = StreamStateInitial();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackground,
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: AppCupertinoButton(
-          onPressed:(){
-            onNext();
-          } ,
-          text: strings.receive_from_warehouse,
-          elevation: 0,
-          backgroundColor:  kPrimary,
-          radius: BorderRadius.circular(  5),
-          padding: const EdgeInsets.symmetric(vertical: 11),
+        child: StreamBuilder<bool>(
+          stream: isApprovalStream.stream,
+          builder: (context, snapshot) {
+            return AppCupertinoButton(
+              onPressed: () {
+                if (snapshot.data == true) {
+                  onNext(AcceptTermsPrams(orderId: deliveryOrderEntity.id,termsType: state.termsManaEntity.first.termsType,termsVersion: state.termsManaEntity.first.termsVersion));
+                } else {
+                  showErrorDialog(strings.please_accept_terms, context);
+                }
+              },
+              text: strings.receive_from_warehouse,
+              elevation: 0,
+              backgroundColor: kPrimary,
+              radius: BorderRadius.circular(5),
+              padding: const EdgeInsets.symmetric(vertical: 11),
+            );
+          },
         ),
       ),
       body: SingleChildScrollView(
@@ -33,7 +54,10 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
           children: [
             orderDetails(),
             SizedBox(height: 20),
-            TermsManaWidget(isApprovalStream: isApprovalStream),
+            TermsManaWidget(
+              isApprovalStream: isApprovalStream,
+              data: state.termsManaEntity,
+            ),
           ],
         ),
       ),
@@ -55,7 +79,7 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
           ),
           ItemValue(
             title: strings.receive_from,
-            value: strings.warehouse,
+            value: deliveryOrderEntity.receiveFrom ?? "",
             icon: AppIcons.locationOnOutline,
             color: kPrimary,
           ),
@@ -68,19 +92,19 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
           DetailsDeliver(),
           ItemValue(
             title: strings.basic_service_fee,
-            value: "100 ${strings.sar}",
+            value: "${state.orderManaEntity.baseServicePrice} ${strings.sar}",
             icon: AppIcons.receipt,
           ),
           ItemValue(
             title: strings.floor_price,
-            value: "150 ${strings.sar}",
+            value: "${state.orderManaEntity.floorPrice}  ${strings.sar}",
             icon: AppIcons.receiptAdd,
           ),
           nots(),
 
           ItemValue(
             title: strings.final_price,
-            value: "250 ${strings.sar}",
+            value: "${state.orderManaEntity.totalPrice}  ${strings.sar}",
             icon: AppIcons.receiptEdit,
           ),
         ],
@@ -114,15 +138,27 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
       child: Row(
         children: [
           Text(
-            "مسافة 20 كم - ساعة ",
+            "${strings.distance} ${deliveryOrderEntity.distanceKm} ${strings.km} ",
             style: kTextRegular.copyWith(fontSize: 12),
           ),
           SizedBox(width: 10),
-          kSvgIcon(image: AppIcons.location_map),
-          SizedBox(width: 5),
-          Text(
-            strings.open_map,
-            style: kTextBold.copyWith(fontSize: 12, color: kOrange00),
+          InkWell(
+            onTap: () {
+              AppUtils.openMap(
+                deliveryOrderEntity.latitude ?? 0.0,
+                deliveryOrderEntity.longitude ?? 0.0,
+              );
+            },
+            child: Row(
+              children: [
+                kSvgIcon(image: AppIcons.location_map),
+                SizedBox(width: 5),
+                Text(
+                  strings.open_map,
+                  style: kTextBold.copyWith(fontSize: 12, color: kOrange00),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -132,10 +168,10 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
   Row header() {
     return Row(
       children: [
-        kBuildImage('', size: 30),
+        kSvgIcon(image: AppIcons.mana),
         SizedBox(width: 5),
         Text(
-          "توصيل طلب - شركة مانا",
+          strings.delivery_order_for_company,
           style: kTextMedium.copyWith(color: kFontDark, fontSize: 14),
         ),
         SizedBox(width: 25),

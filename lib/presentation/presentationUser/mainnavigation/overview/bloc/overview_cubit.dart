@@ -30,6 +30,9 @@ import '../../../../../domain/entities/required_tasks/index.dart';
 import '../../../../../domain/usecases/tasks_notifications_usecase.dart';
 import '../../../geofence/geo_task.dart';
 import '../../../logistics_request/data/repositories/logistics_request_repo.dart';
+import '../../../mana_delivery/data/models/delivery_orders_prams.dart';
+import '../../../mana_delivery/data/repositories/mana_delivery_repo.dart';
+import '../../../mana_delivery/domain/entities/index.dart';
 import 'overview_bloc.dart';
 import 'overview_state.dart';
 
@@ -44,6 +47,7 @@ class OverviewCubit extends BaseCubit {
   final RequiredTasksUseCase _requiredTasksUseCase;
   final ProfileRepository profileRepository;
   final LogisticsRequestRepository logisticsRequestRepository;
+  final ManaDeliverRepository manaDeliverRepository;
   OverviewCubit(
     this._offersRepository,
     this._userRepository,
@@ -52,6 +56,7 @@ class OverviewCubit extends BaseCubit {
     this._profileRepository,
     this._requiredTasksUseCase,
     this.profileRepository,
+    this.manaDeliverRepository,
   );
 
   List<JobOfferDto> allOffers = <JobOfferDto>[];
@@ -67,6 +72,7 @@ class OverviewCubit extends BaseCubit {
   StreamState<List<InAppRequiredTask>> inAppNotificationStream =
       StreamStateInitial();
   StreamState<List<JobOfferSlider>> jobOffersSliders = StreamStateInitial();
+  StreamState<List<DeliveryOrderEntity>> deliverOrders = StreamStateInitial();
 
   clearData() {
     appliedOffers.setData(null);
@@ -171,6 +177,19 @@ class OverviewCubit extends BaseCubit {
       );
     } catch (e) {
       jobOffersSliders.setError(e);
+      checkErrorType(e);
+    }
+    return jobOffersSliders;
+  }
+  fetchDeliverOrders(DeliveryOrdersPrams deliveryOrdersPrams) async {
+    print('fetchJobOffersSliders');
+    try {
+      final response = await manaDeliverRepository.fetchDeliveryOrders(deliveryOrdersPrams);
+      deliverOrders.setData(
+        response
+       );
+    } catch (e) {
+      deliverOrders.setError(e);
       checkErrorType(e);
     }
     return jobOffersSliders;
@@ -337,6 +356,8 @@ class OverviewCubit extends BaseCubit {
             inAppNotificationStream: inAppNotificationStream,
             /*workingHours: appliedOffers*/
             jobOffersSliders: jobOffersSliders,
+            deliveryOrdersStream: deliverOrders
+
           ),
         );
         clearData();
@@ -426,6 +447,7 @@ class OverviewCubit extends BaseCubit {
         fetchSpecialOpportunities();
         fetchVipOpportunities();
         fetchFavoritesOpportunities();
+        fetchDeliverOrders(DeliveryOrdersPrams(lat:24.7136,lng:46.6753));
       } else {
         await fetchJobOffersSliders();
         await fetchOpportunitiesUnAuth();

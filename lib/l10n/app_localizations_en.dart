@@ -4382,6 +4382,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get customer => 'customer';
 
   @override
+  String get delivery_order_for_company => 'Delivery Order - Mana Company';
+
+  @override
   String get expected_arrival_time => 'Expected time of arrival';
 
   @override
@@ -4431,6 +4434,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get write_receive_code => 'Write the receiving code';
+
+  @override
+  String get distance => 'Distance';
+
+  @override
+  String get km => 'km';
+
+  @override
+  String get please_accept_terms => 'Please accept all terms';
 
   @override
   String get details_receive_code => 'Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.';

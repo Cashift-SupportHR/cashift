@@ -12500,6 +12500,36 @@ class S {
     );
   }
 
+  /// `Distance`
+  String get distance {
+    return Intl.message('Distance', name: 'distance', desc: '', args: []);
+  }
+
+  /// `km`
+  String get km {
+    return Intl.message('km', name: 'km', desc: '', args: []);
+  }
+
+  /// `Please accept all terms`
+  String get please_accept_terms {
+    return Intl.message(
+      'Please accept all terms',
+      name: 'please_accept_terms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Order - Mana Company`
+  String get delivery_order_for_company {
+    return Intl.message(
+      'Delivery Order - Mana Company',
+      name: 'delivery_order_for_company',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Warehouses near you, select the closest one among them:`
   String get number_of_nearest_warehouses {
     return Intl.message(

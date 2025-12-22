@@ -361,4 +361,5 @@ class AppIcons {
   static const String note = 'assets/icons/note.svg';
   static const String call = 'assets/icons/call.svg';
   static const String chat = 'assets/icons/chat.svg';
+  static const String mana = 'assets/icons/mana.svg';
 }

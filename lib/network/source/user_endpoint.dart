@@ -53,6 +53,7 @@ import '../../presentation/presentationUser/employeesCertificates/data/models/in
 import '../../presentation/presentationUser/logistics_request/data/models/car_logistics_dto.dart';
 import '../../presentation/presentationUser/logistics_request/data/models/car_terms_and_conditions_dto.dart';
 import '../../presentation/presentationUser/logistics_request/data/models/index.dart';
+import '../../presentation/presentationUser/mana_delivery/data/models/index.dart';
 import '../../presentation/presentationUser/pledgesAndGeneralization/data/models/pledge_generalization_dto.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/terms_and_conditions_requests_prams.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/add_request_prams.dart';
@@ -943,5 +944,19 @@ abstract class UserEndpoint {
   Future<ApiResponse> addLogistic(
       @Body() AddLogisticPrams prams,
       );
+
+  //  mana Delivery Orders
+
+  @GET('/v1/DeliveryOrder/GetAvailableOrders')
+  Future<ApiResponse<List<DeliveryOrderDto>>> fetchDeliveryOrders(  @Queries() DeliveryOrdersPrams params);
+
+  @GET('/v1/DeliveryOrder/GetOrderById')
+  Future<ApiResponse<OrderManaDto>> fetchDeliveryOrdersById(  @Query("id") int id);
+
+  @GET('/v1/DeliveryOrder/GetDeliveryTerms')
+  Future<ApiResponse<List<TermsManaDto>>> fetchTermsMana();
+
+  @POST('/v1/DeliveryOrder/AcceptTerms')
+  Future<ApiResponse> acceptTermsMana(@Body() AcceptTermsPrams params);
 
 }
