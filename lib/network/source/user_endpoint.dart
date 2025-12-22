@@ -956,7 +956,20 @@ abstract class UserEndpoint {
   @GET('/v1/DeliveryOrder/GetDeliveryTerms')
   Future<ApiResponse<List<TermsManaDto>>> fetchTermsMana();
 
+  @GET('/v1/Warehouse/GetNearbyWarehouses')
+  Future<ApiResponse<List<NearbyWarehousesDto>>> fetchNearbyWarehouses(@Queries() DeliveryOrdersPrams params);
+
+  @GET('/v1/DeliveryOrder/GetPenaltyWarning')
+  Future<ApiResponse<PenaltyWarningDto>> fetchPenaltyWarnings( );
+
+
   @POST('/v1/DeliveryOrder/AcceptTerms')
   Future<ApiResponse> acceptTermsMana(@Body() AcceptTermsPrams params);
+
+  @POST('/v1/DeliveryOrder/ConfirmReservationWithWarning')
+  Future<ApiResponse> confirmReservation(@Body() ConfirmReservationWarningPrams params);
+
+  @GET('/v1/DeliveryOrder/ReleaseReservation')
+  Future<ApiResponse> cancelReservation( @Query("orderId") int  orderId);
 
 }

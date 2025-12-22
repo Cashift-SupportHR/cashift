@@ -40,6 +40,7 @@ class MainManaDeliverPage extends BaseStatelessWidget {
           ),
 
           NearestWarehousePage(
+            onCallIdOrder:  () => callData(deliveryOrderEntity.id),
             onNext: () {
               animateToPage(2);
             },

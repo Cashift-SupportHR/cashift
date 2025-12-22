@@ -1,28 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:shiftapp/utils/app_utils.dart';
 
-import '../../../../../../utils/app_icons.dart';
-import '../../../../../shared/components/base_stateless_widget.dart';
-import '../../../../../shared/components/decorations/decorations.dart';
-import '../../../../resources/colors.dart';
-import '../../../../resources/constants.dart';
+import '../../../../../../../utils/app_icons.dart';
+import '../../../../../../shared/components/base_stateless_widget.dart';
+import '../../../../../../shared/components/decorations/decorations.dart';
+import '../../../../../resources/colors.dart';
+import '../../../../../resources/constants.dart';
+import '../../../../domain/entities/nearby_warehouses.dart';
 
 class NearestWarehouseItem extends BaseStatelessWidget {
   final int index;
   final int selectedIndex;
-  final VoidCallback onSelect;
-
+    Function(NearbyWarehousesEntity) onSelect;
+final  NearbyWarehousesEntity data;
     NearestWarehouseItem({
     super.key,
     required this.index,
     required this.selectedIndex,
     required this.onSelect,
+    required this.data,
 
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onSelect,
+      onTap: () {
+        onSelect(data);
+      },
       child: Container(
         margin: const EdgeInsets.only(bottom: 12),
         decoration: Decorations.createRectangleDecoration(),
@@ -37,7 +42,7 @@ class NearestWarehouseItem extends BaseStatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "مستودع الرياض",
+                    data.name??"",
                     style:   kTextRegular.copyWith(
                       fontSize: 14,
 
@@ -47,7 +52,7 @@ class NearestWarehouseItem extends BaseStatelessWidget {
                   const SizedBox(height: 4),
 
                   Text(
-                    "مسافة 10 كم - ساعة ",
+                    data.districtName??"",
                     style:  kTextRegular.copyWith(
                       fontSize: 12,
                       color: kGreen_85,
@@ -57,7 +62,7 @@ class NearestWarehouseItem extends BaseStatelessWidget {
                   const SizedBox(height: 4),
 
                   Text(
-                    "الرياض المربع شارع40 امام شركة نجد الدور الثاني",
+                    data.fullAddress??"",
                     style:kTextRegular.copyWith(
                       fontSize: 13,
 
@@ -67,7 +72,9 @@ class NearestWarehouseItem extends BaseStatelessWidget {
                   const SizedBox(height: 8),
 
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      AppUtils.openMap(data.latitude??0, data.longitude??0);
+                    },
                     child: Row(
                       children: [
 
@@ -89,7 +96,7 @@ class NearestWarehouseItem extends BaseStatelessWidget {
               value: index,
               groupValue: selectedIndex,
               activeColor: Colors.teal,
-              onChanged: (_) => onSelect(),
+              onChanged: (_) => onSelect(data),
             ),
           ],
         ),

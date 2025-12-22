@@ -9,29 +9,33 @@ import 'details_order_mana_screen.dart';
 
 class DetailsOrderManaPage
     extends BaseBlocWidget<DetailsOrderManaState, DetailsOrderManaCubit> {
-  final Function( ) onNext;
+  final Function() onNext;
 
-  DeliveryOrderEntity Function( ) callDeliveryOrder;
-  DetailsOrderManaPage({Key? key, required this.onNext, required this.callDeliveryOrder,  })
-    : super(key: key);
+  DeliveryOrderEntity Function() callDeliveryOrder;
+  DetailsOrderManaPage({
+    Key? key,
+    required this.onNext,
+    required this.callDeliveryOrder,
+  }) : super(key: key);
 
   @override
   void loadInitialData(BuildContext context) {
-    DeliveryOrderEntity data =  callDeliveryOrder( );
-    bloc.loadInitialData(data.id??0);
+    DeliveryOrderEntity data = callDeliveryOrder();
+    bloc.loadInitialData(data.id ?? 0);
   }
 
   @override
   Widget buildWidget(BuildContext context, DetailsOrderManaState state) {
     return DetailsOrderManaScreen(
-      deliveryOrderEntity:callDeliveryOrder( ),
+      deliveryOrderEntity: callDeliveryOrder(),
       state: state,
-      onNext: (params){
-bloc.acceptTerms(params);
+      onNext: (params) {
+        onNext();
+        //bloc.acceptTerms(params);
       },
-
     );
   }
+
   @override
   void onSuccessDismissed() {
     onNext();

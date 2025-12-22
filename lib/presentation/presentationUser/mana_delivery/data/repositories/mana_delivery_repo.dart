@@ -15,6 +15,20 @@ class ManaDeliverRepository {
     return await _api.acceptTermsMana(params);
   }
 
+  Future<ApiResponse> confirmReservation(  ConfirmReservationWarningPrams params) async {
+    return  await _api.confirmReservation(params);
+
+  }
+
+  Future<ApiResponse> cancelReservation(   int  orderId) async {
+     final  data= await _api.cancelReservation(orderId);
+    return ApiResponse(
+      status: data.status,
+      message: "onCancel",
+      payload: data.payload,
+    );
+  }
+
   Future<List<TermsManaEntity>> fetchTermsMana() async {
     final response = await _api.fetchTermsMana();
     return TermsManaEntity.fromDtoList(response.payload ?? []);
@@ -30,5 +44,17 @@ class ManaDeliverRepository {
   Future<OrderManaEntity> fetchDeliveryOrdersById(int id) async {
     final response = await _api.fetchDeliveryOrdersById(id);
     return OrderManaEntity.fromDto(response.payload!);
+  }
+
+  Future<List<NearbyWarehousesEntity>> fetchNearbyWarehouses(
+    DeliveryOrdersPrams params,
+  ) async {
+    final response = await _api.fetchNearbyWarehouses(params);
+    return NearbyWarehousesEntity.fromDtoList(response.payload ?? []);
+  }
+
+  Future<PenaltyWarningEntity> fetchPenaltyWarnings() async {
+    final response = await _api.fetchPenaltyWarnings();
+    return PenaltyWarningEntity.fromDto(response.payload!);
   }
 }

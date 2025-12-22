@@ -30,6 +30,25 @@ class ManaDeliverAPI {
   }
 
 
+  Future<ApiResponse<List<NearbyWarehousesDto>>> fetchNearbyWarehouses( DeliveryOrdersPrams params){
+    return api.fetchNearbyWarehouses(params);
+  }
+
+
+  Future<ApiResponse<PenaltyWarningDto>> fetchPenaltyWarnings( ){
+    return api.fetchPenaltyWarnings();
+  }
+
+   Future<ApiResponse> confirmReservation(  ConfirmReservationWarningPrams params){
+    return api.confirmReservation(params);
+   }
+
+   Future<ApiResponse> cancelReservation(   int  orderId){
+     return api.cancelReservation(orderId);
+   }
+
+
+
   Future<ApiResponse> acceptTermsMana(  AcceptTermsPrams params){
     return api.acceptTermsMana(params);
   }
