@@ -20,6 +20,18 @@ class ManaDeliverRepository {
 
   }
 
+
+   Future<ApiResponse> verifyPickupCode(  VerifyCodePrams params){
+    return _api.verifyPickupCode(params);
+  }
+
+
+  Future<ApiResponse> verifyDeliveryCode(  VerifyCodePrams params) {
+    return _api.verifyDeliveryCode(params);
+  }
+
+
+
   Future<ApiResponse> cancelReservation(   int  orderId) async {
      final  data= await _api.cancelReservation(orderId);
     return ApiResponse(

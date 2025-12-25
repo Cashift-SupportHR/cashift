@@ -1426,6 +1426,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "العدد المطلوب للفرصة",
     ),
     "occupation": MessageLookupByLibrary.simpleMessage("المهنة"),
+    "offer_delivery": MessageLookupByLibrary.simpleMessage("فرص التوصيل"),
     "offer_description": MessageLookupByLibrary.simpleMessage("وصف الفرصة"),
     "offer_details": MessageLookupByLibrary.simpleMessage("تفاصيل العرض"),
     "offer_terms": MessageLookupByLibrary.simpleMessage("شروط الفرصة"),

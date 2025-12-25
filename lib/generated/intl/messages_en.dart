@@ -680,7 +680,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "What is your current situation?",
     ),
     "current_state": MessageLookupByLibrary.simpleMessage("current state"),
-    "customer": MessageLookupByLibrary.simpleMessage("customer"),
+    "customer": MessageLookupByLibrary.simpleMessage("Customer"),
     "customer_reviews": MessageLookupByLibrary.simpleMessage(
       "Customer reviews",
     ),
@@ -746,7 +746,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "delete_time": MessageLookupByLibrary.simpleMessage("Delete time"),
     "delete_user": MessageLookupByLibrary.simpleMessage("Delete user"),
-    "deliver_to": MessageLookupByLibrary.simpleMessage("deliver to"),
+    "deliver_to": MessageLookupByLibrary.simpleMessage("Deliver to"),
     "delivery_code_to_customer": MessageLookupByLibrary.simpleMessage(
       "Delivery code to customer",
     ),
@@ -1520,6 +1520,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Number required for the opportunity",
     ),
     "occupation": MessageLookupByLibrary.simpleMessage("Occupation"),
+    "offer_delivery": MessageLookupByLibrary.simpleMessage(
+      "Delivery opportunities",
+    ),
     "offer_description": MessageLookupByLibrary.simpleMessage(
       "offer description",
     ),
@@ -1800,7 +1803,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "print_qr_code": MessageLookupByLibrary.simpleMessage("Print QR code"),
     "priority_level": MessageLookupByLibrary.simpleMessage("Priority level"),
-    "private": MessageLookupByLibrary.simpleMessage("exclusively"),
+    "private": MessageLookupByLibrary.simpleMessage("Exclusively"),
     "procedures": MessageLookupByLibrary.simpleMessage("Procedures"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "project": MessageLookupByLibrary.simpleMessage("the project"),
@@ -1871,7 +1874,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "receive_code_from_warehouse": MessageLookupByLibrary.simpleMessage(
       "Warehouse receiving code",
     ),
-    "receive_from": MessageLookupByLibrary.simpleMessage("receipt from"),
+    "receive_from": MessageLookupByLibrary.simpleMessage("Receipt from"),
     "receive_from_warehouse": MessageLookupByLibrary.simpleMessage(
       "Received from the warehouse has begun",
     ),
@@ -2776,7 +2779,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "wallet": MessageLookupByLibrary.simpleMessage("Wallet"),
     "wanted_number": MessageLookupByLibrary.simpleMessage("Wanted Number"),
-    "warehouse": MessageLookupByLibrary.simpleMessage("warehouse"),
+    "warehouse": MessageLookupByLibrary.simpleMessage("Warehouse"),
     "waring_action_notification": MessageLookupByLibrary.simpleMessage(
       "Your action will be saved and sent to the project manager for review and response.",
     ),

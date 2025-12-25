@@ -48,6 +48,15 @@ class ManaDeliverAPI {
    }
 
 
+  Future<ApiResponse> verifyPickupCode(  VerifyCodePrams params){
+    return api.verifyPickupCode(params);
+  }
+
+
+  Future<ApiResponse> verifyDeliveryCode(  VerifyCodePrams params) {
+    return api.verifyDeliveryCode(params);
+  }
+
 
   Future<ApiResponse> acceptTermsMana(  AcceptTermsPrams params){
     return api.acceptTermsMana(params);

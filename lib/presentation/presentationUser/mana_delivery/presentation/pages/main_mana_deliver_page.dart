@@ -7,6 +7,7 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import '../../../../presentationUser/common/common_state.dart';
 import '../../../../shared/components/stepper/custom_linear_step_indicator.dart';
 import '../../domain/entities/delivery_orde.dart';
+import '../../domain/entities/order_mana.dart';
 import 'details_order_mana/screens/details_order_mana_page.dart';
 import 'go_to_customer_mana/screens/go_to_customer_mana_page.dart';
 import 'nearest_warehouse/screens/nearest_warehouse_page.dart';
@@ -16,7 +17,7 @@ class MainManaDeliverPage extends BaseStatelessWidget {
 
   final PageController pageController = PageController(initialPage: 0);
   final StreamStateInitial<int> pageStream = StreamStateInitial();
-
+  OrderManaEntity? orderManaEntity;
   @override
   Widget build(BuildContext context) {
     DeliveryOrderEntity deliveryOrderEntity = getArguments(context);
@@ -33,24 +34,26 @@ class MainManaDeliverPage extends BaseStatelessWidget {
         ],
         pages: [
           DetailsOrderManaPage(
-            onNext: () {
+            onNext: (data) {
+              orderManaEntity = data;
               animateToPage(1);
             },
             callDeliveryOrder: () => callData(deliveryOrderEntity),
           ),
 
           NearestWarehousePage(
-            onCallIdOrder:  () => callData(deliveryOrderEntity.id),
+            onCallIdOrder: () => callData(deliveryOrderEntity.id),
             onNext: () {
               animateToPage(2);
             },
           ),
           ResendCodePage(
+            orderCall: () => callData(orderManaEntity),
             onNext: () {
               animateToPage(3);
             },
           ),
-          GoToCustomerManaPage(onNext: () {}),
+          GoToCustomerManaPage(onNext: () {}, orderCall: () => callData(orderManaEntity),),
         ],
         pageStream: pageStream,
         pageController: pageController,

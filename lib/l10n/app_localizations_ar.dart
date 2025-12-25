@@ -4442,6 +4442,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get km => 'كم';
 
   @override
+  String get offer_delivery => 'فرص التوصيل';
+
+  @override
   String get please_accept_terms => 'الرجاء قبول جميع الشروط';
 
   @override

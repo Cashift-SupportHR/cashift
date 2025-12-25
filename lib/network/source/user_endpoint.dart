@@ -969,6 +969,12 @@ abstract class UserEndpoint {
   @POST('/v1/DeliveryOrder/ConfirmReservationWithWarning')
   Future<ApiResponse> confirmReservation(@Body() ConfirmReservationWarningPrams params);
 
+  @POST('/v1/DeliveryOrder/VerifyPickupCode')
+  Future<ApiResponse> verifyPickupCode(@Body() VerifyCodePrams params);
+
+  @POST('/v1/DeliveryOrder/VerifyDeliveryCode')
+  Future<ApiResponse> verifyDeliveryCode(@Body() VerifyCodePrams params);
+
   @GET('/v1/DeliveryOrder/ReleaseReservation')
   Future<ApiResponse> cancelReservation( @Query("orderId") int  orderId);
 

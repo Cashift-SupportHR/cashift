@@ -10,4 +10,5 @@ class AppImages {
   static const String resonConfairm = 'images/reson_confairm.svg';
   static const String confairm = 'images/confairm.svg';
   static const String st = 'images/st.png';
+  static const String bgMana = 'images/bg_mana.png';
 }

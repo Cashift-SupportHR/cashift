@@ -2,6 +2,7 @@ import 'package:injectable/injectable.dart';
 
 import '../../../../../../../core/bloc/base_cubit.dart';
 import '../../../../../common/common_state.dart';
+import '../../../../data/models/index.dart';
 import '../../../../data/repositories/mana_delivery_repo.dart';
 import '../../../../domain/entities/index.dart';
 
@@ -11,12 +12,7 @@ class ResendCodeCubit extends BaseCubit {
 
   ResendCodeCubit(this._repository);
 
-  // fetchCarLogistics() async {
-  //   executeBuilder(
-  //     () async => await _repository.fetchCarLogistics(),
-  //     onSuccess: (value) {
-  //       emit(Initialized<List<CarLogisticsEntity>>(data: value));
-  //     },
-  //   );
-  // }
+  VerifyPickupCode(VerifyCodePrams params){
+    executeEmitterListener(() => _repository.verifyPickupCode(params),);
+  }
 }

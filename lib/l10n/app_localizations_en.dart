@@ -4370,16 +4370,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get violations_of_factory => 'Violations of factory';
 
   @override
-  String get private => 'exclusively';
+  String get private => 'Exclusively';
 
   @override
-  String get receive_from => 'receipt from';
+  String get receive_from => 'Receipt from';
 
   @override
-  String get warehouse => 'warehouse';
+  String get warehouse => 'Warehouse';
 
   @override
-  String get customer => 'customer';
+  String get customer => 'Customer';
 
   @override
   String get delivery_order_for_company => 'Delivery Order - Mana Company';
@@ -4388,7 +4388,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get expected_arrival_time => 'Expected time of arrival';
 
   @override
-  String get deliver_to => 'deliver to';
+  String get deliver_to => 'Deliver to';
 
   @override
   String get job_path => 'job path';
@@ -4440,6 +4440,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get km => 'km';
+
+  @override
+  String get offer_delivery => 'Delivery opportunities';
 
   @override
   String get please_accept_terms => 'Please accept all terms';

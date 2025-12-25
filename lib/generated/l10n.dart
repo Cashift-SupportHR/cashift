@@ -12285,9 +12285,9 @@ class S {
     );
   }
 
-  /// `exclusively`
+  /// `Exclusively`
   String get private {
-    return Intl.message('exclusively', name: 'private', desc: '', args: []);
+    return Intl.message('Exclusively', name: 'private', desc: '', args: []);
   }
 
   /// `Select your preferred neighborhoods`
@@ -12330,24 +12330,24 @@ class S {
     );
   }
 
-  /// `receipt from`
+  /// `Receipt from`
   String get receive_from {
     return Intl.message(
-      'receipt from',
+      'Receipt from',
       name: 'receive_from',
       desc: '',
       args: [],
     );
   }
 
-  /// `warehouse`
+  /// `Warehouse`
   String get warehouse {
-    return Intl.message('warehouse', name: 'warehouse', desc: '', args: []);
+    return Intl.message('Warehouse', name: 'warehouse', desc: '', args: []);
   }
 
-  /// `customer`
+  /// `Customer`
   String get customer {
-    return Intl.message('customer', name: 'customer', desc: '', args: []);
+    return Intl.message('Customer', name: 'customer', desc: '', args: []);
   }
 
   /// `job path`
@@ -12405,9 +12405,9 @@ class S {
     return Intl.message('Final price', name: 'final_price', desc: '', args: []);
   }
 
-  /// `deliver to`
+  /// `Deliver to`
   String get deliver_to {
-    return Intl.message('deliver to', name: 'deliver_to', desc: '', args: []);
+    return Intl.message('Deliver to', name: 'deliver_to', desc: '', args: []);
   }
 
   /// `Confirm delivery`
@@ -12515,6 +12515,16 @@ class S {
     return Intl.message(
       'Please accept all terms',
       name: 'please_accept_terms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery opportunities`
+  String get offer_delivery {
+    return Intl.message(
+      'Delivery opportunities',
+      name: 'offer_delivery',
       desc: '',
       args: [],
     );

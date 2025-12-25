@@ -7,7 +7,7 @@ import '../widget/delivery_widget.dart';
 import '../widget/receive_code_widget.dart';
 
 class ResendCodeScreen extends BaseStatelessWidget {
-  final Function() onNext;
+  final Function(String resendNumber) onNext;
 
   ResendCodeScreen({super.key, required this.onNext});
 
@@ -22,7 +22,7 @@ class ResendCodeScreen extends BaseStatelessWidget {
         child: AppCupertinoButton(
           onPressed: () {
             if (formKey.currentState!.validate()) {
-              onNext();
+              onNext(resendNumberController.text);
             }
           },
           text: strings.go_to_customer,

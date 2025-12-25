@@ -8945,6 +8945,12 @@ abstract class AppLocalizations {
   /// **'كم'**
   String get km;
 
+  /// No description provided for @offer_delivery.
+  ///
+  /// In ar, this message translates to:
+  /// **'فرص التوصيل'**
+  String get offer_delivery;
+
   /// No description provided for @please_accept_terms.
   ///
   /// In ar, this message translates to:

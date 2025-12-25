@@ -34,7 +34,7 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
             return AppCupertinoButton(
               onPressed: () {
                 if (snapshot.data == true) {
-                  onNext(AcceptTermsPrams(orderId: deliveryOrderEntity.id,termsType: state.termsManaEntity.first.termsType,termsVersion: state.termsManaEntity.first.termsVersion));
+                  onNext(AcceptTermsPrams(orderId: deliveryOrderEntity.id));
                 } else {
                   showErrorDialog(strings.please_accept_terms, context);
                 }

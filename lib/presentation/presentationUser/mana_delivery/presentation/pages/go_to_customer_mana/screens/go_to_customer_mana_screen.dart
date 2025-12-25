@@ -7,7 +7,7 @@ import '../widget/delivery_customer_widget.dart';
 
 
 class GoToCustomerManaScreen extends BaseStatelessWidget {
-  final Function() onNext;
+  final Function(String) onNext;
 
   GoToCustomerManaScreen({Key? key, required this.onNext}) : super(key: key);
   final formKey = GlobalKey<FormState>();
@@ -21,7 +21,7 @@ class GoToCustomerManaScreen extends BaseStatelessWidget {
         child: AppCupertinoButton(
           onPressed: () {
             if (formKey.currentState!.validate()) {
-              onNext();
+              onNext(resendNumberController.text);
             }
           },
           text: strings.confirm_delivery,

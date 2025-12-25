@@ -16,7 +16,7 @@ class ManaOrderWidget extends BaseStatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "فرص التوصيل",
+          strings.offer_delivery,
           style: kTextMedium.copyWith(color: kFontDark, fontSize: 14),
         ),
         StreamStateWidgetV2 <List<DeliveryOrderEntity>>(
