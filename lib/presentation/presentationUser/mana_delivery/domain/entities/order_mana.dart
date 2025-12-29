@@ -38,6 +38,7 @@ class OrderManaEntity {
   final String? cancellationReason;
   final String? addedDate;
   final String? modifiedDate;
+  final String? floorNote;
   final List<StatusHistoryEntity>? statusHistory;
 
   OrderManaEntity({
@@ -78,6 +79,7 @@ class OrderManaEntity {
     this.addedDate,
     this.modifiedDate,
     this.statusHistory,
+    this.floorNote,
   });
 
   factory OrderManaEntity.fromDto(OrderManaDto dto) {
@@ -118,6 +120,7 @@ class OrderManaEntity {
       cancellationReason: dto.cancellationReason,
       addedDate: dto.addedDate,
       modifiedDate: dto.modifiedDate,
+      floorNote: dto.floorNote,
       statusHistory: dto.statusHistory == null
           ? null
           : StatusHistoryEntity.fromDtoList(dto.statusHistory!),

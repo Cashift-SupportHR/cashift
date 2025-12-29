@@ -1,6 +1,7 @@
 import '../../../../../../shared/components/index.dart';
 
 import '../../../../../resources/colors.dart';
+import '../../../../domain/entities/index.dart';
 import '../../resend_code/widget/receive_code_widget.dart';
 import '../widget/customer_order_widget.dart';
 import '../widget/delivery_customer_widget.dart';
@@ -8,8 +9,10 @@ import '../widget/delivery_customer_widget.dart';
 
 class GoToCustomerManaScreen extends BaseStatelessWidget {
   final Function(String) onNext;
-
-  GoToCustomerManaScreen({Key? key, required this.onNext}) : super(key: key);
+final OrderManaEntity orderManaEntity;
+  DeliveryOrderEntity deliveryOrderEntity;
+final NearbyWarehousesEntity nearbyWarehousesEntity;
+  GoToCustomerManaScreen({Key? key, required this.onNext,required this.orderManaEntity,required this.deliveryOrderEntity,required this.nearbyWarehousesEntity}) : super(key: key);
   final formKey = GlobalKey<FormState>();
   TextEditingController resendNumberController = TextEditingController();
   @override
@@ -34,9 +37,9 @@ class GoToCustomerManaScreen extends BaseStatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            DeliveryCustomerWidget(),
+            DeliveryCustomerWidget( data: orderManaEntity, nearbyWarehousesEntity: nearbyWarehousesEntity,deliveryOrderEntity: deliveryOrderEntity,),
 
-            CustomerOrderWidget(),
+            CustomerOrderWidget(data: orderManaEntity,),
             SizedBox(height: 20),
             Form(
               key: formKey,

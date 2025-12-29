@@ -19,6 +19,9 @@ DeliveryOrderDto _$DeliveryOrderDtoFromJson(Map<String, dynamic> json) =>
       addedDate: json['addedDate'] as String?,
       distanceKm: json['distanceKm'] as num?,
       receiveFrom: json['receiveFrom'] as String?,
+          orderDetails: json['orderDetails'] as String?,
+          statusName: json['statusName'] as String?,
+          status: json['status'] as int?,
     );
 
 Map<String, dynamic> _$DeliveryOrderDtoToJson(DeliveryOrderDto instance) =>
@@ -34,4 +37,7 @@ Map<String, dynamic> _$DeliveryOrderDtoToJson(DeliveryOrderDto instance) =>
       'addedDate': instance.addedDate,
       'distanceKm': instance.distanceKm,
       'receiveFrom': instance.receiveFrom,
+      'orderDetails': instance.orderDetails,
+      'status': instance.status,
+      'statusName': instance.statusName,
     };

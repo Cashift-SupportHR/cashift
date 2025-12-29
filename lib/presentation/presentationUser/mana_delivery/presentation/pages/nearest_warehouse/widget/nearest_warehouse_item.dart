@@ -9,80 +9,75 @@ import '../../../../../resources/constants.dart';
 import '../../../../domain/entities/nearby_warehouses.dart';
 
 class NearestWarehouseItem extends BaseStatelessWidget {
-  final int index;
-  final int selectedIndex;
-    Function(NearbyWarehousesEntity) onSelect;
-final  NearbyWarehousesEntity data;
-    NearestWarehouseItem({
+  final int index; // نتركه كما هو لو تستخدمه لاحقًا
+  final int selectedIndex; // هنا هو ID المختار
+  final Function(NearbyWarehousesEntity) onSelect;
+  final NearbyWarehousesEntity data;
+
+  NearestWarehouseItem({
     super.key,
     required this.index,
     required this.selectedIndex,
     required this.onSelect,
     required this.data,
-
   });
 
   @override
   Widget build(BuildContext context) {
+    final bool isSelected = data.id == selectedIndex;
+
     return GestureDetector(
-      onTap: () {
-        onSelect(data);
-      },
+      onTap: () => onSelect(data),
       child: Container(
         margin: const EdgeInsets.only(bottom: 12),
-        decoration: Decorations.createRectangleDecoration(),
+        decoration: Decorations.createRectangleDecoration() ,
         padding: const EdgeInsets.all(7),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             /// Content
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    data.name??"",
-                    style:   kTextRegular.copyWith(
+                    data.name ?? "",
+                    style: kTextRegular.copyWith(
                       fontSize: 14,
-
+                      color: isSelected ? kPrimary : Colors.black,
                     ),
                   ),
-
                   const SizedBox(height: 4),
-
                   Text(
-                    data.districtName??"",
-                    style:  kTextRegular.copyWith(
-                      fontSize: 12,
+                    " ${strings.distance} ${data.distanceKm??0} ${strings.km} ",
+                    style: kTextRegular.copyWith(
                       color: kGreen_85,
-                    ),
-                  ),
-
-                  const SizedBox(height: 4),
-
-                  Text(
-                    data.fullAddress??"",
-                    style:kTextRegular.copyWith(
                       fontSize: 13,
-
                     ),
                   ),
-
+                  const SizedBox(height: 4),
+                  Text(
+                    data.fullAddress ?? "",
+                    style: kTextRegular.copyWith(fontSize: 13),
+                  ),
                   const SizedBox(height: 8),
-
                   GestureDetector(
-                    onTap: (){
-                      AppUtils.openMap(data.latitude??0, data.longitude??0);
+                    onTap: () {
+                      AppUtils.openMap(
+                        data.latitude ?? 0,
+                        data.longitude ?? 0,
+                      );
                     },
                     child: Row(
                       children: [
-
                         kSvgIcon(image: AppIcons.location_map),
-                        SizedBox(width: 5),
+                        const SizedBox(width: 5),
                         Text(
                           strings.open_map,
-                          style: kTextBold.copyWith(fontSize: 14, color: kOrange00),
+                          style: kTextBold.copyWith(
+                            fontSize: 14,
+                            color: kOrange00,
+                          ),
                         ),
                       ],
                     ),
@@ -91,9 +86,10 @@ final  NearbyWarehousesEntity data;
               ),
             ),
             const SizedBox(width: 8),
-            /// Radio
+
+            /// ✅ Radio (تم الإصلاح)
             Radio<int>(
-              value: index,
+              value: data.id ?? 0, // ✔ ID
               groupValue: selectedIndex,
               activeColor: Colors.teal,
               onChanged: (_) => onSelect(data),

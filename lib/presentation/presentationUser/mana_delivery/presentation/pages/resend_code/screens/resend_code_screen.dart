@@ -3,13 +3,21 @@ import 'package:shiftapp/presentation/presentationUser/resources/constants.dart'
 
 import '../../../../../../shared/components/index.dart';
 import '../../../../../../shared/components/text_field/build_text_field_item.dart';
+import '../../../../domain/entities/nearby_warehouses.dart';
+import '../../../../domain/entities/order_mana.dart';
 import '../widget/delivery_widget.dart';
 import '../widget/receive_code_widget.dart';
 
 class ResendCodeScreen extends BaseStatelessWidget {
   final Function(String resendNumber) onNext;
-
-  ResendCodeScreen({super.key, required this.onNext});
+  OrderManaEntity data;
+  final NearbyWarehousesEntity nearbyWarehousesEntity;
+  ResendCodeScreen({
+    super.key,
+    required this.onNext,
+    required this.data,
+    required this.nearbyWarehousesEntity,
+  });
 
   final resendNumberController = TextEditingController();
   final formKey = GlobalKey<FormState>();
@@ -35,7 +43,10 @@ class ResendCodeScreen extends BaseStatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            DeliveryWidget(),
+            DeliveryWidget(
+              data: data,
+              nearbyWarehousesEntity: nearbyWarehousesEntity,
+            ),
             SizedBox(height: 20),
             Form(
               key: formKey,

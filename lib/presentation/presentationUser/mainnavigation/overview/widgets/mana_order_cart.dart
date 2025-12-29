@@ -81,14 +81,14 @@ class ManaOrderCart extends BaseStatelessWidget {
           Container(
             decoration: Decorations.decorationOnlyRadius(
               radius: 15,
-              color: kRed_EE,
+              color: data.status==1?kGreen_EF:kRed_EE,
             ),
 
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "محجوزة",
-                style: kTextMedium.copyWith(color: kRed_00, fontSize: 10),
+                data.statusName??"",
+                style: kTextMedium.copyWith(color:  data.status==1?kPrimary:kRed_00, fontSize: 10),
               ),
             ),
           ),
@@ -106,7 +106,7 @@ class ManaOrderCart extends BaseStatelessWidget {
           "${strings.details_order} :   ",
           style: kTextMedium.copyWith(color: kGreen_85, fontSize: 14),
         ),
-        Text("20 كرتونه - 330 ملل", style: kTextRegular.copyWith(fontSize: 14)),
+        Text(data.orderDetails??"", style: kTextRegular.copyWith(fontSize: 14)),
       ],
     );
   }

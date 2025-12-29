@@ -5,9 +5,6 @@ import 'package:shiftapp/presentation/presentationUser/mana_delivery/data/models
 import 'package:shiftapp/presentation/presentationUser/mana_delivery/presentation/pages/resend_code/screens/resend_code_screen.dart'
     show ResendCodeScreen;
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-
-import '../../../../../../adminFeatures/vehicles/data/models/add_vehicle_params.dart';
-import '../../../../../../adminFeatures/vehicles/presentation/add/bloc/basic_vehicle_info_state.dart';
 import '../../../../../common/common_state.dart';
 import '../../../../domain/entities/index.dart';
 import '../cubit/resend_code_cubit.dart';
@@ -15,13 +12,21 @@ import '../cubit/resend_code_cubit.dart';
 class ResendCodePage extends BaseBlocWidget<UnInitState, ResendCodeCubit> {
   final Function() onNext;
   OrderManaEntity Function() orderCall;
+  NearbyWarehousesEntity Function() nearbyWarehousesCall;
 
-  ResendCodePage({Key? key, required this.orderCall, required this.onNext})
-    : super(key: key);
+  ResendCodePage({
+    Key? key,
+    required this.orderCall,
+    required this.onNext,
+    required this.nearbyWarehousesCall,
+  }) : super(key: key);
 
   @override
   Widget buildWidget(BuildContext context, UnInitState state) {
     return ResendCodeScreen(
+      data: orderCall(),
+      nearbyWarehousesEntity: nearbyWarehousesCall(),
+
       onNext:
           (resendNumber) => bloc.VerifyPickupCode(
             VerifyCodePrams(code: resendNumber, orderId: orderCall().id ?? 0),

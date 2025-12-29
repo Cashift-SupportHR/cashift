@@ -74,7 +74,7 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
           SizedBox(height: 7),
           ItemValue(
             title: strings.details_order,
-            value: " 20 كرتونه - 330 ملل",
+            value: deliveryOrderEntity.orderDetails ?? "",
             icon: AppIcons.details_order,
           ),
           ItemValue(
@@ -89,6 +89,7 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
             icon: AppIcons.locationOnOutline,
             color: kPrimary,
           ),
+          SizedBox(height: 5,),
           DetailsDeliver(),
           ItemValue(
             title: strings.basic_service_fee,
@@ -113,23 +114,28 @@ class DetailsOrderManaScreen extends BaseStatelessWidget {
   }
 
   Container nots() {
-    return Container(
-      decoration: Decorations.decorationOnlyRadius(color: kGreen_EF, radius: 5),
-      margin: const EdgeInsets.symmetric(vertical: 8.0),
-      padding: EdgeInsets.all(8.0),
-      child: Row(
-        children: [
-          Icon(Icons.error, size: 25, color: kPrimary),
-          SizedBox(width: 7),
-          Expanded(
-            child: Text(
-              "العميل في الطابق الثاني وسعر الطابق يزيد كلما علي الطابق.",
-              style: kTextRegular.copyWith(color: kPrimary, fontSize: 12),
-            ),
+    return state.orderManaEntity.floorNote == null
+        ? Container()
+        : Container(
+          decoration: Decorations.decorationOnlyRadius(
+            color: kGreen_EF,
+            radius: 5,
           ),
-        ],
-      ),
-    );
+          margin: const EdgeInsets.symmetric(vertical: 8.0),
+          padding: EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Icon(Icons.error, size: 25, color: kPrimary),
+              SizedBox(width: 7),
+              Expanded(
+                child: Text(
+                  state.orderManaEntity.floorNote ?? "",
+                  style: kTextRegular.copyWith(color: kPrimary, fontSize: 12),
+                ),
+              ),
+            ],
+          ),
+        );
   }
 
   Padding DetailsDeliver() {

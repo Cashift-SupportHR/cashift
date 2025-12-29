@@ -1,14 +1,16 @@
+import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/utils/app_utils.dart';
 
 import '../../../../../../../utils/app_icons.dart';
-import '../../../../../../shared/components/base_stateless_widget.dart'
-    show BaseStatelessWidget;
+
 import '../../../../../../shared/components/index.dart';
 import '../../../../../resources/colors.dart';
 import '../../../../../resources/constants.dart';
+import '../../../../domain/entities/order_mana.dart';
 
 class CustomerOrderWidget extends BaseStatelessWidget {
-  CustomerOrderWidget({super.key});
+  final OrderManaEntity data;
+  CustomerOrderWidget({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +30,19 @@ class CustomerOrderWidget extends BaseStatelessWidget {
 
           ItemValue(
             title: strings.basic_service_fee,
-            value: "100 ${strings.sar}",
+            value: "${data.baseServicePrice} ${strings.sar}",
             icon: AppIcons.receipt,
           ),
           ItemValue(
             title: strings.floor_price,
-            value: "150 ${strings.sar}",
+            value: "${data.floorPrice} ${strings.sar}",
             icon: AppIcons.receiptAdd,
           ),
           nots(),
 
           ItemValue(
             title: strings.final_price,
-            value: "250 ${strings.sar}",
+            value: "${data.totalPrice} ${strings.sar}",
             icon: AppIcons.receiptEdit,
           ),
         ],
@@ -74,7 +76,7 @@ class CustomerOrderWidget extends BaseStatelessWidget {
   }
 
   Container nots() {
-    return Container(
+    return  data.floorNote.isNullOrEmpty()?Container(): Container(
       decoration: Decorations.decorationOnlyRadius(color: kGreen_EF, radius: 5),
       margin: const EdgeInsets.symmetric(vertical: 8.0),
       padding: EdgeInsets.all(8.0),
@@ -84,7 +86,7 @@ class CustomerOrderWidget extends BaseStatelessWidget {
           SizedBox(width: 7),
           Expanded(
             child: Text(
-              "العميل في الطابق الثاني وسعر الطابق يزيد كلما علي الطابق.",
+            data.floorNote??"",
               style: kTextRegular.copyWith(color: kPrimary, fontSize: 12),
             ),
           ),
@@ -102,7 +104,7 @@ class CustomerOrderWidget extends BaseStatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "ahmed ahmed",
+              data.customerName??"",
               style: kTextMedium.copyWith(color: kFontDark, fontSize: 14),
             ),
             Text(
@@ -114,15 +116,11 @@ class CustomerOrderWidget extends BaseStatelessWidget {
         SizedBox(width: 25),
         InkWell(
           onTap: () {
-            AppUtils.launchPhone(phone: "01152344879");
+            AppUtils.launchPhone(phone:data.customerPhone??"");
           },
           child: kSvgIcon(image: AppIcons.call, size: 50),
         ),
-        InkWell(
-            onTap: () {
 
-            },
-            child: kSvgIcon(image: AppIcons.chat)),
       ],
     );
   }

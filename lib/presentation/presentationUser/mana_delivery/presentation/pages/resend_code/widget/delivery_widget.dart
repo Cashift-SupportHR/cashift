@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:shiftapp/presentation/presentationUser/resources/constants.dart';
 
 import '../../../../../../../utils/app_icons.dart';
+import '../../../../../../../utils/app_utils.dart';
 import '../../../../../../shared/components/base_stateless_widget.dart' show BaseStatelessWidget;
 import '../../../../../../shared/components/decorations/decorations.dart';
 import '../../../../../resources/colors.dart';
+import '../../../../domain/entities/nearby_warehouses.dart';
+import '../../../../domain/entities/order_mana.dart';
 
 class DeliveryWidget extends BaseStatelessWidget {
-
+ final OrderManaEntity data;
+final NearbyWarehousesEntity nearbyWarehousesEntity;
+  DeliveryWidget({super.key, required this.nearbyWarehousesEntity, required this.data});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,7 +50,7 @@ class DeliveryWidget extends BaseStatelessWidget {
                    ),
                    SizedBox(width: 6),
                    Text(
-                     'مستودع الرياض',
+                     nearbyWarehousesEntity.name??"",
                      style: kTextRegular.copyWith(
                         fontSize: 14,
                      ),
@@ -56,25 +61,32 @@ class DeliveryWidget extends BaseStatelessWidget {
 
                /// المسافة والوقت
                  Text(
-                 'مسافة 10 كم - ساعة',
+                   " ${strings.distance} ${nearbyWarehousesEntity.distanceKm??0} ${strings.km} ",
                  style: kTextRegular.copyWith(
                    color: kGreen_85,
-                   fontSize: 11,
+                   fontSize: 13,
                  ),
                ),
                const SizedBox(height: 3),
 
                /// العنوان
                  Text(
-                 'الرياض المربع شارع 40c امام شركة نجد الدور الثاني',
+                   nearbyWarehousesEntity.fullAddress??"",
+                 maxLines: 1,
                  style: kTextRegular.copyWith(
-                   fontSize: 12,
+                   fontSize: 14,
+
                  ),
                ),
                const SizedBox(height: 3),
 
                GestureDetector(
-                 onTap: (){},
+                 onTap: (){
+                   AppUtils.openMap(
+                     nearbyWarehousesEntity.latitude ?? 0.0,
+                     nearbyWarehousesEntity.longitude ?? 0.0,);
+
+                 },
                  child: Row(
                    children: [
 
@@ -82,7 +94,7 @@ class DeliveryWidget extends BaseStatelessWidget {
                      SizedBox(width: 5),
                      Text(
                        strings.open_map,
-                       style: kTextBold.copyWith(fontSize: 14, color: kOrange00),
+                       style: kTextMedium.copyWith(fontSize: 14, color: kOrange00),
                      ),
                    ],
                  ),
@@ -122,14 +134,14 @@ class DeliveryWidget extends BaseStatelessWidget {
   Widget _dashedLine() {
     return Container(
       width: 2,
-      height: 80,
+      height: 50,
       margin: const EdgeInsets.symmetric(vertical: 4),
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: List.generate(
-              8,
+              4,
                   (index) => Container(
                 width: 2,
                 height: 6,

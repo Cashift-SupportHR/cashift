@@ -76,6 +76,8 @@ class OrderManaDto {
   final String? addedDate;
   @JsonKey(name: "modifiedDate")
   final String? modifiedDate;
+  @JsonKey(name: "floorNote")
+  final String? floorNote;
   @JsonKey(name: "statusHistory")
   final List<StatusHistory>? statusHistory;
 
@@ -117,6 +119,7 @@ class OrderManaDto {
     this.addedDate,
     this.modifiedDate,
     this.statusHistory,
+    this.floorNote,
   });
 
   factory OrderManaDto.fromJson(Map<String, dynamic> json) {

@@ -6,6 +6,8 @@ part 'delivery_order_dto.g.dart';
 class DeliveryOrderDto {
   @JsonKey(name: "id")
   final int? id;
+  @JsonKey(name: "status")
+  final int? status;
   @JsonKey(name: "orderNumber")
   final String? orderNumber;
   @JsonKey(name: "customerAddress")
@@ -26,10 +28,15 @@ class DeliveryOrderDto {
   final num? distanceKm;
   @JsonKey(name: "receiveFrom")
   final String? receiveFrom;
+  @JsonKey(name: "orderDetails")
+  final String? orderDetails;
+  @JsonKey(name: "statusName")
+  final String? statusName;
 
   DeliveryOrderDto ({
     this.id,
     this.orderNumber,
+    this.statusName,
     this.customerAddress,
     this.cityName,
     this.districtName,
@@ -39,6 +46,8 @@ class DeliveryOrderDto {
     this.addedDate,
     this.distanceKm,
     this.receiveFrom,
+    this.orderDetails,
+    this.status,
   });
 
   factory DeliveryOrderDto.fromJson(Map<String, dynamic> json) {

@@ -19,6 +19,7 @@ int  warehouseId;
   @override
   Widget build(BuildContext context) {
     return  Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         kSvgIcon(image: AppIcons.notes2),
         SizedBox(height: 10,),

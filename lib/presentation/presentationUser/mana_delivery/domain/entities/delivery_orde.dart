@@ -2,6 +2,7 @@ import '../../data/models/delivery_order_dto.dart';
 
 class DeliveryOrderEntity {
   final int? id;
+  final int? status;
   final String? orderNumber;
   final String? customerAddress;
   final String? cityName;
@@ -12,6 +13,8 @@ class DeliveryOrderEntity {
   final String? addedDate;
   final num? distanceKm;
   final String? receiveFrom;
+  final String? orderDetails;
+  final String? statusName;
 
   DeliveryOrderEntity({
     this.id,
@@ -25,6 +28,9 @@ class DeliveryOrderEntity {
     this.addedDate,
     this.distanceKm,
     this.receiveFrom,
+    this.orderDetails,
+    this.status,
+    this.statusName,
   });
 
   factory DeliveryOrderEntity.fromDto(DeliveryOrderDto dto) {
@@ -40,6 +46,9 @@ class DeliveryOrderEntity {
       addedDate: dto.addedDate,
       distanceKm: dto.distanceKm,
       receiveFrom: dto.receiveFrom,
+      orderDetails: dto.orderDetails,
+      status: dto.status,
+      statusName: dto.statusName,
     );
   }
 

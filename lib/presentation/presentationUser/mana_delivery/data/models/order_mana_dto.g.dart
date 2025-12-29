@@ -9,6 +9,7 @@ part of 'order_mana_dto.dart';
 OrderManaDto _$OrderManaDtoFromJson(Map<String, dynamic> json) => OrderManaDto(
       id: (json['id'] as num?)?.toInt(),
       orderNumber: json['orderNumber'] as String?,
+      floorNote: json['floorNote'] as String?,
       customerName: json['customerName'] as String?,
       customerPhone: json['customerPhone'] as String?,
       customerAddress: json['customerAddress'] as String?,
