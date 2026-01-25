@@ -6,7 +6,7 @@ const  kCashiftAPIURL = '${kCashiftURL}api/';
 
 const  kCashiftURL = 'https://cashift.com.sa/';
 const kServerUrl="http://support-grp.com:8001/" ;
-const kTESTServerUrl="http://85.184.232.39:8080/" ;
+const kTESTServerUrl="https://cashift-cashifttest.azurewebsites.net/";
 
 const kBASE_URL =Config.isTestVersion ? kTestApiUrl : kCashiftAPIURL;
 const kSERVER_URL =Config.isTestVersion ? kTESTServerUrl : kServerUrl;

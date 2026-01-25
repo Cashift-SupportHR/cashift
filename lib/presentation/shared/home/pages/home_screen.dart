@@ -150,7 +150,7 @@ class _MyHomeScreenState extends BaseState<MyHomeScreen> {
   void initState() {
     homeBloc = GetIt.instance.get<HomeBloc>();
     if (mounted) {
-      if (Config.isTestVersion == false) homeBloc.fetchAppVersion();
+      // if (Config.isTestVersion == false) homeBloc.fetchAppVersion();
       // homeBloc.fetchAppVersion();
       print('checkUserRolePrivilege initState');
       homeBloc.checkUserRolePrivilege();
