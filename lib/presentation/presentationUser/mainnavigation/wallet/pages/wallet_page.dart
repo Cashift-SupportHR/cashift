@@ -42,16 +42,18 @@ class WalletPage extends BaseBlocWidget<InitializeWalletState, WalletCubit> {
   }
 
   Future<void> checkAndFetchInitData(BuildContext context) async {
-    await Future.delayed(
-      Duration(milliseconds: 100),
-      () async {
-        final checkFace = await checkFaceRecognition(context);
-        if (checkFace == true) {
-          bloc.fetchWalletRequiredData();
-        } else {
-          bloc.emitVerificationFaceException();
-        }
-      },
-    );
+    if(bloc.isLogin()) {
+      await Future.delayed(
+        Duration(milliseconds: 100),
+            () async {
+          final checkFace = await checkFaceRecognition(context);
+          if (checkFace == true) {
+            bloc.fetchWalletRequiredData();
+          } else {
+            bloc.emitVerificationFaceException();
+          }
+        },
+      );
+    }
   }
 }
