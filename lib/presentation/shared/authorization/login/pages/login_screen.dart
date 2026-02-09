@@ -46,7 +46,7 @@ class LoginScreen extends BaseWidget {
       // passwordController.text = '123456';
       phone = '0582708625';
       phoneController.text = '0582708625';
-      passwordController.text = 'Asdf@123';
+      passwordController.text = 'Asdf@zxc9';
       // phone = '506666666';
       // phoneController.text = '506666666';
       // passwordController.text = 'Asdf@123';

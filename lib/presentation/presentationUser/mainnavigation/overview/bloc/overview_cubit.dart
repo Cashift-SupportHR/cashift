@@ -31,10 +31,16 @@ import '../../../../../domain/entities/required_tasks/index.dart';
 import '../../../../../domain/usecases/tasks_notifications_usecase.dart';
 import '../../../geofence/geo_task.dart';
 import '../../../locationservice/locationservice.dart';
+import '../../../locationservice/location_required_exception.dart';
+import '../../../locationservice/permission_denied_exception.dart';
+import '../../../locationservice/location_service_disabled_exception.dart';
+import '../../../common/loading_stream_exception.dart';
+import 'package:geolocator/geolocator.dart' as geolocator;
 import '../../../logistics_request/data/repositories/logistics_request_repo.dart';
 import '../../../mana_delivery/data/models/delivery_orders_prams.dart';
 import '../../../mana_delivery/data/repositories/mana_delivery_repo.dart';
 import '../../../mana_delivery/domain/entities/index.dart';
+import 'package:location/location.dart' show LocationData;
 import 'overview_bloc.dart';
 import 'overview_state.dart';
 
@@ -76,7 +82,8 @@ class OverviewCubit extends BaseCubit {
   StreamState<List<JobOfferSlider>> jobOffersSliders = StreamStateInitial();
   StreamState<List<DeliveryOrderEntity>> deliverOrders = StreamStateInitial();
   StreamState<CashifterCodeDto> cashifterCodeStream = StreamStateInitial();
-//fetchCashifterCode
+  LocationData? userLocation;
+  //fetchCashifterCode
   clearData() {
     appliedOffers.setData(null);
     jobOffers.setData(null);
@@ -184,26 +191,83 @@ class OverviewCubit extends BaseCubit {
     }
     return jobOffersSliders;
   }
+
   fetchDeliverOrders(DeliveryOrdersPrams deliveryOrdersPrams) async {
     print('fetchJobOffersSliders');
     try {
-      final response = await manaDeliverRepository.fetchDeliveryOrders(deliveryOrdersPrams);
-      deliverOrders.setData(
-        response
-       );
+      final response = await manaDeliverRepository.fetchDeliveryOrders(
+        deliveryOrdersPrams,
+      );
+      deliverOrders.setData(response);
     } catch (e) {
       deliverOrders.setError(e);
       checkErrorType(e);
     }
     return deliverOrders;
   }
-  fetchCashifterCode( ) async {
+
+  Future<void> _fetchDeliveryOrdersWithLocation() async {
+    try {
+      print('_fetchDeliveryOrdersWithLocation: starting');
+      // First, just check if permission is already granted (no dialog)
+      final isGranted = await LocationService.isPermissionGranted();
+      print('_fetchDeliveryOrdersWithLocation: isGranted=$isGranted');
+
+      if (!isGranted) {
+        // Permission not granted - set error to show the location widget
+        // Don't request permission automatically - user will tap retry button
+        print(
+          '_fetchDeliveryOrdersWithLocation: permission not granted, showing widget',
+        );
+        deliverOrders.setError(LocationRequiredException());
+        return;
+      }
+
+      // Permission is granted, get location
+      final position = await LocationService.determinePosition(Get.context!);
+      userLocation = position;
+      fetchDeliverOrders(
+        DeliveryOrdersPrams(lat: position.latitude, lng: position.longitude),
+      );
+    } catch (e) {
+      print(
+        '_fetchDeliveryOrdersWithLocation: caught error: $e (${e.runtimeType})',
+      );
+      if (e is LocationPermissionDeniedException ||
+          e is geolocator.LocationServiceDisabledException ||
+          e is AppLocationServiceDisabledException) {
+        deliverOrders.setError(LocationRequiredException());
+      } else {
+        deliverOrders.setError(e);
+      }
+    }
+  }
+
+  /// Called when user taps retry button - this will show permission dialog
+  void retryFetchDeliveryOrders() async {
+    // Set loading state first
+    deliverOrders.setError(LoadingStreamException());
+
+    try {
+      // Request permission with dialog
+      final hasPermission = await LocationService.requestLocationPermission(
+        Get.context!,
+      );
+      if (hasPermission) {
+        _fetchDeliveryOrdersWithLocation();
+      } else {
+        deliverOrders.setError(LocationRequiredException());
+      }
+    } catch (e) {
+      deliverOrders.setError(LocationRequiredException());
+    }
+  }
+
+  fetchCashifterCode() async {
     print('fetchJobOffersSliders');
     try {
-      final response = await _profileRepository.fetchCashifterCode( );
-     cashifterCodeStream.setData(
-        response
-       );
+      final response = await _profileRepository.fetchCashifterCode();
+      cashifterCodeStream.setData(response);
     } catch (e) {
       cashifterCodeStream.setError(e);
       checkErrorType(e);
@@ -372,10 +436,8 @@ class OverviewCubit extends BaseCubit {
             inAppNotificationStream: inAppNotificationStream,
             /*workingHours: appliedOffers*/
             jobOffersSliders: jobOffersSliders,
-              cashifterCodeStream: cashifterCodeStream,
-            deliveryOrdersStream: deliverOrders
-
-
+            cashifterCodeStream: cashifterCodeStream,
+            deliveryOrdersStream: deliverOrders,
           ),
         );
         clearData();
@@ -466,7 +528,7 @@ class OverviewCubit extends BaseCubit {
         fetchVipOpportunities();
         fetchFavoritesOpportunities();
         fetchCashifterCode();
-        fetchDeliverOrders(DeliveryOrdersPrams(lat:24.7136,lng:46.6753));
+        _fetchDeliveryOrdersWithLocation();
       } else {
         await fetchJobOffersSliders();
         await fetchOpportunitiesUnAuth();
@@ -487,18 +549,16 @@ class OverviewCubit extends BaseCubit {
   }
 
   void applyJobNow(int id) {
-
     executeEmitterListener(() => _offersRepository.addFreeLanceOffer(id));
   }
 
   Future<void> canSubmitLogistics() async {
     try {
-    await  logisticsRequestRepository.CanSubmitLogistics() ;
-       emit(CanSubmitLogistics());
+      await logisticsRequestRepository.CanSubmitLogistics();
+      emit(CanSubmitLogistics());
     } catch (e) {
       emit(FailureStateListener(e));
     }
-
   }
 
   void requestEvent(OverviewEvents event) {
@@ -508,7 +568,4 @@ class OverviewCubit extends BaseCubit {
       toggleAdminPanel();
     }
   }
-
-
-
 }

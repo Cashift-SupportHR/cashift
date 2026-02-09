@@ -14,19 +14,20 @@ class OverviewScreenV2 extends BaseWidget {
   final Function(DateTime? dateTime) onChangeDate;
   final Function(int) onApplyJobNow;
   final Function(int) onCheckCertificateJob;
-  final Function( ) canSubmitLogistics;
+  final Function() canSubmitLogistics;
+  final VoidCallback onRetryDeliveryOrders;
 
-  OverviewScreenV2(
-      {Key? key,
-      required this.onRefresh,
-      required this.state,
-      required this.onRequestEvent,
-      required this.onChangeDate,
-      required this.onApplyJobNow,
-      required this.canSubmitLogistics,
-      required this.onCheckCertificateJob
-      })
-      : super(key: key);
+  OverviewScreenV2({
+    Key? key,
+    required this.onRefresh,
+    required this.state,
+    required this.onRequestEvent,
+    required this.onChangeDate,
+    required this.onApplyJobNow,
+    required this.canSubmitLogistics,
+    required this.onCheckCertificateJob,
+    required this.onRetryDeliveryOrders,
+  }) : super(key: key);
 
   @override
   Widget buildWidget(BuildContext context) {
@@ -35,8 +36,9 @@ class OverviewScreenV2 extends BaseWidget {
         return SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
           child: Container(
-              padding: const EdgeInsets.only(left: 10, right: 10, bottom: 16),
-              child: buildBody(state, context)),
+            padding: const EdgeInsets.only(left: 10, right: 10, bottom: 16),
+            child: buildBody(state, context),
+          ),
         );
       },
     );
@@ -49,9 +51,7 @@ class OverviewScreenV2 extends BaseWidget {
   }
 
   Widget buildPreLogin(OverviewPreLoginState state, BuildContext context) {
-    return PreLoginWidget(
-      state: state,
-    );
+    return PreLoginWidget(state: state);
   }
 
   Widget buildPostLogin(OverviewPostLoginState postLoginState) {
@@ -64,6 +64,7 @@ class OverviewScreenV2 extends BaseWidget {
       onApplyJobNow: onApplyJobNow,
       canSubmitLogistics: canSubmitLogistics,
       onCheckCertificateJob: onCheckCertificateJob,
+      onRetryDeliveryOrders: onRetryDeliveryOrders,
     );
   }
 }
