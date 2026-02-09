@@ -710,10 +710,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_face_api
-      sha256: f97c98e0c604170df456da93ab32d7484161afde1bf757e8172ebec6629e822e
+      sha256: e8f2ad0b7d5c4cce9cd0e5aed2ed59502a8aa9e1066c375925b8daacff17d77e
       url: "https://pub.dev"
     source: hosted
-    version: "7.1.282"
+    version: "7.2.626"
   flutter_face_core_match:
     dependency: "direct main"
     description:
@@ -1129,14 +1129,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.2"
-  hikvision:
-    dependency: "direct main"
-    description:
-      name: hikvision
-      sha256: a25a8bc186d74c963a9d89f848879caeeea419b512b30859ffb1a4440f82a0ff
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.2"
   html:
     dependency: transitive
     description:
