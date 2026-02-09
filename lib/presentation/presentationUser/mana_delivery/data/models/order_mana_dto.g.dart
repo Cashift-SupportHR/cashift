@@ -9,7 +9,6 @@ part of 'order_mana_dto.dart';
 OrderManaDto _$OrderManaDtoFromJson(Map<String, dynamic> json) => OrderManaDto(
       id: (json['id'] as num?)?.toInt(),
       orderNumber: json['orderNumber'] as String?,
-      floorNote: json['floorNote'] as String?,
       customerName: json['customerName'] as String?,
       customerPhone: json['customerPhone'] as String?,
       customerAddress: json['customerAddress'] as String?,
@@ -47,6 +46,7 @@ OrderManaDto _$OrderManaDtoFromJson(Map<String, dynamic> json) => OrderManaDto(
       statusHistory: (json['statusHistory'] as List<dynamic>?)
           ?.map((e) => StatusHistory.fromJson(e as Map<String, dynamic>))
           .toList(),
+      floorNote: json['floorNote'] as String?,
     );
 
 Map<String, dynamic> _$OrderManaDtoToJson(OrderManaDto instance) =>
@@ -87,6 +87,7 @@ Map<String, dynamic> _$OrderManaDtoToJson(OrderManaDto instance) =>
       'cancellationReason': instance.cancellationReason,
       'addedDate': instance.addedDate,
       'modifiedDate': instance.modifiedDate,
+      'floorNote': instance.floorNote,
       'statusHistory': instance.statusHistory,
     };
 

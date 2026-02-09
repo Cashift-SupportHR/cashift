@@ -22,15 +22,16 @@ class NearestWarehouseScreen extends BaseStatelessWidget {
   });
 
   int? selectedWarehouseId;
-
+  NearbyWarehousesEntity? nearbyWarehouses;
   @override
   Widget build(BuildContext context) {
     return StatefulBuilder(
       builder: (context,setState) {
         if (selectedWarehouseId == null &&
             state.nearbyWarehousesEntity.isNotEmpty) {
-          selectedWarehouseId =
-              state.nearbyWarehousesEntity.first.id;
+          nearbyWarehouses = state.nearbyWarehousesEntity.first;
+          selectedWarehouseId = state.nearbyWarehousesEntity.first.id;
+          onNext(nearbyWarehouses!);
         }
         return Scaffold(
           backgroundColor: kBackground,
@@ -84,9 +85,10 @@ class NearestWarehouseScreen extends BaseStatelessWidget {
 
                         setState(() {
                           selectedWarehouseId = data.id;
+                          nearbyWarehouses= data;
                           print("selectedWarehouseId  $selectedWarehouseId");
                         });
-                        onNext(data);
+                        onNext(nearbyWarehouses!);
                       },
                     );
                   },

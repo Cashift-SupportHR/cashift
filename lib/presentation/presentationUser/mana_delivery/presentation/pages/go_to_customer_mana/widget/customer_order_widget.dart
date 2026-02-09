@@ -22,11 +22,11 @@ class CustomerOrderWidget extends BaseStatelessWidget {
         children: [
           header(),
           SizedBox(height: 7),
-          ItemValue(
-            title: strings.expected_arrival_time,
-            value: "08:00 PM - 09:00PM",
-            icon: AppIcons.time8,
-          ),
+          // ItemValue(
+          //   title: strings.expected_arrival_time,
+          //   value: "08:00 PM - 09:00PM",
+          //   icon: AppIcons.time8,
+          // ),
 
           ItemValue(
             title: strings.basic_service_fee,
@@ -98,8 +98,8 @@ class CustomerOrderWidget extends BaseStatelessWidget {
   Row header() {
     return Row(
       children: [
-        kBuildImage('', size: 40),
-        SizedBox(width: 10),
+        // kBuildImage('', size: 40),
+         SizedBox(width: 10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -113,7 +113,7 @@ class CustomerOrderWidget extends BaseStatelessWidget {
             ),
           ],
         ),
-        SizedBox(width: 25),
+     Spacer(),
         InkWell(
           onTap: () {
             AppUtils.launchPhone(phone:data.customerPhone??"");

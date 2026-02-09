@@ -27,6 +27,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:collection/collection.dart';
 
 import '../../../../../data/datasources/local/constants.dart';
+import '../../../../../data/models/account/cashifter_code_dto.dart';
 import '../../../../../data/models/overview/index.dart';
 import '../../../../../data/models/user_overview/index.dart';
  import '../../../../../domain/entities/required_tasks/index.dart';
@@ -103,6 +104,7 @@ class OverviewBloc extends Bloc<OverviewEvents, CommonState> {
   StreamState<List<InAppRequiredTask>> inAppNotificationStream = StreamStateInitial();
   StreamState<List<JobOfferSlider>> jobOffersSliders = StreamStateInitial();
   StreamState<List<DeliveryOrderEntity>> deliverOrders = StreamStateInitial();
+  StreamState<CashifterCodeDto> cashifterCodeStream = StreamStateInitial();
 
   clearData() {
     appliedOffers.setData(null);

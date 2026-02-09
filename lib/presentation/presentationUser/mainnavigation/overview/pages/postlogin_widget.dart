@@ -17,6 +17,7 @@ import '../bloc/overview_bloc.dart';
 import '../bloc/overview_state.dart';
 import '../widgets/app_requierment_notificationslist_widget.dart';
 import '../widgets/carousel_slider_overView.dart';
+import '../widgets/cashifter_code_cart.dart';
 import '../widgets/current_date_widget.dart';
 import '../widgets/job_offers_sliders.dart';
 import '../widgets/mana_order_widget.dart';
@@ -54,12 +55,16 @@ class PostLoginWidget extends BaseStatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        ManaOrderWidget(deliveryOrdersStream: postLoginState.deliveryOrdersStream,),
 
         inAppRequirementNotification(),
         getCurrentDateWidget(),
+
         getCountOfJobsWidget(postLoginState.numOfJob()),
         buildDateTabsWidget(),
+        const SizedBox(
+          height: 8,
+        ),
+        CashifterCodeWidget(cashifterCodeStream: postLoginState.cashifterCodeStream,),
         const SizedBox(
           height: 8,
         ),

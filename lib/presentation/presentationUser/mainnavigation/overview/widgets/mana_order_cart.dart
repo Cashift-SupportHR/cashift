@@ -15,7 +15,7 @@ class ManaOrderCart extends BaseStatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      clipBehavior: Clip.antiAlias, // 🔥 مهم جدًا
+      clipBehavior: Clip.antiAlias,
 
       margin: const EdgeInsetsDirectional.fromSTEB(0, 10, 10, 10),
       decoration:  BoxDecoration(
@@ -232,9 +232,7 @@ class ManaOrderCart extends BaseStatelessWidget {
         borderWidth: 0.8,
         radius: 10,
         child: Image.asset(
-          // jobOffer.isFavorite() == true
-          //     ? 'images/heart_fill.png'
-          //     : 'images/heart.png',
+
           'images/heart.png',
           color: kPrimary,
           colorBlendMode: BlendMode.srcIn,

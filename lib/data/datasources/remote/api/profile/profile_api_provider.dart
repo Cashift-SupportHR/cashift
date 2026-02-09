@@ -41,4 +41,9 @@ import '../../../../../network/source/user_endpoint.dart';
   Future<ApiResponse<RemoteFile>> downloadFaceRecognition() async {
     return await api.downloadFaceRecognition();
   }
+
+  Future<ApiResponse<CashifterCodeDto>> fetchCashifterCode( ) async {
+    return await api.fetchCashifterCode();
+  }
+
 }

@@ -50,6 +50,7 @@ class MainManaDeliverPage extends BaseStatelessWidget {
               animateToPage(2);
             },
           ),
+
           ResendCodePage(
             nearbyWarehousesCall: () => callData(nearbyWarehousesEntity),
             orderCall: () => callData(orderManaEntity),

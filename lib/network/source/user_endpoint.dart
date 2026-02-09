@@ -978,4 +978,7 @@ abstract class UserEndpoint {
   @GET('/v1/DeliveryOrder/ReleaseReservation')
   Future<ApiResponse> cancelReservation( @Query("orderId") int  orderId);
 
+  @GET('/v6/FreeLancerInfo/GetCashifterCode')
+  Future<ApiResponse<CashifterCodeDto>> fetchCashifterCode( );
+
 }

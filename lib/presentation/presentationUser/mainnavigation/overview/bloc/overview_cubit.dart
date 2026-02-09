@@ -23,12 +23,14 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:collection/collection.dart';
 
 import '../../../../../data/datasources/local/constants.dart';
+import '../../../../../data/models/account/cashifter_code_dto.dart';
 import '../../../../../data/models/activity_log/index.dart';
 import '../../../../../data/models/overview/index.dart';
 import '../../../../../data/models/user_overview/index.dart';
 import '../../../../../domain/entities/required_tasks/index.dart';
 import '../../../../../domain/usecases/tasks_notifications_usecase.dart';
 import '../../../geofence/geo_task.dart';
+import '../../../locationservice/locationservice.dart';
 import '../../../logistics_request/data/repositories/logistics_request_repo.dart';
 import '../../../mana_delivery/data/models/delivery_orders_prams.dart';
 import '../../../mana_delivery/data/repositories/mana_delivery_repo.dart';
@@ -73,7 +75,8 @@ class OverviewCubit extends BaseCubit {
       StreamStateInitial();
   StreamState<List<JobOfferSlider>> jobOffersSliders = StreamStateInitial();
   StreamState<List<DeliveryOrderEntity>> deliverOrders = StreamStateInitial();
-
+  StreamState<CashifterCodeDto> cashifterCodeStream = StreamStateInitial();
+//fetchCashifterCode
   clearData() {
     appliedOffers.setData(null);
     jobOffers.setData(null);
@@ -192,7 +195,20 @@ class OverviewCubit extends BaseCubit {
       deliverOrders.setError(e);
       checkErrorType(e);
     }
-    return jobOffersSliders;
+    return deliverOrders;
+  }
+  fetchCashifterCode( ) async {
+    print('fetchJobOffersSliders');
+    try {
+      final response = await _profileRepository.fetchCashifterCode( );
+     cashifterCodeStream.setData(
+        response
+       );
+    } catch (e) {
+      cashifterCodeStream.setError(e);
+      checkErrorType(e);
+    }
+    return cashifterCodeStream;
   }
 
   addFreeLanceOffer(int id) async {
@@ -356,7 +372,9 @@ class OverviewCubit extends BaseCubit {
             inAppNotificationStream: inAppNotificationStream,
             /*workingHours: appliedOffers*/
             jobOffersSliders: jobOffersSliders,
+              cashifterCodeStream: cashifterCodeStream,
             deliveryOrdersStream: deliverOrders
+
 
           ),
         );
@@ -447,6 +465,7 @@ class OverviewCubit extends BaseCubit {
         fetchSpecialOpportunities();
         fetchVipOpportunities();
         fetchFavoritesOpportunities();
+        fetchCashifterCode();
         fetchDeliverOrders(DeliveryOrdersPrams(lat:24.7136,lng:46.6753));
       } else {
         await fetchJobOffersSliders();
@@ -489,4 +508,7 @@ class OverviewCubit extends BaseCubit {
       toggleAdminPanel();
     }
   }
+
+
+
 }

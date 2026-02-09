@@ -10,6 +10,7 @@ DeliveryOrderDto _$DeliveryOrderDtoFromJson(Map<String, dynamic> json) =>
     DeliveryOrderDto(
       id: (json['id'] as num?)?.toInt(),
       orderNumber: json['orderNumber'] as String?,
+      statusName: json['statusName'] as String?,
       customerAddress: json['customerAddress'] as String?,
       cityName: json['cityName'] as String?,
       districtName: json['districtName'] as String?,
@@ -19,14 +20,14 @@ DeliveryOrderDto _$DeliveryOrderDtoFromJson(Map<String, dynamic> json) =>
       addedDate: json['addedDate'] as String?,
       distanceKm: json['distanceKm'] as num?,
       receiveFrom: json['receiveFrom'] as String?,
-          orderDetails: json['orderDetails'] as String?,
-          statusName: json['statusName'] as String?,
-          status: json['status'] as int?,
+      orderDetails: json['orderDetails'] as String?,
+      status: (json['status'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$DeliveryOrderDtoToJson(DeliveryOrderDto instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'status': instance.status,
       'orderNumber': instance.orderNumber,
       'customerAddress': instance.customerAddress,
       'cityName': instance.cityName,
@@ -38,6 +39,5 @@ Map<String, dynamic> _$DeliveryOrderDtoToJson(DeliveryOrderDto instance) =>
       'distanceKm': instance.distanceKm,
       'receiveFrom': instance.receiveFrom,
       'orderDetails': instance.orderDetails,
-      'status': instance.status,
       'statusName': instance.statusName,
     };
