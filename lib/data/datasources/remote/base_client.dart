@@ -77,12 +77,12 @@ class HeaderInterceptor extends Interceptor {
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     options.headers[keyAuthorization] =
     'Bearer ${userRepository.getAccessToken()}';
-       options.headers[keyLanguage] = Get.locale?.languageCode.toString();
+    options.headers[keyLanguage] = Get.locale?.languageCode.toString();
     options.headers[keyApiKey] = apiKeyValue;
     options.headers[deviceIdKey] = device.id;
     options.headers[keyContentType] = keyJson;
     // options.headers[deviceInfoKey] =device.info
-    // options.baseUrl=kTestApiUrl;
+   // options.baseUrl=kTestApiUrl;
      options.headers['platform'] = Config.platformName;
     options.headers['AppVersion'] = Config.AppVersion;
     options.headers[requestTypeKey] = true;
