@@ -13,6 +13,7 @@ class CashifterCodeWidget extends BaseStatelessWidget {
   StreamState<CashifterCodeDto> cashifterCodeStream;
   CashifterCodeWidget({super.key, required this.cashifterCodeStream});
 
+
   @override
   Widget build(BuildContext context) {
     return StreamStateWidgetV2<CashifterCodeDto>(
