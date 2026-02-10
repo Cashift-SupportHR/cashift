@@ -9,8 +9,8 @@ import '../../../../../resources/constants.dart';
 import '../../../../domain/entities/nearby_warehouses.dart';
 
 class NearestWarehouseItem extends BaseStatelessWidget {
-  final int index; // نتركه كما هو لو تستخدمه لاحقًا
-  final int selectedIndex; // هنا هو ID المختار
+  final int index;
+  final int selectedIndex;
   final Function(NearbyWarehousesEntity) onSelect;
   final NearbyWarehousesEntity data;
 

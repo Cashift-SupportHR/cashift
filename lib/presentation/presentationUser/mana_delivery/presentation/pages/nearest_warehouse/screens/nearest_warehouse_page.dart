@@ -24,7 +24,7 @@ class NearestWarehousePage
   @override
   void loadInitialData(BuildContext context) {
     // lat=24.7136&lng=46.6753
-    bloc.loadInitialData(DeliveryOrdersPrams(lng: 46.6753, lat: 24.7136));
+    bloc.fetchDeliveryOrdersWithLocation();
   }
 
   NearbyWarehousesEntity? nearbyWarehousesEntity;

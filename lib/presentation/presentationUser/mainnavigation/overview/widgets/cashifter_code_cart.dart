@@ -17,6 +17,7 @@ class CashifterCodeWidget extends BaseStatelessWidget {
   Widget build(BuildContext context) {
     return StreamStateWidgetV2<CashifterCodeDto>(
       stream: cashifterCodeStream,
+        notShowEmptyWidget:true,
       builder: (context, snapshot) {
         return Container(
           clipBehavior: Clip.antiAlias,
@@ -24,7 +25,7 @@ class CashifterCodeWidget extends BaseStatelessWidget {
           margin: const EdgeInsetsDirectional.fromSTEB(0, 10, 10, 10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: kPrimary),
+            border: Border.all(color: kPrimary.withAlpha(30)),
 
             image: DecorationImage(
               image: AssetImage(AppImages.bgMana),
