@@ -25,6 +25,7 @@ class CashifterCodeWidget extends BaseStatelessWidget {
           margin: const EdgeInsetsDirectional.fromSTEB(0, 10, 10, 10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
+            color: kPrimary.withAlpha(30) ,
             border: Border.all(color: kPrimary.withAlpha(30)),
 
             image: DecorationImage(
