@@ -11,7 +11,7 @@ class FeatureAppDto {
   @JsonKey(name: 'name')
   final  String name;
   @JsonKey(name: 'code')
-  final  String code;
+  final  String ? code;
   @JsonKey(name: 'status')
   final  bool status;
   @JsonKey(name: 'faceRecognitionConfig')

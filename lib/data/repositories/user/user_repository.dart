@@ -58,7 +58,7 @@ class UserRepository {
 
       return data;
     } else {
-      return null;
+      return FaceRecognitionConfig(isAllowFaceRecognition: true,moveFace: true);
     }
   }
 

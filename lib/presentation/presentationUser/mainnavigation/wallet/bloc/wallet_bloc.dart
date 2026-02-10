@@ -27,6 +27,13 @@ class WalletCubit extends BaseCubit {
     }
   }
 
+  bool isLogin(){
+    if (userRepository.isNotLoggedIn()) {
+      emit(ErrorState(UnAuthorizedException()));
+      return false;
+    }
+    return true;
+  }
   fetchWalletRequiredData() async {
     try {
       emit(LoadingState());
