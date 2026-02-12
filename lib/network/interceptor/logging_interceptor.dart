@@ -7,6 +7,9 @@ class LoggingInterceptor extends Interceptor {
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     final curlCommand = _buildCurlCommand(options);
     print('📤 CURL:\n$curlCommand : CurlLogger');
+    print('📤 CURL:\n$curlCommand : CurlLogger');
+    print('Body: ${options.data}');
+    print('Header: ${options.headers}');
     handler.next(options);
   }
 

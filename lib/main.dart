@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:device_preview_plus/device_preview_plus.dart' as device_preview;
+import 'package:dio/dio.dart';
 import 'package:firebase_config/firebase_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -27,6 +28,7 @@ import 'core/services/material_app_config.dart';
 import 'core/services/routes.dart';
 import 'data/datasources/remote/logger/app_loogers.dart';
 import 'data/models/notification_offers/notification_offer_params.dart';
+import 'data/repositories/auth_session/auth_session_manager.dart';
 import 'data/repositories/profile/profile_repository.dart';
 import 'data/repositories/resume/resume_repository.dart';
 import 'data/repositories/user/user_repository.dart';
@@ -45,34 +47,38 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
 
-   await FirebaseBootstrapper.initFirebase(languageCode: '');
-   await FirebaseNotifications.firebaseInitNotifications();
+  await FirebaseBootstrapper.initFirebase(languageCode: '');
+  await FirebaseNotifications.firebaseInitNotifications();
   ChuckerFlutter.showOnRelease = true;
   AppLoggers.setupLogger();
+
   await configureDependencies();
   // Get the available cameras
   // await availableCameras();
-
-  getIt.registerSingleton(HeaderInterceptor(
+  await getIt.registerSingleton(HeaderInterceptor(
     getIt.get<UserRepository>(),
     getIt.get<LocalRepository>(),
     device: getIt.get(),
     loggerRepository: getIt.get(),
+    authSessionManager: getIt.get(),
     isRequiredAuth: true,
   ));
-  getIt.registerSingleton(ClientCreator(
+
+  await getIt.registerSingleton(ClientCreator(
       interceptor: HeaderInterceptor(
-    getIt.get<UserRepository>(),
-    getIt.get<LocalRepository>(),
-    device: getIt.get(),
-    loggerRepository: getIt.get(),
-    isRequiredAuth: true,
-  )).create());
+        getIt.get<UserRepository>(),
+        getIt.get<LocalRepository>(),
+        device: getIt.get(),
+        loggerRepository: getIt.get(),
+        authSessionManager: getIt.get(),
+        isRequiredAuth: true,
+        // authSessionManager: getIt.get(),
+      )).create());
 
 
 
   getIt.registerSingleton(AdminToggleCubit(
-    getIt.get<ProfileRepository>(), getIt.get<UserRepository>(),getIt.get<ProfileRepository>()
+      getIt.get<ProfileRepository>(), getIt.get<UserRepository>(),getIt.get<ProfileRepository>()
   ));
   getIt.registerSingleton(CheckFaceRecogenationCubit(
     getIt.get<ProfileRepository>(), getIt.get<UserRepository>(),
@@ -111,7 +117,7 @@ class MyApp extends StatelessWidget {
       },
       child: Sizer(
         builder: (BuildContext context, Orientation orientation,
-             deviceType) {
+            deviceType) {
           return GetMaterialApp(
             navigatorObservers: [ChuckerFlutter.navigatorObserver],
             theme: MaterialAppConfig().theme,

@@ -1,0 +1,109 @@
+00:00 +0: loading H:/Projects/Flutter/support/cashift/test/header_interceptor_test.dart
+lib/network/source/user_endpoint.dart:88:6: Error: Error when reading 'lib/network/source/user_endpoint.g.dart': The system cannot find the file specified.
+
+part 'user_endpoint.g.dart';
+     ^
+lib/data/datasources/local/init_floor_database.dart:10:6: Error: Error when reading 'lib/data/datasources/local/init_floor_database.g.dart': The system cannot find the file specified.
+
+part 'init_floor_database.g.dart'; // the generated code will be there
+     ^
+lib/network/source/admin_endpoint.dart:81:6: Error: Error when reading 'lib/network/source/admin_endpoint.g.dart': The system cannot find the file specified.
+
+part 'admin_endpoint.g.dart';
+     ^
+lib/network/source/configuration_endpoint.dart:9:6: Error: Error when reading 'lib/network/source/configuration_endpoint.g.dart': The system cannot find the file specified.
+
+part 'configuration_endpoint.g.dart';
+     ^
+lib/network/source/user_endpoint.dart:88:6: Error: Can't use 'lib/network/source/user_endpoint.g.dart' as a part, because it has no 'part of' declaration.
+part 'user_endpoint.g.dart';
+     ^
+lib/data/datasources/local/init_floor_database.dart:10:6: Error: Can't use 'lib/data/datasources/local/init_floor_database.g.dart' as a part, because it has no 'part of' declaration.
+part 'init_floor_database.g.dart'; // the generated code will be there
+     ^
+lib/network/source/admin_endpoint.dart:81:6: Error: Can't use 'lib/network/source/admin_endpoint.g.dart' as a part, because it has no 'part of' declaration.
+part 'admin_endpoint.g.dart';
+     ^
+lib/network/source/configuration_endpoint.dart:9:6: Error: Can't use 'lib/network/source/configuration_endpoint.g.dart' as a part, because it has no 'part of' declaration.
+part 'configuration_endpoint.g.dart';
+     ^
+lib/network/source/user_endpoint.dart:94:35: Error: Couldn't find constructor '_UserEndpoint'.
+  factory UserEndpoint(Dio dio) = _UserEndpoint;
+                                  ^
+lib/network/source/user_endpoint.dart:94:35: Error: Redirection constructor target not found: '_UserEndpoint'
+  factory UserEndpoint(Dio dio) = _UserEndpoint;
+                                  ^
+lib/network/source/admin_endpoint.dart:87:36: Error: Couldn't find constructor '_AdminEndpoint'.
+  factory AdminEndpoint(Dio dio) = _AdminEndpoint;
+                                   ^
+lib/network/source/admin_endpoint.dart:87:36: Error: Redirection constructor target not found: '_AdminEndpoint'
+  factory AdminEndpoint(Dio dio) = _AdminEndpoint;
+                                   ^
+lib/network/source/configuration_endpoint.dart:15:44: Error: Couldn't find constructor '_ConfigurationEndpoint'.
+  factory ConfigurationEndpoint(Dio dio) = _ConfigurationEndpoint;
+                                           ^
+lib/network/source/configuration_endpoint.dart:15:44: Error: Redirection constructor target not found: '_ConfigurationEndpoint'
+  factory ConfigurationEndpoint(Dio dio) = _ConfigurationEndpoint;
+                                           ^
+/C:/Users/harbe/fvm/versions/3.29.0/packages/flutter/lib/src/semantics/semantics.dart:3062:7: Error: No named parameter with the name 'elevation'.
+      elevation: data.elevation,
+      ^^^^^^^^^
+lib/data/datasources/local/init_floor_database.dart:17:28: Error: Undefined name '$FloorInitFloorDatabase'.
+    final database = await $FloorInitFloorDatabase.databaseBuilder('offline_database.db').build();
+                           ^^^^^^^^^^^^^^^^^^^^^^^
+00:00 +0 -1: loading H:/Projects/Flutter/support/cashift/test/header_interceptor_test.dart [E]
+  Failed to load "H:/Projects/Flutter/support/cashift/test/header_interceptor_test.dart":
+  Compilation failed for testPath=H:/Projects/Flutter/support/cashift/test/header_interceptor_test.dart: lib/network/source/user_endpoint.dart:88:6: Error: Error when reading 'lib/network/source/user_endpoint.g.dart': The system cannot find the file specified.
+  
+  part 'user_endpoint.g.dart';
+       ^
+  lib/data/datasources/local/init_floor_database.dart:10:6: Error: Error when reading 'lib/data/datasources/local/init_floor_database.g.dart': The system cannot find the file specified.
+  
+  part 'init_floor_database.g.dart'; // the generated code will be there
+       ^
+  lib/network/source/admin_endpoint.dart:81:6: Error: Error when reading 'lib/network/source/admin_endpoint.g.dart': The system cannot find the file specified.
+  
+  part 'admin_endpoint.g.dart';
+       ^
+  lib/network/source/configuration_endpoint.dart:9:6: Error: Error when reading 'lib/network/source/configuration_endpoint.g.dart': The system cannot find the file specified.
+  
+  part 'configuration_endpoint.g.dart';
+       ^
+  lib/network/source/user_endpoint.dart:88:6: Error: Can't use 'lib/network/source/user_endpoint.g.dart' as a part, because it has no 'part of' declaration.
+  part 'user_endpoint.g.dart';
+       ^
+  lib/data/datasources/local/init_floor_database.dart:10:6: Error: Can't use 'lib/data/datasources/local/init_floor_database.g.dart' as a part, because it has no 'part of' declaration.
+  part 'init_floor_database.g.dart'; // the generated code will be there
+       ^
+  lib/network/source/admin_endpoint.dart:81:6: Error: Can't use 'lib/network/source/admin_endpoint.g.dart' as a part, because it has no 'part of' declaration.
+  part 'admin_endpoint.g.dart';
+       ^
+  lib/network/source/configuration_endpoint.dart:9:6: Error: Can't use 'lib/network/source/configuration_endpoint.g.dart' as a part, because it has no 'part of' declaration.
+  part 'configuration_endpoint.g.dart';
+       ^
+  lib/network/source/user_endpoint.dart:94:35: Error: Couldn't find constructor '_UserEndpoint'.
+    factory UserEndpoint(Dio dio) = _UserEndpoint;
+                                    ^
+  lib/network/source/user_endpoint.dart:94:35: Error: Redirection constructor target not found: '_UserEndpoint'
+    factory UserEndpoint(Dio dio) = _UserEndpoint;
+                                    ^
+  lib/network/source/admin_endpoint.dart:87:36: Error: Couldn't find constructor '_AdminEndpoint'.
+    factory AdminEndpoint(Dio dio) = _AdminEndpoint;
+                                     ^
+  lib/network/source/admin_endpoint.dart:87:36: Error: Redirection constructor target not found: '_AdminEndpoint'
+    factory AdminEndpoint(Dio dio) = _AdminEndpoint;
+                                     ^
+  lib/network/source/configuration_endpoint.dart:15:44: Error: Couldn't find constructor '_ConfigurationEndpoint'.
+    factory ConfigurationEndpoint(Dio dio) = _ConfigurationEndpoint;
+                                             ^
+  lib/network/source/configuration_endpoint.dart:15:44: Error: Redirection constructor target not found: '_ConfigurationEndpoint'
+    factory ConfigurationEndpoint(Dio dio) = _ConfigurationEndpoint;
+                                             ^
+  /C:/Users/harbe/fvm/versions/3.29.0/packages/flutter/lib/src/semantics/semantics.dart:3062:7: Error: No named parameter with the name 'elevation'.
+        elevation: data.elevation,
+        ^^^^^^^^^
+  lib/data/datasources/local/init_floor_database.dart:17:28: Error: Undefined name '$FloorInitFloorDatabase'.
+      final database = await $FloorInitFloorDatabase.databaseBuilder('offline_database.db').build();
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  .
+00:00 +0 -1: Some tests failed.

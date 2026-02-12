@@ -1,11 +1,11 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=E:\flutter_versions\flutter_windows_3.29.0-stable\flutter"
-export "FLUTTER_APPLICATION_PATH=E:\Working-Apps\chashift-projects\cashiftNew"
+export "FLUTTER_ROOT=C:\Users\harbe\fvm\versions\3.29.0"
+export "FLUTTER_APPLICATION_PATH=H:\Projects\Flutter\support\cashift"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
-export "FLUTTER_BUILD_NAME=1.4.9"
-export "FLUTTER_BUILD_NUMBER=116"
+export "FLUTTER_BUILD_NAME=1.5.0"
+export "FLUTTER_BUILD_NUMBER=117"
 export "DART_OBFUSCATION=false"
 export "TRACK_WIDGET_CREATION=true"
 export "TREE_SHAKE_ICONS=false"

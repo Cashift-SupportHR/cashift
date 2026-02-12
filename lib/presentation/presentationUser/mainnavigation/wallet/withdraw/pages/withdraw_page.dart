@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:shiftapp/main_index.dart';
 
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
+import '../../../../../../data/datasources/remote/api_exception.dart';
 import '../../../../../../domain/entities/bankaccount/with_draw_params.dart';
 import '../../../../../../domain/entities/wallet/wallet_balance_item.dart';
 import '../../../../../../domain/entities/wallet/withdraw_method.dart';
@@ -12,24 +14,30 @@ import '../bloc/initialize_withdraw.dart';
 import '../bloc/withdraw_cubit.dart';
 import 'withdraw_screen.dart';
 
-
 class WithdrawPageArgs {
   final bool withDrawByMethod;
   final WithdrawMethod? method;
   final WalletBalanceItem? company;
 
   WithdrawPageArgs({required this.withDrawByMethod, this.method, this.company})
-      : assert(withDrawByMethod == true || method == null,
-            'must included methodCode'),
-        assert(method == null || company == null,
-            'can not provide both company id and method code');
+    : assert(
+        withDrawByMethod == true || method == null,
+        'must included methodCode',
+      ),
+      assert(
+        method == null || company == null,
+        'can not provide both company id and method code',
+      );
 }
 
-
 class WithdrawPage extends BaseBlocWidget<InitializedWithdraw, WithdrawCubit> {
-   static Future push({required BuildContext context, required WithdrawPageArgs args}) {
+  static Future push({
+    required BuildContext context,
+    required WithdrawPageArgs args,
+  }) {
     return Navigator.pushNamed(context, Routes.withdrawPage, arguments: args);
   }
+
   @override
   bool initializeByKoin() {
     return false;
@@ -37,7 +45,6 @@ class WithdrawPage extends BaseBlocWidget<InitializedWithdraw, WithdrawCubit> {
 
   @override
   Widget buildWidget(BuildContext context, InitializedWithdraw state) {
-
     return WithdrawScreen(
       state: state,
       args: pageArgs(context)!,
@@ -72,41 +79,51 @@ class WithdrawPage extends BaseBlocWidget<InitializedWithdraw, WithdrawCubit> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
-
     final args = pageArgs(context)!;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kPrimary,
         elevation: 0,
-        centerTitle:true ,
-        title:  Text(
-          args .withDrawByMethod
+        centerTitle: true,
+        title: Text(
+          args.withDrawByMethod
               ? '${strings.withdraw_through} '
-              '(${args.method!.name})'
+                  '(${args.method!.name})'
               : strings.withdraw,
           style: kTextMedium.copyWith(color: kWhiteF2),
         ),
       ),
-      body:buildConsumer(context) ,
+      body: buildConsumer(context),
     );
   }
+
   WithdrawPageArgs? pageArgs(BuildContext context) =>
       getArguments<WithdrawPageArgs>(context);
 
   @override
   void onRequestSuccess(String? message) {
-    showSuccessMessage(message!,onDismiss: (){
-      Navigator.pop(context,true);
-    });
+    showSuccessMessage(
+      message!,
+      onDismiss: () {
+        Navigator.pop(context, true);
+      },
+    );
   }
 
   @override
   void onRequestFail(Object error) {
-    Navigator.pop(context, true);
-    Navigator.pop(context, true);
+    // to dismiss bottom sheet
+    Navigator.pop(context);
     handleErrorDialog(error, context);
+  }
+
+  @override
+  void onFailDismissed(ApiException error) {
+    // to dismiss dialog
+    Navigator.pop(context);
+    // Back to wallet page
+    Navigator.pop(context, true);
   }
 }

@@ -67,6 +67,8 @@ import '../../../data/repositories/advancedFilter/advanced_filter_repository.dar
     as _i146;
 import '../../../data/repositories/attendance/attendance_repository.dart'
     as _i339;
+import '../../../data/repositories/auth_session/auth_session_manager.dart'
+    as _i397;
 import '../../../data/repositories/bail_requests/bail_requests_repository.dart'
     as _i454;
 import '../../../data/repositories/bank/wallet_repository.dart' as _i536;
@@ -621,9 +623,6 @@ Future<_i174.GetIt> $initGetIt(
   );
   final injectionModule = _$InjectionModule();
   gh.factory<_i560.DeviceInfoRepository>(() => _i560.DeviceInfoRepository());
-  gh.factory<_i810.FilesPreviewCubit>(() => _i810.FilesPreviewCubit());
-  gh.factory<_i249.MapPickerAPI>(() => _i249.MapPickerAPI());
-  gh.factory<_i616.CollectionDataCubit>(() => _i616.CollectionDataCubit());
   gh.factory<_i222.DrawPolygonWithMarkersCubit>(
       () => _i222.DrawPolygonWithMarkersCubit());
   await gh.factoryAsync<_i460.SharedPreferences>(
@@ -634,15 +633,18 @@ Future<_i174.GetIt> $initGetIt(
     () => injectionModule.deviceInfo,
     preResolve: true,
   );
+  gh.factory<_i810.FilesPreviewCubit>(() => _i810.FilesPreviewCubit());
+  gh.factory<_i249.MapPickerAPI>(() => _i249.MapPickerAPI());
+  gh.factory<_i616.CollectionDataCubit>(() => _i616.CollectionDataCubit());
   gh.factory<_i735.MapPickerRepository>(
       () => _i735.MapPickerRepository(gh<_i249.MapPickerAPI>()));
   gh.factory<_i1033.LocalRepository>(
       () => _i1033.LocalRepository(preferences: gh<_i460.SharedPreferences>()));
+  gh.factory<_i903.LoggerAPI>(() => _i903.LoggerAPI(gh<_i361.Dio>()));
+  gh.factory<_i281.AdminEndpoint>(() => _i281.AdminEndpoint(gh<_i361.Dio>()));
   gh.factory<_i307.ConfigurationEndpoint>(
       () => _i307.ConfigurationEndpoint(gh<_i361.Dio>()));
   gh.factory<_i1029.UserEndpoint>(() => _i1029.UserEndpoint(gh<_i361.Dio>()));
-  gh.factory<_i281.AdminEndpoint>(() => _i281.AdminEndpoint(gh<_i361.Dio>()));
-  gh.factory<_i903.LoggerAPI>(() => _i903.LoggerAPI(gh<_i361.Dio>()));
   gh.factory<_i66.MapPickerCubit>(
       () => _i66.MapPickerCubit(gh<_i735.MapPickerRepository>()));
   gh.factory<_i870.TodayOpportunityApiProvider>(
@@ -660,59 +662,59 @@ Future<_i174.GetIt> $initGetIt(
       () => _i376.ManaDeliverAPI(api: gh<_i1029.UserEndpoint>()));
   gh.factory<_i565.RequestsUserAPI>(
       () => _i565.RequestsUserAPI(api: gh<_i1029.UserEndpoint>()));
-  gh.factory<_i823.AttendanceApi>(
-      () => _i823.AttendanceApi(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i70.FavoriteProjectsApi>(
-      () => _i70.FavoriteProjectsApi(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i581.HomeAPI>(() => _i581.HomeAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i713.SalaryDefinitionAPI>(
-      () => _i713.SalaryDefinitionAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i159.WorkerWorkPlacesAPI>(
-      () => _i159.WorkerWorkPlacesAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i65.BankAPI>(() => _i65.BankAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i536.BailRequestsAPI>(
-      () => _i536.BailRequestsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i767.JobOffersAPI>(
-      () => _i767.JobOffersAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i40.ResumeAPI>(() => _i40.ResumeAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i660.TermsAPI>(() => _i660.TermsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i9.CollectCashAPI>(
-      () => _i9.CollectCashAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i420.AbsenceNoticeAPI>(
+      () => _i420.AbsenceNoticeAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i882.ActivityLogAPI>(
       () => _i882.ActivityLogAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i600.AddAddressAPI>(
       () => _i600.AddAddressAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i444.ProfileAPI>(
-      () => _i444.ProfileAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i420.AbsenceNoticeAPI>(
-      () => _i420.AbsenceNoticeAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i341.WalletAPI>(() => _i341.WalletAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i215.EvaluationApi>(
-      () => _i215.EvaluationApi(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i342.NotificationOffersAPI>(
-      () => _i342.NotificationOffersAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i825.ServiceAPI>(
-      () => _i825.ServiceAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i674.LoansRequestAPI>(
-      () => _i674.LoansRequestAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i20.AdvancedFilterAPI>(
       () => _i20.AdvancedFilterAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i1021.EmployeesCertificatesAPI>(
-      () => _i1021.EmployeesCertificatesAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i408.TransactionsAPI>(
-      () => _i408.TransactionsAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i350.WorkingDocumentAPI>(
-      () => _i350.WorkingDocumentAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i809.PledgesAndGeneralizationAPI>(
-      () => _i809.PledgesAndGeneralizationAPI(gh<_i1029.UserEndpoint>()));
-  gh.factory<_i193.WorkHazardsAPI>(
-      () => _i193.WorkHazardsAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i823.AttendanceApi>(
+      () => _i823.AttendanceApi(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i536.BailRequestsAPI>(
+      () => _i536.BailRequestsAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i65.BankAPI>(() => _i65.BankAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i9.CollectCashAPI>(
+      () => _i9.CollectCashAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i215.EvaluationApi>(
+      () => _i215.EvaluationApi(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i70.FavoriteProjectsApi>(
+      () => _i70.FavoriteProjectsApi(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i581.HomeAPI>(() => _i581.HomeAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i767.JobOffersAPI>(
+      () => _i767.JobOffersAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i674.LoansRequestAPI>(
+      () => _i674.LoansRequestAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i342.NotificationOffersAPI>(
+      () => _i342.NotificationOffersAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i444.ProfileAPI>(
+      () => _i444.ProfileAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i40.ResumeAPI>(() => _i40.ResumeAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i713.SalaryDefinitionAPI>(
+      () => _i713.SalaryDefinitionAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i825.ServiceAPI>(
+      () => _i825.ServiceAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i660.TermsAPI>(() => _i660.TermsAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i341.WalletAPI>(() => _i341.WalletAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i159.WorkerWorkPlacesAPI>(
+      () => _i159.WorkerWorkPlacesAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i425.AttendanceAndDepartureNotificationsAPI>(() =>
       _i425.AttendanceAndDepartureNotificationsAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i1021.EmployeesCertificatesAPI>(
+      () => _i1021.EmployeesCertificatesAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i809.PledgesAndGeneralizationAPI>(
+      () => _i809.PledgesAndGeneralizationAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i408.TransactionsAPI>(
+      () => _i408.TransactionsAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i199.ReceiveVehiclesAPI>(
       () => _i199.ReceiveVehiclesAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i771.ViolationsUserAPI>(
       () => _i771.ViolationsUserAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i193.WorkHazardsAPI>(
+      () => _i193.WorkHazardsAPI(gh<_i1029.UserEndpoint>()));
+  gh.factory<_i350.WorkingDocumentAPI>(
+      () => _i350.WorkingDocumentAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i418.ChashiftLonsAPI>(
       () => _i418.ChashiftLonsAPI(gh<_i1029.UserEndpoint>()));
   gh.factory<_i694.RequestsUserRepository>(
@@ -729,58 +731,58 @@ Future<_i174.GetIt> $initGetIt(
       () => _i304.CollectCashRepository(gh<_i9.CollectCashAPI>()));
   gh.factory<_i52.AbsenceNoticeRepository>(
       () => _i52.AbsenceNoticeRepository(gh<_i420.AbsenceNoticeAPI>()));
-  gh.factory<_i393.FocusPointsAPI>(
-      () => _i393.FocusPointsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i650.VehiclesZoneAPI>(
-      () => _i650.VehiclesZoneAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i680.ClassificationAPI>(
-      () => _i680.ClassificationAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i618.MaintenanceBreakdownsAPI>(
-      () => _i618.MaintenanceBreakdownsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i9.TrackAttendanceDepartureAPI>(
-      () => _i9.TrackAttendanceDepartureAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i432.GasStationsAPI>(
-      () => _i432.GasStationsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i1070.PunishmentsAPI>(
-      () => _i1070.PunishmentsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i164.UsersRequestsAPI>(
-      () => _i164.UsersRequestsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i805.TermandConditionAPI>(
-      () => _i805.TermandConditionAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i395.CashiftersLoansAPI>(
-      () => _i395.CashiftersLoansAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i93.UsersManagementAPI>(
-      () => _i93.UsersManagementAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i685.EmployeeMapAPI>(
-      () => _i685.EmployeeMapAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i430.AddOpportunityAPI>(
+      () => _i430.AddOpportunityAPI(api: gh<_i281.AdminEndpoint>()));
   gh.factory<_i320.AdminWalletAPI>(
       () => _i320.AdminWalletAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i1029.EmploymentManagementAPI>(
-      () => _i1029.EmploymentManagementAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i886.ReviewOpportunitiesApi>(
-      () => _i886.ReviewOpportunitiesApi(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i949.EmploymentOfficialsAPI>(
-      () => _i949.EmploymentOfficialsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i740.GeneralViolationsAPI>(
-      () => _i740.GeneralViolationsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i474.VehiclesAPI>(
-      () => _i474.VehiclesAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i650.VehiclesZoneAPI>(
+      () => _i650.VehiclesZoneAPI(api: gh<_i281.AdminEndpoint>()));
   gh.factory<_i615.AttendanceNotificationsReportsAPI>(() =>
       _i615.AttendanceNotificationsReportsAPI(api: gh<_i281.AdminEndpoint>()));
   gh.factory<_i586.BanEmployeesAPI>(
       () => _i586.BanEmployeesAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i430.AddOpportunityAPI>(
-      () => _i430.AddOpportunityAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i533.ProjectsManagementAPI>(
-      () => _i533.ProjectsManagementAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i474.JobUniformAPI>(
-      () => _i474.JobUniformAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i816.NotificationsAPI>(
-      () => _i816.NotificationsAPI(api: gh<_i281.AdminEndpoint>()));
-  gh.factory<_i129.JobRequirementsAPI>(
-      () => _i129.JobRequirementsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i395.CashiftersLoansAPI>(
+      () => _i395.CashiftersLoansAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i680.ClassificationAPI>(
+      () => _i680.ClassificationAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i685.EmployeeMapAPI>(
+      () => _i685.EmployeeMapAPI(api: gh<_i281.AdminEndpoint>()));
   gh.factory<_i717.EmployeesAPI>(
       () => _i717.EmployeesAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i1029.EmploymentManagementAPI>(
+      () => _i1029.EmploymentManagementAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i949.EmploymentOfficialsAPI>(
+      () => _i949.EmploymentOfficialsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i393.FocusPointsAPI>(
+      () => _i393.FocusPointsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i432.GasStationsAPI>(
+      () => _i432.GasStationsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i740.GeneralViolationsAPI>(
+      () => _i740.GeneralViolationsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i129.JobRequirementsAPI>(
+      () => _i129.JobRequirementsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i474.JobUniformAPI>(
+      () => _i474.JobUniformAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i618.MaintenanceBreakdownsAPI>(
+      () => _i618.MaintenanceBreakdownsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i816.NotificationsAPI>(
+      () => _i816.NotificationsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i533.ProjectsManagementAPI>(
+      () => _i533.ProjectsManagementAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i1070.PunishmentsAPI>(
+      () => _i1070.PunishmentsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i886.ReviewOpportunitiesApi>(
+      () => _i886.ReviewOpportunitiesApi(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i805.TermandConditionAPI>(
+      () => _i805.TermandConditionAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i9.TrackAttendanceDepartureAPI>(
+      () => _i9.TrackAttendanceDepartureAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i93.UsersManagementAPI>(
+      () => _i93.UsersManagementAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i164.UsersRequestsAPI>(
+      () => _i164.UsersRequestsAPI(api: gh<_i281.AdminEndpoint>()));
+  gh.factory<_i474.VehiclesAPI>(
+      () => _i474.VehiclesAPI(api: gh<_i281.AdminEndpoint>()));
   gh.factory<_i774.MaintenanceBreakdownsRepository>(() =>
       _i774.MaintenanceBreakdownsRepository(
           gh<_i618.MaintenanceBreakdownsAPI>()));
@@ -812,6 +814,7 @@ Future<_i174.GetIt> $initGetIt(
       () => _i1007.WorkerWorkPlacesRepository(gh<_i159.WorkerWorkPlacesAPI>()));
   gh.factory<_i1061.FocusPointsRepository>(
       () => _i1061.FocusPointsRepository(gh<_i393.FocusPointsAPI>()));
+  gh.factory<_i397.AuthSessionManager>(() => _i397.AuthSessionManager());
   gh.factory<_i7.VerificationBloc>(
       () => _i7.VerificationBloc(gh<_i633.AuthRepository>()));
   gh.factory<_i431.AddAddressRepository>(
@@ -823,11 +826,11 @@ Future<_i174.GetIt> $initGetIt(
   gh.factory<_i547.ActionMaintenanceBreakdownsCubit>(() =>
       _i547.ActionMaintenanceBreakdownsCubit(
           gh<_i774.MaintenanceBreakdownsRepository>()));
-  gh.factory<_i899.MaintenanceBreakdownsCubit>(() =>
-      _i899.MaintenanceBreakdownsCubit(
-          gh<_i774.MaintenanceBreakdownsRepository>()));
   gh.factory<_i576.AddMaintenanceBreakdownsCubit>(() =>
       _i576.AddMaintenanceBreakdownsCubit(
+          gh<_i774.MaintenanceBreakdownsRepository>()));
+  gh.factory<_i899.MaintenanceBreakdownsCubit>(() =>
+      _i899.MaintenanceBreakdownsCubit(
           gh<_i774.MaintenanceBreakdownsRepository>()));
   gh.factory<_i740.EmployeeMapRepository>(
       () => _i740.EmployeeMapRepository(gh<_i685.EmployeeMapAPI>()));
@@ -846,11 +849,11 @@ Future<_i174.GetIt> $initGetIt(
       () => _i418.ManaDeliverRepository(gh<_i376.ManaDeliverAPI>()));
   gh.factory<_i497.JobRequirementsRepository>(
       () => _i497.JobRequirementsRepository(gh<_i129.JobRequirementsAPI>()));
-  gh.factory<_i702.ShiftPaymentCubitCubit>(() =>
-      _i702.ShiftPaymentCubitCubit(gh<_i137.ReviewOpportunitiesRepository>()));
   gh.factory<_i560.ReviewOpportunitiesCubit>(() =>
       _i560.ReviewOpportunitiesCubit(
           gh<_i566.ReviewOpportunitiesRepository>()));
+  gh.factory<_i702.ShiftPaymentCubitCubit>(() =>
+      _i702.ShiftPaymentCubitCubit(gh<_i137.ReviewOpportunitiesRepository>()));
   gh.factory<_i194.AdminWalletRepository>(
       () => _i194.AdminWalletRepository(gh<_i320.AdminWalletAPI>()));
   gh.factory<_i145.ActivityLogCubit>(
@@ -866,10 +869,10 @@ Future<_i174.GetIt> $initGetIt(
           gh<_i291.PledgesAndGeneralizationRepository>()));
   gh.factory<_i927.AddFileRequestsUserCubit>(
       () => _i927.AddFileRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
-  gh.factory<_i384.ConfirmRequestsUserCubit>(
-      () => _i384.ConfirmRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
   gh.factory<_i310.AddRequestsUserCubit>(
       () => _i310.AddRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
+  gh.factory<_i384.ConfirmRequestsUserCubit>(
+      () => _i384.ConfirmRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
   gh.factory<_i108.TermCondationRequestsUserCubit>(() =>
       _i108.TermCondationRequestsUserCubit(gh<_i694.RequestsUserRepository>()));
   gh.factory<_i691.RequestsUserCubit>(
@@ -898,13 +901,13 @@ Future<_i174.GetIt> $initGetIt(
       () => _i828.ResendCodeCubit(gh<_i418.ManaDeliverRepository>()));
   gh.factory<_i1005.AddOpportunityRepository>(
       () => _i1005.AddOpportunityRepository(gh<_i430.AddOpportunityAPI>()));
+  gh.factory<_i285.LicenseDataCubit>(
+      () => _i285.LicenseDataCubit(gh<_i343.LogisticsRequestRepository>()));
   gh.factory<_i145.VehicleTypeCubit>(
       () => _i145.VehicleTypeCubit(gh<_i343.LogisticsRequestRepository>()));
   gh.factory<_i1023.TermsAndConditionsLogisticsCubit>(() =>
       _i1023.TermsAndConditionsLogisticsCubit(
           gh<_i343.LogisticsRequestRepository>()));
-  gh.factory<_i285.LicenseDataCubit>(
-      () => _i285.LicenseDataCubit(gh<_i343.LogisticsRequestRepository>()));
   gh.factory<_i367.TermandConditionRepository>(
       () => _i367.TermandConditionRepository(gh<_i805.TermandConditionAPI>()));
   gh.factory<_i366.WorkingDocumentRepository>(
@@ -915,10 +918,10 @@ Future<_i174.GetIt> $initGetIt(
       () => _i760.EmployeesRepository(gh<_i717.EmployeesAPI>()));
   gh.factory<_i523.BailRequestsCubit>(
       () => _i523.BailRequestsCubit(gh<_i454.BailRequestsRepository>()));
-  gh.factory<_i535.VehicleReceiveRequestsCubit>(
-      () => _i535.VehicleReceiveRequestsCubit(gh<_i380.VehiclesRepository>()));
   gh.factory<_i633.ActionVehicleReceiveRequestCubit>(() =>
       _i633.ActionVehicleReceiveRequestCubit(gh<_i380.VehiclesRepository>()));
+  gh.factory<_i535.VehicleReceiveRequestsCubit>(
+      () => _i535.VehicleReceiveRequestsCubit(gh<_i380.VehiclesRepository>()));
   gh.factory<_i703.VehicleViolationDetailsCubit>(
       () => _i703.VehicleViolationDetailsCubit(gh<_i380.VehiclesRepository>()));
   gh.factory<_i883.TermsRepository>(
@@ -947,29 +950,29 @@ Future<_i174.GetIt> $initGetIt(
           gh<_i425.AttendanceAndDepartureNotificationsAPI>()));
   gh.factory<_i883.JobOffersRepository>(
       () => _i883.JobOffersRepository(gh<_i767.JobOffersAPI>()));
-  gh.factory<_i712.StartTourCubit>(
-      () => _i712.StartTourCubit(gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i414.TourHistoryCubit>(
-      () => _i414.TourHistoryCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i841.ChangeOperatingPlaneCubit>(() =>
       _i841.ChangeOperatingPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i418.TourHistoryCubit>(
-      () => _i418.TourHistoryCubit(gh<_i61.ReceiveVehiclesRepository>()));
+  gh.factory<_i414.TourHistoryCubit>(
+      () => _i414.TourHistoryCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i285.FactoryViolationsPlaneCubit>(() =>
       _i285.FactoryViolationsPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i649.CurrentTourMapCubit>(
-      () => _i649.CurrentTourMapCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i206.GasStationsPlaneCubit>(
       () => _i206.GasStationsPlaneCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i190.MaintenanceBreakdownsPlaneCubit>(() =>
       _i190.MaintenanceBreakdownsPlaneCubit(
           gh<_i61.ReceiveVehiclesRepository>()));
-  gh.factory<_i13.VehiclesCustodiesCubit>(
-      () => _i13.VehiclesCustodiesCubit(gh<_i61.ReceiveVehiclesRepository>()));
+  gh.factory<_i418.TourHistoryCubit>(
+      () => _i418.TourHistoryCubit(gh<_i61.ReceiveVehiclesRepository>()));
+  gh.factory<_i649.CurrentTourMapCubit>(
+      () => _i649.CurrentTourMapCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i708.VehiclesComponentsCubit>(() =>
       _i708.VehiclesComponentsCubit(gh<_i61.ReceiveVehiclesRepository>()));
+  gh.factory<_i13.VehiclesCustodiesCubit>(
+      () => _i13.VehiclesCustodiesCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i158.ReceiveVehiclesCubit>(
       () => _i158.ReceiveVehiclesCubit(gh<_i61.ReceiveVehiclesRepository>()));
+  gh.factory<_i712.StartTourCubit>(
+      () => _i712.StartTourCubit(gh<_i61.ReceiveVehiclesRepository>()));
   gh.factory<_i1020.PunishmentsCubit>(
       () => _i1020.PunishmentsCubit(gh<_i690.PunishmentsRepository>()));
   gh.factory<_i688.EvaluationCubit>(
@@ -981,10 +984,10 @@ Future<_i174.GetIt> $initGetIt(
             gh<_i61.ReceiveVehiclesRepository>(),
             gh<_i815.VehiclesRepository>(),
           ));
-  gh.factory<_i111.WorkerWorkPlacesCubit>(() =>
-      _i111.WorkerWorkPlacesCubit(gh<_i1007.WorkerWorkPlacesRepository>()));
   gh.factory<_i641.DeliveryAndReceiptCubit>(() =>
       _i641.DeliveryAndReceiptCubit(gh<_i1007.WorkerWorkPlacesRepository>()));
+  gh.factory<_i111.WorkerWorkPlacesCubit>(() =>
+      _i111.WorkerWorkPlacesCubit(gh<_i1007.WorkerWorkPlacesRepository>()));
   gh.factory<_i805.EmploymentManagementRepository>(() =>
       _i805.EmploymentManagementRepository(
           gh<_i1029.EmploymentManagementAPI>()));
@@ -1005,13 +1008,13 @@ Future<_i174.GetIt> $initGetIt(
       ));
   gh.factory<_i605.ProjectsManagementRepository>(() =>
       _i605.ProjectsManagementRepository(gh<_i533.ProjectsManagementAPI>()));
-  gh.factory<_i919.RequiredTasksUseCase>(
-      () => _i919.RequiredTasksUseCase(gh<_i883.JobOffersRepository>()));
   gh.factory<_i250.RespondDashboardRequiredActionUseCase>(() =>
       _i250.RespondDashboardRequiredActionUseCase(
           gh<_i883.JobOffersRepository>()));
   gh.factory<_i604.RespondRequiredTaskUseCase>(
       () => _i604.RespondRequiredTaskUseCase(gh<_i883.JobOffersRepository>()));
+  gh.factory<_i919.RequiredTasksUseCase>(
+      () => _i919.RequiredTasksUseCase(gh<_i883.JobOffersRepository>()));
   gh.factory<_i1041.TasksAndResponsibilitiesCubit>(
       () => _i1041.TasksAndResponsibilitiesCubit(
             gh<_i101.TermandConditionRepository>(),
@@ -1068,10 +1071,10 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i146.AdvancedFilterRepository>(),
         gh<_i460.SharedPreferences>(),
       ));
-  gh.factory<_i1059.EmployeesAttendanceCubit>(
-      () => _i1059.EmployeesAttendanceCubit(gh<_i760.EmployeesRepository>()));
   gh.factory<_i549.EmployeesCubit>(
       () => _i549.EmployeesCubit(gh<_i760.EmployeesRepository>()));
+  gh.factory<_i1059.EmployeesAttendanceCubit>(
+      () => _i1059.EmployeesAttendanceCubit(gh<_i760.EmployeesRepository>()));
   gh.factory<_i476.AddSalaryDefinitionRequestCubit>(() =>
       _i476.AddSalaryDefinitionRequestCubit(
           gh<_i445.SalaryDefinitionRepository>()));
@@ -1088,15 +1091,15 @@ Future<_i174.GetIt> $initGetIt(
   gh.factory<_i235.InstallmentPostponementCubit>(() =>
       _i235.InstallmentPostponementCubit(
           gh<_i366.WorkingDocumentRepository>()));
-  gh.factory<_i641.WorkingDocumentCubit>(
-      () => _i641.WorkingDocumentCubit(gh<_i366.WorkingDocumentRepository>()));
-  gh.factory<_i87.PayWithSalaryCubit>(
-      () => _i87.PayWithSalaryCubit(gh<_i366.WorkingDocumentRepository>()));
   gh.factory<_i752.InstallmentWithCashiftCubit>(() =>
       _i752.InstallmentWithCashiftCubit(gh<_i366.WorkingDocumentRepository>()));
+  gh.factory<_i87.PayWithSalaryCubit>(
+      () => _i87.PayWithSalaryCubit(gh<_i366.WorkingDocumentRepository>()));
   gh.factory<_i478.TermsConditionsCertificatePaymentCubit>(() =>
       _i478.TermsConditionsCertificatePaymentCubit(
           gh<_i366.WorkingDocumentRepository>()));
+  gh.factory<_i641.WorkingDocumentCubit>(
+      () => _i641.WorkingDocumentCubit(gh<_i366.WorkingDocumentRepository>()));
   gh.factory<_i580.ServicesCubit>(() => _i580.ServicesCubit(
         gh<_i204.ServiceRepository>(),
         gh<_i1028.UserRepository>(),
@@ -1105,9 +1108,6 @@ Future<_i174.GetIt> $initGetIt(
       _i930.EmploymentOfficialsRepository(gh<_i949.EmploymentOfficialsAPI>()));
   gh.factory<_i584.NotificationsRepository>(
       () => _i584.NotificationsRepository(gh<_i816.NotificationsAPI>()));
-  gh.factory<_i741.GeneralTypesViolationsCubit>(() =>
-      _i741.GeneralTypesViolationsCubit(
-          gh<_i568.GeneralViolationsRepository>()));
   gh.factory<_i398.ActionFollowUpViolationsCubit>(() =>
       _i398.ActionFollowUpViolationsCubit(
           gh<_i1014.GeneralViolationsRepository>()));
@@ -1115,6 +1115,9 @@ Future<_i174.GetIt> $initGetIt(
       _i403.FollowUpViolationsCubit(gh<_i1014.GeneralViolationsRepository>()));
   gh.factory<_i452.GeneralViolationsCubit>(() =>
       _i452.GeneralViolationsCubit(gh<_i568.GeneralViolationsRepository>()));
+  gh.factory<_i741.GeneralTypesViolationsCubit>(() =>
+      _i741.GeneralTypesViolationsCubit(
+          gh<_i568.GeneralViolationsRepository>()));
   gh.factory<_i689.LocationDataCubit>(() => _i689.LocationDataCubit(
         gh<_i343.LogisticsRequestRepository>(),
         gh<_i605.ProjectsManagementRepository>(),
@@ -1124,21 +1127,21 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i563.ResumeRepository>(),
         gh<_i1028.UserRepository>(),
       ));
-  gh.factory<_i123.PeriodPricingCubit>(
-      () => _i123.PeriodPricingCubit(gh<_i686.ProjectsManagementRepository>()));
   gh.factory<_i1006.AdditionalLocationsCubit>(() =>
       _i1006.AdditionalLocationsCubit(
           gh<_i686.ProjectsManagementRepository>()));
+  gh.factory<_i123.PeriodPricingCubit>(
+      () => _i123.PeriodPricingCubit(gh<_i686.ProjectsManagementRepository>()));
   gh.factory<_i377.AddWorkingPeriodCubit>(() =>
       _i377.AddWorkingPeriodCubit(gh<_i686.ProjectsManagementRepository>()));
-  gh.factory<_i318.ProjectSuccessfullyCubit>(() =>
-      _i318.ProjectSuccessfullyCubit(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i78.MapProjectGatesCubit>(() =>
       _i78.MapProjectGatesCubit(gh<_i605.ProjectsManagementRepository>()));
-  gh.factory<_i465.ConfirmAttendanceCubit>(() =>
-      _i465.ConfirmAttendanceCubit(gh<_i604.RespondRequiredTaskUseCase>()));
+  gh.factory<_i318.ProjectSuccessfullyCubit>(() =>
+      _i318.ProjectSuccessfullyCubit(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i699.RequiredTasksCubit>(
       () => _i699.RequiredTasksCubit(gh<_i604.RespondRequiredTaskUseCase>()));
+  gh.factory<_i465.ConfirmAttendanceCubit>(() =>
+      _i465.ConfirmAttendanceCubit(gh<_i604.RespondRequiredTaskUseCase>()));
   gh.factory<_i329.FilterAttendanceNotificationsReportsCubit>(() =>
       _i329.FilterAttendanceNotificationsReportsCubit(
           gh<_i760.EmployeesRepository>()));
@@ -1153,29 +1156,29 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i133.CashiftersLoansRepository>(),
         gh<_i605.ProjectsManagementRepository>(),
       ));
-  gh.factory<_i451.FocusPointCubit>(
-      () => _i451.FocusPointCubit(gh<_i1061.FocusPointsRepository>()));
-  gh.factory<_i62.AddFocusPointTimesCubit>(
-      () => _i62.AddFocusPointTimesCubit(gh<_i250.FocusPointsRepository>()));
   gh.factory<_i827.AddFocusPointDataCubit>(
       () => _i827.AddFocusPointDataCubit(gh<_i250.FocusPointsRepository>()));
+  gh.factory<_i62.AddFocusPointTimesCubit>(
+      () => _i62.AddFocusPointTimesCubit(gh<_i250.FocusPointsRepository>()));
+  gh.factory<_i451.FocusPointCubit>(
+      () => _i451.FocusPointCubit(gh<_i1061.FocusPointsRepository>()));
   gh.factory<_i634.TrackingFocusPointsCubit>(
       () => _i634.TrackingFocusPointsCubit(gh<_i1061.FocusPointsRepository>()));
-  gh.factory<_i551.AddVehicleCameraCubit>(
-      () => _i551.AddVehicleCameraCubit(gh<_i380.VehiclesRepository>()));
-  gh.factory<_i474.VehicleCamerasCubit>(
-      () => _i474.VehicleCamerasCubit(gh<_i815.VehiclesRepository>()));
-  gh.factory<_i268.CameraSearchResultsCubit>(
-      () => _i268.CameraSearchResultsCubit(gh<_i380.VehiclesRepository>()));
-  gh.factory<_i295.VehiclesTrackingCubit>(
-      () => _i295.VehiclesTrackingCubit(gh<_i815.VehiclesRepository>()));
   gh.factory<_i210.AdditionalVehicleSpecificationsCubit>(() =>
       _i210.AdditionalVehicleSpecificationsCubit(
           gh<_i815.VehiclesRepository>()));
-  gh.factory<_i538.VehiclePlateLicenseInfoCubit>(
-      () => _i538.VehiclePlateLicenseInfoCubit(gh<_i815.VehiclesRepository>()));
   gh.factory<_i163.CovenantsVehiclesCubit>(
       () => _i163.CovenantsVehiclesCubit(gh<_i815.VehiclesRepository>()));
+  gh.factory<_i538.VehiclePlateLicenseInfoCubit>(
+      () => _i538.VehiclePlateLicenseInfoCubit(gh<_i815.VehiclesRepository>()));
+  gh.factory<_i551.AddVehicleCameraCubit>(
+      () => _i551.AddVehicleCameraCubit(gh<_i380.VehiclesRepository>()));
+  gh.factory<_i268.CameraSearchResultsCubit>(
+      () => _i268.CameraSearchResultsCubit(gh<_i380.VehiclesRepository>()));
+  gh.factory<_i474.VehicleCamerasCubit>(
+      () => _i474.VehicleCamerasCubit(gh<_i815.VehiclesRepository>()));
+  gh.factory<_i295.VehiclesTrackingCubit>(
+      () => _i295.VehiclesTrackingCubit(gh<_i815.VehiclesRepository>()));
   gh.factory<_i905.VehiclesCubit>(
       () => _i905.VehiclesCubit(gh<_i815.VehiclesRepository>()));
   gh.factory<_i866.AddVehicleViolationCubit>(
@@ -1219,19 +1222,10 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i1035.TodayOpportunityRepository>(),
         gh<_i805.EmploymentManagementRepository>(),
       ));
-  gh.factory<_i227.UserRequestTermsCubit>(
-      () => _i227.UserRequestTermsCubit(gh<_i443.UsersRequestsRepository>()));
   gh.factory<_i933.UsersRequestsCubit>(
       () => _i933.UsersRequestsCubit(gh<_i443.UsersRequestsRepository>()));
-  gh.factory<_i1061.OverviewCubit>(() => _i1061.OverviewCubit(
-        gh<_i883.JobOffersRepository>(),
-        gh<_i1028.UserRepository>(),
-        gh<_i343.LogisticsRequestRepository>(),
-        gh<_i825.ActivityLogRepository>(),
-        gh<_i922.ProfileRepository>(),
-        gh<_i919.RequiredTasksUseCase>(),
-        gh<_i922.ProfileRepository>(),
-      ));
+  gh.factory<_i227.UserRequestTermsCubit>(
+      () => _i227.UserRequestTermsCubit(gh<_i443.UsersRequestsRepository>()));
   gh.factory<_i867.OvertimeAttendanceCubit>(
       () => _i867.OvertimeAttendanceCubit(gh<_i339.AttendanceRepository>()));
   gh.factory<_i453.AddAddressCubit>(() => _i453.AddAddressCubit(
@@ -1251,10 +1245,10 @@ Future<_i174.GetIt> $initGetIt(
       ));
   gh.factory<_i655.EmployeesOpportunitiesCubit>(() =>
       _i655.EmployeesOpportunitiesCubit(gh<_i622.AddOpportunityRepository>()));
-  gh.factory<_i14.QrCodeCubit>(
-      () => _i14.QrCodeCubit(gh<_i563.ResumeRepository>()));
   gh.factory<_i413.CityUseCase>(
       () => _i413.CityUseCase(gh<_i563.ResumeRepository>()));
+  gh.factory<_i14.QrCodeCubit>(
+      () => _i14.QrCodeCubit(gh<_i563.ResumeRepository>()));
   gh.factory<_i844.AddClassificationCubit>(() => _i844.AddClassificationCubit(
         gh<_i968.ClassificationRepository>(),
         gh<_i605.ProjectsManagementRepository>(),
@@ -1395,12 +1389,12 @@ Future<_i174.GetIt> $initGetIt(
         gh<_i883.JobOffersRepository>(),
         gh<_i1028.UserRepository>(),
       ));
-  gh.factory<_i219.ProjectsUseCase>(
-      () => _i219.ProjectsUseCase(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i870.CompaniesUseCase>(
       () => _i870.CompaniesUseCase(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i250.JobsUseCase>(
       () => _i250.JobsUseCase(gh<_i605.ProjectsManagementRepository>()));
+  gh.factory<_i219.ProjectsUseCase>(
+      () => _i219.ProjectsUseCase(gh<_i605.ProjectsManagementRepository>()));
   gh.factory<_i188.ChangeUserPasswordCubit>(() =>
       _i188.ChangeUserPasswordCubit(gh<_i471.UsersManagementRepository>()));
   gh.factory<_i90.ActionVehicleNotificationsCubit>(() =>
