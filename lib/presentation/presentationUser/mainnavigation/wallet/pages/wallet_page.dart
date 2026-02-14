@@ -30,7 +30,7 @@ class WalletPage extends BaseBlocWidget<InitializeWalletState, WalletCubit> {
       child: WalletScreenV2(
         state: state,
         onUpdate: () {
-          loadInitialData(context);
+          bloc.fetchWalletRequiredData();
         },
       ),
     );
