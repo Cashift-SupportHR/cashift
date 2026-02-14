@@ -123,9 +123,9 @@ class HeaderInterceptor extends Interceptor {
     options.headers[keyApiKey] = apiKeyValue;
     options.headers[deviceIdKey] = device.id;
     options.headers[keyContentType] = keyJson;
-    // options.headers[deviceInfoKey] =device.info;
-
-    options.headers['platform'] = Config.platformName;
+    // options.headers[deviceInfoKey] =device.info
+   // options.baseUrl=kTestApiUrl;
+     options.headers['platform'] = Config.platformName;
     options.headers['AppVersion'] = Config.AppVersion;
     options.headers[requestTypeKey] = true;
 

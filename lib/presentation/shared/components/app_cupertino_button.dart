@@ -41,6 +41,7 @@ class AppCupertinoButton extends StatelessWidget {
     return Padding(
       padding: margin != null ? margin! : const EdgeInsets.all(0),
       child: CupertinoButton(
+
         padding: padding ?? const EdgeInsets.all(12),
         borderRadius: radius ?? BorderRadius.circular(20),
 

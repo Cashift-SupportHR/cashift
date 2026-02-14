@@ -27,11 +27,14 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:collection/collection.dart';
 
 import '../../../../../data/datasources/local/constants.dart';
+import '../../../../../data/models/account/cashifter_code_dto.dart';
 import '../../../../../data/models/overview/index.dart';
 import '../../../../../data/models/user_overview/index.dart';
  import '../../../../../domain/entities/required_tasks/index.dart';
   import '../../../../../domain/usecases/tasks_notifications_usecase.dart';
 import '../../../geofence/geo_task.dart';
+import '../../../mana_delivery/data/repositories/mana_delivery_repo.dart';
+import '../../../mana_delivery/domain/entities/delivery_orde.dart';
 import 'overview_state.dart';
 
 part 'overview_events.dart';
@@ -45,6 +48,7 @@ class OverviewBloc extends Bloc<OverviewEvents, CommonState> {
   final ProfileRepository _profileRepository;
   final RequiredTasksUseCase _requiredTasksUseCase;
   final ProfileRepository profileRepository;
+  final ManaDeliverRepository manaDeliverRepository;
   OverviewBloc(
       this._offersRepository,
       this._userRepository,
@@ -52,6 +56,7 @@ class OverviewBloc extends Bloc<OverviewEvents, CommonState> {
       this._profileRepository,
       this._requiredTasksUseCase,
       this.profileRepository,
+      this.manaDeliverRepository,
       )
       : super(UnInitState()){
     on<OverviewEvents>((event, emit) async {
@@ -98,6 +103,8 @@ class OverviewBloc extends Bloc<OverviewEvents, CommonState> {
   StreamState<List<JobOfferDto>> jobVipOffers = StreamStateInitial();
   StreamState<List<InAppRequiredTask>> inAppNotificationStream = StreamStateInitial();
   StreamState<List<JobOfferSlider>> jobOffersSliders = StreamStateInitial();
+  StreamState<List<DeliveryOrderEntity>> deliverOrders = StreamStateInitial();
+  StreamState<CashifterCodeDto> cashifterCodeStream = StreamStateInitial();
 
   clearData() {
     appliedOffers.setData(null);

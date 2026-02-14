@@ -59,6 +59,8 @@ class FetchComponentDataEvent extends OverviewEvents {
             inAppNotificationStream: bloc.inAppNotificationStream,
             /*workingHours: bloc.appliedOffers*/
             jobOffersSliders: bloc.jobOffersSliders,
+              cashifterCodeStream: bloc.cashifterCodeStream,
+            deliveryOrdersStream: bloc.deliverOrders
           );
           bloc.clearData();
            Future.wait<dynamic>(

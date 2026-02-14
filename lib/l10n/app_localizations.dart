@@ -8807,6 +8807,168 @@ abstract class AppLocalizations {
   /// **'حصريا'**
   String get private;
 
+  /// No description provided for @receive_from.
+  ///
+  /// In ar, this message translates to:
+  /// **'استلام من'**
+  String get receive_from;
+
+  /// No description provided for @warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'المستودع'**
+  String get warehouse;
+
+  /// No description provided for @customer.
+  ///
+  /// In ar, this message translates to:
+  /// **'العميل'**
+  String get customer;
+
+  /// No description provided for @delivery_order_for_company.
+  ///
+  /// In ar, this message translates to:
+  /// **'توصيل طلب - شركة مانا'**
+  String get delivery_order_for_company;
+
+  /// No description provided for @expected_arrival_time.
+  ///
+  /// In ar, this message translates to:
+  /// **'الوقت المتوقع للوصول'**
+  String get expected_arrival_time;
+
+  /// No description provided for @deliver_to.
+  ///
+  /// In ar, this message translates to:
+  /// **'تسليم الي'**
+  String get deliver_to;
+
+  /// No description provided for @job_path.
+  ///
+  /// In ar, this message translates to:
+  /// **'مسار العمل'**
+  String get job_path;
+
+  /// No description provided for @go_to_customer.
+  ///
+  /// In ar, this message translates to:
+  /// **'التوجه للعميل'**
+  String get go_to_customer;
+
+  /// No description provided for @receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'كود الاستلام'**
+  String get receive_code;
+
+  /// No description provided for @nearest_warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'أقرب مستودع'**
+  String get nearest_warehouse;
+
+  /// No description provided for @basic_service_fee.
+  ///
+  /// In ar, this message translates to:
+  /// **'سعر الخدمة الأساسي'**
+  String get basic_service_fee;
+
+  /// No description provided for @floor_price.
+  ///
+  /// In ar, this message translates to:
+  /// **'سعر الطابق'**
+  String get floor_price;
+
+  /// No description provided for @final_price.
+  ///
+  /// In ar, this message translates to:
+  /// **'السعر النهائي'**
+  String get final_price;
+
+  /// No description provided for @receive_from_warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'بدأ الاستلام من المستودع'**
+  String get receive_from_warehouse;
+
+  /// No description provided for @details_order.
+  ///
+  /// In ar, this message translates to:
+  /// **'تفاصيل الطلب'**
+  String get details_order;
+
+  /// No description provided for @confirm_delivery.
+  ///
+  /// In ar, this message translates to:
+  /// **'تأكيد التسليم'**
+  String get confirm_delivery;
+
+  /// No description provided for @delivery_code_to_customer.
+  ///
+  /// In ar, this message translates to:
+  /// **'كود التسليم الي العميل'**
+  String get delivery_code_to_customer;
+
+  /// No description provided for @details_delivery_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.'**
+  String get details_delivery_code;
+
+  /// No description provided for @receive_code_from_warehouse.
+  ///
+  /// In ar, this message translates to:
+  /// **'كود الاستلام من المستودع'**
+  String get receive_code_from_warehouse;
+
+  /// No description provided for @number_receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'رقم الكود الاستلام'**
+  String get number_receive_code;
+
+  /// No description provided for @write_receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'اكتب كود الاستلام'**
+  String get write_receive_code;
+
+  /// No description provided for @distance.
+  ///
+  /// In ar, this message translates to:
+  /// **'مسافة'**
+  String get distance;
+
+  /// No description provided for @km.
+  ///
+  /// In ar, this message translates to:
+  /// **'كم'**
+  String get km;
+
+  /// No description provided for @offer_delivery.
+  ///
+  /// In ar, this message translates to:
+  /// **'فرص التوصيل'**
+  String get offer_delivery;
+
+  /// No description provided for @please_accept_terms.
+  ///
+  /// In ar, this message translates to:
+  /// **'الرجاء قبول جميع الشروط'**
+  String get please_accept_terms;
+
+  /// No description provided for @details_receive_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.'**
+  String get details_receive_code;
+
+  /// No description provided for @number_of_nearest_warehouses.
+  ///
+  /// In ar, this message translates to:
+  /// **'  مستودع قريبين لك , حدد أقرب مستودع بينهم : '**
+  String get number_of_nearest_warehouses;
+
   /// No description provided for @face_image_required_proceed.
   ///
   /// In ar, this message translates to:

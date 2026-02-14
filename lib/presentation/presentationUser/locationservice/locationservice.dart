@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
-import 'package:geocoding/geocoding.dart' show Placemark, placemarkFromCoordinates;
+import 'package:geocoding/geocoding.dart'
+    show Placemark, placemarkFromCoordinates;
 import 'package:geolocator/geolocator.dart' as geolocator;
 import 'package:geolocator/geolocator.dart';
 import 'package:location/location.dart';
@@ -11,19 +12,26 @@ import 'package:shiftapp/presentation/presentationUser/locationservice/permissio
 import 'package:shiftapp/presentation/shared/components/app_button.dart';
 import 'package:shiftapp/presentation/shared/components/dialogs_manager.dart';
 
-
 class LocationService {
   static Future<bool> requestLocationPermission(BuildContext context) async {
     Location location = Location();
 
     bool _serviceEnabled;
     PermissionStatus _permissionGranted;
-    location.enableBackgroundMode(enable: true);
+
     _permissionGranted = await location.hasPermission();
     print('_permissionGranted $_permissionGranted');
+
+    // If permission is permanently denied, don't show dialog - just return error
+    if (_permissionGranted == PermissionStatus.deniedForever) {
+      return Future.error(LocationPermissionDeniedException());
+    }
+
+    // Only request permission if it hasn't been asked yet (denied = not asked OR soft-denied)
     if (_permissionGranted == PermissionStatus.denied) {
       _permissionGranted = await location.requestPermission();
-      if (_permissionGranted != PermissionStatus.granted) {
+      if (_permissionGranted != PermissionStatus.granted &&
+          _permissionGranted != PermissionStatus.grantedLimited) {
         return Future.error(LocationPermissionDeniedException());
       }
     }
@@ -32,7 +40,9 @@ class LocationService {
     if (!_serviceEnabled) {
       _serviceEnabled = await location.requestService();
       if (!_serviceEnabled) {
-        return Future.error(const geolocator. LocationServiceDisabledException());
+        return Future.error(
+          const geolocator.LocationServiceDisabledException(),
+        );
       }
     }
     return true;
@@ -72,7 +82,8 @@ class LocationService {
     LocationPermission permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.deniedForever || permission == LocationPermission.denied) {
+      if (permission == LocationPermission.deniedForever ||
+          permission == LocationPermission.denied) {
         return Future.error('Location permissions are denied');
       }
     }
@@ -91,8 +102,10 @@ class LocationService {
         distanceFilter: 2, // Update only if the user moves 10 meters
       ),
     );
-}
-static Future<Stream<LocationData>> startPositionStreamWithoutDetectPermission() async {
+  }
+
+  static Future<Stream<LocationData>>
+  startPositionStreamWithoutDetectPermission() async {
     Location location = Location();
 
     bool _serviceEnabled;
@@ -113,20 +126,40 @@ static Future<Stream<LocationData>> startPositionStreamWithoutDetectPermission()
 
   static void handleFetchLocationException(e, BuildContext context) {
     if (e is LocationPermissionDeniedException) {
-      DialogsManager.showConfirmationAnimatedDialog(context, message: e.toString(), buttonName: context.getStrings().open_app_settings, onConfirm: () {
-        geolocator.Geolocator.openAppSettings();
-      });
+      DialogsManager.showConfirmationAnimatedDialog(
+        context,
+        message: e.toString(),
+        buttonName: context.getStrings().open_app_settings,
+        onConfirm: () {
+          geolocator.Geolocator.openAppSettings();
+        },
+      );
     } else if (e is AppLocationServiceDisabledException) {
-      DialogsManager.showConfirmationAnimatedDialog(context, message: e.toString(), buttonName: context.getStrings().open_location_settings, onConfirm: () {
-        geolocator. Geolocator.openLocationSettings();
-      });
+      DialogsManager.showConfirmationAnimatedDialog(
+        context,
+        message: e.toString(),
+        buttonName: context.getStrings().open_location_settings,
+        onConfirm: () {
+          geolocator.Geolocator.openLocationSettings();
+        },
+      );
     } else {
       DialogsManager.showMessageDialog(context, e.toString(), onClickOk: () {});
     }
   }
 
-  static Future<String> getAddressFromLatLng(double lat, double lng) async{
+  static Future<String> getAddressFromLatLng(double lat, double lng) async {
     List<Placemark> placemarks = await placemarkFromCoordinates(lat, lng);
     return '${placemarks.first.street}, ${placemarks.first.administrativeArea} ${placemarks.first.subAdministrativeArea}';
+  }
+
+  static Future<bool> isPermissionGranted() async {
+    final permission = await Geolocator.checkPermission();
+    return permission == LocationPermission.always ||
+        permission == LocationPermission.whileInUse;
+  }
+
+  static Future<void> openAppSettings() async {
+    await Geolocator.openAppSettings();
   }
 }

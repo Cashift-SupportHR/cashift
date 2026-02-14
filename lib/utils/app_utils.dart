@@ -12,6 +12,7 @@ import 'package:shiftapp/config.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:store_redirect/store_redirect.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:share_plus/share_plus.dart';
 import '../domain/entities/shared/date_formatter.dart';
 import '../presentation/shared/components/datepicker/package_info.dart';
 
@@ -294,6 +295,19 @@ class AppUtils {
         onConfirm(value);
       }
     });
+  }
+
+  static Future<void> shareText(BuildContext context, String text,
+      {String? subject, String? title}) async {
+    if (text.trim().isEmpty) return;
+    final box = context.findRenderObject() as RenderBox?;
+    final params = ShareParams(
+      text: text,
+      subject: subject,
+      title: title,
+      sharePositionOrigin: box != null ? box.localToGlobal(Offset.zero) & box.size : null,
+    );
+    await SharePlus.instance.share(params);
   }
 }
 
