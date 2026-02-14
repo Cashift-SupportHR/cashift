@@ -23,6 +23,7 @@ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart'
 import 'package:collection/collection.dart';
 
 import '../../../../../data/datasources/local/constants.dart';
+import '../../../../../data/datasources/remote/unauthorized_exception.dart';
 import '../../../../../data/models/activity_log/index.dart';
 import '../../../../../data/models/overview/index.dart';
 import '../../../../../data/models/user_overview/index.dart';
@@ -225,7 +226,13 @@ class OverviewCubit extends BaseCubit {
       print(
         'checkErrorType is time error ${e.type == DioExceptionType.connectionTimeout} ',
       );
-      if (e.error is SocketException ||
+      print(
+        'checkErrorType is UnAuthorizedException ${e.error is UnAuthorizedException} ',
+      );
+      if(e.error is UnAuthorizedException){
+        emit(ErrorState(UnAuthorizedException()));
+      }
+      else if (e.error is SocketException ||
           e.error is WebSocketException ||
           e.error is HandshakeException ||
           e.type == DioExceptionType.connectionTimeout ||
