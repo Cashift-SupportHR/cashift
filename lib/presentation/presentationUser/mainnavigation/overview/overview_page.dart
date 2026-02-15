@@ -180,6 +180,9 @@ class OverviewPage extends BaseBlocWidget<OverviewState, OverviewCubit> {
             navigateToDetails(context);
             // bloc.add(CheckCertificateJobEvent(id));
           },
+          onRetryDeliveryOrders: () {
+            bloc.retryFetchDeliveryOrders();
+          },
         ),
       ),
     );

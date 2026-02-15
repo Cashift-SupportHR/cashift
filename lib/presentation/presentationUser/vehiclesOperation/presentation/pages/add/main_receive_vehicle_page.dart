@@ -19,7 +19,6 @@ import '../../startTour/pages/start_tour_page.dart';
 
 class MainReceiveVehiclePage extends BaseStatelessWidget {
   MainReceiveVehiclePage({Key? key}) : super(key: key);
-
   final PageController pageController = PageController(initialPage: 0);
   final StreamStateInitial<int> pageStream = StreamStateInitial();
 

@@ -13,6 +13,7 @@ class StreamStateWidgetV2<T> extends BaseStatelessWidget {
   final Function()? onReload;
   final T? initialData;
   final bool isBottomSheetData;
+  final bool notShowEmptyWidget;
   StreamStateWidgetV2({
     super.key,
     required this.builder,
@@ -20,6 +21,7 @@ class StreamStateWidgetV2<T> extends BaseStatelessWidget {
     this.onReload,
     this.initialData,
     this.isBottomSheetData = false,
+    this.notShowEmptyWidget = false,
   });
 
   @override
@@ -43,14 +45,14 @@ class StreamStateWidgetV2<T> extends BaseStatelessWidget {
           }
           // This condition is added to handle the case when the stream is pagination data
           else if ((snapshot.data != null && (snapshot.data == ''))) {
-            return ErrorPlaceHolderWidget(
+            return notShowEmptyWidget?SizedBox(): ErrorPlaceHolderWidget(
               exception: EmptyListException(),
               onClickReload: onReload,
             );
           } else if (snapshot.data != null) {
             return builder(context, snapshot.data as T);
           } else if (snapshot.error != null) {
-            return ErrorPlaceHolderWidget(
+            return notShowEmptyWidget?SizedBox(): ErrorPlaceHolderWidget(
               exception: snapshot.error ?? EmptyListException(),
               onClickReload: onReload,
             );

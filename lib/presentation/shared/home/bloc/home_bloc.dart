@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/data/repositories/home/home_repository.dart';
 import 'package:shiftapp/data/repositories/profile/profile_repository.dart';
@@ -17,7 +17,12 @@ class HomeBloc extends BaseCubit {
   final UserRepository _userRepository;
   final ReceiveVehiclesRepository _receiveVehiclesRepository;
 
-  HomeBloc(this.homeRepository, this.profileRepository, this._userRepository, this._receiveVehiclesRepository);
+  HomeBloc(
+    this.homeRepository,
+    this.profileRepository,
+    this._userRepository,
+    this._receiveVehiclesRepository,
+  );
 
   fetchAppVersion() async {
     try {
@@ -33,16 +38,17 @@ class HomeBloc extends BaseCubit {
   checkUserRolePrivilege() async {
     if (_userRepository.isLogged()) {
       try {
-        final isHasConnection = await InternetConnectionChecker.instance.hasConnection;
-
+        final isHasConnection = await InternetConnection().hasInternetAccess;
+        print(isHasConnection);
+        print("isHasConnection");
         if (isHasConnection) {
           _fetchInitData();
         } else {
           wasOffline = true;
           emit(OfflineState(''));
         }
-        InternetConnectionChecker.instance.onStatusChange.listen((status) async {
-          if (status == InternetConnectionStatus.connected) {
+        InternetConnection().onStatusChange.listen((status) async {
+          if (status == InternetStatus.connected) {
             if (wasOffline) {
               _fetchInitData();
             }
@@ -59,24 +65,25 @@ class HomeBloc extends BaseCubit {
     }
   }
 
-  checkInternetConnection() async {
-    final isHasConnection = await InternetConnectionChecker.instance.hasConnection;
-
-    if (!isHasConnection) {
-      emit(OfflineState(''));
-      wasOffline = true;
-    }
-  }
+  // checkInternetConnection() async {
+  //   final isHasConnection = await InternetConnectionChecker.instance.hasConnection;
+  //
+  //   if (!isHasConnection) {
+  //     emit(OfflineState(''));
+  //     wasOffline = true;
+  //   }
+  // }
 
   _fetchInitData() async {
     try {
       wasOffline = false;
       emit(LoadingState());
-      final hasAdminFeature =await profileRepository.getAccountServicesRemote();
+      final hasAdminFeature =
+          await profileRepository.getAccountServicesRemote();
       final inAdminMode = _userRepository.isEnableAdmin();
       print('_fetchInitData wasOffline ${hasAdminFeature.adminEnable}');
 
-      if (hasAdminFeature.adminEnable==true && inAdminMode) {
+      if (hasAdminFeature.adminEnable == true && inAdminMode) {
         emit(InitializedAdmin());
       } else {
         emit(InitializedUser());
@@ -90,7 +97,8 @@ class HomeBloc extends BaseCubit {
   Future<void> fetchAllAttendanceQueryOffline() async {
     print('start fetchAllAttendanceQueryOffline');
     try {
-      final isHasConnection = await InternetConnectionChecker.instance.hasConnection;
+      final isHasConnection = await InternetConnection().hasInternetAccess;
+      ;
       if (isHasConnection) {
         List<AttendanceOfflineQuery>? data =
             await homeRepository.fetchAllAttendanceQueryOffline();
@@ -104,7 +112,6 @@ class HomeBloc extends BaseCubit {
       print('checkFreeLanceHaveBankInfo ${e}');
     }
   }
-
 
   Future<void> fetchCurrentTrip() async {
     try {

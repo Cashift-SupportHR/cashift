@@ -4373,5 +4373,86 @@ class AppLocalizationsAr extends AppLocalizations {
   String get private => 'حصريا';
 
   @override
+  String get receive_from => 'استلام من';
+
+  @override
+  String get warehouse => 'المستودع';
+
+  @override
+  String get customer => 'العميل';
+
+  @override
+  String get delivery_order_for_company => 'توصيل طلب - شركة مانا';
+
+  @override
+  String get expected_arrival_time => 'الوقت المتوقع للوصول';
+
+  @override
+  String get deliver_to => 'تسليم الي';
+
+  @override
+  String get job_path => 'مسار العمل';
+
+  @override
+  String get go_to_customer => 'التوجه للعميل';
+
+  @override
+  String get receive_code => 'كود الاستلام';
+
+  @override
+  String get nearest_warehouse => 'أقرب مستودع';
+
+  @override
+  String get basic_service_fee => 'سعر الخدمة الأساسي';
+
+  @override
+  String get floor_price => 'سعر الطابق';
+
+  @override
+  String get final_price => 'السعر النهائي';
+
+  @override
+  String get receive_from_warehouse => 'بدأ الاستلام من المستودع';
+
+  @override
+  String get details_order => 'تفاصيل الطلب';
+
+  @override
+  String get confirm_delivery => 'تأكيد التسليم';
+
+  @override
+  String get delivery_code_to_customer => 'كود التسليم الي العميل';
+
+  @override
+  String get details_delivery_code => 'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.';
+
+  @override
+  String get receive_code_from_warehouse => 'كود الاستلام من المستودع';
+
+  @override
+  String get number_receive_code => 'رقم الكود الاستلام';
+
+  @override
+  String get write_receive_code => 'اكتب كود الاستلام';
+
+  @override
+  String get distance => 'مسافة';
+
+  @override
+  String get km => 'كم';
+
+  @override
+  String get offer_delivery => 'فرص التوصيل';
+
+  @override
+  String get please_accept_terms => 'الرجاء قبول جميع الشروط';
+
+  @override
+  String get details_receive_code => 'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.';
+
+  @override
+  String get number_of_nearest_warehouses => '  مستودع قريبين لك , حدد أقرب مستودع بينهم : ';
+
+  @override
   String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';
 }
