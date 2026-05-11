@@ -325,10 +325,10 @@ packages:
     dependency: transitive
     description:
       name: connectivity_plus
-      sha256: b5e72753cf63becce2c61fd04dfe0f1c430cc5278b53a1342dc5ad839eab29ec
+      sha256: "62ffa266d9a23b79fb3fcbc206afc00bb979417ba57b1324c546b5aab95ba057"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.5"
+    version: "7.1.1"
   connectivity_plus_platform_interface:
     dependency: transitive
     description:
@@ -1269,14 +1269,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.7.0"
-  internet_connection_checker:
+  internet_connection_checker_plus:
     dependency: "direct main"
     description:
-      name: internet_connection_checker
-      sha256: ee08f13d8b13b978affe226e9274ca3ba7a9bed07c9479e8ae245f785b7a488a
+      name: internet_connection_checker_plus
+      sha256: ef43530f24de6309f99802358f8a543ea1f2babc153effc84a75133751716892
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.1"
+    version: "2.9.1+2"
   intl:
     dependency: "direct main"
     description:

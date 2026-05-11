@@ -4594,7 +4594,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get delivery_code_to_customer => 'Delivery code to customer';
 
   @override
-  String get details_delivery_code => 'Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.';
+  String get details_delivery_code =>
+      'Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.';
 
   @override
   String get receive_code_from_warehouse => 'Warehouse receiving code';
@@ -4618,10 +4619,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get please_accept_terms => 'Please accept all terms';
 
   @override
-  String get details_receive_code => 'Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.';
+  String get details_receive_code =>
+      'Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.';
 
   @override
-  String get number_of_nearest_warehouses => 'Warehouses near you, select the closest one among them:';
+  String get number_of_nearest_warehouses =>
+      'Warehouses near you, select the closest one among them:';
 
   @override
   String get face_image_required_proceed => 'Face image is required to proceed';

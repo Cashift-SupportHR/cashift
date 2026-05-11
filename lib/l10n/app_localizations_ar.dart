@@ -4528,7 +4528,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get delivery_code_to_customer => 'كود التسليم الي العميل';
 
   @override
-  String get details_delivery_code => 'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.';
+  String get details_delivery_code =>
+      'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.';
 
   @override
   String get receive_code_from_warehouse => 'كود الاستلام من المستودع';
@@ -4552,10 +4553,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get please_accept_terms => 'الرجاء قبول جميع الشروط';
 
   @override
-  String get details_receive_code => 'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.';
+  String get details_receive_code =>
+      'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.';
 
   @override
-  String get number_of_nearest_warehouses => '  مستودع قريبين لك , حدد أقرب مستودع بينهم : ';
+  String get number_of_nearest_warehouses =>
+      '  مستودع قريبين لك , حدد أقرب مستودع بينهم : ';
 
   @override
   String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';
