@@ -4,6 +4,7 @@ import 'package:chucker_flutter/chucker_flutter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:get/get_connect/http/src/request/request.dart';
 import 'package:get/utils.dart';
 import 'package:shiftapp/config.dart';
 import 'package:shiftapp/data/datasources/remote/unauthorized_exception.dart';
@@ -16,6 +17,49 @@ import '../../../network/interceptor/logging_interceptor.dart';
 import 'api_exception.dart';
 import 'remote_constants.dart';
 
+import 'dart:convert';
+import 'package:dio/dio.dart';
+
+import 'dart:convert';
+import 'package:dio/dio.dart';
+
+class SafeJsonOnlyTransformer extends Transformer {
+   SafeJsonOnlyTransformer();
+
+  @override
+  Future<dynamic> transformResponse(RequestOptions options, ResponseBody responseBody) async {
+    final bytes = await responseBody.stream.toBytes(); // ✅ مرة واحدة
+    final text = utf8.decode(bytes).trim();
+
+    if (options.responseType != ResponseType.json) {
+      return null;
+    }
+
+    try {
+      return jsonDecode(text);
+    } catch (_) {
+      return <String, dynamic>{
+        "message": "Invalid response format",
+        "code": "E",
+      };
+    }
+  }
+
+  @override
+  Future<String> transformRequest(RequestOptions options) async {
+    final data = options.data;
+    if (data == null) return '';
+    if (data is String) return data;
+    if (data is FormData) {
+      return data.toString();
+    }
+    try {
+      return jsonEncode(data);
+    } catch (_) {
+      return data.toString();
+    }
+  }
+}
 class ClientCreator {
   final Interceptor? interceptor;
 
@@ -31,9 +75,7 @@ class ClientCreator {
 
     // Set base URL
     dio2.options.baseUrl =kBASE_URL;  // Replace with your base URL
-
-
-
+    dio2.transformer =  SafeJsonOnlyTransformer();
     // Add custom interceptor if provided
     if (interceptor != null) {
       dio2.interceptors.add(interceptor!);
@@ -81,9 +123,9 @@ class HeaderInterceptor extends Interceptor {
     options.headers[keyApiKey] = apiKeyValue;
     options.headers[deviceIdKey] = device.id;
     options.headers[keyContentType] = keyJson;
-    // options.headers[deviceInfoKey] =device.info;
-
-    options.headers['platform'] = Config.platformName;
+    // options.headers[deviceInfoKey] =device.info
+   // options.baseUrl=kTestApiUrl;
+     options.headers['platform'] = Config.platformName;
     options.headers['AppVersion'] = Config.AppVersion;
     options.headers[requestTypeKey] = true;
 
@@ -94,6 +136,7 @@ class HeaderInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     final data = response.data;
+    print('Response Data: $data ${response.statusCode}');
     if (data is Map<String, dynamic>) {
       final status = data['status'] as String? ?? '';
       if (status != 'success') {
@@ -114,7 +157,17 @@ class HeaderInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
+    print('=== DIO ERROR START ===');
+    print('type: ${err.type}');
+    print('message: ${err.message}');
+    print('error: ${err.error}');
+    print('status: ${err.response?.statusCode}');
+    print('data: ${err.response?.data}');
+    print('headers: ${err.response?.headers}');
+    print('uri: ${err.requestOptions.uri}');
+    print('=== DIO ERROR END ===');
+
     if (err.response != null) {
       print('Error: Response statusCode: ${err.response!.statusCode}');
       print('Error: Response Data: ${err.response!.data}');

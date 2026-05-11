@@ -182,11 +182,11 @@ class _MyHomeScreenState extends BaseState<MyHomeScreen> {
         return LoadingView(color: kBackground);
       },
       listener: (CommonState state) {
-        if (state is NewUpdateAvailable) {
-          if (state.checkOfAppUpdate.needToUpdate == true) {
-            DialogsManager.showNewVersionDialog(state.checkOfAppUpdate, context,
-                onDismiss: () {});
-          }
+        if (state is NewUpdateAvailable    ) {
+          // if (state.checkOfAppUpdate.needToUpdate == true) {
+          //   DialogsManager.showNewVersionDialog(state.checkOfAppUpdate, context,
+          //       onDismiss: () {});
+          // }
         }
         if (state is CurrentTourMapState) {
           navigateToCurrentTourMapPage();

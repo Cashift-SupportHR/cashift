@@ -1869,7 +1869,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get view_terms_conditions => 'View terms and conditions';
 
   @override
-  String get i_agree_to_all_terms => 'اوافق علي جميع الشروط';
+  String get i_agree_to_all_terms => 'I agree to all the terms';
 
   @override
   String get after_break => 'After break';
@@ -4540,7 +4540,88 @@ class AppLocalizationsEn extends AppLocalizations {
   String get violations_of_factory => 'Violations of factory';
 
   @override
-  String get private => 'exclusively';
+  String get private => 'Exclusively';
+
+  @override
+  String get receive_from => 'Receipt from';
+
+  @override
+  String get warehouse => 'Warehouse';
+
+  @override
+  String get customer => 'Customer';
+
+  @override
+  String get delivery_order_for_company => 'Delivery Order - Mana Company';
+
+  @override
+  String get expected_arrival_time => 'Expected time of arrival';
+
+  @override
+  String get deliver_to => 'Deliver to';
+
+  @override
+  String get job_path => 'job path';
+
+  @override
+  String get go_to_customer => 'Going to the customer';
+
+  @override
+  String get receive_code => 'Receipt code';
+
+  @override
+  String get nearest_warehouse => 'Nearest warehouse';
+
+  @override
+  String get basic_service_fee => 'Basic service fee';
+
+  @override
+  String get floor_price => 'Floor price';
+
+  @override
+  String get final_price => 'Final price';
+
+  @override
+  String get receive_from_warehouse => 'Received from the warehouse has begun';
+
+  @override
+  String get details_order => 'Details Order';
+
+  @override
+  String get confirm_delivery => 'Confirm delivery';
+
+  @override
+  String get delivery_code_to_customer => 'Delivery code to customer';
+
+  @override
+  String get details_delivery_code => 'Please enter the delivery code sent to you by the customer correctly to ensure successful completion of the transaction.';
+
+  @override
+  String get receive_code_from_warehouse => 'Warehouse receiving code';
+
+  @override
+  String get number_receive_code => 'Receive code number';
+
+  @override
+  String get write_receive_code => 'Write the receiving code';
+
+  @override
+  String get distance => 'Distance';
+
+  @override
+  String get km => 'km';
+
+  @override
+  String get offer_delivery => 'Delivery opportunities';
+
+  @override
+  String get please_accept_terms => 'Please accept all terms';
+
+  @override
+  String get details_receive_code => 'Please enter the receiving code sent to you from the warehouse correctly to ensure successful completion of the transaction.';
+
+  @override
+  String get number_of_nearest_warehouses => 'Warehouses near you, select the closest one among them:';
 
   @override
   String get face_image_required_proceed => 'Face image is required to proceed';

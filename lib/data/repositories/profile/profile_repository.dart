@@ -10,6 +10,7 @@ import 'package:shiftapp/domain/entities/account/index.dart';
 import 'package:shiftapp/domain/entities/account/remote_file.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 
+import '../../models/account/cashifter_code_dto.dart';
 import '../../models/api_response.dart';
 import 'dart:convert';
 import 'dart:io';
@@ -115,6 +116,11 @@ class ProfileRepository {
       ImageCacheUtil.saveOrUpdateBase64Image(fileBase64);
     }
     return response;
+  }
+
+  Future<CashifterCodeDto> fetchCashifterCode( ) async {
+    final response = await _api.fetchCashifterCode();
+    return response.payload!;
   }
 
   Future<String?> getFaceImageBase64() async {

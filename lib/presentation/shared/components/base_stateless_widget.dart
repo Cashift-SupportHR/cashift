@@ -13,6 +13,7 @@ import 'package:shiftapp/data/exceptions/app_base_exception.dart';
 import 'package:shiftapp/extensions/extensions.dart';
 import 'package:shiftapp/presentation/presentationUser/joboffers/widgets/job_offers_widget_helper.dart';
 import 'package:shiftapp/presentation/presentationUser/locationservice/locationservice.dart';
+import '../../../core/services/routes.dart';
 import '../../adminFeatures/di/injector.dart';
 import '../../presentationUser/common/common_state.dart';
 import '../check_face_recognation/page/check_face_recognatin_page.dart';
@@ -227,9 +228,19 @@ abstract class BaseStatelessWidget extends StatelessWidget {
     DialogsManager.showErrorDialog(
       context, context.handleApiErrorMessage(exception: error),
       onClickOk: () {
-        onFailDismissed(context.handleApiError(exception: error));
+        if (isRequiredLogin(error)) {
+          Navigator.pushNamed(context, Routes.login);
+        } else{
+          onFailDismissed(context.handleApiError(exception: error));
+        }
       },
     );
+  }
+
+  bool isRequiredLogin(exception) {
+    return (exception is DioError &&
+        exception.error is UnAuthorizedException) ||
+        exception is UnAuthorizedException;
   }
 
   Future<bool> checkFaceRecognition(BuildContext context) async {

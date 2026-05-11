@@ -2,7 +2,9 @@
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/domain/entities/shift/index_shift.dart';
 
- import '../../../../../domain/entities/user_overview/job_offer_slider.dart';
+ import '../../../../../data/models/account/cashifter_code_dto.dart';
+import '../../../../../domain/entities/user_overview/job_offer_slider.dart';
+import '../../../mana_delivery/domain/entities/delivery_orde.dart';
 
 
 abstract class OverviewState extends Initialized {
@@ -28,6 +30,7 @@ class OverviewPreLoginState extends OverviewState {
         );
 }
 
+
 class OverviewPostLoginState extends OverviewState {
   final StreamState<List<JobOfferDto>> vipOffers;
   final StreamState<List<JobOfferDto>> favoritesOffers;
@@ -35,9 +38,11 @@ class OverviewPostLoginState extends OverviewState {
   final StreamState<List<AppliedOffer>?> workingHours;
   final StreamState<AppliedOffer> currentShift;
   final StreamState<List<InAppRequiredTask>> inAppNotificationStream;
+  final StreamState<List<DeliveryOrderEntity>> deliveryOrdersStream;
   final bool haveAdminPrivilege;
 
   final StreamState<List<JobOfferSlider>> jobOffersSliders;
+  StreamState<CashifterCodeDto> cashifterCodeStream;
 
   OverviewPostLoginState(
     StreamState<List<JobOfferDto>?> offers, {
@@ -49,6 +54,8 @@ class OverviewPostLoginState extends OverviewState {
     required this.haveAdminPrivilege,
     required this.inAppNotificationStream,
     required this.jobOffersSliders,
+    required this.deliveryOrdersStream,
+    required this.cashifterCodeStream,
   }) : super(
           offers,
           jobOffersSliders: jobOffersSliders,
