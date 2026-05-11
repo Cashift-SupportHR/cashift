@@ -1,4 +1,4 @@
-import 'package:floor/floor.dart';
+import 'package:froom/froom.dart';
 
 import '../../../domain/entities/attendance/attendance_offline_query.dart';
 

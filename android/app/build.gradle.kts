@@ -1,5 +1,6 @@
 import java.util.Properties
 import java.io.FileInputStream
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("com.android.application")
@@ -12,7 +13,7 @@ plugins {
 
 android {
     namespace = "com.cashift"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = "28.0.12433566"
 
     compileOptions {
@@ -21,8 +22,10 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_11)
+        }
     }
 
     // Enable 16KB page size support for Android 15+

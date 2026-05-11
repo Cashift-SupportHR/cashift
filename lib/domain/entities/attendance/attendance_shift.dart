@@ -1,4 +1,4 @@
-import 'package:floor/floor.dart';
+import 'package:froom/froom.dart';
 
 import '../../../data/models/attendance/attendance_shift_dto.dart';
 
