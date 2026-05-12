@@ -30,12 +30,14 @@ class DownloadImageFileProject extends BaseStatelessWidget {
         ),
         const SizedBox(height: 10),
         DottedBorder(
-          color: kGrey_DF,
-          strokeWidth: 1,
-          dashPattern: [10, 8],
-          padding: const EdgeInsets.all(6),
-          radius: const Radius.circular(4),
-          borderType: BorderType.RRect,
+          options: RoundedRectDottedBorderOptions(
+            color: kGrey_DF,
+            strokeWidth: 1,
+            dashPattern: [10, 8],
+            padding: const EdgeInsets.all(6),
+            radius: const Radius.circular(4),
+            strokeCap: StrokeCap.round,
+          ),
           child: StatefulBuilder(builder: (context, setState) {
             return IconTextButton(
               isFlexible: true,

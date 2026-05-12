@@ -1,5 +1,6 @@
 import java.util.Properties
 import java.io.FileInputStream
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("com.android.application")
@@ -12,8 +13,8 @@ plugins {
 
 android {
     namespace = "com.cashift"
-    compileSdk = 35
-    ndkVersion = "27.0.12077973"
+    compileSdk = 36
+    ndkVersion = "28.0.12433566"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -21,8 +22,17 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_11)
+        }
+    }
+
+    // Enable 16KB page size support for Android 15+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = false
+        }
     }
 
     defaultConfig {
@@ -35,6 +45,11 @@ android {
         versionCode = 120
         versionName = "1.5.3"
         multiDexEnabled = true
+        // Enable 16KB page alignment
+        ndk {
+            // Ensure 16KB page size alignment for Android 15+
+            abiFilters += listOf("arm64-v8a", "x86_64")
+        }
     }
     val keystoreProperties = Properties()
     val keystorePropertiesFile = rootProject.file("key.properties")

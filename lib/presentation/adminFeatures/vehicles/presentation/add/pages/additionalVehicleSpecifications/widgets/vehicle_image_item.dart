@@ -22,11 +22,14 @@ class VehicleImageItem extends BaseStatelessWidget {
     StreamStateInitial<File> streamDataStateInitial =
         StreamStateInitial<File>();
     return DottedBorder(
-      radius: Radius.circular(12),
-      padding: EdgeInsets.all(10),
-      borderType: BorderType.RRect,
-      dashPattern: [6, 6],
-      color: kPrimary.withOpacity(0.5),
+      options: RoundedRectDottedBorderOptions(
+        color: kPrimary.withOpacity(0.5),
+        strokeWidth: 1,
+        dashPattern: [6, 6],
+        radius: Radius.circular(12),
+        padding: EdgeInsets.all(10),
+        strokeCap: StrokeCap.round,
+      ),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

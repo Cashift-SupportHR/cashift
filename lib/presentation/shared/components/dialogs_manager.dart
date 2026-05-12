@@ -563,7 +563,7 @@ class DialogsManager {
           insetPadding: const EdgeInsets.symmetric(horizontal: 16),
           title: icon.split('.').last.contains('png')
               ? kBuildImage(icon, border: 0, size: 70, fit: BoxFit.contain)
-              : kLoadSvgInCirclePath(icon),
+              : kLoadSvgInCirclePath(icon, height: 90, width: 90),
           content: WillPopScope(
             onWillPop: () async {
               return dismissible == true;

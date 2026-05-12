@@ -181,29 +181,35 @@ class AppUtils {
   }
 
 
-  static Future<bool> requestMediaAccessPermission() async {
+  static Future<bool> requestMediaAccessPermission({bool forImages = true}) async {
     if (Platform.isAndroid) {
       final androidInfo = await DeviceInfoPlugin().androidInfo;
       final sdkInt = androidInfo.version.sdkInt;
 
       if (sdkInt >= 33) {
         // Android 13+ (API 33+)
-        final imagesStatus = await Permission.photos.request(); // can also request .videos or .audio
+        if (!forImages) {
+          // SAF handles non-media files without storage permission on 33+
+          return true;
+        }
+        final imagesStatus = await Permission.photos.request();
         return imagesStatus.isGranted;
       } else {
         // Android 12 and below
         final storageStatus = await Permission.storage.request();
         return storageStatus.isGranted;
       }
-
-    } else{
+    } else {
+      if (!forImages) {
+        return true;
+      }
       final status = await Permission.photos.request();
       return status.isGranted;
     }
   }
  static Future<XFile?> pickPDF() async {
     // طلب إذن التخزين
-    var status = await requestMediaAccessPermission();
+    var status = await requestMediaAccessPermission(forImages: false);
     XFile? file;
     if (status) {
       FilePickerResult? result = await FilePicker.platform.pickFiles(
