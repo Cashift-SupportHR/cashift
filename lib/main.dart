@@ -46,7 +46,6 @@ class MyHttpOverrides extends HttpOverrides {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-
   await FirebaseBootstrapper.initFirebase(languageCode: '');
   await FirebaseNotifications.firebaseInitNotifications();
   ChuckerFlutter.showOnRelease = true;
@@ -55,27 +54,19 @@ void main() async {
   await configureDependencies();
   // Get the available cameras
   // await availableCameras();
-  await getIt.registerSingleton(HeaderInterceptor(
+  final headerInterceptor = HeaderInterceptor(
     getIt.get<UserRepository>(),
     getIt.get<LocalRepository>(),
     device: getIt.get(),
     loggerRepository: getIt.get(),
     authSessionManager: getIt.get(),
     isRequiredAuth: true,
-  ));
+  );
+  await getIt.registerSingleton(headerInterceptor);
 
-  await getIt.registerSingleton(ClientCreator(
-      interceptor: HeaderInterceptor(
-        getIt.get<UserRepository>(),
-        getIt.get<LocalRepository>(),
-        device: getIt.get(),
-        loggerRepository: getIt.get(),
-        authSessionManager: getIt.get(),
-        isRequiredAuth: true,
-        // authSessionManager: getIt.get(),
-      )).create());
-
-
+  await getIt.registerSingleton(
+    ClientCreator(interceptor: headerInterceptor).create(),
+  );
 
   getIt.registerSingleton(AdminToggleCubit(
       getIt.get<ProfileRepository>(), getIt.get<UserRepository>(),getIt.get<ProfileRepository>()
@@ -93,7 +84,6 @@ void main() async {
   //   enabled: !kReleaseMode,
   //   builder: (context) => const RestartWidget(child: MyApp()), // Wrap your app
   // ));
-  runApp(const RestartWidget(child: MyApp()));
 }
 
 final GlobalKey<NavigatorState> navigatorKey = new GlobalKey<NavigatorState>();

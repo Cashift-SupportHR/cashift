@@ -52,20 +52,29 @@ class AuthSessionManager {
         }
 
         final refreshToken = userRepository.getRefreshToken();
+        // Debug: log refresh token used (temporary)
+        print('[AuthSessionManager] refresh() called, refreshToken=$refreshToken');
+
         final response = await authApi.refreshToken(
           RefreshTokenParams(refreshToken: refreshToken),
         );
 
+        // Debug: log response for visibility during manual testing
+        print('[AuthSessionManager] refresh response: isSuccessful=${response.isSuccessfully()}, payload=${response.payload}');
+
         if (response.isSuccessfully() && response.payload != null) {
           userRepository.saveUser(response.payload!);
+          print('[AuthSessionManager] refresh succeeded');
           completer.complete(true);
         } else {
           // Server refused refresh: treat as session invalid.
           userRepository.clearUser();
+          print('[AuthSessionManager] refresh failed or rejected by server');
           completer.complete(false);
         }
-      } catch (_) {
+      } catch (e) {
         // Network/other errors: do not force logout, just fail refresh.
+        print('[AuthSessionManager] refresh threw exception: $e');
         completer.complete(false);
       } finally {
         _refreshInFlight = null;

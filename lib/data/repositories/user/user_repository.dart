@@ -22,6 +22,10 @@ class UserRepository {
   saveUser(User user) {
     final json = jsonEncode(user.toJson());
     preferences!.setString(key, json);
+    // Debug: log saved token info (temporary)
+    try {
+      print('[UserRepository] saveUser: token=${user.token} refreshToken=${user.refreshToken} tokenExpires=${user.tokenExpiresAt} refreshExpires=${user.refreshTokenExpiresAt}');
+    } catch (_) {}
   }
 
   saveResume(Resume resume) {
@@ -124,7 +128,6 @@ class UserRepository {
 
   @nullable
   String getAccessToken() {
-    return 'vbcvb';
     final userJson = preferences!.getString(key);
     if (userJson != null) {
       final user = User.fromJson(jsonDecode(userJson));
