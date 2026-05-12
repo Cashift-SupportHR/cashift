@@ -22,48 +22,48 @@ class ManaOrderWidget extends BaseStatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          strings.offer_delivery,
-          style: kTextMedium.copyWith(color: kFontDark, fontSize: 14),
-        ),
-        StreamBuilder<List<DeliveryOrderEntity>>(
-          stream: deliveryOrdersStream.stream,
-          builder: (context, snapshot) {
-            // Handle error state
-            if (snapshot.hasError) {
-              // Show loading indicator for LoadingStreamException
-              if (snapshot.error is LoadingStreamException) {
-                return const SizedBox(
-                  height: 180,
-                  child: Center(child: CircularProgressIndicator()),
-                );
-              }
-              // Show location widget for LocationRequiredException
-              if (snapshot.error is LocationRequiredException) {
-                return _buildLocationRequiredWidget(context);
-              }
-              // For other errors, show nothing
-              return const SizedBox.shrink();
-            }
+    return StreamBuilder<List<DeliveryOrderEntity>>(
+      stream: deliveryOrdersStream.stream,
+      builder: (context, snapshot) {
+        // Handle error state
+        if (snapshot.hasError) {
+          // Show loading indicator for LoadingStreamException
+          if (snapshot.error is LoadingStreamException) {
+            return const SizedBox(
+              height: 180,
+              child: Center(child: CircularProgressIndicator()),
+            );
+          }
+          // Show location widget for LocationRequiredException
+          if (snapshot.error is LocationRequiredException) {
+            return _buildLocationRequiredWidget(context);
+          }
+          // For other errors, show nothing
+          return const SizedBox.shrink();
+        }
 
-            // Handle loading state
-            if (!snapshot.hasData) {
-              return const SizedBox(
-                height: 250,
-                child: Center(child: CircularProgressIndicator()),
-              );
-            }
+        // Handle loading state
+        if (!snapshot.hasData) {
+          return const SizedBox(
+            height: 250,
+            child: Center(child: CircularProgressIndicator()),
+          );
+        }
 
-            // Handle data state
-            final orders = snapshot.data!;
-            if (orders.isEmpty) {
-              return const SizedBox.shrink();
-            }
+        // Handle data state
+        final orders = snapshot.data!;
+        if (orders.isEmpty) {
+          return const SizedBox.shrink();
+        }
 
-            return SizedBox(
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              strings.offer_delivery,
+              style: kTextMedium.copyWith(color: kFontDark, fontSize: 14),
+            ),
+            SizedBox(
               height: 250,
               child: ListView.builder(
                 itemCount: orders.length,
@@ -72,10 +72,10 @@ class ManaOrderWidget extends BaseStatelessWidget {
                   return ManaOrderCart(data: orders[index]);
                 },
               ),
-            );
-          },
-        ),
-      ],
+            ),
+          ],
+        );
+      },
     );
   }
 

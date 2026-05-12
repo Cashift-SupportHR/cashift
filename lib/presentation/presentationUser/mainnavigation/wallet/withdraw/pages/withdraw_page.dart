@@ -20,14 +20,14 @@ class WithdrawPageArgs {
   final WalletBalanceItem? company;
 
   WithdrawPageArgs({required this.withDrawByMethod, this.method, this.company})
-    : assert(
-        withDrawByMethod == true || method == null,
-        'must included methodCode',
-      ),
-      assert(
+      : assert(
+  withDrawByMethod == true || method == null,
+  'must included methodCode',
+  ),
+        assert(
         method == null || company == null,
         'can not provide both company id and method code',
-      );
+        );
 }
 
 class WithdrawPage extends BaseBlocWidget<InitializedWithdraw, WithdrawCubit> {
@@ -90,7 +90,7 @@ class WithdrawPage extends BaseBlocWidget<InitializedWithdraw, WithdrawCubit> {
         title: Text(
           args.withDrawByMethod
               ? '${strings.withdraw_through} '
-                  '(${args.method!.name})'
+              '(${args.method!.name})'
               : strings.withdraw,
           style: kTextMedium.copyWith(color: kWhiteF2),
         ),
