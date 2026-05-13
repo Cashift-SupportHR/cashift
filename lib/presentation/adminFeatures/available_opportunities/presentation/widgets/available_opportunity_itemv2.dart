@@ -103,8 +103,8 @@ class AvailableOpportunityItemV2 extends BaseStatelessWidget {
         strings.project_name,
       ],
       values: [
-        "${opportunity.workingStartDate != null ? DateFormatter.formatDate(DateTime.parse(opportunity.workingStartDate!), 'dd-MM-yyyy HH:mm a') : ''}",
-        "${opportunity.workingStartDate != null ? DateFormatter.formatDate(DateTime.parse(opportunity.workingEndDate!), 'dd-MM-yyyy HH:mm a') : ''}",
+        "${opportunity.workingStartDate != null ? DateFormatter.formatDate(DateTime.parse(opportunity.workingStartDate!), 'dd-MM-yyyy hh:mm a') : ''}",
+        "${opportunity.workingEndDate != null ? DateFormatter.formatDate(DateTime.parse(opportunity.workingEndDate!), 'dd-MM-yyyy hh:mm a') : ''}",
         opportunity.projectName ?? '',
       ],
     );
