@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
+import '../../../../utils/app_utils.dart';
 import '../../../../utils/validate.dart';
 import '../../../presentationUser/resources/colors.dart';
 import '../../../presentationUser/resources/constants.dart';
@@ -138,6 +140,16 @@ class BuildTextFieldItem extends BaseStatelessWidget {
               onTap: onTap,
               readOnly: (onTap != null ? true : readOnly),
               controller: controller,
+              inputFormatters: [
+                TextInputFormatter.withFunction((oldValue, newValue) {
+                  final converted = AppUtils.replaceArabicNumber(newValue.text);
+                  if (converted == newValue.text) return newValue;
+                  return newValue.copyWith(
+                    text: converted,
+                    selection: TextSelection.collapsed(offset: converted.length),
+                  );
+                }),
+              ],
               onChanged: onChanged,
               validator: isValidator! ?  (validator ?? (value)=> Validate.validateRequired(value, strings.this_field_is_required)) : null,
               endIcon: showCustomEndIcon! ? _CustomEndIcon(
