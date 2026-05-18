@@ -28,7 +28,7 @@ class AvailableOpportunitiesListPageV2 extends BaseBlocWidget<InitializedOpportu
    String? title(context) => showTitle ==true ? strings.the_opportunities:null ;
 
   late int   tabId  ;
-
+   PaginationOpportunityParams? params;
   final RefreshController _refreshController = RefreshController(initialRefresh: false);
   @override
   void loadInitialData(BuildContext context) {
@@ -108,7 +108,7 @@ class AvailableOpportunitiesListPageV2 extends BaseBlocWidget<InitializedOpportu
 
   void onLoading(List<Opportunity> state) async {
     await bloc.fetchOpportunityDataPagination(
-      params: PaginationOpportunityParams(
+      params: params ?? PaginationOpportunityParams(
         type: tabId,
         startDate: null,
         endDate: null,
@@ -139,7 +139,10 @@ class AvailableOpportunitiesListPageV2 extends BaseBlocWidget<InitializedOpportu
             tabId: tabId,
             onFilterData: (params,text) {
               controller.text = text.replaceAll(' ,', '');
-              bloc.fetchOpportunityDataPagination(params: params, isRefresh: true);
+              this.params = params;
+              this.params?.type = tabId;
+              _refreshController.requestRefresh();
+              _refreshController.loadComplete();
               bloc.fetchOpportunityDataPagination(params: params, isRefresh: true);
             },
             projects: state.projects,
