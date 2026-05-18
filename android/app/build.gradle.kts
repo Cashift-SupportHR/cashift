@@ -42,8 +42,8 @@ android {
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 24
         targetSdk = 35
-        versionCode = 120
-        versionName = "1.5.3"
+        versionCode = 121
+        versionName = "1.5.4"
         multiDexEnabled = true
         // Enable 16KB page alignment
         ndk {
