@@ -21,11 +21,13 @@ class UploadImage extends BaseStatelessWidget {
   Widget build(BuildContext context) {
     File images =   File(initialValue) ;
     return DottedBorder(
-      color: kPrimary.withOpacity(0.5),
-      strokeWidth: 1,
-      dashPattern: [6, 5],
-      radius: const Radius.circular(10),
-      borderType: BorderType.RRect,
+      options: RoundedRectDottedBorderOptions(
+        color: kPrimary.withOpacity(0.5),
+        strokeWidth: 1,
+        dashPattern: [6, 5],
+        radius: Radius.circular(10),
+        strokeCap: StrokeCap.round,
+      ),
       child: StatefulBuilder(builder: (context, setState) {
         return InkWell(
           onTap: () {

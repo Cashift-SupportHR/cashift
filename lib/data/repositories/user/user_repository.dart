@@ -22,6 +22,10 @@ class UserRepository {
   saveUser(User user) {
     final json = jsonEncode(user.toJson());
     preferences!.setString(key, json);
+    // Debug: log saved token info (temporary)
+    try {
+      print('[UserRepository] saveUser: token=${user.token} refreshToken=${user.refreshToken} tokenExpires=${user.tokenExpiresAt} refreshExpires=${user.refreshTokenExpiresAt}');
+    } catch (_) {}
   }
 
   saveResume(Resume resume) {
@@ -127,10 +131,47 @@ class UserRepository {
     final userJson = preferences!.getString(key);
     if (userJson != null) {
       final user = User.fromJson(jsonDecode(userJson));
-      return user.token!;
+      return user.token ?? '';
     } else {
       return '';
     }
+  }
+
+  @nullable
+  String getRefreshToken() {
+    final userJson = preferences!.getString(key);
+    if (userJson != null) {
+      final user = User.fromJson(jsonDecode(userJson));
+      return user.refreshToken ?? '';
+    }
+    return '';
+  }
+
+  DateTime? getTokenExpiresAt() {
+    final user = getUser();
+    return user?.tokenExpiresAt;
+  }
+
+  DateTime? getRefreshTokenExpiresAt() {
+    final user = getUser();
+    return user?.refreshTokenExpiresAt;
+  }
+
+  bool isAccessTokenExpired({Duration skew = const Duration(minutes: 1)}) {
+    final expiry = getTokenExpiresAt();
+    if (expiry == null) return false; // if backend doesn't send expiry, fallback to 401 refresh
+    return DateTime.now().isAfter(expiry.subtract(skew));
+  }
+
+  bool isRefreshTokenExpired({Duration skew = const Duration(minutes: 1)}) {
+    final expiry = getRefreshTokenExpiresAt();
+    if (expiry == null) return false;
+    return DateTime.now().isAfter(expiry.subtract(skew));
+  }
+
+  bool hasValidRefreshToken() {
+    final rt = getRefreshToken();
+    return rt.isNotEmpty && !isRefreshTokenExpired();
   }
 
   bool isNotLoggedIn() {

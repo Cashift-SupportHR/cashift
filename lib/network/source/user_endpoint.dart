@@ -100,6 +100,10 @@ abstract class UserEndpoint {
 
   @POST('/v2/VerifyCode/CheckCodeByFreeLance')
   Future<ApiResponse<User>> confirmOtp(@Body() ConfirmOtpParams loginParams);
+
+  @POST('/v3/FreeLancerInfo/RefreshToken')
+  Future<ApiResponse<User>> refreshToken(@Body() RefreshTokenParams params);
+
   //http://85.184.232.38:8003/api/v3/VerifyCode/CheckCodeResetPassword
 
   @POST('/v3/VerifyCode/CheckCodeResetPassword')

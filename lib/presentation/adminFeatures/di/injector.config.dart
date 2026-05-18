@@ -67,6 +67,8 @@ import '../../../data/repositories/advancedFilter/advanced_filter_repository.dar
     as _i146;
 import '../../../data/repositories/attendance/attendance_repository.dart'
     as _i339;
+import '../../../data/repositories/auth_session/auth_session_manager.dart'
+    as _i397;
 import '../../../data/repositories/bail_requests/bail_requests_repository.dart'
     as _i454;
 import '../../../data/repositories/bank/wallet_repository.dart' as _i536;
@@ -812,6 +814,7 @@ Future<_i174.GetIt> $initGetIt(
       () => _i1007.WorkerWorkPlacesRepository(gh<_i159.WorkerWorkPlacesAPI>()));
   gh.factory<_i1061.FocusPointsRepository>(
       () => _i1061.FocusPointsRepository(gh<_i393.FocusPointsAPI>()));
+  gh.factory<_i397.AuthSessionManager>(() => _i397.AuthSessionManager());
   gh.factory<_i7.VerificationBloc>(
       () => _i7.VerificationBloc(gh<_i633.AuthRepository>()));
   gh.factory<_i431.AddAddressRepository>(

@@ -111,7 +111,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get phone => 'رقم الهاتف';
 
   @override
-  String get invalid_phone => 'رقم الهاتف الذي ادخلته غير صحيح . قم بأدخال رقم الهاتف صحيح ';
+  String get invalid_phone =>
+      'رقم الهاتف الذي ادخلته غير صحيح . قم بأدخال رقم الهاتف صحيح ';
 
   @override
   String get whats_number => 'رقم الواتساب';
@@ -207,7 +208,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get complete_profile => 'إستكمال السيرة الذاتية';
 
   @override
-  String get open_location => 'يجب تشغيل خدمة الموقع للتأكد من وجودك في موقع العمل';
+  String get open_location =>
+      'يجب تشغيل خدمة الموقع للتأكد من وجودك في موقع العمل';
 
   @override
   String get finish_shift_label => 'إنهاء الدوام لفترة عمل ';
@@ -228,7 +230,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get undefine_error => 'حدث خطأ ما';
 
   @override
-  String get check_network_connection => 'تحقق من اتصال الشبكة لديك وحاول مرة أخرى';
+  String get check_network_connection =>
+      'تحقق من اتصال الشبكة لديك وحاول مرة أخرى';
 
   @override
   String get activity_log_title => 'سجل الانشطة';
@@ -327,13 +330,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get code_appear_here => 'سيظهر الكود هنا ';
 
   @override
-  String get share_code_with_cashier => 'قم بمشاركة الكود للكاشير فقط عند إستلام النقدية .';
+  String get share_code_with_cashier =>
+      'قم بمشاركة الكود للكاشير فقط عند إستلام النقدية .';
 
   @override
   String get code_valid_on_time => 'هذا الكود صالح للإستخدام لمرة واحدة فقط .';
 
   @override
-  String get company_not_responsible_misuse => 'الشركة غير مسئولة عن سوء الإستخدام .';
+  String get company_not_responsible_misuse =>
+      'الشركة غير مسئولة عن سوء الإستخدام .';
 
   @override
   String get verification_code => 'كود التفعيل';
@@ -384,7 +389,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get open_location_settings => 'فتح إعدادات الموقع';
 
   @override
-  String get denied_camera_permission => 'عذرًا ، يجب عليك الانتقال إلى إعدادات التطبيق والسماح بالوصول إلى الكاميرا حتى تتمكن من مسح رمز qr ضوئيًا';
+  String get denied_camera_permission =>
+      'عذرًا ، يجب عليك الانتقال إلى إعدادات التطبيق والسماح بالوصول إلى الكاميرا حتى تتمكن من مسح رمز qr ضوئيًا';
 
   @override
   String get collect_button => 'تحصيل';
@@ -600,7 +606,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get favorite_projects => 'اماكن العمل المفضلة';
 
   @override
-  String get favorite_projects_not_selected => 'من فضلك قم بتحديد اماكن عملك المفضلة';
+  String get favorite_projects_not_selected =>
+      'من فضلك قم بتحديد اماكن عملك المفضلة';
 
   @override
   String get select_favorite_projects => 'تحديد';
@@ -1022,16 +1029,22 @@ class AppLocalizationsAr extends AppLocalizations {
   String get cancellation_transfer_request => 'لا يمكنك إلغاء طلب التحويل';
 
   @override
-  String get application_not_responsible => 'التطبيق غير مسؤول عن  أي خطأ في البيانات المدخله';
+  String get application_not_responsible =>
+      'التطبيق غير مسؤول عن  أي خطأ في البيانات المدخله';
 
   @override
-  String get not_entitled_ask => 'لا يحق لك مطالبة التطبيق باسترجاع الأموال في حاله الخطأ';
+  String get not_entitled_ask =>
+      'لا يحق لك مطالبة التطبيق باسترجاع الأموال في حاله الخطأ';
 
   @override
   String get transfer_confirm => 'تأكيد تحويل';
 
   @override
-  String transfer_confirm_message(String companyName, String quantity, String withdrawMethod) {
+  String transfer_confirm_message(
+    String companyName,
+    String quantity,
+    String withdrawMethod,
+  ) {
     return 'سيتم تحويل مبلغ $quantity  ر.س من حسابك بشركة $companyName عن طريق  $withdrawMethod';
   }
 
@@ -1117,16 +1130,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get withdraw_from_phone_wallet => 'سحب من محفظة الهاتف';
 
   @override
-  String get withdraw_by_phone_wallet_screen_condition_1 => 'عندم تقوم بتحديد محفظتك والضغط علي زر التأكيد سيتم تقديم طلب لإيدام المبلغ في محفظتك';
+  String get withdraw_by_phone_wallet_screen_condition_1 =>
+      'عندم تقوم بتحديد محفظتك والضغط علي زر التأكيد سيتم تقديم طلب لإيدام المبلغ في محفظتك';
 
   @override
-  String get withdraw_by_phone_wallet_screen_condition_2 => 'لا يمكن إلغاء الطلب';
+  String get withdraw_by_phone_wallet_screen_condition_2 =>
+      'لا يمكن إلغاء الطلب';
 
   @override
-  String get withdraw_by_phone_wallet_screen_condition_3 => 'التطبيق غير مسئول عن اي خطأ في بيانات محفظة الهاتف الخاصة بك';
+  String get withdraw_by_phone_wallet_screen_condition_3 =>
+      'التطبيق غير مسئول عن اي خطأ في بيانات محفظة الهاتف الخاصة بك';
 
   @override
-  String get withdraw_by_phone_wallet_screen_condition_4 => 'لمعلومات اخري قم بالتواصل مع الدعم الفني';
+  String get withdraw_by_phone_wallet_screen_condition_4 =>
+      'لمعلومات اخري قم بالتواصل مع الدعم الفني';
 
   @override
   String get withdraw_through => 'سحب من خلال';
@@ -1153,7 +1170,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get saudi_phone_numbers_accepted => 'يقبل فقط ارقام الهواتف السعودية';
 
   @override
-  String get iban_numbers_saudi_bank_customers_accepted => 'يقبل فقط ارقام ايبان الخاصة بعملاء بنوك السعودية';
+  String get iban_numbers_saudi_bank_customers_accepted =>
+      'يقبل فقط ارقام ايبان الخاصة بعملاء بنوك السعودية';
 
   @override
   String get withdraw_from_bank_account => 'سحب من الحساب البنكي';
@@ -1183,7 +1201,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get hijri => 'هجري';
 
   @override
-  String get biometrics_service_not_enabled => 'لم يتم تمكين خدمة القياسات الحيوية.';
+  String get biometrics_service_not_enabled =>
+      'لم يتم تمكين خدمة القياسات الحيوية.';
 
   @override
   String get do_want_to_enable_it => 'هل تريد تمكينها؟';
@@ -1198,7 +1217,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get forgot_password => 'نسيت كلمة المرور؟';
 
   @override
-  String get enter_your_phone_number_retrieve_password => 'ادخل رقم الهاتف الخاص بك لاسترجاع كلمة المرور';
+  String get enter_your_phone_number_retrieve_password =>
+      'ادخل رقم الهاتف الخاص بك لاسترجاع كلمة المرور';
 
   @override
   String get send => 'ارسال';
@@ -1216,7 +1236,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get add_new_place => 'إضافة مكان جديد';
 
   @override
-  String get please_enter_match_password => 'من فضلك قم بإدخال كلمة المرور متطابقة';
+  String get please_enter_match_password =>
+      'من فضلك قم بإدخال كلمة المرور متطابقة';
 
   @override
   String get official_wear => 'الزي الرسمي';
@@ -1255,7 +1276,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get days_absence => 'أيام الغياب';
 
   @override
-  String get offer_you_service => 'نقدم لك خدمة إشعار الغياب  وهو ابلغنا بعدم حضورك قبل بداية وقت عملك ب 12 ساعه ومنها سيتم خصم يوم الغياب فقط دون جزاء حرصاً وتقديراً لظروفك';
+  String get offer_you_service =>
+      'نقدم لك خدمة إشعار الغياب  وهو ابلغنا بعدم حضورك قبل بداية وقت عملك ب 12 ساعه ومنها سيتم خصم يوم الغياب فقط دون جزاء حرصاً وتقديراً لظروفك';
 
   @override
   String get validate_date => 'من فضلك أدخل التاريخ';
@@ -1264,7 +1286,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get validate_resone => 'من فضلك ادخل  سبب الغياب';
 
   @override
-  String get military_service_disclosure => 'اتعهد بإنني لا اعمل لدى اي جهة عسكرية وفي حالة حدث ذلك اتحمل المسئولية كاملة بصفة خاصة وليس لكاشفت ادنى مسئولية عن جهة عملي .';
+  String get military_service_disclosure =>
+      'اتعهد بإنني لا اعمل لدى اي جهة عسكرية وفي حالة حدث ذلك اتحمل المسئولية كاملة بصفة خاصة وليس لكاشفت ادنى مسئولية عن جهة عملي .';
 
   @override
   String get select_district => 'اختر الحى';
@@ -1351,7 +1374,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get favorite_working_hours => 'عدد ساعات العمل المفضلة';
 
   @override
-  String get please_enter_favorite_working_hours => 'من فضلك قم بإدخال عدد ساعات العمل المفضلة';
+  String get please_enter_favorite_working_hours =>
+      'من فضلك قم بإدخال عدد ساعات العمل المفضلة';
 
   @override
   String get selection_skills => 'اختيار المهارات';
@@ -1374,10 +1398,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get exit_app => 'خروج من التطبيق';
 
   @override
-  String get register_attendance_required => 'يتوجب عليك تسجيل الحضور او الانصراف للدوام حتي يمكنك التمتع بمميزات التطبيق';
+  String get register_attendance_required =>
+      'يتوجب عليك تسجيل الحضور او الانصراف للدوام حتي يمكنك التمتع بمميزات التطبيق';
 
   @override
-  String get attendance_cashift_required => 'يتوجب عليك تسجيل الحضور او الانصراف لدوام كاشفت';
+  String get attendance_cashift_required =>
+      'يتوجب عليك تسجيل الحضور او الانصراف لدوام كاشفت';
 
   @override
   String get select_job => 'اختر الفرصه';
@@ -1449,7 +1475,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get validate_direction_directed => 'من فضلك اكتب الجهه الموجه اليها';
 
   @override
-  String get validate_commerce_ratification => 'من فضلك اختر تصديق الغرفه التجاريه';
+  String get validate_commerce_ratification =>
+      'من فضلك اختر تصديق الغرفه التجاريه';
 
   @override
   String get select => 'اختر';
@@ -1494,7 +1521,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get wanted_number => 'عدد المطلوبين';
 
   @override
-  String get enter_price_opportunity_message => 'عفوا لا يوجد تسعير لهذه الوردية برجاء التحقق منها قبل إكمال عمليه الانشاء.';
+  String get enter_price_opportunity_message =>
+      'عفوا لا يوجد تسعير لهذه الوردية برجاء التحقق منها قبل إكمال عمليه الانشاء.';
 
   @override
   String get employee_not_found => 'لم يتم العثور على الموظف';
@@ -1548,7 +1576,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get rejection_reason => 'ماهو سبب الرفض ؟';
 
   @override
-  String get rejection_warning_message => 'في حالة رفضك للمخالفه سوف يقوم السيستم بالغاء الفرصه واعتبارك منسحب';
+  String get rejection_warning_message =>
+      'في حالة رفضك للمخالفه سوف يقوم السيستم بالغاء الفرصه واعتبارك منسحب';
 
   @override
   String get company_name => 'اسم الشركة';
@@ -1698,19 +1727,24 @@ class AppLocalizationsAr extends AppLocalizations {
   String get landing_page_title4 => 'الحصول بشكل فوري علي المقابل المادي';
 
   @override
-  String get landing_page_desc1 => 'اول منصة الكترونية مسجلة لدى هيئة الملكية الفكرية توفر فرص بشكل يومي بنظام الساعة والدفع فوري فور انتهاء ساعات عملك بواسطة احدث طرق الدفع ';
+  String get landing_page_desc1 =>
+      'اول منصة الكترونية مسجلة لدى هيئة الملكية الفكرية توفر فرص بشكل يومي بنظام الساعة والدفع فوري فور انتهاء ساعات عملك بواسطة احدث طرق الدفع ';
 
   @override
-  String get landing_page_desc2 => 'مع كاشفت ابحث عن الفرص التي تناسبك و ابدأ في رحلة رفع مستوي دخلك';
+  String get landing_page_desc2 =>
+      'مع كاشفت ابحث عن الفرص التي تناسبك و ابدأ في رحلة رفع مستوي دخلك';
 
   @override
-  String get landing_page_desc3 => 'نظام متكامل لحفظ حقوق جميع الاطراف من خلال QRCode المخصص لمنصة كاشفت والذي تستطيع من خلاله تسجيل الحضور والانصراف بمنتهى السهولة';
+  String get landing_page_desc3 =>
+      'نظام متكامل لحفظ حقوق جميع الاطراف من خلال QRCode المخصص لمنصة كاشفت والذي تستطيع من خلاله تسجيل الحضور والانصراف بمنتهى السهولة';
 
   @override
-  String get landing_page_desc4 => 'ابدا دوامك وتابع اداء عملك وانهي دوامك في الوقت المحدد واحصل علي المقابل المالي بشكل فوري ';
+  String get landing_page_desc4 =>
+      'ابدا دوامك وتابع اداء عملك وانهي دوامك في الوقت المحدد واحصل علي المقابل المالي بشكل فوري ';
 
   @override
-  String get platform_description => 'هذه المنصه مسجله لدي الهيئة السعودية للملكية الفكرية';
+  String get platform_description =>
+      'هذه المنصه مسجله لدي الهيئة السعودية للملكية الفكرية';
 
   @override
   String get lets_start => 'فلنبدأ';
@@ -1731,7 +1765,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get enter_password => 'ادخل كلمه المرور';
 
   @override
-  String get clicking_check_mark_means_you_agree => 'الضغط علي علامة المربع يعني الموافقة';
+  String get clicking_check_mark_means_you_agree =>
+      'الضغط علي علامة المربع يعني الموافقة';
 
   @override
   String get gregorian_date => 'تاريخ ميلادي';
@@ -1743,7 +1778,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get confirm_phone_number => 'تأكيد رقم الهاتف';
 
   @override
-  String get confirm_phone_number_desc => 'قم بأدخال كود التفعيل الذي تم ارساله الي الهاتف رقم';
+  String get confirm_phone_number_desc =>
+      'قم بأدخال كود التفعيل الذي تم ارساله الي الهاتف رقم';
 
   @override
   String get code_expires_within => 'تنتهي صلاحية الكود خلال :  ';
@@ -1770,7 +1806,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get bail_requests => 'طلبات الكفاله';
 
   @override
-  String get bail_application_pending_approval => 'طلب الكفاله في انتظار الموافقه';
+  String get bail_application_pending_approval =>
+      'طلب الكفاله في انتظار الموافقه';
 
   @override
   String get approved_bail_request => 'طلب كفالة تمت الموافقه عليه';
@@ -1794,7 +1831,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get request_has_been_rejected => 'تم رفض الطلب';
 
   @override
-  String get request_has_been_rejected_message => 'برجاء كتابة سبب الرفض ثم تأكيد الرفض';
+  String get request_has_been_rejected_message =>
+      'برجاء كتابة سبب الرفض ثم تأكيد الرفض';
 
   @override
   String get months => 'أشهر';
@@ -1889,7 +1927,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get attendance_fingerprint => 'بصمة تسجيل الحضور';
 
   @override
-  String get attendance_fingerprint_desc => 'قم بفحص البصمه لتسجيل حضورك في بدايه الدوام';
+  String get attendance_fingerprint_desc =>
+      'قم بفحص البصمه لتسجيل حضورك في بدايه الدوام';
 
   @override
   String get scan_now => 'فحص الان';
@@ -1904,7 +1943,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get notice_receipt_delivery => 'إشعار استلام وتسلم';
 
   @override
-  String get notice_receipt_delivery_desc => 'يجب التأكد من حالة العهدة اولا قبل استلامها';
+  String get notice_receipt_delivery_desc =>
+      'يجب التأكد من حالة العهدة اولا قبل استلامها';
 
   @override
   String get communication_device_number => 'رقم جهاز التواصل  :';
@@ -2063,7 +2103,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get save_edit => 'حفظ التعديل';
 
   @override
-  String get are_you_sure_delete_focus_point => 'هل انت متأكد من حذف نقطة التمركز ؟';
+  String get are_you_sure_delete_focus_point =>
+      'هل انت متأكد من حذف نقطة التمركز ؟';
 
   @override
   String get previous => 'السابق';
@@ -2072,10 +2113,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get delete_custody => 'هل انت متأكد انك تريد حذف هذه العهدة ؟';
 
   @override
-  String get saved_focus_point_time_dec => 'يجب حفظ هذا الوقت اولا قبل اضافة اخر';
+  String get saved_focus_point_time_dec =>
+      'يجب حفظ هذا الوقت اولا قبل اضافة اخر';
 
   @override
-  String get focus_point_location_message => 'يجب تفعيل اللوكيشن قبل اضافة نقطة تمركز';
+  String get focus_point_location_message =>
+      'يجب تفعيل اللوكيشن قبل اضافة نقطة تمركز';
 
   @override
   String get area => 'المنطقة';
@@ -2099,7 +2142,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get navigate_to_current_location => 'انتقال الي الموقع الحالي؟';
 
   @override
-  String get navigate_to_current_location_des => 'هل تريد تعديل الموقع لموقعك الحالي؟';
+  String get navigate_to_current_location_des =>
+      'هل تريد تعديل الموقع لموقعك الحالي؟';
 
   @override
   String get work_point_location => 'موقع نقطة العمل';
@@ -2129,7 +2173,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get add_more_the_work_periods => 'اضافة المزيد من فترات العمل';
 
   @override
-  String get no_focus_points_found_to_search_result => 'لا يوجد نقاط تمركز مطابقة لنتيجة البحث';
+  String get no_focus_points_found_to_search_result =>
+      'لا يوجد نقاط تمركز مطابقة لنتيجة البحث';
 
   @override
   String get point => 'نقطة';
@@ -2255,7 +2300,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get search_shift_type => 'ابحث عن نوع الوردية';
 
   @override
-  String get pledges_and_generalization_confirm_message => 'باختيارك اعادة ضبط البيانات ستتاح لك الفرصة لتغيير اختيارك اذا اردت الاستمرار اضغط تاكيد';
+  String get pledges_and_generalization_confirm_message =>
+      'باختيارك اعادة ضبط البيانات ستتاح لك الفرصة لتغيير اختيارك اذا اردت الاستمرار اضغط تاكيد';
 
   @override
   String get share => 'مشاركة';
@@ -2489,10 +2535,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get project_added_successfully => 'تم اضافة المشروع بنجاح';
 
   @override
-  String get project_added_manage_projects_list => 'تم اضافة المشروع لقائمة ادارة المشاريع';
+  String get project_added_manage_projects_list =>
+      'تم اضافة المشروع لقائمة ادارة المشاريع';
 
   @override
-  String get you_can_download_project_now_share_it => 'يمكنك تحميل المشروع الان او مشاركته';
+  String get you_can_download_project_now_share_it =>
+      'يمكنك تحميل المشروع الان او مشاركته';
 
   @override
   String get must_be_arabic_letters => 'يجب ان تكون حروف عربية';
@@ -2582,7 +2630,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get employee_details => 'تفاصيل الموظف';
 
   @override
-  String get previous_opportunities_and_evaluations => 'الفرص السابقه والتقييمات';
+  String get previous_opportunities_and_evaluations =>
+      'الفرص السابقه والتقييمات';
 
   @override
   String get average_feedbacks => 'متوسط التقيمات';
@@ -2597,7 +2646,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get are_you_sure_ban_employee => 'هل انت متاكد من حظر الموظف؟';
 
   @override
-  String get are_you_sure_approval_employee => 'هل انت متاكد من الموافقة علي الموظف؟';
+  String get are_you_sure_approval_employee =>
+      'هل انت متاكد من الموافقة علي الموظف؟';
 
   @override
   String get please_select_permission => 'برجاء اختيار الصلاحية';
@@ -2651,16 +2701,19 @@ class AppLocalizationsAr extends AppLocalizations {
   String get violation_value => 'قيمة المخالفه';
 
   @override
-  String get are_you_sure_approval_violation => 'هل انت متاكد من الموافقة علي المخالفه؟';
+  String get are_you_sure_approval_violation =>
+      'هل انت متاكد من الموافقة علي المخالفه؟';
 
   @override
   String get are_you_sure_delete_punishment => 'هل انت متاكد من حذف العقوبة؟';
 
   @override
-  String get are_you_sure_deactivate_punishment => 'هل انت متاكد من الغاء تفعيل العقوبه؟';
+  String get are_you_sure_deactivate_punishment =>
+      'هل انت متاكد من الغاء تفعيل العقوبه؟';
 
   @override
-  String get are_you_sure_activate_punishment => 'هل انت متاكد من تفعيل العقوبه؟';
+  String get are_you_sure_activate_punishment =>
+      'هل انت متاكد من تفعيل العقوبه؟';
 
   @override
   String get employment_officials => 'مسئولي التوظيف';
@@ -2702,7 +2755,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get delete_employment_official_data => 'حذف بيانات مسئول التوظيف';
 
   @override
-  String get are_you_sure_deactivate_employment_official => 'هل انت متاكد من تعطيل مسئول التوظيف؟';
+  String get are_you_sure_deactivate_employment_official =>
+      'هل انت متاكد من تعطيل مسئول التوظيف؟';
 
   @override
   String get employment_department => 'اداره التوظيف';
@@ -2750,13 +2804,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get writing_requirements_ar => 'كتابه المتطلبات باللغه العربيه';
 
   @override
-  String get writing_requirements_ar_validation => 'اكتب المتطلبات باللغه العربيه';
+  String get writing_requirements_ar_validation =>
+      'اكتب المتطلبات باللغه العربيه';
 
   @override
   String get writing_requirements_en => 'كتابه المتطلبات باللغه الانجليزيه';
 
   @override
-  String get writing_requirements_en_validation => 'اكتب المتطلبات باللغه الانجليزيه';
+  String get writing_requirements_en_validation =>
+      'اكتب المتطلبات باللغه الانجليزيه';
 
   @override
   String get not_found_data => 'لا توجد بيانات';
@@ -2771,10 +2827,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get qr_code_fingerprint => 'بصمة الQR Code';
 
   @override
-  String get record_attendance_scan_description_face_print => 'اول خطوه للتسجيل وهي ان يتم فحص الوجه عن طريق كاميرا الجوال';
+  String get record_attendance_scan_description_face_print =>
+      'اول خطوه للتسجيل وهي ان يتم فحص الوجه عن طريق كاميرا الجوال';
 
   @override
-  String get record_attendance_scan_description_qr_code_fingerprint => 'ثاني خطوه للتسجيل وهي ان يتم فحص الQr Code الخاص بالفرصه';
+  String get record_attendance_scan_description_qr_code_fingerprint =>
+      'ثاني خطوه للتسجيل وهي ان يتم فحص الQr Code الخاص بالفرصه';
 
   @override
   String get location_accuracy => 'دقة الموقع';
@@ -2795,7 +2853,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get scan_fac_note => 'اضافة بصمة الوجه اختياريه للاناث ويمكن تخطيها';
 
   @override
-  String get update_scan_face_note => 'اذا اردت تعديل بصمة الوجه عليك مراجعه الاداره اولا ';
+  String get update_scan_face_note =>
+      'اذا اردت تعديل بصمة الوجه عليك مراجعه الاداره اولا ';
 
   @override
   String get update_button => 'تحديث';
@@ -2837,7 +2896,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get certificate_value => 'قيمة الشهادة';
 
   @override
-  String get installment_with_cashift_note => 'في حالة عدم  تكملة الاقساط لا يحق لك المطالبه بالاقساط المدفوعه';
+  String get installment_with_cashift_note =>
+      'في حالة عدم  تكملة الاقساط لا يحق لك المطالبه بالاقساط المدفوعه';
 
   @override
   String get smil => 'إبتسم';
@@ -2852,10 +2912,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get terms_and_conditions_message => 'اوافق علي جميع الشروط والأحكام';
 
   @override
-  String get terms_and_conditions_accept => 'من فضلك وافق علي جميع الشروط والأحكام';
+  String get terms_and_conditions_accept =>
+      'من فضلك وافق علي جميع الشروط والأحكام';
 
   @override
-  String get installment_postponement_desc => 'في حال التأكيد علي عدم الموافقه في اصدار الوثيقه سوف يتم تجميد الحساب';
+  String get installment_postponement_desc =>
+      'في حال التأكيد علي عدم الموافقه في اصدار الوثيقه سوف يتم تجميد الحساب';
 
   @override
   String get what_is_reason => 'ماهو السبب؟';
@@ -2996,22 +3058,27 @@ class AppLocalizationsAr extends AppLocalizations {
   String get area_name => 'اسم المنطقة';
 
   @override
-  String get scan_qr_code_project_confirm_shift => 'قم بفحص ال QR code الخاص بالمشروع لكي تم تاكيد دوامك';
+  String get scan_qr_code_project_confirm_shift =>
+      'قم بفحص ال QR code الخاص بالمشروع لكي تم تاكيد دوامك';
 
   @override
   String get check_qr_code_opportunity => 'قم بفحص ال Qr Code الخاص بالفرصه';
 
   @override
-  String get background_service_permission_message => '*يحتاج تطبيق \"كاشفت \" السماح بإستخدام خدمة الموقع الجغرافي في الخلفية ليمكن من الإستفادة بخدمة تسجيل الحضور والإنصراف التلقائي.';
+  String get background_service_permission_message =>
+      '*يحتاج تطبيق \"كاشفت \" السماح بإستخدام خدمة الموقع الجغرافي في الخلفية ليمكن من الإستفادة بخدمة تسجيل الحضور والإنصراف التلقائي.';
 
   @override
-  String get location_service_permission_message => '*يحتاج تطبيق كاشفت السماح بإستخدام خدمة الموقع الجغرافي ليمكن للتطبيق إرسال موقع العمل الخاص بالوظيفة الخاص بك للتحقق من وجودك في موقع العمل الصحيح.';
+  String get location_service_permission_message =>
+      '*يحتاج تطبيق كاشفت السماح بإستخدام خدمة الموقع الجغرافي ليمكن للتطبيق إرسال موقع العمل الخاص بالوظيفة الخاص بك للتحقق من وجودك في موقع العمل الصحيح.';
 
   @override
-  String get face_recognition_service_permission_message => 'يحتاج التطبيق السماح بإستخدام الكاميرا وملفات الذاكرة , من فضلك اضف الاذونات من خلال الاعدادت';
+  String get face_recognition_service_permission_message =>
+      'يحتاج التطبيق السماح بإستخدام الكاميرا وملفات الذاكرة , من فضلك اضف الاذونات من خلال الاعدادت';
 
   @override
-  String get reject_service_permission_message => '*وفي حالة عدم الموافقة على تمكين البرنامج بالعمل لاثبات وقت الحضور والإنصراف بشكل صحيح تعتبر حالتك غياب.';
+  String get reject_service_permission_message =>
+      '*وفي حالة عدم الموافقة على تمكين البرنامج بالعمل لاثبات وقت الحضور والإنصراف بشكل صحيح تعتبر حالتك غياب.';
 
   @override
   String get search_contract_clause => 'ابحث عن شرط العقد';
@@ -3020,7 +3087,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get number_required_for_opportunity => 'العدد المطلوب للفرصة';
 
   @override
-  String get type_number_required_for_opportunity => 'اكتب العدد المطلوب للفرصة';
+  String get type_number_required_for_opportunity =>
+      'اكتب العدد المطلوب للفرصة';
 
   @override
   String get terms_conditions_opportunities => 'شروط واحكام الفرص';
@@ -3029,16 +3097,19 @@ class AppLocalizationsAr extends AppLocalizations {
   String get add_terms_conditions_opportunities => 'اضافة شروط واحكام الفرص';
 
   @override
-  String get writing_terms_conditions_ar => 'كتابة الشروط والاحكام باللغة العربية';
+  String get writing_terms_conditions_ar =>
+      'كتابة الشروط والاحكام باللغة العربية';
 
   @override
   String get write_terms_conditions_ar => 'اكتب الشروط والاحكام باللغة العربية';
 
   @override
-  String get writing_terms_conditions_en => 'كتابة الشروط والاحكام باللغة الانجليزية';
+  String get writing_terms_conditions_en =>
+      'كتابة الشروط والاحكام باللغة الانجليزية';
 
   @override
-  String get write_terms_conditions_en => 'اكتب الشروط والاحكام باللغة الانجليزية';
+  String get write_terms_conditions_en =>
+      'اكتب الشروط والاحكام باللغة الانجليزية';
 
   @override
   String get add_new => 'اضافة جديد';
@@ -3092,19 +3163,22 @@ class AppLocalizationsAr extends AppLocalizations {
   String get company_wide_ban => 'حظر علي مستوي الشركه';
 
   @override
-  String get ban_employee_desc => 'هل أنت متاكد من حظر الموظف علي مستوي الشركه؟';
+  String get ban_employee_desc =>
+      'هل أنت متاكد من حظر الموظف علي مستوي الشركه؟';
 
   @override
   String get type_reason_ban => 'اكتب سبب الحظر';
 
   @override
-  String get must_choose_where_send_verification_code => 'يجب اختيار اين تريد ارسال كود التحقق';
+  String get must_choose_where_send_verification_code =>
+      'يجب اختيار اين تريد ارسال كود التحقق';
 
   @override
   String get proof_file_must_uploaded => 'يجب رفع ملف الإثبات';
 
   @override
-  String get verification_code_sent_desc => 'سوف يتم ارسال كود التحقق الي رقم الجوال القديم , عليك مراجعته الان';
+  String get verification_code_sent_desc =>
+      'سوف يتم ارسال كود التحقق الي رقم الجوال القديم , عليك مراجعته الان';
 
   @override
   String get i_accept_to => 'اوافق علي';
@@ -3239,7 +3313,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get no_internet => 'عفوا لا يوجد اتصال بشبكة الانترنت !';
 
   @override
-  String get no_internet_description => 'نظراً لعدم اتصال جهازك بالانترنت يمكنك تسجيل الحضور عن طريق :';
+  String get no_internet_description =>
+      'نظراً لعدم اتصال جهازك بالانترنت يمكنك تسجيل الحضور عن طريق :';
 
   @override
   String get chashift_attendance => 'تسجيل حضور وانصراف كاشفت';
@@ -3389,10 +3464,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get add_task_responsibility => 'اضافة مهمة او مسؤولية';
 
   @override
-  String get attendance_and_departure_notifications => 'اشعارات الحضور والانصراف';
+  String get attendance_and_departure_notifications =>
+      'اشعارات الحضور والانصراف';
 
   @override
-  String get attendance_and_departure_notifications_reports => 'تقارير الحضور والانصراف';
+  String get attendance_and_departure_notifications_reports =>
+      'تقارير الحضور والانصراف';
 
   @override
   String get type_request => 'نوع الطلب';
@@ -3437,7 +3514,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get vehicle_components => 'مكونات المركبة';
 
   @override
-  String get vehicle_note => 'اضغط علي  ( لا ) عندما لا يوجد اي ملاحظات علي المركبة أو ( نعم ) في حالة لم تكن تعمل أو يوجد بها ملاحظات مع التوضيح .';
+  String get vehicle_note =>
+      'اضغط علي  ( لا ) عندما لا يوجد اي ملاحظات علي المركبة أو ( نعم ) في حالة لم تكن تعمل أو يوجد بها ملاحظات مع التوضيح .';
 
   @override
   String get edit_covenant => 'تعديل العُهد';
@@ -3611,7 +3689,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get no_employee => 'لا يوجد موظفين ';
 
   @override
-  String get no_employee_decr => 'قم بتحديد اسم المشروع اولاً ليظهرلك الموظفين ';
+  String get no_employee_decr =>
+      'قم بتحديد اسم المشروع اولاً ليظهرلك الموظفين ';
 
   @override
   String get total_contracting_power => 'إجمالي القوة التعاقدية';
@@ -3620,7 +3699,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get empty_tasks_and_duties => 'لا يوجد مهام و واجبات';
 
   @override
-  String get location_disclosure => 'يجمع هذا التطبيق بيانات الموقع لمساعدتك في العثور على الفرص القريبة والتحقق من موقعك عند بدء العمل، حتى عندما يكون التطبيق مغلقًا أو غير قيد الاستخدام.';
+  String get location_disclosure =>
+      'يجمع هذا التطبيق بيانات الموقع لمساعدتك في العثور على الفرص القريبة والتحقق من موقعك عند بدء العمل، حتى عندما يكون التطبيق مغلقًا أو غير قيد الاستخدام.';
 
   @override
   String get allow_required_permissions => 'الأذونات المطلوبة من تطبيق كاشفت.';
@@ -3701,7 +3781,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get search_by_area => 'ابحث عن المنطقه التي تريدها .';
 
   @override
-  String get you_have_to_take_some_points_into_consideration_check_box => 'عليك اخذ بعض النقط في عين الاعتبار لتقوم بتحديد المربع:';
+  String get you_have_to_take_some_points_into_consideration_check_box =>
+      'عليك اخذ بعض النقط في عين الاعتبار لتقوم بتحديد المربع:';
 
   @override
   String get areas => 'المناطق';
@@ -3767,7 +3848,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get complete_receipt_information => 'تكملة بيانات الاستلام';
 
   @override
-  String get add_violation_files_desc => 'يمكنك اضافة اكثر من صورة توضح المخالفة';
+  String get add_violation_files_desc =>
+      'يمكنك اضافة اكثر من صورة توضح المخالفة';
 
   @override
   String get camera => 'الكاميرا';
@@ -3845,7 +3927,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get select_tour_type => 'اختر نوع الجولة';
 
   @override
-  String get start_tour_warning_msg => 'قبل بدأ الجولة يجب ان تحدد نوع جولة لكي يتم استلامك  للمركبة.';
+  String get start_tour_warning_msg =>
+      'قبل بدأ الجولة يجب ان تحدد نوع جولة لكي يتم استلامك  للمركبة.';
 
   @override
   String get job_duties => 'مهام العمل';
@@ -3872,7 +3955,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get violations_num => 'عدد المخالفات';
 
   @override
-  String get end_field_survey_warning_msg => 'هل انت متأكد من انهاء المسح الميداني؟';
+  String get end_field_survey_warning_msg =>
+      'هل انت متأكد من انهاء المسح الميداني؟';
 
   @override
   String get search_for_areas => 'ابحث عن المناطق';
@@ -3923,13 +4007,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get add_details_image => 'اضف تفاصيل للصوره';
 
   @override
-  String get select_job_choose_job_uniform => 'حدد الوظيفه لاختيار الزي الوظيفي';
+  String get select_job_choose_job_uniform =>
+      'حدد الوظيفه لاختيار الزي الوظيفي';
 
   @override
   String get add_photo => 'اضف صورة';
 
   @override
-  String get add_mobile_new => 'عليك ادخال رقم الجوال الجديد لنرسل لك رمز التحقق علي جوالك';
+  String get add_mobile_new =>
+      'عليك ادخال رقم الجوال الجديد لنرسل لك رمز التحقق علي جوالك';
 
   @override
   String get mobile_number_new => 'رقم الجوال الجديد';
@@ -3938,7 +4024,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get confirm_code => 'كود التحقيق';
 
   @override
-  String get ok_teams_ms => 'عليك اولا ان توافق علي هذه التعهدات وقرائتها جيداً بعد ذلك سنرسل طلبك الي المشرف.';
+  String get ok_teams_ms =>
+      'عليك اولا ان توافق علي هذه التعهدات وقرائتها جيداً بعد ذلك سنرسل طلبك الي المشرف.';
 
   @override
   String get will_send_request => 'سيتم تقديم طلبك بنجاح!';
@@ -3956,19 +4043,23 @@ class AppLocalizationsAr extends AppLocalizations {
   String get not_completed => 'لم يكتمل';
 
   @override
-  String get pledge_attachment_reject => ' عند التأكيد سيتم انتقال هذا المرفق الي قائمة ( تم الرفض ).';
+  String get pledge_attachment_reject =>
+      ' عند التأكيد سيتم انتقال هذا المرفق الي قائمة ( تم الرفض ).';
 
   @override
-  String get pledge_sub_reject => 'اذا كنت متأكد من رفض المرفق عليك كتابة سبب الرفض  ';
+  String get pledge_sub_reject =>
+      'اذا كنت متأكد من رفض المرفق عليك كتابة سبب الرفض  ';
 
   @override
   String get pledge_title_reject => 'لماذا تريد رفض هذا المرفق ؟';
 
   @override
-  String get pledge_attachment_accept => 'اتعهد بأنني اطّلعت على اصل المرفق واقر  بانه سليم  , واتحمل المسئولية القانونية إذا ثبت عكس ذلك.';
+  String get pledge_attachment_accept =>
+      'اتعهد بأنني اطّلعت على اصل المرفق واقر  بانه سليم  , واتحمل المسئولية القانونية إذا ثبت عكس ذلك.';
 
   @override
-  String get pledge_sub_accept => 'عليك تأكيد القبول والاقرار بانك اطلعت علي المرفق واستملت الاصل';
+  String get pledge_sub_accept =>
+      'عليك تأكيد القبول والاقرار بانك اطلعت علي المرفق واستملت الاصل';
 
   @override
   String get pledge_title_accept => ' هل انت متاكد من قبول هذا المرفق ؟';
@@ -4010,7 +4101,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get receive_period => 'فترة الاستلام';
 
   @override
-  String get warning_rejection_desc => 'سيتم تسجيل كل الملاحظات التي تم تدوينها وسيتم إرسالها إلى المسئول .';
+  String get warning_rejection_desc =>
+      'سيتم تسجيل كل الملاحظات التي تم تدوينها وسيتم إرسالها إلى المسئول .';
 
   @override
   String get warning_rejection => 'تحذير الرفض';
@@ -4025,7 +4117,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get why_want_refuse_receive => 'هل انت متأكد من الرفض؟';
 
   @override
-  String get receive_reject_desc => 'اذا كنت متأكد من رفض السياره لمشكلة ما عليك كتابتها لنرسلها الي المسئول وحل هذة المشكلة .';
+  String get receive_reject_desc =>
+      'اذا كنت متأكد من رفض السياره لمشكلة ما عليك كتابتها لنرسلها الي المسئول وحل هذة المشكلة .';
 
   @override
   String get receive_confirm => 'تأكيد الاستلام';
@@ -4043,13 +4136,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get procedure => 'الإجراء';
 
   @override
-  String get action_taken_waring_msg => 'سيتم حفظ اجراءك وارساله الي مدير المشروع لمراجعته والرد عليه';
+  String get action_taken_waring_msg =>
+      'سيتم حفظ اجراءك وارساله الي مدير المشروع لمراجعته والرد عليه';
 
   @override
   String get final_action => 'إتخذ إجراء نهائي';
 
   @override
-  String get final_action_taken_waring_msg => 'سيتم حفظ اجراءك وارساله الي قائمة ( تمت المراجعة )';
+  String get final_action_taken_waring_msg =>
+      'سيتم حفظ اجراءك وارساله الي قائمة ( تمت المراجعة )';
 
   @override
   String get take_final_action => 'إتخاذ الإجراء النهائي';
@@ -4058,7 +4153,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get write_action_you_will_take => 'اكتب الاجراء الذي ستتخذه';
 
   @override
-  String get write_final_action_you_will_take => 'اكتب الاجراء النهائي الذي ستتخذه';
+  String get write_final_action_you_will_take =>
+      'اكتب الاجراء النهائي الذي ستتخذه';
 
   @override
   String get mobile_number_change_requests => 'طلبات تغيير رقم الجوال';
@@ -4073,13 +4169,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get user_request_reject_title => 'هل انت متأكد من الرفض؟';
 
   @override
-  String get user_request_reject_subtitle => 'اذا كنت ترفض طلب الكاشفتر عليك كتابة السبب';
+  String get user_request_reject_subtitle =>
+      'اذا كنت ترفض طلب الكاشفتر عليك كتابة السبب';
 
   @override
   String get user_request_accept_title => 'هل انت متأكد من الموافقة؟';
 
   @override
-  String get user_request_accept_subtitle_msg => 'اذا كنت توافق علي طلب الكاشفتر سينتقل الطلب الي قائمة الموافقة ويتحول الطلب الي الادارة';
+  String get user_request_accept_subtitle_msg =>
+      'اذا كنت توافق علي طلب الكاشفتر سينتقل الطلب الي قائمة الموافقة ويتحول الطلب الي الادارة';
 
   @override
   String get cashifters_requests => 'طلبات الكاشفترز';
@@ -4091,10 +4189,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get search_for => 'ابحث عن';
 
   @override
-  String get add_file_mobile => 'للتأكد من ان هذا رقم جوالك الخاص عليك ارفاق ملف لاثبات صحة امتلاكك لهذا الرقم  :';
+  String get add_file_mobile =>
+      'للتأكد من ان هذا رقم جوالك الخاص عليك ارفاق ملف لاثبات صحة امتلاكك لهذا الرقم  :';
 
   @override
-  String get confirm_code_ms => 'سوف يتم ارسال كود التحقق الي رقم الجوال الجديد , عليك كتابته الآن ';
+  String get confirm_code_ms =>
+      'سوف يتم ارسال كود التحقق الي رقم الجوال الجديد , عليك كتابته الآن ';
 
   @override
   String get add_gas_stations => 'اضافة محطات الوقود ';
@@ -4145,7 +4245,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get breakdown_maintenance => ' الصيانة والأعطال';
 
   @override
-  String get waring_action_notification => ' سيتم حفظ اجراءك وارساله الي مدير المشروع لمراجعته والرد عليه ';
+  String get waring_action_notification =>
+      ' سيتم حفظ اجراءك وارساله الي مدير المشروع لمراجعته والرد عليه ';
 
   @override
   String get waring_final_action_notification => 'سيتم ارساله للمشرف .';
@@ -4163,7 +4264,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get speeding_during_violation => 'السرعة أثناء المخالفة';
 
   @override
-  String get click_here_view_violation_location => 'اضغط هنا لرؤية موقع  المخالفة';
+  String get click_here_view_violation_location =>
+      'اضغط هنا لرؤية موقع  المخالفة';
 
   @override
   String get violation_time => 'وقت المخالفة';
@@ -4295,13 +4397,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get date_to => 'التاريخ الي';
 
   @override
-  String get date_to_must_be_greater_than_date_from => 'التاريخ الي يجب ان يكون اكبر من التاريخ من';
+  String get date_to_must_be_greater_than_date_from =>
+      'التاريخ الي يجب ان يكون اكبر من التاريخ من';
 
   @override
   String get there_are_videos_yet => 'لا توجد فيديوهات بعد';
 
   @override
-  String get videos_dates_validate_msg => 'من فضلك حدّد الوقت والتاريخ الذي تريده لعرض الفيديوهات فيه';
+  String get videos_dates_validate_msg =>
+      'من فضلك حدّد الوقت والتاريخ الذي تريده لعرض الفيديوهات فيه';
 
   @override
   String get select_date_and_time => 'اختر التاريخ والوقت';
@@ -4424,7 +4528,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get delivery_code_to_customer => 'كود التسليم الي العميل';
 
   @override
-  String get details_delivery_code => 'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.';
+  String get details_delivery_code =>
+      'الرجاء إدخال كود التسليم المرسل لك من العميل بشكل صحيح، لضمان إتمام العملية بنجاح.';
 
   @override
   String get receive_code_from_warehouse => 'كود الاستلام من المستودع';
@@ -4448,10 +4553,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get please_accept_terms => 'الرجاء قبول جميع الشروط';
 
   @override
-  String get details_receive_code => 'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.';
+  String get details_receive_code =>
+      'الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.';
 
   @override
-  String get number_of_nearest_warehouses => '  مستودع قريبين لك , حدد أقرب مستودع بينهم : ';
+  String get number_of_nearest_warehouses =>
+      '  مستودع قريبين لك , حدد أقرب مستودع بينهم : ';
 
   @override
   String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';

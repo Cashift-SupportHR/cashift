@@ -2,6 +2,10 @@ import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shiftapp/data/repositories/device/deviceinfo_repository.dart';
 
+import '../../../data/repositories/auth_session/auth_session_manager.dart';
+import '../../../data/repositories/local/local_repository.dart';
+import '../../../data/repositories/logger/logger_repository.dart';
+import '../../../data/repositories/user/user_repository.dart';
 import '../../../domain/entities/shared/device.dart';
 
 @module
@@ -12,7 +16,7 @@ abstract class InjectionModule {
   Future<SharedPreferences> get prefs => SharedPreferences.getInstance();
   @preResolve
   Future<Device> get deviceInfo =>  DeviceInfoRepository.getDevice();
-  /*
+/*
 final remoteModule = Module()
   ..factory((scope) {
     return HeaderInterceptor(

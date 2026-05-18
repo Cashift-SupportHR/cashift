@@ -1,4 +1,3 @@
-import 'package:floor/floor.dart';
 
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/data/datasources/remote/api/home/home_api_provider.dart';

@@ -20,13 +20,14 @@ class SelectImageGallery extends StatelessWidget {
   Widget build(BuildContext context) {
     File image = File('');
     return DottedBorder(
-      color: kPrimary,
-      strokeWidth: 1,
-      dashPattern: [8, 4],
-      radius: Radius.circular(6),
-      padding: EdgeInsets.all(25),
-      borderType: BorderType.RRect,
-
+      options: RoundedRectDottedBorderOptions(
+        color: kPrimary,
+        strokeWidth: 1,
+        dashPattern: [8, 4],
+        radius: Radius.circular(6),
+        padding: EdgeInsets.all(25),
+        strokeCap: StrokeCap.round,
+      ),
       child: SizedBox(
         width: double.infinity,
         child: StatefulBuilder(builder: (context, setState) {

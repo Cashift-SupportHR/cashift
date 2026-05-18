@@ -18,7 +18,30 @@ class User {
   @JsonKey(name: 'token')
     String? token;
 
-  User({this.id, this.name, this.profileImagePath, this.isCompeleteProfile, this.phone, this.token});
+  @JsonKey(name: 'refreshToken')
+  String? refreshToken;
+
+  @JsonKey(name: 'tokenExpiresAt')
+  DateTime? tokenExpiresAt;
+
+  @JsonKey(name: 'refreshTokenExpiresAt')
+  DateTime? refreshTokenExpiresAt;
+
+  @JsonKey(name: 'isAdmin')
+  bool? isAdmin;
+
+  User({
+    this.id,
+    this.name,
+    this.profileImagePath,
+    this.isCompeleteProfile,
+    this.phone,
+    this.token,
+    this.refreshToken,
+    this.tokenExpiresAt,
+    this.refreshTokenExpiresAt,
+    this.isAdmin,
+  });
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
@@ -28,4 +51,3 @@ class User {
     return '$kSERVER_URL$profileImagePath';
   }
 }
-

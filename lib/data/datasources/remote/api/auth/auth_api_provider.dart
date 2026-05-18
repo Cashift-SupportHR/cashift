@@ -19,6 +19,10 @@ class AuthAPI {
     return api.confirmOtp(loginParams);
   }
 
+  Future<ApiResponse<User>> refreshToken(RefreshTokenParams params) {
+    return api.refreshToken(params);
+  }
+
   Future<ApiResponse<String>> confirmRestPasswordOtp(
       ConfirmOtpParams loginParams) {
     return api.confirmRestPasswordOtp(loginParams);

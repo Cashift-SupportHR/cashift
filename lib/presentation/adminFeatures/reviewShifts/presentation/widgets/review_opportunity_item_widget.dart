@@ -51,7 +51,7 @@ class ReviewOpportunityItemWidget extends BaseStatelessWidget {
                       AppIcons.nameProject),
                   fieldItem(
                       strings.value_due,
-                      "${opportunity.totalDeductMoneyClearanceCertificate ?? 0} ${strings.sr}",
+                      "${opportunity.deservedAmount  ?? 0} ${strings.sr}",
                       AppIcons.opportunityValue),
                   fieldItem(
                       strings.beginning_work,

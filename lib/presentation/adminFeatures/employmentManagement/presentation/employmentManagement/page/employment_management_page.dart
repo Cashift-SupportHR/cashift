@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
@@ -35,6 +37,7 @@ class EmploymentManagementPage extends BaseBlocWidget<
   int tabId = 1;
   String search = '';
   int successApprovedLevel = 1;
+  Timer? _debounce;
 
   @override
   void loadInitialData(context) {
@@ -58,8 +61,11 @@ class EmploymentManagementPage extends BaseBlocWidget<
             controller: searchController,
             onChanged: (value) {
               search = value;
-              bloc.fetchEmployeesDataPagination(
-                  isRefresh: true, type: tabId, search: search);
+              if (_debounce?.isActive ?? false) _debounce?.cancel();
+              _debounce = Timer(const Duration(milliseconds: 500), () {
+                bloc.fetchEmployeesDataPagination(
+                    isRefresh: true, type: tabId, search: search, successApprovedLevel: successApprovedLevel);
+              });
             },
           ),
         ),
@@ -151,6 +157,7 @@ class EmploymentManagementPage extends BaseBlocWidget<
 
   onRefresh() async {
     print('_refreshController onRefresh');
+    if (_debounce?.isActive ?? false) _debounce?.cancel();
     bloc.fetchEmployeesDataPagination(
         isRefresh: true, type: tabId, search: '', successApprovedLevel: successApprovedLevel);
     _refreshController.refreshCompleted();

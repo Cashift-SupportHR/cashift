@@ -2,13 +2,12 @@ import 'dart:convert';
 
 import 'package:chucker_flutter/chucker_flutter.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
 import 'package:get/utils.dart';
 import 'package:shiftapp/config.dart';
 import 'package:shiftapp/data/datasources/remote/unauthorized_exception.dart';
 import 'package:shiftapp/data/models/logger/logger_params.dart';
+import 'package:shiftapp/data/repositories/auth_session/auth_session_manager.dart';
 import 'package:shiftapp/data/repositories/local/local_repository.dart';
 import 'package:shiftapp/data/repositories/logger/logger_repository.dart';
 import 'package:shiftapp/data/repositories/user/user_repository.dart';
@@ -16,12 +15,7 @@ import 'package:shiftapp/domain/entities/shared/device.dart';
 import '../../../network/interceptor/logging_interceptor.dart';
 import 'api_exception.dart';
 import 'remote_constants.dart';
-
-import 'dart:convert';
-import 'package:dio/dio.dart';
-
-import 'dart:convert';
-import 'package:dio/dio.dart';
+import '../../../presentation/adminFeatures/di/injector.dart';
 
 class SafeJsonOnlyTransformer extends Transformer {
    SafeJsonOnlyTransformer();
@@ -109,11 +103,18 @@ class HeaderInterceptor extends Interceptor {
   final bool? isRequiredAuth;
   final Device device;
   final LoggerRepository loggerRepository;
+  final AuthSessionManager? authSessionManager;
 
-  HeaderInterceptor(this.userRepository, this.localRepository,
-      {this.isRequiredAuth,
-        required this.device,
-        required this.loggerRepository});
+  HeaderInterceptor(
+    this.userRepository,
+    this.localRepository, {
+    this.isRequiredAuth,
+    required this.device,
+    required this.loggerRepository,
+    this.authSessionManager,
+  });
+
+  static const _retriedKey = 'retried_after_refresh';
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
@@ -157,7 +158,7 @@ class HeaderInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioException err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) async {
     print('=== DIO ERROR START ===');
     print('type: ${err.type}');
     print('message: ${err.message}');
@@ -187,8 +188,31 @@ class HeaderInterceptor extends Interceptor {
       }
 
       if (statusCode == 401 && isRequiredAuth == true) {
+        final alreadyRetried = err.requestOptions.extra[_retriedKey] == true;
+        final sessionManager = authSessionManager;
+        if (!alreadyRetried && sessionManager != null) {
+          final refreshed = await sessionManager.refresh();
+          if (refreshed) {
+            try {
+              final newToken = userRepository.getAccessToken();
+              final options = err.requestOptions;
+              options.extra[_retriedKey] = true;
+              if (newToken.isNotEmpty) {
+                options.headers[keyAuthorization] = 'Bearer $newToken';
+              } else {
+                options.headers.remove(keyAuthorization);
+              }
+
+              final response = await getIt.get<Dio>().fetch(options);
+              return handler.resolve(response);
+            } catch (_) {
+              // fallthrough to unauthorized below
+            }
+          }
+        }
+
         handler.reject(
-          DioError(
+          DioException(
             requestOptions: err.requestOptions,
             response: err.response,
             type: err.type,
@@ -196,25 +220,40 @@ class HeaderInterceptor extends Interceptor {
           ),
         );
         return;
-      } else {
-        final errorData = err.response!.data;
-        final parsed = errorData is String
-            ? json.decode(errorData) as Map<String, dynamic>
-            : errorData as Map<String, dynamic>;
-        final message = parsed['message']?.toString() ?? 'Error';
-        final code = parsed['code']?.toString() ?? 'E';
-        handler.reject(
-          DioException(
-            requestOptions: err.requestOptions,
-            response: err.response,
-            type: err.type,
-            message: message,
-            error: ApiException(message, code),
-          ),
-        );
-        return;
       }
+
+      final parsed = _tryParseErrorMap(err.response!.data);
+      final message =
+          parsed?['message']?.toString() ?? err.message ?? 'Request failed';
+      final code = parsed?['code']?.toString() ?? 'E';
+      handler.reject(
+        DioException(
+          requestOptions: err.requestOptions,
+          response: err.response,
+          type: err.type,
+          message: message,
+          error: ApiException(message, code),
+        ),
+      );
+      return;
     }
     handler.next(err);
+  }
+
+  // Parse error response safely; servers sometimes return HTML/plain text or empty body.
+  Map<String, dynamic>? _tryParseErrorMap(dynamic data) {
+    if (data == null) return null;
+    if (data is Map<String, dynamic>) return data;
+    if (data is String) {
+      final trimmed = data.trim();
+      if (trimmed.isEmpty) return null;
+      try {
+        final decoded = json.decode(trimmed);
+        if (decoded is Map<String, dynamic>) return decoded;
+      } catch (_) {
+        return null;
+      }
+    }
+    return null;
   }
 }
