@@ -161,7 +161,7 @@ class AttachmentEmployeeItem extends BaseStatelessWidget {
               Navigator.pushNamed(context, Routes.filesPreviewPage,
                   arguments: [url]);
             },
-            child: kBuildImage(url, width: 60, height: 40));
+            child: kBuildImage(url, width: 60, height: 40,showFullImage: true));
       } else {
         return kLoadSvgInCirclePath(AppIcons.upload_files,
             width: 50, height: 40);

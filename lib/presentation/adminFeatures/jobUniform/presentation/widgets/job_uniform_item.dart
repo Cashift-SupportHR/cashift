@@ -38,6 +38,7 @@ class JobUniformItem extends BaseStatelessWidget {
             child:   kBuildImage(
                 width: 70,
                 uniformDetail.uniFormImage ?? '',
+                showFullImage: true
               ),
 
           ),

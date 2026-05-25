@@ -115,6 +115,7 @@ class VehicleReceiveRequestWaitingAcceptItem extends BaseStatelessWidget {
                   height: 36,
                   width: 50,
                   borderRadius: 0,
+              showFullImage: true
                 ),
         ),
       ],

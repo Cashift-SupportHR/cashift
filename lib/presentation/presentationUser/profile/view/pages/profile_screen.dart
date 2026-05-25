@@ -241,7 +241,7 @@ class _ProfileImagePickerState extends State<ProfileImagePicker> {
     print('IMAGE PATH ${widget.imagePath}');
     return InkWell(
       child: pickedFile == null
-          ? kBuildCircleImage(widget.imagePath, size: 50, showFullImage: false)
+          ? kBuildCircleImage(widget.imagePath, size: 50, showFullImage: true)
           : kBuildCircleImageFromFile(file!, size: 50),
       onTap: () {
         pickImage();

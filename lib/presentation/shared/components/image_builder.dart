@@ -15,11 +15,11 @@ Widget kBuildImage(String path,
     double? border,
     BoxFit? fit,
     bool showImageError = true,
-      bool showFullImage = true,
+   bool showFullImage = false,
     double? errorIconSize}) {
   print('kBuildImage $path');
   return InkWell(
-    onTap: showFullImage ? () {
+    onTap: showFullImage==true ? () {
         Navigator.pushNamed(
           Get.context!,
           Routes.filesPreviewPage,
@@ -140,10 +140,10 @@ Widget kBuildCircleImage(String path,
     EdgeInsetsGeometry? padding,
     EdgeInsetsGeometry? margin,
     Decoration? decoration,
-      bool showFullImage = true,
+    bool showFullImage = false,
     BoxFit? fit}) {
   return InkWell(
-    onTap: showFullImage ?
+    onTap: showFullImage==true ?
         () {
         Navigator.pushNamed(
           Get.context!,

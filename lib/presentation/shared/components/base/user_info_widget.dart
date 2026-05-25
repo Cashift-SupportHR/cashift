@@ -46,6 +46,7 @@ class UserInfoWidget extends StatelessWidget {
           size: imageSize,
           decoration: decoration,
           borderColor: borderColor,
+            showFullImage: true
         ),
         SizedBox(
           width: 5,

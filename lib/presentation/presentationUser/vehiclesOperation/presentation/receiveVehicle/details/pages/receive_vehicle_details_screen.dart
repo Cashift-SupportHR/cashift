@@ -100,7 +100,7 @@ class ReceiveVehicleDetailsScreen extends BaseStatelessWidget {
                     height: 50,
                     width: 50,
                     borderRadius: 0,
-                    showFullImage: false,
+                    showFullImage: true,
                   );
                 }).toList() ??
                 [],

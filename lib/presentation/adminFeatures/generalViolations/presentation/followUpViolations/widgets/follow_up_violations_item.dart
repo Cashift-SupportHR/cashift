@@ -163,6 +163,7 @@ class FollowUpViolationItem extends BaseStatelessWidget {
                               height: 42,
                               width: 60,
                               borderRadius: 0,
+                          showFullImage: true
                             ),
                     ))
                 .toList() ??
