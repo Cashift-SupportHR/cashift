@@ -133,6 +133,7 @@ class HeaderInterceptor extends Interceptor {
     // 2) forward to next interceptor
     handler.next(options);
   }
+
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     final data = response.data;
