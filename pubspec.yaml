@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.5.0+117
+version: 1.5.1+118
 
 environment:
   sdk: ^3.9.2
@@ -129,7 +129,7 @@ dependencies:
     git: https://github.com/Cashift-SupportHR/liveness_detection.git
   #  flutter_exif_rotation: ^0.5.1
   collection: ^1.19.1
-  flutter_face_api: ^8.2.1021
+  flutter_face_api: 8.2.1103
   #  google_mlkit_face_detection: ^0.5.0
   dropdown_button2: ^2.3.9
   #app_tracking_transparency: ^2.0.6+1

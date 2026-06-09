@@ -1,10 +1,10 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=H:\flutter_versions\flutter_windows_3.35.5-stable\flutter
-FLUTTER_APPLICATION_PATH=H:\Projects\Flutter\support\cashift
+FLUTTER_ROOT=/Users/mohamedfarag/fvm/versions/3.35.7
+FLUTTER_APPLICATION_PATH=/Users/mohamedfarag/StudioProjects/cashift
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_BUILD_DIR=build
-FLUTTER_BUILD_NAME=1.5.0
-FLUTTER_BUILD_NUMBER=117
+FLUTTER_BUILD_NAME=1.5.1
+FLUTTER_BUILD_NUMBER=118
 DART_OBFUSCATION=false
 TRACK_WIDGET_CREATION=true
 TREE_SHAKE_ICONS=false

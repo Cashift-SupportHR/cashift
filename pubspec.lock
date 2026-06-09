@@ -674,10 +674,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_face_api
-      sha256: "116f5faa75359bf33b6ae3db741f9eff781aa0564d1cdfbbea925038affba603"
+      sha256: "4a801a93debe0c9a504ff6d4f28031cd78ad94761129516d11a5f7b30cabde6d"
       url: "https://pub.dev"
     source: hosted
-    version: "8.2.1021"
+    version: "8.2.1103"
   flutter_face_core_match:
     dependency: "direct main"
     description:
