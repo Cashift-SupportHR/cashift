@@ -11,8 +11,11 @@ AddComponentsPrams _$AddComponentsPramsFromJson(Map<String, dynamic> json) =>
       vehicleHandoverId: (json['vehicleHandoverId'] as num?)?.toInt(),
       vehicleComponentsStatuses:
           (json['vehicleComponentsStatuses'] as List<dynamic>?)
-              ?.map((e) =>
-                  VehicleComponentsStatuse.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                (e) => VehicleComponentsStatuse.fromJson(
+                  e as Map<String, dynamic>,
+                ),
+              )
               .toList(),
     );
 
@@ -23,15 +26,15 @@ Map<String, dynamic> _$AddComponentsPramsToJson(AddComponentsPrams instance) =>
     };
 
 VehicleComponentsStatuse _$VehicleComponentsStatuseFromJson(
-        Map<String, dynamic> json) =>
-    VehicleComponentsStatuse(
-      vehicleComponentId: (json['vehicleComponentId'] as num?)?.toInt(),
-      componentStatus: json['componentStatus'] as bool?,
-    );
+  Map<String, dynamic> json,
+) => VehicleComponentsStatuse(
+  vehicleComponentId: (json['vehicleComponentId'] as num?)?.toInt(),
+  componentStatus: json['componentStatus'] as bool?,
+);
 
 Map<String, dynamic> _$VehicleComponentsStatuseToJson(
-        VehicleComponentsStatuse instance) =>
-    <String, dynamic>{
-      'vehicleComponentId': instance.vehicleComponentId,
-      'componentStatus': instance.componentStatus,
-    };
+  VehicleComponentsStatuse instance,
+) => <String, dynamic>{
+  'vehicleComponentId': instance.vehicleComponentId,
+  'componentStatus': instance.componentStatus,
+};

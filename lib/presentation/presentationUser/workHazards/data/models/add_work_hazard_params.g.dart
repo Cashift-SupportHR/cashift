@@ -20,15 +20,15 @@ AddWorkHazardParams _$AddWorkHazardParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AddWorkHazardParamsToJson(
-        AddWorkHazardParams instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'hazardPriorityLevelId': instance.hazardPriorityLevelId,
-      'hazardTypeId': instance.hazardTypeId,
-      'hazardSatusId': instance.hazardSatusId,
-      'hazardStatusName': instance.hazardStatusName,
-      'projectId': instance.projectId,
-      'companyId': instance.companyId,
-      'shiftId': instance.shiftId,
-      'description': instance.description,
-    };
+  AddWorkHazardParams instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'hazardPriorityLevelId': instance.hazardPriorityLevelId,
+  'hazardTypeId': instance.hazardTypeId,
+  'hazardSatusId': instance.hazardSatusId,
+  'hazardStatusName': instance.hazardStatusName,
+  'projectId': instance.projectId,
+  'companyId': instance.companyId,
+  'shiftId': instance.shiftId,
+  'description': instance.description,
+};

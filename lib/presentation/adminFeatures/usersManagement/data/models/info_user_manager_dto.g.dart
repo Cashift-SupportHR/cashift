@@ -67,29 +67,29 @@ Map<String, dynamic> _$InfoUserManagerDtoToJson(InfoUserManagerDto instance) =>
     };
 
 RoleDto _$RoleDtoFromJson(Map<String, dynamic> json) => RoleDto(
-      id: json['id'] as String?,
-      name: json['name'] as String?,
-      description: json['description'] as String?,
-      level: (json['level'] as num?)?.toInt(),
-      isProject: json['isProject'] as bool?,
-      isCompany: json['isCompany'] as bool?,
-      isShift: json['isShift'] as bool?,
-      isBrand: json['isBrand'] as bool?,
-      isArea: json['isArea'] as bool?,
-      isMultiProject: json['isMultiProject'] as bool?,
-      isMultiShift: json['isMultiShift'] as bool?,
-    );
+  id: json['id'] as String?,
+  name: json['name'] as String?,
+  description: json['description'] as String?,
+  level: (json['level'] as num?)?.toInt(),
+  isProject: json['isProject'] as bool?,
+  isCompany: json['isCompany'] as bool?,
+  isShift: json['isShift'] as bool?,
+  isBrand: json['isBrand'] as bool?,
+  isArea: json['isArea'] as bool?,
+  isMultiProject: json['isMultiProject'] as bool?,
+  isMultiShift: json['isMultiShift'] as bool?,
+);
 
 Map<String, dynamic> _$RoleDtoToJson(RoleDto instance) => <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'description': instance.description,
-      'level': instance.level,
-      'isProject': instance.isProject,
-      'isCompany': instance.isCompany,
-      'isShift': instance.isShift,
-      'isBrand': instance.isBrand,
-      'isArea': instance.isArea,
-      'isMultiProject': instance.isMultiProject,
-      'isMultiShift': instance.isMultiShift,
-    };
+  'id': instance.id,
+  'name': instance.name,
+  'description': instance.description,
+  'level': instance.level,
+  'isProject': instance.isProject,
+  'isCompany': instance.isCompany,
+  'isShift': instance.isShift,
+  'isBrand': instance.isBrand,
+  'isArea': instance.isArea,
+  'isMultiProject': instance.isMultiProject,
+  'isMultiShift': instance.isMultiShift,
+};

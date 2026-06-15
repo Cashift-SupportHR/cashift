@@ -14,9 +14,9 @@ EmployeeStatusesDto _$EmployeeStatusesDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$EmployeeStatusesDtoToJson(
-        EmployeeStatusesDto instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-      'name': instance.name,
-      'id': instance.id,
-    };
+  EmployeeStatusesDto instance,
+) => <String, dynamic>{
+  'code': instance.code,
+  'name': instance.name,
+  'id': instance.id,
+};

@@ -7,10 +7,10 @@ part of 'last_price_dto.dart';
 // **************************************************************************
 
 LastPriceDto _$LastPriceDtoFromJson(Map<String, dynamic> json) => LastPriceDto(
-      fromDay: (json['fromDay'] as num?)?.toInt(),
-      toDay: (json['toDay'] as num?)?.toInt(),
-      salary: (json['salary'] as num?)?.toDouble(),
-    );
+  fromDay: (json['fromDay'] as num?)?.toInt(),
+  toDay: (json['toDay'] as num?)?.toInt(),
+  salary: (json['salary'] as num?)?.toDouble(),
+);
 
 Map<String, dynamic> _$LastPriceDtoToJson(LastPriceDto instance) =>
     <String, dynamic>{

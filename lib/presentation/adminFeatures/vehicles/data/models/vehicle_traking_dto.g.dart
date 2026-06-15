@@ -18,7 +18,8 @@ VehicleTrakingDto _$VehicleTrakingDtoFromJson(Map<String, dynamic> json) =>
       vehicleGPSDetails: json['vehicleGPSDetails'] == null
           ? null
           : VehicleGPSDetails.fromJson(
-              json['vehicleGPSDetails'] as Map<String, dynamic>),
+              json['vehicleGPSDetails'] as Map<String, dynamic>,
+            ),
     );
 
 Map<String, dynamic> _$VehicleTrakingDtoToJson(VehicleTrakingDto instance) =>
@@ -30,36 +31,36 @@ Map<String, dynamic> _$VehicleTrakingDtoToJson(VehicleTrakingDto instance) =>
     };
 
 Driver _$DriverFromJson(Map<String, dynamic> json) => Driver(
-      freelancerInfoId: (json['freelancerInfoId'] as num?)?.toInt(),
-      freelancerInfoName: json['freelancerInfoName'] as String?,
-      projectId: (json['projectId'] as num?)?.toInt(),
-      projectName: json['projectName'] as String?,
-      shiftId: (json['shiftId'] as num?)?.toInt(),
-      shiftName: json['shiftName'] as String?,
-    );
+  freelancerInfoId: (json['freelancerInfoId'] as num?)?.toInt(),
+  freelancerInfoName: json['freelancerInfoName'] as String?,
+  projectId: (json['projectId'] as num?)?.toInt(),
+  projectName: json['projectName'] as String?,
+  shiftId: (json['shiftId'] as num?)?.toInt(),
+  shiftName: json['shiftName'] as String?,
+);
 
 Map<String, dynamic> _$DriverToJson(Driver instance) => <String, dynamic>{
-      'freelancerInfoId': instance.freelancerInfoId,
-      'freelancerInfoName': instance.freelancerInfoName,
-      'projectId': instance.projectId,
-      'projectName': instance.projectName,
-      'shiftId': instance.shiftId,
-      'shiftName': instance.shiftName,
-    };
+  'freelancerInfoId': instance.freelancerInfoId,
+  'freelancerInfoName': instance.freelancerInfoName,
+  'projectId': instance.projectId,
+  'projectName': instance.projectName,
+  'shiftId': instance.shiftId,
+  'shiftName': instance.shiftName,
+};
 
 VehicleEvent _$VehicleEventFromJson(Map<String, dynamic> json) => VehicleEvent(
-      eventIndexCode: json['eventIndexCode'] as String?,
-      eventType: json['eventType'] as String?,
-      mobilevehicleIndexCode: (json['mobilevehicleIndexCode'] as num?)?.toInt(),
-      latitude: json['latitude'] as String?,
-      longitude: json['longitude'] as String?,
-      speed: (json['speed'] as num?)?.toInt(),
-      time: json['time'] as String?,
-      isAllowPicture: json['isAllowPicture'] as bool?,
-      companyId: (json['companyId'] as num?)?.toInt(),
-      companyName: json['companyName'] as String?,
-      address: json['address'] as String?,
-    );
+  eventIndexCode: json['eventIndexCode'] as String?,
+  eventType: json['eventType'] as String?,
+  mobilevehicleIndexCode: (json['mobilevehicleIndexCode'] as num?)?.toInt(),
+  latitude: json['latitude'] as String?,
+  longitude: json['longitude'] as String?,
+  speed: (json['speed'] as num?)?.toInt(),
+  time: json['time'] as String?,
+  isAllowPicture: json['isAllowPicture'] as bool?,
+  companyId: (json['companyId'] as num?)?.toInt(),
+  companyName: json['companyName'] as String?,
+  address: json['address'] as String?,
+);
 
 Map<String, dynamic> _$VehicleEventToJson(VehicleEvent instance) =>
     <String, dynamic>{
@@ -91,17 +92,17 @@ Map<String, dynamic> _$VehicleGPSDetailsToJson(VehicleGPSDetails instance) =>
     };
 
 Detail _$DetailFromJson(Map<String, dynamic> json) => Detail(
-      latitude: (json['latitude'] as num?)?.toDouble(),
-      longitude: (json['longitude'] as num?)?.toDouble(),
-      time: json['time'] as String?,
-      speed: (json['speed'] as num?)?.toInt(),
-      direction: (json['direction'] as num?)?.toInt(),
-    );
+  latitude: (json['latitude'] as num?)?.toDouble(),
+  longitude: (json['longitude'] as num?)?.toDouble(),
+  time: json['time'] as String?,
+  speed: (json['speed'] as num?)?.toInt(),
+  direction: (json['direction'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$DetailToJson(Detail instance) => <String, dynamic>{
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'time': instance.time,
-      'speed': instance.speed,
-      'direction': instance.direction,
-    };
+  'latitude': instance.latitude,
+  'longitude': instance.longitude,
+  'time': instance.time,
+  'speed': instance.speed,
+  'direction': instance.direction,
+};

@@ -9,8 +9,8 @@ import '../../../resources/constants.dart';
 
 class ManaOrderCart extends BaseStatelessWidget {
   DeliveryOrderEntity data;
-
-  ManaOrderCart({super.key, required this.data});
+Function()onRefresh;
+  ManaOrderCart({super.key, required this.data, required this.onRefresh});
 
   @override
   Widget build(BuildContext context) {
@@ -195,7 +195,11 @@ class ManaOrderCart extends BaseStatelessWidget {
         padding: const EdgeInsets.all(5),
         radius: BorderRadius.circular(10),
         onPressed: () {
-          Navigator.pushNamed(context, Routes.mainManaDeliverPage, arguments: data);
+          Navigator.pushNamed(context, Routes.mainManaDeliverPage, arguments: data).then((value) {
+            if (value == true) {
+              onRefresh ();
+            }
+          });
 
           // onClickApply!();
         },

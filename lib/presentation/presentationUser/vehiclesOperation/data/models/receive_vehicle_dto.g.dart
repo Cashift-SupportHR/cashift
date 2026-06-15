@@ -11,11 +11,13 @@ ReceiveVehicleDto _$ReceiveVehicleDtoFromJson(Map<String, dynamic> json) =>
       pageNumber: (json['pageNumber'] as num?)?.toInt(),
       pageSize: (json['pageSize'] as num?)?.toInt(),
       totalData: (json['totalData'] as num?)?.toInt(),
-      receiveVehicleDataDto: (json['vehicleComponentCustoHandOverViewModels']
-              as List<dynamic>?)
-          ?.map(
-              (e) => ReceiveVehicleDataDto.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      receiveVehicleDataDto:
+          (json['vehicleComponentCustoHandOverViewModels'] as List<dynamic>?)
+              ?.map(
+                (e) =>
+                    ReceiveVehicleDataDto.fromJson(e as Map<String, dynamic>),
+              )
+              .toList(),
     );
 
 Map<String, dynamic> _$ReceiveVehicleDtoToJson(ReceiveVehicleDto instance) =>

@@ -15,7 +15,9 @@ AddInsurancePrams _$AddInsurancePramsFromJson(Map<String, dynamic> json) =>
       vehicleId: (json['VehicleId'] as num?)?.toInt(),
       vehicleInsuranceTypeId: json['VehicleInsuranceTypeId'] as String?,
       insuranceImage: _$JsonConverterFromJson<String, File>(
-          json['InsuranceImage'], const FileJsonConverter().fromJson),
+        json['InsuranceImage'],
+        const FileJsonConverter().fromJson,
+      ),
     );
 
 Map<String, dynamic> _$AddInsurancePramsToJson(AddInsurancePrams instance) =>
@@ -27,17 +29,17 @@ Map<String, dynamic> _$AddInsurancePramsToJson(AddInsurancePrams instance) =>
       'Id': instance.id,
       'VehicleInsuranceTypeId': instance.vehicleInsuranceTypeId,
       'InsuranceImage': _$JsonConverterToJson<String, File>(
-          instance.insuranceImage, const FileJsonConverter().toJson),
+        instance.insuranceImage,
+        const FileJsonConverter().toJson,
+      ),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,
   Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
+) => json == null ? null : fromJson(json as Json);
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

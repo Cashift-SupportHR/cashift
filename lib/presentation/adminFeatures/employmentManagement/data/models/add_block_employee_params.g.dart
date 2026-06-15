@@ -7,15 +7,15 @@ part of 'add_block_employee_params.dart';
 // **************************************************************************
 
 AddBlockEmployeeParams _$AddBlockEmployeeParamsFromJson(
-        Map<String, dynamic> json) =>
-    AddBlockEmployeeParams(
-      freeLancerId: (json['freeLancerId'] as num?)?.toInt(),
-      banReason: json['banReason'] as String?,
-    );
+  Map<String, dynamic> json,
+) => AddBlockEmployeeParams(
+  freeLancerId: (json['freeLancerId'] as num?)?.toInt(),
+  banReason: json['banReason'] as String?,
+);
 
 Map<String, dynamic> _$AddBlockEmployeeParamsToJson(
-        AddBlockEmployeeParams instance) =>
-    <String, dynamic>{
-      'freeLancerId': instance.freeLancerId,
-      'banReason': instance.banReason,
-    };
+  AddBlockEmployeeParams instance,
+) => <String, dynamic>{
+  'freeLancerId': instance.freeLancerId,
+  'banReason': instance.banReason,
+};

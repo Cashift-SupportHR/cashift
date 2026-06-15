@@ -7,10 +7,10 @@ part of 'withdraw_data.dart';
 // **************************************************************************
 
 WithdrawData _$WithdrawDataFromJson(Map<String, dynamic> json) => WithdrawData(
-      (json['transferBalance'] as num?)?.toDouble(),
-      (json['totalBalance'] as num?)?.toDouble(),
-      (json['transferFee'] as num?)?.toDouble(),
-    );
+  (json['transferBalance'] as num?)?.toDouble(),
+  (json['totalBalance'] as num?)?.toDouble(),
+  (json['transferFee'] as num?)?.toDouble(),
+);
 
 Map<String, dynamic> _$WithdrawDataToJson(WithdrawData instance) =>
     <String, dynamic>{

@@ -14,9 +14,9 @@ FreeLanceInfoParams _$FreeLanceInfoParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$FreeLanceInfoParamsToJson(
-        FreeLanceInfoParams instance) =>
-    <String, dynamic>{
-      'isWeb': instance.isWeb,
-      'oppId': instance.oppId,
-      'freeLanceId': instance.freeLanceId,
-    };
+  FreeLanceInfoParams instance,
+) => <String, dynamic>{
+  'isWeb': instance.isWeb,
+  'oppId': instance.oppId,
+  'freeLanceId': instance.freeLanceId,
+};

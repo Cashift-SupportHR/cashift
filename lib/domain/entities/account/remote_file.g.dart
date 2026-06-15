@@ -7,12 +7,12 @@ part of 'remote_file.dart';
 // **************************************************************************
 
 RemoteFile _$RemoteFileFromJson(Map<String, dynamic> json) => RemoteFile(
-      fileAttachmentType: json['fileAttachmentType'] as String?,
-      fileName: json['fileName'] as String?,
-      fileAttachment: json['fileAttachment'] as String?,
-      allowedEdit: json['allowEditFaceRecognition'] as bool?,
-      notes: json['notes'] as String?,
-    );
+  fileAttachmentType: json['fileAttachmentType'] as String?,
+  fileName: json['fileName'] as String?,
+  fileAttachment: json['fileAttachment'] as String?,
+  allowedEdit: json['allowEditFaceRecognition'] as bool?,
+  notes: json['notes'] as String?,
+);
 
 Map<String, dynamic> _$RemoteFileToJson(RemoteFile instance) =>
     <String, dynamic>{

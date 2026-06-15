@@ -81,7 +81,4 @@ WeekDaysNameDto _$WeekDaysNameDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$WeekDaysNameDtoToJson(WeekDaysNameDto instance) =>
-    <String, dynamic>{
-      'dayValue': instance.dayValue,
-      'name': instance.name,
-    };
+    <String, dynamic>{'dayValue': instance.dayValue, 'name': instance.name};

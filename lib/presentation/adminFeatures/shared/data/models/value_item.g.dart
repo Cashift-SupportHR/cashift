@@ -7,11 +7,11 @@ part of 'value_item.dart';
 // **************************************************************************
 
 ValueItem _$ValueItemFromJson(Map<String, dynamic> json) => ValueItem(
-      value: (json['value'] as num?)?.toInt(),
-      name: json['name'] as String?,
-    );
+  value: (json['value'] as num?)?.toInt(),
+  name: json['name'] as String?,
+);
 
 Map<String, dynamic> _$ValueItemToJson(ValueItem instance) => <String, dynamic>{
-      'value': instance.value,
-      'name': instance.name,
-    };
+  'value': instance.value,
+  'name': instance.name,
+};

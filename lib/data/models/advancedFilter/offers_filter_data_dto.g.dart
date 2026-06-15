@@ -17,8 +17,5 @@ OffersFilterDataDto _$OffersFilterDataDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$OffersFilterDataDtoToJson(
-        OffersFilterDataDto instance) =>
-    <String, dynamic>{
-      'jobs': instance.jobs,
-      'company': instance.company,
-    };
+  OffersFilterDataDto instance,
+) => <String, dynamic>{'jobs': instance.jobs, 'company': instance.company};

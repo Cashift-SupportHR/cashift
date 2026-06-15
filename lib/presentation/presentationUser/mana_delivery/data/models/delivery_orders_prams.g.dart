@@ -13,8 +13,5 @@ DeliveryOrdersPrams _$DeliveryOrdersPramsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DeliveryOrdersPramsToJson(
-        DeliveryOrdersPrams instance) =>
-    <String, dynamic>{
-      'lat': instance.lat,
-      'lng': instance.lng,
-    };
+  DeliveryOrdersPrams instance,
+) => <String, dynamic>{'lat': instance.lat, 'lng': instance.lng};

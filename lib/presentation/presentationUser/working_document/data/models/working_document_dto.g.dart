@@ -29,10 +29,7 @@ BenefitDocument _$BenefitDocumentFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$BenefitDocumentToJson(BenefitDocument instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};
 
 PaymentDocument _$PaymentDocumentFromJson(Map<String, dynamic> json) =>
     PaymentDocument(

@@ -7,15 +7,15 @@ part of 'schedule_price_opportunity.dart';
 // **************************************************************************
 
 SchedulePriceOpportunity _$SchedulePriceOpportunityFromJson(
-        Map<String, dynamic> json) =>
-    SchedulePriceOpportunity(
-      isAllowEditPrice: json['isAllowEditPrice'] as bool?,
-      salary: (json['salary'] as num?)?.toDouble(),
-    );
+  Map<String, dynamic> json,
+) => SchedulePriceOpportunity(
+  isAllowEditPrice: json['isAllowEditPrice'] as bool?,
+  salary: (json['salary'] as num?)?.toDouble(),
+);
 
 Map<String, dynamic> _$SchedulePriceOpportunityToJson(
-        SchedulePriceOpportunity instance) =>
-    <String, dynamic>{
-      'isAllowEditPrice': instance.isAllowEditPrice,
-      'salary': instance.salary,
-    };
+  SchedulePriceOpportunity instance,
+) => <String, dynamic>{
+  'isAllowEditPrice': instance.isAllowEditPrice,
+  'salary': instance.salary,
+};

@@ -47,11 +47,7 @@ Map<String, dynamic> _$WorkHazardDtoToJson(WorkHazardDto instance) =>
     };
 
 WorkHazardImageDto _$WorkHazardImageDtoFromJson(Map<String, dynamic> json) =>
-    WorkHazardImageDto(
-      path: json['path'] as String?,
-    );
+    WorkHazardImageDto(path: json['path'] as String?);
 
 Map<String, dynamic> _$WorkHazardImageDtoToJson(WorkHazardImageDto instance) =>
-    <String, dynamic>{
-      'path': instance.path,
-    };
+    <String, dynamic>{'path': instance.path};

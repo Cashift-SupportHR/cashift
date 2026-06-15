@@ -4562,4 +4562,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get face_image_required_proceed => 'يجب اضافة بصمة الوجه للمتابعة';
+
+  @override
+  String get delivery_code => 'كود التسليم';
+
+  @override
+  String get my_order => 'طلباتي';
+
+  @override
+  String get enter_warehouse_code => 'إدخال كود المستودع';
+
+  @override
+  String get accept_delivery_request => 'قبول طلب التوصيل';
+
+  @override
+  String get pending_delivery_requests => 'طلبات في انتظار التوصيل';
 }

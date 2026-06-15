@@ -13,7 +13,4 @@ PunishmentTypeDto _$PunishmentTypeDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PunishmentTypeDtoToJson(PunishmentTypeDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

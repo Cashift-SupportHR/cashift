@@ -13,7 +13,4 @@ ProjectFiltterDto _$ProjectFiltterDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ProjectFiltterDtoToJson(ProjectFiltterDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

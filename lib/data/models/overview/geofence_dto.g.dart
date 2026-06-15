@@ -7,12 +7,12 @@ part of 'geofence_dto.dart';
 // **************************************************************************
 
 GeofenceDto _$GeofenceDtoFromJson(Map<String, dynamic> json) => GeofenceDto(
-      latitude: json['latitude'] as String?,
-      longtude: json['longtude'] as String?,
-      radius: json['radius'] as String?,
-      projectName: json['projectName'] as String?,
-      isAutoAttendance: json['isAutoAttendance'] as bool?,
-    );
+  latitude: json['latitude'] as String?,
+  longtude: json['longtude'] as String?,
+  radius: json['radius'] as String?,
+  projectName: json['projectName'] as String?,
+  isAutoAttendance: json['isAutoAttendance'] as bool?,
+);
 
 Map<String, dynamic> _$GeofenceDtoToJson(GeofenceDto instance) =>
     <String, dynamic>{

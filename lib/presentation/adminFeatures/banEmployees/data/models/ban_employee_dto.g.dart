@@ -8,20 +8,20 @@ part of 'ban_employee_dto.dart';
 
 BanEmployeeDto _$BanEmployeeDtoFromJson(Map<String, dynamic> json) =>
     BanEmployeeDto(
-      id: (json['id'] as num?)?.toInt(),
-      freelanceId: (json['freelanceId'] as num?)?.toInt(),
-      freelanceName: json['freelanceName'] as String?,
-      projectId: (json['projectId'] as num?)?.toInt(),
-      companyId: (json['companyId'] as num?)?.toInt(),
-      projectName: json['projectName'] as String?,
-      description: json['description'] as String?,
-      evaluationPerCompany: (json['evaluationPerCompany'] as num?)?.toInt(),
-      totalEvaluationPerCompany:
-          (json['totalEvaluationPerCompany'] as num?)?.toInt(),
-      evaluationPerProject: (json['evaluationPerProject'] as num?)?.toInt(),
-      totalEvaluationPerProject:
-          (json['totalEvaluationPerProject'] as num?)?.toInt(),
-    )
+        id: (json['id'] as num?)?.toInt(),
+        freelanceId: (json['freelanceId'] as num?)?.toInt(),
+        freelanceName: json['freelanceName'] as String?,
+        projectId: (json['projectId'] as num?)?.toInt(),
+        companyId: (json['companyId'] as num?)?.toInt(),
+        projectName: json['projectName'] as String?,
+        description: json['description'] as String?,
+        evaluationPerCompany: (json['evaluationPerCompany'] as num?)?.toInt(),
+        totalEvaluationPerCompany: (json['totalEvaluationPerCompany'] as num?)
+            ?.toInt(),
+        evaluationPerProject: (json['evaluationPerProject'] as num?)?.toInt(),
+        totalEvaluationPerProject: (json['totalEvaluationPerProject'] as num?)
+            ?.toInt(),
+      )
       ..freelanceLogo = json['freelanceLogo'] as String?
       ..freelanceNotes = json['freelanceNotes'] as String?;
 

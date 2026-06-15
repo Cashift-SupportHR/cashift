@@ -7,12 +7,12 @@ part of 'logger_params.dart';
 // **************************************************************************
 
 LoggerParams _$LoggerParamsFromJson(Map<String, dynamic> json) => LoggerParams(
-      tagName: json['tagName'] as String?,
-      phoneNumber: json['phoneNumber'] as String?,
-      error: json['error'] as String?,
-      object: json['object'] as String?,
-      description: json['description'] as String?,
-    );
+  tagName: json['tagName'] as String?,
+  phoneNumber: json['phoneNumber'] as String?,
+  error: json['error'] as String?,
+  object: json['object'] as String?,
+  description: json['description'] as String?,
+);
 
 Map<String, dynamic> _$LoggerParamsToJson(LoggerParams instance) =>
     <String, dynamic>{

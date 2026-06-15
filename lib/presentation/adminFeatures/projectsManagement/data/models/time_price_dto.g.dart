@@ -7,12 +7,9 @@ part of 'time_price_dto.dart';
 // **************************************************************************
 
 TimePriceDto _$TimePriceDtoFromJson(Map<String, dynamic> json) => TimePriceDto(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+);
 
 Map<String, dynamic> _$TimePriceDtoToJson(TimePriceDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

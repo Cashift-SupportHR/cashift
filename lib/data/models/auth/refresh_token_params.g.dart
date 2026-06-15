@@ -7,11 +7,7 @@ part of 'refresh_token_params.dart';
 // **************************************************************************
 
 RefreshTokenParams _$RefreshTokenParamsFromJson(Map<String, dynamic> json) =>
-    RefreshTokenParams(
-      refreshToken: json['refreshToken'] as String,
-    );
+    RefreshTokenParams(refreshToken: json['refreshToken'] as String);
 
 Map<String, dynamic> _$RefreshTokenParamsToJson(RefreshTokenParams instance) =>
-    <String, dynamic>{
-      'refreshToken': instance.refreshToken,
-    };
+    <String, dynamic>{'refreshToken': instance.refreshToken};

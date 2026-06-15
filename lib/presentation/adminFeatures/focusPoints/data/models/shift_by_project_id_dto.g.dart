@@ -14,9 +14,9 @@ ShiftByProjectIdDto _$ShiftByProjectIdDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ShiftByProjectIdDtoToJson(
-        ShiftByProjectIdDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'shiftName': instance.shiftName,
-      'isActive': instance.isActive,
-    };
+  ShiftByProjectIdDto instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'shiftName': instance.shiftName,
+  'isActive': instance.isActive,
+};

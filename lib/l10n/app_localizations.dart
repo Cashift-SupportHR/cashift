@@ -8981,6 +8981,36 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'يجب اضافة بصمة الوجه للمتابعة'**
   String get face_image_required_proceed;
+
+  /// No description provided for @delivery_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'كود التسليم'**
+  String get delivery_code;
+
+  /// No description provided for @my_order.
+  ///
+  /// In ar, this message translates to:
+  /// **'طلباتي'**
+  String get my_order;
+
+  /// No description provided for @enter_warehouse_code.
+  ///
+  /// In ar, this message translates to:
+  /// **'إدخال كود المستودع'**
+  String get enter_warehouse_code;
+
+  /// No description provided for @accept_delivery_request.
+  ///
+  /// In ar, this message translates to:
+  /// **'قبول طلب التوصيل'**
+  String get accept_delivery_request;
+
+  /// No description provided for @pending_delivery_requests.
+  ///
+  /// In ar, this message translates to:
+  /// **'طلبات في انتظار التوصيل'**
+  String get pending_delivery_requests;
 }
 
 class _AppLocalizationsDelegate

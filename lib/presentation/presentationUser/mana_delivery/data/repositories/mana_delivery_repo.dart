@@ -57,6 +57,10 @@ class ManaDeliverRepository {
     final response = await _api.fetchDeliveryOrdersById(id);
     return OrderManaEntity.fromDto(response.payload!);
   }
+   Future<MyOrderEntity> fetchMyOrders( MyOrderPrams params) async {
+    final response = await _api.fetchMyOrders( params);
+    return MyOrderEntity.fromDto(response.payload!);
+  }
 
   Future<List<NearbyWarehousesEntity>> fetchNearbyWarehouses(
     DeliveryOrdersPrams params,

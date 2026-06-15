@@ -92,6 +92,7 @@ import '../../presentation/adminFeatures/vehicles/presentation/violations/add/pa
 import '../../presentation/adminFeatures/vehicles/presentation/violations/details/pages/vehicle_violation_details_page.dart';
 import '../../presentation/adminFeatures/vehicles/presentation/violations/view/pages/vehicle/vehicle_violations_page.dart';
 import '../../presentation/presentationUser/logistics_request/presentation/pages/main_logistics_request_page.dart';
+import '../../presentation/presentationUser/mana_delivery/presentation/my_order/pages/my_orders_page.dart';
 import '../../presentation/presentationUser/profile/addHomeAddress/pages/add_home_address_page.dart';
 import '../../presentation/presentationUser/profile/requests/presentation/pages/add/add_file_request/screen/add_file_requests_user_page.dart';
 import '../../presentation/presentationUser/profile/requests/presentation/pages/add/add_request/screen/add_requests_user_page.dart';
@@ -362,6 +363,7 @@ class Routes {
   static const String factoryViolationsPlanePage = '/factoryViolationsPlanePage';
   static const String mainLogisticsRequestPage = '/mainLogisticsRequestPage';
   static const String mainManaDeliverPage = '/MainManaDeliverPage';
+  static const String myOrderPage = '/myOrderPage';
 
   static final routes = <String, Widget Function(BuildContext)>{
     login: (context) => LoginPage(),
@@ -535,5 +537,6 @@ class Routes {
    factoryViolationsPlanePage: (context) => FactoryViolationsPlanePage(), // Add this line
     mainLogisticsRequestPage: (context) => MainLogisticsRequestPage(), // Add this line
     mainManaDeliverPage: (context) => MainManaDeliverPage(), // Add this line
+    myOrderPage: (context) => MyOrderPage(), // Add this line
    };
 }

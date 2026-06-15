@@ -13,8 +13,8 @@ AddMaintenanceDto _$AddMaintenanceDtoFromJson(Map<String, dynamic> json) =>
       projectId: (json['projectId'] as num?)?.toInt(),
       companyId: (json['companyId'] as num?)?.toInt(),
       shiftId: (json['shiftId'] as num?)?.toInt(),
-      faultsMaintenanceTypeId:
-          (json['faultsMaintenanceTypeId'] as num?)?.toInt(),
+      faultsMaintenanceTypeId: (json['faultsMaintenanceTypeId'] as num?)
+          ?.toInt(),
       scheduleEmployeeWorkId: (json['scheduleEmployeeWorkId'] as num?)?.toInt(),
       freeLanceId: (json['freeLanceId'] as num?)?.toInt(),
     );

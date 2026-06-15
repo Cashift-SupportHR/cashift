@@ -13,11 +13,12 @@ import 'permission_resume_listener.dart';
 class ManaOrderWidget extends BaseStatelessWidget {
   final StreamState<List<DeliveryOrderEntity>> deliveryOrdersStream;
   final VoidCallback onRetry;
-
+  Function()onRefresh;
   ManaOrderWidget({
     super.key,
     required this.deliveryOrdersStream,
     required this.onRetry,
+    required this.onRefresh,
   });
 
   @override
@@ -69,7 +70,7 @@ class ManaOrderWidget extends BaseStatelessWidget {
                 itemCount: orders.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return ManaOrderCart(data: orders[index]);
+                  return ManaOrderCart(data: orders[index],onRefresh: onRefresh,);
                 },
               ),
             ),

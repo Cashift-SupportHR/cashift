@@ -7,14 +7,14 @@ part of 'service_model.dart';
 // **************************************************************************
 
 ServiceModel _$ServiceModelFromJson(Map<String, dynamic> json) => ServiceModel(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
-      code: json['code'] as String?,
-      logo: json['logo'] as String?,
-      subCategory: (json['subCategory'] as List<dynamic>?)
-          ?.map((e) => SubCategory.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+  id: (json['id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+  code: json['code'] as String?,
+  logo: json['logo'] as String?,
+  subCategory: (json['subCategory'] as List<dynamic>?)
+      ?.map((e) => SubCategory.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$ServiceModelToJson(ServiceModel instance) =>
     <String, dynamic>{

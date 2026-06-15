@@ -8,8 +8,9 @@ part of 'vehicle_image_params.dart';
 
 VehicleImageParams _$VehicleImageParamsFromJson(Map<String, dynamic> json) =>
     VehicleImageParams(
-      images: const ListMultipartFileJsonConverter()
-          .fromJson(json['Images'] as List),
+      images: const ListMultipartFileJsonConverter().fromJson(
+        json['Images'] as List,
+      ),
       vehicleId: (json['VehicleId'] as num).toInt(),
     );
 

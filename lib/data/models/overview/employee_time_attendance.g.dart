@@ -7,15 +7,15 @@ part of 'employee_time_attendance.dart';
 // **************************************************************************
 
 EmployeeAttendanceTime _$EmployeeAttendanceTimeFromJson(
-        Map<String, dynamic> json) =>
-    EmployeeAttendanceTime(
-      startTime: json['startTime'] as String?,
-      endTime: json['endTime'] as String?,
-    );
+  Map<String, dynamic> json,
+) => EmployeeAttendanceTime(
+  startTime: json['startTime'] as String?,
+  endTime: json['endTime'] as String?,
+);
 
 Map<String, dynamic> _$EmployeeAttendanceTimeToJson(
-        EmployeeAttendanceTime instance) =>
-    <String, dynamic>{
-      'startTime': instance.startTime,
-      'endTime': instance.endTime,
-    };
+  EmployeeAttendanceTime instance,
+) => <String, dynamic>{
+  'startTime': instance.startTime,
+  'endTime': instance.endTime,
+};

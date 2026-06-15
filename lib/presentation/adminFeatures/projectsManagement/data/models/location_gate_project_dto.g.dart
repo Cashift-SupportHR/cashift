@@ -7,33 +7,33 @@ part of 'location_gate_project_dto.dart';
 // **************************************************************************
 
 LocationGateProjectDto _$LocationGateProjectDtoFromJson(
-        Map<String, dynamic> json) =>
-    LocationGateProjectDto(
-      companyName: json['companyName'] as String?,
-      projectName: json['projectName'] as String?,
-      mainLocation: json['mainLocation'] == null
-          ? null
-          : MainLocation.fromJson(json['mainLocation'] as Map<String, dynamic>),
-      projectCode: json['projectCode'] as String?,
-      locationsProject: (json['locationsProject'] as List<dynamic>?)
-          ?.map((e) => LocationsProject.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+  Map<String, dynamic> json,
+) => LocationGateProjectDto(
+  companyName: json['companyName'] as String?,
+  projectName: json['projectName'] as String?,
+  mainLocation: json['mainLocation'] == null
+      ? null
+      : MainLocation.fromJson(json['mainLocation'] as Map<String, dynamic>),
+  projectCode: json['projectCode'] as String?,
+  locationsProject: (json['locationsProject'] as List<dynamic>?)
+      ?.map((e) => LocationsProject.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$LocationGateProjectDtoToJson(
-        LocationGateProjectDto instance) =>
-    <String, dynamic>{
-      'companyName': instance.companyName,
-      'projectName': instance.projectName,
-      'mainLocation': instance.mainLocation,
-      'projectCode': instance.projectCode,
-      'locationsProject': instance.locationsProject,
-    };
+  LocationGateProjectDto instance,
+) => <String, dynamic>{
+  'companyName': instance.companyName,
+  'projectName': instance.projectName,
+  'mainLocation': instance.mainLocation,
+  'projectCode': instance.projectCode,
+  'locationsProject': instance.locationsProject,
+};
 
 MainLocation _$MainLocationFromJson(Map<String, dynamic> json) => MainLocation(
-      latitude: json['latitude'] as String?,
-      longitude: json['longitude'] as String?,
-    );
+  latitude: json['latitude'] as String?,
+  longitude: json['longitude'] as String?,
+);
 
 Map<String, dynamic> _$MainLocationToJson(MainLocation instance) =>
     <String, dynamic>{

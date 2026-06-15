@@ -14,9 +14,9 @@ VehicleImageFaceDto _$VehicleImageFaceDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$VehicleImageFaceDtoToJson(
-        VehicleImageFaceDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'imageFace': instance.imageFace,
-    };
+  VehicleImageFaceDto instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'name': instance.name,
+  'imageFace': instance.imageFace,
+};

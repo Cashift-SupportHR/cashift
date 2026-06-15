@@ -13,7 +13,4 @@ ProjectEmployeDto _$ProjectEmployeDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ProjectEmployeDtoToJson(ProjectEmployeDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

@@ -7,18 +7,18 @@ part of 'emp_map_dto.dart';
 // **************************************************************************
 
 EmpMapDto _$EmpMapDtoFromJson(Map<String, dynamic> json) => EmpMapDto(
-      malesCount: (json['malesCount'] as num?)?.toInt(),
-      femalesCount: (json['femalesCount'] as num?)?.toInt(),
-      freeLncerLocations: (json['freeLncerLocations'] as List<dynamic>?)
-          ?.map((e) => FreeLncerLocation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+  malesCount: (json['malesCount'] as num?)?.toInt(),
+  femalesCount: (json['femalesCount'] as num?)?.toInt(),
+  freeLncerLocations: (json['freeLncerLocations'] as List<dynamic>?)
+      ?.map((e) => FreeLncerLocation.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$EmpMapDtoToJson(EmpMapDto instance) => <String, dynamic>{
-      'malesCount': instance.malesCount,
-      'femalesCount': instance.femalesCount,
-      'freeLncerLocations': instance.freeLncerLocations,
-    };
+  'malesCount': instance.malesCount,
+  'femalesCount': instance.femalesCount,
+  'freeLncerLocations': instance.freeLncerLocations,
+};
 
 FreeLncerLocation _$FreeLncerLocationFromJson(Map<String, dynamic> json) =>
     FreeLncerLocation(

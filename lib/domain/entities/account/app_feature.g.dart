@@ -7,11 +7,11 @@ part of 'app_feature.dart';
 // **************************************************************************
 
 AppFeature _$AppFeatureFromJson(Map<String, dynamic> json) => AppFeature(
-      bankAccountEnable: json['bankAccountEnable'] as bool,
-      isAllowFaceRecognition: json['isAllowFaceRecognition'] as bool?,
-      rateEnable: json['rateEnable'] as bool?,
-      adminEnable: json['adminEnable'] as bool?,
-    );
+  bankAccountEnable: json['bankAccountEnable'] as bool,
+  isAllowFaceRecognition: json['isAllowFaceRecognition'] as bool?,
+  rateEnable: json['rateEnable'] as bool?,
+  adminEnable: json['adminEnable'] as bool?,
+);
 
 Map<String, dynamic> _$AppFeatureToJson(AppFeature instance) =>
     <String, dynamic>{

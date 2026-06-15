@@ -33,12 +33,12 @@ PointAttendanceTime _$PointAttendanceTimeFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PointAttendanceTimeToJson(
-        PointAttendanceTime instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'focusPointId': instance.focusPointId,
-      'shiftId': instance.shiftId,
-      'focusPointsAttendanceTypeId': instance.attendanceTypeId,
-      'startTime': instance.startTime,
-      'endTime': instance.endTime,
-    };
+  PointAttendanceTime instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'focusPointId': instance.focusPointId,
+  'shiftId': instance.shiftId,
+  'focusPointsAttendanceTypeId': instance.attendanceTypeId,
+  'startTime': instance.startTime,
+  'endTime': instance.endTime,
+};

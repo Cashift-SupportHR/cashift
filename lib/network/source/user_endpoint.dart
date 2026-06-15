@@ -54,6 +54,7 @@ import '../../presentation/presentationUser/logistics_request/data/models/car_lo
 import '../../presentation/presentationUser/logistics_request/data/models/car_terms_and_conditions_dto.dart';
 import '../../presentation/presentationUser/logistics_request/data/models/index.dart';
 import '../../presentation/presentationUser/mana_delivery/data/models/index.dart';
+import '../../presentation/presentationUser/mana_delivery/data/models/my_order_prams.dart';
 import '../../presentation/presentationUser/pledgesAndGeneralization/data/models/pledge_generalization_dto.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/terms_and_conditions_requests_prams.dart';
 import '../../presentation/presentationUser/profile/requests/data/models/add_request_prams.dart';
@@ -984,5 +985,8 @@ abstract class UserEndpoint {
 
   @GET('/v6/FreeLancerInfo/GetCashifterCode')
   Future<ApiResponse<CashifterCodeDto>> fetchCashifterCode( );
+
+  @GET('/v1/DeliveryOrder/GetMyDeliveryOrders')
+  Future<ApiResponse<MyOrderDto>> fetchMyOrders(@Queries() MyOrderPrams params);
 
 }

@@ -21,16 +21,16 @@ NearbyWarehousesDto _$NearbyWarehousesDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$NearbyWarehousesDtoToJson(
-        NearbyWarehousesDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'distanceKm': instance.distanceKm,
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'mapUrl': instance.mapUrl,
-      'fullAddress': instance.fullAddress,
-      'managerPhone': instance.managerPhone,
-      'cityName': instance.cityName,
-      'districtName': instance.districtName,
-    };
+  NearbyWarehousesDto instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'name': instance.name,
+  'distanceKm': instance.distanceKm,
+  'latitude': instance.latitude,
+  'longitude': instance.longitude,
+  'mapUrl': instance.mapUrl,
+  'fullAddress': instance.fullAddress,
+  'managerPhone': instance.managerPhone,
+  'cityName': instance.cityName,
+  'districtName': instance.districtName,
+};

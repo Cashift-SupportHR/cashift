@@ -39,6 +39,7 @@ import '../../../common/loading_stream_exception.dart';
 import 'package:geolocator/geolocator.dart' as geolocator;
 import '../../../logistics_request/data/repositories/logistics_request_repo.dart';
 import '../../../mana_delivery/data/models/delivery_orders_prams.dart';
+import '../../../mana_delivery/data/models/my_order_prams.dart';
 import '../../../mana_delivery/data/repositories/mana_delivery_repo.dart';
 import '../../../mana_delivery/domain/entities/index.dart';
 import 'package:location/location.dart' show LocationData;
@@ -83,6 +84,7 @@ class OverviewCubit extends BaseCubit {
   StreamState<List<JobOfferSlider>> jobOffersSliders = StreamStateInitial();
   StreamState<List<DeliveryOrderEntity>> deliverOrders = StreamStateInitial();
   StreamState<CashifterCodeDto> cashifterCodeStream = StreamStateInitial();
+  StreamState<MyOrderEntity> myOrderEntityStream = StreamStateInitial();
   LocationData? userLocation;
   //fetchCashifterCode
   clearData() {
@@ -265,7 +267,7 @@ class OverviewCubit extends BaseCubit {
   }
 
   fetchCashifterCode() async {
-    print('fetchJobOffersSliders');
+
     try {
       final response = await _profileRepository.fetchCashifterCode();
       cashifterCodeStream.setData(response);
@@ -274,6 +276,16 @@ class OverviewCubit extends BaseCubit {
       checkErrorType(e);
     }
     return cashifterCodeStream;
+  }
+  fetchMyOrder( ) async {
+    try {
+      final response = await manaDeliverRepository.fetchMyOrders(MyOrderPrams(key: 'notcomplete') );
+      myOrderEntityStream.setData(response);
+    } catch (e) {
+      myOrderEntityStream.setError(e);
+      checkErrorType(e);
+    }
+    return myOrderEntityStream;
   }
 
   addFreeLanceOffer(int id) async {
@@ -445,6 +457,7 @@ class OverviewCubit extends BaseCubit {
             jobOffersSliders: jobOffersSliders,
             cashifterCodeStream: cashifterCodeStream,
             deliveryOrdersStream: deliverOrders,
+            myOrderEntityStream: myOrderEntityStream,
           ),
         );
         clearData();
@@ -535,6 +548,7 @@ class OverviewCubit extends BaseCubit {
         fetchVipOpportunities();
         fetchFavoritesOpportunities();
         fetchCashifterCode();
+        fetchMyOrder();
         _fetchDeliveryOrdersWithLocation();
       } else {
         await fetchJobOffersSliders();

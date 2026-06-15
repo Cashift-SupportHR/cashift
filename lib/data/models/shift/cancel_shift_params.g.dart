@@ -13,7 +13,4 @@ CancelShiftParams _$CancelShiftParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CancelShiftParamsToJson(CancelShiftParams instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'description': instance.description,
-    };
+    <String, dynamic>{'id': instance.id, 'description': instance.description};

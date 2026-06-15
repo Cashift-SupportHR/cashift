@@ -7,12 +7,12 @@ part of 'sub_category.dart';
 // **************************************************************************
 
 SubCategory _$SubCategoryFromJson(Map<String, dynamic> json) => SubCategory(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
-      code: json['code'] as String?,
-      logo: json['logo'] as String?,
-      link: json['link'] as String?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+  code: json['code'] as String?,
+  logo: json['logo'] as String?,
+  link: json['link'] as String?,
+);
 
 Map<String, dynamic> _$SubCategoryToJson(SubCategory instance) =>
     <String, dynamic>{

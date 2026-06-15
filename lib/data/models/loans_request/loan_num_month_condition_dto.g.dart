@@ -7,22 +7,22 @@ part of 'loan_num_month_condition_dto.dart';
 // **************************************************************************
 
 LoanNumMonthConditionDto _$LoanNumMonthConditionDtoFromJson(
-        Map<String, dynamic> json) =>
-    LoanNumMonthConditionDto(
-      termandCondition: (json['termandCondition'] as List<dynamic>?)
-          ?.map((e) => TermandCondition.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      loansMonthVM: (json['loansMonthVM'] as List<dynamic>?)
-          ?.map((e) => LoansMonth.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+  Map<String, dynamic> json,
+) => LoanNumMonthConditionDto(
+  termandCondition: (json['termandCondition'] as List<dynamic>?)
+      ?.map((e) => TermandCondition.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  loansMonthVM: (json['loansMonthVM'] as List<dynamic>?)
+      ?.map((e) => LoansMonth.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$LoanNumMonthConditionDtoToJson(
-        LoanNumMonthConditionDto instance) =>
-    <String, dynamic>{
-      'termandCondition': instance.termandCondition,
-      'loansMonthVM': instance.loansMonthVM,
-    };
+  LoanNumMonthConditionDto instance,
+) => <String, dynamic>{
+  'termandCondition': instance.termandCondition,
+  'loansMonthVM': instance.loansMonthVM,
+};
 
 TermandCondition _$TermandConditionFromJson(Map<String, dynamic> json) =>
     TermandCondition(
@@ -37,10 +37,10 @@ Map<String, dynamic> _$TermandConditionToJson(TermandCondition instance) =>
     };
 
 LoansMonth _$LoansMonthFromJson(Map<String, dynamic> json) => LoansMonth(
-      id: (json['id'] as num?)?.toInt(),
-      nameMonth: json['nameMonth'] as String?,
-      isGuarantor: json['isGuarantor'] as bool?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  nameMonth: json['nameMonth'] as String?,
+  isGuarantor: json['isGuarantor'] as bool?,
+);
 
 Map<String, dynamic> _$LoansMonthToJson(LoansMonth instance) =>
     <String, dynamic>{

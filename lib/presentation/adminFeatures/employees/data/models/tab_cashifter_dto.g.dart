@@ -13,7 +13,4 @@ TabCashifterDto _$TabCashifterDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$TabCashifterDtoToJson(TabCashifterDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

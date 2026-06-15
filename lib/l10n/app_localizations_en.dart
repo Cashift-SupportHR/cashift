@@ -4628,4 +4628,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get face_image_required_proceed => 'Face image is required to proceed';
+
+  @override
+  String get delivery_code => 'Delivery Code';
+
+  @override
+  String get my_order => 'My order';
+
+  @override
+  String get enter_warehouse_code => 'Enter Warehouse Code';
+
+  @override
+  String get accept_delivery_request => 'Accept Delivery Request';
+
+  @override
+  String get pending_delivery_requests => 'Pending Delivery Requests';
 }

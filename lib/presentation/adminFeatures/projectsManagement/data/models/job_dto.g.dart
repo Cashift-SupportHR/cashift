@@ -7,11 +7,11 @@ part of 'job_dto.dart';
 // **************************************************************************
 
 JobDto _$JobDtoFromJson(Map<String, dynamic> json) => JobDto(
-      id: (json['id'] as num?)?.toInt(),
-      jobName: json['jobName'] as String?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  jobName: json['jobName'] as String?,
+);
 
 Map<String, dynamic> _$JobDtoToJson(JobDto instance) => <String, dynamic>{
-      'id': instance.id,
-      'jobName': instance.jobName,
-    };
+  'id': instance.id,
+  'jobName': instance.jobName,
+};

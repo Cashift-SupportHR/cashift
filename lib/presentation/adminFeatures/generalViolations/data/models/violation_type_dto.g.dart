@@ -16,8 +16,8 @@ ViolationTypeDto _$ViolationTypeDtoFromJson(Map<String, dynamic> json) =>
       projectName: json['projectName'] as String?,
       companyId: (json['companyId'] as num?)?.toInt(),
       companyName: json['companyName'] as String?,
-      scheduleViolationsTypeId:
-          (json['scheduleViolationsTypeId'] as num?)?.toInt(),
+      scheduleViolationsTypeId: (json['scheduleViolationsTypeId'] as num?)
+          ?.toInt(),
       scheduleViolationsTypeName: json['scheduleViolationsTypeName'] as String?,
     );
 

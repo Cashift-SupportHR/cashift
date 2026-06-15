@@ -13,7 +13,4 @@ JobUniformTypeDto _$JobUniformTypeDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$JobUniformTypeDtoToJson(JobUniformTypeDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

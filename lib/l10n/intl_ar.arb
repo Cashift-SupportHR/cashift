@@ -1522,5 +1522,12 @@
    "details_receive_code": "الرجاء إدخال كود الاستلام المرسل لك من المستودع بشكل صحيح، لضمان إتمام العملية بنجاح.",
 
   "number_of_nearest_warehouses": "  مستودع قريبين لك , حدد أقرب مستودع بينهم : ",
-  "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة"
+  "face_image_required_proceed": "يجب اضافة بصمة الوجه للمتابعة",
+  "delivery_code": "كود التسليم",
+  "my_order": "طلباتي",
+  "enter_warehouse_code": "إدخال كود المستودع",
+  "accept_delivery_request": "قبول طلب التوصيل",
+  "pending_delivery_requests": "طلبات في انتظار التوصيل"
+
+
 }

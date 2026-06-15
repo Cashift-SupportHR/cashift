@@ -7,12 +7,12 @@ part of 'address.dart';
 // **************************************************************************
 
 AddressDto _$AddressDtoFromJson(Map<String, dynamic> json) => AddressDto(
-      id: (json['id'] as num?)?.toInt(),
-      langitude: json['langitude'] as String?,
-      latitude: json['latitude'] as String?,
-      details: json['details'] as String?,
-      name: json['name'] as String?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  langitude: json['langitude'] as String?,
+  latitude: json['latitude'] as String?,
+  details: json['details'] as String?,
+  name: json['name'] as String?,
+);
 
 Map<String, dynamic> _$AddressDtoToJson(AddressDto instance) =>
     <String, dynamic>{

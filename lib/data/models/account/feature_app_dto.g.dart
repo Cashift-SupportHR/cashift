@@ -11,7 +11,8 @@ FeatureAppDto _$FeatureAppDtoFromJson(Map<String, dynamic> json) =>
       faceRecognitionConfig: json['faceRecognitionConfig'] == null
           ? null
           : FaceRecognitionConfig.fromJson(
-              json['faceRecognitionConfig'] as Map<String, dynamic>),
+              json['faceRecognitionConfig'] as Map<String, dynamic>,
+            ),
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       code: json['code'] as String?,
@@ -28,19 +29,19 @@ Map<String, dynamic> _$FeatureAppDtoToJson(FeatureAppDto instance) =>
     };
 
 FaceRecognitionConfig _$FaceRecognitionConfigFromJson(
-        Map<String, dynamic> json) =>
-    FaceRecognitionConfig(
-      isAllowFaceRecognition: json['isAllowFaceRecognition'] as bool?,
-      eyeCheck: json['eyeCheck'] as bool?,
-      moveFace: json['moveFace'] as bool?,
-      smile: json['smile'] as bool?,
-    );
+  Map<String, dynamic> json,
+) => FaceRecognitionConfig(
+  isAllowFaceRecognition: json['isAllowFaceRecognition'] as bool?,
+  eyeCheck: json['eyeCheck'] as bool?,
+  moveFace: json['moveFace'] as bool?,
+  smile: json['smile'] as bool?,
+);
 
 Map<String, dynamic> _$FaceRecognitionConfigToJson(
-        FaceRecognitionConfig instance) =>
-    <String, dynamic>{
-      'isAllowFaceRecognition': instance.isAllowFaceRecognition,
-      'eyeCheck': instance.eyeCheck,
-      'moveFace': instance.moveFace,
-      'smile': instance.smile,
-    };
+  FaceRecognitionConfig instance,
+) => <String, dynamic>{
+  'isAllowFaceRecognition': instance.isAllowFaceRecognition,
+  'eyeCheck': instance.eyeCheck,
+  'moveFace': instance.moveFace,
+  'smile': instance.smile,
+};

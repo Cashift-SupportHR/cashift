@@ -52,7 +52,8 @@ AppliedOfferDto _$AppliedOfferDtoFromJson(Map<String, dynamic> json) =>
       attendanceConfigDto: json['attendanceConfig'] == null
           ? null
           : AttendanceConfigDto.fromJson(
-              json['attendanceConfig'] as Map<String, dynamic>),
+              json['attendanceConfig'] as Map<String, dynamic>,
+            ),
       conditionName: (json['conditionName'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),

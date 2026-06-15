@@ -7,15 +7,15 @@ part of 'final_action_follow_up_maintenance_prams.dart';
 // **************************************************************************
 
 FinalActionFollowUpMaintenancePrams
-    _$FinalActionFollowUpMaintenancePramsFromJson(Map<String, dynamic> json) =>
-        FinalActionFollowUpMaintenancePrams(
-          faultsMaintenanceId: (json['faultsMaintenanceId'] as num?)?.toInt(),
-          actionDescription: json['actionDescription'] as String?,
-        );
+_$FinalActionFollowUpMaintenancePramsFromJson(Map<String, dynamic> json) =>
+    FinalActionFollowUpMaintenancePrams(
+      faultsMaintenanceId: (json['faultsMaintenanceId'] as num?)?.toInt(),
+      actionDescription: json['actionDescription'] as String?,
+    );
 
 Map<String, dynamic> _$FinalActionFollowUpMaintenancePramsToJson(
-        FinalActionFollowUpMaintenancePrams instance) =>
-    <String, dynamic>{
-      'faultsMaintenanceId': instance.faultsMaintenanceId,
-      'actionDescription': instance.actionDescription,
-    };
+  FinalActionFollowUpMaintenancePrams instance,
+) => <String, dynamic>{
+  'faultsMaintenanceId': instance.faultsMaintenanceId,
+  'actionDescription': instance.actionDescription,
+};

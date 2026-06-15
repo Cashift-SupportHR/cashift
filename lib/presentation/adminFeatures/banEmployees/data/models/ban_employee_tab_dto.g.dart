@@ -13,7 +13,4 @@ BanEmployeeTabDto _$BanEmployeeTabDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$BanEmployeeTabDtoToJson(BanEmployeeTabDto instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'total': instance.total,
-    };
+    <String, dynamic>{'name': instance.name, 'total': instance.total};

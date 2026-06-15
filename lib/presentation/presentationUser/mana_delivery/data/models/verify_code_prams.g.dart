@@ -13,7 +13,4 @@ VerifyCodePrams _$VerifyCodePramsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$VerifyCodePramsToJson(VerifyCodePrams instance) =>
-    <String, dynamic>{
-      'orderId': instance.orderId,
-      'code': instance.code,
-    };
+    <String, dynamic>{'orderId': instance.orderId, 'code': instance.code};

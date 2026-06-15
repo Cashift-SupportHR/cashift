@@ -21,6 +21,7 @@ import '../widgets/cashifter_code_cart.dart';
 import '../widgets/current_date_widget.dart';
 import '../widgets/job_offers_sliders.dart';
 import '../widgets/mana_order_widget.dart';
+import '../widgets/my_order_widget.dart';
 import '../widgets/opportunity_slider.dart';
 import '../widgets/shifts_slider.dart';
 import '../widgets/tab_view_shift_overView.dart';
@@ -68,6 +69,11 @@ class PostLoginWidget extends BaseStatelessWidget {
           cashifterCodeStream: postLoginState.cashifterCodeStream,
         ),
         const SizedBox(height: 8),
+        MyOrderWidget(
+          myOrderEntityStream: postLoginState.myOrderEntityStream,
+          onRefresh: () => onRefresh(),
+        ),
+        const SizedBox(height: 8),
         TextFieldSearchJob(),
         const SizedBox(height: 16),
         JobOffersSlidersWidget(
@@ -113,27 +119,30 @@ class PostLoginWidget extends BaseStatelessWidget {
           builder: (context, AsyncSnapshot<OffersViewType> snapshot) {
             return (snapshot.requireData == OffersViewType.favorite)
                 ? buildOffersSliderSection(
-                  postLoginState.favoritesOffers.stream,
-                  name: strings.favorite_jobs,
-                  showPlaceHolder: true,
-                )
+                    postLoginState.favoritesOffers.stream,
+                    name: strings.favorite_jobs,
+                    showPlaceHolder: true,
+                  )
                 : (snapshot.requireData == OffersViewType.vip)
                 ? buildOffersSliderSection(
-                  postLoginState.vipOffers.stream,
-                  name: strings.vip_offers,
-                  showPlaceHolder: true,
-                )
+                    postLoginState.vipOffers.stream,
+                    name: strings.vip_offers,
+                    showPlaceHolder: true,
+                  )
                 : buildOffersSliderSection(
-                  postLoginState.offers.stream,
-                  name: strings.all_jobs,
-                  showPlaceHolder: true,
-                );
+                    postLoginState.offers.stream,
+                    name: strings.all_jobs,
+                    showPlaceHolder: true,
+                  );
           },
         ),
         const SizedBox(height: 16),
         ManaOrderWidget(
           deliveryOrdersStream: postLoginState.deliveryOrdersStream,
           onRetry: onRetryDeliveryOrders,
+          onRefresh: () {
+            onRefresh();
+          },
         ),
       ],
     );
