@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 
 class Config {
 
+
   static const isTestVersion = true;
   static const isDebuggable = false;
   static const AppStoreId = '1593657179';
