@@ -45,6 +45,7 @@ class MyOrderCubit extends BaseCubit {
       myOrders = await fetchMyOrderData(params);
       allMyOrders.addAll(myOrders);
       myOrderStream.setData(allMyOrders);
+
     } on Exception catch (e) {
       myOrderStream.setError(e);
     }

@@ -61,7 +61,7 @@ final NearbyWarehousesEntity nearbyWarehousesEntity;
 
                /// المسافة والوقت
                  Text(
-                   " ${strings.distance} ${nearbyWarehousesEntity.distanceKm??0} ${strings.km} ",
+                   " ${strings.address} ${nearbyWarehousesEntity.fullAddress??''}",
                  style: kTextRegular.copyWith(
                    color: kGreen_85,
                    fontSize: 13,

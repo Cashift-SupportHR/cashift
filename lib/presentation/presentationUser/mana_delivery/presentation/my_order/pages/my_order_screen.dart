@@ -13,9 +13,13 @@ class MyOrderScreen extends BaseStatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: data.length,
-      padding: EdgeInsets.only(top: 10,left: 15,right: 15),
+      padding: EdgeInsets.only(top: 10, left: 15, right: 15),
       itemBuilder: (context, index) {
-        return MyOrderCart(onRefresh: () {}, data: data[index]);
+        return MyOrderCart(
+          onRefresh: () {},
+          data: data[index],
+          isExpanded: true,
+        );
       },
     );
   }

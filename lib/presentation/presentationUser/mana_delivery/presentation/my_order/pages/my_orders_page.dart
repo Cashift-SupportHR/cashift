@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
-import 'package:shiftapp/presentation/adminFeatures/shared/domain/entities/opportunities/opportunity.dart';
-import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
+ import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 import 'package:shiftapp/presentation/presentationUser/mana_delivery/presentation/my_order/cubit/my_order_cubit.dart';
 import 'package:shiftapp/presentation/shared/components/base_widget_bloc.dart';
-import 'package:shiftapp/presentation/shared/components/helper_widgets.dart';
 
-import '../../../../../presentationUser/advancedFilter/widgets/text_field_search_job.dart';
-import '../../../../../shared/components/app_widgets.dart';
+import '../../../../../../data/exceptions/empty_list_exception.dart';
+ import '../../../../../shared/components/app_widgets.dart';
 import '../../../../../shared/components/base/stream_state_widget_v2.dart';
-import '../../../../../shared/components/draggable_button/draggable_button.dart';
+ import '../../../../../shared/components/error_handler_widget.dart';
 import '../../../../../shared/components/pagination/custom_footer_builder.dart';
 import '../../../../../shared/components/tabview/tab_bar_view_widget.dart';
-   import '../../../data/models/my_order_prams.dart';
+import '../../../data/models/my_order_prams.dart';
 import '../../../domain/entities/my_order.dart';
 import 'my_order_screen.dart';
 
-
 class MyOrderPage extends BaseBlocWidget<UnInitState, MyOrderCubit> {
-  late int tabId=0;
+  late int tabId = 0;
   MyOrderPrams? params;
   final RefreshController _refreshController = RefreshController(
     initialRefresh: false,
@@ -35,7 +32,6 @@ class MyOrderPage extends BaseBlocWidget<UnInitState, MyOrderCubit> {
     loadInitialData(context);
     controller.clear();
   }
-
 
   TextEditingController controller = TextEditingController();
   @override
@@ -101,7 +97,14 @@ class MyOrderPage extends BaseBlocWidget<UnInitState, MyOrderCubit> {
             onRefresh: () => onRefresh(),
             scrollController: _scrollController,
             onLoading: tabId != 0 ? () => onLoading(snapshot!) : null,
-            child: MyOrderScreen(data: snapshot ?? [],),
+            child: snapshot!.isEmpty
+                ? ErrorPlaceHolderWidget(
+                    exception: EmptyListException(),
+                    onClickReload: () {
+                      onRefresh();
+                    },
+                  )
+                : MyOrderScreen(data: snapshot ?? []),
           );
         },
       ),

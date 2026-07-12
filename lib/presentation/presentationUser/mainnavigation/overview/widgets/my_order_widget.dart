@@ -44,7 +44,7 @@ class MyOrderWidget extends BaseStatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 290,
+                    height: 300,
                     child: ListView.builder(
                       itemCount: snapshot.data?.results?.length ?? 0,
                       scrollDirection: Axis.horizontal,
@@ -52,6 +52,7 @@ class MyOrderWidget extends BaseStatelessWidget {
                         return MyOrderCart(
                           data: snapshot.data!.results![index],
                           onRefresh: onRefresh,
+                          isExpanded: false,
                         );
                       },
                     ),

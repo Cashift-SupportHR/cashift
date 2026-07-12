@@ -12,14 +12,19 @@ import '../../../resources/constants.dart';
 class MyOrderCart extends BaseStatelessWidget {
   final MyOrderItemEntity data;
   final VoidCallback onRefresh;
+  bool isExpanded = false;
 
-  MyOrderCart({required this.data, required this.onRefresh});
+  MyOrderCart({
+    required this.data,
+    required this.onRefresh,
+    required this.isExpanded,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAlias,
-      width: 300,
+      width: isExpanded ? null : 330,
       margin: const EdgeInsetsDirectional.fromSTEB(0, 10, 10, 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
@@ -35,53 +40,53 @@ class MyOrderCart extends BaseStatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            statusWidget(data.statusName ?? "", data.statusName ?? ""),
+            statusWidget(data.status ?? 0, data.statusName ?? ""),
             const SizedBox(height: 10),
             titleWidget(),
             const SizedBox(height: 10),
             detailsOrder(data.orderDetails ?? " "),
             const SizedBox(height: 5),
             stepperWidget(data.progressSteps),
-     if(data.status != 8)   ...[
-          const SizedBox(height: 10),
-          AppCupertinoButton(
-            onPressed: () {
-              final entity = DeliveryOrderEntity(
-                id: data.id,
-                status: data.status,
-                orderNumber: data.orderNumber,
-                customerAddress: data.customerAddress,
-                cityName: data.cityName,
-                districtName: data.districtName,
-                latitude: data.latitude,
-                longitude: data.longitude,
-                totalPrice: data.totalPrice,
-                orderDetails: data.orderDetails,
-                statusName: data.statusName,
-              );
-              Navigator.pushNamed(
-                context,
-                Routes.mainManaDeliverPage,
-                arguments: {
-                  'entity': entity,
-                  'initialPage': data.key == 'waitwarhousecode' ? 2 : 3,
-                  'myOrderItem': data
+            if (data.status != 8) ...[
+              const SizedBox(height: 10),
+              AppCupertinoButton(
+                onPressed: () {
+                  final entity = DeliveryOrderEntity(
+                    id: data.id,
+                    status: data.status,
+                    orderNumber: data.orderNumber,
+                    customerAddress: data.customerAddress,
+                    cityName: data.cityName,
+                    districtName: data.districtName,
+                    latitude: data.latitude,
+                    longitude: data.longitude,
+                    totalPrice: data.totalPrice,
+                    orderDetails: data.orderDetails,
+                    statusName: data.statusName,
+                  );
+                  Navigator.pushNamed(
+                    context,
+                    Routes.mainManaDeliverPage,
+                    arguments: {
+                      'entity': entity,
+                      'initialPage': data.key == 'waitwarhousecode' ? 2 : 3,
+                      'myOrderItem': data,
+                    },
+                  ).then((value) {
+                    if (value == true) {
+                      onRefresh();
+                    }
+                  });
                 },
-              ).then((value) {
-                if (value == true) {
-                  onRefresh();
-                }
-              });
-            },
-            text: data.key == 'waitwarhousecode'
-                ? strings.enter_warehouse_code
-                : strings.go_to_customer,
-            elevation: 0,
-            backgroundColor: kPrimary,
-            radius: BorderRadius.circular(5),
-            padding: const EdgeInsets.symmetric(vertical: 11),
-          ),
-        ]   ,
+                text: data.key == 'waitwarhousecode'
+                    ? strings.enter_warehouse_code
+                    : strings.go_to_customer,
+                elevation: 0,
+                backgroundColor: kPrimary,
+                radius: BorderRadius.circular(5),
+                padding: const EdgeInsets.symmetric(vertical: 11),
+              ),
+            ],
             const SizedBox(height: 10),
           ],
         ),
@@ -89,35 +94,28 @@ class MyOrderCart extends BaseStatelessWidget {
     );
   }
 
-  Widget statusWidget(String status, String name) {
+  Widget statusWidget(int status, String name) {
     return Container(
-      height: 30,
-      width: 180,
-      color: status == "pending"
-          ? kYellow.withOpacity(.1)
-          : status == "accepted"
-              ? kGreen.withOpacity(.1)
-              : kRed_EE,
+      height: 35,
+      decoration: Decorations.boxDecorationBorder(
+        radius: 10,
+        color: data.status == 8 ? kPrimary.withOpacity(.1) : kRed_EE,
+        borderColor: data.status == 8 ? kPrimary.withOpacity(.1) : kRed_EE,
+      ),
+      //width: 190,
       child: Row(
         children: [
+          const SizedBox(width: 5),
           Icon(
             Icons.info_outline,
-            color: status == "pending"
-                ? kYellow
-                : status == "accepted"
-                    ? kGreen
-                    : kRed_00,
+            color: data.status == 8 ? kPrimary : kRed_00,
           ),
           const SizedBox(width: 5),
           Text(
             name,
             style: kTextMedium.copyWith(
-              color: status == "pending"
-                  ? kYellow
-                  : status == "accepted"
-                      ? kGreen
-                      : kRed_00,
-              fontSize: 14,
+              color: data.status == 8 ? kPrimary : kRed_00,
+              fontSize: 12,
             ),
           ),
         ],
@@ -173,7 +171,7 @@ class MyOrderCart extends BaseStatelessWidget {
               color: (steps[i + 1].isDone ?? false) ? kPrimary : kGrey_D9,
               margin: const EdgeInsets.only(top: 25),
             ),
-        ]
+        ],
       ],
     );
   }
