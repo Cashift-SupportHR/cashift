@@ -7,11 +7,11 @@ import 'package:shiftapp/presentation/shared/components/base_stateless_widget.da
 import '../../../../presentationUser/common/common_state.dart';
 import '../../../../shared/components/stepper/custom_linear_step_indicator.dart';
 import '../../domain/entities/delivery_orde.dart';
-import '../../domain/entities/my_order.dart';
 import '../../domain/entities/nearby_warehouses.dart';
 import '../../domain/entities/order_mana.dart';
 import 'details_order_mana/screens/details_order_mana_page.dart';
 import 'go_to_customer_mana/screens/go_to_customer_mana_page.dart';
+import '../../domain/entities/main_mana_deliver_args.dart';
 import 'nearest_warehouse/screens/nearest_warehouse_page.dart';
 
 class MainManaDeliverPage extends BaseStatelessWidget {
@@ -25,54 +25,46 @@ class MainManaDeliverPage extends BaseStatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final rawArgs = getArguments(context);
+    final args = getArguments(context) as MainManaDeliverArgs;
 
-    DeliveryOrderEntity deliveryOrderEntity;
-    int initialPage = 0;
+    final DeliveryOrderEntity deliveryOrderEntity = args.entity;
+    final int initialPage = args.initialPage;
 
-    if (rawArgs is Map) {
-      deliveryOrderEntity = rawArgs['entity'] as DeliveryOrderEntity;
-      initialPage = (rawArgs['initialPage'] as int?) ?? 0;
-
-      // Pre-populate entities from MyOrderItemEntity when skipping to last page
-      final myOrderItem = rawArgs['myOrderItem'] as MyOrderItemEntity?;
-      if (myOrderItem != null && orderManaEntity == null) {
-        orderManaEntity = OrderManaEntity(
-          id: myOrderItem.id,
-          orderNumber: myOrderItem.orderNumber,
-          customerName: myOrderItem.customerName,
-          customerPhone: myOrderItem.customerPhone,
-          customerAddress: myOrderItem.customerAddress,
-          customerNotes: myOrderItem.customerNotes,
-          cityId: myOrderItem.cityId,
-          cityName: myOrderItem.cityName,
-          districtId: myOrderItem.districtId,
-          districtName: myOrderItem.districtName,
-          latitude: myOrderItem.latitude,
-          longitude: myOrderItem.longitude,
-
-          mapUrl: myOrderItem.mapUrl,
-          baseServicePrice: myOrderItem.baseServicePrice,
-          floorPrice: myOrderItem.floorPrice,
-          totalPrice: myOrderItem.totalPrice,
-          status: myOrderItem.status,
-          statusName: myOrderItem.statusName,
-          warehouseId: myOrderItem.warehouseId,
-          warehouseName: myOrderItem.warehouseName,
-          floorNote: myOrderItem.floorNote,
-        );
-        nearbyWarehousesEntity = NearbyWarehousesEntity(
-          id: myOrderItem.warehouseId,
-          name: myOrderItem.warehouseName,
-          cityName: myOrderItem.cityName,
-          districtName: myOrderItem.districtName,
-          latitude: myOrderItem.warehouseLatitude,
-          longitude: myOrderItem.warehouseLongitude,
-          mapUrl: myOrderItem.warehouseMapUrl,
-          );
-      }
-    } else {
-      deliveryOrderEntity = rawArgs as DeliveryOrderEntity;
+    // Pre-populate entities from MyOrderItemEntity when skipping to last page
+    if (args.myOrderItem != null && orderManaEntity == null) {
+      final myOrderItem = args.myOrderItem!;
+      orderManaEntity = OrderManaEntity(
+        id: myOrderItem.id,
+        orderNumber: myOrderItem.orderNumber,
+        customerName: myOrderItem.customerName,
+        customerPhone: myOrderItem.customerPhone,
+        customerAddress: myOrderItem.customerAddress,
+        customerNotes: myOrderItem.customerNotes,
+        cityId: myOrderItem.cityId,
+        cityName: myOrderItem.cityName,
+        districtId: myOrderItem.districtId,
+        districtName: myOrderItem.districtName,
+        latitude: myOrderItem.latitude,
+        longitude: myOrderItem.longitude,
+        mapUrl: myOrderItem.mapUrl,
+        baseServicePrice: myOrderItem.baseServicePrice,
+        floorPrice: myOrderItem.floorPrice,
+        totalPrice: myOrderItem.totalPrice,
+        status: myOrderItem.status,
+        statusName: myOrderItem.statusName,
+        warehouseId: myOrderItem.warehouseId,
+        warehouseName: myOrderItem.warehouseName,
+        floorNote: myOrderItem.floorNote,
+      );
+      nearbyWarehousesEntity = NearbyWarehousesEntity(
+        id: myOrderItem.warehouseId,
+        name: myOrderItem.warehouseName,
+        cityName: myOrderItem.cityName,
+        districtName: myOrderItem.districtName,
+        latitude: myOrderItem.warehouseLatitude,
+        longitude: myOrderItem.warehouseLongitude,
+        mapUrl: myOrderItem.warehouseMapUrl,
+      );
     }
 
     _pageController ??= PageController(initialPage: initialPage);

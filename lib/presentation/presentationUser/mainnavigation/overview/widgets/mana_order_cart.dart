@@ -4,6 +4,7 @@ import '../../../../../utils/app_images.dart';
 import '../../../../../utils/app_utils.dart';
 import '../../../../shared/components/index.dart';
 import '../../../mana_delivery/domain/entities/index.dart';
+import '../../../mana_delivery/domain/entities/main_mana_deliver_args.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 
@@ -195,7 +196,11 @@ Function()onRefresh;
         padding: const EdgeInsets.all(5),
         radius: BorderRadius.circular(10),
         onPressed: () {
-          Navigator.pushNamed(context, Routes.mainManaDeliverPage, arguments: data).then((value) {
+          Navigator.pushNamed(
+            context,
+            Routes.mainManaDeliverPage,
+            arguments: MainManaDeliverArgs(entity: data),
+          ).then((value) {
             if (value == true) {
               onRefresh ();
             }

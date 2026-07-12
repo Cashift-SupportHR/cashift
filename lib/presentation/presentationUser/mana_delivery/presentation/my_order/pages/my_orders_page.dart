@@ -11,6 +11,7 @@ import '../../../../../shared/components/base/stream_state_widget_v2.dart';
 import '../../../../../shared/components/pagination/custom_footer_builder.dart';
 import '../../../../../shared/components/tabview/tab_bar_view_widget.dart';
 import '../../../data/models/my_order_prams.dart';
+import '../../../domain/entities/const_data.dart' show complete, notComplete;
 import '../../../domain/entities/my_order.dart';
 import 'my_order_screen.dart';
 
@@ -23,7 +24,7 @@ class MyOrderPage extends BaseBlocWidget<UnInitState, MyOrderCubit> {
   @override
   void loadInitialData(BuildContext context) {
     bloc.fetchMyOrderPagination(
-      params: MyOrderPrams(key: 'notcomplete', pageSize: 10),
+      params: MyOrderPrams(key: notComplete, pageSize: 10),
     );
   }
 
@@ -62,7 +63,7 @@ class MyOrderPage extends BaseBlocWidget<UnInitState, MyOrderCubit> {
     bloc.fetchMyOrderPagination(
       isRefresh: true,
       params: MyOrderPrams(
-        key: tabId == 0 ? 'notcomplete' : 'complete',
+        key: tabId == 0 ? notComplete : complete,
         pageSize: 10,
       ),
     );
@@ -72,7 +73,7 @@ class MyOrderPage extends BaseBlocWidget<UnInitState, MyOrderCubit> {
 
   void onLoading(List<MyOrderItemEntity> state) async {
     await bloc.fetchMyOrderPagination(
-      params: params ?? MyOrderPrams(key: 'notcomplete', pageSize: 10),
+      params: params ?? MyOrderPrams(key: notComplete, pageSize: 10),
     );
     if (bloc.myOrders.isEmpty) {
       _refreshController.loadNoData();

@@ -6,6 +6,7 @@ import '../../../../../utils/app_images.dart';
 import '../../../../shared/components/index.dart';
 import '../../../mana_delivery/domain/entities/delivery_orde.dart';
 import '../../../mana_delivery/domain/entities/my_order.dart';
+import '../../../mana_delivery/domain/entities/main_mana_deliver_args.dart';
 import '../../../resources/colors.dart';
 import '../../../resources/constants.dart';
 
@@ -64,14 +65,14 @@ class MyOrderCart extends BaseStatelessWidget {
                     orderDetails: data.orderDetails,
                     statusName: data.statusName,
                   );
-                  Navigator.pushNamed(
+                   Navigator.pushNamed(
                     context,
                     Routes.mainManaDeliverPage,
-                    arguments: {
-                      'entity': entity,
-                      'initialPage': data.key == 'waitwarhousecode' ? 2 : 3,
-                      'myOrderItem': data,
-                    },
+                    arguments: MainManaDeliverArgs(
+                      entity: entity,
+                      initialPage: data.key == 'waitwarhousecode' ? 2 : 3,
+                      myOrderItem: data,
+                    ),
                   ).then((value) {
                     if (value == true) {
                       onRefresh();
