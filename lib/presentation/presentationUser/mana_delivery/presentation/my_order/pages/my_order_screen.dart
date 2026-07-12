@@ -6,8 +6,8 @@ import '../../../domain/entities/my_order.dart';
 
 class MyOrderScreen extends BaseStatelessWidget {
   List<MyOrderItemEntity> data;
-
-  MyOrderScreen({required this.data});
+  final VoidCallback onRefresh;
+  MyOrderScreen({required this.data,required this.onRefresh,});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class MyOrderScreen extends BaseStatelessWidget {
       padding: EdgeInsets.only(top: 10, left: 15, right: 15),
       itemBuilder: (context, index) {
         return MyOrderCart(
-          onRefresh: () {},
+          onRefresh: onRefresh,
           data: data[index],
           isExpanded: true,
         );

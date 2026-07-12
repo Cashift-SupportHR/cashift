@@ -104,7 +104,10 @@ class MyOrderPage extends BaseBlocWidget<UnInitState, MyOrderCubit> {
                       onRefresh();
                     },
                   )
-                : MyOrderScreen(data: snapshot ?? []),
+                : MyOrderScreen(data: snapshot ?? [],onRefresh:(){
+              onRefresh();
+              controller.clear();
+            }),
           );
         },
       ),
