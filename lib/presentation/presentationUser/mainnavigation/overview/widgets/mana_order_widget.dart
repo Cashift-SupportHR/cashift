@@ -44,7 +44,7 @@ class ManaOrderWidget extends BaseStatelessWidget {
         }
 
         // Handle loading state
-        if (!snapshot.hasData) {
+        if (!snapshot.hasData || snapshot.data == null) {
           return const SizedBox(
             height: 250,
             child: Center(child: CircularProgressIndicator()),
