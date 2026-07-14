@@ -364,4 +364,7 @@ class AppIcons {
   static const String mana = 'assets/icons/mana.svg';
   static const String notes2 = 'assets/icons/notes2.svg';
   static const String copy = 'assets/icons/copy.svg';
+  static const String ma1 = 'assets/icons/ma1.svg';
+  static const String ma2 = 'assets/icons/ma2.svg';
+  static const String ma3 = 'assets/icons/ma3.svg';
 }

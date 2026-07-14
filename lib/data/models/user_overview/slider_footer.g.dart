@@ -7,9 +7,9 @@ part of 'slider_footer.dart';
 // **************************************************************************
 
 SliderFooter _$SliderFooterFromJson(Map<String, dynamic> json) => SliderFooter(
-      titleFooter: json['titleFooter'] as String?,
-      imageFooter: json['imageFooter'] as String?,
-    );
+  titleFooter: json['titleFooter'] as String?,
+  imageFooter: json['imageFooter'] as String?,
+);
 
 Map<String, dynamic> _$SliderFooterToJson(SliderFooter instance) =>
     <String, dynamic>{

@@ -7,10 +7,10 @@ part of 'login_params.dart';
 // **************************************************************************
 
 LoginParams _$LoginParamsFromJson(Map<String, dynamic> json) => LoginParams(
-      phone: json['phoneNumber'] as String?,
-      password: json['password'] as String?,
-      appId: json['appId'] as String?,
-    );
+  phone: json['phoneNumber'] as String?,
+  password: json['password'] as String?,
+  appId: json['appId'] as String?,
+);
 
 Map<String, dynamic> _$LoginParamsToJson(LoginParams instance) =>
     <String, dynamic>{

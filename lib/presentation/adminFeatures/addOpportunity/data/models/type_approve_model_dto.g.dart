@@ -15,11 +15,11 @@ TypeApproveModelDto _$TypeApproveModelDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$TypeApproveModelDtoToJson(
-        TypeApproveModelDto instance) =>
-    <String, dynamic>{
-      'description': instance.description,
-      'typeApprove': instance.typeApprove,
-    };
+  TypeApproveModelDto instance,
+) => <String, dynamic>{
+  'description': instance.description,
+  'typeApprove': instance.typeApprove,
+};
 
 TypeApproveDto _$TypeApproveDtoFromJson(Map<String, dynamic> json) =>
     TypeApproveDto(

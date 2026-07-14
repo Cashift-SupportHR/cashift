@@ -23,7 +23,8 @@ AddProjectParams _$AddProjectParamsFromJson(Map<String, dynamic> json) =>
       attendanceTypeId: (json['attendanceTypeId'] as num?)?.toInt(),
       otherProject: (json['otherProject'] as List<dynamic>?)
           ?.map(
-              (e) => LocationProjectParams.fromJson(e as Map<String, dynamic>))
+            (e) => LocationProjectParams.fromJson(e as Map<String, dynamic>),
+          )
           .toList(),
       companyName: json['companyName'] as String?,
       image: json['image'] as String?,

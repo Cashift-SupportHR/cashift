@@ -35,6 +35,7 @@ import '../../../../../data/models/user_overview/index.dart';
 import '../../../geofence/geo_task.dart';
 import '../../../mana_delivery/data/repositories/mana_delivery_repo.dart';
 import '../../../mana_delivery/domain/entities/delivery_orde.dart';
+import '../../../mana_delivery/domain/entities/my_order.dart';
 import 'overview_state.dart';
 
 part 'overview_events.dart';
@@ -105,6 +106,7 @@ class OverviewBloc extends Bloc<OverviewEvents, CommonState> {
   StreamState<List<JobOfferSlider>> jobOffersSliders = StreamStateInitial();
   StreamState<List<DeliveryOrderEntity>> deliverOrders = StreamStateInitial();
   StreamState<CashifterCodeDto> cashifterCodeStream = StreamStateInitial();
+  StreamState<MyOrderEntity> myOrderEntityStream = StreamStateInitial();
 
   clearData() {
     appliedOffers.setData(null);
@@ -348,6 +350,7 @@ class OverviewBloc extends Bloc<OverviewEvents, CommonState> {
       print('saveFaceRecognitionEncryptedFile Error $e');
     }
   }
+
 
 
 }

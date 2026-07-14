@@ -7,13 +7,13 @@ part of 'ban_types.dart';
 // **************************************************************************
 
 BanTypes _$BanTypesFromJson(Map<String, dynamic> json) => BanTypes(
-      description: json['description'] as String?,
-      listBlockType: (json['listBlockType'] as List<dynamic>?)
-          ?.map((e) => ValueItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+  description: json['description'] as String?,
+  listBlockType: (json['listBlockType'] as List<dynamic>?)
+      ?.map((e) => ValueItem.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$BanTypesToJson(BanTypes instance) => <String, dynamic>{
-      'description': instance.description,
-      'listBlockType': instance.listBlockType,
-    };
+  'description': instance.description,
+  'listBlockType': instance.listBlockType,
+};

@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/mohamedfarag/fvm/versions/3.35.7"
-export "FLUTTER_APPLICATION_PATH=/Users/mohamedfarag/StudioProjects/cashift"
+export "FLUTTER_ROOT=C:\Users\khattab\fvm\versions\3.35.5"
+export "FLUTTER_APPLICATION_PATH=E:\work\cashift"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.5.1"

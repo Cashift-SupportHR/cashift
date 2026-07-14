@@ -13,7 +13,4 @@ ConfirmOtpParams _$ConfirmOtpParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ConfirmOtpParamsToJson(ConfirmOtpParams instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-      'phone': instance.phone,
-    };
+    <String, dynamic>{'code': instance.code, 'phone': instance.phone};

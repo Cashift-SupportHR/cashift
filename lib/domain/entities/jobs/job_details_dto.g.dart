@@ -20,7 +20,8 @@ JobDetailsDto _$JobDetailsDtoFromJson(Map<String, dynamic> json) =>
       jobInfo: json['opportuntyAvalibleDetail'] == null
           ? null
           : JobOfferDto.fromJson(
-              json['opportuntyAvalibleDetail'] as Map<String, dynamic>),
+              json['opportuntyAvalibleDetail'] as Map<String, dynamic>,
+            ),
     );
 
 Map<String, dynamic> _$JobDetailsDtoToJson(JobDetailsDto instance) =>

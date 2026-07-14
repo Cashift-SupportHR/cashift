@@ -27,20 +27,20 @@ CurrentRoundTripDto _$CurrentRoundTripDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CurrentRoundTripDtoToJson(
-        CurrentRoundTripDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'vehiclesZoneId': instance.vehiclesZoneId,
-      'vehiclesZoneName': instance.vehiclesZoneName,
-      'numberOfViolations': instance.numberOfViolations,
-      'roundTypeId': instance.roundTypeId,
-      'roundTypeName': instance.roundTypeName,
-      'isAllowToTrackTime': instance.isAllowToTrackTime,
-      'startRound': instance.startRound,
-      'latlngs': instance.latlngs,
-      'roundTypeCode': instance.roundTypeCode,
-      'isRequiredPubup': instance.isRequiredPubup,
-      'pubupMessage': instance.pubupMessage,
-      'stationLatitue': instance.stationLatitue,
-      'stationLongtude': instance.stationLongtude,
-    };
+  CurrentRoundTripDto instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'vehiclesZoneId': instance.vehiclesZoneId,
+  'vehiclesZoneName': instance.vehiclesZoneName,
+  'numberOfViolations': instance.numberOfViolations,
+  'roundTypeId': instance.roundTypeId,
+  'roundTypeName': instance.roundTypeName,
+  'isAllowToTrackTime': instance.isAllowToTrackTime,
+  'startRound': instance.startRound,
+  'latlngs': instance.latlngs,
+  'roundTypeCode': instance.roundTypeCode,
+  'isRequiredPubup': instance.isRequiredPubup,
+  'pubupMessage': instance.pubupMessage,
+  'stationLatitue': instance.stationLatitue,
+  'stationLongtude': instance.stationLongtude,
+};

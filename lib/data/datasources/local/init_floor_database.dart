@@ -14,7 +14,7 @@ abstract class InitFloorDatabase extends FroomDatabase {
   AttendanceOfflineQueryDao get attendanceQueryOfflineDao;
 
   static init () async {
-    final database = await $FloorInitFloorDatabase.databaseBuilder('offline_database.db').build();
+    final database = await $FroomInitFloorDatabase.databaseBuilder('offline_database.db').build();
     return database;
   }
 }

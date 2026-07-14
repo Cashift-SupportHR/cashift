@@ -20,8 +20,8 @@ RequestsUserDto _$RequestsUserDtoFromJson(Map<String, dynamic> json) =>
       attachmentDocumentType: json['attachmentDocumentType'] as String?,
       description: json['description'] as String?,
       rejectReason: json['rejectReason'] as String?,
-      cashifterRequestStatusId:
-          (json['cashifterRequestStatusId'] as num?)?.toInt(),
+      cashifterRequestStatusId: (json['cashifterRequestStatusId'] as num?)
+          ?.toInt(),
       cashifterRequestStatusName: json['cashifterRequestStatusName'] as String?,
       shiftAdminUserId: json['shiftAdminUserId'] as String?,
       hrAdminUserId: json['hrAdminUserId'] as String?,

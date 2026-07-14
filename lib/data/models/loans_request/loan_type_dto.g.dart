@@ -7,11 +7,11 @@ part of 'loan_type_dto.dart';
 // **************************************************************************
 
 LoanTypeDto _$LoanTypeDtoFromJson(Map<String, dynamic> json) => LoanTypeDto(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
-      crmValue: json['crmValue'] as String?,
-      loanValue: json['loanValue'] as String?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+  crmValue: json['crmValue'] as String?,
+  loanValue: json['loanValue'] as String?,
+);
 
 Map<String, dynamic> _$LoanTypeDtoToJson(LoanTypeDto instance) =>
     <String, dynamic>{

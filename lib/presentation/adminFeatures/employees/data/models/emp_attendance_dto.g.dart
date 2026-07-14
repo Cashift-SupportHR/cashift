@@ -52,12 +52,12 @@ TransactionsListDto _$TransactionsListDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$TransactionsListDtoToJson(
-        TransactionsListDto instance) =>
-    <String, dynamic>{
-      'projectName': instance.projectName,
-      'shiftName': instance.shiftName,
-      'vactionType': instance.vactionType,
-      'fullDates': instance.fullDates,
-      'checkIn': instance.checkIn,
-      'checkOut': instance.checkOut,
-    };
+  TransactionsListDto instance,
+) => <String, dynamic>{
+  'projectName': instance.projectName,
+  'shiftName': instance.shiftName,
+  'vactionType': instance.vactionType,
+  'fullDates': instance.fullDates,
+  'checkIn': instance.checkIn,
+  'checkOut': instance.checkOut,
+};

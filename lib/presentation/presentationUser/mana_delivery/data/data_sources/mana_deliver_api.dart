@@ -47,6 +47,10 @@ class ManaDeliverAPI {
      return api.cancelReservation(orderId);
    }
 
+  Future<ApiResponse<MyOrderDto>> fetchMyOrders(MyOrderPrams params ){
+    return api.fetchMyOrders(params);
+  }
+
 
   Future<ApiResponse> verifyPickupCode(  VerifyCodePrams params){
     return api.verifyPickupCode(params);

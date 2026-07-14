@@ -7,21 +7,21 @@ part of 'add_home_location_params.dart';
 // **************************************************************************
 
 AddHomeLocationParams _$AddHomeLocationParamsFromJson(
-        Map<String, dynamic> json) =>
-    AddHomeLocationParams(
-      districtid: (json['districtid'] as num?)?.toInt(),
-      cityId: (json['cityId'] as num?)?.toInt(),
-      lat: (json['lat'] as num?)?.toDouble(),
-      lng: (json['lng'] as num?)?.toDouble(),
-      districtName: json['districtName'] as String?,
-      cityName: json['cityName'] as String?,
-    );
+  Map<String, dynamic> json,
+) => AddHomeLocationParams(
+  districtid: (json['districtid'] as num?)?.toInt(),
+  cityId: (json['cityId'] as num?)?.toInt(),
+  lat: (json['lat'] as num?)?.toDouble(),
+  lng: (json['lng'] as num?)?.toDouble(),
+  districtName: json['districtName'] as String?,
+  cityName: json['cityName'] as String?,
+);
 
 Map<String, dynamic> _$AddHomeLocationParamsToJson(
-        AddHomeLocationParams instance) =>
-    <String, dynamic>{
-      'districtid': instance.districtid,
-      'cityId': instance.cityId,
-      'lat': instance.lat,
-      'lng': instance.lng,
-    };
+  AddHomeLocationParams instance,
+) => <String, dynamic>{
+  'districtid': instance.districtid,
+  'cityId': instance.cityId,
+  'lat': instance.lat,
+  'lng': instance.lng,
+};

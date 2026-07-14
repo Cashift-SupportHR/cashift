@@ -13,7 +13,4 @@ AddBankInfoParams _$AddBankInfoParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AddBankInfoParamsToJson(AddBankInfoParams instance) =>
-    <String, dynamic>{
-      'bankId': instance.bankId,
-      'iban': instance.iban,
-    };
+    <String, dynamic>{'bankId': instance.bankId, 'iban': instance.iban};

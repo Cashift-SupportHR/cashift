@@ -28,21 +28,21 @@ GeneralViolationDto _$GeneralViolationDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$GeneralViolationDtoToJson(
-        GeneralViolationDto instance) =>
-    <String, dynamic>{
-      'employeeId': instance.employeeId,
-      'employeeName': instance.employeeName,
-      'phone': instance.phone,
-      'id': instance.id,
-      'violationAmount': instance.violationAmount,
-      'projectId': instance.projectId,
-      'projectName': instance.projectName,
-      'companyId': instance.companyId,
-      'companyName': instance.companyName,
-      'shiftId': instance.shiftId,
-      'shiftName': instance.shiftName,
-      'scheduleViolationId': instance.scheduleViolationId,
-      'scheduleViolationName': instance.scheduleViolationName,
-      'scheduleEmployeeWorkId': instance.scheduleEmployeeWorkId,
-      'scheduleViolationTransactionattachs': instance.images,
-    };
+  GeneralViolationDto instance,
+) => <String, dynamic>{
+  'employeeId': instance.employeeId,
+  'employeeName': instance.employeeName,
+  'phone': instance.phone,
+  'id': instance.id,
+  'violationAmount': instance.violationAmount,
+  'projectId': instance.projectId,
+  'projectName': instance.projectName,
+  'companyId': instance.companyId,
+  'companyName': instance.companyName,
+  'shiftId': instance.shiftId,
+  'shiftName': instance.shiftName,
+  'scheduleViolationId': instance.scheduleViolationId,
+  'scheduleViolationName': instance.scheduleViolationName,
+  'scheduleEmployeeWorkId': instance.scheduleEmployeeWorkId,
+  'scheduleViolationTransactionattachs': instance.images,
+};

@@ -60,7 +60,8 @@ class FetchComponentDataEvent extends OverviewEvents {
             /*workingHours: bloc.appliedOffers*/
             jobOffersSliders: bloc.jobOffersSliders,
               cashifterCodeStream: bloc.cashifterCodeStream,
-            deliveryOrdersStream: bloc.deliverOrders
+            deliveryOrdersStream: bloc.deliverOrders,
+              myOrderEntityStream: bloc.myOrderEntityStream
           );
           bloc.clearData();
            Future.wait<dynamic>(
@@ -130,6 +131,7 @@ class FetchComponentDataEvent extends OverviewEvents {
            bloc.fetchVipOpportunities();
            bloc.fetchFavoritesOpportunities();
            bloc.saveFaceRecognitionEncryptedFile();
+
         } else {
           await bloc.fetchJobOffersSliders();
           await bloc.fetchOpportunitiesUnAuth();

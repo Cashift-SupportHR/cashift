@@ -15,10 +15,10 @@ AddMaintenancePrams _$AddMaintenancePramsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AddMaintenancePramsToJson(
-        AddMaintenancePrams instance) =>
-    <String, dynamic>{
-      if (instance.id case final value?) 'Id': value,
-      if (instance.roundTripId case final value?) 'RoundTripId': value,
-      'Description': instance.description,
-      'FaultMaintainceTypeId': instance.faultMaintainceTypeId,
-    };
+  AddMaintenancePrams instance,
+) => <String, dynamic>{
+  if (instance.id case final value?) 'Id': value,
+  if (instance.roundTripId case final value?) 'RoundTripId': value,
+  'Description': instance.description,
+  'FaultMaintainceTypeId': instance.faultMaintainceTypeId,
+};

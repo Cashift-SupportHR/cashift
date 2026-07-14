@@ -6,14 +6,10 @@ part of 'admin_endpoint.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
 
 class _AdminEndpoint implements AdminEndpoint {
-  _AdminEndpoint(
-    this._dio, {
-    this.baseUrl,
-    this.errorLogger,
-  });
+  _AdminEndpoint(this._dio, {this.baseUrl, this.errorLogger});
 
   final Dio _dio;
 
@@ -23,28 +19,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> addOpportunity(
-      AddOpportunityParams params) async {
+    AddOpportunityParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v4/OpportunitiesAvailble/AddOpportunitiesAvailble',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v4/OpportunitiesAvailble/AddOpportunitiesAvailble',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -61,28 +52,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> editOpportunity(
-      AddOpportunityParams params) async {
+    AddOpportunityParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v4/OpportunitiesAvailble/EditOpportunitiesAvailble',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v4/OpportunitiesAvailble/EditOpportunitiesAvailble',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -103,22 +89,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<CalcOpportunityDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/CalcOpportunities/GetCalcOpp',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<CalcOpportunityDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/CalcOpportunities/GetCalcOpp',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<CalcOpportunityDto> _value;
     try {
@@ -140,22 +120,16 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<ShiftDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Shift/GetListShift',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ShiftDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetListShift',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ShiftDto> _value;
     try {
@@ -172,28 +146,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<ContractConditionsDto>> fetchContractsConditions(
-      ContractConditionParams params) async {
+    ContractConditionParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<ContractConditionsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ContractConditions/GetAllContractsConditionsByProjectIdAndJobId',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ContractConditionsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractConditions/GetAllContractsConditionsByProjectIdAndJobId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ContractConditionsDto> _value;
     try {
@@ -210,30 +179,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<SchedulePriceOpportunity>>
-      fetchSchedulePriceDetailForOpportunity(
-          SchedulePriceOpportunityParams params) async {
+  fetchSchedulePriceDetailForOpportunity(
+    SchedulePriceOpportunityParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options =
-        _setStreamType<ApiResponse<SchedulePriceOpportunity>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/SchedulePrice/GetSchedulePriceDetailForOpp',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<SchedulePriceOpportunity>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/SchedulePrice/GetSchedulePriceDetailForOpp',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<SchedulePriceOpportunity> _value;
     try {
@@ -255,22 +218,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<TypeApproveModelDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/OpportunitiesAvailble/GetTypeApprove',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<TypeApproveModelDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetTypeApprove',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<TypeApproveModelDto> _value;
     try {
@@ -287,28 +244,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmployeeOpportunityTypeDto>>>
-      fetchEmployeesTypesOpportunity() async {
+  fetchEmployeesTypesOpportunity() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<EmployeeOpportunityTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CompleteFreeLanceInfoByCompanyAprovelLevel/GetAllCompleteFreeLanceInfoByCompanyAprovelLevelForDrop',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<EmployeeOpportunityTypeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CompleteFreeLanceInfoByCompanyAprovelLevel/GetAllCompleteFreeLanceInfoByCompanyAprovelLevelForDrop',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmployeeOpportunityTypeDto>> _value;
     try {
@@ -316,10 +266,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmployeeOpportunityTypeDto>((i) =>
-                    EmployeeOpportunityTypeDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<EmployeeOpportunityTypeDto>(
+                    (i) => EmployeeOpportunityTypeDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -331,29 +283,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmployeeOpportunityDto>>> fetchEmployeesOpportunities(
-      EmployeesOpportunityParams params) async {
+    EmployeesOpportunityParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<EmployeeOpportunityDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/CompleteFreeLanceInfoByCompany/GetAllFreeLanceByAprovelLevel',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<EmployeeOpportunityDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/CompleteFreeLanceInfoByCompany/GetAllFreeLanceByAprovelLevel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmployeeOpportunityDto>> _value;
     try {
@@ -361,9 +307,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmployeeOpportunityDto>((i) =>
-                    EmployeeOpportunityDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<EmployeeOpportunityDto>(
+                    (i) => EmployeeOpportunityDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -375,28 +324,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ArrivalDepartureTypeDto>>>
-      fetchTypesArrivalDeparture() async {
+  fetchTypesArrivalDeparture() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ArrivalDepartureTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/AttendanceType/GetAllAttendanceTypeForDrop',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ArrivalDepartureTypeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/AttendanceType/GetAllAttendanceTypeForDrop',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ArrivalDepartureTypeDto>> _value;
     try {
@@ -404,9 +346,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ArrivalDepartureTypeDto>((i) =>
-                    ArrivalDepartureTypeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ArrivalDepartureTypeDto>(
+                    (i) => ArrivalDepartureTypeDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -422,22 +367,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<JobDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Jobs/GetAllJobByProjectId',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<JobDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Jobs/GetAllJobByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<JobDto>> _value;
     try {
@@ -445,8 +384,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<JobDto>((i) => JobDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<JobDto>(
+                    (i) => JobDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -462,22 +403,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<WalletBalanceDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v4/CompanyBalance/GetCompanyBalanceDetails',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<WalletBalanceDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v4/CompanyBalance/GetCompanyBalanceDetails',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<WalletBalanceDto> _value;
     try {
@@ -498,22 +433,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<FilterAndTapDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v4/CompanyBalance/GetTypeSearch',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<FilterAndTapDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v4/CompanyBalance/GetTypeSearch',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<FilterAndTapDto> _value;
     try {
@@ -530,28 +459,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<AdminWalletDto>> fetchAdminWalletData(
-      AdminWalletPrams params) async {
+    AdminWalletPrams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<AdminWalletDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v4/CompanyBalance/SearchCompanyDetails',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<AdminWalletDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v4/CompanyBalance/SearchCompanyDetails',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<AdminWalletDto> _value;
     try {
@@ -572,22 +496,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<VehicleZoneDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehiclesZone/GetAllVehiclesZone',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<VehicleZoneDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehiclesZone/GetAllVehiclesZone',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehicleZoneDto>> _value;
     try {
@@ -595,9 +513,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehicleZoneDto>(
-                    (i) => VehicleZoneDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<VehicleZoneDto>(
+                    (i) => VehicleZoneDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -609,28 +528,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addVehicleZone(
-      AddVehicleZoneParams params) async {
+    AddVehicleZoneParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehiclesZone/AddVehiclesZone',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehiclesZone/AddVehiclesZone',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -647,28 +561,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> editVehicleZone(
-      AddVehicleZoneParams params) async {
+    AddVehicleZoneParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehiclesZone/EditVehiclesZone',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehiclesZone/EditVehiclesZone',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -685,28 +594,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> editVehiclesCoordinates(
-      EditVehicleZoneLatLngParams params) async {
+    EditVehicleZoneLatLngParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehiclesZone/EditVehiclesCoordinates',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehiclesZone/EditVehiclesCoordinates',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -723,27 +627,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<VehiclesDto>>> fetchVehiclesByProjectId(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ProjectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<VehiclesDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Vehicles/GetAllVehiclesByProjectId',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<VehiclesDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Vehicles/GetAllVehiclesByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehiclesDto>> _value;
     try {
@@ -751,9 +650,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehiclesDto>(
-                    (i) => VehiclesDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<VehiclesDto>(
+                    (i) => VehiclesDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -769,22 +669,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehiclesZone/DeleteVehiclesZone',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehiclesZone/DeleteVehiclesZone',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -801,28 +695,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<VehicleZoneDto>>> fetchFilterVehiclesZoneAreas(
-      FilterVehicleZoneParams params) async {
+    FilterVehicleZoneParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<VehicleZoneDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehiclesZone/GetAllVehiclesZoneByProjectId',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<VehicleZoneDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehiclesZone/GetAllVehiclesZoneByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehicleZoneDto>> _value;
     try {
@@ -830,9 +719,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehicleZoneDto>(
-                    (i) => VehicleZoneDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<VehicleZoneDto>(
+                    (i) => VehicleZoneDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -844,30 +734,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<EmpAttendanceRportsDto>>
-      fetchAttendanceNotificationsReports(
-          EmpAttendanceRportsPrams empAttendanceRportsPrams) async {
+  fetchAttendanceNotificationsReports(
+    EmpAttendanceRportsPrams empAttendanceRportsPrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(empAttendanceRportsPrams.toJson());
-    final _options =
-        _setStreamType<ApiResponse<EmpAttendanceRportsDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/AdminReports/GetAllScheduleEmployeeAttendanceReport',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<EmpAttendanceRportsDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/AdminReports/GetAllScheduleEmployeeAttendanceReport',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<EmpAttendanceRportsDto> _value;
     try {
@@ -884,28 +768,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<BanEmployeeTabDto>>>
-      fetchBanEmployeesTabData() async {
+  fetchBanEmployeesTabData() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<BanEmployeeTabDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/BlockPerProject/GetBlockFreelanceCounter',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<BanEmployeeTabDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/BlockPerProject/GetBlockFreelanceCounter',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<BanEmployeeTabDto>> _value;
     try {
@@ -913,9 +790,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<BanEmployeeTabDto>((i) =>
-                    BanEmployeeTabDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<BanEmployeeTabDto>(
+                    (i) =>
+                        BanEmployeeTabDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -927,28 +806,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<BanEmployeeDto>>> fetchBanEmployeesData(
-      BanEmployeeParams params) async {
+    BanEmployeeParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<List<BanEmployeeDto>>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/BlockPerProject/GetFreelanceBlockByType',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<BanEmployeeDto>>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/BlockPerProject/GetFreelanceBlockByType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<BanEmployeeDto>> _value;
     try {
@@ -956,9 +830,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<BanEmployeeDto>(
-                    (i) => BanEmployeeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<BanEmployeeDto>(
+                    (i) => BanEmployeeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -970,28 +845,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> updateBanEmployeesStatus(
-      BanEmployeeStatusParams params) async {
+    BanEmployeeStatusParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/BlockPerProject/UpdateBlockFreelance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/BlockPerProject/UpdateBlockFreelance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -1008,27 +878,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<BanEmployeeDetailsDto>> fetchEmployeeCVDetails(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<BanEmployeeDetailsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLancerInfo/GetFreelanceInfoById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<BanEmployeeDetailsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLancerInfo/GetFreelanceInfoById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<BanEmployeeDetailsDto> _value;
     try {
@@ -1045,28 +910,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<JobEvaluationsEmployeeDto>>>
-      fetchJobEvaluationsEmployee(int freelanceId) async {
+  fetchJobEvaluationsEmployee(int freelanceId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'freelanceId': freelanceId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
-        _setStreamType<ApiResponse<List<JobEvaluationsEmployeeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/BlockPerProject/GetEvalFreelance',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        _setStreamType<ApiResponse<List<JobEvaluationsEmployeeDto>>>(
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v1/BlockPerProject/GetEvalFreelance',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<JobEvaluationsEmployeeDto>> _value;
     try {
@@ -1074,10 +935,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<JobEvaluationsEmployeeDto>((i) =>
-                    JobEvaluationsEmployeeDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<JobEvaluationsEmployeeDto>(
+                    (i) => JobEvaluationsEmployeeDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1089,28 +952,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<bool>> addCashifterLoan(
-      AddCashifterLoanParams params) async {
+    AddCashifterLoanParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/CashiftLoanByFreelanceDetails/AddLoan',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashiftLoanByFreelanceDetails/AddLoan',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -1127,28 +985,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>> fetchCashifters(
-      int companyId) async {
+    int companyId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'companyId': companyId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CompleteFreeLanceInfoByCompany/GetAllFreeLancerInfoForLoan',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CompleteFreeLanceInfoByCompany/GetAllFreeLancerInfoForLoan',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -1156,9 +1008,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1174,23 +1028,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CashiftLoanType/GetAllCashiftLoanTypes',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashiftLoanType/GetAllCashiftLoanTypes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -1198,9 +1045,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1212,28 +1061,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchDiscountPercentages() async {
+  fetchDiscountPercentages() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CashiftLoanType/GetDiscountPercentages',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashiftLoanType/GetDiscountPercentages',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -1241,9 +1083,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1255,28 +1099,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchCashiftLoanTermsAndConditions() async {
+  fetchCashiftLoanTermsAndConditions() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CashiftLoanTermsAndConditions/GetAllCashiftLoanTermsAndConditions',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashiftLoanTermsAndConditions/GetAllCashiftLoanTermsAndConditions',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -1284,9 +1121,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1298,28 +1137,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ClassificationDto>>> fetchClassification(
-      int tapType) async {
+    int tapType,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'tapType': tapType};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ClassificationDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CompleteFreeLanceInfoByCompanyAprovelLevel/GetAllCompleteFreeLanceInfoByCompanyAprovelLevel',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ClassificationDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CompleteFreeLanceInfoByCompanyAprovelLevel/GetAllCompleteFreeLanceInfoByCompanyAprovelLevel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ClassificationDto>> _value;
     try {
@@ -1327,9 +1160,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ClassificationDto>((i) =>
-                    ClassificationDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ClassificationDto>(
+                    (i) =>
+                        ClassificationDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1345,22 +1180,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          'v1/CompleteFreeLanceInfoByCompanyAprovelLevel/DeleteCompleteFreeLanceInfoByCompanyAprovelLevel',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'v1/CompleteFreeLanceInfoByCompanyAprovelLevel/DeleteCompleteFreeLanceInfoByCompanyAprovelLevel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -1389,51 +1218,30 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (id != null) {
-      _data.fields.add(MapEntry(
-        'Id',
-        id.toString(),
-      ));
+      _data.fields.add(MapEntry('Id', id.toString()));
     }
     if (companyId != null) {
-      _data.fields.add(MapEntry(
-        'CompanyId',
-        companyId.toString(),
-      ));
+      _data.fields.add(MapEntry('CompanyId', companyId.toString()));
     }
     if (nameAr != null) {
-      _data.fields.add(MapEntry(
-        'NameAr',
-        nameAr,
-      ));
+      _data.fields.add(MapEntry('NameAr', nameAr));
     }
     if (nameEn != null) {
-      _data.fields.add(MapEntry(
-        'NameEn',
-        nameEn,
-      ));
+      _data.fields.add(MapEntry('NameEn', nameEn));
     }
     if (description != null) {
-      _data.fields.add(MapEntry(
-        'Description',
-        description,
-      ));
+      _data.fields.add(MapEntry('Description', description));
     }
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          'v1/CompleteFreeLanceInfoByCompanyAprovelLevel/AddEditCompleteFreeLanceInfoByCompanyAprovelLevel',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'v1/CompleteFreeLanceInfoByCompanyAprovelLevel/AddEditCompleteFreeLanceInfoByCompanyAprovelLevel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -1450,28 +1258,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmployeeDataDto>>> fetchEmployee(
-      String? searchString) async {
+    String? searchString,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'searchString': searchString};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<EmployeeDataDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLancerInfo/GetCashifterByIdNumberOrPhone',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<EmployeeDataDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLancerInfo/GetCashifterByIdNumberOrPhone',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmployeeDataDto>> _value;
     try {
@@ -1479,9 +1282,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmployeeDataDto>(
-                    (i) => EmployeeDataDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<EmployeeDataDto>(
+                    (i) => EmployeeDataDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1497,23 +1301,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ProjectEmployeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Projects/GetProjects',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ProjectEmployeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Projects/GetProjects',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ProjectEmployeDto>> _value;
     try {
@@ -1521,9 +1318,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ProjectEmployeDto>((i) =>
-                    ProjectEmployeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ProjectEmployeDto>(
+                    (i) =>
+                        ProjectEmployeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1539,22 +1338,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<DayRelaxDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/ScheduleEmployeeWork/GetWeekDays',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<DayRelaxDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/ScheduleEmployeeWork/GetWeekDays',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<DayRelaxDto>> _value;
     try {
@@ -1562,9 +1355,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<DayRelaxDto>(
-                    (i) => DayRelaxDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<DayRelaxDto>(
+                    (i) => DayRelaxDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1576,29 +1370,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ShiftEmployeeDto>>> fetchShiftsByProjects(
-      int? projectId) async {
+    int? projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ShiftEmployeeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Shift/GetAllShiftsByProjects',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ShiftEmployeeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetAllShiftsByProjects',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ShiftEmployeeDto>> _value;
     try {
@@ -1606,9 +1394,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ShiftEmployeeDto>(
-                    (i) => ShiftEmployeeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ShiftEmployeeDto>(
+                    (i) => ShiftEmployeeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1620,29 +1409,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<PaymentPeriodTypesDto>>>
-      fetchPaymentPeriodTypesByProject(int? projectId) async {
+  fetchPaymentPeriodTypesByProject(int? projectId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PaymentPeriodTypesDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/PaymentPeriodType/GetAllPaymentPeriodTypesByProject',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PaymentPeriodTypesDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/PaymentPeriodType/GetAllPaymentPeriodTypesByProject',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PaymentPeriodTypesDto>> _value;
     try {
@@ -1650,9 +1432,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PaymentPeriodTypesDto>((i) =>
-                    PaymentPeriodTypesDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PaymentPeriodTypesDto>(
+                    (i) => PaymentPeriodTypesDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1664,29 +1449,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmployeeStatusesDto>>> fetchEmployeeStatusesByProject(
-      int? projectId) async {
+    int? projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<EmployeeStatusesDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/EmployeeStatus/GetAllEmployeeStatusesByProject',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<EmployeeStatusesDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/EmployeeStatus/GetAllEmployeeStatusesByProject',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmployeeStatusesDto>> _value;
     try {
@@ -1694,9 +1473,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmployeeStatusesDto>((i) =>
-                    EmployeeStatusesDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<EmployeeStatusesDto>(
+                    (i) =>
+                        EmployeeStatusesDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1708,30 +1489,25 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmpChasifterDto>>> fetchEmployeeChashifter(
-      int? employeeStatusId) async {
+    int? employeeStatusId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
-      r'employeeStatusId': employeeStatusId
+      r'employeeStatusId': employeeStatusId,
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<EmpChasifterDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/ScheduleEmployeeWork/GetAllScheduleEmployeeWorks',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<EmpChasifterDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/ScheduleEmployeeWork/GetAllScheduleEmployeeWorks',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmpChasifterDto>> _value;
     try {
@@ -1739,9 +1515,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmpChasifterDto>(
-                    (i) => EmpChasifterDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<EmpChasifterDto>(
+                    (i) => EmpChasifterDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1757,22 +1534,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<TabCashifterDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ScheduleEmployeeWork/GetScheduleEmployeeWorkTabs',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<TabCashifterDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleEmployeeWork/GetScheduleEmployeeWorkTabs',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<TabCashifterDto>> _value;
     try {
@@ -1780,9 +1551,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<TabCashifterDto>(
-                    (i) => TabCashifterDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<TabCashifterDto>(
+                    (i) => TabCashifterDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1805,23 +1577,16 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<AttachmentsEmpDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/RecruitmentRequirementsAttachments/GetAllRecruitmentRequirementsAttachmentsByFreelancerIdAndStatus',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<AttachmentsEmpDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/RecruitmentRequirementsAttachments/GetAllRecruitmentRequirementsAttachmentsByFreelancerIdAndStatus',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<AttachmentsEmpDto>> _value;
     try {
@@ -1829,9 +1594,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<AttachmentsEmpDto>((i) =>
-                    AttachmentsEmpDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<AttachmentsEmpDto>(
+                    (i) =>
+                        AttachmentsEmpDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -1843,28 +1610,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<EmployeeChasfiterDetailsDto>> fetchEmpById(
-      int freelancerId) async {
+    int freelancerId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'freelancerId': freelancerId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<EmployeeChasfiterDetailsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/FreeLancerInfoV/GetFreelancerInfoById',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<EmployeeChasfiterDetailsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/FreeLancerInfoV/GetFreelancerInfoById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<EmployeeChasfiterDetailsDto> _value;
     try {
@@ -1882,28 +1643,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> AddEditEmployee(
-      AddEmployeePrameter addEmployeePrameter) async {
+    AddEmployeePrameter addEmployeePrameter,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(addEmployeePrameter.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/ScheduleEmployeeWork/AddEditScheduleEmployeeWork',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/ScheduleEmployeeWork/AddEditScheduleEmployeeWork',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -1920,28 +1676,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<EmpAttendanceDto>> fetchEmployeeAttendance(
-      EmpAttandancePrams empAttandancePrams) async {
+    EmpAttandancePrams empAttandancePrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(empAttandancePrams.toJson());
-    final _options = _setStreamType<ApiResponse<EmpAttendanceDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v5/TransactionLogCashift/AdminFollowTransactionLog',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<EmpAttendanceDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v5/TransactionLogCashift/AdminFollowTransactionLog',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<EmpAttendanceDto> _value;
     try {
@@ -1966,30 +1717,32 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.addAll(requirementAttachmentPrams.toJson());
     final _headers = <String, dynamic>{};
     final _data = FormData();
-    _data.files.add(MapEntry(
-      'RequirementAttachment',
-      MultipartFile.fromFileSync(
-        requirementAttachment.path,
-        filename: requirementAttachment.path.split(Platform.pathSeparator).last,
+    _data.files.add(
+      MapEntry(
+        'RequirementAttachment',
+        MultipartFile.fromFileSync(
+          requirementAttachment.path,
+          filename: requirementAttachment.path
+              .split(Platform.pathSeparator)
+              .last,
+        ),
       ),
-    ));
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/RecruitmentRequirementsAttachments/AddEditFreelancerRecruitmentRequirementsAttachmentForAdmin',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    );
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentRequirementsAttachments/AddEditFreelancerRecruitmentRequirementsAttachmentForAdmin',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -2011,34 +1764,36 @@ class _AdminEndpoint implements AdminEndpoint {
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
-      r'RequirementAttachmentId': requirementAttachmentId
+      r'RequirementAttachmentId': requirementAttachmentId,
     };
     final _headers = <String, dynamic>{};
     final _data = FormData();
-    _data.files.add(MapEntry(
-      'RequirementAttachment',
-      MultipartFile.fromFileSync(
-        requirementAttachment.path,
-        filename: requirementAttachment.path.split(Platform.pathSeparator).last,
+    _data.files.add(
+      MapEntry(
+        'RequirementAttachment',
+        MultipartFile.fromFileSync(
+          requirementAttachment.path,
+          filename: requirementAttachment.path
+              .split(Platform.pathSeparator)
+              .last,
+        ),
       ),
-    ));
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/RecruitmentRequirementsAttachments/AddEditFreelancerRecruitmentRequirementsAttachment',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    );
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentRequirementsAttachments/AddEditFreelancerRecruitmentRequirementsAttachment',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -2055,28 +1810,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmploymentManagementTabDto>>>
-      fetchEmploymentManagementTabsData() async {
+  fetchEmploymentManagementTabsData() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
-        _setStreamType<ApiResponse<List<EmploymentManagementTabDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/CompleteFreeLanceInfoByCompany/GetFreeLancerCardsDetails',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        _setStreamType<ApiResponse<List<EmploymentManagementTabDto>>>(
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v2/CompleteFreeLanceInfoByCompany/GetFreeLancerCardsDetails',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmploymentManagementTabDto>> _value;
     try {
@@ -2084,10 +1835,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmploymentManagementTabDto>((i) =>
-                    EmploymentManagementTabDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<EmploymentManagementTabDto>(
+                    (i) => EmploymentManagementTabDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2099,29 +1852,26 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmployeeChashifterDataDto>>> fetchEmployeesData(
-      EmployeeDataParams params) async {
+    EmployeeDataParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
     final _options =
-        _setStreamType<ApiResponse<List<EmployeeChashifterDataDto>>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v3/CompleteFreeLanceInfoByCompany/GetFreelanceInfoByType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        _setStreamType<ApiResponse<List<EmployeeChashifterDataDto>>>(
+          Options(method: 'POST', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v3/CompleteFreeLanceInfoByCompany/GetFreelanceInfoByType',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmployeeChashifterDataDto>> _value;
     try {
@@ -2129,10 +1879,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmployeeChashifterDataDto>((i) =>
-                    EmployeeChashifterDataDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<EmployeeChashifterDataDto>(
+                    (i) => EmployeeChashifterDataDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2148,22 +1900,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<OrderStatusDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/CompleteFreeLanceInfoByCompany/CompleteFreelanceAction',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<OrderStatusDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/CompleteFreeLanceInfoByCompany/CompleteFreelanceAction',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<OrderStatusDto>> _value;
     try {
@@ -2171,9 +1917,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<OrderStatusDto>(
-                    (i) => OrderStatusDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<OrderStatusDto>(
+                    (i) => OrderStatusDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2185,27 +1932,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<OrderStatusDto>>>
-      fetchEmployeesOrderStatusIfAccept() async {
+  fetchEmployeesOrderStatusIfAccept() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<OrderStatusDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/CompleteFreeLanceInfoByCompanyAprovelLevel/CompleteFreeLanceAcceptedType',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<OrderStatusDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CompleteFreeLanceInfoByCompanyAprovelLevel/CompleteFreeLanceAcceptedType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<OrderStatusDto>> _value;
     try {
@@ -2213,9 +1954,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<OrderStatusDto>(
-                    (i) => OrderStatusDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<OrderStatusDto>(
+                    (i) => OrderStatusDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2231,23 +1973,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<WorkingPeriodDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ShiftHead/GetShiftHead',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<WorkingPeriodDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ShiftHead/GetShiftHead',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<WorkingPeriodDto>> _value;
     try {
@@ -2255,9 +1990,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<WorkingPeriodDto>(
-                    (i) => WorkingPeriodDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<WorkingPeriodDto>(
+                    (i) => WorkingPeriodDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2269,28 +2005,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> saveEmployeesOrderStatus(
-      SaveOrderStatusParams params) async {
+    SaveOrderStatusParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/CompleteFreeLanceInfoByCompany/UpdateFreeLacneCompleteJobForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/CompleteFreeLanceInfoByCompany/UpdateFreeLacneCompleteJobForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -2307,28 +2038,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<EmployeeOrderStatusDto>> fetchEmployeesOrderStatusForEdit(
-      int freelanceId) async {
+    int freelanceId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'FreelanceId': freelanceId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<EmployeeOrderStatusDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/AssignFreeLanceProject/AssignProjectShiftFreelance',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<EmployeeOrderStatusDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/AssignFreeLanceProject/AssignProjectShiftFreelance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<EmployeeOrderStatusDto> _value;
     try {
@@ -2354,48 +2079,32 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = FormData();
-    _data.fields.add(MapEntry(
-      'FreeLanceInfoId',
-      freeLanceInfoId.toString(),
-    ));
-    _data.fields.add(MapEntry(
-      'NewPhoneNumber',
-      newPhoneNumber,
-    ));
-    _data.files.add(MapEntry(
-      'AttachmentFile',
-      MultipartFile.fromFileSync(
-        attachmentFile.path,
-        filename: attachmentFile.path.split(Platform.pathSeparator).last,
+    _data.fields.add(MapEntry('FreeLanceInfoId', freeLanceInfoId.toString()));
+    _data.fields.add(MapEntry('NewPhoneNumber', newPhoneNumber));
+    _data.files.add(
+      MapEntry(
+        'AttachmentFile',
+        MultipartFile.fromFileSync(
+          attachmentFile.path,
+          filename: attachmentFile.path.split(Platform.pathSeparator).last,
+        ),
       ),
-    ));
-    _data.fields.add(MapEntry(
-      'NotificationType',
-      notificationType.toString(),
-    ));
-    final _options = _setStreamType<ApiResponse<int>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ChangePhoneNumberLog/AddChangePhoneNumberLog',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    );
+    _data.fields.add(MapEntry('NotificationType', notificationType.toString()));
+    final _options = _setStreamType<ApiResponse<int>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ChangePhoneNumberLog/AddChangePhoneNumberLog',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<int> _value;
     try {
-      _value = ApiResponse<int>.fromJson(
-        _result.data!,
-        (json) => json as int,
-      );
+      _value = ApiResponse<int>.fromJson(_result.data!, (json) => json as int);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -2409,22 +2118,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ChangePhoneNumberLog/ResendChangePhoneNumberCode',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ChangePhoneNumberLog/ResendChangePhoneNumberCode',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -2441,28 +2144,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<NotificationTypeCodeDto>>>
-      fetchNotificationTypes() async {
+  fetchNotificationTypes() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<NotificationTypeCodeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ChangePhoneNumberLog/GetNotificationTypes',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<NotificationTypeCodeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ChangePhoneNumberLog/GetNotificationTypes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<NotificationTypeCodeDto>> _value;
     try {
@@ -2470,9 +2166,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<NotificationTypeCodeDto>((i) =>
-                    NotificationTypeCodeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<NotificationTypeCodeDto>(
+                    (i) => NotificationTypeCodeDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2484,28 +2183,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> checkChangePhoneNumberCode(
-      CheckPhoneCodeParams params) async {
+    CheckPhoneCodeParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ChangePhoneNumberLog/CheckChangePhoneNumberCode',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ChangePhoneNumberLog/CheckChangePhoneNumberCode',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -2526,22 +2220,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<ResetPhoneDataDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ChangePhoneNumberLog/PopupUpdateFreelanceLabels',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ResetPhoneDataDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ChangePhoneNumberLog/PopupUpdateFreelanceLabels',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ResetPhoneDataDto> _value;
     try {
@@ -2562,23 +2250,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<PopupEmploymentManagementDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ChangePhoneNumberLog/PopupsFreelancer',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<PopupEmploymentManagementDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ChangePhoneNumberLog/PopupsFreelancer',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<PopupEmploymentManagementDto> _value;
     try {
@@ -2596,28 +2277,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<bool>> addBlockEmployee(
-      AddBlockEmployeeParams params) async {
+    AddBlockEmployeeParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/BlockFreeLancerBerCompany/AddBlockFreeLancerBerCompany',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/BlockFreeLancerBerCompany/AddBlockFreeLancerBerCompany',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -2638,22 +2314,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLancerInfo/AllowEditFaceRecognition',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLancerInfo/AllowEditFaceRecognition',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -2674,22 +2344,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<TabCashifterDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/RecruitmentRequirementsAttachments/GetAllAttachmentStatues',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<TabCashifterDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentRequirementsAttachments/GetAllAttachmentStatues',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<TabCashifterDto>> _value;
     try {
@@ -2697,9 +2361,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<TabCashifterDto>(
-                    (i) => TabCashifterDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<TabCashifterDto>(
+                    (i) => TabCashifterDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2711,28 +2376,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> acceptOrRejectAttachmentEmp(
-      AcceptOrRejectAttachmentEmpPrams acceptOrRejectAttachmentEmpPrams) async {
+    AcceptOrRejectAttachmentEmpPrams acceptOrRejectAttachmentEmpPrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(acceptOrRejectAttachmentEmpPrams.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'PUT',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/RecruitmentRequirementsAttachments/updateFreeLancerInfoRecruitmentRequirementAttachmentStatus',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'PUT', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentRequirementsAttachments/updateFreeLancerInfoRecruitmentRequirementAttachmentStatus',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -2749,28 +2409,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<bool>> addEmploymentOfficial(
-      AddEmploymentOfficialParams params) async {
+    AddEmploymentOfficialParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/RecruitmentOfficer/AddRecruitmentOfficerForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentOfficer/AddRecruitmentOfficerForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -2787,28 +2442,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<bool>> editEmploymentOfficial(
-      AddEmploymentOfficialParams params) async {
+    AddEmploymentOfficialParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/RecruitmentOfficer/EditRecruitmentOfficerForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentOfficer/EditRecruitmentOfficerForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -2825,28 +2475,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmploymentOfficialDto>>> fetchEmploymentOfficials(
-      int type) async {
+    int type,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<EmploymentOfficialDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/RecruitmentOfficer/GetAllRecruitmentOfficersForMob',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<EmploymentOfficialDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentOfficer/GetAllRecruitmentOfficersForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmploymentOfficialDto>> _value;
     try {
@@ -2854,9 +2498,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmploymentOfficialDto>((i) =>
-                    EmploymentOfficialDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<EmploymentOfficialDto>(
+                    (i) => EmploymentOfficialDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -2872,22 +2519,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/RecruitmentOfficer/DeleteRecruitmentOfficerForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/RecruitmentOfficer/DeleteRecruitmentOfficerForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -2909,29 +2550,20 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<int>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/FocusPoints/AddFocusPoint',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<int>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/FocusPoints/AddFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<int> _value;
     try {
-      _value = ApiResponse<int>.fromJson(
-        _result.data!,
-        (json) => json as int,
-      );
+      _value = ApiResponse<int>.fromJson(_result.data!, (json) => json as int);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -2946,29 +2578,20 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<int>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/FocusPoints/EditFocusPoint',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<int>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/FocusPoints/EditFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<int> _value;
     try {
-      _value = ApiResponse<int>.fromJson(
-        _result.data!,
-        (json) => json as int,
-      );
+      _value = ApiResponse<int>.fromJson(_result.data!, (json) => json as int);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -2982,22 +2605,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<FocusPointByIdDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPoints/GetFocusPointById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<FocusPointByIdDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPoints/GetFocusPointById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<FocusPointByIdDto> _value;
     try {
@@ -3018,23 +2635,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Projects/GetProjects',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Projects/GetProjects',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -3042,9 +2652,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3060,23 +2672,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<FocusPointTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPointsType/GetFocusPointsType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<FocusPointTypeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsType/GetFocusPointsType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<FocusPointTypeDto>> _value;
     try {
@@ -3084,9 +2689,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<FocusPointTypeDto>((i) =>
-                    FocusPointTypeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<FocusPointTypeDto>(
+                    (i) =>
+                        FocusPointTypeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3102,22 +2709,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<EmployeeTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPoints/GetFreeLanceFocusPoint',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<EmployeeTypeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPoints/GetFreeLanceFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmployeeTypeDto>> _value;
     try {
@@ -3125,9 +2726,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmployeeTypeDto>(
-                    (i) => EmployeeTypeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<EmployeeTypeDto>(
+                    (i) => EmployeeTypeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3143,23 +2745,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PointPriorityNumberDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPointsPriority/GetPriorityNumber',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PointPriorityNumberDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsPriority/GetPriorityNumber',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PointPriorityNumberDto>> _value;
     try {
@@ -3167,9 +2762,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PointPriorityNumberDto>((i) =>
-                    PointPriorityNumberDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PointPriorityNumberDto>(
+                    (i) => PointPriorityNumberDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3181,28 +2779,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<FocusPointTransactionTypeDto>>>
-      fetchFocusPointTransactionTypes() async {
+  fetchFocusPointTransactionTypes() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
-        _setStreamType<ApiResponse<List<FocusPointTransactionTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPointsTransaction/GetFocusPointsTransaction',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        _setStreamType<ApiResponse<List<FocusPointTransactionTypeDto>>>(
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v1/FocusPointsTransaction/GetFocusPointsTransaction',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<FocusPointTransactionTypeDto>> _value;
     try {
@@ -3210,10 +2804,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<FocusPointTransactionTypeDto>((i) =>
-                    FocusPointTransactionTypeDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<FocusPointTransactionTypeDto>(
+                    (i) => FocusPointTransactionTypeDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3225,28 +2821,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ShiftFocusPointDto>>> fetchShifts(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ShiftFocusPointDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Shift/GetAllShiftsByProjects',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ShiftFocusPointDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetAllShiftsByProjects',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ShiftFocusPointDto>> _value;
     try {
@@ -3254,9 +2844,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ShiftFocusPointDto>((i) =>
-                    ShiftFocusPointDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ShiftFocusPointDto>(
+                    (i) =>
+                        ShiftFocusPointDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3272,22 +2864,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointShifts/DeleteFocusPointShift',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointShifts/DeleteFocusPointShift',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -3304,28 +2890,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CoverageBreakFocusPointDto>>>
-      fetchCoverageBreakFocusPoint() async {
+  fetchCoverageBreakFocusPoint() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
-        _setStreamType<ApiResponse<List<CoverageBreakFocusPointDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPoints/GetCoverageBreak',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        _setStreamType<ApiResponse<List<CoverageBreakFocusPointDto>>>(
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v1/FocusPoints/GetCoverageBreak',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CoverageBreakFocusPointDto>> _value;
     try {
@@ -3333,10 +2915,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CoverageBreakFocusPointDto>((i) =>
-                    CoverageBreakFocusPointDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<CoverageBreakFocusPointDto>(
+                    (i) => CoverageBreakFocusPointDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3348,27 +2932,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> addFocusPointAttendanceTime(
-      List<AddFocusAttendanceTimeParams> params) async {
+    List<AddFocusAttendanceTimeParams> params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = params.map((e) => e.toJson()).toList();
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsAttendance/AddFocusAttendanceForMobile',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsAttendance/AddFocusAttendanceForMobile',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -3385,28 +2964,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ShiftsByProjectDto>>> fetchShiftsByProjectId(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ProjectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ShiftsByProjectDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Shift/GetShiftsByProjectId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ShiftsByProjectDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetShiftsByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ShiftsByProjectDto>> _value;
     try {
@@ -3414,9 +2987,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ShiftsByProjectDto>((i) =>
-                    ShiftsByProjectDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ShiftsByProjectDto>(
+                    (i) =>
+                        ShiftsByProjectDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3428,28 +3003,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<PointAttendanceTypeDto>>>
-      fetchFocusPointsAttendanceType() async {
+  fetchFocusPointsAttendanceType() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PointAttendanceTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPointsAttendanceType/GetFocusPointsAttendanceType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PointAttendanceTypeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsAttendanceType/GetFocusPointsAttendanceType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PointAttendanceTypeDto>> _value;
     try {
@@ -3457,9 +3025,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PointAttendanceTypeDto>((i) =>
-                    PointAttendanceTypeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PointAttendanceTypeDto>(
+                    (i) => PointAttendanceTypeDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3471,27 +3042,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> addFocusPointCovenant(
-      List<AddCovenantFocusPointParams> params) async {
+    List<AddCovenantFocusPointParams> params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = params.map((e) => e.toJson()).toList();
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsDeviceSetting/AddDevicesFocusPoint',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsDeviceSetting/AddDevicesFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -3512,22 +3078,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<CovenantDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsDeviceName/GetFocusPointsDeviceName',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<CovenantDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsDeviceName/GetFocusPointsDeviceName',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CovenantDto>> _value;
     try {
@@ -3535,9 +3095,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CovenantDto>(
-                    (i) => CovenantDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CovenantDto>(
+                    (i) => CovenantDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3553,22 +3114,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<FocusPointDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPoints/GetFocusPoints',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<FocusPointDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPoints/GetFocusPoints',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<FocusPointDto>> _value;
     try {
@@ -3576,9 +3131,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<FocusPointDto>(
-                    (i) => FocusPointDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<FocusPointDto>(
+                    (i) => FocusPointDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3594,22 +3150,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPoints/DeleteFocusPoint',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPoints/DeleteFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -3630,22 +3180,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsAttendance/DeleteFocusPointsAttendance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsAttendance/DeleteFocusPointsAttendance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -3666,22 +3210,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsAttendance/DeleteFocusPointsAttendance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsAttendance/DeleteFocusPointsAttendance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -3698,28 +3236,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> editFocusPointAttendance(
-      AddFocusAttendanceTimeParams params) async {
+    AddFocusAttendanceTimeParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsAttendance/EditFocusAttendanceForMobile',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsAttendance/EditFocusAttendanceForMobile',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -3736,28 +3269,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<PointAttendanceTime>>>
-      fetchFocusPointsAttendanceByFocusPointId(int focusPointId) async {
+  fetchFocusPointsAttendanceByFocusPointId(int focusPointId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'FocusPointId': focusPointId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PointAttendanceTime>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPointsAttendance/GetFocusPointsAttendanceByFocusPointId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PointAttendanceTime>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsAttendance/GetFocusPointsAttendanceByFocusPointId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PointAttendanceTime>> _value;
     try {
@@ -3765,9 +3291,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PointAttendanceTime>((i) =>
-                    PointAttendanceTime.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PointAttendanceTime>(
+                    (i) =>
+                        PointAttendanceTime.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3783,22 +3311,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsDeviceSetting/DeleteDevicesFocusPoint',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsDeviceSetting/DeleteDevicesFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -3815,28 +3337,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> editCovenantFocusPoint(
-      AddCovenantFocusPointParams params) async {
+    AddCovenantFocusPointParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FocusPointsDeviceSetting/EditDevicesFocusPoint',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsDeviceSetting/EditDevicesFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -3853,28 +3370,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<FocusPointTimeDto>>> fetchFocusPointTimes(
-      int focusPointId) async {
+    int focusPointId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'FocusPointId': focusPointId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<FocusPointTimeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPointsAttendance/GetGroupAttendanceByFocusPointId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<FocusPointTimeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsAttendance/GetGroupAttendanceByFocusPointId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<FocusPointTimeDto>> _value;
     try {
@@ -3882,9 +3393,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<FocusPointTimeDto>((i) =>
-                    FocusPointTimeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<FocusPointTimeDto>(
+                    (i) =>
+                        FocusPointTimeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3896,28 +3409,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<FocusPointAreaDto>>> fetchFocusPointAreas(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<FocusPointAreaDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FocusPointsArea/GetFocusPointArea',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<FocusPointAreaDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FocusPointsArea/GetFocusPointArea',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<FocusPointAreaDto>> _value;
     try {
@@ -3925,9 +3432,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<FocusPointAreaDto>((i) =>
-                    FocusPointAreaDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<FocusPointAreaDto>(
+                    (i) =>
+                        FocusPointAreaDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3939,28 +3448,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ShiftByProjectIdDto>>>
-      fetchShiftsByProjectsFocusPoints(int projectId) async {
+  fetchShiftsByProjectsFocusPoints(int projectId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ProjectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ShiftByProjectIdDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Shift/GetShiftsByProjects',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ShiftByProjectIdDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetShiftsByProjects',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ShiftByProjectIdDto>> _value;
     try {
@@ -3968,9 +3470,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ShiftByProjectIdDto>((i) =>
-                    ShiftByProjectIdDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ShiftByProjectIdDto>(
+                    (i) =>
+                        ShiftByProjectIdDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -3982,28 +3486,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<ProjectInfoFocusPointDto>> fetchInfoTrackingFocusPoint(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ProjectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<ProjectInfoFocusPointDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Projects/GetProjectInfoFocusPoint',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<ProjectInfoFocusPointDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Projects/GetProjectInfoFocusPoint',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ProjectInfoFocusPointDto> _value;
     try {
@@ -4031,23 +3529,16 @@ class _AdminEndpoint implements AdminEndpoint {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<FocusPointsTypesDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FreeLanceApplyFocusPoint/GetFocusPointsInfoByProjectId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<FocusPointsTypesDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLanceApplyFocusPoint/GetFocusPointsInfoByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<FocusPointsTypesDto>> _value;
     try {
@@ -4055,9 +3546,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<FocusPointsTypesDto>((i) =>
-                    FocusPointsTypesDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<FocusPointsTypesDto>(
+                    (i) =>
+                        FocusPointsTypesDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4069,28 +3562,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<GeneralViolationDto>>>
-      fetchGeneralViolations() async {
+  fetchGeneralViolations() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<GeneralViolationDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ScheduleViolationTransaction/GetAllScheduleViolationTransactions',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<GeneralViolationDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolationTransaction/GetAllScheduleViolationTransactions',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<GeneralViolationDto>> _value;
     try {
@@ -4098,9 +3584,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<GeneralViolationDto>((i) =>
-                    GeneralViolationDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<GeneralViolationDto>(
+                    (i) =>
+                        GeneralViolationDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4112,27 +3600,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<GeneralViolationDto>> fetchGeneralViolationDetails(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ScheduleViolTranId': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<GeneralViolationDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ScheduleViolationTransaction/GetScheduleViolationTransactionById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<GeneralViolationDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolationTransaction/GetScheduleViolationTransactionById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<GeneralViolationDto> _value;
     try {
@@ -4153,23 +3636,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ViolationTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ScheduleViolation/GetAllScheduleViolations',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ViolationTypeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolation/GetAllScheduleViolations',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ViolationTypeDto>> _value;
     try {
@@ -4177,9 +3653,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ViolationTypeDto>(
-                    (i) => ViolationTypeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ViolationTypeDto>(
+                    (i) => ViolationTypeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4195,23 +3672,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ScheduleViolationsType/GetAllScheduleViolationsTypes',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolationsType/GetAllScheduleViolationsTypes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -4219,9 +3689,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4233,28 +3705,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ViolationByProjectIdDto>>>
-      fetchViolationsTypesByProjectId(int id) async {
+  fetchViolationsTypesByProjectId(int id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ProjectId': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ViolationByProjectIdDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ScheduleViolation/GetScheduleViolationsByProjectId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ViolationByProjectIdDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolation/GetScheduleViolationsByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ViolationByProjectIdDto>> _value;
     try {
@@ -4262,9 +3727,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ViolationByProjectIdDto>((i) =>
-                    ViolationByProjectIdDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ViolationByProjectIdDto>(
+                    (i) => ViolationByProjectIdDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4276,28 +3744,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addTypeViolation(
-      AddTypeViolationParams params) async {
+    AddTypeViolationParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ScheduleViolation/AddEditScheduleViolation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolation/AddEditScheduleViolation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -4314,28 +3777,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<GeneralViolationDto>> addGeneralViolation(
-      AddGeneralViolationParams params) async {
+    AddGeneralViolationParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<GeneralViolationDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ScheduleViolationTransaction/AddEditScheduleViolationTransaction',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<GeneralViolationDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolationTransaction/AddEditScheduleViolationTransaction',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<GeneralViolationDto> _value;
     try {
@@ -4351,40 +3809,40 @@ class _AdminEndpoint implements AdminEndpoint {
   }
 
   @override
-  Future<ApiResponse<dynamic>> uploadFiles(
-    int? id,
-    List<File> files,
-  ) async {
+  Future<ApiResponse<dynamic>> uploadFiles(int? id, List<File> files) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
-      r'ScheduleViolationTransactionId': id
+      r'ScheduleViolationTransactionId': id,
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final _data = FormData();
-    _data.files.addAll(files.map((i) => MapEntry(
-        'AttachmentFiles',
-        MultipartFile.fromFileSync(
-          i.path,
-          filename: i.path.split(Platform.pathSeparator).last,
-        ))));
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/ScheduleViolTranAttach/AddScheduleViolationTransactionAttach',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    _data.files.addAll(
+      files.map(
+        (i) => MapEntry(
+          'AttachmentFiles',
+          MultipartFile.fromFileSync(
+            i.path,
+            filename: i.path.split(Platform.pathSeparator).last,
+          ),
+        ),
+      ),
+    );
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/ScheduleViolTranAttach/AddScheduleViolationTransactionAttach',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -4401,29 +3859,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ViolationEmployeeDto>>> fetchEmployeeWorksByShiftId(
-      int? id) async {
+    int? id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'shiftId': id};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ViolationEmployeeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ScheduleEmployeeWork/GetScheduleEmployeeWorksByShiftId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ViolationEmployeeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ScheduleEmployeeWork/GetScheduleEmployeeWorksByShiftId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ViolationEmployeeDto>> _value;
     try {
@@ -4431,9 +3883,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ViolationEmployeeDto>((i) =>
-                    ViolationEmployeeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ViolationEmployeeDto>(
+                    (i) => ViolationEmployeeDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4449,22 +3904,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<JobModelDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Jobs/GetAllJobWithIconForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<JobModelDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Jobs/GetAllJobWithIconForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<JobModelDto>> _value;
     try {
@@ -4472,9 +3921,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<JobModelDto>(
-                    (i) => JobModelDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<JobModelDto>(
+                    (i) => JobModelDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4486,28 +3936,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<JobRequirementsDto>>> fetchJobRequirements(
-      int type) async {
+    int type,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<JobRequirementsDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CompleteJobsInfoDetails/GetJobDetailsForMob',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<JobRequirementsDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CompleteJobsInfoDetails/GetJobDetailsForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<JobRequirementsDto>> _value;
     try {
@@ -4515,9 +3959,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<JobRequirementsDto>((i) =>
-                    JobRequirementsDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<JobRequirementsDto>(
+                    (i) =>
+                        JobRequirementsDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4533,22 +3979,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/CompleteJobsInfoDetails/DeleteJobDetailsForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CompleteJobsInfoDetails/DeleteJobDetailsForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -4565,28 +4005,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addEditJobRequirements(
-      AddEditJobContaionPrams addEditJobContaionPrams) async {
+    AddEditJobContaionPrams addEditJobContaionPrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(addEditJobContaionPrams.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/CompleteJobsInfoDetails/AddEditJobDetailsForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CompleteJobsInfoDetails/AddEditJobDetailsForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -4607,22 +4042,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<OpportunityDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/OpportunitiesAvailble/GetAllTodayOppByProject',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<OpportunityDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetAllTodayOppByProject',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<OpportunityDto>> _value;
     try {
@@ -4630,9 +4059,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<OpportunityDto>(
-                    (i) => OpportunityDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<OpportunityDto>(
+                    (i) => OpportunityDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4644,27 +4074,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<OpportunityDto>>> fetchOpportunityByStatus(
-      int type) async {
+    int type,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<OpportunityDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/OpportunitiesAvailble/GetAllOpportunitiesAvailbleByType',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<OpportunityDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetAllOpportunitiesAvailbleByType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<OpportunityDto>> _value;
     try {
@@ -4672,9 +4097,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<OpportunityDto>(
-                    (i) => OpportunityDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<OpportunityDto>(
+                    (i) => OpportunityDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4690,22 +4116,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'phone': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<FreeLanceInfo>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLancerInfo/GetFreeLanceInfo',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<FreeLanceInfo>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLancerInfo/GetFreeLanceInfo',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<FreeLanceInfo> _value;
     try {
@@ -4722,27 +4142,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> assignListFreeLanceOpportunity(
-      List<FreeLanceInfoParams> params) async {
+    List<FreeLanceInfoParams> params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = params.map((e) => e.toJson()).toList();
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v3/OpportunitiesAvailble/AssignListFreeLanceApplyOpportunityAvailbleById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/OpportunitiesAvailble/AssignListFreeLanceApplyOpportunityAvailbleById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -4759,27 +4174,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<OpportunityDetailsDto>> fetchOpportunityDetailsById(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<OpportunityDetailsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/OpportunitiesAvailble/GetOpporuntyDetailsById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<OpportunityDetailsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetOpporuntyDetailsById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<OpportunityDetailsDto> _value;
     try {
@@ -4806,22 +4216,16 @@ class _AdminEndpoint implements AdminEndpoint {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/OpportunitiesAvailble/CancelOpportunityAvailableByDescription',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/CancelOpportunityAvailableByDescription',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -4838,28 +4242,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<bool>> approveJobRequest(
-      ApproveJobRequestParams params) async {
+    ApproveJobRequestParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLanceApplyOpportunities/ApproveJobRequest',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLanceApplyOpportunities/ApproveJobRequest',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -4876,28 +4275,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<bool>> updateAttendance(
-      UpdateAttendanceParams params) async {
+    UpdateAttendanceParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/FreeLanceApplyOpportunities/UpdateAttendance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/FreeLanceApplyOpportunities/UpdateAttendance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -4914,28 +4308,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<OpportunityDataDto>> fetchOpportunityByTypeWithPage(
-      PaginationOpportunityParams params) async {
+    PaginationOpportunityParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<OpportunityDataDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v5/OpportunitiesAvailble/GetAllOpportunityByType',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<OpportunityDataDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v5/OpportunitiesAvailble/GetAllOpportunityByType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<OpportunityDataDto> _value;
     try {
@@ -4956,23 +4345,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<OpportunityTabsDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v3/OpportunitiesAvailble/GetTypeOpportunity',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<OpportunityTabsDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/OpportunitiesAvailble/GetTypeOpportunity',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<OpportunityTabsDto>> _value;
     try {
@@ -4980,9 +4362,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<OpportunityTabsDto>((i) =>
-                    OpportunityTabsDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<OpportunityTabsDto>(
+                    (i) =>
+                        OpportunityTabsDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -4994,28 +4378,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<PercentageOpportuntyDto>>> fetchPercentageOpportunty(
-      int Type) async {
+    int Type,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'type': Type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PercentageOpportuntyDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v3/OpportunitiesAvailble/GetPercentageOfOpportunty',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PercentageOpportuntyDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/OpportunitiesAvailble/GetPercentageOfOpportunty',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PercentageOpportuntyDto>> _value;
     try {
@@ -5023,9 +4401,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PercentageOpportuntyDto>((i) =>
-                    PercentageOpportuntyDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PercentageOpportuntyDto>(
+                    (i) => PercentageOpportuntyDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5037,28 +4418,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ProjectFiterOpportunityDto>>>
-      fetchProjectsToDo() async {
+  fetchProjectsToDo() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
-        _setStreamType<ApiResponse<List<ProjectFiterOpportunityDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Projects/GetListProjects',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        _setStreamType<ApiResponse<List<ProjectFiterOpportunityDto>>>(
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v1/Projects/GetListProjects',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ProjectFiterOpportunityDto>> _value;
     try {
@@ -5066,10 +4443,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ProjectFiterOpportunityDto>((i) =>
-                    ProjectFiterOpportunityDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<ProjectFiterOpportunityDto>(
+                    (i) => ProjectFiterOpportunityDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5085,29 +4464,19 @@ class _AdminEndpoint implements AdminEndpoint {
     int tab,
   ) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'id': id,
-      r'tab': tab,
-    };
+    final queryParameters = <String, dynamic>{r'id': id, r'tab': tab};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<OpportunityApplicantDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/OpportunitiesAvailbleV/GetFreeLanceApplicants',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<OpportunityApplicantDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/OpportunitiesAvailbleV/GetFreeLanceApplicants',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<OpportunityApplicantDto> _value;
     try {
@@ -5125,28 +4494,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<OpportunityDetailsDataDto>> fetchOpportunityDetails(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<OpportunityDetailsDataDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/OpportunitiesAvailble/GetOpporuntyDetailsByIdWithApplicantsCount',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<OpportunityDetailsDataDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetOpporuntyDetailsByIdWithApplicantsCount',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<OpportunityDetailsDataDto> _value;
     try {
@@ -5164,27 +4527,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<ApplicantsDetailsDto>> fetchApplicantsDetails(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<ApplicantsDetailsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/OpportunitiesAvailble/GetFreeLanceApplicantWithDeductions',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ApplicantsDetailsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetFreeLanceApplicantWithDeductions',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ApplicantsDetailsDto> _value;
     try {
@@ -5201,28 +4559,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ApplicantRoleDto>>>
-      fetchApplicantEditListRoles() async {
+  fetchApplicantEditListRoles() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ApplicantRoleDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/OpportunitiesAvailble/GetFreeLanceApplicantEditListRoles',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ApplicantRoleDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetFreeLanceApplicantEditListRoles',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ApplicantRoleDto>> _value;
     try {
@@ -5230,9 +4581,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ApplicantRoleDto>(
-                    (i) => ApplicantRoleDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ApplicantRoleDto>(
+                    (i) => ApplicantRoleDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5248,23 +4600,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ProjectManagementDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v3/Projects/GetListOfProjectByCompnay',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ProjectManagementDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/Projects/GetListOfProjectByCompnay',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ProjectManagementDto>> _value;
     try {
@@ -5272,9 +4617,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ProjectManagementDto>((i) =>
-                    ProjectManagementDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ProjectManagementDto>(
+                    (i) => ProjectManagementDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5293,22 +4641,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<DownLoadFileDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/Projects/GenerateReportForMob/${projectCode}/${projectName}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<DownLoadFileDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Projects/GenerateReportForMob/${projectCode}/${projectName}',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<DownLoadFileDto> _value;
     try {
@@ -5348,128 +4690,82 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (id != null) {
-      _data.fields.add(MapEntry(
-        'Id',
-        id.toString(),
-      ));
+      _data.fields.add(MapEntry('Id', id.toString()));
     }
     if (companyId != null) {
-      _data.fields.add(MapEntry(
-        'CompanyId',
-        companyId.toString(),
-      ));
+      _data.fields.add(MapEntry('CompanyId', companyId.toString()));
     }
     if (brandId != null) {
-      _data.fields.add(MapEntry(
-        'BrandId',
-        brandId.toString(),
-      ));
+      _data.fields.add(MapEntry('BrandId', brandId.toString()));
     }
     if (cityId != null) {
-      _data.fields.add(MapEntry(
-        'CityId',
-        cityId.toString(),
-      ));
+      _data.fields.add(MapEntry('CityId', cityId.toString()));
     }
     if (brandName != null) {
-      _data.fields.add(MapEntry(
-        'BrandName',
-        brandName,
-      ));
+      _data.fields.add(MapEntry('BrandName', brandName));
     }
     if (cityName != null) {
-      _data.fields.add(MapEntry(
-        'CityName',
-        cityName,
-      ));
+      _data.fields.add(MapEntry('CityName', cityName));
     }
     if (nameEn != null) {
-      _data.fields.add(MapEntry(
-        'NameEn',
-        nameEn,
-      ));
+      _data.fields.add(MapEntry('NameEn', nameEn));
     }
     if (nameAr != null) {
-      _data.fields.add(MapEntry(
-        'NameAr',
-        nameAr,
-      ));
+      _data.fields.add(MapEntry('NameAr', nameAr));
     }
     if (addressEn != null) {
-      _data.fields.add(MapEntry(
-        'AddressEn',
-        addressEn,
-      ));
+      _data.fields.add(MapEntry('AddressEn', addressEn));
     }
     if (addressAr != null) {
-      _data.fields.add(MapEntry(
-        'AddressAr',
-        addressAr,
-      ));
+      _data.fields.add(MapEntry('AddressAr', addressAr));
     }
     if (latitude != null) {
-      _data.fields.add(MapEntry(
-        'Latitude',
-        latitude,
-      ));
+      _data.fields.add(MapEntry('Latitude', latitude));
     }
     if (longtude != null) {
-      _data.fields.add(MapEntry(
-        'Longtude',
-        longtude,
-      ));
+      _data.fields.add(MapEntry('Longtude', longtude));
     }
     if (attendanceTypeId != null) {
-      _data.fields.add(MapEntry(
-        'AttendanceTypeId',
-        attendanceTypeId.toString(),
-      ));
+      _data.fields.add(
+        MapEntry('AttendanceTypeId', attendanceTypeId.toString()),
+      );
     }
-    _data.fields.add(MapEntry(
-      'OtherProject',
-      jsonEncode(otherProject),
-    ));
+    _data.fields.add(MapEntry('OtherProject', jsonEncode(otherProject)));
     if (imageURL != null) {
-      _data.fields.add(MapEntry(
-        'ImageURL',
-        imageURL,
-      ));
+      _data.fields.add(MapEntry('ImageURL', imageURL));
     }
     if (image != null) {
       if (image != null) {
-        _data.files.add(MapEntry(
-          'Image',
-          MultipartFile.fromFileSync(
-            image.path,
-            filename: image.path.split(Platform.pathSeparator).last,
+        _data.files.add(
+          MapEntry(
+            'Image',
+            MultipartFile.fromFileSync(
+              image.path,
+              filename: image.path.split(Platform.pathSeparator).last,
+            ),
           ),
-        ));
+        );
       }
     }
-    final _options = _setStreamType<ApiResponse<int>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v3/Projects/AddEditNewProject',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<int>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v3/Projects/AddEditNewProject',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<int> _value;
     try {
-      _value = ApiResponse<int>.fromJson(
-        _result.data!,
-        (json) => json as int,
-      );
+      _value = ApiResponse<int>.fromJson(_result.data!, (json) => json as int);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -5484,22 +4780,16 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<AddProjectParams>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v3/Projects/GetProjectInfoById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<AddProjectParams>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/Projects/GetProjectInfoById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<AddProjectParams> _value;
     try {
@@ -5520,22 +4810,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<BrandDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Brand/GetListBrand',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<BrandDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Brand/GetListBrand',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<BrandDto>> _value;
     try {
@@ -5543,9 +4827,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<BrandDto>(
-                    (i) => BrandDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<BrandDto>(
+                    (i) => BrandDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5561,22 +4846,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<CompanyDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/company/GetAllCompaniesByUserType',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<CompanyDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/company/GetAllCompaniesByUserType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CompanyDto>> _value;
     try {
@@ -5584,9 +4863,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CompanyDto>(
-                    (i) => CompanyDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CompanyDto>(
+                    (i) => CompanyDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5602,22 +4882,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<CityDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/City/GetCityForDrop',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<CityDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/City/GetCityForDrop',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CityDto>> _value;
     try {
@@ -5625,9 +4899,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CityDto>(
-                    (i) => CityDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CityDto>(
+                    (i) => CityDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5643,22 +4918,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<ProjectLabelsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/Projects/GetFormProjectModel',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ProjectLabelsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Projects/GetFormProjectModel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ProjectLabelsDto> _value;
     try {
@@ -5680,22 +4949,16 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Projects/DeleteProject',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Projects/DeleteProject',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -5717,22 +4980,16 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/SchedulePrice/DeleteSchedulePriceForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/SchedulePrice/DeleteSchedulePriceForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -5749,29 +5006,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<LocationProjectParams>>> fetchLocationInfoByProject(
-      int? projectId) async {
+    int? projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<LocationProjectParams>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/LocationsProject/GetLocationInfoByProject',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<LocationProjectParams>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/LocationsProject/GetLocationInfoByProject',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<LocationProjectParams>> _value;
     try {
@@ -5779,9 +5030,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<LocationProjectParams>((i) =>
-                    LocationProjectParams.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<LocationProjectParams>(
+                    (i) => LocationProjectParams.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -5793,28 +5047,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> addLocationProject(
-      LocationProjectParams params) async {
+    LocationProjectParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/LocationsProject/AddNewLocation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/LocationsProject/AddNewLocation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -5836,22 +5085,16 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/LocationsProject/DeleteLocationProject/${id}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/LocationsProject/DeleteLocationProject/${id}',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -5868,28 +5111,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> editLocationProject(
-      LocationProjectParams params) async {
+    LocationProjectParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/LocationsProject/EditLocation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/LocationsProject/EditLocation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -5906,28 +5144,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> addPeriodPricing(
-      AddPeriodPricingParams params) async {
+    AddPeriodPricingParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/SchedulePrice/AddEditNewSchudlePrice',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/SchedulePrice/AddEditNewSchudlePrice',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -5944,28 +5177,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> editPeriodPricing(
-      AddPeriodPricingParams params) async {
+    AddPeriodPricingParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/SchedulePrice/AddEditNewSchudlePrice',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/SchedulePrice/AddEditNewSchudlePrice',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -5986,22 +5214,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<PeriodOrderDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ShiftHead/GetShiftHead',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<PeriodOrderDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ShiftHead/GetShiftHead',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PeriodOrderDto>> _value;
     try {
@@ -6009,9 +5231,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PeriodOrderDto>(
-                    (i) => PeriodOrderDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PeriodOrderDto>(
+                    (i) => PeriodOrderDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6023,27 +5246,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<PricingDetailsDto>> fetchPeriodPricingDetails(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<PricingDetailsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/SchedulePrice/GetSchdulePriceInfo',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<PricingDetailsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/SchedulePrice/GetSchdulePriceInfo',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<PricingDetailsDto> _value;
     try {
@@ -6064,22 +5282,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<PeriodPricingLabelDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/SchedulePrice/GetFormSchedulePriceViewModels',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<PeriodPricingLabelDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/SchedulePrice/GetFormSchedulePriceViewModels',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<PeriodPricingLabelDto> _value;
     try {
@@ -6100,22 +5312,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<JobDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Jobs/GetAllJobForDrops',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<JobDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Jobs/GetAllJobForDrops',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<JobDto>> _value;
     try {
@@ -6123,8 +5329,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<JobDto>((i) => JobDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<JobDto>(
+                    (i) => JobDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6146,22 +5354,16 @@ class _AdminEndpoint implements AdminEndpoint {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<LastPriceDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/SchedulePrice/GetLastSchedulerPrice',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<LastPriceDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/SchedulePrice/GetLastSchedulerPrice',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<LastPriceDto>> _value;
     try {
@@ -6169,9 +5371,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<LastPriceDto>(
-                    (i) => LastPriceDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<LastPriceDto>(
+                    (i) => LastPriceDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6187,23 +5390,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<WorkingPeriodLabelsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Shift/GetFormShiftModel',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<WorkingPeriodLabelsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetFormShiftModel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<WorkingPeriodLabelsDto> _value;
     try {
@@ -6220,29 +5416,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<WorkingPeriodDto>>> fetchWorkingPeriodsByProjectId(
-      int? projectId) async {
+    int? projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<WorkingPeriodDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Shift/GetListShiftByProjectId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<WorkingPeriodDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetListShiftByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<WorkingPeriodDto>> _value;
     try {
@@ -6250,9 +5440,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<WorkingPeriodDto>(
-                    (i) => WorkingPeriodDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<WorkingPeriodDto>(
+                    (i) => WorkingPeriodDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6264,29 +5455,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<AddWorkingPeriodParams>> fetchWorkingPeriodDetails(
-      int? id) async {
+    int? id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'Id': id};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<AddWorkingPeriodParams>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/Shift/GetShiftInfo',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<AddWorkingPeriodParams>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Shift/GetShiftInfo',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<AddWorkingPeriodParams> _value;
     try {
@@ -6307,22 +5492,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'companyId': companyId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<TimePriceDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/SchedulePrice/GetSeasone',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<TimePriceDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/SchedulePrice/GetSeasone',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<TimePriceDto>> _value;
     try {
@@ -6330,9 +5509,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<TimePriceDto>(
-                    (i) => TimePriceDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<TimePriceDto>(
+                    (i) => TimePriceDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6344,28 +5524,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addEditWorkingPeriod(
-      AddWorkingPeriodParams params) async {
+    AddWorkingPeriodParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v3/Shifts/AddEditNewShift',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/Shifts/AddEditNewShift',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -6387,22 +5562,16 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Shift/DeleteShift',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/DeleteShift',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -6423,22 +5592,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'projectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<ShiftTimeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Shift/GetListShiftByProjectId',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<ShiftTimeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetListShiftByProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ShiftTimeDto>> _value;
     try {
@@ -6446,9 +5609,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ShiftTimeDto>(
-                    (i) => ShiftTimeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ShiftTimeDto>(
+                    (i) => ShiftTimeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6460,28 +5624,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<PeriodPricingDto>>> fetchPeriodPricing(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ProjectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PeriodPricingDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/SchedulePrice/GetListSchedulePrice',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PeriodPricingDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/SchedulePrice/GetListSchedulePrice',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PeriodPricingDto>> _value;
     try {
@@ -6489,9 +5647,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PeriodPricingDto>(
-                    (i) => PeriodPricingDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PeriodPricingDto>(
+                    (i) => PeriodPricingDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6503,27 +5662,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<ProjectManagementDto>> fetchProjectSuccessfully(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'Id': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<ProjectManagementDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Projects/GetProjectsById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ProjectManagementDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Projects/GetProjectsById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ProjectManagementDto> _value;
     try {
@@ -6540,28 +5694,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<LocationGateProjectDto>> fetchLocationGateProject(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'id': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<LocationGateProjectDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Projects/GetProjectWithLocationsById',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<LocationGateProjectDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Projects/GetProjectWithLocationsById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<LocationGateProjectDto> _value;
     try {
@@ -6578,27 +5726,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<EmployePointDto>>> fetchEmpLocationGate(
-      String pointId) async {
+    String pointId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'pointId': pointId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<EmployePointDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLanceApplyOpportunities/GetAllFreelancersByPointId',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<EmployePointDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLanceApplyOpportunities/GetAllFreelancersByPointId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<EmployePointDto>> _value;
     try {
@@ -6606,9 +5749,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<EmployePointDto>(
-                    (i) => EmployePointDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<EmployePointDto>(
+                    (i) => EmployePointDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6624,22 +5768,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<PunishmentDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/Violation/GetViolationList',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<PunishmentDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Violation/GetViolationList',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PunishmentDto>> _value;
     try {
@@ -6647,9 +5785,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PunishmentDto>(
-                    (i) => PunishmentDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PunishmentDto>(
+                    (i) => PunishmentDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6665,22 +5804,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Violation/ActiveandNoneActiveViolation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Violation/ActiveandNoneActiveViolation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -6701,22 +5834,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Violation/DeleteViolationForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Violation/DeleteViolationForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -6733,28 +5860,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> addEditPunishment(
-      AddEditPunishmentParams params) async {
+    AddEditPunishmentParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/Violation/AddEditNewViolation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Violation/AddEditNewViolation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -6771,28 +5893,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<AddEditPunishmentParams>> fetchPunishmentById(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<AddEditPunishmentParams>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Violation/GetViolationById',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<AddEditPunishmentParams>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Violation/GetViolationById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<AddEditPunishmentParams> _value;
     try {
@@ -6814,23 +5930,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PunishmentNameDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Violation/GetViolationName',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PunishmentNameDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Violation/GetViolationName',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PunishmentNameDto>> _value;
     try {
@@ -6838,9 +5947,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PunishmentNameDto>((i) =>
-                    PunishmentNameDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PunishmentNameDto>(
+                    (i) =>
+                        PunishmentNameDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6856,23 +5967,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<PunishmentTypeDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ViolationsTypes/GetViolationTypes',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<PunishmentTypeDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ViolationsTypes/GetViolationTypes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<PunishmentTypeDto>> _value;
     try {
@@ -6880,9 +5984,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<PunishmentTypeDto>((i) =>
-                    PunishmentTypeDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<PunishmentTypeDto>(
+                    (i) =>
+                        PunishmentTypeDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6894,28 +6000,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CompletedOpportunityDto>>>
-      fetchPendingConfirmationOpportunities() async {
+  fetchPendingConfirmationOpportunities() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CompletedOpportunityDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FreeLanceApplyOpportunities/GetFreeLanceApplay',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CompletedOpportunityDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLanceApplyOpportunities/GetFreeLanceApplay',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CompletedOpportunityDto>> _value;
     try {
@@ -6923,9 +6022,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CompletedOpportunityDto>((i) =>
-                    CompletedOpportunityDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CompletedOpportunityDto>(
+                    (i) => CompletedOpportunityDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6937,28 +6039,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CompletedOpportunityDto>>>
-      fetchCompletedOpportunitiesByType(int statusId) async {
+  fetchCompletedOpportunitiesByType(int statusId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'statusId': statusId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CompletedOpportunityDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FreeLanceApplyOpportunities/GetFreeLanceApplayByType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CompletedOpportunityDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLanceApplyOpportunities/GetFreeLanceApplayByType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CompletedOpportunityDto>> _value;
     try {
@@ -6966,9 +6061,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CompletedOpportunityDto>((i) =>
-                    CompletedOpportunityDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CompletedOpportunityDto>(
+                    (i) => CompletedOpportunityDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -6980,28 +6078,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<JobEvaluationsDto>>> fetchGetJobEvaluations(
-      int freeLanceApplyOpportunityId) async {
+    int freeLanceApplyOpportunityId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<JobEvaluationsDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Evaluations/GetJobEvaluations/${freeLanceApplyOpportunityId}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<JobEvaluationsDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Evaluations/GetJobEvaluations/${freeLanceApplyOpportunityId}',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<JobEvaluationsDto>> _value;
     try {
@@ -7009,9 +6101,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<JobEvaluationsDto>((i) =>
-                    JobEvaluationsDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<JobEvaluationsDto>(
+                    (i) =>
+                        JobEvaluationsDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7027,22 +6121,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<BanTypes>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/OpportunitiesAvailble/GetBlockTypeList',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<BanTypes>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/OpportunitiesAvailble/GetBlockTypeList',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<BanTypes> _value;
     try {
@@ -7059,35 +6147,27 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<int>> confirmShiftPaymentRequest(
-      ConfirmShiftPaymentRequest params) async {
+    ConfirmShiftPaymentRequest params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<int>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLanceApplyOpportunities/ApproveOfRejectShift',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<int>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLanceApplyOpportunities/ApproveOfRejectShift',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<int> _value;
     try {
-      _value = ApiResponse<int>.fromJson(
-        _result.data!,
-        (json) => json as int,
-      );
+      _value = ApiResponse<int>.fromJson(_result.data!, (json) => json as int);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -7097,28 +6177,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<CompletOpportunityDto>> fetchReviewOpportunitiesByType(
-      ReviewShiftsprams reviewShiftsprams) async {
+    ReviewShiftsprams reviewShiftsprams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(reviewShiftsprams.toJson());
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<CompletOpportunityDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v3/FreeLanceApplyOpportunities/GetFreeLanceApplayByType',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<CompletOpportunityDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/FreeLanceApplyOpportunities/GetFreeLanceApplayByType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<CompletOpportunityDto> _value;
     try {
@@ -7135,28 +6210,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<TermandConditionDto>>> fetchTermandCondition(
-      int type) async {
+    int type,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<TermandConditionDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/TermsAndCondtion/GetTermandConditionByCompanyIdForMob',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<TermandConditionDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TermsAndCondtion/GetTermandConditionByCompanyIdForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<TermandConditionDto>> _value;
     try {
@@ -7164,9 +6233,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<TermandConditionDto>((i) =>
-                    TermandConditionDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<TermandConditionDto>(
+                    (i) =>
+                        TermandConditionDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7182,22 +6253,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v5/TermsAndCondtion/DeleteTermCondition',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v5/TermsAndCondtion/DeleteTermCondition',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -7218,22 +6283,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v5/TermsAndCondtion/ActiveandUnActive',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v5/TermsAndCondtion/ActiveandUnActive',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -7250,27 +6309,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<TermandConditionDto>> fetchTermandConditionById(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<TermandConditionDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/TermsAndCondtion/GetTermsAndCondtionById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<TermandConditionDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TermsAndCondtion/GetTermsAndCondtionById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<TermandConditionDto> _value;
     try {
@@ -7287,28 +6341,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addEditTermandCondition(
-      TermsAndConditionsPrams termsAndConditionsPrams) async {
+    TermsAndConditionsPrams termsAndConditionsPrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(termsAndConditionsPrams.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/TermsAndCondtion/AddEditTermsAndCondtion',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TermsAndCondtion/AddEditTermsAndCondtion',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -7329,23 +6378,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<TermandConditionDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/TermsAndCondtion/GetTermandConditionTasks',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<TermandConditionDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TermsAndCondtion/GetTermandConditionTasks',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<TermandConditionDto>> _value;
     try {
@@ -7353,9 +6395,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<TermandConditionDto>((i) =>
-                    TermandConditionDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<TermandConditionDto>(
+                    (i) =>
+                        TermandConditionDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7371,22 +6415,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<TermandConditionDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/TermsAndCondtion/GetTermsAndCondtionTasksById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<TermandConditionDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TermsAndCondtion/GetTermsAndCondtionTasksById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<TermandConditionDto> _value;
     try {
@@ -7403,28 +6441,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addEditTask(
-      TermsAndConditionsPrams termsAndConditionsPrams) async {
+    TermsAndConditionsPrams termsAndConditionsPrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(termsAndConditionsPrams.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/TermsAndCondtion/AddEditTermsAndCondtionTasks',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TermsAndCondtion/AddEditTermsAndCondtionTasks',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -7441,28 +6474,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<TrackAttendanceDepartureDto>>>
-      fetchTrackAttendanceDepartureRequests() async {
+  fetchTrackAttendanceDepartureRequests() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<TrackAttendanceDepartureDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/TrackFaceRecognitionRequests/GetAllTrackFaceRecognitionRequests',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<TrackAttendanceDepartureDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TrackFaceRecognitionRequests/GetAllTrackFaceRecognitionRequests',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<TrackAttendanceDepartureDto>> _value;
     try {
@@ -7470,10 +6496,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<TrackAttendanceDepartureDto>((i) =>
-                    TrackAttendanceDepartureDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<TrackAttendanceDepartureDto>(
+                    (i) => TrackAttendanceDepartureDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7485,29 +6513,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<TrackAttendanceDepartureImageDto>>>
-      fetchTrackAttendanceDepartureRequestsImages(int requestId) async {
+  fetchTrackAttendanceDepartureRequestsImages(int requestId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'requestId': requestId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
         _setStreamType<ApiResponse<List<TrackAttendanceDepartureImageDto>>>(
-            Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-                .compose(
-                  _dio.options,
-                  '/v1/TrackFaceRecognitionDetails/GetTrackFaceRecognitionDetails',
-                  queryParameters: queryParameters,
-                  data: _data,
-                )
-                .copyWith(
-                    baseUrl: _combineBaseUrls(
-                  _dio.options.baseUrl,
-                  baseUrl,
-                )));
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v1/TrackFaceRecognitionDetails/GetTrackFaceRecognitionDetails',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<TrackAttendanceDepartureImageDto>> _value;
     try {
@@ -7515,10 +6538,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<TrackAttendanceDepartureImageDto>((i) =>
-                    TrackAttendanceDepartureImageDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<TrackAttendanceDepartureImageDto>(
+                    (i) => TrackAttendanceDepartureImageDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7530,36 +6555,32 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<RequestAttendanceDepartureDetailsDto>>
-      fetchTrackAttendanceDepartureRequestsDetails(int requestId) async {
+  fetchTrackAttendanceDepartureRequestsDetails(int requestId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'requestId': requestId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
         _setStreamType<ApiResponse<RequestAttendanceDepartureDetailsDto>>(
-            Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-                .compose(
-                  _dio.options,
-                  '/v1/TrackFaceRecognitionDetails/GetTrackFaceRecognitionDetailsList',
-                  queryParameters: queryParameters,
-                  data: _data,
-                )
-                .copyWith(
-                    baseUrl: _combineBaseUrls(
-                  _dio.options.baseUrl,
-                  baseUrl,
-                )));
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v1/TrackFaceRecognitionDetails/GetTrackFaceRecognitionDetailsList',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<RequestAttendanceDepartureDetailsDto> _value;
     try {
       _value = ApiResponse<RequestAttendanceDepartureDetailsDto>.fromJson(
         _result.data!,
         (json) => RequestAttendanceDepartureDetailsDto.fromJson(
-            json as Map<String, dynamic>),
+          json as Map<String, dynamic>,
+        ),
       );
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
@@ -7570,28 +6591,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> createRequestTrackAttendanceDeparture(
-      RequestTrackAttendanceDepartureParams params) async {
+    RequestTrackAttendanceDepartureParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/TrackFaceRecognitionRequests/CreateTrackFaceRecognitionRequest',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TrackFaceRecognitionRequests/CreateTrackFaceRecognitionRequest',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -7608,28 +6624,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> updateTrackAttendanceDeparture(
-      RequestTrackAttendanceDepartureParams params) async {
+    RequestTrackAttendanceDepartureParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/TrackFaceRecognitionRequests/UpdateTrackFaceRecognitionRequest',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/TrackFaceRecognitionRequests/UpdateTrackFaceRecognitionRequest',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -7650,23 +6661,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<UserManagementDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v2/Account/GetUsersByType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<UserManagementDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Account/GetUsersByType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<UserManagementDto>> _value;
     try {
@@ -7674,9 +6678,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<UserManagementDto>((i) =>
-                    UserManagementDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<UserManagementDto>(
+                    (i) =>
+                        UserManagementDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7692,22 +6698,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'Id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Account/UpdateActiveUsers',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Account/UpdateActiveUsers',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -7729,22 +6729,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v3/Account/AddNewUser',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/Account/AddNewUser',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -7766,22 +6760,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v3/Account/UpdateUserData',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/Account/UpdateUserData',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -7798,28 +6786,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> changePassword(
-      ChangeUserPasswordParams params) async {
+    ChangeUserPasswordParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Account/ChangeUserPassword',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Account/ChangeUserPassword',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -7840,22 +6823,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<InfoUserManagerDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/Account/GetInfoUserManager',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<InfoUserManagerDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Account/GetInfoUserManager',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<InfoUserManagerDto> _value;
     try {
@@ -7876,22 +6853,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'CompanyId': CompanyId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<BrandDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Brand/GetBrand',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<BrandDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Brand/GetBrand',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<BrandDto>> _value;
     try {
@@ -7899,9 +6870,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<BrandDto>(
-                    (i) => BrandDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<BrandDto>(
+                    (i) => BrandDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7913,28 +6885,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ShiftByListProjectIdDto>>> fetchShiftByListProjectId(
-      List<int> projectIds) async {
+    List<int> projectIds,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = projectIds;
-    final _options =
-        _setStreamType<ApiResponse<List<ShiftByListProjectIdDto>>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Shift/GetShiftByListProjectId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ShiftByListProjectIdDto>>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Shift/GetShiftByListProjectId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ShiftByListProjectIdDto>> _value;
     try {
@@ -7942,9 +6908,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ShiftByListProjectIdDto>((i) =>
-                    ShiftByListProjectIdDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ShiftByListProjectIdDto>(
+                    (i) => ShiftByListProjectIdDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -7956,28 +6925,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>> fetchListProjectsByCompanyId(
-      int companyId) async {
+    int companyId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'companyId': companyId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v3/Projects/GetListProjectsByCompanyId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/Projects/GetListProjectsByCompanyId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -7985,9 +6948,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -8003,22 +6968,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<UserAreaDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Area/GetAllAreaForMobDrop',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<UserAreaDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Area/GetAllAreaForMobDrop',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<UserAreaDto>> _value;
     try {
@@ -8026,9 +6985,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<UserAreaDto>(
-                    (i) => UserAreaDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<UserAreaDto>(
+                    (i) => UserAreaDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -8040,29 +7000,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<UserByPhoneDto>> fetchUserByPhone(
-      String phoneOrIdNumber) async {
+    String phoneOrIdNumber,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
-      r'phoneOrIdNumber': phoneOrIdNumber
+      r'phoneOrIdNumber': phoneOrIdNumber,
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<UserByPhoneDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v3/Account/GetUserByPhoneNumber',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<UserByPhoneDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v3/Account/GetUserByPhoneNumber',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<UserByPhoneDto> _value;
     try {
@@ -8083,23 +7038,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleBrands/GetAllVehicleBrands',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleBrands/GetAllVehicleBrands',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -8107,9 +7055,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -8125,23 +7075,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleColors/GetAllVehiclesColors',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleColors/GetAllVehiclesColors',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -8149,9 +7092,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -8167,22 +7112,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<VehicleDetailsDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v2/Vehicles/GetVehicleById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<VehicleDetailsDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v2/Vehicles/GetVehicleById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<VehicleDetailsDto> _value;
     try {
@@ -8219,101 +7158,67 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (vehicleCode != null) {
-      _data.fields.add(MapEntry(
-        'VehicleCode',
-        vehicleCode.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleCode', vehicleCode.toString()));
     }
     if (model != null) {
-      _data.fields.add(MapEntry(
-        'Model',
-        model,
-      ));
+      _data.fields.add(MapEntry('Model', model));
     }
     if (yearOfManufacture != null) {
-      _data.fields.add(MapEntry(
-        'YearOfManufacture',
-        yearOfManufacture,
-      ));
+      _data.fields.add(MapEntry('YearOfManufacture', yearOfManufacture));
     }
     if (plateNumber != null) {
-      _data.fields.add(MapEntry(
-        'PlateNumber',
-        plateNumber,
-      ));
+      _data.fields.add(MapEntry('PlateNumber', plateNumber));
     }
     if (licenseNumber != null) {
-      _data.fields.add(MapEntry(
-        'LicenseNumber',
-        licenseNumber,
-      ));
+      _data.fields.add(MapEntry('LicenseNumber', licenseNumber));
     }
     if (licenseExpiryDate != null) {
-      _data.fields.add(MapEntry(
-        'LicenseExpiryDate',
-        licenseExpiryDate,
-      ));
+      _data.fields.add(MapEntry('LicenseExpiryDate', licenseExpiryDate));
     }
     if (specifications != null) {
-      _data.fields.add(MapEntry(
-        'Specifications',
-        specifications,
-      ));
+      _data.fields.add(MapEntry('Specifications', specifications));
     }
-    _data.files.add(MapEntry(
-      'VehicleImageFile',
-      MultipartFile.fromFileSync(
-        VehicleImageFile.path,
-        filename: VehicleImageFile.path.split(Platform.pathSeparator).last,
+    _data.files.add(
+      MapEntry(
+        'VehicleImageFile',
+        MultipartFile.fromFileSync(
+          VehicleImageFile.path,
+          filename: VehicleImageFile.path.split(Platform.pathSeparator).last,
+        ),
       ),
-    ));
+    );
     if (vehicleBrandId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleBrandId',
-        vehicleBrandId,
-      ));
+      _data.fields.add(MapEntry('VehicleBrandId', vehicleBrandId));
     }
     if (companyId != null) {
-      _data.fields.add(MapEntry(
-        'CompanyId',
-        companyId,
-      ));
+      _data.fields.add(MapEntry('CompanyId', companyId));
     }
     if (projectId != null) {
-      _data.fields.add(MapEntry(
-        'ProjectId',
-        projectId,
-      ));
+      _data.fields.add(MapEntry('ProjectId', projectId));
     }
     if (vehicleColorId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleColorId',
-        vehicleColorId.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleColorId', vehicleColorId.toString()));
     }
     if (mobileVehicleIndexCode != null) {
-      _data.fields.add(MapEntry(
-        'MobileVehicleIndexCode',
-        mobileVehicleIndexCode,
-      ));
+      _data.fields.add(
+        MapEntry('MobileVehicleIndexCode', mobileVehicleIndexCode),
+      );
     }
-    final _options = _setStreamType<ApiResponse<VehiclesDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/Vehicles/AddNewVehicle',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<VehiclesDto>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/Vehicles/AddNewVehicle',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<VehiclesDto> _value;
     try {
@@ -8343,59 +7248,46 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (insuranceNumber != null) {
-      _data.fields.add(MapEntry(
-        'InsuranceNumber',
-        insuranceNumber,
-      ));
+      _data.fields.add(MapEntry('InsuranceNumber', insuranceNumber));
     }
     if (insuranceProvider != null) {
-      _data.fields.add(MapEntry(
-        'InsuranceProvider',
-        insuranceProvider,
-      ));
+      _data.fields.add(MapEntry('InsuranceProvider', insuranceProvider));
     }
     if (insuranceExpiryDate != null) {
-      _data.fields.add(MapEntry(
-        'InsuranceExpiryDate',
-        insuranceExpiryDate,
-      ));
+      _data.fields.add(MapEntry('InsuranceExpiryDate', insuranceExpiryDate));
     }
     if (vehicleId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleId',
-        vehicleId.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleId', vehicleId.toString()));
     }
     if (vehicleInsuranceTypeId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleInsuranceTypeId',
-        vehicleInsuranceTypeId,
-      ));
+      _data.fields.add(
+        MapEntry('VehicleInsuranceTypeId', vehicleInsuranceTypeId),
+      );
     }
-    _data.files.add(MapEntry(
-      'InsuranceImage',
-      MultipartFile.fromFileSync(
-        insuranceImage.path,
-        filename: insuranceImage.path.split(Platform.pathSeparator).last,
+    _data.files.add(
+      MapEntry(
+        'InsuranceImage',
+        MultipartFile.fromFileSync(
+          insuranceImage.path,
+          filename: insuranceImage.path.split(Platform.pathSeparator).last,
+        ),
       ),
-    ));
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          'v1/VehicleInsurances/AddNewVehicleInsurance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    );
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            'v1/VehicleInsurances/AddNewVehicleInsurance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -8426,69 +7318,53 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (id != null) {
-      _data.fields.add(MapEntry(
-        'Id',
-        id.toString(),
-      ));
+      _data.fields.add(MapEntry('Id', id.toString()));
     }
     if (insuranceNumber != null) {
-      _data.fields.add(MapEntry(
-        'InsuranceNumber',
-        insuranceNumber,
-      ));
+      _data.fields.add(MapEntry('InsuranceNumber', insuranceNumber));
     }
     if (insuranceProvider != null) {
-      _data.fields.add(MapEntry(
-        'InsuranceProvider',
-        insuranceProvider,
-      ));
+      _data.fields.add(MapEntry('InsuranceProvider', insuranceProvider));
     }
     if (insuranceExpiryDate != null) {
-      _data.fields.add(MapEntry(
-        'InsuranceExpiryDate',
-        insuranceExpiryDate,
-      ));
+      _data.fields.add(MapEntry('InsuranceExpiryDate', insuranceExpiryDate));
     }
     if (vehicleId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleId',
-        vehicleId.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleId', vehicleId.toString()));
     }
     if (vehicleInsuranceTypeId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleInsuranceTypeId',
-        vehicleInsuranceTypeId,
-      ));
+      _data.fields.add(
+        MapEntry('VehicleInsuranceTypeId', vehicleInsuranceTypeId),
+      );
     }
     if (insuranceImage != null) {
       if (insuranceImage != null) {
-        _data.files.add(MapEntry(
-          'InsuranceImage',
-          MultipartFile.fromFileSync(
-            insuranceImage.path,
-            filename: insuranceImage.path.split(Platform.pathSeparator).last,
+        _data.files.add(
+          MapEntry(
+            'InsuranceImage',
+            MultipartFile.fromFileSync(
+              insuranceImage.path,
+              filename: insuranceImage.path.split(Platform.pathSeparator).last,
+            ),
           ),
-        ));
+        );
       }
     }
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleInsurances/EditVehicleInsurance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/VehicleInsurances/EditVehicleInsurance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -8527,117 +7403,79 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (id != null) {
-      _data.fields.add(MapEntry(
-        'id',
-        id.toString(),
-      ));
+      _data.fields.add(MapEntry('id', id.toString()));
     }
     if (vehicleCode != null) {
-      _data.fields.add(MapEntry(
-        'VehicleCode',
-        vehicleCode.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleCode', vehicleCode.toString()));
     }
     if (model != null) {
-      _data.fields.add(MapEntry(
-        'Model',
-        model,
-      ));
+      _data.fields.add(MapEntry('Model', model));
     }
     if (yearOfManufacture != null) {
-      _data.fields.add(MapEntry(
-        'YearOfManufacture',
-        yearOfManufacture,
-      ));
+      _data.fields.add(MapEntry('YearOfManufacture', yearOfManufacture));
     }
     if (plateNumber != null) {
-      _data.fields.add(MapEntry(
-        'PlateNumber',
-        plateNumber,
-      ));
+      _data.fields.add(MapEntry('PlateNumber', plateNumber));
     }
     if (licenseNumber != null) {
-      _data.fields.add(MapEntry(
-        'LicenseNumber',
-        licenseNumber,
-      ));
+      _data.fields.add(MapEntry('LicenseNumber', licenseNumber));
     }
     if (licenseExpiryDate != null) {
-      _data.fields.add(MapEntry(
-        'LicenseExpiryDate',
-        licenseExpiryDate,
-      ));
+      _data.fields.add(MapEntry('LicenseExpiryDate', licenseExpiryDate));
     }
     if (specifications != null) {
-      _data.fields.add(MapEntry(
-        'Specifications',
-        specifications,
-      ));
+      _data.fields.add(MapEntry('Specifications', specifications));
     }
     if (vehicleImage != null) {
-      _data.fields.add(MapEntry(
-        'VehicleImage',
-        vehicleImage,
-      ));
+      _data.fields.add(MapEntry('VehicleImage', vehicleImage));
     }
     if (vehicleBrandId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleBrandId',
-        vehicleBrandId,
-      ));
+      _data.fields.add(MapEntry('VehicleBrandId', vehicleBrandId));
     }
     if (companyId != null) {
-      _data.fields.add(MapEntry(
-        'CompanyId',
-        companyId,
-      ));
+      _data.fields.add(MapEntry('CompanyId', companyId));
     }
     if (projectId != null) {
-      _data.fields.add(MapEntry(
-        'ProjectId',
-        projectId,
-      ));
+      _data.fields.add(MapEntry('ProjectId', projectId));
     }
     if (vehicleColorId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleColorId',
-        vehicleColorId.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleColorId', vehicleColorId.toString()));
     }
     if (mobileVehicleIndexCode != null) {
-      _data.fields.add(MapEntry(
-        'MobileVehicleIndexCode',
-        mobileVehicleIndexCode,
-      ));
+      _data.fields.add(
+        MapEntry('MobileVehicleIndexCode', mobileVehicleIndexCode),
+      );
     }
     if (vehicleImageFile != null) {
       if (vehicleImageFile != null) {
-        _data.files.add(MapEntry(
-          'VehicleImageFile',
-          MultipartFile.fromFileSync(
-            vehicleImageFile.path,
-            filename: vehicleImageFile.path.split(Platform.pathSeparator).last,
+        _data.files.add(
+          MapEntry(
+            'VehicleImageFile',
+            MultipartFile.fromFileSync(
+              vehicleImageFile.path,
+              filename: vehicleImageFile.path
+                  .split(Platform.pathSeparator)
+                  .last,
+            ),
           ),
-        ));
+        );
       }
     }
-    final _options = _setStreamType<ApiResponse<VehiclesDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/Vehicles/EditVehicle',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<VehiclesDto>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/Vehicles/EditVehicle',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<VehiclesDto> _value;
     try {
@@ -8658,22 +7496,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<VehiclesDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Vehicles/GetAllVehicles',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<VehiclesDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Vehicles/GetAllVehicles',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehiclesDto>> _value;
     try {
@@ -8681,9 +7513,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehiclesDto>(
-                    (i) => VehiclesDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<VehiclesDto>(
+                    (i) => VehiclesDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -8695,28 +7528,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<VehicleTrakingDto>> fetchVehicleTracingDetails(
-      VehicleTrakingDetailsPrams prams) async {
+    VehicleTrakingDetailsPrams prams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(prams.toJson());
-    final _options = _setStreamType<ApiResponse<VehicleTrakingDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleEventsTypes/GetAllVehicleEventsAndGPSDetails',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<VehicleTrakingDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleEventsTypes/GetAllVehicleEventsAndGPSDetails',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<VehicleTrakingDto> _value;
     try {
@@ -8733,28 +7561,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<String>> fetchVehicleEventPicture(
-      VehicleEventPicturePrams prams) async {
+    VehicleEventPicturePrams prams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(prams.toJson());
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<String>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleEventsTypes/DownloadVehicleEventPicture',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<String>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleEventsTypes/DownloadVehicleEventPicture',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<String> _value;
     try {
@@ -8775,23 +7598,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<InsuranceTypesDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleInsuranceTypes/GetAllVehicleInsuranceTypes',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<InsuranceTypesDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleInsuranceTypes/GetAllVehicleInsuranceTypes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<InsuranceTypesDto>> _value;
     try {
@@ -8799,9 +7615,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<InsuranceTypesDto>((i) =>
-                    InsuranceTypesDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<InsuranceTypesDto>(
+                    (i) =>
+                        InsuranceTypesDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -8817,22 +7635,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Vehicles/DeleteVehicle/id',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Vehicles/DeleteVehicle/id',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -8853,22 +7665,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleInsurances/DeleteVehicleInsurance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleInsurances/DeleteVehicleInsurance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -8885,27 +7691,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<InsurancesDto>>> fetchInsurancesByVehicleId(
-      int vehicleId) async {
+    int vehicleId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'vehicleId': vehicleId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<InsurancesDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleInsurances/GetAllVehicleInsurancesByVehicleId',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<InsurancesDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleInsurances/GetAllVehicleInsurancesByVehicleId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<InsurancesDto>> _value;
     try {
@@ -8913,9 +7714,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<InsurancesDto>(
-                    (i) => InsurancesDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<InsurancesDto>(
+                    (i) => InsurancesDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -8927,29 +7729,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<VehicleLocationDto>> fetchVehicleLocation(
-      String cameraIndexCode) async {
+    String cameraIndexCode,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
-      r'cameraIndexCode': cameraIndexCode
+      r'cameraIndexCode': cameraIndexCode,
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<VehicleLocationDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehiclesZone/GetVehicleZoneAndCurrentLocation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<VehicleLocationDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehiclesZone/GetVehicleZoneAndCurrentLocation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<VehicleLocationDto> _value;
     try {
@@ -8974,27 +7771,22 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     _data.files.addAll(images.map((i) => MapEntry('Images', i)));
-    _data.fields.add(MapEntry(
-      'VehicleId',
-      vehicleId.toString(),
-    ));
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleImages/AddVehicleImages',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    _data.fields.add(MapEntry('VehicleId', vehicleId.toString()));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/VehicleImages/AddVehicleImages',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -9011,28 +7803,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<VehicleImageFaceDto>>>
-      fetchVehiclesImagesFaces() async {
+  fetchVehiclesImagesFaces() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<VehicleImageFaceDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleImageFaces/GetAllVehiclesImagesFaces',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<VehicleImageFaceDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleImageFaces/GetAllVehiclesImagesFaces',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehicleImageFaceDto>> _value;
     try {
@@ -9040,9 +7825,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehicleImageFaceDto>((i) =>
-                    VehicleImageFaceDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<VehicleImageFaceDto>(
+                    (i) =>
+                        VehicleImageFaceDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9054,28 +7841,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CovenantVehicleDto>>> fetchCovenants(
-      int vehicleId) async {
+    int vehicleId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'vehicleId': vehicleId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CovenantVehicleDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/Custodies/GetAllCustodiesByVehicleId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CovenantVehicleDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Custodies/GetAllCustodiesByVehicleId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CovenantVehicleDto>> _value;
     try {
@@ -9083,9 +7864,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CovenantVehicleDto>((i) =>
-                    CovenantVehicleDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CovenantVehicleDto>(
+                    (i) =>
+                        CovenantVehicleDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9109,53 +7892,41 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (vehicleId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleId',
-        vehicleId.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleId', vehicleId.toString()));
     }
     if (Name != null) {
-      _data.fields.add(MapEntry(
-        'Name',
-        Name,
-      ));
+      _data.fields.add(MapEntry('Name', Name));
     }
     if (Description != null) {
-      _data.fields.add(MapEntry(
-        'Description',
-        Description,
-      ));
+      _data.fields.add(MapEntry('Description', Description));
     }
     if (custodyImagePath != null) {
-      _data.fields.add(MapEntry(
-        'CustodyImagePath',
-        custodyImagePath,
-      ));
+      _data.fields.add(MapEntry('CustodyImagePath', custodyImagePath));
     }
-    _data.files.add(MapEntry(
-      'CustodyImage',
-      MultipartFile.fromFileSync(
-        custodyImage.path,
-        filename: custodyImage.path.split(Platform.pathSeparator).last,
+    _data.files.add(
+      MapEntry(
+        'CustodyImage',
+        MultipartFile.fromFileSync(
+          custodyImage.path,
+          filename: custodyImage.path.split(Platform.pathSeparator).last,
+        ),
       ),
-    ));
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/Custodies/AddNewCustody',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    );
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/Custodies/AddNewCustody',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -9185,63 +7956,48 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (id != null) {
-      _data.fields.add(MapEntry(
-        'Id',
-        id.toString(),
-      ));
+      _data.fields.add(MapEntry('Id', id.toString()));
     }
     if (vehicleId != null) {
-      _data.fields.add(MapEntry(
-        'VehicleId',
-        vehicleId.toString(),
-      ));
+      _data.fields.add(MapEntry('VehicleId', vehicleId.toString()));
     }
     if (Name != null) {
-      _data.fields.add(MapEntry(
-        'Name',
-        Name,
-      ));
+      _data.fields.add(MapEntry('Name', Name));
     }
     if (Description != null) {
-      _data.fields.add(MapEntry(
-        'Description',
-        Description,
-      ));
+      _data.fields.add(MapEntry('Description', Description));
     }
     if (custodyImagePath != null) {
-      _data.fields.add(MapEntry(
-        'CustodyImagePath',
-        custodyImagePath,
-      ));
+      _data.fields.add(MapEntry('CustodyImagePath', custodyImagePath));
     }
     if (custodyImage != null) {
       if (custodyImage != null) {
-        _data.files.add(MapEntry(
-          'CustodyImage',
-          MultipartFile.fromFileSync(
-            custodyImage.path,
-            filename: custodyImage.path.split(Platform.pathSeparator).last,
+        _data.files.add(
+          MapEntry(
+            'CustodyImage',
+            MultipartFile.fromFileSync(
+              custodyImage.path,
+              filename: custodyImage.path.split(Platform.pathSeparator).last,
+            ),
           ),
-        ));
+        );
       }
     }
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'PUT',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/Custodies/EditCustody',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'PUT',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/Custodies/EditCustody',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -9262,22 +8018,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'DELETE',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Custodies/DeleteCustody',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'DELETE', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Custodies/DeleteCustody',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -9294,28 +8044,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<ContractViolationDto>>>
-      fetchVehicleViolations() async {
+  fetchVehicleViolations() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<ContractViolationDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ContractViolation/GetAllContractViolations',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<ContractViolationDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/GetAllContractViolations',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<ContractViolationDto>> _value;
     try {
@@ -9323,9 +8066,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<ContractViolationDto>((i) =>
-                    ContractViolationDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<ContractViolationDto>(
+                    (i) => ContractViolationDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9337,27 +8083,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<ContractViolationDto>> fetchVehicleViolationsById(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ContractViolationId': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<ContractViolationDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ContractViolation/GetContractViolationById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ContractViolationDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/GetContractViolationById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ContractViolationDto> _value;
     try {
@@ -9374,28 +8115,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<ContractViolationDto>> addContractViolation(
-      AddVehicleViolationParams params) async {
+    AddVehicleViolationParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<ContractViolationDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ContractViolation/AddEditContractViolation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<ContractViolationDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/AddEditContractViolation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<ContractViolationDto> _value;
     try {
@@ -9412,28 +8148,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchVehicleViolationTypes() async {
+  fetchVehicleViolationTypes() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ContractViolationType/GetAllContractViolationTypes',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolationType/GetAllContractViolationTypes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -9441,9 +8170,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9462,33 +8193,35 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = FormData();
-    _data.files.addAll(attachments.map((i) => MapEntry(
-        'AttachmentFiles',
-        MultipartFile.fromFileSync(
-          i.path,
-          filename: i.path.split(Platform.pathSeparator).last,
-        ))));
-    _data.fields.add(MapEntry(
-      'ContractViolationId',
-      contractViolationId.toString(),
-    ));
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/ContractViolationAttachments/AddContractViolationAttachments',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    _data.files.addAll(
+      attachments.map(
+        (i) => MapEntry(
+          'AttachmentFiles',
+          MultipartFile.fromFileSync(
+            i.path,
+            filename: i.path.split(Platform.pathSeparator).last,
+          ),
+        ),
+      ),
+    );
+    _data.fields.add(
+      MapEntry('ContractViolationId', contractViolationId.toString()),
+    );
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/ContractViolationAttachments/AddContractViolationAttachments',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -9509,22 +8242,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<DownLoadFileDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/Vehicles/GenerateVehicleReport/${vehicleId}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<DownLoadFileDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/Vehicles/GenerateVehicleReport/${vehicleId}',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<DownLoadFileDto> _value;
     try {
@@ -9541,28 +8268,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<EmpMapDto>> fetchEmpInfoLoc(
-      FetchEmpMapPrams fetchEmpMapPrams) async {
+    FetchEmpMapPrams fetchEmpMapPrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(fetchEmpMapPrams.toJson());
-    final _options = _setStreamType<ApiResponse<EmpMapDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FreeLancerInfo/GetFreelancerInfoLoc',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<EmpMapDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FreeLancerInfo/GetFreelancerInfoLoc',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<EmpMapDto> _value;
     try {
@@ -9589,22 +8311,16 @@ class _AdminEndpoint implements AdminEndpoint {
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<UniformDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/JobUniformCategory/GetAllJobUniformCategoriesForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<UniformDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/JobUniformCategory/GetAllJobUniformCategoriesForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<UniformDto>> _value;
     try {
@@ -9612,9 +8328,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<UniformDto>(
-                    (i) => UniformDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<UniformDto>(
+                    (i) => UniformDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9639,63 +8356,50 @@ class _AdminEndpoint implements AdminEndpoint {
     final _headers = <String, dynamic>{};
     final _data = FormData();
     if (Id != null) {
-      _data.fields.add(MapEntry(
-        'Id',
-        Id.toString(),
-      ));
+      _data.fields.add(MapEntry('Id', Id.toString()));
     }
     if (JobId != null) {
-      _data.fields.add(MapEntry(
-        'JobId',
-        JobId.toString(),
-      ));
+      _data.fields.add(MapEntry('JobId', JobId.toString()));
     }
     if (companyId != null) {
-      _data.fields.add(MapEntry(
-        'CompanyId',
-        companyId.toString(),
-      ));
+      _data.fields.add(MapEntry('CompanyId', companyId.toString()));
     }
     if (JobUniformCategoryId != null) {
-      _data.fields.add(MapEntry(
-        'JobUniformCategoryId',
-        JobUniformCategoryId.toString(),
-      ));
+      _data.fields.add(
+        MapEntry('JobUniformCategoryId', JobUniformCategoryId.toString()),
+      );
     }
     if (description != null) {
-      _data.fields.add(MapEntry(
-        'description',
-        description,
-      ));
+      _data.fields.add(MapEntry('description', description));
     }
     if (file != null) {
       if (file != null) {
-        _data.files.add(MapEntry(
-          'File',
-          MultipartFile.fromFileSync(
-            file.path,
-            filename: file.path.split(Platform.pathSeparator).last,
+        _data.files.add(
+          MapEntry(
+            'File',
+            MultipartFile.fromFileSync(
+              file.path,
+              filename: file.path.split(Platform.pathSeparator).last,
+            ),
           ),
-        ));
+        );
       }
     }
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/JobUniform/AddEditJobUniformForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/JobUniform/AddEditJobUniformForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -9716,22 +8420,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<bool>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/JobUniform/DeleteJobUniformForMob',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<bool>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/JobUniform/DeleteJobUniformForMob',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<bool> _value;
     try {
@@ -9752,22 +8450,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<GasStationDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FillingStations/GetALlFillingStations',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<GasStationDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FillingStations/GetALlFillingStations',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<GasStationDto>> _value;
     try {
@@ -9775,9 +8467,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<GasStationDto>(
-                    (i) => GasStationDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<GasStationDto>(
+                    (i) => GasStationDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9789,28 +8482,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addEditGasStation(
-      AddEditGasStationPrams addEditGasStationPrams) async {
+    AddEditGasStationPrams addEditGasStationPrams,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(addEditGasStationPrams.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FillingStations/AddEditFillingStation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FillingStations/AddEditFillingStation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -9831,22 +8519,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FillingStations/DeleteFillingStation',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FillingStations/DeleteFillingStation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -9867,23 +8549,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CashifterRequestStatuses/GetAllCashifterRequestStatusesTabs',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashifterRequestStatuses/GetAllCashifterRequestStatusesTabs',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -9891,9 +8566,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9905,27 +8582,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<UserRequestDto>>> fetchUsersRequests(
-      int statusId) async {
+    int statusId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'statusId': statusId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<UserRequestDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/CashifterRequests/GetAllCashifterRequestsByStatus',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<UserRequestDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashifterRequests/GetAllCashifterRequestsByStatus',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<UserRequestDto>> _value;
     try {
@@ -9933,9 +8605,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<UserRequestDto>(
-                    (i) => UserRequestDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<UserRequestDto>(
+                    (i) => UserRequestDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9947,29 +8620,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>> fetchUserRequestTerms(
-      UserRequestTermsParams params) async {
+    UserRequestTermsParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/CashifterRequestsTermsAndConditions/GetAllCashifterRequestTermsAndConditionsByRequestType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashifterRequestsTermsAndConditions/GetAllCashifterRequestTermsAndConditionsByRequestType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -9977,9 +8644,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -9991,28 +8660,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> acceptRejectUserRequest(
-      RejectUserRequestParams params) async {
+    RejectUserRequestParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'PUT',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/CashifterRequests/UpdateRequestStatus',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'PUT', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/CashifterRequests/UpdateRequestStatus',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10029,28 +8693,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchActionVehicleReceiveRequestStatues() async {
+  fetchActionVehicleReceiveRequestStatues() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleHandovers/GetAllIssueDescriptionStatues',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleHandovers/GetAllIssueDescriptionStatues',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10058,9 +8715,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10072,28 +8731,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchVehicleReceiveRequestTypesTabs() async {
+  fetchVehicleReceiveRequestTypesTabs() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleHandovers/GetTypesTabsOfVehicleHandoverReview',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleHandovers/GetTypesTabsOfVehicleHandoverReview',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10101,9 +8753,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10115,28 +8769,24 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<VehicleReceiveRequestDto>>>
-      fetchVehicleReceiveRequestsByType(int type) async {
+  fetchVehicleReceiveRequestsByType(int type) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options =
-        _setStreamType<ApiResponse<List<VehicleReceiveRequestDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleHandovers/GetAllVehicleHandoverReviewsByType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+        _setStreamType<ApiResponse<List<VehicleReceiveRequestDto>>>(
+          Options(method: 'GET', headers: _headers, extra: _extra)
+              .compose(
+                _dio.options,
+                '/v1/VehicleHandovers/GetAllVehicleHandoverReviewsByType',
+                queryParameters: queryParameters,
+                data: _data,
+              )
+              .copyWith(
+                baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl),
+              ),
+        );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehicleReceiveRequestDto>> _value;
     try {
@@ -10144,10 +8794,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehicleReceiveRequestDto>((i) =>
-                    VehicleReceiveRequestDto.fromJson(
-                        i as Map<String, dynamic>))
-                .toList()
+                  .map<VehicleReceiveRequestDto>(
+                    (i) => VehicleReceiveRequestDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10159,28 +8811,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> actionVehicleReceiveRequest(
-      ActionVehicleReceiveRequestParams params) async {
+    ActionVehicleReceiveRequestParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleHandovers/TakeActionOnVehicleComponentHandoverReview',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleHandovers/TakeActionOnVehicleComponentHandoverReview',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10197,28 +8844,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> finalActionVehicleReceiveRequest(
-      FinalActionVehicleReceiveRequestParams params) async {
+    FinalActionVehicleReceiveRequestParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleHandovers/TakeFinalActionOnVehicleComponentHandoverReview',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleHandovers/TakeFinalActionOnVehicleComponentHandoverReview',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10235,28 +8877,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>> fetchVehicleEmployeeByProject(
-      int projectId) async {
+    int projectId,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'ProjectId': projectId};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleHandovers/GetAllVehicleHandoverEmployeeByProject',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleHandovers/GetAllVehicleHandoverEmployeeByProject',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10264,9 +8900,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10278,28 +8916,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchTypesTabsOfContractViolation() async {
+  fetchTypesTabsOfContractViolation() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ContractViolation/GetTypesTabsOfContractViolation',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/GetTypesTabsOfContractViolation',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10307,9 +8938,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10321,28 +8954,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<FollowUpViolationDto>>> fetchFollowUpViolationsByType(
-      int type) async {
+    int type,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'type': type};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<FollowUpViolationDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ContractViolation/GetAllContractViolationByType',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<FollowUpViolationDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/GetAllContractViolationByType',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<FollowUpViolationDto>> _value;
     try {
@@ -10350,9 +8977,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<FollowUpViolationDto>((i) =>
-                    FollowUpViolationDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<FollowUpViolationDto>(
+                    (i) => FollowUpViolationDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10364,28 +8994,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchViolationImportantLevels() async {
+  fetchViolationImportantLevels() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/ContractViolation/GetAllContractViolationImportantLevel',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/GetAllContractViolationImportantLevel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10393,9 +9016,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10407,28 +9032,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> actionFollowUpViolation(
-      ActionFollowUpViolationParams params) async {
+    ActionFollowUpViolationParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ContractViolation/TakeActionOnContractViolationReview',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/TakeActionOnContractViolationReview',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10445,28 +9065,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> finalActionFollowUpViolation(
-      FinalActionFollowUpViolationParams params) async {
+    FinalActionFollowUpViolationParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/ContractViolation/TakeFinaActionOnContractViolationReview',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/ContractViolation/TakeFinaActionOnContractViolationReview',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10483,28 +9098,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchTapsMaintenanceBreakdowns() async {
+  fetchTapsMaintenanceBreakdowns() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FaultsMaintenance/GetTabTypeOfFaultsMaintenance',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FaultsMaintenance/GetTabTypeOfFaultsMaintenance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10512,9 +9120,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10526,28 +9136,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchMaintenanceImportantLevel() async {
+  fetchMaintenanceImportantLevel() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FaultsMaintenance/GetAllFaultsMaintenanceImportantLevel',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FaultsMaintenance/GetAllFaultsMaintenanceImportantLevel',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10555,9 +9158,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10569,28 +9174,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> actionFollowUpUpMaintenance(
-      ActionFollowUpUpMaintenancePrams params) async {
+    ActionFollowUpUpMaintenancePrams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FaultsMaintenance/TakeActionOnFaultsMaintenanceReview',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FaultsMaintenance/TakeActionOnFaultsMaintenanceReview',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10607,28 +9207,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> finalActionFollowUpMaintenance(
-      FinalActionFollowUpMaintenancePrams params) async {
+    FinalActionFollowUpMaintenancePrams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FaultsMaintenance/TakeFinaActionOnFaultsMaintenanceReview',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FaultsMaintenance/TakeFinaActionOnFaultsMaintenanceReview',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10645,27 +9240,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<MaintenanceDto>>> fetchMaintenanceBreakdowns(
-      int status) async {
+    int status,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'status': status};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<List<MaintenanceDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/FaultsMaintenance/GetAllFaultsMaintenanceByStatus',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<List<MaintenanceDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FaultsMaintenance/GetAllFaultsMaintenanceByStatus',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<MaintenanceDto>> _value;
     try {
@@ -10673,9 +9263,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<MaintenanceDto>(
-                    (i) => MaintenanceDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<MaintenanceDto>(
+                    (i) => MaintenanceDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10691,23 +9282,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/FaultsMaintainceType/GetAllFaultsMaintaincetype',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/FaultsMaintainceType/GetAllFaultsMaintaincetype',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10715,9 +9299,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10738,35 +9324,43 @@ class _AdminEndpoint implements AdminEndpoint {
     queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
     final _data = FormData();
-    _data.files.addAll(imagesAfter.map((i) => MapEntry(
-        'ImagesAfter',
-        MultipartFile.fromFileSync(
-          i.path,
-          filename: i.path.split(Platform.pathSeparator).last,
-        ))));
-    _data.files.addAll(imagesBefore.map((i) => MapEntry(
-        'ImagesBefore',
-        MultipartFile.fromFileSync(
-          i.path,
-          filename: i.path.split(Platform.pathSeparator).last,
-        ))));
-    final _options = _setStreamType<ApiResponse<AddMaintenanceDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-      contentType: 'multipart/form-data',
-    )
-        .compose(
-          _dio.options,
-          '/v1/FaultsMaintenance/AddEditFaultsMaintenance',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    _data.files.addAll(
+      imagesAfter.map(
+        (i) => MapEntry(
+          'ImagesAfter',
+          MultipartFile.fromFileSync(
+            i.path,
+            filename: i.path.split(Platform.pathSeparator).last,
+          ),
+        ),
+      ),
+    );
+    _data.files.addAll(
+      imagesBefore.map(
+        (i) => MapEntry(
+          'ImagesBefore',
+          MultipartFile.fromFileSync(
+            i.path,
+            filename: i.path.split(Platform.pathSeparator).last,
+          ),
+        ),
+      ),
+    );
+    final _options = _setStreamType<ApiResponse<AddMaintenanceDto>>(
+      Options(
+            method: 'POST',
+            headers: _headers,
+            extra: _extra,
+            contentType: 'multipart/form-data',
+          )
+          .compose(
+            _dio.options,
+            '/v1/FaultsMaintenance/AddEditFaultsMaintenance',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<AddMaintenanceDto> _value;
     try {
@@ -10783,28 +9377,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<VehicleNotificationsDto>>> fetchVehicleNotifications(
-      int status) async {
+    int status,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'status': status};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<VehicleNotificationsDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleNotifications/GetAllNotificationsByStatus',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<VehicleNotificationsDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleNotifications/GetAllNotificationsByStatus',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehicleNotificationsDto>> _value;
     try {
@@ -10812,9 +9400,12 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehicleNotificationsDto>((i) =>
-                    VehicleNotificationsDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<VehicleNotificationsDto>(
+                    (i) => VehicleNotificationsDto.fromJson(
+                      i as Map<String, dynamic>,
+                    ),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10826,28 +9417,21 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<CommonListItemDto>>>
-      fetchTypeVehicleNotifications() async {
+  fetchTypeVehicleNotifications() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<CommonListItemDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleNotifications/GetNotificationStatues',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<CommonListItemDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleNotifications/GetNotificationStatues',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<CommonListItemDto>> _value;
     try {
@@ -10855,9 +9439,11 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<CommonListItemDto>((i) =>
-                    CommonListItemDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<CommonListItemDto>(
+                    (i) =>
+                        CommonListItemDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10869,28 +9455,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> actionNotifications(
-      ActionNotificationsPrams params) async {
+    ActionNotificationsPrams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleNotifications/TakeActionOnNotification',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleNotifications/TakeActionOnNotification',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10907,28 +9488,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> finalActionNotifications(
-      ActionNotificationsPrams params) async {
+    ActionNotificationsPrams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleNotifications/TakeFinalActionOnNotification',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleNotifications/TakeFinalActionOnNotification',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -10945,28 +9521,22 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<List<VehicleCameraDto>>> fetchVehicleCameras(
-      int id) async {
+    int id,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'vehicleId': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options =
-        _setStreamType<ApiResponse<List<VehicleCameraDto>>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleCameras/GetAllVehicleCamerasByVehicleId',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<List<VehicleCameraDto>>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleCameras/GetAllVehicleCamerasByVehicleId',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<List<VehicleCameraDto>> _value;
     try {
@@ -10974,9 +9544,10 @@ class _AdminEndpoint implements AdminEndpoint {
         _result.data!,
         (json) => json is List<dynamic>
             ? json
-                .map<VehicleCameraDto>(
-                    (i) => VehicleCameraDto.fromJson(i as Map<String, dynamic>))
-                .toList()
+                  .map<VehicleCameraDto>(
+                    (i) => VehicleCameraDto.fromJson(i as Map<String, dynamic>),
+                  )
+                  .toList()
             : List.empty(),
       );
     } on Object catch (e, s) {
@@ -10992,22 +9563,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<VehicleCameraDto>>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleCameras/GetVehicleCameraById',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<VehicleCameraDto>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleCameras/GetVehicleCameraById',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<VehicleCameraDto> _value;
     try {
@@ -11024,28 +9589,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> addVehicleCamera(
-      AddVehicleCameraParams params) async {
+    AddVehicleCameraParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleCameras/AddNewVehicleCamera',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleCameras/AddNewVehicleCamera',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -11062,28 +9622,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<dynamic>> editVehicleCamera(
-      AddVehicleCameraParams params) async {
+    AddVehicleCameraParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleCameras/EditVehicleCamera',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleCameras/EditVehicleCamera',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -11104,22 +9659,16 @@ class _AdminEndpoint implements AdminEndpoint {
     final queryParameters = <String, dynamic>{r'id': id};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiResponse<dynamic>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-        .compose(
-          _dio.options,
-          '/v1/VehicleCameras/DeleteVehicleCamera',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
+    final _options = _setStreamType<ApiResponse<dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleCameras/DeleteVehicleCamera',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<dynamic> _value;
     try {
@@ -11136,29 +9685,23 @@ class _AdminEndpoint implements AdminEndpoint {
 
   @override
   Future<ApiResponse<CameraSearchResultsDto>> fetchVehicleVideo(
-      VehicleVideoParams params) async {
+    VehicleVideoParams params,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(params.toJson());
-    final _options =
-        _setStreamType<ApiResponse<CameraSearchResultsDto>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/v1/VehicleCameras/GetVehicleVideoPlaybackOrStream',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            )));
+    final _options = _setStreamType<ApiResponse<CameraSearchResultsDto>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/v1/VehicleCameras/GetVehicleVideoPlaybackOrStream',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ApiResponse<CameraSearchResultsDto> _value;
     try {
@@ -11186,10 +9729,7 @@ class _AdminEndpoint implements AdminEndpoint {
     return requestOptions;
   }
 
-  String _combineBaseUrls(
-    String dioBaseUrl,
-    String? baseUrl,
-  ) {
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
     if (baseUrl == null || baseUrl.trim().isEmpty) {
       return dioBaseUrl;
     }

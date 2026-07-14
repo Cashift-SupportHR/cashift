@@ -7,17 +7,17 @@ part of 'apply_details.dart';
 // **************************************************************************
 
 ApplyDetails _$ApplyDetailsFromJson(Map<String, dynamic> json) => ApplyDetails(
-      json['companyName'] as String?,
-      json['jobName'] as String?,
-      (json['money'] as num?)?.toInt(),
-      json['startShiftDate'] as String?,
-      json['loanType'] as String?,
-      json['createdDate'] as String?,
-      json['installment'] as num?,
-      (json['numberInstall'] as num?)?.toInt(),
-      json['endShiftDate'] as String?,
-      json['totalLoanAmount'] as num?,
-    );
+  json['companyName'] as String?,
+  json['jobName'] as String?,
+  (json['money'] as num?)?.toInt(),
+  json['startShiftDate'] as String?,
+  json['loanType'] as String?,
+  json['createdDate'] as String?,
+  json['installment'] as num?,
+  (json['numberInstall'] as num?)?.toInt(),
+  json['endShiftDate'] as String?,
+  json['totalLoanAmount'] as num?,
+);
 
 Map<String, dynamic> _$ApplyDetailsToJson(ApplyDetails instance) =>
     <String, dynamic>{

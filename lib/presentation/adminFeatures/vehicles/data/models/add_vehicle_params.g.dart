@@ -19,7 +19,9 @@ AddVehicleParams _$AddVehicleParamsFromJson(Map<String, dynamic> json) =>
       specifications: json['Specifications'] as String?,
       vehicleImage: json['VehicleImage'] as String?,
       vehicleImageFile: _$JsonConverterFromJson<String, File>(
-          json['VehicleImageFile'], const FileJsonConverter().fromJson),
+        json['VehicleImageFile'],
+        const FileJsonConverter().fromJson,
+      ),
       vehicleBrandId: json['VehicleBrandId'] as String?,
       companyId: json['CompanyId'] as String?,
       projectId: json['ProjectId'] as String?,
@@ -39,7 +41,9 @@ Map<String, dynamic> _$AddVehicleParamsToJson(AddVehicleParams instance) =>
       'Specifications': instance.specifications,
       'VehicleImage': instance.vehicleImage,
       'VehicleImageFile': _$JsonConverterToJson<String, File>(
-          instance.vehicleImageFile, const FileJsonConverter().toJson),
+        instance.vehicleImageFile,
+        const FileJsonConverter().toJson,
+      ),
       'VehicleBrandId': instance.vehicleBrandId,
       'CompanyId': instance.companyId,
       'ProjectId': instance.projectId,
@@ -49,11 +53,9 @@ Map<String, dynamic> _$AddVehicleParamsToJson(AddVehicleParams instance) =>
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,
   Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
+) => json == null ? null : fromJson(json as Json);
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

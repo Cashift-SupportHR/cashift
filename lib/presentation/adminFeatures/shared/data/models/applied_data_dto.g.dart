@@ -45,8 +45,8 @@ ListAllowEditOppDto _$ListAllowEditOppDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ListAllowEditOppDtoToJson(
-        ListAllowEditOppDto instance) =>
-    <String, dynamic>{
-      'statusCode': instance.statusCode,
-      'description': instance.description,
-    };
+  ListAllowEditOppDto instance,
+) => <String, dynamic>{
+  'statusCode': instance.statusCode,
+  'description': instance.description,
+};

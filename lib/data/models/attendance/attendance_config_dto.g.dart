@@ -16,11 +16,11 @@ AttendanceConfigDto _$AttendanceConfigDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AttendanceConfigDtoToJson(
-        AttendanceConfigDto instance) =>
-    <String, dynamic>{
-      'moveFace': instance.moveFace,
-      'location': instance.location,
-      'qrcode': instance.qrcode,
-      'eyeCheck': instance.eyeCheck,
-      'smile': instance.smile,
-    };
+  AttendanceConfigDto instance,
+) => <String, dynamic>{
+  'moveFace': instance.moveFace,
+  'location': instance.location,
+  'qrcode': instance.qrcode,
+  'eyeCheck': instance.eyeCheck,
+  'smile': instance.smile,
+};

@@ -5,6 +5,7 @@ import 'package:shiftapp/domain/entities/shift/index_shift.dart';
  import '../../../../../data/models/account/cashifter_code_dto.dart';
 import '../../../../../domain/entities/user_overview/job_offer_slider.dart';
 import '../../../mana_delivery/domain/entities/delivery_orde.dart';
+import '../../../mana_delivery/domain/entities/my_order.dart';
 
 
 abstract class OverviewState extends Initialized {
@@ -43,6 +44,8 @@ class OverviewPostLoginState extends OverviewState {
 
   final StreamState<List<JobOfferSlider>> jobOffersSliders;
   StreamState<CashifterCodeDto> cashifterCodeStream;
+  StreamState<MyOrderEntity> myOrderEntityStream  ;
+
 
   OverviewPostLoginState(
     StreamState<List<JobOfferDto>?> offers, {
@@ -56,6 +59,7 @@ class OverviewPostLoginState extends OverviewState {
     required this.jobOffersSliders,
     required this.deliveryOrdersStream,
     required this.cashifterCodeStream,
+    required this.myOrderEntityStream,
   }) : super(
           offers,
           jobOffersSliders: jobOffersSliders,

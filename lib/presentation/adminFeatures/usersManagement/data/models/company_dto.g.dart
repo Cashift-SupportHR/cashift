@@ -7,12 +7,9 @@ part of 'company_dto.dart';
 // **************************************************************************
 
 CompanyDto _$CompanyDtoFromJson(Map<String, dynamic> json) => CompanyDto(
-      id: (json['id'] as num?)?.toInt(),
-      companyName: json['companyName'] as String?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  companyName: json['companyName'] as String?,
+);
 
 Map<String, dynamic> _$CompanyDtoToJson(CompanyDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'companyName': instance.companyName,
-    };
+    <String, dynamic>{'id': instance.id, 'companyName': instance.companyName};

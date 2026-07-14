@@ -27,23 +27,23 @@ Map<String, dynamic> _$AddLogisticPramsToJson(AddLogisticPrams instance) =>
     };
 
 License _$LicenseFromJson(Map<String, dynamic> json) => License(
-      licenseNumber: json['licenseNumber'] as String?,
-      expiryDate: json['expiryDate'] as String?,
-    );
+  licenseNumber: json['licenseNumber'] as String?,
+  expiryDate: json['expiryDate'] as String?,
+);
 
 Map<String, dynamic> _$LicenseToJson(License instance) => <String, dynamic>{
-      'licenseNumber': instance.licenseNumber,
-      'expiryDate': instance.expiryDate,
-    };
+  'licenseNumber': instance.licenseNumber,
+  'expiryDate': instance.expiryDate,
+};
 
 Location _$LocationFromJson(Map<String, dynamic> json) => Location(
-      latitude: (json['latitude'] as num?)?.toDouble(),
-      longitude: (json['longitude'] as num?)?.toDouble(),
-      cityId: (json['cityId'] as num?)?.toInt(),
-    );
+  latitude: (json['latitude'] as num?)?.toDouble(),
+  longitude: (json['longitude'] as num?)?.toDouble(),
+  cityId: (json['cityId'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'cityId': instance.cityId,
-    };
+  'latitude': instance.latitude,
+  'longitude': instance.longitude,
+  'cityId': instance.cityId,
+};

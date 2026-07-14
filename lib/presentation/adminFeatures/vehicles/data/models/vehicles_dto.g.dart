@@ -7,23 +7,23 @@ part of 'vehicles_dto.dart';
 // **************************************************************************
 
 VehiclesDto _$VehiclesDtoFromJson(Map<String, dynamic> json) => VehiclesDto(
-      id: (json['id'] as num?)?.toInt(),
-      vehicleCode: json['vehicleCode'] as String?,
-      model: json['model'] as String?,
-      yearOfManufacture: (json['yearOfManufacture'] as num?)?.toInt(),
-      color: json['vehicleColorName'] as String?,
-      plateNumber: json['plateNumber'] as String?,
-      licenseNumber: json['licenseNumber'] as String?,
-      licenseExpiryDate: json['licenseExpiryDate'] as String?,
-      specifications: json['specifications'] as String?,
-      vehicleImage: json['vehicleImage'] as String?,
-      vehicleBrandName: json['vehicleBrandName'] as String?,
-      vehicleBrandId: (json['vehicleBrandId'] as num?)?.toInt(),
-      companyName: json['companyName'] as String?,
-      companyId: (json['companyId'] as num?)?.toInt(),
-      projectName: json['projectName'] as String?,
-      projectId: (json['projectId'] as num?)?.toInt(),
-    );
+  id: (json['id'] as num?)?.toInt(),
+  vehicleCode: json['vehicleCode'] as String?,
+  model: json['model'] as String?,
+  yearOfManufacture: (json['yearOfManufacture'] as num?)?.toInt(),
+  color: json['vehicleColorName'] as String?,
+  plateNumber: json['plateNumber'] as String?,
+  licenseNumber: json['licenseNumber'] as String?,
+  licenseExpiryDate: json['licenseExpiryDate'] as String?,
+  specifications: json['specifications'] as String?,
+  vehicleImage: json['vehicleImage'] as String?,
+  vehicleBrandName: json['vehicleBrandName'] as String?,
+  vehicleBrandId: (json['vehicleBrandId'] as num?)?.toInt(),
+  companyName: json['companyName'] as String?,
+  companyId: (json['companyId'] as num?)?.toInt(),
+  projectName: json['projectName'] as String?,
+  projectId: (json['projectId'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$VehiclesDtoToJson(VehiclesDto instance) =>
     <String, dynamic>{

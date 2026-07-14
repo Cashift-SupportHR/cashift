@@ -17,12 +17,12 @@ RoundTripDetailsDto _$RoundTripDetailsDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$RoundTripDetailsDtoToJson(
-        RoundTripDetailsDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'notes': instance.notes,
-      'typeName': instance.typeName,
-      'startRound': instance.startRound,
-      'endRound': instance.endRound,
-      'roundTime': instance.roundTime,
-    };
+  RoundTripDetailsDto instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'notes': instance.notes,
+  'typeName': instance.typeName,
+  'startRound': instance.startRound,
+  'endRound': instance.endRound,
+  'roundTime': instance.roundTime,
+};

@@ -7,15 +7,12 @@ part of 'check_phone_code_params.dart';
 // **************************************************************************
 
 CheckPhoneCodeParams _$CheckPhoneCodeParamsFromJson(
-        Map<String, dynamic> json) =>
-    CheckPhoneCodeParams(
-      id: (json['id'] as num?)?.toInt(),
-      code: json['code'] as String?,
-    );
+  Map<String, dynamic> json,
+) => CheckPhoneCodeParams(
+  id: (json['id'] as num?)?.toInt(),
+  code: json['code'] as String?,
+);
 
 Map<String, dynamic> _$CheckPhoneCodeParamsToJson(
-        CheckPhoneCodeParams instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'code': instance.code,
-    };
+  CheckPhoneCodeParams instance,
+) => <String, dynamic>{'id': instance.id, 'code': instance.code};

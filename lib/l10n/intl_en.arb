@@ -19,6 +19,7 @@
   "age": "Age",
   "login_title": "Login",
   "email": "Email",
+  "my_order": "My order",
   "invalid_email": "Invalid email",
   "invalid_password": "Password must not be less than six letters or numbers",
   "please_enter_password": "Please enter password",
@@ -1476,5 +1477,10 @@
   "offer_delivery": "Delivery opportunities",
   "delivery_order_for_company": "Delivery Order - Mana Company",
   "number_of_nearest_warehouses": "Warehouses near you, select the closest one among them:",
-  "receive_from_warehouse": "Received from the warehouse has begun"
+  "receive_from_warehouse": "Received from the warehouse has begun",
+  "delivery_code": "Delivery Code",
+  "enter_warehouse_code": "Enter Warehouse Code",
+  "accept_delivery_request": "Accept Delivery Request",
+
+  "pending_delivery_requests": "Pending Delivery Requests"
 }

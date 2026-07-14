@@ -13,7 +13,4 @@ InsuranceTypesDto _$InsuranceTypesDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$InsuranceTypesDtoToJson(InsuranceTypesDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

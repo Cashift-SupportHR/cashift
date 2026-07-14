@@ -8,11 +8,11 @@ part of 'focus_point_info_dto.dart';
 
 FocusPointInfoDto _$FocusPointInfoDtoFromJson(Map<String, dynamic> json) =>
     FocusPointInfoDto(
-      freelanceName: json['freelanceName'] as String?,
-      projectName: json['projectName'] as String?,
-      date: json['date'] as String?,
-      shiftName: json['shiftName'] as String?,
-    )
+        freelanceName: json['freelanceName'] as String?,
+        projectName: json['projectName'] as String?,
+        date: json['date'] as String?,
+        shiftName: json['shiftName'] as String?,
+      )
       ..startShift = json['startShift'] as String?
       ..endShift = json['endShift'] as String?;
 

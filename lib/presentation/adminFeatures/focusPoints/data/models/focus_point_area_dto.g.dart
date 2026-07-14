@@ -13,7 +13,4 @@ FocusPointAreaDto _$FocusPointAreaDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$FocusPointAreaDtoToJson(FocusPointAreaDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

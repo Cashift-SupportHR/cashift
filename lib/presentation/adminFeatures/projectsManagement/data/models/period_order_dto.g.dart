@@ -13,7 +13,4 @@ PeriodOrderDto _$PeriodOrderDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PeriodOrderDtoToJson(PeriodOrderDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+    <String, dynamic>{'id': instance.id, 'name': instance.name};

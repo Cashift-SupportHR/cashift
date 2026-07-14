@@ -19,14 +19,14 @@ ReceiveVehiclePrams _$ReceiveVehiclePramsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ReceiveVehiclePramsToJson(
-        ReceiveVehiclePrams instance) =>
-    <String, dynamic>{
-      'page': instance.page,
-      'pageSize': instance.pageSize,
-      'projectId': instance.projectId,
-      'companyId': instance.companyId,
-      if (instance.startDate case final value?) 'startDate': value,
-      if (instance.endDate case final value?) 'endDate': value,
-      'shiftId': instance.shiftId,
-      'isComplete': instance.isComplete,
-    };
+  ReceiveVehiclePrams instance,
+) => <String, dynamic>{
+  'page': instance.page,
+  'pageSize': instance.pageSize,
+  'projectId': instance.projectId,
+  'companyId': instance.companyId,
+  if (instance.startDate case final value?) 'startDate': value,
+  if (instance.endDate case final value?) 'endDate': value,
+  'shiftId': instance.shiftId,
+  'isComplete': instance.isComplete,
+};

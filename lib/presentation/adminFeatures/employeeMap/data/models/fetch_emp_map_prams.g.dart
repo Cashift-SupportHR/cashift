@@ -13,7 +13,4 @@ FetchEmpMapPrams _$FetchEmpMapPramsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$FetchEmpMapPramsToJson(FetchEmpMapPrams instance) =>
-    <String, dynamic>{
-      'cityId': instance.cityId,
-      'jobId': instance.jobId,
-    };
+    <String, dynamic>{'cityId': instance.cityId, 'jobId': instance.jobId};

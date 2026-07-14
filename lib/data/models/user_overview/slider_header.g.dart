@@ -7,9 +7,9 @@ part of 'slider_header.dart';
 // **************************************************************************
 
 SliderHeader _$SliderHeaderFromJson(Map<String, dynamic> json) => SliderHeader(
-      titleHeader: json['titleHeader'] as String?,
-      subTitleHeader: json['subTitleHeader'] as String?,
-    );
+  titleHeader: json['titleHeader'] as String?,
+  subTitleHeader: json['subTitleHeader'] as String?,
+);
 
 Map<String, dynamic> _$SliderHeaderToJson(SliderHeader instance) =>
     <String, dynamic>{

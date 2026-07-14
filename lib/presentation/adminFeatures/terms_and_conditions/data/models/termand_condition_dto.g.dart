@@ -16,11 +16,11 @@ TermandConditionDto _$TermandConditionDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$TermandConditionDtoToJson(
-        TermandConditionDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'companyId': instance.companyId,
-      'companyName': instance.companyName,
-      'conditionEn': instance.conditionEn,
-      'conditionAr': instance.conditionAr,
-    };
+  TermandConditionDto instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'companyId': instance.companyId,
+  'companyName': instance.companyName,
+  'conditionEn': instance.conditionEn,
+  'conditionAr': instance.conditionAr,
+};

@@ -45,7 +45,8 @@ AttendanceShiftDto _$AttendanceShiftDtoFromJson(Map<String, dynamic> json) =>
       attendanceConfigDto: json['attendanceConfig'] == null
           ? null
           : AttendanceConfigDto.fromJson(
-              json['attendanceConfig'] as Map<String, dynamic>),
+              json['attendanceConfig'] as Map<String, dynamic>,
+            ),
       isAllowToTrack: json['isAllowToTrack'] as bool?,
     );
 

@@ -6,14 +6,10 @@ part of 'configuration_endpoint.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
 
 class _ConfigurationEndpoint implements ConfigurationEndpoint {
-  _ConfigurationEndpoint(
-    this._dio, {
-    this.baseUrl,
-    this.errorLogger,
-  });
+  _ConfigurationEndpoint(this._dio, {this.baseUrl, this.errorLogger});
 
   final Dio _dio;
 
@@ -34,10 +30,7 @@ class _ConfigurationEndpoint implements ConfigurationEndpoint {
     return requestOptions;
   }
 
-  String _combineBaseUrls(
-    String dioBaseUrl,
-    String? baseUrl,
-  ) {
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
     if (baseUrl == null || baseUrl.trim().isEmpty) {
       return dioBaseUrl;
     }

@@ -8,12 +8,12 @@ part of 'wallet_balance_item.dart';
 
 WalletBalanceItem _$WalletBalanceItemFromJson(Map<String, dynamic> json) =>
     WalletBalanceItem(
-      companyId: (json['companyId'] as num?)?.toInt(),
-      companyName: json['companyName'] as String?,
-      balance: json['balance'] as num?,
-      status: json['status'] as bool?,
-      typeTransfer: json['typeTransfer'] as String?,
-    )
+        companyId: (json['companyId'] as num?)?.toInt(),
+        companyName: json['companyName'] as String?,
+        balance: json['balance'] as num?,
+        status: json['status'] as bool?,
+        typeTransfer: json['typeTransfer'] as String?,
+      )
       ..id = (json['id'] as num?)?.toInt()
       ..logo = json['logo'] as String?
       ..date = json['dateOperation'] as String?

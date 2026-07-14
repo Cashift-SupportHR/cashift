@@ -15,10 +15,10 @@ BalanceDetailsQuery _$BalanceDetailsQueryFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$BalanceDetailsQueryToJson(
-        BalanceDetailsQuery instance) =>
-    <String, dynamic>{
-      'statusId': instance.statusId,
-      'companyId': instance.companyId,
-      'headId': instance.headId,
-      'type': instance.type,
-    };
+  BalanceDetailsQuery instance,
+) => <String, dynamic>{
+  'statusId': instance.statusId,
+  'companyId': instance.companyId,
+  'headId': instance.headId,
+  'type': instance.type,
+};

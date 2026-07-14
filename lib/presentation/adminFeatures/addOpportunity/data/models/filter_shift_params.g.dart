@@ -13,7 +13,4 @@ FilterShiftParams _$FilterShiftParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$FilterShiftParamsToJson(FilterShiftParams instance) =>
-    <String, dynamic>{
-      'ProjectId': instance.projectId,
-      'JobId': instance.jobId,
-    };
+    <String, dynamic>{'ProjectId': instance.projectId, 'JobId': instance.jobId};

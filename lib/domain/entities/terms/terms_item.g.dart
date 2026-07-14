@@ -6,10 +6,9 @@ part of 'terms_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-TermsItem _$TermsItemFromJson(Map<String, dynamic> json) => TermsItem(
-      conditionName: json['conditionName'] as String?,
-    );
+TermsItem _$TermsItemFromJson(Map<String, dynamic> json) =>
+    TermsItem(conditionName: json['conditionName'] as String?);
 
 Map<String, dynamic> _$TermsItemToJson(TermsItem instance) => <String, dynamic>{
-      'conditionName': instance.conditionName,
-    };
+  'conditionName': instance.conditionName,
+};

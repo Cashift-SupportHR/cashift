@@ -7,10 +7,10 @@ part of 'favorite_time.dart';
 // **************************************************************************
 
 FavoriteTime _$FavoriteTimeFromJson(Map<String, dynamic> json) => FavoriteTime(
-      id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String?,
-      imagePath: json['imagePath'] as String?,
-    );
+  id: (json['id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+  imagePath: json['imagePath'] as String?,
+);
 
 Map<String, dynamic> _$FavoriteTimeToJson(FavoriteTime instance) =>
     <String, dynamic>{

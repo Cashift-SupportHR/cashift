@@ -18,14 +18,14 @@ FocusPointsTypesDto _$FocusPointsTypesDtoFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$FocusPointsTypesDtoToJson(
-        FocusPointsTypesDto instance) =>
-    <String, dynamic>{
-      'order': instance.order,
-      'focusPointTypeName': instance.focusPointTypeName,
-      'focusPointTypeCount': instance.focusPointTypeCount,
-      'imageFocusPointsType': instance.imageFocusPointsType,
-      'freelanceApply': instance.freelanceApply,
-    };
+  FocusPointsTypesDto instance,
+) => <String, dynamic>{
+  'order': instance.order,
+  'focusPointTypeName': instance.focusPointTypeName,
+  'focusPointTypeCount': instance.focusPointTypeCount,
+  'imageFocusPointsType': instance.imageFocusPointsType,
+  'freelanceApply': instance.freelanceApply,
+};
 
 FreelanceApply _$FreelanceApplyFromJson(Map<String, dynamic> json) =>
     FreelanceApply(

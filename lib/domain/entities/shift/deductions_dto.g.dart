@@ -7,13 +7,13 @@ part of 'deductions_dto.dart';
 // **************************************************************************
 
 Deduction _$DeductionFromJson(Map<String, dynamic> json) => Deduction(
-      name: json['name'] as String?,
-      value: json['value'] as String?,
-      icon: json['icon'] as String?,
-    );
+  name: json['name'] as String?,
+  value: json['value'] as String?,
+  icon: json['icon'] as String?,
+);
 
 Map<String, dynamic> _$DeductionToJson(Deduction instance) => <String, dynamic>{
-      'name': instance.name,
-      'value': instance.value,
-      'icon': instance.icon,
-    };
+  'name': instance.name,
+  'value': instance.value,
+  'icon': instance.icon,
+};

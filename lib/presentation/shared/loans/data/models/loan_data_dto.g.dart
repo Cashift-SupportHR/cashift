@@ -7,16 +7,16 @@ part of 'loan_data_dto.dart';
 // **************************************************************************
 
 LoanDataDto _$LoanDataDtoFromJson(Map<String, dynamic> json) => LoanDataDto(
-      id: (json['id'] as num?)?.toInt(),
-      freelanceName: json['freelanceName'] as String?,
-      freelanceIcon: json['freelanceIcon'] as String?,
-      mobile: json['mobile'] as String?,
-      idNumber: json['idNumber'] as String?,
-      loanType: json['loanType'] as String?,
-      loanValue: (json['loanValue'] as num?)?.toDouble(),
-      deductPercentage: json['deductPercentage'] as String?,
-      remainingLoan: (json['remainingLoan'] as num?)?.toDouble(),
-    );
+  id: (json['id'] as num?)?.toInt(),
+  freelanceName: json['freelanceName'] as String?,
+  freelanceIcon: json['freelanceIcon'] as String?,
+  mobile: json['mobile'] as String?,
+  idNumber: json['idNumber'] as String?,
+  loanType: json['loanType'] as String?,
+  loanValue: (json['loanValue'] as num?)?.toDouble(),
+  deductPercentage: json['deductPercentage'] as String?,
+  remainingLoan: (json['remainingLoan'] as num?)?.toDouble(),
+);
 
 Map<String, dynamic> _$LoanDataDtoToJson(LoanDataDto instance) =>
     <String, dynamic>{

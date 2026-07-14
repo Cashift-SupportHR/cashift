@@ -7,12 +7,12 @@ part of 'terms_mana_dto.dart';
 // **************************************************************************
 
 TermsManaDto _$TermsManaDtoFromJson(Map<String, dynamic> json) => TermsManaDto(
-      termsType: (json['termsType'] as num?)?.toInt(),
-      termsVersion: json['termsVersion'] as String?,
-      title: json['title'] as String?,
-      content: json['content'] as String?,
-      lastUpdated: json['lastUpdated'] as String?,
-    );
+  termsType: (json['termsType'] as num?)?.toInt(),
+  termsVersion: json['termsVersion'] as String?,
+  title: json['title'] as String?,
+  content: json['content'] as String?,
+  lastUpdated: json['lastUpdated'] as String?,
+);
 
 Map<String, dynamic> _$TermsManaDtoToJson(TermsManaDto instance) =>
     <String, dynamic>{
