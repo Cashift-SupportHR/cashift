@@ -1482,5 +1482,8 @@
   "enter_warehouse_code": "Enter Warehouse Code",
   "accept_delivery_request": "Accept Delivery Request",
 
-  "pending_delivery_requests": "Pending Delivery Requests"
+  "pending_delivery_requests": "Pending Delivery Requests",
+  "device_not_supported": "Device Not Supported",
+  "device_not_supported_desc": "For your security, this app cannot run on this device.",
+  "exit": "Exit"
 }

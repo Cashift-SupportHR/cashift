@@ -4577,4 +4577,14 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get pending_delivery_requests => 'طلبات في انتظار التوصيل';
+
+  @override
+  String get device_not_supported => 'الجهاز غير مدعوم';
+
+  @override
+  String get device_not_supported_desc =>
+      'لأسباب أمنية، لا يمكن تشغيل هذا التطبيق على هذا الجهاز.';
+
+  @override
+  String get exit => 'خروج';
 }

@@ -187,6 +187,9 @@ dependencies:
   #internet_connection_checker: ^3.0.1
   internet_connection_checker_plus: ^2.7.2
 
+  protect_app: ^0.0.5
+  jailbreak_root_detection: ^1.2.0+1
+  root_checker_plus: ^1.0.0
 #dependency_overrides:
 #  rxdart: ^0.27.0
 #  platform_device_id_plus:

@@ -1293,6 +1293,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  jailbreak_root_detection:
+    dependency: "direct main"
+    description:
+      name: jailbreak_root_detection
+      sha256: "5000177b9a27428e9c47d2b98f21ab707bef5869c036f9bda4f4f95f4ad67d72"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0+1"
   js:
     dependency: transitive
     description:
@@ -1798,6 +1806,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.4"
+  protect_app:
+    dependency: "direct main"
+    description:
+      name: protect_app
+      sha256: "8d2a85819fe16e06e1cf65fc4c8bd5a0665719dd6447d4b8a0d5246f41b0e929"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   protobuf:
     dependency: transitive
     description:
@@ -1902,6 +1918,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "9.7.0"
+  root_checker_plus:
+    dependency: "direct main"
+    description:
+      name: root_checker_plus
+      sha256: beb9064fc7cc9ef3a0046a4a1a9503c94a3fa0d4a7ba4ce7b2da8c8850054435
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   rxdart:
     dependency: "direct main"
     description:

@@ -728,6 +728,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "determine_shift_hours": MessageLookupByLibrary.simpleMessage(
       "حدد مواعيد العمل",
     ),
+    "device_not_supported": MessageLookupByLibrary.simpleMessage(
+      "الجهاز غير مدعوم",
+    ),
+    "device_not_supported_desc": MessageLookupByLibrary.simpleMessage(
+      "لأسباب أمنية، لا يمكن تشغيل هذا التطبيق على هذا الجهاز.",
+    ),
     "did_not_receive_code": MessageLookupByLibrary.simpleMessage(
       "لم تستلم الكود؟",
     ),
@@ -922,6 +928,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "هذا الكود غير مخصص لهذا المشروع",
     ),
     "exclusive": MessageLookupByLibrary.simpleMessage("فرصة مميزة"),
+    "exit": MessageLookupByLibrary.simpleMessage("خروج"),
     "exit_app": MessageLookupByLibrary.simpleMessage("خروج من التطبيق"),
     "expair_date_license": MessageLookupByLibrary.simpleMessage(
       "تاريخ انتهاء الرخصة",

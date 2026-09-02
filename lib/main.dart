@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
  import 'package:get/get.dart';
 import 'package:chucker_flutter/chucker_flutter.dart';
+import 'package:shiftapp/config.dart';
 import 'package:shiftapp/data/datasources/remote/base_client.dart';
 import 'package:shiftapp/data/repositories/local/local_repository.dart';
 import 'package:shiftapp/domain/entities/shared/notification_types.dart';
@@ -22,6 +23,8 @@ import 'package:sizer/sizer.dart';
 import 'core/services/firebase_notification.dart';
 import 'core/services/material_app_config.dart';
 import 'core/services/routes.dart';
+import 'core/services/security/device_security_service.dart';
+import 'core/services/security/unsupported_device_screen.dart';
 import 'data/datasources/remote/logger/app_loogers.dart';
 import 'data/models/notification_offers/notification_offer_params.dart';
  import 'data/repositories/profile/profile_repository.dart';
@@ -72,8 +75,13 @@ void main() async {
 
   HttpOverrides.global = MyHttpOverrides();
 
-  runApp(const RestartWidget(child: MyApp()));
 
+  final secure = await DeviceSecurityService.isDeviceSecure();
+  if (!secure && !Config.isTestVersion) {
+    runApp(const UnsupportedDeviceScreen());
+  } else {
+    runApp(const RestartWidget(child: MyApp()));
+  }
   // runApp(device_preview.DevicePreview(
   //   enabled: !kReleaseMode,
   //   builder: (context) => const RestartWidget(child: MyApp()), // Wrap your app
