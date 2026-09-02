@@ -1527,10 +1527,7 @@
   "my_order": "طلباتي",
   "enter_warehouse_code": "إدخال كود المستودع",
   "accept_delivery_request": "قبول طلب التوصيل",
-  "pending_delivery_requests": "طلبات في انتظار التوصيل",
+  "pending_delivery_requests": "طلبات في انتظار التوصيل"
 
-  "device_not_supported": "الجهاز غير مدعوم",
-  "device_not_supported_desc": "لأسباب أمنية، لا يمكن تشغيل هذا التطبيق على هذا الجهاز.",
-  "exit": "خروج"
 
 }

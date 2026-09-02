@@ -9011,24 +9011,6 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'طلبات في انتظار التوصيل'**
   String get pending_delivery_requests;
-
-  /// No description provided for @device_not_supported.
-  ///
-  /// In ar, this message translates to:
-  /// **'الجهاز غير مدعوم'**
-  String get device_not_supported;
-
-  /// No description provided for @device_not_supported_desc.
-  ///
-  /// In ar, this message translates to:
-  /// **'لأسباب أمنية، لا يمكن تشغيل هذا التطبيق على هذا الجهاز.'**
-  String get device_not_supported_desc;
-
-  /// No description provided for @exit.
-  ///
-  /// In ar, this message translates to:
-  /// **'خروج'**
-  String get exit;
 }
 
 class _AppLocalizationsDelegate

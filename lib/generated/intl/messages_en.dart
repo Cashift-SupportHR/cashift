@@ -786,12 +786,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "determine_shift_hours": MessageLookupByLibrary.simpleMessage(
       "Determine Shift Hours",
     ),
-    "device_not_supported": MessageLookupByLibrary.simpleMessage(
-      "Device Not Supported",
-    ),
-    "device_not_supported_desc": MessageLookupByLibrary.simpleMessage(
-      "For your security, this app cannot run on this device.",
-    ),
     "did_not_receive_code": MessageLookupByLibrary.simpleMessage(
       "Didn\'t receive the code?",
     ),
@@ -994,7 +988,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "This code is not intended for this project",
     ),
     "exclusive": MessageLookupByLibrary.simpleMessage("Exclusive"),
-    "exit": MessageLookupByLibrary.simpleMessage("Exit"),
     "exit_app": MessageLookupByLibrary.simpleMessage("Exit from App"),
     "expair_date_license": MessageLookupByLibrary.simpleMessage(
       "License Expiration Date",

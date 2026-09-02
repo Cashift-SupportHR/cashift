@@ -12604,31 +12604,6 @@ class S {
       args: [],
     );
   }
-
-  /// `Device Not Supported`
-  String get device_not_supported {
-    return Intl.message(
-      'Device Not Supported',
-      name: 'device_not_supported',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `For your security, this app cannot run on this device.`
-  String get device_not_supported_desc {
-    return Intl.message(
-      'For your security, this app cannot run on this device.',
-      name: 'device_not_supported_desc',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Exit`
-  String get exit {
-    return Intl.message('Exit', name: 'exit', desc: '', args: []);
-  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

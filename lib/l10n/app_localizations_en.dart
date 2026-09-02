@@ -4643,14 +4643,4 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pending_delivery_requests => 'Pending Delivery Requests';
-
-  @override
-  String get device_not_supported => 'Device Not Supported';
-
-  @override
-  String get device_not_supported_desc =>
-      'For your security, this app cannot run on this device.';
-
-  @override
-  String get exit => 'Exit';
 }
