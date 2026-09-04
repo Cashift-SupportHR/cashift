@@ -35,8 +35,8 @@ class DeviceSecurityService {
       if (jailbroken) return false;
 
       // 4b. Tamper (bundle-ID repackaging)
-      // final tampered = await JailbreakRootDetection.instance.isNotTrust;
-      // if (tampered) return false;
+      final tampered = await JailbreakRootDetection.instance.isNotTrust;
+      if (tampered) return false;
     }
 
     // If we get here, every platform check passed
