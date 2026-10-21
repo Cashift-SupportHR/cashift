@@ -12,7 +12,6 @@ class PlatformConfig {
 
   FirebaseAppConfig get currentConfig {
     if (Platform.isIOS) return iosConfig;
-    if (Platform.isAndroid) return androidConfig;
-    throw UnsupportedError("Unsupported platform");
+    return androidConfig;
   }
 }

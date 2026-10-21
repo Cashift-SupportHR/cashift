@@ -45,9 +45,9 @@ void main() async {
   ChuckerFlutter.showOnRelease = true;
   AppLoggers.setupLogger();
 
+  await FirebaseBootstrapper.crashlytics.log('Application started');
+
   await configureDependencies();
-  // Get the available cameras
-  // await availableCameras();
   final headerInterceptor = HeaderInterceptor(
     getIt.get<UserRepository>(),
     getIt.get<LocalRepository>(),
