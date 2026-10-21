@@ -178,6 +178,7 @@ dependencies:
   firebase_core: ^3.14.0
   firebase_messaging: ^15.2.7
   firebase_dynamic_links: ^6.1.7
+  firebase_crashlytics: ^4.3.5
   # Internal Modules
   firebase_config:
     path: ./modules/firebase_config
@@ -187,6 +188,9 @@ dependencies:
   #internet_connection_checker: ^3.0.1
   internet_connection_checker_plus: ^2.7.2
 
+  protect_app: ^0.0.5
+  jailbreak_root_detection: ^1.2.0+1
+  root_checker_plus: ^1.0.0
 #dependency_overrides:
 #  rxdart: ^0.27.0
 #  platform_device_id_plus:

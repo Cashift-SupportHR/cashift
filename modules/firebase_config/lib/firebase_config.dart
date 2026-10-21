@@ -5,4 +5,5 @@ export 'src/messaging/fcm_initializer.dart';
 export 'src/messaging/fcm_notification_service.dart';
 export 'src/messaging/fcm_topic_manager.dart';
 export 'src/bootstrap/firebase_bootstrapper.dart';
+export 'src/crashlytics/crashlytics_service.dart';
 

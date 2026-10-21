@@ -1,12 +1,13 @@
 import 'dart:io';
 
+import 'package:firebase_config/firebase_config.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shiftapp/core/bloc/base_cubit.dart';
 import 'package:shiftapp/presentation/presentationUser/common/common_state.dart';
 
 import '../../../../../data/datasources/remote/unauthorized_exception.dart';
-  import '../../../../../data/repositories/profile/profile_repository.dart';
+import '../../../../../data/repositories/profile/profile_repository.dart';
 import '../../../../../data/repositories/resume/resume_repository.dart';
 import '../../../../../data/repositories/user/user_repository.dart';
 
@@ -16,7 +17,7 @@ class ProfileCubit extends BaseCubit {
   final ProfileRepository _profileRepository;
   final ResumeRepository _resumeRepository;
 
-  ProfileCubit(UserRepository userRepository, this._profileRepository ,this._resumeRepository)
+  ProfileCubit(UserRepository userRepository, this._profileRepository, this._resumeRepository)
       : _userRepository = userRepository,
         super();
 
@@ -28,26 +29,29 @@ class ProfileCubit extends BaseCubit {
     try {
       emit(LoadingState());
       final user = _userRepository.getUser();
-      if(user==null){
+      if (user == null) {
         emit(ErrorState(UnAuthorizedException()));
-        return ;
+        return;
       }
+      FirebaseBootstrapper.crashlytics.setUserIdentifier(
+        user.id?.toString() ?? user.phone ?? '',
+      );
       final response = await _resumeRepository.getResumeFromLocal();
       print('FetchProfile ${user.toJson()}');
       final accountServices = await _profileRepository.getAccountServices();
       user.name = response.name;
-      emit(ProfileInitialize(user: user,accountServices: accountServices));
+      emit(ProfileInitialize(user: user, accountServices: accountServices));
     } catch (e, s) {
       print(s);
       emit(ErrorState(e));
     }
   }
 
-Future<void> fetchResumeData() async {
+  Future<void> fetchResumeData() async {
     try {
       final user = _userRepository.getUser();
       print('FetchResume $user');
-      if(user!=null) {
+      if (user != null) {
         final response = await _resumeRepository.fetchResume();
         user.name = response.name;
         emit(Initialized(data: user));
@@ -60,9 +64,10 @@ Future<void> fetchResumeData() async {
   }
 
   Future<void> checkLogout() async {
-    executeListener(() => _profileRepository.checkLogout(), onSuccess: (data){
+    executeListener(() => _profileRepository.checkLogout(), onSuccess: (data) {
       FirebaseMessaging.instance.deleteToken();
       _userRepository.clearUser();
+      FirebaseBootstrapper.crashlytics.setUserIdentifier('');
       emit(UpdateHomeState(''));
     });
   }
@@ -72,6 +77,7 @@ Future<void> fetchResumeData() async {
       emit(LoadingStateListener());
       _userRepository.clearUser();
       FirebaseMessaging.instance.deleteToken();
+      FirebaseBootstrapper.crashlytics.setUserIdentifier('');
       emit(UpdateHomeState(''));
     } catch (e) {
       emit(FailureStateListener(e));
@@ -83,11 +89,11 @@ Future<void> fetchResumeData() async {
     executeEmitterListener(() => _profileRepository.uploadPhoto(file));
   }
 
-
   Future<void> deleteAccount() async {
-    executeBuilder(() => _profileRepository.deleteAccount(), onSuccess: (data){
-     _userRepository.clearUser();
-     emit(UpdateHomeState(''));
+    executeBuilder(() => _profileRepository.deleteAccount(), onSuccess: (data) {
+      _userRepository.clearUser();
+      FirebaseBootstrapper.crashlytics.setUserIdentifier('');
+      emit(UpdateHomeState(''));
     });
   }
 }
